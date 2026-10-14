@@ -42,6 +42,7 @@ No agent output enters the contract until it passes a **validation gate** owned 
 ```jsonc
 {
   "shot_id": "2.5-03",                 // production-unique
+  "schema_version": 1,                 // contract schema version (locked 2026-10-14)
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.5",                   // screenplay beat
@@ -115,6 +116,8 @@ No agent output enters the contract until it passes a **validation gate** owned 
 }
 ```
 
+> **Schema v1 additions (locked 2026-10-14, proven in [09-shot-contract-proof.md](09-shot-contract-proof.md)):** the block above is the v0 sketch; v1 also carries — `crowd[]` (archetype extras, may hold archetype-level `makeup[]`); `makeup[]` (skin/hair/injury, Agent 5b); `action` (Stunt/Action block, Agent 7b); `vfx_light` (VFX proposes → Camera integrates); `wardrobe[].additions` (e.g. glasses); `camera.look_key` as an **array**; `set.vehicle_interior`; `generation.policy` = `{lip_sync, video_model}`; and `continuity.deltas` may target **any** field (environmental deltas, not just injuries — fits restrained violence).
+
 ### 2.2 Ownership map (who writes what)
 
 | Field | Owner (writes) | Readers |
@@ -122,10 +125,14 @@ No agent output enters the contract until it passes a **validation gate** owned 
 | `intent`, `dialogue[].text_vo`, `vo.text` | Script | all |
 | `research[]`, `flags[]` | Research | Script, Set, VFX, orchestrator |
 | `cast[]` | Casting | Wardrobe, Camera, engine |
-| `wardrobe[]` | Wardrobe | Camera, QA, Continuity |
-| `set` | Set decoration | Camera, VFX, QA |
-| `camera` | Camera/DoP | engine, QA |
-| `vfx[]` | VFX | QA, Sound |
+| `crowd[]` | Casting | Wardrobe, Makeup, VFX |
+| `wardrobe[]` (+ `additions`) | Wardrobe | Camera, QA, Continuity |
+| `makeup[]` | Makeup & Hair | Camera, QA, Continuity |
+| `set` (+ `vehicle_interior`) | Set decoration | Camera, VFX, QA |
+| `camera` (look_key array) | Camera/DoP | engine, QA |
+| `action` | Stunt/Action | Director, Camera, VFX |
+| `vfx[]`, `vfx_light` | VFX | QA, Sound, Camera |
+| `graphics[]` | Graphic & Title Design | Set, Editor, QA |
 | `continuity` | Continuity (reviewer) | orchestrator |
 | `dialogue[].egyptian`, `vo.egyptian`, `voice_notes` | Egyptian-Arabic | Sound |
 | `audio` | Sound | engine/animatic |

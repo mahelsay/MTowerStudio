@@ -1,6 +1,6 @@
 # 09 — Phase 1: Shot Contract Proof (real Episode-1 shot)
 
-**Status:** in progress, 2026-10-14. Stress-testing the shot contract ([03-orchestration.md](03-orchestration.md)) against a **real** MTower Episode-1 shot, to confirm the schema and ownership map survive production data before we build anything.
+**Status:** ✅ complete, schema v1 locked 2026-10-14. Stress-tested the shot contract ([03-orchestration.md](03-orchestration.md)) against **three real** MTower Episode-1 shots (crowd establishing · night dialogue · day action), confirming the schema and ownership map survive production data. Ten additions folded into `schema_version: 1` (see "Schema v1 — LOCKED" below).
 
 ## Method
 
@@ -110,7 +110,101 @@ From `productions/thunderbolt/ep01_romani/02_preproduction/shot_list_00_teaser.j
 
 **Ownership map held** — every field maps to exactly one owning agent; reviewers (QA, Continuity) stay read-only. No collisions found on a real shot.
 
-## Next in Phase 1
+## Shot 2 — `2.4-02` (Act Two, Beat 2.4 — a dialogue / night beat)
 
-- Model **2 more diverse shots** to exercise edges: a **dialogue/VO beat** (Sound + Dialect fields) and a **night action shot with effects + injury delta** (VFX + Continuity). T.2-01 was a crowd establishing shot; those two cover the rest of the schema.
-- Then **lock `schema_version: 1`** and update [03-orchestration.md](03-orchestration.md) with `crowd[]`, `vehicle_interior`, and array look keys.
+Real shot: CU of the radio operator (C-04, Corporal Mahmoud) decoding at night, face lit only by a red-filtered flashlight glinting on his taped wire-rimmed glasses, whispering; `lip_sync: required`; deep shadow. Exercises the **audio / dialect / wardrobe-detail / night-exposure** edges.
+
+```jsonc
+{
+  "schema_version": 1, "shot_id": "2.4-02", "production": "thunderbolt", "episode": "ep01_romani",
+  "beat_ref": "2.4", "status": "approved",
+  "intent": { "subject": "radio operator decoding, night", "action": "whispers as he reads a scrap of paper",
+    "setting": "canal embankment, night, deep shadow", "time_of_day": "night", "mood": "tense, hushed",
+    "refs": { "props": ["PRP-0007"] } },
+  "direction": { "coverage": "CU profile", "blocking": "face lit only by a red-filtered flashlight on the note",
+    "performance_note": "lips parted in a whisper, face mostly in shadow", "pacing": "slow", "tone_ref": "red-light hush" },
+  "cast": [ { "character_id": "C-04", "actor_id": "ACT-0004", "face_model": "act0004", "prominence": "lead" } ],
+  "wardrobe": [ { "character_id": "C-04", "wardrobe_id": "WRD-0001", "wear_state": "WEAR_SALT",
+    "additions": "taped wire-rimmed glasses (face addition)" } ],
+  "makeup": [ { "character_id": "C-04", "skin_state": "field-tired", "injuries": [], "hair_state": "short military" } ],
+  "set": { "location_id": "LOC-0003", "props": ["PRP-0007"], "set_state": "intact" },
+  "camera": { "shot_size": "CU", "lens": "LENS_85_PORTRAIT", "movement": "static",
+    "light": "red-filtered flashlight key, deep shadow", "look_key": ["LOOK_BASE", "LOOK_NIGHT_CANAL"],
+    "format": "2.39:1", "exposure_note": "very low key — lift just the lit profile, keep red cast (MTower night-dark issue)" },
+  "vfx": [],
+  "dialogue": [ { "character_id": "C-04", "text_vo": "<decoded message, meaning>",
+    "egyptian": "<Egyptian-dialect whisper, diacritized>", "diacritized": true,
+    "acting_note": "whispering into the dark, steely, barely audible" } ],
+  "vo": null, "voice_notes": "ar-EG, close-mic whisper, restrained",
+  "audio": { "narration_take": null, "dialogue_takes": ["take_whisper_01"], "sfx": ["distant water", "paper"], "music_cue": null },
+  "continuity": { "prior_state_ref": "2.4-01", "deltas": [], "violations": [] },
+  "generation": { "policy": { "lip_sync": "required", "video_model": "default" }, "candidates": [], "selected": "..." },
+  "qa": { "verdict": "approved-in-mtower", "gate": 8.0 },
+  "approval": { "state": "approved", "by": "user" }
+}
+```
+
+**New edges this surfaced:** `wardrobe[].additions` (MTower's `face_additions`, e.g. glasses) and the `makeup[]` block (Agent 5b) both attach to a character; **dialogue carries both meaning (`text_vo`) and dialect (`egyptian`)** owned by different agents on the same object; `generation.policy.lip_sync` confirmed as an engine/orchestrator field, not a craft field.
+
+## Shot 3 — `3.8-01` (Act Three, Beat 3.8 "The battle" — an action / effects beat)
+
+Real shot: an RPG team rising out of a pit and firing at the tank column, backblast kicking up sand. Exercises **crowd / VFX / stunt-action / environmental continuity** edges.
+
+```jsonc
+{
+  "schema_version": 1, "shot_id": "3.8-01", "production": "thunderbolt", "episode": "ep01_romani",
+  "beat_ref": "3.8", "status": "approved",
+  "intent": { "subject": "RPG team fires on the column", "action": "rise from the pit, fire, drop back",
+    "setting": "open desert, daylight, battle smoke", "time_of_day": "day", "mood": "controlled violence",
+    "refs": { "props": ["PRP-0002"] } },
+  "direction": { "coverage": "MS handheld", "blocking": "team rises, fires, drops as backblast blows sand",
+    "performance_note": "drilled, fast, no panic", "pacing": "fast", "tone_ref": "restrained war" },
+  "cast": [],
+  "crowd": [ { "archetype": "egyptian_commandos", "count": 3, "wardrobe_id": "WRD-0001",
+    "wear_state": "WEAR_BATTLE", "note": "RPG team" } ],
+  "makeup": [ { "archetype": "egyptian_commandos", "skin_state": "sweat + dust", "injuries": [] } ],
+  "set": { "location_id": "LOC-0004", "props": ["PRP-0002"], "set_state": "battle — smoke building" },
+  "camera": { "shot_size": "MS", "lens": "LENS_35", "movement": "handheld",
+    "light": "harsh midday + muzzle/backblast flash", "look_key": ["LOOK_BASE", "LOOK_BATTLE_SMOKE"],
+    "format": "2.39:1", "exposure_note": "hard sun; protect highlights in the dust burst" },
+  "action": { "choreography": "two-man RPG drill: gunner up, fires, both drop", "weapon_handling": "RPG-7 shoulder-fired, clear backblast cone",
+    "movement": "rise-fire-drop", "beats": ["up","fire","down"], "safety_note": "backblast cone clear of friendlies" },
+  "vfx": [ { "effect": "RPG backblast + sand cloud", "intensity": "medium", "placement": "behind the team", "timing": "on fire" },
+    { "effect": "muzzle flash", "intensity": "low", "placement": "launcher", "timing": "on fire" } ],
+  "vfx_light": "backblast flash — Camera integrates",
+  "continuity": { "prior_state_ref": "3.7-06", "deltas": [ { "field": "set.set_state", "change": "smoke accumulates across beat 3.8" } ], "violations": [] },
+  "dialogue": [], "vo": { "ref": "screenplay 3.8 VO", "placement": "over 3.8-04..08" },
+  "audio": { "sfx": ["RPG launch", "backblast", "impact", "distant tank guns"], "music_cue": null },
+  "generation": { "policy": { "lip_sync": "avoid", "video_model": "default" }, "candidates": [], "selected": "..." },
+  "qa": { "verdict": "approved-in-mtower", "gate": 8.0 },
+  "approval": { "state": "approved", "by": "user" }
+}
+```
+
+**New edges this surfaced:** an `action` block (Agent 7b Stunt/Action) sits beside `vfx[]`; `crowd[]` carries its own `makeup[]` (archetype-level); `vfx_light` is proposed by VFX and consumed by Camera (the locked boundary); **continuity deltas are environmental here (smoke/wear), not human injury** — see the finding below.
+
+## Key finding: restrained violence reshapes continuity
+
+MTower's shot `3.8-05` is annotated **"No injuries shown"** — the series' restrained-violence rule. So **human-injury continuity deltas are rare**; the real cross-shot deltas are **environmental** (accumulating smoke, set damage, wear-state escalation `WEAR_SAND → WEAR_BATTLE`). The contract already models this: deltas target *any* field (`set.set_state`, `wardrobe[].wear_state`), not just injuries. Good — the Continuity + Wardrobe + Set "evolving state" decisions hold without a gore pipeline.
+
+## Schema v1 — LOCKED (2026-10-14)
+
+Three real shots (crowd establishing · night dialogue · day action) exercised every block. Folded into `schema_version: 1`:
+
+1. **`crowd[]`** — archetype extras, distinct from `cast[]`; may carry archetype-level `makeup[]`.
+2. **`set.vehicle_interior`** — a shot can live inside a vehicle, not only a `location_id`.
+3. **`camera.look_key` is an array** — MTower stacks `LOOK_BASE` + a scene look.
+4. **`wardrobe[].additions`** — MTower `face_additions` (e.g. glasses) attach to a character.
+5. **`makeup[]`** — skin/hair/injury block (Agent 5b), per character or archetype.
+6. **`action`** — Stunt/Action block (Agent 7b), beside `vfx[]`.
+7. **`vfx_light`** — VFX proposes, Camera integrates (locked boundary).
+8. **`dialogue[]` carries both** `text_vo` (Script, meaning) and `egyptian` (Dialect, wording) on one object.
+9. **`generation.policy`** holds `lip_sync` + `video_model` — engine/orchestrator, not craft.
+10. **`deltas` target any field** — continuity is general, not injury-specific (fits restrained violence).
+
+**Ownership map held across all three shots** — every field maps to exactly one owning agent; reviewers (QA, Continuity) stay read-only. **Phase 1 complete.**
+
+## Next
+
+- Update [03-orchestration.md](03-orchestration.md) §2.4 schema to carry the v1 additions (crowd, makeup, action, vfx_light, wardrobe.additions, generation.policy, array look keys, vehicle_interior).
+- Proceed to Phase 2 (Wave 1 fleet in the new Foundry project) or the Azure Bicep landing zone.
