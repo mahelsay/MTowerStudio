@@ -26,7 +26,7 @@
 | 5 | **Wardrobe** | Costume + wear state per character/shot | text (+vision check) | 2 |
 | 6 | **Set decoration** | Location dressing, interior/exterior, period props placement | text (+vision check) | 2 |
 | 7 | **Camera / DoP** | Framing, lens, movement, light, format | text | 2 |
-| 8 | **Egyptian-Arabic specialist** | Dialect, slang, diacritics, delivery notes | text + Speech | 3 |
+| 8 | **Dialect / Language specialist** | Egyptian-Arabic dialect, slang, diacritics, per-character register | text + Speech | 3 |
 | 9 | **VFX / Effects** | Explosions, smoke, tracers, weather, damage | text (+vision check) | 3 |
 | 10 | **Continuity** | Cross-shot consistency (time, blood, props, light) | **vision** | 3 |
 | 11 | **Sound / Voice** | Narration, dialogue, SFX, music briefs | text + Speech/tts | 3 |
@@ -161,14 +161,19 @@
 
 ## Wave 3 — the finishing crew
 
-### 8. Egyptian-Arabic specialist agent
-- **Craft:** master of Egyptian everyday Arabic and slang — adapt VO/dialogue into natural dialect with **full diacritics (التشكيل الكامل)** and delivery/acting notes; verify pronunciation.
-- **Reads:** `shot.vo`, `shot.dialogue[]`, `narration_egyptian.md`, D-19/D-20 direction.
-- **Writes:** `shot.dialogue[].egyptian`, `shot.vo.egyptian`, `shot.voice_notes`.
-- **Tools:** Azure Speech (render + `voice --check` speech-to-text verification), tts/audio models.
+### 8. Dialect / Language specialist agent (Egyptian-Arabic first)
+- **Craft:** turn the Script agent's dialogue/VO **meaning** into natural, living **Egyptian Arabic** (slang, register, rhythm, era-appropriate expression) with **full diacritics (التشكيل الكامل)** and delivery/acting notes; verify pronunciation. Built Egyptian-first, structured to add languages (e.g. Hebrew radio with Arabic subtitles) later.
+- **Reads:** `shot.vo`, `shot.dialogue[]`, `shot.cast` (voice profiles), `narration_egyptian.md`, D-19/D-20 direction, Research language notes.
+- **Writes:** `shot.dialogue[].egyptian` (+ diacritized, acting_note), `shot.vo.egyptian`, `shot.voice_notes`, per-character voice profiles.
+- **Tools:** Azure Speech (render + `voice --check` speech-to-text verification), tts/audio models, diacritization.
 - **Model:** text + Speech.
-- **DoD:** every spoken line has an Egyptian-dialect version with full diacritics and an acting note; a speech-to-text check round-trips to the intended meaning.
-- **Guardrails:** formal screenplay VO remains the meaning source of truth; dialect changes wording, not meaning.
+- **Decisions (locked 2026-10-14):**
+  - **Per-character register:** adapts dialect by character (officer vs village conscript, Cairene vs Sa'idi), tracked as a per-character voice profile.
+  - **Era-authenticity via Research:** too-modern/anachronistic expressions are flagged through Research, like any other anachronism.
+  - **Extensible scope:** Egyptian-Arabic first, with structure to add Hebrew/other languages later.
+- **DoD:** every spoken line has an Egyptian-dialect version with **full diacritics** + an acting note; a **speech-to-text check round-trips** to the intended meaning; register matches the character's voice profile.
+- **Guardrails:** formal screenplay VO remains the meaning source of truth; dialect changes wording, not meaning; no ungrounded period slang (checked with Research).
+- **Competence (L1–L4):** L1 native Egyptian dialect coach + screen-dialogue writer, master of Cairene/regional slang and registers, obsessive about TTS diacritics; L2 narration_egyptian.md + language direction (D-19/D-20) + character voice profiles + Research period-language notes; L3 Azure Speech, voice --check, tts/audio, diacritization; L4 Script (meaning), Research (period language), Sound/Voice (final production), Casting (voice profiles).
 
 ### 9. VFX / Effects agent
 - **Craft:** specify effects — explosions, muzzle flash, tracers, smoke, dust, water, weather, vehicle/structure damage — restrained and period-plausible.
