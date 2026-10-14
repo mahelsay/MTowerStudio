@@ -4,6 +4,7 @@
 
 ## Conventions
 
+- Every agent obeys the **standing studio rules** and is built from the **four competence layers** (L1 Persona · L2 Knowledge · L3 Tools · L4 Collaborators) defined in [06-agent-competence-model.md](06-agent-competence-model.md). In particular, **every output of every agent passes the validation gate** (reviewer ≠ author).
 - **Reads / Writes** are fields of the shot contract (or library catalogs).
 - **Model** is a starting recommendation — cheap text model unless the role needs vision or generation.
 - **DoD** = definition of done: the condition the orchestrator checks before the shot advances.
