@@ -116,13 +116,18 @@
 - **Competence (L1–L4):** L1 seasoned casting director + talent-agency manager with an ensemble-builder's eye; L2 Talent Pool dossiers + casting.json + character breakdowns + series casting laws; L3 Talent-Pool/library resolver, cast-check, QA-data reader; L4 Script/Director (who's in the scene), Wardrobe (receives cast), Continuity (same face across shots), Image QA (supplies evolution data), user (approves new actors).
 
 ### 5. Wardrobe agent
-- **Craft:** choose the costume and **wear state** (clean/muddy/bloodied/wet) per character per shot, period-correct and continuity-aware.
-- **Reads:** `shot.intent`, `shot.cast`, `wardrobe.json`, `shot.continuity` (prior wear state).
+- **Craft:** choose the costume and **wear state** (clean/dusty/muddy/wet/bloodied/torn) per character per shot, period-correct and continuity-aware.
+- **Reads:** `shot.intent`, `shot.direction`, `shot.cast`, `wardrobe.json`, `shot.continuity` (prior wear state).
 - **Writes:** `shot.wardrobe[]` = `{character_id, wardrobe_id, wear_state}`.
 - **Tools:** library resolver, optional vision check on the candidate.
 - **Model:** text; optional vision for the post-gen check.
-- **DoD:** each cast character has a resolved wardrobe ID + wear state consistent with the scene and with continuity; covered-hair actors keep their headscarf (MTower training rule).
-- **Guardrails:** period accuracy (1967–1973 uniforms/gear); escalates missing wardrobe assets rather than improvising anachronisms.
+- **Decisions (locked 2026-10-14):**
+  - **Blood split:** Wardrobe owns persistent **garment state** (a bloodstained shirt that stays bloodied across shots); **VFX** owns the *moment* of injury (spray/impact).
+  - **Auto-escalating wear:** across a continuous action sequence, Wardrobe **progressively advances** dirt/damage automatically; the **Director may override** a specific shot and **Continuity validates** the progression.
+  - **Continuity veto:** on a wear-state disagreement, **Continuity has veto on consistency**; Wardrobe owns the creative choice.
+- **DoD:** each cast character has a resolved wardrobe ID + wear state consistent with the scene and prior continuity; covered-hair characters keep their headscarf (MTower rule); missing garments are flags, not anachronisms.
+- **Guardrails:** period accuracy (1967–1973 uniforms/gear/insignia); escalates missing wardrobe assets rather than improvising.
+- **Competence (L1–L4):** L1 period costume designer + continuity-obsessed wardrobe supervisor, expert in 1967–73 Egyptian/Israeli uniforms & period civilian dress; L2 wardrobe.json + prior continuity state + Research verdicts + series bible; L3 library resolver, vision check; L4 Casting (who's in shot), Research (period), Continuity (veto on consistency), VFX (garment damage vs effect), Image QA (verifies).
 
 ### 6. Set decoration agent
 - **Craft:** dress the location — interiors (rooms, furniture, props placement) and exteriors (streets, buildings, signage, vehicles), period-correct and plausible.
