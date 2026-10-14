@@ -144,13 +144,18 @@
 - **Competence (L1–L4):** L1 production designer + set decorator + props master, expert in 1967–73 Egyptian/Sinai environments, architecture, street life, military installations, period objects; L2 locations/vehicles/props.json + Research verdicts + Tone Bible refs + series bible; L3 library resolver, vision check; L4 Research (place/period), Director/Camera (frame needs, blocking), VFX (dynamic effects), Continuity (same set across shots), Image QA (verifies).
 
 ### 7. Camera / DoP agent
-- **Craft:** decide framing, lens, camera movement, lighting, and output format per shot, consistent with the production's look.
-- **Reads:** `shot.intent`, `looks.json`, `visual_guide.md`, `shot.set`.
-- **Writes:** `shot.camera` = `{shot_size, lens, movement, light, look_key, format}`.
-- **Tools:** looks catalog, visual guide.
+- **Craft:** translate the Director's intent into **concrete photographic specs** — shot size, lens, movement, lighting, and format — consistent with the series look and buildable by the image models.
+- **Reads:** `shot.intent`, `shot.direction` (coverage/intent), `looks.json`, `visual_guide.md`, `shot.set`, Tone Bible visual refs, `shot.continuity`.
+- **Writes:** `shot.camera` = `{shot_size, lens, movement, light, look_key, format, exposure_note}`.
+- **Tools:** looks catalog, visual guide, optional vision check on framing/light.
 - **Model:** text.
-- **DoD:** shot has a resolved look key + camera spec that matches the series visual guide and the beat's emotional note; night/dark shots carry an explicit exposure note (MTower open issue).
-- **Guardrails:** references `looks.json` keys, never duplicates look wording into the shot.
+- **Decisions (locked 2026-10-14):**
+  - **Lighting continuity veto:** **Continuity vetoes** lighting consistency (light direction/color across a scene); Camera owns the creative lighting choice.
+  - **Look discipline:** Camera is **strictly bound to existing `looks.json` keys**; a *new* look is proposed only via a flag for the user's approval (protects series-wide coherence).
+  - **Size/lens source of truth:** the **Director paints broad coverage**; **Camera refines and finalizes** the exact shot size + lens.
+- **DoD:** resolved **look key + full camera spec** matching the visual guide and the beat's emotional note; **night/dark shots carry an explicit exposure note** (MTower open issue); consistent with the Director's intent and prior lighting continuity.
+- **Guardrails:** references `looks.json` keys, never duplicates look wording into the shot; new looks are flagged, not improvised.
+- **Competence (L1–L4):** L1 award-calibre cinematographer + gaffer, master of lenses/lighting/composition, fluent in how image models read camera/light language; L2 looks.json + visual guide + Tone Bible refs + Director intent + set contents; L3 looks catalog, visual guide, vision check; L4 Director (intent), Set (frame contents), VFX (light-affecting effects), Continuity (veto on light), Image QA (verifies).
 
 ---
 
