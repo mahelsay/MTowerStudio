@@ -25,7 +25,19 @@ The orchestrator is the showrunner / 1st AD. It does **not** do any craft itself
 
 One JSON document **per shot**, the single source of truth for that shot's state. Agents are pure functions over it: read your inputs, write your fields, append to history. No agent writes another agent's fields (continuity and QA are read-only reviewers that write only their own review fields).
 
-### 2.1 Schema (v0 draft)
+## 2.3 The validation gate (studio-wide QA)
+
+No agent output enters the contract until it passes a **validation gate** owned by the orchestrator. Three tiers (ADR-0002):
+
+| Tier | Check | Cost | Scope |
+|---|---|---|---|
+| **1 — Rules** | schema valid · library IDs resolve · required fields present · no open research flags · cost within cap | free | every write |
+| **2 — Critic** | independent LLM reviewer: does this decision satisfy the agent's definition-of-done + the shot intent? → pass / revise | cheap text | every judgment call |
+| **3 — Vision QA** | anatomy, identity, period, props, physics, light | $0.05–0.09 | every image |
+
+**Invariant:** the reviewer is never the agent that produced the output. Revise rounds are bounded, then escalate to a human. Tier 2's scope (every decision vs only consequential ones) is a tunable dial.
+
+## 2.4 Schema (v0 draft)
 
 ```jsonc
 {

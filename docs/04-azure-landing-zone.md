@@ -10,7 +10,7 @@
 | **Region** | **East US 2** | Only US region hosting *all* required models (gpt-image, sora-2, FLUX Kontext/FLUX.2, Speech). Provider-level fact — identical across subscriptions. |
 | **Foundry topology** | **New dedicated project** inside the **existing Foundry resource**; reuse model deployments. | Clean isolation of agents/threads/RBAC from live production, with **no model redeploy or quota duplication**. |
 | **Resource footprint** | Same *types* as MTower — no new resource kinds for the agent fleet. | Agents are prompts+tools+threads on the existing Foundry project. |
-| **Cost control** | Engine caps (estimate→dry-run→confirm→ledger) + Azure budget + pay-per-use only. | Unchanged from MTower; the orchestrator enforces the spend gate. |
+| **Cost control** | Engine caps (estimate→dry-run→confirm→ledger) + Azure budget with a **70% alert** + pay-per-use only. | Unchanged from MTower; the orchestrator enforces the spend gate. |
 
 ## 2. What the feasibility probe found (2026-10-14)
 
