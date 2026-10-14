@@ -23,7 +23,7 @@ MTower is a single-pipeline production engine. It works, but every job (QA, ward
 | 0 | **Foundation docs** (this repo): vision, architecture, agent catalog, orchestration/shot contract, landing zone, migration plan, ADRs | DONE |
 | 1 | **Reference intake → Tone Bible** (per production/episode) + **shot contract v1** locked, reviewed on one real Episode-1 shot | DONE (schema v1 locked 2026-10-14; see doc 09) |
 | 1.5 | **Azure landing zone DEPLOYED** — Foundry `me-eus2-mtowerstudio-fdy` + project + gpt-5.6-terra/sol + storage + NSP + budget(70%); data roles granted; healthy | DONE (2026-10-14; infra/) |
-| 2 | **Wave 1 fleet** in the new Foundry project: Orchestrator + Script + Director + Research + Image QA + Studio Critic | NEXT |
+| 2 | **Wave 1 fleet** in the new Foundry project: Orchestrator + Script + Director + Research + Image QA + Studio Critic | IN PROGRESS — fleet runs end-to-end on gpt-5.6 (Script/Director/Research/Critic live, spend-block + QA-on-every-step proven); next: wire episode-research grounding so Research verifies vs flags, then image-gen for Image QA |
 | 3 | **Wave 2**: wardrobe, set decoration, casting, camera | pending |
 | 4 | **Wave 3**: VFX, Continuity, Sound, Dialect/Language, Editor/Post (+ Marketing when needed) | pending |
 | 5 | **Migrate** live production from MTower engine → Studio fleet, episode by episode | pending |
