@@ -101,13 +101,19 @@
 ## Wave 2 — the creative crew
 
 ### 4. Casting agent
-- **Craft:** map each character in a shot to a **library actor**, honoring one-role-per-actor-per-series, locked stand-ins for real people, and roster distinctness.
-- **Reads:** `shot.intent.characters[]`, `casting.json`, `actors.json`.
-- **Writes:** `shot.cast[]` = `{character_id, actor_id, face_model}`.
-- **Tools:** library resolver, `cast-check` distinctness, casting.json.
+- **Craft:** map each character in a scene to a **library actor** from the **Talent Pool**, honoring the casting laws and roster distinctness; also **owns the Talent Pool and actor evolution** (see [08-talent-pool-and-actor-evolution.md](08-talent-pool-and-actor-evolution.md)).
+- **Reads:** `shot.intent.characters[]`, `shot.direction`, `casting.json`, the Talent Pool dossiers.
+- **Writes:** `shot.cast[]` = `{character_id, actor_id, face_model}`; and Talent Pool updates (stats/ratings) after each production.
+- **Tools:** library/Talent-Pool resolver, `cast-check` distinctness, casting.json, QA-data reader (to update ratings).
 - **Model:** text.
-- **DoD:** every character resolves to a locked actor with a trained face model (or an explicit "anchor-only / free" note); no distinctness collision; real-person stand-ins never recast.
-- **Guardrails:** library-first; refuses to invent an actor when a suitable one exists; flags when a new actor/anchor is genuinely needed (human approves).
+- **Decisions (locked 2026-10-14):**
+  - **Crowds = archetypes** (not individually tracked); trained actors only for recurring or framed roles.
+  - **On a gap, propose a candidate** (describe the needed look + suggest generating an anchor) for the user's approval.
+  - **Stricter ensemble distinctness:** no two speaking/main characters within the similarity threshold `N` (tighter than the default crowd bar).
+  - **Talent Pool:** design full now; **seed a modest diverse core, grow on demand**; evolution runs automatically from QA data (cost-aware — don't pre-train unused talent).
+- **DoD:** every character resolves to a **locked actor with a trained face model** (or explicit "anchor-only / free"); no distinctness collision (ensemble rule enforced); real-person stand-ins never recast; missing-actor gaps are flags, not silent inventions.
+- **Guardrails:** library-first; never recasts a locked role; never creates/trains a new actor without the user's sign-off (training cost + library change).
+- **Competence (L1–L4):** L1 seasoned casting director + talent-agency manager with an ensemble-builder's eye; L2 Talent Pool dossiers + casting.json + character breakdowns + series casting laws; L3 Talent-Pool/library resolver, cast-check, QA-data reader; L4 Script/Director (who's in the scene), Wardrobe (receives cast), Continuity (same face across shots), Image QA (supplies evolution data), user (approves new actors).
 
 ### 5. Wardrobe agent
 - **Craft:** choose the costume and **wear state** (clean/muddy/bloodied/wet) per character per shot, period-correct and continuity-aware.
