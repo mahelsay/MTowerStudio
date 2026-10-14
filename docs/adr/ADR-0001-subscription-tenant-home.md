@@ -23,6 +23,10 @@ Live findings (2026-10-14):
 
 **Make the external personal $700/mo tenant the permanent home** (confirming MTower D-02). Use the current `ME-MngEnvMCAP225775` sub as the **build-and-prove** environment until the planned **tenant move** relocates the subscription to the external tenant.
 
+### Amendment (2026-10-14) — fresh Foundry resource in the new RG
+
+The earlier plan ("reuse the existing Foundry resource, add a new project") assumed the agent fleet would live beside the legacy MTower studio. In practice the owner created a **separate** resource group `me-eus2-mtowerstudio-rg` as the new studio's home. Since a Foundry *project* is a child of a Foundry *account* (which lives in one RG), reusing the legacy account would place everything back in the legacy RG and leave the new RG empty. **Decision: build a self-contained Foundry account + project + deployments in the new RG** (`infra/`), independent of the legacy studio, so it migrates on its own. Trade-off: Wave-1 models (`gpt-5.6-terra`, `gpt-5.6-sol`) are deployed fresh rather than reused — cheap, since idle Global-Standard deployments cost nothing and only two are needed for Wave 1. Validated by What-If 2026-10-14 (17 create / 1 modify, no errors).
+
 ## Options considered
 
 1. **MCAPS $3k Microsoft sub** — rejected: wrong governance home for a personal creative project; carries MCAPSGov guardrails; no self-service SPN; budget headroom not needed.

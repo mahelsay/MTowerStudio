@@ -8,7 +8,7 @@
 |---|---|---|
 | **Subscription home** | External **personal $700/mo tenant** (confirms MTower D-02). Build-and-prove on the current `ME-MngEnvMCAP225775` sub until the tenant move completes. | Personal creative project; $700 pay-per-use is ample; the external tenant has **no MCAPSGov guardrails** and **self-service SPN creation**. |
 | **Region** | **East US 2** | Only US region hosting *all* required models (gpt-image, sora-2, FLUX Kontext/FLUX.2, Speech). Provider-level fact — identical across subscriptions. |
-| **Foundry topology** | **New dedicated project** inside the **existing Foundry resource**; reuse model deployments. | Clean isolation of agents/threads/RBAC from live production, with **no model redeploy or quota duplication**. |
+| **Foundry topology** | **Self-contained Foundry account + project** in the new RG `me-eus2-mtowerstudio-rg` (not reusing the legacy MTower account — see ADR-0001 amendment). | The owner created a separate RG as the studio's home; a project can't span RGs, so the new studio gets its own account. Migrates independently. |
 | **Resource footprint** | Same *types* as MTower — no new resource kinds for the agent fleet. | Agents are prompts+tools+threads on the existing Foundry project. |
 | **Cost control** | Engine caps (estimate→dry-run→confirm→ledger) + Azure budget with a **70% alert** + pay-per-use only. | Unchanged from MTower; the orchestrator enforces the spend gate. |
 
