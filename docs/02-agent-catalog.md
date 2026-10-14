@@ -24,8 +24,10 @@
 | 3b | **Studio Critic** | Tier-2 review of every non-image decision (studio-wide) | text (reasoning) | 1 |
 | 4 | **Casting** | Characters → library actors, distinctness | text | 2 |
 | 5 | **Wardrobe** | Costume + wear state per character/shot | text (+vision check) | 2 |
+| 5b | **Makeup & Hair / Prosthetics** | Skin: wounds, grime, sweat, blood on faces, aging, hair | text (+vision check) | 2 |
 | 6 | **Set decoration** | Location dressing, interior/exterior, period props placement | text (+vision check) | 2 |
 | 7 | **Camera / DoP** | Framing, lens, movement, light, format | text | 2 |
+| 7b | **Stunt / Action Choreographer** | Combat blocking, weapon handling, movement, safety-plausible action | text (reasoning) | 2 |
 | 8 | **Dialect / Language specialist** | Egyptian-Arabic dialect, slang, diacritics, per-character register | text + Speech | 3 |
 | 9 | **VFX / Effects** | Explosions, smoke, tracers, weather, damage | text (+vision check) | 3 |
 | 10 | **Continuity** | Cross-shot consistency (time, blood, props, light) | **vision** | 3 |
@@ -129,7 +131,21 @@
   - **Continuity veto:** on a wear-state disagreement, **Continuity has veto on consistency**; Wardrobe owns the creative choice.
 - **DoD:** each cast character has a resolved wardrobe ID + wear state consistent with the scene and prior continuity; covered-hair characters keep their headscarf (MTower rule); missing garments are flags, not anachronisms.
 - **Guardrails:** period accuracy (1967–1973 uniforms/gear/insignia); escalates missing wardrobe assets rather than improvising.
-- **Competence (L1–L4):** L1 period costume designer + continuity-obsessed wardrobe supervisor, expert in 1967–73 Egyptian/Israeli uniforms & period civilian dress; L2 wardrobe.json + prior continuity state + Research verdicts + series bible; L3 library resolver, vision check; L4 Casting (who's in shot), Research (period), Continuity (veto on consistency), VFX (garment damage vs effect), Image QA (verifies).
+- **Competence (L1–L4):** L1 period costume designer + continuity-obsessed wardrobe supervisor, expert in 1967–73 Egyptian/Israeli uniforms & period civilian dress; L2 wardrobe.json + prior continuity state + Research verdicts + series bible; L3 library resolver, vision check; L4 Casting (who's in shot), Research (period), Continuity (veto on consistency), VFX (garment damage vs effect), Image QA (verifies), **Makeup & Hair (skin counterpart)**.
+
+### 5b. Makeup & Hair / Prosthetics agent
+- **Craft:** everything on the **skin and head** (vs Wardrobe's cloth): wounds, scars, bruises, grime, sweat, blood on faces/hands, sunburn, aging, beard/hair state, and prosthetics. Makes faces read as real and battle-worn.
+- **Reads:** `shot.intent`, `shot.direction`, `shot.cast`, `shot.continuity` (prior skin/injury state), `shot.vfx` (injury events), Research notes.
+- **Writes:** `shot.makeup[]` = `{character_id, skin_state, injuries[], hair_state, prosthetics[]}`.
+- **Tools:** library resolver (makeup presets), vision check on the candidate.
+- **Model:** text; optional vision.
+- **Decisions (locked 2026-10-14, per studio defaults):**
+  - **Skin vs cloth split:** Makeup owns on-body appearance (blood on a face, grime on skin); Wardrobe owns the garment; VFX owns the injury *event*; clean three-way boundary.
+  - **Injury continuity:** a wound, once inflicted (a VFX/Director delta), **persists and ages** across later shots — tracked with **Continuity validating**.
+  - **Restraint cap:** gore on skin obeys the same **hard restrained-violence cap** as VFX.
+- **DoD:** each framed character has a resolved skin/hair state consistent with the scene, prior continuity, and any injury deltas; within the restraint cap; gaps flagged.
+- **Guardrails:** period-accurate grooming (1967–73); never exceeds the gore cap; defers injury-*event* timing to VFX/Director.
+- **Competence (L1–L4):** L1 department-head makeup artist + prosthetics/SFX-makeup specialist, expert in battle-wound realism and period grooming; L2 makeup presets + prior continuity state + VFX injury events + Research period notes; L3 library resolver, vision check; L4 Wardrobe (cloth counterpart), VFX (injury event), Casting (who's framed), Continuity (injury persistence), Image QA (verifies).
 
 ### 6. Set decoration agent
 - **Craft:** dress the **world** — interiors (rooms, furniture, prop placement) and exteriors (streets, buildings, signage, parked vehicles), period-correct, lived-in, and plausible.
@@ -157,7 +173,21 @@
   - **Size/lens source of truth:** the **Director paints broad coverage**; **Camera refines and finalizes** the exact shot size + lens.
 - **DoD:** resolved **look key + full camera spec** matching the visual guide and the beat's emotional note; **night/dark shots carry an explicit exposure note** (MTower open issue); consistent with the Director's intent and prior lighting continuity.
 - **Guardrails:** references `looks.json` keys, never duplicates look wording into the shot; new looks are flagged, not improvised.
-- **Competence (L1–L4):** L1 award-calibre cinematographer + gaffer, master of lenses/lighting/composition, fluent in how image models read camera/light language; L2 looks.json + visual guide + Tone Bible refs + Director intent + set contents; L3 looks catalog, visual guide, vision check; L4 Director (intent), Set (frame contents), VFX (light-affecting effects), Continuity (veto on light), Image QA (verifies).
+- **Competence (L1–L4):** L1 award-calibre cinematographer + gaffer, master of lenses/lighting/composition, fluent in how image models read camera/light language; L2 looks.json + visual guide + Tone Bible refs + Director intent + set contents; L3 looks catalog, visual guide, vision check; L4 Director (intent), Set (frame contents), VFX (light-affecting effects), Continuity (veto on light), Image QA (verifies), **Stunt/Action (combat blocking)**.
+
+### 7b. Stunt / Action Choreographer agent
+- **Craft:** design the **physical action** — combat blocking, weapon handling, movement, hand-to-hand, fire-and-movement, falls, and vehicle action — believable, period-correct, and tactically sound for a Sa'iqa special-ops series.
+- **Reads:** `shot.intent`, `shot.direction`, `shot.set`, `shot.research` (tactics/weapons), `shot.cast`, `shot.vfx`.
+- **Writes:** `shot.action` = `{choreography, weapon_handling, movement, beats[], safety_note}`.
+- **Tools:** Research tactics/weapons lookup, library (weapons/vehicles), optional vision check.
+- **Model:** text (reasoning).
+- **Decisions (locked 2026-10-14, per studio defaults):**
+  - **Tactical realism via Research:** weapon handling and tactics are **verified by Research** (correct firing stance, period doctrine) — anachronistic/wrong handling is flagged like any fact error.
+  - **Feeds Director + Camera + VFX:** choreography sets what the Director covers, what Camera frames, and which effects VFX triggers (muzzle flash timed to a trigger pull).
+  - **Restraint cap:** action obeys the hard restrained-violence cap.
+- **DoD:** each action shot has choreography + correct weapon handling + movement beats, tactically verified, within the restraint cap; consistent with the blocking.
+- **Guardrails:** period-correct tactics/weapon handling (no modern techniques); defers effect rendering to VFX and framing to Camera; restraint cap enforced.
+- **Competence (L1–L4):** L1 stunt coordinator + military-action/armorer advisor, expert in period small-unit tactics and weapon handling; L2 Research tactics/weapons verdicts + library weapons/vehicles + Tone Bible action refs; L3 Research lookup, library, vision check; L4 Director (coverage), Camera (framing), VFX (effect timing), Research (tactics), Continuity (action across shots).
 
 ---
 
@@ -250,7 +280,7 @@
 
 ## Notes on crew size
 
-The full crew is now **15 roles**: Orchestrator (0), Script (1), Director (1b), Research (2), Image QA (3), Studio Critic (3b), Casting (4), Wardrobe (5), Set (6), Camera/DoP (7), Dialect/Language (8), VFX (9), Continuity (10), Sound/Voice (11), Editor/Post (12), plus Marketing (13, optional support). Adjust as reality dictates:
+The full crew is now **17 roles**: Orchestrator (0), Script (1), Director (1b), Research (2), Image QA (3), Studio Critic (3b), Casting (4), Wardrobe (5), Makeup & Hair (5b), Set (6), Camera/DoP (7), Stunt/Action (7b), Dialect/Language (8), VFX (9), Continuity (10), Sound/Voice (11), Editor/Post (12), plus Marketing (13, optional support). Adjust as reality dictates:
 - **Mergeable** for a leaner start: Wardrobe + Set + VFX could begin as one **"Art Department"** agent and split later.
 - **Possibly split** if load grows: Script could split into **Scenario (structure)** vs **Dialogue (lines)**; Casting could spin off a dedicated **Talent Manager** for Talent-Pool upkeep.
 - **Marketing (13)** is optional supporting crew — stand it up only when promotion is needed.

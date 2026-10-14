@@ -1,0 +1,25 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Media / generated artifacts (text-only repo)
+*.mp4
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.safetensors
+media/
