@@ -17,7 +17,8 @@
 | # | Agent | One-line craft | Model class | Wave |
 |---|---|---|---|---|
 | 0 | **Orchestrator** | Runs the board; assigns work, enforces gates | text (reasoning) | 1 |
-| 1 | **Script / Scenario** | Beat → shot intent; dialogue & VO text | text (reasoning) | 1 |
+| 1 | **Script / Scenario** | Scenario, scene detail & dialogue meaning (within the locked story) | text (reasoning) | 1 |
+| 1b | **Director** | Creative lead: coverage/shot breakdown, blocking, performance, tone | text (reasoning) | 1 |
 | 2 | **Research / Fact-check** | Historical & technical truth, 1967–1973 | text + web | 1 |
 | 3 | **Quality (QA)** | Validates every image vs its intent | **vision** | 1 |
 | 4 | **Casting** | Characters → library actors, distinctness | text | 2 |
@@ -36,13 +37,24 @@
 ## Wave 1 — prove the loop
 
 ### 1. Script / Scenario agent
-- **Craft:** turn a locked screenplay beat into a precise, filmable **shot intent** — subject, action, blocking, emotional note — and own the dialogue/VO text (Egyptian Arabic draft, formal VO as meaning source).
-- **Reads:** `beat_ref`, screenplay, series bible, episode plan.
-- **Writes:** `shot.intent` (structured), `shot.dialogue[]`, `shot.vo`.
-- **Tools:** screenplay reader (engine), library ID lookup (to reference, not duplicate).
+- **Craft:** write the **scenario** within the locked story — scene detail (subject, action, blocking, emotional note) and the **dialogue/VO meaning** (formal VO as meaning source; Egyptian dialect pass belongs to Agent 8). Does **not** decide shot count/coverage — that's the Director.
+- **Reads:** `beat_ref`, screenplay, series bible, episode plan, grounding/tone bible.
+- **Writes:** `shot.intent` (scene detail), `shot.dialogue[]`, `shot.vo`.
+- **Tools:** screenplay reader (engine), library ID lookup (to reference, not duplicate), change-log writer.
 - **Model:** text reasoning.
-- **DoD:** shot intent names subject, action, setting, time-of-day, mood, and references library IDs for any location/vehicle/prop/character; no invented facts (hands off to Research for anything historical).
+- **DoD:** scene intent names subject, action, setting, time-of-day, mood, and references library IDs for any location/vehicle/prop/character; no invented facts (hands off to Research); consistent with the tone bible.
 - **Guardrails:** never generates media; never alters a locked script — proposes change-log entries only.
+- **Competence (L1–L4):** L1 master screenwriter + genre mastery (drama/action/thriller/historical); L2 series bible + episode research + 1967–73 Egypt grounding pack; L3 screenplay reader, library lookup, change-log; L4 Research (facts), Egyptian-Arabic (dialect), Director (coverage), Continuity.
+
+### 1b. Director agent
+- **Craft:** the creative lead. Turns the scenario into **visual storytelling**: decides **coverage** (how many shots a beat becomes and from where), **blocking**, **performance intent**, **pacing**, and the **tone** each scene must hit. Sets the creative north star; distinct from the Orchestrator (logistics) and the Camera/DoP (executes framing/lens/light per shot).
+- **Reads:** `shot.intent`, screenplay, series bible, `visual_guide.md`, `looks.json`, the **grounding/tone bible** (reference pull).
+- **Writes:** the **shot breakdown** for a beat (the set of shots), and per shot `shot.direction` = `{coverage, blocking, performance_note, pacing, tone_ref}`.
+- **Tools:** screenplay reader, library + looks lookup, grounding/tone-bible retrieval.
+- **Model:** text reasoning (strong).
+- **DoD:** every beat is decomposed into shots, each with coverage + blocking + a performance note + a tone reference, consistent with the visual guide and the tone bible; no shot lacks a stated intent.
+- **Guardrails:** works within the locked script (coverage, not story changes); references look keys and tone-bible entries rather than re-describing them; hands per-shot framing/lens/light to Camera/DoP.
+- **Competence (L1–L4):** L1 veteran director, film-school trained, master of visual storytelling and genre tone; L2 series bible + visual guide + **tone bible** (the user's reference pull: films, series, footage, stills); L3 screenplay reader, library/looks lookup, tone-bible retrieval; L4 Script (scenario), Camera/DoP (execution), Research (facts), Continuity, all craft agents.
 
 ### 2. Research / Fact-check agent
 - **Craft:** guarantee historical and technical truth for 1967–1973 Egyptian/Israeli operations — uniforms, gear, weapons, vehicles, locations, timeline, cultural detail.
