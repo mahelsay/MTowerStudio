@@ -24,7 +24,7 @@ MTower is a single-pipeline production engine. It works, but every job (QA, ward
 | 1 | **Reference intake → Tone Bible** (per production/episode) + **shot contract v1** locked, reviewed on one real Episode-1 shot | pending |
 | 2 | **Wave 1 fleet** stood up in the new Foundry project: Orchestrator + Script + Director + Research + QA | pending |
 | 3 | **Wave 2**: wardrobe, set decoration, casting, camera | pending |
-| 4 | **Wave 3**: VFX, continuity, sound, Egyptian-Arabic specialist | pending |
+| 4 | **Wave 3**: VFX, Continuity, Sound, Dialect/Language, Editor/Post (+ Marketing when needed) | pending |
 | 5 | **Migrate** live production from MTower engine → Studio fleet, episode by episode | pending |
 
 ## Phase 0 checklist

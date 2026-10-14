@@ -30,6 +30,8 @@
 | 9 | **VFX / Effects** | Explosions, smoke, tracers, weather, damage | text (+vision check) | 3 |
 | 10 | **Continuity** | Cross-shot consistency (time, blood, props, light) | **vision** | 3 |
 | 11 | **Sound / Voice** | Narration, dialogue, SFX, music briefs | text + Speech/tts | 3 |
+| 12 | **Editor / Post** | Assemble approved shots → animatic → cut + subtitles | text + assembly | 3 |
+| 13 | **Marketing** *(support)* | Poster/key art, teaser plan, synopsis (on-brand) | text + image | 3+ |
 
 > The orchestrator (0) is the coordinator, not a craft specialist; it is listed here for completeness and detailed in [03-orchestration.md](03-orchestration.md).
 
@@ -190,30 +192,67 @@
 - **Competence (L1–L4):** L1 VFX supervisor + pyrotechnics/SFX coordinator, expert in period ordnance behavior, ballistics feel, restrained believable war effects; L2 Research ordnance verdicts + props/vehicles.json + restrained-violence rule + Tone Bible action refs; L3 vision check, props/vehicle references; L4 Research (ordnance), Set (aftermath), Wardrobe (garment result), Camera (effect light), Continuity (persistence), Sound (effect audio), Image QA (verifies).
 
 ### 10. Continuity agent
-- **Craft:** enforce consistency **across** shots within a scene/sequence — time of day, light direction, wear state, injuries, prop positions, who-holds-what.
-- **Reads:** this shot + neighboring shots' contracts in the same beat/scene.
-- **Writes:** `shot.continuity` = `{prior_state_ref, deltas[], violations[]}`.
-- **Tools:** vision (compare frames), contract store queries.
+- **Craft:** enforce consistency **across** shots — time of day, light direction, wear state, injuries, prop positions, who-holds-what, set damage, weather, appearance — the studio's guardian against drift.
+- **Reads:** this shot + neighboring shots' contracts in the same beat/scene, the running world-state, the Director/Script **delta list** (intended changes).
+- **Writes:** `shot.continuity` = `{prior_state_ref, deltas[], violations[]}`; updates the running world-state.
+- **Tools:** vision (compare frames), contract store queries across the sequence.
 - **Model:** **vision**.
-- **DoD:** no unexplained continuity violation vs adjacent approved shots; any intentional change (e.g. a wound appearing) is recorded as a delta, not a violation.
-- **Guardrails:** read-only on other agents' fields; raises violations for the orchestrator to route, never edits another craft's decision.
+- **Decisions (locked 2026-10-14):**
+  - **Scope = both:** within-**scene** as the strict gate; **cross-scene/whole-episode** tracked as persistent world-state (a scar from Act 1 persists to Act 5).
+  - **Delta source of truth:** the **Director/Script own the intended-change (delta) list**; Continuity validates against it (never guesses intent).
+  - **Blocking power:** an **open continuity violation blocks the shot from human approval** until resolved (strongest guarantee against drift reaching the cut).
+- **DoD:** no unexplained violation vs adjacent approved shots; every intentional change recorded as a **delta**; running world-state updated for downstream shots.
+- **Guardrails:** read-only on other agents' fields (reviewer ≠ author); raises violations for the orchestrator to route; judges relationships between frames (Image QA judges single frames).
+- **Competence (L1–L4):** L1 veteran script/continuity supervisor with a photographic memory and obsessive frame-to-frame eye; L2 neighboring shot contracts + running world-state + intended delta list; L3 vision compare, contract-store queries; L4 Wardrobe/Set/Camera/VFX (consistency veto), Image QA (complementary), Director/Script (delta list), Orchestrator (routes fixes).
 
 ### 11. Sound / Voice agent
-- **Craft:** own the audio brief per shot/beat — narration takes, dialogue delivery, SFX list, and music cues; coordinate renders.
-- **Reads:** `shot.vo`, `shot.dialogue[]`, `shot.voice_notes`, beat timing.
+- **Craft:** own the **audio brief** per shot/beat — narration takes, dialogue delivery, SFX list, and music cues; coordinate renders and the listen-back check.
+- **Reads:** `shot.vo`, `shot.dialogue[]` (+ egyptian), `shot.voice_notes`, `shot.vfx` (effect audio), beat timing.
 - **Writes:** `shot.audio` = `{narration_take, dialogue_takes[], sfx[], music_cue}`.
 - **Tools:** Azure Speech / tts / gpt-audio, engine `voice`/`animatic`, ledger.
 - **Model:** text + Speech/audio.
-- **DoD:** each narrated/spoken beat has a rendered take that passes the listen-back check; SFX and music cues are listed for the edit; costs logged.
-- **Guardrails:** drafts on Azure Speech; ElevenLabs remains the planned final narrator (D-19); no premium render without a cost gate.
+- **Decisions (locked 2026-10-14):**
+  - **Draft vs final tiering:** Azure Speech for drafts/animatic; **ElevenLabs remains the planned final narrator** (D-19) — premium renders are cost-gated.
+  - **SFX sourced from VFX events:** the effect list drives the SFX brief (a muzzle flash implies its report), keeping picture and sound coherent.
+  - **Music = cue briefs, not final score** in-studio; final scoring is a human/ElevenLabs/licensed step, cost-gated.
+- **DoD:** each narrated/spoken beat has a rendered take that **passes the listen-back (speech-to-text) check**; SFX + music cues listed for the edit; costs logged.
+- **Guardrails:** no premium render without a cost gate; respects session sensitivity; SFX/music coherent with VFX and tone.
+- **Competence (L1–L4):** L1 supervising sound editor + re-recording mixer + music supervisor, ear for period ambience and restrained scoring; L2 voice notes + dialect takes + VFX event list + Tone Bible music/sound refs + D-19/D-20 direction; L3 Azure Speech/tts/gpt-audio, voice/animatic, ledger; L4 Dialect specialist (lines), VFX (effect audio), Editor (timeline), Director (tone), user (final scoring approval).
+
+### 12. Editor / Post agent
+- **Craft:** assemble approved shots into a **cut** — ordering, timing/pacing, transitions, and subtitles — building the animatic first, then the edited sequence; the studio's cutting room.
+- **Reads:** approved `shot.generation.selected` + `shot.audio` across a beat/scene, beat timing, the Director's pacing notes, `shot.dialogue` (for subtitles).
+- **Writes:** `scene.cut` = `{shot_order[], durations[], transitions[], subtitle_track}`; animatic/edit artifacts (paths).
+- **Tools:** engine `animatic`/timeline export, subtitle generation, ledger.
+- **Model:** text (reasoning) + the engine's assembly tools.
+- **Decisions (locked 2026-10-14):**
+  - **Animatic-before-video:** lock timing on keyframes + narration + temp sound **before** paying for motion video (MTower discipline).
+  - **Only approved shots enter the cut:** the Editor never pulls un-approved or QA-failed frames.
+  - **Subtitles from the canonical dialogue** (Arabic subtitles for Hebrew radio, per series rule), timed to the audio.
+- **DoD:** a scene cut exists with ordered approved shots, locked durations/transitions, and a timed subtitle track; animatic reviewed before any video spend.
+- **Guardrails:** assembles only approved material; no premium video render until the animatic timing is locked and cost-gated; final polish/grade/upscale remains a human step in the NLE (e.g. DaVinci Resolve).
+- **Competence (L1–L4):** L1 film editor with a sense of rhythm and story; L2 approved shots + audio + pacing notes + beat timing; L3 engine animatic/timeline, subtitles, ledger; L4 Director (pacing), Sound (audio bed), Continuity (order sanity), user (final cut approval).
+
+### 13. Marketing agent *(supporting; optional)*
+- **Craft:** produce promotional assets from the finished material — **poster concepts, key art, teaser/trailer plans, episode synopses** — on the studio's look and tone.
+- **Reads:** the series bible, Tone Bible, approved hero shots, the episode cut, the visual guide.
+- **Writes:** marketing artifacts (poster drafts, trailer plan, synopsis) under the production's `marketing/`.
+- **Tools:** image generation (via the engine, cost-gated), the library, looks.
+- **Model:** text + image (via engine).
+- **Decisions (locked 2026-10-14):**
+  - **Reuses hero frames/look** — marketing is derived from approved material and the established look, not a divergent aesthetic.
+  - **Cost-gated and human-approved** like any generation; nothing published without the user (privacy/publish gate).
+- **DoD:** requested marketing assets drafted on-brand, cost-logged, staged for the user's review; nothing published automatically.
+- **Guardrails:** never publishes/shares (human gate); respects session sensitivity and copyright (original key art, not cloned).
+- **Competence (L1–L4):** L1 key-art designer + trailer editor + copywriter; L2 series/Tone bible + approved hero shots + the cut; L3 engine image gen, library, looks; L4 Director (tone), Editor (trailer source), Image QA (verifies key art), user (publish approval).
 
 ---
 
 ## Notes on crew size
 
-Start from these 12 and adjust after review:
-- **Mergeable** if we want a leaner Wave 2: Wardrobe + Set + VFX could begin as one **"Art Department"** agent and split later.
-- **Possibly split** if load grows: Script could split into **Scenario (structure)** vs **Dialogue (lines)**.
-- **Editor / Timeline** and **Marketing/Poster** agents exist implicitly in MTower (`animatic`, marketing drafts) — add as a Wave 3+ role if the orchestrator needs them as first-class crew.
+The full crew is now **15 roles**: Orchestrator (0), Script (1), Director (1b), Research (2), Image QA (3), Studio Critic (3b), Casting (4), Wardrobe (5), Set (6), Camera/DoP (7), Dialect/Language (8), VFX (9), Continuity (10), Sound/Voice (11), Editor/Post (12), plus Marketing (13, optional support). Adjust as reality dictates:
+- **Mergeable** for a leaner start: Wardrobe + Set + VFX could begin as one **"Art Department"** agent and split later.
+- **Possibly split** if load grows: Script could split into **Scenario (structure)** vs **Dialogue (lines)**; Casting could spin off a dedicated **Talent Manager** for Talent-Pool upkeep.
+- **Marketing (13)** is optional supporting crew — stand it up only when promotion is needed.
 
-The orchestrator does not need the full crew to be useful — Wave 1 (Orchestrator + Script + Research + QA) already closes the generate → validate → regenerate loop end to end.
+The orchestrator does not need the full crew to be useful — **Wave 1** (Orchestrator + Script + Director + Research + Image QA + Studio Critic) already closes the generate → validate → regenerate loop end to end. Waves 2–3 add the creative and finishing crew.
