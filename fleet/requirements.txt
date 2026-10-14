@@ -1,0 +1,5 @@
+# MTower Studio — agent fleet (Wave 1) Python dependencies
+openai>=1.50
+azure-identity>=1.17
+pydantic>=2.7
+python-dotenv>=1.0
