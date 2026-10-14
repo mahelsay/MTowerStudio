@@ -34,6 +34,7 @@
 | 11 | **Sound / Voice** | Narration, dialogue, SFX, music briefs | text + Speech/tts | 3 |
 | 12 | **Editor / Post** | Assemble approved shots → animatic → cut + subtitles | text + assembly | 3 |
 | 13 | **Marketing** *(support)* | Poster/key art, teaser plan, synopsis (on-brand) | text + image | 3+ |
+| 14 | **Graphic & Title Design** | In-world graphics, titles/credits, subtitles, studio brand & web | text + image | 3 |
 
 > The orchestrator (0) is the coordinator, not a craft specialist; it is listed here for completeness and detailed in [03-orchestration.md](03-orchestration.md).
 
@@ -276,11 +277,25 @@
 - **Guardrails:** never publishes/shares (human gate); respects session sensitivity and copyright (original key art, not cloned).
 - **Competence (L1–L4):** L1 key-art designer + trailer editor + copywriter; L2 series/Tone bible + approved hero shots + the cut; L3 engine image gen, library, looks; L4 Director (tone), Editor (trailer source), Image QA (verifies key art), user (publish approval).
 
+### 14. Graphic & Title Design agent
+- **Craft:** all **designed graphics** — (a) **in-world period graphics** (Arabic signage, telegrams, letters, maps, newspapers, documents, unit insignia); (b) **title & credits design** (main/end titles, episode title cards, lower-thirds, subtitle styling); (c) the **studio brand & UX** (logo system, identity, the studio website). The art department's graphic artist + title designer + brand designer.
+- **Reads:** `shot.intent`/`shot.set` (what graphics a scene needs), series/Tone bible, Research verdicts (period-correct text/typography), `shot.dialogue` (titles/subtitles), the episode cut.
+- **Writes:** `shot.graphics[]` = `{type, content, placement}`; title/credit specs; brand/web artifacts under the studio's `brand/`.
+- **Tools:** image generation (via the engine, cost-gated), typography/layout, library, looks.
+- **Model:** text + image (via engine).
+- **Decisions (locked 2026-10-14):**
+  - **Period-correct typography via Research:** in-world text (Arabic script style, fonts, document formats) is verified by Research — no anachronistic lettering.
+  - **In-world graphics vs physical dressing:** Graphic Design owns *designed artifacts* (a printed telegram, a map); **Set** owns their physical placement in the frame.
+  - **Brand consistency:** titles, episode cards, and promo share one designed identity; cost-gated and human-approved like any generation.
+- **DoD:** required graphics/titles designed, period-correct, legible, on-brand, cost-logged; nothing published without the user.
+- **Guardrails:** period-accurate lettering (checked with Research); original design, not cloned IP; never publishes/shares (human gate).
+- **Competence (L1–L4):** L1 art-department graphic artist + main-title designer + brand/UX designer, expert in period Arabic typography and document design; L2 series/Tone bible + Research typography verdicts + the cut + brand system; L3 engine image gen, typography/layout, library; L4 Set (physical placement), Research (period type), Marketing (campaign), Editor (titles/subtitles in the cut), Director (tone), user (publish approval).
+
 ---
 
 ## Notes on crew size
 
-The full crew is now **17 roles**: Orchestrator (0), Script (1), Director (1b), Research (2), Image QA (3), Studio Critic (3b), Casting (4), Wardrobe (5), Makeup & Hair (5b), Set (6), Camera/DoP (7), Stunt/Action (7b), Dialect/Language (8), VFX (9), Continuity (10), Sound/Voice (11), Editor/Post (12), plus Marketing (13, optional support). Adjust as reality dictates:
+The full crew is now **18 roles**: Orchestrator (0), Script (1), Director (1b), Research (2), Image QA (3), Studio Critic (3b), Casting (4), Wardrobe (5), Makeup & Hair (5b), Set (6), Camera/DoP (7), Stunt/Action (7b), Dialect/Language (8), VFX (9), Continuity (10), Sound/Voice (11), Editor/Post (12), Marketing (13, optional support), Graphic & Title Design (14). Adjust as reality dictates:
 - **Mergeable** for a leaner start: Wardrobe + Set + VFX could begin as one **"Art Department"** agent and split later.
 - **Possibly split** if load grows: Script could split into **Scenario (structure)** vs **Dialogue (lines)**; Casting could spin off a dedicated **Talent Manager** for Talent-Pool upkeep.
 - **Marketing (13)** is optional supporting crew — stand it up only when promotion is needed.

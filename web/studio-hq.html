@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MTower Studio — HQ</title>
+<title>MTower Studio</title>
 <script>
   (() => {
     const param = new URLSearchParams(window.location.search).get("scoutTheme");
@@ -14,492 +14,372 @@
 <style>
 :root {
   color-scheme: light;
-  --cp-bg: #f7f4ef; --cp-bg-elevated: #fcfbf8; --cp-surface: #ffffff; --cp-surface-soft: #f5f5f5;
-  --cp-border: #dedede; --cp-border-strong: #919191; --cp-text: #242424; --cp-text-muted: #5c5c5c;
+  --cp-bg: #f7f4ef; --cp-bg-elevated: #fcfbf8; --cp-surface: #ffffff; --cp-surface-soft: #f1ede6;
+  --cp-border: #e2ddd4; --cp-border-strong: #b8b0a4; --cp-text: #242424; --cp-text-muted: #5c5c5c;
   --cp-text-soft: #6f6f6f; --cp-accent: #b11f4b; --cp-accent-hover: #9a1a41;
-  --cp-accent-soft: rgba(177, 31, 75, 0.08); --cp-accent-fg: #ffffff; --cp-success: #16a34a;
-  --cp-danger: #dc2626; --cp-warning: #f59e0b; --cp-link: #0078d4;
-  --cp-shadow: 0 18px 48px rgba(0,0,0,0.12); --cp-highlight: rgba(177,31,75,0.12);
-  --grain: 0.025;
+  --cp-accent-soft: rgba(177,31,75,0.08); --cp-accent-fg: #ffffff;
+  --cp-shadow: 0 24px 60px rgba(0,0,0,0.14);
+  --nav-bg: rgba(252,251,248,0.82); --hero-ink: #ffffff; --grain: 0.02;
 }
 html[data-theme="dark"] {
   color-scheme: dark;
-  --cp-bg: #201e1d; --cp-bg-elevated: #262423; --cp-surface: #2a2726; --cp-surface-soft: #2e2b2a;
-  --cp-border: #3a3735; --cp-border-strong: #5f5f5f; --cp-text: #ece7e1; --cp-text-muted: #9a938c;
-  --cp-text-soft: #b8b0a8; --cp-accent: #fd8ea1; --cp-accent-hover: #fb7b91;
-  --cp-accent-soft: rgba(253,142,161,0.12); --cp-accent-fg: #1a1a1a; --cp-success: #4ade80;
-  --cp-danger: #f87171; --cp-warning: #fbbf24; --cp-link: #4da6ff;
-  --cp-shadow: 0 18px 48px rgba(0,0,0,0.42); --cp-highlight: rgba(253,142,161,0.12);
-  --grain: 0.04;
+  --cp-bg: #1b1917; --cp-bg-elevated: #211e1c; --cp-surface: #26231f; --cp-surface-soft: #2b2723;
+  --cp-border: #373230; --cp-border-strong: #5a524c; --cp-text: #efe9e1; --cp-text-muted: #9c948a;
+  --cp-text-soft: #bcb3a8; --cp-accent: #fd8ea1; --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253,142,161,0.12); --cp-accent-fg: #1a1a1a;
+  --cp-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  --nav-bg: rgba(27,25,23,0.72); --hero-ink: #f6efe6; --grain: 0.05;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  margin: 0; background: var(--cp-bg); color: var(--cp-text);
+body { margin: 0; background: var(--cp-bg); color: var(--cp-text);
   font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6; -webkit-font-smoothing: antialiased;
-}
-/* film-grain overlay */
-body::after {
-  content:""; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: var(--grain);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-.serif { font-family: Georgia, "Hoefler Text", "Times New Roman", serif; font-weight: 600; letter-spacing: .1px; }
-.kicker { font-size: .68rem; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--cp-text-muted); }
-.accent-rule { width: 38px; height: 2px; background: var(--cp-accent); border: 0; margin: 14px 0; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px 100px; position: relative; z-index: 2; }
+  line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body::after { content:""; position: fixed; inset:0; pointer-events:none; z-index: 60; opacity: var(--grain);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.serif { font-family: Georgia, "Hoefler Text", "Times New Roman", serif; }
+.kicker { font-size: .68rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--cp-accent); }
+a { color: inherit; text-decoration: none; }
 
-/* ===== Masthead ===== */
-header.hero {
-  position: relative; overflow: hidden; text-align: center;
-  padding: 72px 24px 46px;
-  border-bottom: 1px solid var(--cp-border);
+/* ===== NAV ===== */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display:flex; align-items:center; justify-content: space-between;
+  padding: 18px 40px; transition: background .35s, padding .35s, border-color .35s; border-bottom: 1px solid transparent; }
+nav.scrolled { background: var(--nav-bg); backdrop-filter: blur(14px) saturate(1.2); border-bottom-color: var(--cp-border); padding: 12px 40px; }
+nav .brand { display:flex; align-items:center; gap: 11px; font-family: Georgia, serif; font-weight: 700; letter-spacing: .5px; color: var(--hero-ink); transition: color .35s; }
+nav.scrolled .brand { color: var(--cp-text); }
+nav .brand small { display:block; font-family: "Segoe UI",sans-serif; font-size:.56rem; letter-spacing:.32em; font-weight:600; color: var(--cp-accent); margin-top: 1px; }
+nav .links { display:flex; gap: 4px; }
+nav .links a { font-size: .8rem; font-weight: 600; letter-spacing: .03em; padding: 8px 14px; border-radius: 8px; color: var(--hero-ink); opacity: .82; transition: opacity .2s, color .35s, background .2s; }
+nav.scrolled .links a { color: var(--cp-text-muted); opacity: 1; }
+nav .links a:hover { opacity: 1; color: var(--cp-accent); }
+nav .links a.active { color: var(--cp-accent); opacity: 1; }
+@media (max-width: 820px){ nav{padding:14px 18px;} nav .links{display:none;} }
+
+/* ===== HERO ===== */
+.hero { position: relative; min-height: 100vh; display:flex; flex-direction: column; align-items:center; justify-content:center; text-align:center;
+  padding: 120px 24px 80px; overflow: hidden; color: var(--hero-ink); }
+.hero .bg { position:absolute; inset:0; z-index:0;
   background:
-    radial-gradient(120% 80% at 50% -10%, var(--cp-accent-soft), transparent 55%),
-    linear-gradient(180deg, var(--cp-bg-elevated), var(--cp-bg));
-}
-header.hero::before { /* vignette */
-  content:""; position:absolute; inset:0; pointer-events:none;
-  box-shadow: inset 0 -90px 120px -60px rgba(0,0,0,0.25), inset 0 0 160px -40px rgba(0,0,0,0.18);
-}
-.monogram { width: 60px; height: 60px; margin: 0 auto 20px; display:block; position:relative; z-index:2; }
-.hero h1 { margin: 0; font-size: 3rem; line-height: 1.02; letter-spacing: 0.5px; position:relative; z-index:2; }
-.hero .ar { font-size: 1.1rem; color: var(--cp-text-muted); margin-top: 10px; position:relative; z-index:2; }
-.hero p.tag { color: var(--cp-text-soft); max-width: 600px; margin: 20px auto 0; font-size: .96rem; position:relative; z-index:2; }
-.hero .accent-rule { margin: 22px auto 0; }
+    radial-gradient(90% 60% at 50% 18%, rgba(177,31,75,0.30), transparent 60%),
+    radial-gradient(120% 90% at 50% 120%, rgba(0,0,0,0.6), transparent 60%),
+    linear-gradient(160deg, #241712, #1a120d 45%, #0d0907); }
+html[data-theme="light"] .hero .bg { background:
+    radial-gradient(90% 60% at 50% 18%, rgba(177,31,75,0.5), transparent 60%),
+    radial-gradient(120% 90% at 50% 120%, rgba(0,0,0,0.7), transparent 55%),
+    linear-gradient(160deg, #3a241c, #241712 50%, #140d09); }
+.hero .bg::after { content:""; position:absolute; inset:0; box-shadow: inset 0 -140px 160px -60px rgba(0,0,0,.8), inset 0 0 220px -30px rgba(0,0,0,.5); }
+.hero .ghost { position:absolute; z-index:0; font-family: Georgia, serif; font-weight:700; font-size: 30vw; line-height:1; color: #fff; opacity: .028; white-space: nowrap; top: 50%; left:50%; transform: translate(-50%,-50%); pointer-events:none; letter-spacing: -1vw; }
+.hero .inner { position: relative; z-index: 2; max-width: 820px; animation: rise 1s ease both; }
+@keyframes rise { from{opacity:0; transform:translateY(24px);} to{opacity:1;transform:none;} }
+.hero .mono { margin: 0 auto 26px; display:block; }
+.hero h1 { font-family: Georgia, serif; font-weight: 700; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1; margin: 0; letter-spacing: 1px; text-shadow: 0 2px 30px rgba(0,0,0,.4); }
+.hero .ar { font-size: clamp(1rem,2.4vw,1.4rem); opacity:.78; margin-top: 14px; }
+.hero .tag { max-width: 560px; margin: 24px auto 0; font-size: 1.02rem; opacity: .9; }
+.hero .cta { display:flex; gap: 14px; justify-content:center; margin-top: 36px; flex-wrap: wrap; }
+.btn { font: inherit; font-size: .86rem; font-weight: 600; letter-spacing: .03em; padding: 13px 26px; border-radius: 10px; cursor:pointer; transition: transform .15s, background .2s, border-color .2s; border: 1px solid transparent; }
+.btn.primary { background: var(--cp-accent); color: var(--cp-accent-fg); }
+.btn.primary:hover { transform: translateY(-2px); background: var(--cp-accent-hover); }
+.btn.ghost { background: transparent; color: var(--hero-ink); border-color: rgba(255,255,255,.35); }
+.btn.ghost:hover { transform: translateY(-2px); border-color: #fff; }
+.scrollcue { position:absolute; bottom: 28px; left:50%; transform:translateX(-50%); z-index:2; color: var(--hero-ink); opacity:.6; font-size: 1.3rem; animation: bob 1.8s ease-in-out infinite; }
+@keyframes bob { 0%,100%{transform:translate(-50%,0);} 50%{transform:translate(-50%,8px);} }
 
-/* ===== Nav ===== */
-nav.tabs {
-  position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; gap: 2px; justify-content: center;
-  padding: 0 10px; background: color-mix(in srgb, var(--cp-bg-elevated) 86%, transparent);
-  border-bottom: 1px solid var(--cp-border); backdrop-filter: blur(10px) saturate(1.1);
-}
-nav.tabs button {
-  font: inherit; font-size: .82rem; font-weight: 600; letter-spacing: .04em; cursor: pointer;
-  border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--cp-text-muted);
-  padding: 16px 20px; transition: color .2s, border-color .2s;
-}
-nav.tabs button:hover { color: var(--cp-text); }
-nav.tabs button.active { color: var(--cp-accent); border-bottom-color: var(--cp-accent); }
+/* ===== SECTIONS ===== */
+section.band { padding: 100px 24px; scroll-margin-top: 60px; }
+section.band.alt { background: var(--cp-bg-elevated); border-top: 1px solid var(--cp-border); border-bottom: 1px solid var(--cp-border); }
+.inner { max-width: 1060px; margin: 0 auto; }
+.sec-head { text-align:center; max-width: 640px; margin: 0 auto 54px; }
+.sec-head h2 { font-family: Georgia, serif; font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.7rem); margin: 12px 0 0; letter-spacing: .4px; }
+.sec-head p { color: var(--cp-text-soft); margin: 14px 0 0; font-size: 1rem; }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
 
-.panel { display: none; padding-top: 44px; }
-.panel.active { display: block; animation: fade .35s ease; }
-@keyframes fade { from { opacity: 0; transform: translateY(8px);} to { opacity:1; transform:none; } }
+.grid { display:grid; gap: 18px; }
+.cols2 { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+.cols3 { grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); }
+.card { background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px; padding: 26px 28px; transition: transform .22s, border-color .22s, box-shadow .22s; }
+.card.hover:hover { transform: translateY(-4px); border-color: var(--cp-border-strong); box-shadow: var(--cp-shadow); }
+.card h3 { font-family: Georgia, serif; font-weight: 600; margin: 0 0 12px; font-size: 1.15rem; }
+ul.clean { list-style:none; padding:0; margin:0; }
+ul.clean li { font-size: .92rem; color: var(--cp-text-soft); margin: 10px 0; padding-left: 20px; position:relative; }
+ul.clean li::before { content:""; position:absolute; left:0; top:.6em; width:7px; height:7px; border-radius:50%; background: var(--cp-accent); opacity:.65; }
 
-.sec-head { margin-bottom: 30px; }
-.sec-head h2 { font-size: 2rem; margin: 6px 0 0; letter-spacing: .3px; }
-.sec-head p { color: var(--cp-text-soft); margin: 10px 0 0; max-width: 620px; }
-
-/* ===== Cards ===== */
-.card {
-  background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 14px; padding: 22px 24px;
-  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-}
-.card.hover:hover { transform: translateY(-3px); border-color: var(--cp-border-strong); box-shadow: var(--cp-shadow); }
-.grid { display: grid; gap: 16px; }
-.cols2 { grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); }
-.cols3 { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
-
-/* ===== Overview ===== */
-.stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border: 1px solid var(--cp-border); border-radius: 14px; overflow: hidden; margin-bottom: 34px; }
-.stats .s { padding: 22px 20px; text-align: center; border-right: 1px solid var(--cp-border); }
+/* stats */
+.stats { display:grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--cp-border); border-radius: 16px; overflow:hidden; margin-top: 44px; background: var(--cp-surface); }
+.stats .s { padding: 30px 18px; text-align:center; border-right: 1px solid var(--cp-border); }
 .stats .s:last-child { border-right: 0; }
-.stats .s b { display:block; font-family: Georgia, serif; font-size: 2.4rem; color: var(--cp-accent); line-height: 1; }
-.stats .s span { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cp-text-muted); display:block; margin-top: 8px; }
-.card h3 { margin: 0 0 10px; font-size: 1.05rem; }
-ul.clean { padding-left: 0; margin: 0; list-style: none; }
-ul.clean li { margin: 9px 0; font-size: .9rem; color: var(--cp-text-soft); padding-left: 18px; position: relative; }
-ul.clean li::before { content:""; position:absolute; left: 0; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--cp-accent); opacity: .6; }
-.note { border-left: 2px solid var(--cp-accent); padding: 4px 0 4px 18px; font-size: .92rem; color: var(--cp-text); margin: 30px 0 0; }
-.note b { font-weight: 600; }
+.stats .s b { display:block; font-family: Georgia, serif; font-size: 2.8rem; color: var(--cp-accent); line-height:1; }
+.stats .s span { display:block; font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color: var(--cp-text-muted); margin-top: 10px; }
+@media(max-width:600px){ .stats{grid-template-columns:repeat(2,1fr);} .stats .s:nth-child(2){border-right:0;} }
 
-/* ===== Crew (call sheet) ===== */
-.dept { margin: 40px 0 18px; display:flex; align-items: baseline; gap: 14px; }
-.dept:first-of-type { margin-top: 8px; }
-.dept .dname { font-family: Georgia, serif; font-size: 1.25rem; }
-.dept .line { flex: 1; height: 1px; background: var(--cp-border); }
-.dept .count { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cp-text-muted); }
-.dept .swatch { width: 10px; height: 10px; border-radius: 3px; }
-.agent { position: relative; }
-.agent .num { font-family: Georgia, serif; font-size: .8rem; color: var(--cp-text-muted); position: absolute; top: 20px; right: 22px; }
-.agent .top { display:flex; align-items:center; gap: 12px; margin-bottom: 12px; }
-.agent .ico { font-size: 1.35rem; width: 42px; height: 42px; display:grid; place-items:center; border:1px solid var(--cp-border); border-radius: 11px; background: var(--cp-surface-soft); flex-shrink:0; }
-.agent .name { font-family: Georgia, serif; font-weight: 600; font-size: 1.08rem; line-height: 1.1; }
-.agent .role { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--cp-text-muted); margin-top: 3px; }
-.agent .desc { font-size: .88rem; color: var(--cp-text-soft); }
-.agent .meta { display:flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items:center; }
-.chip { font-size: .68rem; letter-spacing: .04em; color: var(--cp-text-muted); border: 1px solid var(--cp-border); border-radius: 999px; padding: 3px 10px; }
-.chip.wave { color: var(--cp-accent); border-color: color-mix(in srgb, var(--cp-accent) 40%, var(--cp-border)); }
-.dod { font-size: .78rem; color: var(--cp-text-muted); margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--cp-border); }
-.dod b { color: var(--cp-text); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; font-size: .68rem; }
+/* FEATURED PRODUCTION (netflix title page) */
+.feature { position: relative; border-radius: 22px; overflow: hidden; min-height: 460px; display:flex; align-items:flex-end;
+  border: 1px solid var(--cp-border); color: #f3 e8dd; }
+.feature { color: #f3e8dd; }
+.feature .bg { position:absolute; inset:0; z-index:0;
+  background: radial-gradient(120% 90% at 78% 15%, rgba(177,31,75,.5), transparent 55%), linear-gradient(120deg, #17110c 0%, #2a1a12 55%, #0e0a07 100%); }
+.feature .bg::after { content:""; position:absolute; inset:0; box-shadow: inset 0 -120px 140px -50px rgba(0,0,0,.85), inset 300px 0 180px -120px rgba(0,0,0,.7); }
+.feature .ghost2 { position:absolute; z-index:0; right: -4%; top: 50%; transform: translateY(-50%); font-family: Georgia, serif; font-size: 20vw; color:#fff; opacity:.04; }
+.feature .fc { position: relative; z-index: 2; padding: 44px 48px; max-width: 620px; }
+.feature .badge { display:inline-block; font-size:.64rem; letter-spacing:.22em; text-transform:uppercase; border:1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 5px 13px; margin-bottom: 18px; }
+.feature h3 { font-family: Georgia, serif; font-weight:700; font-size: clamp(1.8rem,4vw,2.8rem); line-height:1.04; margin: 0; }
+.feature h3 .ar2 { display:block; font-size: .6em; opacity:.92; margin-bottom: 8px; }
+.feature .syn { font-size: .96rem; opacity: .86; margin: 16px 0 0; }
+.feature .row { display:flex; flex-wrap:wrap; gap: 8px 18px; margin-top: 20px; font-size: .78rem; opacity:.82; }
+.feature .row b { color:#fff; font-weight:600; }
+.featmeta { display:grid; grid-template-columns: 130px 1fr; gap: 8px 16px; margin-top: 22px; font-size: .9rem; }
+.featmeta dt { font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color: var(--cp-text-muted); padding-top:2px; }
+.featmeta dd { margin:0; }
 
-/* ===== Board ===== */
-.flow { display:flex; flex-wrap: wrap; align-items: stretch; gap: 10px; margin: 18px 0 6px; }
-.step { flex: 1 1 120px; border: 1px solid var(--cp-border); border-radius: 11px; padding: 13px 15px; }
-.step b { font-size: .86rem; }
-.step small { display:block; color: var(--cp-text-muted); font-size: .72rem; margin-top: 3px; }
-.step .i { font-size: .95rem; margin-bottom: 4px; display:block; }
-.tier { display:flex; gap: 16px; align-items:flex-start; padding: 16px 0; border-bottom: 1px solid var(--cp-border); }
-.tier:last-child { border-bottom: 0; padding-bottom: 0; }
-.tier .n { font-family: Georgia, serif; font-weight: 600; color: var(--cp-accent); font-size: 1.1rem; width: 30px; flex-shrink: 0; text-align:center; }
-.tier div b { font-weight: 600; }
-.tier .t { font-size: .9rem; color: var(--cp-text-soft); }
-.tier .t b { color: var(--cp-text); }
+/* CREW */
+.dept { margin: 50px 0 20px; display:flex; align-items:baseline; gap: 14px; }
+.dept:first-child{margin-top:0;}
+.dept .sw { width:10px; height:10px; border-radius:3px; }
+.dept .dn { font-family: Georgia, serif; font-size: 1.3rem; }
+.dept .ln { flex:1; height:1px; background: var(--cp-border); }
+.dept .ct { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color: var(--cp-text-muted); }
+.agent { position:relative; }
+.agent .num { position:absolute; top:22px; right:24px; font-family:Georgia,serif; font-size:.8rem; color: var(--cp-text-muted); }
+.agent .hd { display:flex; align-items:center; gap:13px; margin-bottom:13px; }
+.agent .ico { width:46px;height:46px; display:grid; place-items:center; font-size:1.4rem; border:1px solid var(--cp-border); border-radius:12px; background: var(--cp-surface-soft); flex-shrink:0; }
+.agent .nm { font-family:Georgia,serif; font-weight:600; font-size:1.1rem; line-height:1.1; }
+.agent .rl { font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color: var(--cp-text-muted); margin-top:3px; }
+.agent .ds { font-size:.88rem; color: var(--cp-text-soft); }
+.agent .mt { display:flex; flex-wrap:wrap; gap:8px; margin-top:15px; }
+.chip { font-size:.66rem; letter-spacing:.03em; color: var(--cp-text-muted); border:1px solid var(--cp-border); border-radius:999px; padding:3px 11px; }
+.chip.w { color: var(--cp-accent); border-color: color-mix(in srgb, var(--cp-accent) 42%, var(--cp-border)); }
 
-/* ===== Productions ===== */
-.poster { display:flex; gap: 28px; flex-wrap: wrap; align-items: stretch; }
-.poster .art {
-  flex: 0 0 248px; border-radius: 14px; min-height: 360px; position: relative; overflow: hidden;
-  background: linear-gradient(165deg, #14100c, #241711 50%, #0e0a07);
-  border: 1px solid var(--cp-border); display:flex; flex-direction:column; justify-content:flex-end;
-  color: #efe6da; padding: 22px;
-}
-.poster .art::before { content:""; position:absolute; inset:0; background: radial-gradient(130% 55% at 50% 0%, rgba(177,31,75,.4), transparent 62%); }
-.poster .art::after { content:""; position:absolute; inset:0; box-shadow: inset 0 -70px 80px -40px rgba(0,0,0,.7); }
-.poster .art .cs { position:absolute; top:16px; left:16px; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; background: rgba(0,0,0,.4); padding:5px 9px; border-radius:6px; z-index:2; }
-.poster .art .mono { position:absolute; top:14px; right:14px; z-index:2; opacity:.85; }
-.poster .art .ttl { position:relative; z-index:2; font-family: Georgia, serif; font-size: 1.55rem; font-weight: 700; line-height:1.08; }
-.poster .art .ttl .ar2 { display:block; font-size:1.05rem; font-weight:600; opacity:.92; margin-bottom:6px; }
-.poster .art .sub { position:relative; z-index:2; font-size:.76rem; opacity:.82; margin-top:8px; letter-spacing:.02em; }
-.poster .info { flex: 1 1 320px; }
-.poster .info h3 { font-family: Georgia, serif; font-size: 1.35rem; margin: 0 0 6px; }
-.kv { display:grid; grid-template-columns: 128px 1fr; gap: 9px 16px; font-size:.88rem; margin-top: 14px; }
-.kv dt { color: var(--cp-text-muted); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; padding-top: 2px; }
-.kv dd { margin:0; }
+/* MODELS */
+table { width:100%; border-collapse: collapse; font-size:.9rem; }
+th,td { text-align:left; padding: 14px 16px; border-bottom:1px solid var(--cp-border); vertical-align:top; }
+th { font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color: var(--cp-text-muted); font-weight:600; }
+tbody tr{ transition: background .15s; } tbody tr:hover td{ background: var(--cp-surface-soft); }
+td.m { font-family: Georgia, serif; font-weight:600; }
 
-/* ===== Models ===== */
-table { width:100%; border-collapse: collapse; font-size: .88rem; }
-th, td { text-align:left; padding: 13px 14px; border-bottom: 1px solid var(--cp-border); vertical-align: top; }
-th { color: var(--cp-text-muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 600; }
-tbody tr { transition: background .15s; }
-tbody tr:hover td { background: var(--cp-surface-soft); }
-td.m { font-family: Georgia, serif; font-weight: 600; }
-
-.foot { text-align:center; color: var(--cp-text-muted); font-size:.74rem; margin-top: 56px; letter-spacing: .04em; }
-.foot .accent-rule { margin: 0 auto 16px; }
-
-@media (max-width: 640px) {
-  .stats { grid-template-columns: repeat(2,1fr); }
-  .stats .s:nth-child(2) { border-right: 0; }
-  .hero h1 { font-size: 2.2rem; }
-}
+footer { background: linear-gradient(180deg, var(--cp-bg), #0d0907); color: #cdbfb0; padding: 70px 24px 44px; text-align:center; border-top:1px solid var(--cp-border); }
+html[data-theme="light"] footer { background: linear-gradient(180deg, var(--cp-bg-elevated), #241712); color:#e8ddd0; }
+footer .mono { margin: 0 auto 20px; }
+footer h4 { font-family: Georgia, serif; font-size: 1.5rem; margin: 0 0 6px; color:#fff; }
+footer .flinks { display:flex; gap:22px; justify-content:center; margin: 20px 0; flex-wrap:wrap; font-size:.82rem; opacity:.85; }
+footer .flinks a:hover { color: var(--cp-accent); }
+footer .fine { font-size:.72rem; opacity:.55; margin-top: 14px; letter-spacing:.04em; }
 </style>
 </head>
 <body>
-<header class="hero">
-  <svg class="monogram" viewBox="0 0 100 100" fill="none" aria-label="MTS monogram">
-    <circle cx="50" cy="50" r="47" stroke="var(--cp-accent)" stroke-width="1.5" opacity="0.5"/>
-    <circle cx="50" cy="50" r="40" stroke="var(--cp-border-strong)" stroke-width="0.75" opacity="0.5"/>
-    <text x="50" y="59" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="var(--cp-accent)">MS</text>
-    <text x="50" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="6.5" letter-spacing="3" fill="var(--cp-text-muted)">STUDIO</text>
-  </svg>
-  <div class="kicker">Virtual AI Film Studio</div>
-  <h1 class="serif">MTower Studio</h1>
-  <div class="ar">استوديو إم‑تاور</div>
-  <p class="tag">An orchestrator and a specialist crew — research, direction, casting, wardrobe, camera, VFX, continuity, sound — each owning one craft, every output validated. <em>Design full, deploy phased.</em></p>
-  <hr class="accent-rule" />
-</header>
 
-<nav class="tabs" id="tabs">
-  <button data-tab="overview" class="active">Overview</button>
-  <button data-tab="crew">The Crew</button>
-  <button data-tab="board">Studio Board</button>
-  <button data-tab="productions">Productions</button>
-  <button data-tab="models">AI Models</button>
-  <button data-tab="landing">Landing Zone</button>
+<nav id="nav">
+  <a class="brand" href="#top">
+    <svg width="34" height="34" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" stroke="var(--cp-accent)" stroke-width="2.5" fill="none" opacity=".75"/><text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="34" font-weight="700" fill="var(--cp-accent)">MS</text></svg>
+    <span>MTOWER<small>STUDIO</small></span>
+  </a>
+  <div class="links" id="navlinks">
+    <a href="#vision">Vision</a>
+    <a href="#productions">Productions</a>
+    <a href="#crew">Crew</a>
+    <a href="#technology">Technology</a>
+    <a href="#infrastructure">Studio</a>
+  </div>
 </nav>
 
-<div class="wrap">
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="bg"></div>
+  <div class="ghost serif">MTOWER</div>
+  <div class="inner">
+    <svg class="mono" width="74" height="74" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" stroke="#fff" stroke-width="1.4" fill="none" opacity=".4"/><circle cx="50" cy="50" r="38" stroke="var(--cp-accent)" stroke-width="1.6" fill="none" opacity=".8"/><text x="50" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#fff">MS</text></svg>
+    <div class="kicker" style="color:#fd8ea1">Virtual AI Film Studio</div>
+    <h1>MTower Studio</h1>
+    <div class="ar serif">استوديو إم‑تاور</div>
+    <p class="tag">A production house run by a crew of AI agents — research, direction, casting, camera, VFX, continuity, sound — each a master of one craft, every frame validated.</p>
+    <div class="cta">
+      <button class="btn primary" onclick="document.getElementById('crew').scrollIntoView()">Meet the crew</button>
+      <button class="btn ghost" onclick="document.getElementById('productions').scrollIntoView()">Now in production</button>
+    </div>
+  </div>
+  <div class="scrollcue">⌄</div>
+</header>
 
-<!-- OVERVIEW -->
-<section class="panel active" id="overview">
-  <div class="sec-head"><div class="kicker">The vision</div><h2 class="serif">A studio run by agents</h2>
-    <p>A production house mirroring a real film unit — so the work is specialized, parallel, auditable, and improvable over time.</p></div>
-  <div class="stats">
-    <div class="s"><b>17</b><span>Crew roles</span></div>
-    <div class="s"><b>3</b><span>Deploy waves</span></div>
-    <div class="s"><b>3</b><span>QA tiers</span></div>
-    <div class="s"><b>1</b><span>Shot contract</span></div>
-  </div>
-  <div class="grid cols2">
-    <div class="card hover">
-      <h3 class="serif">Three layers</h3>
-      <ul class="clean">
-        <li><b>Orchestration</b> — the orchestrator owns the board: assigns work, enforces spend/approval/phase gates, routes problems.</li>
-        <li><b>Agents</b> — a specialist crew; each reads &amp; writes the shared shot contract, never each other.</li>
-        <li><b>Capability</b> — the MTower library, engine, and Azure Foundry / fal.ai models, used as tools.</li>
-      </ul>
+<!-- VISION -->
+<section class="band" id="vision">
+  <div class="inner">
+    <div class="sec-head reveal"><div class="kicker">The vision</div><h2 class="serif">A studio run by agents</h2>
+      <p>Film is a multi-role craft. We model it as one — an orchestrator and a specialist crew, so the work is specialized, parallel, auditable, and gets better over time.</p></div>
+    <div class="grid cols2 reveal">
+      <div class="card hover"><h3>Three layers</h3>
+        <ul class="clean"><li><b>Orchestration</b> — the orchestrator owns the board: assigns work, enforces spend / approval / phase gates, routes problems.</li>
+        <li><b>Agents</b> — a specialist crew; each reads &amp; writes a shared shot contract, never each other.</li>
+        <li><b>Capability</b> — the library, engine, and Azure Foundry / fal.ai models, used as tools.</li></ul></div>
+      <div class="card hover"><h3>Design full, deploy phased</h3>
+        <ul class="clean"><li><b>Wave 1</b> — Orchestrator · Script · Director · Research · Image QA · Studio Critic.</li>
+        <li><b>Wave 2</b> — Casting · Wardrobe · Makeup · Set · Camera · Stunt.</li>
+        <li><b>Wave 3</b> — Dialect · VFX · Continuity · Sound · Editor · Marketing · Graphic Design.</li></ul></div>
+      <div class="card hover"><h3>QA on every step</h3>
+        <p style="margin:0;font-size:.92rem;color:var(--cp-text-soft)">No output is accepted until it passes the gate — Tier&nbsp;1 rules → Tier&nbsp;2 Studio Critic → Tier&nbsp;3 Image QA. The reviewer is never the author. The studio's structural defense against drift.</p></div>
+      <div class="card hover"><h3>Grounded in your taste</h3>
+        <p style="margin:0;font-size:.92rem;color:var(--cp-text-soft)">At kickoff the studio asks you for references — films, footage, photos, writings, music — and builds a cited, versioned Tone Bible every agent draws on.</p></div>
     </div>
-    <div class="card hover">
-      <h3 class="serif">Design full, deploy phased</h3>
-      <ul class="clean">
-        <li><b>Wave 1</b> — Orchestrator · Script · Director · Research · Image QA · Studio Critic.</li>
-        <li><b>Wave 2</b> — Casting · Wardrobe · Makeup &amp; Hair · Set · Camera · Stunt / Action.</li>
-        <li><b>Wave 3</b> — Dialect · VFX · Continuity · Sound · Editor (+ Marketing).</li>
-      </ul>
-    </div>
-    <div class="card hover">
-      <h3 class="serif">QA on every step</h3>
-      <p style="font-size:.9rem;color:var(--cp-text-soft);margin:0">No output is accepted until it passes the gate — Tier 1 rules → Tier 2 Studio Critic → Tier 3 Image QA. The reviewer is never the author. The studio's structural defense against drift.</p>
-    </div>
-    <div class="card hover">
-      <h3 class="serif">Grounded in your taste</h3>
-      <p style="font-size:.9rem;color:var(--cp-text-soft);margin:0">At kickoff the studio asks you for references — films, footage, photos, writings, music — and builds a cited, versioned Tone Bible every agent draws on.</p>
-    </div>
-  </div>
-  <p class="note">First production — <b>«الصَّاعِقَةُ» · Thunderbolt</b>: a historical drama series on Egyptian Sa'iqa special operations, 1967–1973. See <b>Productions</b>.</p>
-</section>
-
-<!-- CREW -->
-<section class="panel" id="crew">
-  <div class="sec-head"><div class="kicker">The call sheet</div><h2 class="serif">The crew</h2>
-    <p>Seventeen roles, each a model, a persona, its own tools, and a definition of done. Grouped by department.</p></div>
-  <div id="crewRoot"></div>
-</section>
-
-<!-- BOARD -->
-<section class="panel" id="board">
-  <div class="sec-head"><div class="kicker">Production flow</div><h2 class="serif">The studio board</h2>
-    <p>How one shot travels from a locked beat to an approved frame — and where quality is enforced.</p></div>
-  <div class="card">
-    <h3 class="serif" style="margin-top:0">Shot lifecycle</h3>
-    <div class="flow">
-      <div class="step"><span class="i">✍︎</span><b>Drafting</b><small>Script → intent</small></div>
-      <div class="step"><span class="i">🔍</span><b>Researching</b><small>facts verified</small></div>
-      <div class="step"><span class="i">🎭</span><b>Prepping</b><small>cast · wardrobe · set · camera</small></div>
-      <div class="step"><span class="i">🎞︎</span><b>Composing</b><small>generate (cost-gated)</small></div>
-      <div class="step"><span class="i">🖼︎</span><b>QA</b><small>vision review</small></div>
-      <div class="step"><span class="i">🔗</span><b>Continuity</b><small>cross-shot check</small></div>
-      <div class="step"><span class="i">✓</span><b>Approval</b><small>your sign-off</small></div>
-    </div>
-    <p style="font-size:.8rem;color:var(--cp-text-muted);margin:8px 0 0">Open research flags block spend · QA fail loops back (max 2 autofix) · continuity violations block approval.</p>
-  </div>
-  <div class="card" style="margin-top:16px">
-    <h3 class="serif" style="margin-top:0">Validation — three tiers, on every step</h3>
-    <div class="tier"><div class="n">I</div><div><div class="t"><b>Rules</b> — deterministic, free. Schema valid, library IDs resolve, required fields present, no open flags, cost within cap. Every write.</div></div></div>
-    <div class="tier"><div class="n">II</div><div><div class="t"><b>Studio Critic</b> — cheap text. An independent reviewer checks every non-image decision against the agent's definition-of-done.</div></div></div>
-    <div class="tier"><div class="n">III</div><div><div class="t"><b>Image QA</b> — vision. Anatomy, identity (face-match auto-fail), period, props, physics, light, tone. Gate 8/10, hero shots 9.</div></div></div>
-  </div>
-  <div class="card" style="margin-top:16px">
-    <h3 class="serif" style="margin-top:0">Human gates — always you</h3>
-    <div class="flow">
-      <div class="step"><span class="i">💰</span><b>Spend</b><small>any paid generation</small></div>
-      <div class="step"><span class="i">📤</span><b>Publish</b><small>anything shared</small></div>
-      <div class="step"><span class="i">⏭︎</span><b>Phase</b><small>next stage</small></div>
-      <div class="step"><span class="i">🎭</span><b>New actor</b><small>training cost</small></div>
+    <div class="stats reveal">
+      <div class="s"><b>18</b><span>Crew roles</span></div>
+      <div class="s"><b>3</b><span>Deploy waves</span></div>
+      <div class="s"><b>3</b><span>QA tiers</span></div>
+      <div class="s"><b>1</b><span>Shot contract</span></div>
     </div>
   </div>
 </section>
 
 <!-- PRODUCTIONS -->
-<section class="panel" id="productions">
-  <div class="sec-head"><div class="kicker">Now in production</div><h2 class="serif">Productions</h2>
-    <p>What the studio is making. Episode 1 migrates here from the MTower engine and goes live.</p></div>
-  <div class="card poster">
-    <div class="art">
-      <div class="cs">Coming soon · Episode 1</div>
-      <svg class="mono" width="26" height="26" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" stroke="#fd8ea1" stroke-width="2" fill="none" opacity="0.7"/><text x="50" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#fd8ea1">MS</text></svg>
-      <div class="ttl"><span class="ar2">«كَمِينُ رُمَّانَةَ»</span>The Romani Ambush</div>
-      <div class="sub">«الصَّاعِقَةُ» · Thunderbolt — Historical drama series</div>
+<section class="band alt" id="productions">
+  <div class="inner">
+    <div class="sec-head reveal"><div class="kicker">Now in production</div><h2 class="serif">Productions</h2>
+      <p>What the studio is making. Episode 1 migrates here from the MTower engine and goes live.</p></div>
+    <div class="feature reveal">
+      <div class="bg"></div>
+      <div class="ghost2 serif">١</div>
+      <div class="fc">
+        <span class="badge">Coming soon · Episode 1</span>
+        <h3 class="serif"><span class="ar2">«الصَّاعِقَةُ»</span>Thunderbolt</h3>
+        <p class="syn">A historical drama series. Each ~45‑minute episode dramatizes one real Egyptian Sa'iqa special operation, 1967–1973 — a mission A‑plot and a home‑front B‑plot.</p>
+        <div class="row"><span><b>Episode 1</b> · «كَمِينُ رُمَّانَةَ» The Romani Ambush</span><span><b>306</b> shots</span><span><b>~43</b> min</span><span><b>10</b> locked cast</span></div>
+      </div>
     </div>
-    <div class="info">
-      <h3 class="serif">«الصَّاعِقَةُ» — Thunderbolt</h3>
-      <p style="font-size:.92rem;color:var(--cp-text-soft);margin:0">A historical drama series. Each ~45‑minute episode dramatizes one real Egyptian Sa'iqa special operation, 1967–1973 — a mission A‑plot and a home‑front B‑plot.</p>
-      <dl class="kv">
-        <dt>Episode 1</dt><dd>«كَمِينُ رُمَّانَةَ» — The Romani Ambush</dd>
-        <dt>Status</dt><dd>Script locked · Pre‑production (MTower engine)</dd>
-        <dt>Shots</dt><dd>306 · 299 generated, 34 premium · ~43 min</dd>
-        <dt>Cast</dt><dd>10 locked actors · trained face models</dd>
-        <dt>Narration</dt><dd>Everyday Egyptian Arabic</dd>
-        <dt>Migration</dt><dd>Moves here with the tenant move</dd>
-      </dl>
-    </div>
-  </div>
-  <p class="note">On migration this becomes the live production card — real key art, produced by the Marketing agent from approved hero shots, replaces the placeholder.</p>
-  <div class="card" style="margin-top:16px">
-    <h3 class="serif" style="margin-top:0">Pipeline for every production</h3>
-    <div class="flow">
-      <div class="step"><b>Reference Intake</b><small>→ Tone Bible</small></div>
-      <div class="step"><b>Development</b><small>script lock</small></div>
-      <div class="step"><b>Pre‑production</b><small>shots · cast · looks</small></div>
-      <div class="step"><b>Production</b><small>generate · validate</small></div>
-      <div class="step"><b>Post</b><small>cut · sound · grade</small></div>
+    <div class="grid cols2 reveal" style="margin-top:24px">
+      <div class="card hover"><h3>Where it stands</h3>
+        <dl class="featmeta" style="color:var(--cp-text)">
+          <dt>Status</dt><dd>Script locked · Pre‑production (MTower engine)</dd>
+          <dt>Narration</dt><dd>Everyday Egyptian Arabic</dd>
+          <dt>Migration</dt><dd>Moves to this studio with the tenant move</dd>
+        </dl></div>
+      <div class="card hover"><h3>Pipeline for every production</h3>
+        <ul class="clean"><li>Reference Intake → Tone Bible</li><li>Development → script lock</li><li>Pre‑production → shots · cast · looks</li><li>Production → generate · validate</li><li>Post → cut · sound · grade</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- MODELS -->
-<section class="panel" id="models">
-  <div class="sec-head"><div class="kicker">The toolkit</div><h2 class="serif">AI models</h2>
-    <p>The right model per role — cheap text for reasoning, premium vision for QA, image, video and speech for generation. Azure Foundry (East US 2) unless noted.</p></div>
-  <div class="card" style="overflow-x:auto;padding:6px 10px">
-    <table id="modeltable"><thead><tr><th>Model</th><th>Provider</th><th>Used for</th><th>Agents</th></tr></thead><tbody></tbody></table>
+<!-- CREW -->
+<section class="band" id="crew">
+  <div class="inner">
+    <div class="sec-head reveal"><div class="kicker">The call sheet</div><h2 class="serif">Cast &amp; crew</h2>
+      <p>Eighteen roles, each a model, a persona, its own tools, and a definition of done. Grouped by department.</p></div>
+    <div id="crewRoot"></div>
   </div>
-  <p class="note">Idle deployments cost nothing (Global Standard, pay‑per‑use). The agent layer mostly adds cheap <b>text tokens</b>; image, video and QA remain the costed calls.</p>
 </section>
 
-<!-- LANDING -->
-<section class="panel" id="landing">
-  <div class="sec-head"><div class="kicker">Infrastructure</div><h2 class="serif">Landing zone</h2>
-    <p>Where the studio runs in Azure — grounded in the live feasibility probe.</p></div>
-  <div class="grid cols2">
-    <div class="card hover">
-      <h3 class="serif">Home &amp; region</h3>
-      <dl class="kv">
-        <dt>Region</dt><dd>East US 2 — only US region with all models</dd>
-        <dt>Resource group</dt><dd>me-eus2-mtowerstudio-rg</dd>
-        <dt>Naming</dt><dd>me-eus2-mtowerstudio-&lt;type&gt;</dd>
-        <dt>Home</dt><dd>external $700 tenant (after move)</dd>
-        <dt>Build env</dt><dd>ME-MngEnv sub — SPN verified</dd>
-      </dl>
+<!-- TECHNOLOGY -->
+<section class="band alt" id="technology">
+  <div class="inner">
+    <div class="sec-head reveal"><div class="kicker">The toolkit</div><h2 class="serif">Technology</h2>
+      <p>The right model per role — cheap text for reasoning, premium vision for QA, image, video and speech for generation. Azure Foundry (East US 2) unless noted.</p></div>
+    <div class="card reveal" style="overflow-x:auto;padding:8px 14px">
+      <table id="mt"><thead><tr><th>Model</th><th>Provider</th><th>Used for</th><th>Agents</th></tr></thead><tbody></tbody></table>
     </div>
-    <div class="card hover">
-      <h3 class="serif">Foundry topology</h3>
-      <ul class="clean">
+  </div>
+</section>
+
+<!-- INFRASTRUCTURE -->
+<section class="band" id="infrastructure">
+  <div class="inner">
+    <div class="sec-head reveal"><div class="kicker">The lot</div><h2 class="serif">The studio</h2>
+      <p>Where it runs in Azure — grounded in the live feasibility probe.</p></div>
+    <div class="grid cols2 reveal">
+      <div class="card hover"><h3>Home &amp; region</h3><ul class="clean">
+        <li><b>East US 2</b> — the only US region with all required models.</li>
+        <li>Resource group <b>me-eus2-mtowerstudio-rg</b>.</li>
+        <li>Permanent home: external tenant after the move; building on the current sub (SPN verified).</li></ul></div>
+      <div class="card hover"><h3>Foundry topology</h3><ul class="clean">
         <li>New dedicated <b>project</b> for the agent fleet…</li>
-        <li>…inside the <b>existing Foundry resource</b> — reuse model deployments, no redeploy.</li>
-        <li>Clean separation from live MTower production.</li>
-      </ul>
-    </div>
-    <div class="card hover">
-      <h3 class="serif">Cost control</h3>
-      <ul class="clean">
+        <li>…inside the existing Foundry resource — reuse deployments, no redeploy.</li>
+        <li>Clean separation from live production.</li></ul></div>
+      <div class="card hover"><h3>Cost control</h3><ul class="clean">
         <li>Engine caps: estimate → dry‑run → confirm → ledger.</li>
-        <li>Azure budget with a <b>70% alert</b> (~$490 of $700) + forecast.</li>
-        <li>Pay‑per‑use only — idle ≈ $0–3 / month.</li>
-      </ul>
-    </div>
-    <div class="card hover">
-      <h3 class="serif">Security &amp; guardrails</h3>
-      <ul class="clean">
+        <li>Budget with a <b>70% alert</b> + forecast.</li>
+        <li>Pay‑per‑use — idle ≈ $0–3 / month.</li></ul></div>
+      <div class="card hover"><h3>Security</h3><ul class="clean">
         <li>Keys disabled · Entra‑only access.</li>
         <li>IP allow‑list / Network Security Perimeter.</li>
-        <li>SPN: Contributor on sub; Owner grants data roles.</li>
-      </ul>
+        <li>SPN: Contributor on sub; Owner grants data roles.</li></ul></div>
     </div>
   </div>
 </section>
 
-<div class="foot"><hr class="accent-rule" />MTower Studio · HQ — github.com/mahelsay/MTowerStudio · adapts to your OS light / dark theme</div>
-</div>
+<footer>
+  <svg class="mono" width="54" height="54" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" stroke="var(--cp-accent)" stroke-width="2" fill="none" opacity=".8"/><text x="50" y="61" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="700" fill="var(--cp-accent)">MS</text></svg>
+  <h4 class="serif">MTower Studio</h4>
+  <div style="font-size:.9rem;opacity:.75">استوديو إم‑تاور — cinema, made by a crew of agents</div>
+  <div class="flinks"><a href="#vision">Vision</a><a href="#productions">Productions</a><a href="#crew">Crew</a><a href="#technology">Technology</a><a href="#infrastructure">Studio</a></div>
+  <div class="fine">github.com/mahelsay/MTowerStudio · adapts to your light / dark theme · © MTower Studio</div>
+</footer>
 
 <script>
 const DEPTS = {
-  brains:  { label: "Pre‑production — the brains", color: "#b11f4b" },
-  qa:      { label: "Quality & validation", color: "#d98324" },
-  creative:{ label: "The creative crew", color: "#3b7ea1" },
-  finish:  { label: "The finishing crew", color: "#4e9a6a" },
+  brains:{label:"Pre‑production — the brains", color:"#b11f4b"},
+  qa:{label:"Quality & validation", color:"#d98324"},
+  creative:{label:"The creative crew", color:"#3b7ea1"},
+  finish:{label:"The finishing crew", color:"#4e9a6a"},
 };
 const AGENTS = [
-  { id:"0",  dept:"brains", ico:"🎬", name:"Orchestrator", role:"Showrunner · 1st AD", wave:"1", model:"text reasoning",
-    desc:"Runs the board: assigns work, runs agents in parallel/order, enforces spend/publish/phase gates, routes problems.",
-    dod:"A beat advances only when every required step passes its gate; no paid step runs over a cost cap." },
-  { id:"1",  dept:"brains", ico:"✍︎", name:"Script / Scenario", role:"Screenwriter", wave:"1", model:"text reasoning",
-    desc:"Turns a locked beat into filmable scene intent and dialogue meaning. Proposes change‑log entries, never rewrites the lock.",
-    dod:"Scene names subject, action, setting, time, mood; references library IDs; no invented facts." },
-  { id:"1b", dept:"brains", ico:"🎥", name:"Director", role:"Creative lead", wave:"1", model:"text reasoning",
-    desc:"Owns coverage — how many shots, from where — plus blocking, performance, pacing and tone. Distinct from logistics.",
-    dod:"Every beat decomposed into shots, each with coverage + blocking + performance + tone reference." },
-  { id:"2",  dept:"brains", ico:"🔍", name:"Research / Fact‑check", role:"Universal fact desk", wave:"1", model:"text + web",
-    desc:"Truth for everything real — history, geography, places, culture, technical and military. Flags block spend.",
-    dod:"Every real‑world element verified, corrected or flagged with a sourced tier; no open flag at generation." },
-  { id:"3",  dept:"qa", ico:"🖼︎", name:"Image QA", role:"Dailies reviewer · DIT", wave:"1", model:"vision · gpt‑5.6‑sol",
-    desc:"The independent vision check on every frame: anatomy, identity, period, props, physics, light, tone.",
-    dod:"Scored ≥ gate (8, hero 9) and identity passes → pass; else fail with fixes, max 2 rounds." },
-  { id:"3b", dept:"qa", ico:"✓", name:"Studio Critic", role:"QC lead · script supervisor", wave:"1", model:"text reasoning",
-    desc:"Tier‑2 reviewer of every non‑image decision against the agent's definition‑of‑done. Reviewer is never the author.",
-    dod:"Each decision passed, or returned to its owning agent with reasons; bounded revise rounds." },
-  { id:"4",  dept:"creative", ico:"🎭", name:"Casting", role:"Casting director · talent agency", wave:"2", model:"text",
-    desc:"Characters → library actors; crowds are archetypes. Owns the Talent Pool and its evolution from QA data.",
-    dod:"Every character → locked actor + face model; strict ensemble distinctness; real people never recast." },
-  { id:"5",  dept:"creative", ico:"🧵", name:"Wardrobe", role:"Costume designer", wave:"2", model:"text + vision",
-    desc:"Costume and wear state — clean, dusty, wet, bloodied, torn — period‑correct, auto‑escalating across action.",
-    dod:"Each character has resolved wardrobe + wear state consistent with scene and continuity." },
-  { id:"5b", dept:"creative", ico:"💄", name:"Makeup & Hair", role:"Prosthetics · SFX makeup", wave:"2", model:"text + vision",
-    desc:"Everything on the skin and head — wounds, grime, sweat, blood on faces, aging, hair. The skin to Wardrobe's cloth.",
-    dod:"Skin/hair state consistent with scene, continuity and injury deltas; within the gore cap." },
-  { id:"6",  dept:"creative", ico:"🏛︎", name:"Set Decoration", role:"Production designer", wave:"2", model:"text + vision",
-    desc:"Dresses the world — interiors, streets, buildings, signage, parked vehicles, environmental props and static atmosphere.",
-    dod:"Location → library LOC; placed assets are library IDs, period‑correct, plausible; set state persists." },
-  { id:"7",  dept:"creative", ico:"🎞︎", name:"Camera / DoP", role:"Cinematographer · gaffer", wave:"2", model:"text",
-    desc:"Translates intent into shot size, lens, movement, light and format. Strictly bound to the series look keys.",
-    dod:"Resolved look key + full camera spec; night shots carry an exposure note; consistent with the Director." },
-  { id:"7b", dept:"creative", ico:"🥋", name:"Stunt / Action", role:"Action choreographer", wave:"2", model:"text reasoning",
-    desc:"Combat blocking, weapon handling, movement and vehicle action — tactically sound and period‑correct.",
-    dod:"Each action shot has verified choreography + weapon handling + movement beats, within the restraint cap." },
-  { id:"8",  dept:"finish", ico:"🗣︎", name:"Dialect / Language", role:"Egyptian‑Arabic coach", wave:"3", model:"text + Speech",
-    desc:"Turns meaning into living Egyptian Arabic with full diacritics and acting notes; per‑character register.",
-    dod:"Every line has a diacritized dialect version + acting note; speech‑to‑text round‑trips the meaning." },
-  { id:"9",  dept:"finish", ico:"💥", name:"VFX / Effects", role:"VFX · pyro supervisor", wave:"3", model:"text + vision",
-    desc:"Dynamic events — explosions, muzzle flash, tracers, smoke, damage — under a hard restrained‑violence cap.",
-    dod:"Effects specified with type, intensity, placement, timing; physically coherent; within the cap." },
-  { id:"10", dept:"finish", ico:"🔗", name:"Continuity", role:"Continuity supervisor", wave:"3", model:"vision",
-    desc:"Guards consistency across shots — time, light, wear, injuries, props. Holds the consistency veto.",
-    dod:"No unexplained violation vs neighbors; intended changes logged as deltas; open violation blocks approval." },
-  { id:"11", dept:"finish", ico:"🔊", name:"Sound / Voice", role:"Sound editor · mixer", wave:"3", model:"text + Speech/tts",
-    desc:"Narration takes, dialogue delivery, SFX drawn from VFX events, and music cues. Drafts on Azure Speech.",
-    dod:"Each spoken beat has a take that passes listen‑back; SFX + music cues listed; costs logged." },
-  { id:"12", dept:"finish", ico:"✂︎", name:"Editor / Post", role:"Film editor", wave:"3", model:"text + assembly",
-    desc:"Assembles approved shots → animatic → cut, with transitions and subtitles. Animatic before any video spend.",
-    dod:"A scene cut with ordered approved shots, locked timing and a timed subtitle track." },
-  { id:"13", dept:"finish", ico:"📣", name:"Marketing", role:"Key art · trailer — support", wave:"3+", model:"text + image",
-    desc:"Poster concepts, key art, teaser plans and synopses — on the studio look, from approved hero shots.",
-    dod:"On‑brand marketing assets drafted and cost‑logged; nothing published without you." },
+  {id:"0",dept:"brains",ico:"🎬",name:"Orchestrator",role:"Showrunner · 1st AD",wave:"1",model:"text reasoning",desc:"Runs the board: assigns work, runs agents in parallel/order, enforces spend/publish/phase gates, routes problems."},
+  {id:"1",dept:"brains",ico:"✍︎",name:"Script / Scenario",role:"Screenwriter",wave:"1",model:"text reasoning",desc:"Turns a locked beat into filmable scene intent and dialogue meaning. Proposes change‑log entries, never rewrites the lock."},
+  {id:"1b",dept:"brains",ico:"🎥",name:"Director",role:"Creative lead",wave:"1",model:"text reasoning",desc:"Owns coverage — how many shots, from where — plus blocking, performance, pacing and tone."},
+  {id:"2",dept:"brains",ico:"🔍",name:"Research / Fact‑check",role:"Universal fact desk",wave:"1",model:"text + web",desc:"Truth for everything real — history, geography, places, culture, technical and military. Flags block spend."},
+  {id:"3",dept:"qa",ico:"🖼︎",name:"Image QA",role:"Dailies reviewer · DIT",wave:"1",model:"vision · gpt‑5.6‑sol",desc:"The independent vision check on every frame: anatomy, identity, period, props, physics, light, tone."},
+  {id:"3b",dept:"qa",ico:"✓",name:"Studio Critic",role:"QC lead",wave:"1",model:"text reasoning",desc:"Tier‑2 reviewer of every non‑image decision against the agent's definition‑of‑done. Reviewer is never the author."},
+  {id:"4",dept:"creative",ico:"🎭",name:"Casting",role:"Casting director",wave:"2",model:"text",desc:"Characters → library actors; crowds are archetypes. Owns the Talent Pool and its evolution from QA data."},
+  {id:"5",dept:"creative",ico:"🧵",name:"Wardrobe",role:"Costume designer",wave:"2",model:"text + vision",desc:"Costume and wear state — clean, dusty, wet, bloodied, torn — period‑correct, auto‑escalating across action."},
+  {id:"5b",dept:"creative",ico:"💄",name:"Makeup & Hair",role:"Prosthetics · SFX makeup",wave:"2",model:"text + vision",desc:"Everything on the skin and head — wounds, grime, sweat, blood on faces, aging, hair."},
+  {id:"6",dept:"creative",ico:"🏛︎",name:"Set Decoration",role:"Production designer",wave:"2",model:"text + vision",desc:"Dresses the world — interiors, streets, buildings, signage, parked vehicles, environmental props, atmosphere."},
+  {id:"7",dept:"creative",ico:"🎞︎",name:"Camera / DoP",role:"Cinematographer",wave:"2",model:"text",desc:"Translates intent into shot size, lens, movement, light and format. Strictly bound to the series look keys."},
+  {id:"7b",dept:"creative",ico:"🥋",name:"Stunt / Action",role:"Action choreographer",wave:"2",model:"text reasoning",desc:"Combat blocking, weapon handling, movement and vehicle action — tactically sound and period‑correct."},
+  {id:"8",dept:"finish",ico:"🗣︎",name:"Dialect / Language",role:"Egyptian‑Arabic coach",wave:"3",model:"text + Speech",desc:"Turns meaning into living Egyptian Arabic with full diacritics and acting notes; per‑character register."},
+  {id:"9",dept:"finish",ico:"💥",name:"VFX / Effects",role:"VFX · pyro supervisor",wave:"3",model:"text + vision",desc:"Dynamic events — explosions, muzzle flash, tracers, smoke, damage — under a hard restrained‑violence cap."},
+  {id:"10",dept:"finish",ico:"🔗",name:"Continuity",role:"Continuity supervisor",wave:"3",model:"vision",desc:"Guards consistency across shots — time, light, wear, injuries, props. Holds the consistency veto."},
+  {id:"11",dept:"finish",ico:"🔊",name:"Sound / Voice",role:"Sound editor · mixer",wave:"3",model:"text + Speech/tts",desc:"Narration takes, dialogue delivery, SFX from VFX events, and music cues. Drafts on Azure Speech."},
+  {id:"12",dept:"finish",ico:"✂︎",name:"Editor / Post",role:"Film editor",wave:"3",model:"text + assembly",desc:"Assembles approved shots → animatic → cut, with transitions and subtitles. Animatic before any video spend."},
+  {id:"13",dept:"finish",ico:"📣",name:"Marketing",role:"Key art · trailer — support",wave:"3+",model:"text + image",desc:"Poster concepts, key art, teaser plans and synopses — on the studio look, from approved hero shots."},
+  {id:"14",dept:"finish",ico:"🎨",name:"Graphic & Title Design",role:"Titles · in‑world graphics · brand",wave:"3",model:"text + image",desc:"In‑world period graphics (signage, telegrams, maps), title & credit design, subtitles, and the studio brand & website."},
 ];
 const MODELS = [
-  ["gpt‑image‑2 / 2.5‑flare", "Azure Foundry", "Composition, face swap (adults), hard compositions", "Set, Camera, Casting"],
-  ["FLUX.1‑Kontext‑pro", "Azure Foundry", "Edits — change one thing — and child shots", "Wardrobe, Makeup, edits"],
-  ["FLUX.2‑pro", "Azure Foundry", "Multi‑reference consistency (actor + prop + location)", "Set, Camera"],
-  ["gpt‑5.6‑sol", "Azure Foundry", "Vision QA — the reviewer's eye", "Image QA, Continuity"],
-  ["text reasoning · gpt‑5.x", "Azure Foundry", "Agent reasoning and decisions", "Orchestrator, Script, Director, Research, Critic, Stunt"],
-  ["Azure Speech · 4o‑mini‑tts · gpt‑audio‑1.5", "Azure Foundry", "Narration and dialogue takes (drafts)", "Dialect, Sound"],
-  ["Sora‑2", "Azure Foundry", "Video — realism‑gated; blocks photoreal people", "Editor / video"],
-  ["Kling · Veo · fal LoRA", "fal.ai", "LoRA training & keyframes, lip‑synced video, face detect", "Casting, video, Sound"],
-  ["ElevenLabs", "ElevenLabs", "Final Arabic narration (planned)", "Sound — final"],
+  ["gpt‑image‑2 / 2.5‑flare","Azure Foundry","Composition, face swap (adults), hard compositions","Set, Camera, Casting"],
+  ["FLUX.1‑Kontext‑pro","Azure Foundry","Edits — change one thing — and child shots","Wardrobe, Makeup, edits"],
+  ["FLUX.2‑pro","Azure Foundry","Multi‑reference consistency (actor + prop + location)","Set, Camera"],
+  ["gpt‑5.6‑sol","Azure Foundry","Vision QA — the reviewer's eye","Image QA, Continuity"],
+  ["text reasoning · gpt‑5.x","Azure Foundry","Agent reasoning and decisions","Orchestrator, Script, Director, Research, Critic, Stunt"],
+  ["Azure Speech · 4o‑mini‑tts · gpt‑audio‑1.5","Azure Foundry","Narration and dialogue takes (drafts)","Dialect, Sound"],
+  ["Sora‑2","Azure Foundry","Video — realism‑gated; blocks photoreal people","Editor / video"],
+  ["Kling · Veo · fal LoRA","fal.ai","LoRA training & keyframes, lip‑synced video, face detect","Casting, video, Sound"],
+  ["ElevenLabs","ElevenLabs","Final Arabic narration (planned)","Sound — final"],
 ];
 
-// crew grouped by department (call sheet)
 const root = document.getElementById("crewRoot");
-Object.entries(DEPTS).forEach(([key, d]) => {
-  const members = AGENTS.filter(a => a.dept === key);
-  const head = document.createElement("div");
-  head.className = "dept";
-  head.innerHTML = `<span class="swatch" style="background:${d.color}"></span><span class="dname">${d.label}</span><span class="line"></span><span class="count">${members.length} ${members.length===1?'role':'roles'}</span>`;
-  root.appendChild(head);
-  const grid = document.createElement("div");
-  grid.className = "grid cols3";
-  members.forEach(a => {
-    const c = document.createElement("div");
-    c.className = "card hover agent";
-    c.style.borderTop = `2px solid ${d.color}`;
-    c.innerHTML = `
-      <span class="num">${a.id}</span>
-      <div class="top">
-        <div class="ico">${a.ico}</div>
-        <div><div class="name">${a.name}</div><div class="role">${a.role}</div></div>
-      </div>
-      <div class="desc">${a.desc}</div>
-      <div class="meta"><span class="chip wave">Wave ${a.wave}</span><span class="chip">${a.model}</span></div>
-      <div class="dod"><b>Done when</b><br>${a.dod}</div>`;
-    grid.appendChild(c);
+Object.entries(DEPTS).forEach(([k,d])=>{
+  const mem = AGENTS.filter(a=>a.dept===k);
+  const h = document.createElement("div"); h.className="dept reveal";
+  h.innerHTML = `<span class="sw" style="background:${d.color}"></span><span class="dn serif">${d.label}</span><span class="ln"></span><span class="ct">${mem.length} roles</span>`;
+  root.appendChild(h);
+  const g = document.createElement("div"); g.className="grid cols3 reveal";
+  mem.forEach(a=>{
+    const c=document.createElement("div"); c.className="card hover agent"; c.style.borderTop=`2px solid ${d.color}`;
+    c.innerHTML=`<span class="num">${a.id}</span><div class="hd"><div class="ico">${a.ico}</div><div><div class="nm">${a.name}</div><div class="rl">${a.role}</div></div></div><div class="ds">${a.desc}</div><div class="mt"><span class="chip w">Wave ${a.wave}</span><span class="chip">${a.model}</span></div>`;
+    g.appendChild(c);
   });
-  root.appendChild(grid);
+  root.appendChild(g);
 });
-// models
-const mt = document.querySelector("#modeltable tbody");
-MODELS.forEach(m => {
-  const tr = document.createElement("tr");
-  tr.innerHTML = `<td class="m">${m[0]}</td><td style="color:var(--cp-text-muted)">${m[1]}</td><td>${m[2]}</td><td style="color:var(--cp-text-muted)">${m[3]}</td>`;
-  mt.appendChild(tr);
-});
-// tabs
-document.getElementById("tabs").addEventListener("click", e => {
-  const btn = e.target.closest("button[data-tab]");
-  if (!btn) return;
-  document.querySelectorAll("nav.tabs button").forEach(b => b.classList.toggle("active", b === btn));
-  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === btn.dataset.tab));
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+const tb=document.querySelector("#mt tbody");
+MODELS.forEach(m=>{const tr=document.createElement("tr");tr.innerHTML=`<td class="m">${m[0]}</td><td style="color:var(--cp-text-muted)">${m[1]}</td><td>${m[2]}</td><td style="color:var(--cp-text-muted)">${m[3]}</td>`;tb.appendChild(tr);});
+
+// nav scroll state
+const nav=document.getElementById("nav");
+const onScroll=()=>{ nav.classList.toggle("scrolled", window.scrollY>60); };
+onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
+
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+// active nav link
+const links=[...document.querySelectorAll("#navlinks a")];
+const secs=links.map(l=>document.querySelector(l.getAttribute("href")));
+const io2=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id="#"+e.target.id;links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")===id));}})},{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s=>s&&io2.observe(s));
 </script>
 </body>
 </html>
