@@ -20,7 +20,8 @@
 | 1 | **Script / Scenario** | Scenario, scene detail & dialogue meaning (within the locked story) | text (reasoning) | 1 |
 | 1b | **Director** | Creative lead: coverage/shot breakdown, blocking, performance, tone | text (reasoning) | 1 |
 | 2 | **Research / Fact-check** | Universal fact desk: history, geography, places, culture, technical | text + web | 1 |
-| 3 | **Quality (QA)** | Validates every image vs its intent | **vision** | 1 |
+| 3 | **Image QA** | Vision review of every generated image vs intent | **vision** | 1 |
+| 3b | **Studio Critic** | Tier-2 review of every non-image decision (studio-wide) | text (reasoning) | 1 |
 | 4 | **Casting** | Characters → library actors, distinctness | text | 2 |
 | 5 | **Wardrobe** | Costume + wear state per character/shot | text (+vision check) | 2 |
 | 6 | **Set decoration** | Location dressing, interior/exterior, period props placement | text (+vision check) | 2 |
@@ -70,14 +71,30 @@
 - **Guardrails:** real people only through sourced actions (series rule); **never asserts from memory alone** — a claim without a citation is a flag, not a fact.
 - **Competence (L1–L4):** L1 lead researcher backed by specialist advisor hats (historian · geographer · military/technical advisor · cultural consultant), rigorous and source-citing; L2 Tone Bible factual corpus + episode fact-check docs + series bible, with live web for anything ungrounded; L3 web search, fact-check docs, Tone Bible + library lookup; L4 Script & Director (what to check), Set/Wardrobe/VFX (consume verdicts), Egyptian-Arabic (language/slang authenticity).
 
-### 3. Quality (QA) agent
-- **Craft:** the role that started this whole idea — check every generated image against its shot intent for anatomy, identity, period accuracy, props, physics, and light; return pass/fail with actionable fixes.
-- **Reads:** candidate image, `shot.intent`, `shot.wardrobe`, `shot.cast`, library review lists.
-- **Writes:** `shot.qa` = `{score, verdict, issues[], fix_instructions[]}`.
-- **Tools:** vision model, the existing `qa` / `autofix` logic, face-detection boxes.
+### 3. Image QA agent (vision reviewer)
+- **Craft:** the role that started this whole idea — the independent **vision** check on every generated image against its shot intent: anatomy, identity, period accuracy, props, physics, light, and tone; returns a score + actionable fixes. Catches what the generator rationalizes, before the human sees it and before money is spent animating it.
+- **Rubric:** anatomy · **identity (face match to the cast actor's model/anchor)** · period accuracy · props & continuity · physics/plausibility · light · intent & tone (vs the Director's `tone_ref`/look key).
+- **Reads:** candidate image, `shot.intent`, `shot.direction`, `shot.wardrobe`, `shot.cast` (+ actor anchor), `shot.set`, library review lists, period grounding.
+- **Writes:** `shot.qa` = `{score, verdict, issues[], fix_instructions[], rounds}`.
+- **Tools:** vision model, the existing `qa` / `autofix` logic, face-detection boxes, the cast actor's anchor portrait for identity match.
 - **Model:** **vision** (gpt-5.6-sol, MTower D-16).
-- **DoD:** image scored against the rubric; verdict ≥ gate → pass; else fail with specific, regenerable fix instructions (bounded to N autofix rounds before escalating to a human).
-- **Guardrails:** "measure the people first" structured pass before judgement (MTower lesson); never approves — only scores; human still signs off at the gallery gate.
+- **Decisions (locked 2026-10-14):**
+  - **Gate score = 8/10** default; **hero/key shots may demand a higher bar (e.g. 9)**.
+  - **Autofix bounded to 2 rounds**, then escalate to the user.
+  - **Identity is non-negotiable:** a **face-match failure is an automatic fail** regardless of overall score.
+- **DoD:** image scored on the full rubric; verdict ≥ gate **and** identity passes → **pass** (to human approval); else **fail** with specific, regenerable fixes; after 2 rounds without a pass → escalate.
+- **Guardrails:** "measure the people first" structured pass before judgement (MTower lesson); **never approves** — only scores; the human gallery sign-off is still the final gate.
+- **Competence (L1–L4):** L1 exacting dailies reviewer / DIT with a cinematographer's eye, assumes the generator is lying until proven right; L2 the shot's intent/direction/cast/wardrobe/set + library review lists + period grounding; L3 vision model, qa/autofix, face detection, actor anchors; L4 Orchestrator (routing), Research (period truth), Continuity (cross-shot), generation step (receives fixes).
+
+### 3b. Studio Critic agent (Tier-2 decision reviewer)
+- **Craft:** the **studio-wide** reviewer behind the validation gate — reviews **every non-image decision of every agent** (script intent, research verdicts, casting, wardrobe, set, camera, VFX, audio) against that agent's definition-of-done and the shot intent, before the orchestrator accepts it. The text-side counterpart to Image QA. (Standing rule 1, ADR-0002 Tier 2.)
+- **Reads:** the producing agent's proposed output + the shot contract context (intent, direction, relevant prior fields) + the agent's DoD.
+- **Writes:** `shot.critic[]` = `{target_field, verdict, reasons[], revise_instructions[]}`.
+- **Tools:** the shot contract, the agent catalog (to know each DoD), library/grounding lookup for spot-checks.
+- **Model:** cheap text reasoning (the Tier-2 "critic").
+- **DoD:** every reviewed decision is marked pass / revise with reasons; revise routes back to the **owning** agent (never edited by the Critic); bounded revise rounds, then human escalation.
+- **Guardrails:** **reviewer ≠ author** (never reviews its own work); judges decisions, not pixels (images go to Image QA); cheap-by-default, scope tunable (every decision vs only consequential ones).
+- **Competence (L1–L4):** L1 meticulous script supervisor / QC lead who knows every craft's standard; L2 the agent catalog's definitions-of-done + standing rules + shot context; L3 contract + catalog + grounding lookup; L4 all agents (reviews them), Orchestrator (routes revisions), escalates to the human.
 
 ---
 
