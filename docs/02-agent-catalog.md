@@ -130,13 +130,18 @@
 - **Competence (L1–L4):** L1 period costume designer + continuity-obsessed wardrobe supervisor, expert in 1967–73 Egyptian/Israeli uniforms & period civilian dress; L2 wardrobe.json + prior continuity state + Research verdicts + series bible; L3 library resolver, vision check; L4 Casting (who's in shot), Research (period), Continuity (veto on consistency), VFX (garment damage vs effect), Image QA (verifies).
 
 ### 6. Set decoration agent
-- **Craft:** dress the location — interiors (rooms, furniture, props placement) and exteriors (streets, buildings, signage, vehicles), period-correct and plausible.
-- **Reads:** `shot.intent`, `locations.json`, `vehicles.json`, `props.json`, `shot.research`.
-- **Writes:** `shot.set` = `{location_id, dressing[], vehicles[], props[]}`.
+- **Craft:** dress the **world** — interiors (rooms, furniture, prop placement) and exteriors (streets, buildings, signage, parked vehicles), period-correct, lived-in, and plausible.
+- **Reads:** `shot.intent`, `shot.direction`, `locations.json`, `vehicles.json`, `props.json`, `shot.research`, `shot.continuity`, Tone Bible visual refs.
+- **Writes:** `shot.set` = `{location_id, dressing[], vehicles[], props[], set_state}`.
 - **Tools:** library resolver, vision check.
 - **Model:** text; optional vision.
-- **DoD:** location resolves to a library LOC; all placed vehicles/props are library IDs, period-correct, and physically plausible for the blocking; no anachronistic signage/objects.
-- **Guardrails:** library-first; flags crowded-group-shot prop risks (MTower open issue) for the camera/VFX agents.
+- **Decisions (locked 2026-10-14):**
+  - **Set/VFX boundary:** Set owns **static atmosphere** (ambient dust, a smoldering wreck that's part of the scene, hanging haze); **VFX** owns **dynamic events** (the explosion that creates the wreck, moving smoke, tracers).
+  - **Set continuity:** a location's dressed/damaged **state persists and evolves** across a sequence (a room shot up stays damaged), tracked automatically with **Continuity validating** — same model as wardrobe wear.
+  - **Props split:** **Set owns environmental props** (crates, furniture, parked vehicles); **hand-props actively used** by an actor (the radio a soldier speaks into) are handled by the shot's action/Camera.
+- **DoD:** location resolves to a library LOC; all placed vehicles/environmental props are library IDs, period-correct, physically plausible for the blocking; set_state consistent with prior continuity; no anachronistic dressing/signage; gaps are flags.
+- **Guardrails:** library-first; flags crowded-group-shot prop risks (MTower open issue) for Camera/VFX.
+- **Competence (L1–L4):** L1 production designer + set decorator + props master, expert in 1967–73 Egyptian/Sinai environments, architecture, street life, military installations, period objects; L2 locations/vehicles/props.json + Research verdicts + Tone Bible refs + series bible; L3 library resolver, vision check; L4 Research (place/period), Director/Camera (frame needs, blocking), VFX (dynamic effects), Continuity (same set across shots), Image QA (verifies).
 
 ### 7. Camera / DoP agent
 - **Craft:** decide framing, lens, camera movement, lighting, and output format per shot, consistent with the production's look.
