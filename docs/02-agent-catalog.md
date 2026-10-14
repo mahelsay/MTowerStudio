@@ -19,7 +19,7 @@
 | 0 | **Orchestrator** | Runs the board; assigns work, enforces gates | text (reasoning) | 1 |
 | 1 | **Script / Scenario** | Scenario, scene detail & dialogue meaning (within the locked story) | text (reasoning) | 1 |
 | 1b | **Director** | Creative lead: coverage/shot breakdown, blocking, performance, tone | text (reasoning) | 1 |
-| 2 | **Research / Fact-check** | Historical & technical truth, 1967–1973 | text + web | 1 |
+| 2 | **Research / Fact-check** | Universal fact desk: history, geography, places, culture, technical | text + web | 1 |
 | 3 | **Quality (QA)** | Validates every image vs its intent | **vision** | 1 |
 | 4 | **Casting** | Characters → library actors, distinctness | text | 2 |
 | 5 | **Wardrobe** | Costume + wear state per character/shot | text (+vision check) | 2 |
@@ -57,13 +57,18 @@
 - **Competence (L1–L4):** L1 veteran director, film-school trained, master of visual storytelling and genre tone; L2 series bible + visual guide + **tone bible** (the user's reference pull: films, series, footage, stills); L3 screenplay reader, library/looks lookup, tone-bible retrieval; L4 Script (scenario), Camera/DoP (execution), Research (facts), Continuity, all craft agents.
 
 ### 2. Research / Fact-check agent
-- **Craft:** guarantee historical and technical truth for 1967–1973 Egyptian/Israeli operations — uniforms, gear, weapons, vehicles, locations, timeline, cultural detail.
-- **Reads:** `shot.intent`, episode research notes, `beat_ref`.
-- **Writes:** `shot.research[]` (claims with sources + verdict), `shot.flags[]` (anachronism/risk).
-- **Tools:** web search, episode fact-check docs, library catalogs (to confirm period-correct assets exist).
+- **Craft:** the studio's **universal fact desk** — guarantees the truth of *everything real*, not just history: historical events & timeline; **geography** (countries, cities, neighborhoods, terrain, climate, distances); period & present-day **places**; **culture, society, religion, customs**; language context; **technical/military** detail (weapons, vehicles, gear, radios, tactics); logistics and plausibility. Catches errors before they cost money at generation.
+- **Reads:** `shot.intent`, `shot.direction`, episode research notes, `beat_ref`, Tone Bible factual corpus.
+- **Writes:** `shot.research[]` (claims with **source + tier + verdict**), `shot.flags[]` (anachronism / inaccuracy / unverifiable / sensitivity).
+- **Tools:** web search, fact-check documents, Tone Bible retrieval, library catalogs (confirm a correct asset already exists).
 - **Model:** text reasoning + web.
-- **DoD:** every period-sensitive element in the shot intent is marked verified / corrected / flagged, with a source; no unresolved anachronism flags remain open when the shot reaches generation.
-- **Guardrails:** real people only through sourced actions (series rule); cites sources, never asserts from memory alone.
+- **Decisions (locked 2026-10-14):**
+  - **Strictness = block.** Anything unverifiable is flagged and **no paid generation runs while a flag is open** (orchestrator-enforced).
+  - **Tiered sourcing:** primary/archival > reputable secondary > weak. Weak-only sources are auto-flagged for the user's review.
+  - **Human expert gate:** sensitive real-people and combat facts escalate to the user as final authority before being treated as settled.
+- **DoD:** every real-world element in the shot (historical, geographic, cultural, technical) is marked verified/corrected/flagged **with a sourced tier**; no unresolved flag remains open at generation.
+- **Guardrails:** real people only through sourced actions (series rule); **never asserts from memory alone** — a claim without a citation is a flag, not a fact.
+- **Competence (L1–L4):** L1 lead researcher backed by specialist advisor hats (historian · geographer · military/technical advisor · cultural consultant), rigorous and source-citing; L2 Tone Bible factual corpus + episode fact-check docs + series bible, with live web for anything ungrounded; L3 web search, fact-check docs, Tone Bible + library lookup; L4 Script & Director (what to check), Set/Wardrobe/VFX (consume verdicts), Egyptian-Arabic (language/slang authenticity).
 
 ### 3. Quality (QA) agent
 - **Craft:** the role that started this whole idea — check every generated image against its shot intent for anatomy, identity, period accuracy, props, physics, and light; return pass/fail with actionable fixes.
