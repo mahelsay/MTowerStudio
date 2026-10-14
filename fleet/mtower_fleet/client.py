@@ -53,8 +53,21 @@ def get_client() -> AzureOpenAI:
 
 def chat(messages: list[dict], *, vision: bool = False, **kwargs) -> str:
     """One chat call. `vision=True` routes to the vision deployment (gpt-5.6-sol)."""
+    content, _ = complete(messages, vision=vision, **kwargs)
+    return content
+
+
+def complete(messages: list[dict], *, vision: bool = False, **kwargs) -> tuple[str, dict]:
+    """One chat call returning (content, usage). Usage = {prompt, completion, total} tokens."""
     client = get_client()
     model = config.VISION_DEPLOYMENT if vision else config.REASONING_DEPLOYMENT
     kwargs.setdefault("max_completion_tokens", 2048)
     resp = client.chat.completions.create(model=model, messages=messages, **kwargs)
-    return resp.choices[0].message.content or ""
+    u = resp.usage
+    usage = {
+        "prompt": getattr(u, "prompt_tokens", 0),
+        "completion": getattr(u, "completion_tokens", 0),
+        "total": getattr(u, "total_tokens", 0),
+        "model": model,
+    }
+    return (resp.choices[0].message.content or ""), usage
