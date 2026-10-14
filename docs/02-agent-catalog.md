@@ -176,13 +176,18 @@
 - **Competence (L1–L4):** L1 native Egyptian dialect coach + screen-dialogue writer, master of Cairene/regional slang and registers, obsessive about TTS diacritics; L2 narration_egyptian.md + language direction (D-19/D-20) + character voice profiles + Research period-language notes; L3 Azure Speech, voice --check, tts/audio, diacritization; L4 Script (meaning), Research (period language), Sound/Voice (final production), Casting (voice profiles).
 
 ### 9. VFX / Effects agent
-- **Craft:** specify effects — explosions, muzzle flash, tracers, smoke, dust, water, weather, vehicle/structure damage — restrained and period-plausible.
-- **Reads:** `shot.intent`, `shot.set`, `shot.research`.
-- **Writes:** `shot.vfx[]` = `{effect, intensity, placement, timing}`.
+- **Craft:** specify the **dynamic effects** (the *events*) — explosions, muzzle flash, tracers, smoke, dust, water, weather, vehicle/structure damage — restrained and period-plausible.
+- **Reads:** `shot.intent`, `shot.direction`, `shot.set`, `shot.research`, `shot.continuity`.
+- **Writes:** `shot.vfx[]` = `{effect, intensity, placement, timing}`; effect-light proposal; evolving effect state.
 - **Tools:** vision check on candidates; references props/vehicles for consistent damage.
 - **Model:** text; optional vision.
-- **DoD:** effects are specified with intensity + placement, consistent with physics and the restrained-violence series rule; no effect contradicts the research flags.
-- **Guardrails:** restrained violence (series bible); flags shots where effects + actor/prop models together risk losing the scene (MTower open issue).
+- **Decisions (locked 2026-10-14):**
+  - **Hard gore cap:** the restrained-violence rule is an **enforced cap** — VFX flags/clamps anything past the defined line (treated like a gate), not a soft guideline.
+  - **Effect-light coordination:** **VFX proposes** the effect light (muzzle flash, explosion, fire); **Camera integrates** it into the frame's lighting.
+  - **Effect continuity:** persistent smoke/fire/damage across a sequence is tracked as **evolving state with Continuity validating** (same model as set/wardrobe).
+- **DoD:** effects specified with **type, intensity, placement, timing**; physically coherent and consistent with Research's verdicts; within the restrained-violence cap; risk shots flagged.
+- **Guardrails:** restrained violence (hard cap); owns the *event* only (Set = static aftermath, Wardrobe = garment result); flags shots where effects + actor/prop models together risk losing the scene (MTower open issue).
+- **Competence (L1–L4):** L1 VFX supervisor + pyrotechnics/SFX coordinator, expert in period ordnance behavior, ballistics feel, restrained believable war effects; L2 Research ordnance verdicts + props/vehicles.json + restrained-violence rule + Tone Bible action refs; L3 vision check, props/vehicle references; L4 Research (ordnance), Set (aftermath), Wardrobe (garment result), Camera (effect light), Continuity (persistence), Sound (effect audio), Image QA (verifies).
 
 ### 10. Continuity agent
 - **Craft:** enforce consistency **across** shots within a scene/sequence — time of day, light direction, wear state, injuries, prop positions, who-holds-what.
