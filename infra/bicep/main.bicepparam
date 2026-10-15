@@ -7,9 +7,9 @@ param regionCode = 'eus2'
 param location = 'eastus2'
 param workload = 'mtowerstudio'
 
-// The studio PC's public IP (detected 2026-10-14). Deploy-Studio.ps1 re-detects and overrides on each run.
+// The studio PC's public IP (updated 2026-10-15; home IP drifts). Deploy-Studio.ps1 warns on drift.
 param allowedIps = [
-  '86.97.91.184'
+  '2.51.71.149'
 ]
 
 // Existing Log Analytics workspace (same sub). Empty = no diagnostics.

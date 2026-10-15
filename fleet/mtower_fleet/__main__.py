@@ -44,6 +44,17 @@ def main() -> int:
     r.add_argument("--beat")
     r.add_argument("--notes", default="")
     r.add_argument("--out", help="write the shot contract JSON to this path")
+
+    q = sub.add_parser("qa", help="run Image QA (vision) on an image against a shot intent")
+    q.add_argument("--image", required=True, help="local path or https URL of the frame")
+    q.add_argument("--shot", default="adhoc")
+    q.add_argument("--subject", default="")
+    q.add_argument("--action", default="")
+    q.add_argument("--setting", default="")
+    q.add_argument("--time", default="")
+    q.add_argument("--mood", default="")
+    q.add_argument("--gate", type=float, default=8.0)
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -64,6 +75,22 @@ def main() -> int:
             with open(args.out, "w", encoding="utf-8") as f:
                 f.write(js)
             print(f"\nwritten: {args.out}")
+
+    elif args.cmd == "qa":
+        from .agents.image_qa import ImageQAAgent
+        from .contract import Shot
+
+        shot = Shot(shot_id=args.shot)
+        shot.intent.subject = args.subject
+        shot.intent.action = args.action
+        shot.intent.setting = args.setting
+        shot.intent.time_of_day = args.time
+        shot.intent.mood = args.mood
+        print(f"Image QA on {args.image}\n  intent: {shot.intent.subject} | {shot.intent.action}")
+        result = ImageQAAgent().review(shot, args.image, gate=args.gate)
+        print("\n===== IMAGE QA =====")
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        print(f"\ncost≈${shot.cost_usd_total:.4f}")
     return 0
 
 
