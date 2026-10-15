@@ -74,7 +74,7 @@ flowchart TB
 ## 4. Identity, security, guardrails (inherited)
 
 - **Keys disabled** on Foundry and Storage; **Entra-only** access with the data roles (Cognitive Services User, Azure AI User, Storage Blob Data Contributor).
-- **Network:** IP allow-list + NSP (Enforced) around Foundry and storage; only the studio PC's IP gets in. In the **external tenant the NSP requirement may relax** (no SFI-NS2.2.1) — revisit whether the allow-list alone suffices there.
+- **Network:** IP allow-list on the Foundry's own firewall; NSP (Enforced) around **storage only**. The **Foundry is kept off the NSP** (protected by its IP firewall + disabled keys + Entra-only) because NSP access-rule propagation is slow (10–30 min), which would stall every home-IP change on the critical model path. Storage stays on the NSP to satisfy SFI-NS2.2.1. In the **external tenant the NSP may drop entirely** (no SFI policy). *(Learned 2026-10-15: after a home-IP change, the Foundry NSP rule took >30 min to propagate and blocked all model calls with 403 `rejected by NetworkSecurityPerimeter`; moving the Foundry off the NSP is the fix.)*
 - **SPN:** today one SPN with subscription Contributor (D-04). In the external tenant you can adopt the safer **deployer + engine-only** split at the move with no template changes.
 - **Agent connections:** the new `studio` project's tool connections (to Storage, to web search for the Research agent) use the project's managed identity + the same data roles — no new secrets.
 

@@ -126,8 +126,10 @@ resource mediaContainer 'Microsoft.Storage/storageAccounts/blobServices/containe
 }
 
 // ---------------------------------------------------------------- Network Security Perimeter
-// Tenant policy "SFI-NS2.2.1 Secure PaaS Resources" (MCAPSGov) forces storage public access off unless in an NSP.
-// Enforced: only the inbound rule (the studio PC) gets in; NSP rules take precedence over each resource's own setting.
+// Tenant policy "SFI-NS2.2.1 Secure PaaS Resources" (MCAPSGov) forces STORAGE public access off unless in an NSP.
+// The Foundry (Cognitive Services) is NOT subject to that policy and is protected by its own IP firewall + disabled
+// keys + Entra-only auth, so it is deliberately kept OFF the NSP — NSP access-rule propagation is slow (10-30 min),
+// which would otherwise stall every home-IP change on the critical model path. Only storage is associated.
 
 resource perimeter 'Microsoft.Network/networkSecurityPerimeters@2025-09-01' = {
   name: '${baseName}-nsp'
@@ -151,25 +153,6 @@ resource allowStudioPc 'Microsoft.Network/networkSecurityPerimeters/profiles/acc
     direction: 'Inbound'
     addressPrefixes: [for ip in allowedIps: '${ip}/32']
   }
-}
-
-resource foundryAssociation 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2025-09-01' = {
-  parent: perimeter
-  name: '${baseName}-fdy-nspa'
-  location: location
-  properties: {
-    privateLinkResource: {
-      id: foundry.id
-    }
-    profile: {
-      id: perimeterProfile.id
-    }
-    accessMode: 'Enforced'
-  }
-  dependsOn: [
-    deployments
-    allowStudioPc
-  ]
 }
 
 resource storageAssociation 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2025-09-01' = {
