@@ -9,12 +9,17 @@ from ..contract import CriticNote
 DOD = {
     "intent": (
         "Scene intent names subject, action, setting, time_of_day and mood; references library IDs for any "
-        "location/vehicle/prop/character the beat names; contains no invented historical fact (those are the "
-        "Research agent's job)."
+        "location/vehicle/prop/character that has a library entry (story elements such as a message, a signal, an "
+        "order or a sound are NOT props and need no ID — do not ask for one); keeps the key dramatic action of the "
+        "shot; contains no invented historical fact (those are the Research agent's job)."
     ),
     "research": (
-        "Every period-sensitive/factual element present in the intent is verified, corrected or flagged with a "
-        "sourced tier; nothing is asserted from memory without a citation (uncited => flagged)."
+        "Every factual element in the intent (real events, places, units, equipment, numbers, real people) is "
+        "verified, corrected or flagged, citing the episode fact-check ledger's IDs (SRC-xx / H-xx / D-x / A-flag). "
+        "Production decisions (D-x) on disputed points count as handled. Composite characters, their personal moments "
+        "and (dramatized) dialogue that paraphrases a sourced event are correctly marked 'creative', not flagged. "
+        "Real people appear only through sourced actions. Nothing is asserted from memory without a citation. "
+        "Source tiers are labelled honestly (encyclopedia/press = secondary). Every flagged item has a flags entry."
     ),
     "direction": (
         "Coverage, blocking, a performance note, pacing and a tone reference are present and consistent with a "
@@ -33,20 +38,30 @@ class StudioCritic:
         "Pass only if the decision genuinely meets the definition-of-done."
     )
 
-    def review(self, shot, field: str) -> CriticNote:
+    def review(self, shot, field: str, grounding=None) -> CriticNote:
         content_obj = getattr(shot, field)
         dod = DOD.get(field, "Meets its stated purpose and is consistent with the scene intent.")
+        if isinstance(content_obj, list):
+            body = [x.model_dump() for x in content_obj]
+            if field == "research":
+                body = {"research": body, "flags": [f.model_dump() for f in shot.flags]}
+        else:
+            body = content_obj.model_dump() if hasattr(content_obj, "model_dump") else content_obj
+        ground = ""
+        if grounding is not None and not grounding.empty and field in ("research", "intent"):
+            ground = f"PRODUCTION GROUNDING (check citations and character types against this):\n{grounding.for_critic()}\n\n"
         user = (
+            f"{ground}"
             f"Field under review: {field}\n"
             f"Definition of done: {dod}\n\n"
             f"Scene intent: {shot.intent.model_dump()}\n\n"
-            f"The {field} to review: {content_obj.model_dump() if hasattr(content_obj, 'model_dump') else content_obj}"
+            f"The {field} to review: {body}"
         )
         messages = [
             {"role": "system", "content": self.SYSTEM + "\nRespond ONLY with a single valid JSON object."},
             {"role": "user", "content": user},
         ]
-        text, usage = client.complete(messages, response_format={"type": "json_object"})
+        text, usage = client.complete(messages, response_format={"type": "json_object"}, max_completion_tokens=8000)
         data = _parse_json(text)
         note = CriticNote(
             target_field=field,

@@ -54,7 +54,9 @@ class Agent:
             {"role": "system", "content": self.SYSTEM + "\n\nRespond ONLY with a single valid JSON object, no prose."},
             {"role": "user", "content": user},
         ]
-        content, usage = client.complete(messages, vision=self.VISION, response_format={"type": "json_object"})
+        content, usage = client.complete(
+            messages, vision=self.VISION, response_format={"type": "json_object"}, max_completion_tokens=8000
+        )
         try:
             data = _parse_json(content)
         except Exception:

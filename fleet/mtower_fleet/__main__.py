@@ -25,9 +25,10 @@ DEMO = {
     "production": "thunderbolt",
     "episode": "ep01_romani",
     "beat": (
-        "Night on the canal embankment. Corporal Mahmoud, the radio operator, crouches in deep shadow decoding a "
-        "scrap of paper by the dim red glow of a red-filtered flashlight that glints on his taped wire-rimmed "
-        "glasses. He whispers the decoded message. Tense, hushed."
+        "Night, the Tina Plain salt marsh. Corporal Mahmoud, the radio operator, wades beside Captain Shalabi, the "
+        "set strapped high on his back. He decodes a coded reply by red light: the enemy has intercepted their "
+        "signal. Shalabi orders radio silence and sets a new compass bearing. (Fallback text only — the orchestrator "
+        "uses the locked screenplay beat when the MTower repo is available.)"
     ),
 }
 

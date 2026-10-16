@@ -1,0 +1,140 @@
+"""L2 grounding — loads a production's own research and rules for the agents.
+
+For a beat this assembles, from the MTower production repo:
+  * series-bible rules (§4: history & real people, home front, enemy, violence)
+  * the episode fact-check ledger (research/sources.md: SRC-xx sources, H-xx claims, D-x decisions)
+  * the beat text from the locked screenplay
+  * profiles of the characters in the beat (REAL vs COMPOSITE matters for Research)
+  * the act's Historical Flags table
+
+It also looks up a shot's design in the shot lists (used by batch Image QA).
+"""
+from __future__ import annotations
+
+import json
+import os
+import re
+from dataclasses import dataclass, field
+from pathlib import Path
+
+MTOWER_REPO = Path(os.getenv("MTOWER_REPO", r"C:\dev\github-personal\MTower"))
+
+
+def _production_dir(production: str) -> Path:
+    return MTOWER_REPO / "productions" / production
+
+
+def _episode_dir(production: str, episode: str) -> Path:
+    return _production_dir(production) / episode
+
+
+def _read(p: Path) -> str:
+    return p.read_text(encoding="utf-8") if p.exists() else ""
+
+
+def _section(text: str, start_pattern: str, stop_pattern: str) -> str:
+    """Lines from the first match of start_pattern up to (not incl.) the next stop_pattern match."""
+    lines = text.splitlines()
+    out: list[str] = []
+    inside = False
+    for line in lines:
+        if not inside and re.match(start_pattern, line):
+            inside = True
+            out.append(line)
+            continue
+        if inside:
+            if re.match(stop_pattern, line):
+                break
+            out.append(line)
+    return "\n".join(out).strip()
+
+
+def _act_file(production: str, episode: str, beat_ref: str) -> Path | None:
+    prefix = "00_" if beat_ref.upper().startswith("T") else f"0{beat_ref.split('.')[0]}_"
+    folder = _episode_dir(production, episode) / "01_development" / "screenplay"
+    hits = sorted(folder.glob(f"{prefix}*.md"))
+    return hits[0] if hits else None
+
+
+@dataclass
+class Grounding:
+    beat_ref: str
+    bible_rules: str = ""
+    sources: str = ""
+    beat_text: str = ""
+    characters: str = ""
+    historical_flags: str = ""
+    character_ids: list[str] = field(default_factory=list)
+
+    @property
+    def empty(self) -> bool:
+        return not (self.sources or self.beat_text)
+
+    def for_research(self) -> str:
+        parts = [
+            ("SERIES BIBLE — RULES FOR HISTORY AND REAL PEOPLE", self.bible_rules),
+            ("CHARACTER PROFILES (type REAL vs COMPOSITE)", self.characters),
+            (f"LOCKED SCREENPLAY — BEAT {self.beat_ref}", self.beat_text),
+            ("ACT HISTORICAL FLAGS (already decided treatments)", self.historical_flags),
+            ("EPISODE FACT-CHECK LEDGER (sources SRC-xx, claims H-xx, decisions D-x)", self.sources),
+        ]
+        return "\n\n".join(f"=== {title} ===\n{body}" for title, body in parts if body)
+
+    def for_critic(self) -> str:
+        # The critic needs enough to check citations and character types, not the full beat prose.
+        parts = [
+            ("SERIES BIBLE — RULES", self.bible_rules),
+            ("CHARACTER PROFILES", self.characters),
+            ("ACT HISTORICAL FLAGS", self.historical_flags),
+            ("EPISODE FACT-CHECK LEDGER", self.sources),
+        ]
+        return "\n\n".join(f"=== {title} ===\n{body}" for title, body in parts if body)
+
+
+def load(production: str, episode: str, beat_ref: str, extra_character_ids: list[str] | None = None) -> Grounding:
+    g = Grounding(beat_ref=beat_ref)
+
+    bible = _read(_production_dir(production) / "series_bible.md")
+    g.bible_rules = _section(bible, r"^## 4\. ", r"^## 5\. ")
+
+    ep = _episode_dir(production, episode) / "01_development"
+    g.sources = _read(ep / "research" / "sources.md")
+
+    act = _act_file(production, episode, beat_ref)
+    if act:
+        text = _read(act)
+        g.beat_text = _section(text, rf"^### Beat {re.escape(beat_ref)}\b", r"^(### Beat |## )")
+        g.historical_flags = _section(text, r"^## Historical Flags", r"^## ")
+
+    ids = sorted(set(re.findall(r"\bC-\d{2}\b", g.beat_text)) | set(extra_character_ids or []))
+    g.character_ids = ids
+    chars = _read(ep / "characters.md")
+    if chars:
+        how_to = _section(chars, r"^## How to read this file", r"^(---|## )")
+        profiles = [_section(chars, rf"^### {cid} ", r"^(### |## )") for cid in ids]
+        g.characters = "\n\n".join([how_to] + [p for p in profiles if p])
+    return g
+
+
+def find_shot(production: str, episode: str, shot_id: str) -> dict | None:
+    """Return {shot_id, beat, location, look, wear, prompt, characters, ...} from the shot lists."""
+    folder = _episode_dir(production, episode) / "02_preproduction"
+    for f in sorted(folder.glob("shot_list_*.json")):
+        try:
+            data = json.loads(_read(f))
+        except json.JSONDecodeError:
+            continue
+        for beat in data.get("beats", []):
+            for shot in beat.get("shots", []):
+                if shot.get("shot_id") == shot_id:
+                    out = dict(shot)
+                    out["beat"] = beat.get("beat")
+                    out["beat_title"] = beat.get("title")
+                    out.setdefault("location", beat.get("location"))
+                    out.setdefault("look", beat.get("look"))
+                    out.setdefault("wear", beat.get("wear"))
+                    out["prompt"] = shot.get("prompt") or shot.get("image_prompt_core") or shot.get("description") or ""
+                    chars = shot.get("characters") or []
+                    out["character_ids"] = [c["id"] if isinstance(c, dict) else c for c in chars]
+                    return out
+    return None

@@ -20,7 +20,23 @@ class ScriptAgent(Agent):
     def build_user(self, shot, **ctx) -> str:
         beat = ctx.get("beat", "")
         extra = ctx.get("notes", "")
-        return f"Production: {shot.production} / {shot.episode}\nBeat {shot.beat_ref}:\n{beat}\n\nNotes: {extra}"
+        design = ctx.get("shot_design") or {}
+        shot_part = ""
+        if design:
+            shot_part = (
+                f"\n\nTHIS SHOT ({shot.shot_id}) from the locked shot list — describe THIS shot, not the whole beat:\n"
+                f"- size/lens/move: {design.get('size') or design.get('shot_size')} / {design.get('lens')} / "
+                f"{design.get('move') or design.get('camera_move')}\n"
+                f"- characters: {design.get('character_ids')}\n"
+                f"- library assets: {design.get('assets') or []}\n"
+                f"- design prompt: {design.get('prompt')}\n"
+                f"- motion: {design.get('motion') or design.get('motion_prompt')}\n"
+                f"- location/look: {design.get('location')} / {design.get('look')}"
+            )
+        return (
+            f"Production: {shot.production} / {shot.episode}\n"
+            f"LOCKED SCREENPLAY — beat {shot.beat_ref}:\n{beat}{shot_part}\n\nNotes: {extra}"
+        )
 
     def apply(self, shot, data) -> None:
         i = shot.intent
