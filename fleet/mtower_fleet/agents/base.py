@@ -11,10 +11,11 @@ from typing import Any
 
 from .. import client, contract
 
-# Rough $/1K-token estimates (placeholders — refine against real pricing). Tracking matters more than precision.
+# $ per 1K tokens. gpt-5.6-sol: Azure retail meters, eastus2 Global Standard (2026-10-12, per MTower
+# engine_config.json): $4 / $20 per 1M in / out. gpt-5.6-terra: about half of sol (MTower decision D-16).
 _RATES = {
-    "reasoning": {"prompt": 0.0005, "completion": 0.0015},
-    "vision": {"prompt": 0.002, "completion": 0.008},
+    "reasoning": {"prompt": 0.002, "completion": 0.010},
+    "vision": {"prompt": 0.004, "completion": 0.020},
 }
 
 

@@ -56,6 +56,15 @@ def main() -> int:
     q.add_argument("--mood", default="")
     q.add_argument("--gate", type=float, default=8.0)
 
+    b = sub.add_parser("batch-qa", help="Image QA over approved MTower keyframes (compares human / MTower / studio)")
+    b.add_argument("--production", default="thunderbolt")
+    b.add_argument("--episode", default="ep01_romani")
+    b.add_argument("--sample", type=int, default=6, help="frames to review, spread across acts (default 6)")
+    b.add_argument("--all", action="store_true", help="review every approved frame")
+    b.add_argument("--shots", help="comma-separated shot ids to review instead of a sample")
+    b.add_argument("--confirm-cost", type=float, default=None,
+                   help="spend gate: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -92,6 +101,28 @@ def main() -> int:
         print("\n===== IMAGE QA =====")
         print(json.dumps(result, indent=2, ensure_ascii=False))
         print(f"\ncost≈${shot.cost_usd_total:.4f}")
+
+    elif args.cmd == "batch-qa":
+        from pathlib import Path
+
+        from . import batch_qa
+
+        frames = batch_qa.approved_frames(args.production, args.episode)
+        if args.shots:
+            wanted = {s.strip() for s in args.shots.split(",")}
+            frames = [f for f in frames if f["shot_id"] in wanted]
+        elif not args.all:
+            frames = batch_qa.sample(frames, args.sample)
+        estimate = round(len(frames) * batch_qa.EST_PER_REVIEW_USD, 2)
+        print(f"Batch Image QA — {len(frames)} approved frame(s): {', '.join(f['shot_id'] for f in frames)}")
+        print(f"Estimate: ${estimate:.2f} (≈${batch_qa.EST_PER_REVIEW_USD} per review with references)")
+        if args.confirm_cost is None or args.confirm_cost < estimate:
+            print(f"Not run. Re-run with --confirm-cost {estimate} to approve this spend.")
+            return 0
+        results = batch_qa.run(args.production, args.episode, frames)
+        out_dir = Path(__file__).resolve().parents[1] / "reports"
+        jpath, mpath = batch_qa.write_report(results, out_dir)
+        print(f"\nreport: {mpath}\ndata:   {jpath}")
     return 0
 
 

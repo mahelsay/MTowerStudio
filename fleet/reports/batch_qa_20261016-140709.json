@@ -1,0 +1,281 @@
+[
+  {
+    "shot_id": "T.2-01",
+    "part": "00_teaser",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\00_teaser\\T.2-01\\20261013-084225\\t-2-01_01.png",
+    "approved_at": "2026-10-13T06:59:22+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\00_teaser\\T.2-01\\20261013-084225",
+    "design_prompt": "interior of a Mi-8 helicopter cabin at night seen from the rear, Egyptian commandos sitting shoulder to shoulder on fold-down side benches, faces darkened, RPG-7 launchers held upright between their knees, Malutka missile cases and mine sacks stacked down the center aisle, an officer at the far forward bulkhead",
+    "references": [
+      "casting portrait of C-01 Captain Hamdi Shalabi (actor ACT-0001)",
+      "real reference photo of prop PRP-0002",
+      "real reference photo of prop PRP-0003"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 6,
+      "verdict": "fail",
+      "summary": "The wide, low rear-cabin composition, troop arrangement and period atmosphere are convincing, with generally sound anatomy and integrated faces. The central anti-tank payload is visibly wrong: the supposed Malyutka is an oversized bomb-like missile rather than a small 9M14 missile on its fibreglass suitcase launcher, and the required mine sacks are not clearly represented. This prominent aisle prop would remain a major continuity and historical error throughout the push-in.",
+      "reviewed_at": "2026-10-16T06:24:22+00:00"
+    },
+    "studio": {
+      "score": 6.4,
+      "verdict": "fail",
+      "identity": [
+        {
+          "who": "C-01 Captain Hamdi Shalabi",
+          "status": "fail",
+          "note": "The officer's face is visible at the forward bulkhead, but it does not match the casting portrait: the broader facial structure, shorter nose, softer jaw, and different eye/brow proportions outweigh the superficial similarity of dark hair and moustache."
+        }
+      ],
+      "identity_pass": false,
+      "issues": [
+        "Approximately 18 people are present: one standing officer and roughly 17 seated commandos. The crowded bilateral arrangement reads clearly, but the lead identity mismatch is an automatic fail.",
+        "The center aisle contains an exposed Malutka-style missile and assorted hard equipment rather than the specified Malutka missile cases and mine sacks; mine sacks are not clearly present.",
+        "The exposed missile is unsecured, pointed toward camera, and packed among loose cases in a narrow troop aisle, creating an implausible flight-safety and handling arrangement.",
+        "Several RPG-7s read adequately in silhouette, but some launcher/warhead assemblies have simplified or inconsistent details and appear awkwardly wedged against bodies.",
+        "Uniforms are generic and unusually clean and homogeneous for an operational Egyptian commando loadout; period-specific insignia, webbing, helmets, and personal field equipment are sparse.",
+        "The officer is lit substantially brighter than the seated troops, which supports hierarchy, but the cabin is more amber-brown than the intended strongly red-lit cabin look.",
+        "Minor hand, weapon, and equipment overlaps in the densely packed rows reduce physical clarity, especially toward the forward benches."
+      ],
+      "fix_instructions": [
+        "Replace the officer with a faithful match to ACT-0001, preserving his long narrow face, prominent straight nose, strong dark brows, angular jaw, exact moustache shape, and hairline.",
+        "Remove the loose exposed missile from the aisle. Show period-correct Malutka transport cases and clearly identifiable mine sacks, securely lashed and leaving a plausible narrow passage.",
+        "Correct each RPG-7 using PRP-0002 as reference: coherent tube geometry, grip and sight placement, wood furniture, and properly seated grenade assemblies; avoid body and hand intersections.",
+        "Add restrained period-appropriate Egyptian commando webbing, insignia, helmets or stowed headgear, and varied operational wear without making the formation visually noisy.",
+        "Push the practical cabin lighting further toward saturated red while keeping faces intentionally dark and preserving enough detail to read the officer and equipment.",
+        "Check every hand, knee, weapon, and bench contact point, and secure all centerline cargo for believable helicopter-flight physics."
+      ],
+      "_cost_usd": 0.028088,
+      "_tokens": 3646
+    }
+  },
+  {
+    "shot_id": "1.2-01",
+    "part": "01_act_one",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\01_act_one\\1.2-01\\20261015-104409\\1-2-01_01.png",
+    "approved_at": "2026-10-15T13:39:03+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\01_act_one\\1.2-01\\20261015-104409",
+    "design_prompt": "a long barracks room at night, iron bunks, kit laid out on grey blankets, one bare bulb, soldiers packing",
+    "references": [],
+    "human": "approved",
+    "mtower": {
+      "score": 8,
+      "verdict": "minor",
+      "summary": "The wide, low, symmetrical barracks composition strongly matches the designed packing scene, with convincing period uniforms, iron bunks, grey blankets and warm nighttime illumination. The only clear mismatch is that the specified single bare bulb is not actually visible; only its glow appears at the cropped upper edge.",
+      "reviewed_at": "2026-10-15T06:45:16+00:00"
+    },
+    "studio": {
+      "score": 8.3,
+      "verdict": "pass",
+      "identity": [
+        {
+          "who": "soldier ensemble (approximately 15 figures)",
+          "status": "pass",
+          "note": "No casting portraits supplied; visible faces are internally coherent, distinct, and appropriate to the wide ensemble framing."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "The nominal single bare bulb is cropped out; only its overhead glow is visible.",
+        "Illumination is somewhat too broad and even for a room supposedly lit by one bulb, with substantial exposure reaching both foreground sides.",
+        "Some background hands and packing actions are too small or occluded to verify fully.",
+        "Uniform insignia and kit imply a period military setting but lack enough specific continuity information for definitive historical validation."
+      ],
+      "fix_instructions": [
+        "Tilt or reframe slightly upward to include the bare bulb while preserving the strong central aisle and dolly path.",
+        "Increase falloff away from the bulb and deepen the corners so the lighting feels more convincingly single-source.",
+        "Maintain the long, centered aisle, iron-bed repetition, grey blankets, and layered packing activity.",
+        "Standardize insignia, belts, cookware, bags, and weapon-era details to the production's defined military period."
+      ],
+      "_cost_usd": 0.021024,
+      "_tokens": 2324
+    }
+  },
+  {
+    "shot_id": "2.11-02",
+    "part": "02_act_two",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\02_act_two\\2.11-02\\20261013-093448\\2-11-02_01.png",
+    "approved_at": "2026-10-13T07:01:50+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\02_act_two\\2.11-02\\20261013-093448",
+    "design_prompt": "pre-dawn in a shallow fold of sand between dunes: a row of exhausted commandos sitting and lying close together, heads down, rifles across their laps; the captain in the foreground walking along the row, bending, his hand resting on one seated man's shoulder as he counts them; faint grey light on the dune crests, faces dimly readable",
+    "references": [
+      "casting portrait of C-01 Captain Hamdi Shalabi (actor ACT-0001)"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 6,
+      "verdict": "fail",
+      "summary": "The counting action, exhausted formation, weapons, night palette and lead casting read well, with no obvious anatomy or compositing failure. However, the designed shallow fold between dunes and illuminated dune crests are entirely absent; the frame instead shows the perfectly flat terrain required by LOC-0004, exposing a contradiction in the shot design. The framing is also wider than the specified medium shot, and the captain's ornate dark rank boards and modern-looking wrist device need period refinement.",
+      "reviewed_at": "2026-10-16T06:29:14+00:00"
+    },
+    "studio": {
+      "score": 7.7,
+      "verdict": "fail",
+      "identity": [
+        {
+          "who": "C-01 Captain Hamdi Shalabi",
+          "status": "pass",
+          "note": "The foreground captain is visibly consistent with the casting portrait in facial proportions, swept dark hair, heavy brows, narrow nose, angular jaw, and distinctive mustache, allowing for downward angle, grime, and low light."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "Seven people are visible: the captain and six exhausted commandos; the captain is foregrounded with a readable face and physical shoulder contact, so the counting action is clear.",
+        "The terrain does not read as a shallow fold between dunes: it appears largely flat, with no enclosing dune slopes or illuminated dune crests.",
+        "The star-filled, saturated blue-black sky reads as full night rather than pre-dawn grey light.",
+        "The captain is only slightly inclined and reads more as standing over the row than actively bending and moving shoulder-to-shoulder.",
+        "The framing is wider than the specified MS, reducing the intimacy and tactile emphasis of the count.",
+        "Faces and uniforms are plausibly dim and sand-worn, but the foreground lighting is somewhat polished and cool compared with the requested faint ambient dawn grey."
+      ],
+      "fix_instructions": [
+        "Place the group visibly inside a shallow sand depression, with dune shoulders rising behind and around them.",
+        "Replace the star-heavy blue night sky with a subtly lightening grey pre-dawn horizon and faint cool-grey illumination along dune crests.",
+        "Move to a tighter 50mm medium framing centered on the captain's bent posture, his hand, and the nearest three or four commandos.",
+        "Bend the captain lower at the waist and make his hand unmistakably press one seated man's shoulder, suggesting he is progressing down the row by touch.",
+        "Keep faces barely but naturally readable with soft dawn ambience; reduce the glossy blue night grading while preserving exhaustion, grime, and weapon continuity."
+      ],
+      "_cost_usd": 0.028724,
+      "_tokens": 3565
+    }
+  },
+  {
+    "shot_id": "3.10-01",
+    "part": "03_act_three",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\03_act_three\\3.10-01\\20261013-095203\\3-10-01_01.png",
+    "approved_at": "2026-10-13T07:05:50+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\03_act_three\\3.10-01\\20261013-095203",
+    "design_prompt": "a narrow Cairo alley in hard afternoon light, laundry lines overhead, four boys playing war in the dust — two crawling on all fours as tanks, two jumping out from a doorway",
+    "references": [
+      "casting portrait of C-14 Ali (actor ACT-0010)"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 5,
+      "verdict": "fail",
+      "summary": "The period alley, four-boy count, lighting, casting match and general composition are convincing, but the designed action is not present: only one boy is crawling as a tank while C-14 kneels prominently with the airplane. C-14 also looks directly into the lens rather than participating in the game. The focal toy has a somewhat generated, indistinct airplane shape.",
+      "reviewed_at": "2026-10-13T05:52:45+00:00"
+    },
+    "studio": {
+      "score": 6.7,
+      "verdict": "fail",
+      "identity": [
+        {
+          "who": "C-14 Ali",
+          "status": "pass",
+          "note": "The central foreground boy is clearly visible near-frontal and sufficiently matches the casting portrait in eye shape, brows, nose, ears, lips, face proportions, and hairline."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "Four boys are present, but the blocking misses the specified action: only the left boy is crawling on all fours; the central boy is kneeling upright, and the doorway boys are crouched rather than visibly leaping out and shouting.",
+        "Laundry lines are overhead, but no laundry is hanging from them, weakening a key piece of the Cairo-alley brief.",
+        "The central boy holds an unclear, partially malformed toy-like object that distracts from the intended children-as-tanks war game.",
+        "The doorway boys are soft and their poses read as tentative sneaking rather than an energetic ambush.",
+        "The alley, clothing, and architecture are plausible but visually generic, with limited Cairo-specific detail.",
+        "Hard afternoon light and dusty ground are convincing, but the central staged portrait emphasis undercuts the spontaneous, kinetic tone."
+      ],
+      "fix_instructions": [
+        "Put both foreground boys fully on hands and knees in clear crawling 'tank' poses; remove the central kneeling hero pose.",
+        "Capture both doorway boys airborne or stepping forcefully out with open mouths and animated shouting expressions.",
+        "Add visible period-appropriate laundry hanging across several overhead lines.",
+        "Replace the malformed handheld object with a simple, clearly readable improvised war-game prop, or remove it entirely.",
+        "Preserve Ali's facial identity while widening the action composition and adding natural motion blur or displaced dust to sell movement.",
+        "Add restrained Cairo-specific environmental texture and period-appropriate alley details without cluttering the four-boy silhouette."
+      ],
+      "_cost_usd": 0.021724,
+      "_tokens": 3159
+    }
+  },
+  {
+    "shot_id": "4.1-03",
+    "part": "04_act_four",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\04_act_four\\4.1-03\\20261013-095637\\4-1-03_01.png",
+    "approved_at": "2026-10-13T07:08:34+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\04_act_four\\4.1-03\\20261013-095637",
+    "design_prompt": "the engineer sergeant kneeling behind a low sand berm, an AKM assault rifle shouldered correctly with both hands on it, turning his head over his shoulder to shout a direction to his men off-frame, dust kicked up around him, dark smoke rising behind him in the desert",
+    "references": [
+      "casting portrait of C-05 Engineer Sergeant Hassan (actor ACT-0013)"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 6,
+      "verdict": "fail",
+      "summary": "The casting, anatomy, period look, desert setting and shouting head turn are convincing. However, the AKM butt is held across the upper chest rather than seated in the right shoulder pocket, directly breaking the designed shouldered firing posture and making the next action difficult to animate credibly.",
+      "reviewed_at": "2026-10-13T05:57:24+00:00"
+    },
+    "studio": {
+      "score": 7.6,
+      "verdict": "fail",
+      "identity": [
+        {
+          "who": "C-05 Engineer Sergeant Hassan",
+          "status": "pass",
+          "note": "Single visible lead; the three-quarter shouting face matches the casting portrait in brow, eyes, nose, jawline, ears, complexion, and close-cropped hair."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "One person is present as intended, framed in a suitable medium shot with a clearly visible three-quarter face.",
+        "The AKM is held with both hands, but it is not correctly shouldered: the buttstock rides across the upper chest rather than being firmly seated in the shoulder pocket, undermining the fire-turn-fire action.",
+        "There is no convincing localized dust kick-up around the sergeant; the environment reads as generally hazy rather than disturbed by nearby impacts or movement.",
+        "Dark battle smoke is present and effective, but the frame lacks a clear firing cue such as recoil, muzzle flash, ejected casing, or muzzle smoke.",
+        "The long dark rod lying across the berm is visually unexplained and may read as stray modern equipment or a continuity artifact.",
+        "Anatomy, kneeling posture, battle wear, desert setting, lighting, and urgent shouting expression are otherwise plausible and tonally appropriate."
+      ],
+      "fix_instructions": [
+        "Seat the AKM buttstock firmly into the right shoulder pocket while preserving the head turn and open-mouthed shout.",
+        "Maintain a credible firing stance: right hand on the pistol grip with controlled trigger placement, left hand supporting the fore-end, elbows and torso braced behind cover.",
+        "Add localized airborne sand and dust around the berm, ideally motivated by movement, muzzle blast, or nearby impacts.",
+        "Include a restrained firing indicator consistent with the selected instant—subtle recoil, muzzle smoke/flash, or an ejected casing—without obscuring the face.",
+        "Remove the unexplained rod from the berm unless it is a continuity-approved period prop."
+      ],
+      "_cost_usd": 0.022388,
+      "_tokens": 3233
+    }
+  },
+  {
+    "shot_id": "5.4-05",
+    "part": "05_act_five",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\05_act_five\\5.4-05\\20261013-125128\\5-4-05_01.png",
+    "approved_at": "2026-10-13T11:09:16+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\05_act_five\\5.4-05\\20261013-125128",
+    "design_prompt": "night on the west bank of the Suez Canal: the captain has just stepped out of a small rubber assault boat beached at the water's edge behind him and stands still in the foreground, his hand on the shoulder of one of a short row of survivors sitting on the sand, counting them; black still water and the low dark far bank behind; faint moonlight, faces dimly readable",
+    "references": [
+      "casting portrait of C-01 Captain Hamdi Shalabi (actor ACT-0001)"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 5,
+      "verdict": "fail",
+      "summary": "The action, location, lead identity, night lighting and physical staging are convincing, but only four of the specified seven seated survivors are visible and the captain's prominent shoulder insignia is historically wrong. It shows a single pale asterisk-like device rather than three gold five-pointed captain's stars.",
+      "reviewed_at": "2026-10-16T06:30:53+00:00"
+    },
+    "studio": {
+      "score": 8.3,
+      "verdict": "pass",
+      "identity": [
+        {
+          "who": "C-01 Captain Hamdi Shalabi",
+          "status": "pass",
+          "note": "Clearly visible in three-quarter view; facial structure, eyes, nose, hairline, and distinctive mustache match the casting portrait under harder moonlit lighting."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "Five people are visible: the standing captain and four seated survivors; count and arrangement support the intended short row.",
+        "The shoreline reads more as coarse gravel and rocks than sand.",
+        "The assault boat is correctly positioned behind the captain but is very dark and visually cluttered, making its rubber construction and beaching less immediately legible.",
+        "Moonlight direction and exposure are coherent, though the captain's face and uniform have a slightly stronger, cleaner key than the stated faint natural moonlight suggests.",
+        "The captain's hand-to-shoulder contact, survivor eyelines, anatomy, and exhausted tone are convincing."
+      ],
+      "fix_instructions": [
+        "Replace or soften the foreground gravel with darker wet sand while preserving footprints and shoreline texture.",
+        "Clarify the boat silhouette, rubber tubes, and waterline with a subtle moonlit edge; reduce indistinct clutter inside it.",
+        "Reduce the captain's facial and uniform key by roughly half a stop and soften the highlight transition to feel more naturally moonlit."
+      ],
+      "_cost_usd": 0.022336,
+      "_tokens": 3260
+    }
+  }
+]

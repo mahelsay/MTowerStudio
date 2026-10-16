@@ -1,0 +1,97 @@
+[
+  {
+    "shot_id": "T.2-01",
+    "part": "00_teaser",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\00_teaser\\T.2-01\\20261013-084225\\t-2-01_01.png",
+    "approved_at": "2026-10-13T06:59:22+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\00_teaser\\T.2-01\\20261013-084225",
+    "design_prompt": "interior of a Mi-8 helicopter cabin at night seen from the rear, Egyptian commandos sitting shoulder to shoulder on fold-down side benches, faces darkened, RPG-7 launchers held upright between their knees, Malutka missile cases and mine sacks stacked down the center aisle, an officer at the far forward bulkhead",
+    "references": [
+      "casting portrait of C-01 Captain Hamdi Shalabi (actor ACT-0001)",
+      "real reference photo of prop PRP-0002",
+      "real reference photo of prop PRP-0003",
+      "official drawing of the shoulder-strap rank insignia C-01 Captain Hamdi Shalabi must wear (judge the count and shape of the devices; on film it is small gold metal on a khaki strap, so fine detail may be soft)"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 6,
+      "verdict": "fail",
+      "summary": "The wide, low rear-cabin composition, troop arrangement and period atmosphere are convincing, with generally sound anatomy and integrated faces. The central anti-tank payload is visibly wrong: the supposed Malyutka is an oversized bomb-like missile rather than a small 9M14 missile on its fibreglass suitcase launcher, and the required mine sacks are not clearly represented. This prominent aisle prop would remain a major continuity and historical error throughout the push-in.",
+      "reviewed_at": "2026-10-16T06:24:22+00:00"
+    },
+    "studio": {
+      "score": 7.6,
+      "verdict": "fail",
+      "identity": [
+        {
+          "who": "C-01 Captain Hamdi Shalabi",
+          "status": "pass",
+          "note": "The forward officer's readable moustache, narrow face, hairline, and facial proportions match the casting portrait under the red cabin light."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "The aisle is dominated by a large exposed, apparently assembled missile that does not convincingly match the compact 9M14 Malyutka/Sagger and suitcase-launcher reference.",
+        "Required Malyutka suitcase cases are not clearly identifiable, and the specified mine sacks are absent or unreadable; the load instead appears to be mostly rigid generic cases.",
+        "The captain's three gold five-pointed stars on each shoulder strap cannot be verified at this distance; no contradictory insignia is clearly visible.",
+        "Several faces and uniforms are illuminated relatively openly in warm fill rather than remaining strongly darkened under the intended night/red-lamp look.",
+        "The large exposed missile and tightly packed ordnance completely obstruct the center aisle, creating a questionable transport and egress arrangement inside the vibrating helicopter.",
+        "The seated commando count appears broadly close to the requested approximately 18, but overlapping bodies make an exact count uncertain."
+      ],
+      "fix_instructions": [
+        "Replace the oversized exposed center missile with correctly scaled 9M14 Malyutka missiles packed in recognizable suitcase transport/launch cases, plus clearly readable period mine sacks.",
+        "Keep a narrow usable aisle and secure all cases and ordnance against helicopter vibration; avoid loose or precariously stacked equipment.",
+        "Ensure Captain Shalabi wears exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, with a plain khaki collar and no red tabs.",
+        "Reduce neutral/warm facial fill and let the red practical and deep night shadow dominate while preserving enough detail to read the composition.",
+        "Retain approximately 18 bare-headed Egyptian commandos, the period Soviet-pattern webbing, and upright RPG-7 launchers with fixed wooden-stock AKMs."
+      ],
+      "_cost_usd": 0.033704,
+      "_tokens": 5002
+    }
+  },
+  {
+    "shot_id": "5.4-05",
+    "part": "05_act_five",
+    "image": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\05_act_five\\5.4-05\\20261013-125128\\5-4-05_01.png",
+    "approved_at": "2026-10-13T11:09:16+00:00",
+    "folder": "C:\\dev\\github-personal\\MTower\\media\\productions\\thunderbolt\\ep01_romani\\keyframes\\05_act_five\\5.4-05\\20261013-125128",
+    "design_prompt": "night on the west bank of the Suez Canal: the captain has just stepped out of a small rubber assault boat beached at the water's edge behind him and stands still in the foreground, his hand on the shoulder of one of a short row of survivors sitting on the sand, counting them; black still water and the low dark far bank behind; faint moonlight, faces dimly readable",
+    "references": [
+      "casting portrait of C-01 Captain Hamdi Shalabi (actor ACT-0001)",
+      "official drawing of the shoulder-strap rank insignia C-01 Captain Hamdi Shalabi must wear (judge the count and shape of the devices; on film it is small gold metal on a khaki strap, so fine detail may be soft)"
+    ],
+    "human": "approved",
+    "mtower": {
+      "score": 5,
+      "verdict": "fail",
+      "summary": "The action, location, lead identity, night lighting and physical staging are convincing, but only four of the specified seven seated survivors are visible and the captain's prominent shoulder insignia is historically wrong. It shows a single pale asterisk-like device rather than three gold five-pointed captain's stars.",
+      "reviewed_at": "2026-10-16T06:30:53+00:00"
+    },
+    "studio": {
+      "score": 6.4,
+      "verdict": "fail",
+      "identity": [
+        {
+          "who": "C-01 Captain Hamdi Shalabi",
+          "status": "pass",
+          "note": "The captain's readable three-quarter face matches the casting actor, including facial structure, hairline, brows, nose, and distinctive moustache."
+        }
+      ],
+      "identity_pass": true,
+      "issues": [
+        "People count is wrong: the frame shows the captain and only four clearly visible seated commandos, not the required seven seated survivors.",
+        "Captain's visible shoulder strap has a single pale starburst-like device rather than exactly three small gold five-pointed stars in a row; the required insignia is not established on both straps.",
+        "The captain and foreground survivor are lit with relatively strong, shaped frontal light that feels more like a polished night setup than faint moonlight, though the background water and far bank read correctly as night.",
+        "The boat, still black water, low far bank, exhausted wear state, plain collar, compass, and hand-on-shoulder counting action otherwise support the intended scene."
+      ],
+      "fix_instructions": [
+        "Show exactly seven gaunt commandos seated in a short, readable row on the sand, in addition to the standing captain; widen or rearrange the composition if necessary.",
+        "Replace the captain's shoulder devices with exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap; remove the current single pale starburst device.",
+        "Reduce and soften the frontal illumination while retaining just enough moonlit facial detail to read the captain's identity and the survivors' exhaustion.",
+        "Preserve the rubber boat at the waterline, black still canal, low dark far bank, compass lanyard, plain khaki collar, and the captain's hand resting naturally on a survivor's shoulder."
+      ],
+      "_cost_usd": 0.031952,
+      "_tokens": 4784
+    }
+  }
+]
