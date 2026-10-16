@@ -65,6 +65,16 @@ def main() -> int:
     b.add_argument("--confirm-cost", type=float, default=None,
                    help="spend gate: must be >= the printed estimate (USD) or nothing runs")
 
+    bt = sub.add_parser("beat", help="run every shot of a beat through Wave 1 and save the shot contracts")
+    bt.add_argument("--beat-ref", required=True)
+    bt.add_argument("--production", default="thunderbolt")
+    bt.add_argument("--episode", default="ep01_romani")
+    bt.add_argument("--shots", help="comma-separated subset of the beat's shot ids")
+    bt.add_argument("--resume", action="store_true",
+                    help="reuse the saved beat fact check and skip shots whose contract is already current")
+    bt.add_argument("--confirm-cost", type=float, default=None,
+                    help="spend gate: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -78,9 +88,12 @@ def main() -> int:
 
         orch = Orchestrator()
         shot = orch.run_shot(shot_id=shot_id, beat=beat, production=production, episode=episode, beat_ref=beat_ref, notes=args.notes)
+        from . import store
+        saved_to = store.save(shot)
         js = json.dumps(shot.model_dump(), indent=2, ensure_ascii=False)
         print("\n===== SHOT CONTRACT =====")
         print(js)
+        print(f"\nsaved: {saved_to}")
         if args.out:
             with open(args.out, "w", encoding="utf-8") as f:
                 f.write(js)
@@ -123,7 +136,51 @@ def main() -> int:
         out_dir = Path(__file__).resolve().parents[1] / "reports"
         jpath, mpath = batch_qa.write_report(results, out_dir)
         print(f"\nreport: {mpath}\ndata:   {jpath}")
+
+    elif args.cmd == "beat":
+        from . import grounding, store
+
+        ids = grounding.beat_shot_ids(args.production, args.episode, args.beat_ref)
+        if args.shots:
+            wanted = [s.strip() for s in args.shots.split(",")]
+            ids = [i for i in ids if i in wanted]
+        prior = store.load_beat_research(args.production, args.episode, args.beat_ref) if args.resume else None
+        if prior is not None:
+            ids = [i for i in ids if not store.is_current(args.production, args.episode, i, args.beat_ref)]
+        if not ids:
+            print(f"No shots to run for beat {args.beat_ref}" + (" (all contracts current)." if prior else "."))
+            return 0
+        estimate = round((0 if prior else BEAT_RESEARCH_EST) + len(ids) * SHOT_EST, 2)
+        print(f"Beat {args.beat_ref}: {len(ids)} shot(s): {', '.join(ids)}")
+        print(f"Estimate: ${estimate:.2f} (" + ("reusing saved beat fact check" if prior
+              else f"beat fact check ≈${BEAT_RESEARCH_EST}") + f" + ≈${SHOT_EST} per shot)")
+        if args.confirm_cost is None or args.confirm_cost < estimate:
+            print(f"Not run. Re-run with --confirm-cost {estimate} to approve this spend.")
+            return 0
+        orch = Orchestrator()
+        saved = []
+
+        def _save(s):
+            saved.append(store.save(s))
+
+        def _save_beat(b):
+            print(f"  beat fact check saved → {store.save_beat_research(b, args.beat_ref)}", flush=True)
+
+        beat, shots = orch.run_beat(production=args.production, episode=args.episode, beat_ref=args.beat_ref,
+                                    shot_ids=ids, on_shot=_save, on_beat=_save_beat, beat_research=prior)
+        bpath = store._beat_path(args.production, args.episode, args.beat_ref)
+        total = (0 if prior else beat.cost_usd_total) + sum(s.cost_usd_total for s in shots)
+        print("\n===== BEAT SUMMARY =====")
+        print(f"beat fact check: {len(beat.research)} claims, {len(beat.open_flags)} blocking flag(s) · "
+              f"${beat.cost_usd_total:.3f}  → {bpath}")
+        for s in shots:
+            print(f"  {s.shot_id:8} {s.status:11} critic rounds={sum(1 for c in s.critic):2}  ${s.cost_usd_total:.3f}")
+        print(f"total ≈ ${total:.3f} · {len(saved)} contract(s) saved under {saved[0].parent if saved else '-'}")
     return 0
+
+
+BEAT_RESEARCH_EST = 0.20
+SHOT_EST = 0.10
 
 
 if __name__ == "__main__":

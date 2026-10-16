@@ -50,30 +50,80 @@ class Orchestrator:
                 shot.flags.clear()
             agent.act(shot, revision=feedback, **ctx)
         self._log(f"  ⚠ {field}: still failing after {MAX_REVISE_ROUNDS} revisions — escalate to human")
+        shot.escalations.append(f"{field}: critic still requests revision after {MAX_REVISE_ROUNDS} rounds — "
+                                f"{feedback[:300]}")
 
-    def run_shot(self, *, shot_id: str, beat: str, production: str, episode: str, beat_ref: str, notes: str = "") -> Shot:
+    def run_shot(self, *, shot_id: str, beat: str, production: str, episode: str, beat_ref: str, notes: str = "",
+                 g: "grounding.Grounding | None" = None, beat_research: Shot | None = None) -> Shot:
         shot = Shot(shot_id=shot_id, production=production, episode=episode, beat_ref=beat_ref)
-        g = grounding.load(production, episode, beat_ref)
+        g = g or grounding.load(production, episode, beat_ref)
         design = grounding.find_shot(production, episode, shot_id)
         if g.empty:
             self._log("  (no production grounding found — Research cannot verify anything)")
-        else:
+        elif beat_research is None:
             self._log(f"  grounding: beat {beat_ref} text, {len(g.character_ids)} character profiles, fact-check ledger")
         self._log(f"● Script → intent")
         self._gated(shot, self.script, "intent", beat=g.beat_text or beat, shot_design=design, notes=notes, grounding=g)
-        self._log(f"● Research → facts")
-        self._gated(shot, self.research, "research", grounding=g)
+        if beat_research is not None:
+            shot.research = [c.model_copy() for c in beat_research.research]
+            shot.flags = [f.model_copy() for f in beat_research.flags]
+            shot.escalations += [f"beat {beat_ref} {e}" for e in beat_research.escalations]
+            shot.log("research", f"inherited beat {beat_ref} fact check ({len(shot.research)} claims)")
+            self._log(f"● Research → inherited from beat {beat_ref} ({len(shot.research)} claims)")
+        else:
+            self._log(f"● Research → facts")
+            self._gated(shot, self.research, "research", grounding=g)
         blocks = gate.spend_blocked(shot)
         if blocks:
             self._log("  ⛔ spend blocked by open flags:")
             for b in blocks:
                 self._log(f"     - {b}")
         advisories = [f for f in shot.flags if not f.blocks_spend]
-        if advisories:
+        if advisories and beat_research is None:
             self._log(f"  ⓘ {len(advisories)} advisory flag(s) (don't block spend; for Wardrobe/Image QA to watch)")
         self._log(f"● Director → coverage")
         self._gated(shot, self.director, "direction")
-        shot.status = "prepped" if not shot.open_flags else "researching"
+        if shot.escalations:
+            shot.status = "needs_review"  # a human gate: the critic could not be satisfied
+        else:
+            shot.status = "prepped" if not shot.open_flags else "researching"
         self._log(f"● done — status={shot.status}, cost≈${shot.cost_usd_total:.4f}, "
-                  f"blocking flags={len(shot.open_flags)}, advisory={len(advisories)}")
+                  f"blocking flags={len(shot.open_flags)}, advisory={len(advisories)}, "
+                  f"escalations={len(shot.escalations)}")
         return shot
+
+    def research_beat(self, *, production: str, episode: str, beat_ref: str, g: "grounding.Grounding") -> Shot:
+        """Fact-check the whole locked beat once; every shot in the beat inherits the result."""
+        beat = Shot(shot_id=f"beat-{beat_ref}", production=production, episode=episode, beat_ref=beat_ref)
+        title = g.beat_text.splitlines()[0].lstrip("# ").strip() if g.beat_text else beat_ref
+        beat.intent.subject = title
+        beat.intent.action = "Everything that happens in this beat, exactly as written in the locked screenplay (provided)."
+        beat.intent.setting = "As written in the beat's scene heading."
+        beat.intent.time_of_day = "As written in the beat's scene heading."
+        beat.intent.mood = "As written."
+        self._log(f"● Research → whole beat {beat_ref} (once, shared by every shot)")
+        self._gated(beat, self.research, "research", grounding=g)
+        return beat
+
+    def run_beat(self, *, production: str, episode: str, beat_ref: str, shot_ids: list[str] | None = None,
+                 on_shot=None, on_beat=None, beat_research: Shot | None = None) -> tuple[Shot, list[Shot]]:
+        g = grounding.load(production, episode, beat_ref)
+        ids = shot_ids or grounding.beat_shot_ids(production, episode, beat_ref)
+        self._log(f"Beat {beat_ref}: {len(ids)} shot(s) · grounding: {len(g.character_ids)} character profiles, "
+                  f"fact-check ledger")
+        if beat_research is not None:
+            beat = beat_research
+            self._log(f"● Research → reusing saved beat {beat_ref} fact check ({len(beat.research)} claims)")
+        else:
+            beat = self.research_beat(production=production, episode=episode, beat_ref=beat_ref, g=g)
+            if on_beat:
+                on_beat(beat)  # persist immediately so a crash mid-beat doesn't lose the fact check
+        shots = []
+        for n, sid in enumerate(ids, 1):
+            self._log(f"\n── Shot {sid} ({n}/{len(ids)}) ──")
+            s = self.run_shot(shot_id=sid, beat="", production=production, episode=episode, beat_ref=beat_ref,
+                              g=g, beat_research=beat)
+            shots.append(s)
+            if on_shot:
+                on_shot(s)
+        return beat, shots

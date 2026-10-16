@@ -46,8 +46,20 @@ Data-plane roles must be granted (done 2026-10-14). Models: `me-eus2-gpt-5-6-ter
 - **Flags block spend**: open Research flags stop the shot before any paid generation.
 - Cost and history are tracked per step.
 
-## Known behaviour / next
+## Commands
 
-- **Research needs grounding.** With no episode-research/Tone-Bible context, Research correctly refuses to confirm specifics from memory and flags everything. Wiring the episode's sourced research (doc 07) as L2 grounding turns those flags into verified claims. This is the next step.
-- Image QA (vision) is built but awaits an image-generation pipeline (Wave 2) to be exercised on real frames.
-- Cost rates in `agents/base.py` are placeholders — refine against real pricing.
+| Command | What it does | Spend gate |
+|---|---|---|
+| `probe` | both models respond (free-ish) | — |
+| `run --demo` / `run --shot … --beat-ref …` | one shot through Wave 1; contract saved | — |
+| `beat --beat-ref 2.4 [--resume]` | fact-check the beat once, then every shot; contracts saved to `productions/<prod>/<ep>/contracts/` | `--confirm-cost` |
+| `qa --image …` | Image QA on one frame | — |
+| `batch-qa [--sample N \| --all \| --shots …]` | Image QA over approved keyframes; compares human / MTower QA / studio; report in `reports/` | `--confirm-cost` |
+
+## How it behaves (2026-10-16)
+
+- **Grounded Research.** Research and the Critic read the production's own research (series-bible rules, the episode fact-check ledger, the locked beat, character profiles, act flags). Composite characters and *(dramatized)* lines are `creative`; real people's actions must cite the ledger.
+- **Research runs once per beat.** Every shot inherits the beat's fact check (a crew fact-checks the scene, not each camera angle).
+- **Escalations block.** If the Critic still wants a revision after 2 rounds, the shot is `needs_review` (a human gate), never `prepped`.
+- **Image QA uses references** (casting portraits, prop photos, rank-insignia drawings), the full shot brief, and the production QA rules. Faces too small or hidden are `not_visible`, not an identity fail.
+- **Costs** use real Azure meters (sol $4/$20 per 1M tokens in/out; terra ≈ half). Requests time out after 3 min and retry.

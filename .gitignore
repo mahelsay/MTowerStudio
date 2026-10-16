@@ -24,3 +24,5 @@ Thumbs.db
 *.safetensors
 media/
 fleet/sample*.json
+fleet/reports/*.log
+fleet/reports/*.log.err

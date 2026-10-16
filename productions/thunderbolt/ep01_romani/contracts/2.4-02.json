@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "shot_id": "2.4-02",
+  "production": "thunderbolt",
+  "episode": "ep01_romani",
+  "beat_ref": "2.4",
+  "status": "researching",
+  "intent": {
+    "subject": "Corporal Mahmoud (C-04), the radio operator, in profile with taped wire-rimmed glasses.",
+    "action": "He lifts his gaze from the decoded note and whispers the warning, his lips slightly parted.",
+    "setting": "Tina Plain marsh at night (LOC-0003), with a red-filtered flashlight illuminating the paper and catching on his glasses while the surrounding frame falls into deep shadow.",
+    "time_of_day": "Night.",
+    "mood": "Tense, hushed, and alarmed.",
+    "refs": {
+      "characters": [
+        "C-04"
+      ],
+      "location": [
+        "LOC-0003"
+      ],
+      "props": [
+        "1970s Soviet-pattern manpack radio",
+        "small red-filtered flashlight",
+        "decoded paper note"
+      ],
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ]
+    }
+  },
+  "research": [
+    {
+      "claim": "The company is on the Tina Plain after its early drop, moving into salt-marsh terrain.",
+      "verdict": "verified",
+      "tier": "primary",
+      "source": "SRC-01; H-05; H-08",
+      "note": "D-1 adopts the Egyptian/Sa'iqa account's Tina Plain landing and 42 km march; the total distance remains disputed in external accounts."
+    },
+    {
+      "claim": "The scene occurs at night, moments after landing/entering the marsh.",
+      "verdict": "flagged",
+      "tier": "primary",
+      "source": "SRC-01; H-05; H-08",
+      "note": "The ledger supports the Tina Plain landing and marsh march, but does not establish this beat's exact nighttime timing or immediate sequence."
+    },
+    {
+      "claim": "Composite Corporal Mahmoud sends/receives and decodes the radio traffic, voices concern about losing contact with command, and turns the radio off; composite Sergeant Sayed hears the exchange and asks whether the enemy is waiting.",
+      "verdict": "creative",
+      "tier": "primary",
+      "source": "SRC-01; H-07",
+      "note": "Mahmoud and Sayed are composite characters. Their individual actions and dialogue are fictional dramatization of the documented intercepted-signal/radio-silence event."
+    },
+    {
+      "claim": "Captain Hamdi Shalabi receives the warning that the enemy intercepted the company's signal and orders the radio shut down and radio silence.",
+      "verdict": "verified",
+      "tier": "primary",
+      "source": "SRC-01; H-07",
+      "note": "The spoken lines are marked dramatized, but the real named commander's radio-silence order is supported by H-07."
+    },
+    {
+      "claim": "Shalabi decides to avoid the route the enemy expects, directs the file onto an alternate approach, and the company changes course.",
+      "verdict": "verified",
+      "tier": "primary",
+      "source": "SRC-01; H-07; A2-03",
+      "note": "A2-03 establishes that the alternate-route dialogue paraphrases the source's point that the enemy did not expect anyone to come that way. Shalabi's dramatized dialogue is a sourced real-person action, not a creative claim."
+    },
+    {
+      "claim": "After ordering silence, Shalabi taps the radio, draws a finger across his lips, and his specific gesture/order is physically relayed man-to-man down the file.",
+      "verdict": "flagged",
+      "tier": "primary",
+      "source": "SRC-01; H-07",
+      "note": "H-07 supports Shalabi's order for radio silence, not the depicted tapping, lips gesture, or specific man-to-man transmission method."
+    },
+    {
+      "claim": "Shalabi raises his compass again, sets a new bearing, and points into the dark at that precise moment.",
+      "verdict": "flagged",
+      "tier": "primary",
+      "source": "SRC-01; H-07; H-08",
+      "note": "H-08 supports Shalabi's overall compass navigation during the march, and H-07 supports the alternate-route decision. Neither ledger item documents this beat's exact compass handling, new-bearing action, or pointing gesture by the named real person."
+    },
+    {
+      "claim": "The company uses a 1970s Soviet-pattern manpack radio and Mahmoud decodes the message by red light.",
+      "verdict": "flagged",
+      "tier": "none",
+      "source": "none",
+      "note": "The ledger supports an intercepted coded signal and subsequent radio silence, but does not document this radio model, its configuration, red-light decoding practice, or the depicted radio-operation texture."
+    }
+  ],
+  "flags": [
+    {
+      "kind": "unverifiable",
+      "detail": "Exact nighttime timing and immediate placement of Beat 2.4 in the Tina Plain marsh are not established by H-05 or H-08.",
+      "blocks_spend": false
+    },
+    {
+      "kind": "unverifiable",
+      "detail": "H-07 documents Shalabi's radio-silence order, but not his tapping the radio, finger-across-lips gesture, or the order being passed physically man-to-man down the file.",
+      "blocks_spend": true
+    },
+    {
+      "kind": "unverifiable",
+      "detail": "H-07/H-08 do not document Shalabi raising a compass, setting a new bearing, or pointing into the dark in this specific moment.",
+      "blocks_spend": true
+    },
+    {
+      "kind": "unverifiable",
+      "detail": "No ledger source establishes the specific Soviet-pattern manpack radio, red-light decoding, or associated radio-operation texture shown in the beat.",
+      "blocks_spend": false
+    }
+  ],
+  "direction": {
+    "coverage": "Begin tight profile insert on Mahmoud and note, then hold a restrained medium close-up as he raises his eyes into darkness.",
+    "blocking": "Mahmoud stays crouched at the marsh edge, note low in one hand and red-filtered torch angled beneath it, gaze lifting without turning.",
+    "performance_note": "Let the warning emerge as a breath-thin whisper, lips barely parting as alarm registers behind taped wire-rims.",
+    "pacing": "Slow, suspended hold with no cut after the whispered warning.",
+    "tone_ref": "Grounded wartime dread—red practical glow swallowed by marsh-black shadow."
+  },
+  "critic": [
+    {
+      "target_field": "intent",
+      "verdict": "pass",
+      "reasons": [
+        "The intent identifies the correct subject (Corporal Mahmoud/C-04), his beat-specific action of looking up after decoding and whispering the intercepted-signal warning, and the Tina Plain marsh night setting.",
+        "It explicitly supplies time of day and an appropriately tense, hushed, alarmed mood consistent with the radio-silence turning point.",
+        "It retains the key dramatic action without adding unsupported historical claims.",
+        "It references the available character and location library IDs. The radio, flashlight, and decoded note are appropriately treated as props/story-beat items; no missing ID is required under the stated rule."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "direction",
+      "verdict": "pass",
+      "reasons": [
+        "Coverage, blocking, performance direction, pacing, and tone reference are all explicitly present.",
+        "The direction preserves Mahmoud’s required profile, crouched marsh-edge position, decoded note, red-filtered flashlight, taped wire-rimmed glasses, lifted gaze, and whispered warning.",
+        "The slow held pacing and restrained performance support the tense, hushed, alarmed intent without introducing melodrama or stylistic excess.",
+        "The visual language of a red practical source consumed by deep marsh shadow is consistent with a grounded historical war drama at night."
+      ],
+      "revise_instructions": []
+    }
+  ],
+  "cost_usd_total": 0.015206,
+  "escalations": [],
+  "history": [
+    {
+      "ts": "2026-10-16T14:07:59.164789+00:00",
+      "agent": "script",
+      "action": "wrote script output",
+      "cost_usd": 0.003574,
+      "tokens": 1147
+    },
+    {
+      "ts": "2026-10-16T14:10:40.055411+00:00",
+      "agent": "critic",
+      "action": "reviewed intent: pass",
+      "cost_usd": 0.007122,
+      "tokens": 3001
+    },
+    {
+      "ts": "2026-10-16T14:10:40.055502+00:00",
+      "agent": "research",
+      "action": "inherited beat 2.4 fact check (8 claims)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-16T14:11:16.808259+00:00",
+      "agent": "director",
+      "action": "wrote director output",
+      "cost_usd": 0.001826,
+      "tokens": 405
+    },
+    {
+      "ts": "2026-10-16T14:13:44.962686+00:00",
+      "agent": "critic",
+      "action": "reviewed direction: pass",
+      "cost_usd": 0.002684,
+      "tokens": 646
+    }
+  ]
+}

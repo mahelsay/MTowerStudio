@@ -81,12 +81,21 @@ class Grounding:
         return "\n\n".join(f"=== {title} ===\n{body}" for title, body in parts if body)
 
     def for_critic(self) -> str:
-        # The critic needs enough to check citations and character types, not the full beat prose.
+        # Reviewing research: the rules, who is real vs composite, the beat being checked, and the ledger to cite.
         parts = [
             ("SERIES BIBLE — RULES", self.bible_rules),
             ("CHARACTER PROFILES", self.characters),
+            (f"LOCKED SCREENPLAY — BEAT {self.beat_ref}", self.beat_text),
             ("ACT HISTORICAL FLAGS", self.historical_flags),
             ("EPISODE FACT-CHECK LEDGER", self.sources),
+        ]
+        return "\n\n".join(f"=== {title} ===\n{body}" for title, body in parts if body)
+
+    def for_intent_critic(self) -> str:
+        # Reviewing a scene intent needs the beat it came from and who the characters are — not the whole ledger.
+        parts = [
+            (f"LOCKED SCREENPLAY — BEAT {self.beat_ref}", self.beat_text),
+            ("CHARACTER PROFILES", self.characters),
         ]
         return "\n\n".join(f"=== {title} ===\n{body}" for title, body in parts if body)
 
@@ -114,6 +123,20 @@ def load(production: str, episode: str, beat_ref: str, extra_character_ids: list
         profiles = [_section(chars, rf"^### {cid} ", r"^(### |## )") for cid in ids]
         g.characters = "\n\n".join([how_to] + [p for p in profiles if p])
     return g
+
+
+def beat_shot_ids(production: str, episode: str, beat_ref: str) -> list[str]:
+    """All shot ids of a beat, in shot-list order."""
+    folder = _episode_dir(production, episode) / "02_preproduction"
+    for f in sorted(folder.glob("shot_list_*.json")):
+        try:
+            data = json.loads(_read(f))
+        except json.JSONDecodeError:
+            continue
+        for beat in data.get("beats", []):
+            if str(beat.get("beat")) == beat_ref:
+                return [s["shot_id"] for s in beat.get("shots", []) if s.get("shot_id")]
+    return []
 
 
 def find_shot(production: str, episode: str, shot_id: str) -> dict | None:

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "shot_id": "2.4-03",
+  "production": "thunderbolt",
+  "episode": "ep01_romani",
+  "beat_ref": "2.4",
+  "status": "researching",
+  "intent": {
+    "subject": "Captain Shalabi (C-01) in three-quarter close-up, his moonlit face turned toward Mahmoud off to the side.",
+    "action": "Taking in the intercepted-signal warning, his eyes harden and he gives a short, low, absolute order to shut down the radio.",
+    "setting": "LOC-0003, in the Tina Plain marsh during the company’s night movement.",
+    "time_of_day": "Night.",
+    "mood": "Tense, controlled, and immediately tactical.",
+    "refs": {
+      "location": "LOC-0003",
+      "characters": [
+        "C-01"
+      ]
+    }
+  },
+  "research": [
+    {
+      "claim": "The company is on the Tina Plain after its early drop, moving into salt-marsh terrain.",
+      "verdict": "verified",
+      "tier": "primary",
+      "source": "SRC-01; H-05; H-08",
+      "note": "D-1 adopts the Egyptian/Sa'iqa account's Tina Plain landing and 42 km march; the total distance remains disputed in external accounts."
+    },
+    {
+      "claim": "The scene occurs at night, moments after landing/entering the marsh.",
+      "verdict": "flagged",
+      "tier": "primary",
+      "source": "SRC-01; H-05; H-08",
+      "note": "The ledger supports the Tina Plain landing and marsh march, but does not establish this beat's exact nighttime timing or immediate sequence."
+    },
+    {
+      "claim": "Composite Corporal Mahmoud sends/receives and decodes the radio traffic, voices concern about losing contact with command, and turns the radio off; composite Sergeant Sayed hears the exchange and asks whether the enemy is waiting.",
+      "verdict": "creative",
+      "tier": "primary",
+      "source": "SRC-01; H-07",
+      "note": "Mahmoud and Sayed are composite characters. Their individual actions and dialogue are fictional dramatization of the documented intercepted-signal/radio-silence event."
+    },
+    {
+      "claim": "Captain Hamdi Shalabi receives the warning that the enemy intercepted the company's signal and orders the radio shut down and radio silence.",
+      "verdict": "verified",
+      "tier": "primary",
+      "source": "SRC-01; H-07",
+      "note": "The spoken lines are marked dramatized, but the real named commander's radio-silence order is supported by H-07."
+    },
+    {
+      "claim": "Shalabi decides to avoid the route the enemy expects, directs the file onto an alternate approach, and the company changes course.",
+      "verdict": "verified",
+      "tier": "primary",
+      "source": "SRC-01; H-07; A2-03",
+      "note": "A2-03 establishes that the alternate-route dialogue paraphrases the source's point that the enemy did not expect anyone to come that way. Shalabi's dramatized dialogue is a sourced real-person action, not a creative claim."
+    },
+    {
+      "claim": "After ordering silence, Shalabi taps the radio, draws a finger across his lips, and his specific gesture/order is physically relayed man-to-man down the file.",
+      "verdict": "flagged",
+      "tier": "primary",
+      "source": "SRC-01; H-07",
+      "note": "H-07 supports Shalabi's order for radio silence, not the depicted tapping, lips gesture, or specific man-to-man transmission method."
+    },
+    {
+      "claim": "Shalabi raises his compass again, sets a new bearing, and points into the dark at that precise moment.",
+      "verdict": "flagged",
+      "tier": "primary",
+      "source": "SRC-01; H-07; H-08",
+      "note": "H-08 supports Shalabi's overall compass navigation during the march, and H-07 supports the alternate-route decision. Neither ledger item documents this beat's exact compass handling, new-bearing action, or pointing gesture by the named real person."
+    },
+    {
+      "claim": "The company uses a 1970s Soviet-pattern manpack radio and Mahmoud decodes the message by red light.",
+      "verdict": "flagged",
+      "tier": "none",
+      "source": "none",
+      "note": "The ledger supports an intercepted coded signal and subsequent radio silence, but does not document this radio model, its configuration, red-light decoding practice, or the depicted radio-operation texture."
+    }
+  ],
+  "flags": [
+    {
+      "kind": "unverifiable",
+      "detail": "Exact nighttime timing and immediate placement of Beat 2.4 in the Tina Plain marsh are not established by H-05 or H-08.",
+      "blocks_spend": false
+    },
+    {
+      "kind": "unverifiable",
+      "detail": "H-07 documents Shalabi's radio-silence order, but not his tapping the radio, finger-across-lips gesture, or the order being passed physically man-to-man down the file.",
+      "blocks_spend": true
+    },
+    {
+      "kind": "unverifiable",
+      "detail": "H-07/H-08 do not document Shalabi raising a compass, setting a new bearing, or pointing into the dark in this specific moment.",
+      "blocks_spend": true
+    },
+    {
+      "kind": "unverifiable",
+      "detail": "No ledger source establishes the specific Soviet-pattern manpack radio, red-light decoding, or associated radio-operation texture shown in the beat.",
+      "blocks_spend": false
+    }
+  ],
+  "direction": {
+    "coverage": "Hold a three-quarter close-up on Shalabi, with Mahmoud kept as a soft off-axis presence.",
+    "blocking": "Shalabi stays still in the marsh column, turning only his gaze toward Mahmoud before issuing the order.",
+    "performance_note": "Let the warning register in a hardening stare; deliver the shutdown command low, clipped, and unquestionable.",
+    "pacing": "A brief listening beat, then an immediate decisive command.",
+    "tone_ref": "Restrained historical war realism—moonlit tension, disciplined command, no melodrama."
+  },
+  "critic": [
+    {
+      "target_field": "intent",
+      "verdict": "pass",
+      "reasons": [
+        "The intent specifies the subject (Captain Shalabi / C-01), his decisive action, the Tina Plain marsh setting, night time of day, and a mood aligned with the beat.",
+        "It preserves the key dramatic turn: Shalabi receives the interception warning and immediately orders the radio shut down.",
+        "All referenced library-backed elements present in the shot are identified: C-01 and LOC-0003. Mahmoud is only off-screen and is not depicted as a shot subject; the radio shutdown is an action/order rather than requiring an additional prop reference under the stated rule.",
+        "The intent introduces no unsupported historical claim and remains consistent with the locked screenplay."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "direction",
+      "verdict": "pass",
+      "reasons": [
+        "The direction supplies all required elements: coverage, blocking, performance note, pacing, and tone reference.",
+        "Coverage matches the intended three-quarter close-up and preserves Mahmoud as an off-axis interaction point.",
+        "Blocking is economical and credible for a night marsh-column situation, with Shalabi’s restrained gaze turn supporting the tactical focus.",
+        "The performance note clearly motivates the hardening reaction and specifies a low, clipped, absolute delivery for the radio shutdown order.",
+        "Pacing supports a brief intake of the warning followed by immediate command, and the tone reference is consistent with restrained, grounded historical war drama."
+      ],
+      "revise_instructions": []
+    }
+  ],
+  "cost_usd_total": 0.014116,
+  "escalations": [],
+  "history": [
+    {
+      "ts": "2026-10-16T14:13:53.991888+00:00",
+      "agent": "script",
+      "action": "wrote script output",
+      "cost_usd": 0.003138,
+      "tokens": 1089
+    },
+    {
+      "ts": "2026-10-16T14:16:29.517091+00:00",
+      "agent": "critic",
+      "action": "reviewed intent: pass",
+      "cost_usd": 0.007066,
+      "tokens": 2925
+    },
+    {
+      "ts": "2026-10-16T14:16:29.517218+00:00",
+      "agent": "research",
+      "action": "inherited beat 2.4 fact check (8 claims)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-16T14:16:31.975511+00:00",
+      "agent": "director",
+      "action": "wrote director output",
+      "cost_usd": 0.0017,
+      "tokens": 390
+    },
+    {
+      "ts": "2026-10-16T14:16:56.657845+00:00",
+      "agent": "critic",
+      "action": "reviewed direction: pass",
+      "cost_usd": 0.002212,
+      "tokens": 554
+    }
+  ]
+}

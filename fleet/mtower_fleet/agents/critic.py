@@ -18,8 +18,12 @@ DOD = {
         "verified, corrected or flagged, citing the episode fact-check ledger's IDs (SRC-xx / H-xx / D-x / A-flag). "
         "Production decisions (D-x) on disputed points count as handled. Composite characters, their personal moments "
         "and (dramatized) dialogue that paraphrases a sourced event are correctly marked 'creative', not flagged. "
-        "Real people appear only through sourced actions. Nothing is asserted from memory without a citation. "
-        "Source tiers are labelled honestly (encyclopedia/press = secondary). Every flagged item has a flags entry."
+        "Real people appear only through sourced actions — a real person's sourced action is 'verified', never "
+        "'creative'. Nothing is asserted from memory without a citation. Source tiers follow the studio definition: "
+        "primary = a participant/eyewitness account or the operation's documents (SRC-01, the Sa'iqa officer's "
+        "account); secondary = press, encyclopedia articles, published histories; weak = unattributed/popular; a "
+        "claim's tier = its strongest cited source. Production decisions (D-x) are handling notes, not evidence. "
+        "Every flagged item has a flags entry. Judge substance: do not request a revision only for wording."
     ),
     "direction": (
         "Coverage, blocking, a performance note, pacing and a tone reference are present and consistent with a "
@@ -48,8 +52,11 @@ class StudioCritic:
         else:
             body = content_obj.model_dump() if hasattr(content_obj, "model_dump") else content_obj
         ground = ""
-        if grounding is not None and not grounding.empty and field in ("research", "intent"):
-            ground = f"PRODUCTION GROUNDING (check citations and character types against this):\n{grounding.for_critic()}\n\n"
+        if grounding is not None and not grounding.empty:
+            if field == "research":
+                ground = f"PRODUCTION GROUNDING (check citations and character types against this):\n{grounding.for_critic()}\n\n"
+            elif field == "intent":
+                ground = f"PRODUCTION GROUNDING (the beat this intent must stay true to):\n{grounding.for_intent_critic()}\n\n"
         user = (
             f"{ground}"
             f"Field under review: {field}\n"

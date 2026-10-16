@@ -25,6 +25,8 @@ def _client(endpoint: str) -> AzureOpenAI:
         azure_endpoint=endpoint,
         api_version=config.API_VERSION,
         azure_ad_token_provider=_token_provider(),
+        timeout=180.0,  # a hung request fails after 3 min and is retried, instead of the SDK's 10-min default
+        max_retries=2,
     )
 
 

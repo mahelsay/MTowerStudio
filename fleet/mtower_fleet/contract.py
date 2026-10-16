@@ -81,6 +81,7 @@ class Shot(BaseModel):
     critic: list[CriticNote] = Field(default_factory=list)
 
     cost_usd_total: float = 0.0
+    escalations: list[str] = Field(default_factory=list)  # gate failures awaiting a human decision
     history: list[HistoryEntry] = Field(default_factory=list)
 
     def log(self, agent: str, action: str, cost_usd: float = 0.0, tokens: int = 0) -> None:
