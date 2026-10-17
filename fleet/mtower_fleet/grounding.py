@@ -19,6 +19,17 @@ from pathlib import Path
 
 MTOWER_REPO = Path(os.getenv("MTOWER_REPO", r"C:\dev\github-personal\MTower"))
 
+# Studio policies that refine the series bible. Decided by the owner; recorded in docs/adr/.
+STUDIO_POLICIES = (
+    "P-01 Dramatized staging of real people (ADR-0003, decided 2026-10-17). On-screen gestures, blocking and "
+    "physical business that SHOW a REAL person carrying out an action or order that IS stated in the sources are "
+    "allowed as dramatized staging — the visual equivalent of *(dramatized)* dialogue (series bible §4.1.4). "
+    "Examples: a finger across the lips to show a sourced radio-silence order; raising a compass to show a sourced "
+    "change of route. Verdict 'dramatized', citing the sourced event (H-xx) in `source`; never blocks spend. "
+    "LIMITS: staging may not add a fact the sources don't state — no new decision, event, outcome, number, "
+    "private life, motive or credit. Staging that implies something unsourced is still 'flagged' and blocks spend."
+)
+
 
 def _production_dir(production: str) -> Path:
     return MTOWER_REPO / "productions" / production
@@ -73,6 +84,7 @@ class Grounding:
     def for_research(self) -> str:
         parts = [
             ("SERIES BIBLE — RULES FOR HISTORY AND REAL PEOPLE", self.bible_rules),
+            ("STUDIO POLICIES (refine the series bible; apply them)", STUDIO_POLICIES),
             ("CHARACTER PROFILES (type REAL vs COMPOSITE)", self.characters),
             (f"LOCKED SCREENPLAY — BEAT {self.beat_ref}", self.beat_text),
             ("ACT HISTORICAL FLAGS (already decided treatments)", self.historical_flags),
@@ -84,6 +96,7 @@ class Grounding:
         # Reviewing research: the rules, who is real vs composite, the beat being checked, and the ledger to cite.
         parts = [
             ("SERIES BIBLE — RULES", self.bible_rules),
+            ("STUDIO POLICIES (refine the series bible; apply them)", STUDIO_POLICIES),
             ("CHARACTER PROFILES", self.characters),
             (f"LOCKED SCREENPLAY — BEAT {self.beat_ref}", self.beat_text),
             ("ACT HISTORICAL FLAGS", self.historical_flags),

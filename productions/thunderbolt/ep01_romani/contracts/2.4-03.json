@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "researching",
+  "status": "prepped",
   "intent": {
     "subject": "Captain Shalabi (C-01) in three-quarter close-up, his moonlit face turned toward Mahmoud off to the side.",
     "action": "Taking in the intercepted-signal warning, his eyes harden and he gives a short, low, absolute order to shut down the radio.",
@@ -20,81 +20,71 @@
   },
   "research": [
     {
-      "claim": "The company is on the Tina Plain after its early drop, moving into salt-marsh terrain.",
+      "claim": "The company is shown beginning its march through the Tina Plain/marsh after the early helicopter drop.",
       "verdict": "verified",
       "tier": "primary",
-      "source": "SRC-01; H-05; H-08",
-      "note": "D-1 adopts the Egyptian/Sa'iqa account's Tina Plain landing and 42 km march; the total distance remains disputed in external accounts."
+      "source": "SRC-01; SRC-05; H-05; H-08",
+      "note": "Follows production decision D-1 to use the Egyptian account of the early Tina Plain drop and long march; the landing location and march distance remain disputed and require the episode end-card source note."
     },
     {
-      "claim": "The scene occurs at night, moments after landing/entering the marsh.",
+      "claim": "The precise setting of this first-march moment as full night is not explicitly established in the ledger.",
       "verdict": "flagged",
-      "tier": "primary",
-      "source": "SRC-01; H-05; H-08",
-      "note": "The ledger supports the Tina Plain landing and marsh march, but does not establish this beat's exact nighttime timing or immediate sequence."
+      "tier": "none",
+      "source": "",
+      "note": "H-05 and H-08 support the drop and march, but do not establish this beat's exact time of night."
     },
     {
-      "claim": "Composite Corporal Mahmoud sends/receives and decodes the radio traffic, voices concern about losing contact with command, and turns the radio off; composite Sergeant Sayed hears the exchange and asks whether the enemy is waiting.",
+      "claim": "Composite Corporal Mahmoud sends/receives and decodes the coded radio traffic, warns Shalabi that the signal was intercepted, worries about losing contact with command, and switches off the set.",
       "verdict": "creative",
       "tier": "primary",
       "source": "SRC-01; H-07",
-      "note": "Mahmoud and Sayed are composite characters. Their individual actions and dialogue are fictional dramatization of the documented intercepted-signal/radio-silence event."
+      "note": "Mahmoud is a composite character. His actions dramatize the sourced intercepted-signal and radio-silence event without assigning it to a documented real individual."
     },
     {
-      "claim": "Captain Hamdi Shalabi receives the warning that the enemy intercepted the company's signal and orders the radio shut down and radio silence.",
-      "verdict": "verified",
-      "tier": "primary",
-      "source": "SRC-01; H-07",
-      "note": "The spoken lines are marked dramatized, but the real named commander's radio-silence order is supported by H-07."
-    },
-    {
-      "claim": "Shalabi decides to avoid the route the enemy expects, directs the file onto an alternate approach, and the company changes course.",
+      "claim": "Captain Hamdi Shalabi orders radio silence after the intercepted-signal warning.",
       "verdict": "verified",
       "tier": "primary",
       "source": "SRC-01; H-07; A2-03",
-      "note": "A2-03 establishes that the alternate-route dialogue paraphrases the source's point that the enemy did not expect anyone to come that way. Shalabi's dramatized dialogue is a sourced real-person action, not a creative claim."
+      "note": "The coded warning and Shalabi's radio-silence order are stated by the primary Egyptian account; the marked dialogue is a permitted dramatized paraphrase."
     },
     {
-      "claim": "After ordering silence, Shalabi taps the radio, draws a finger across his lips, and his specific gesture/order is physically relayed man-to-man down the file.",
-      "verdict": "flagged",
+      "claim": "Shalabi taps the switched-off radio and draws a finger across his lips to communicate the sourced radio-silence order; the file passes the silent signal back man to man.",
+      "verdict": "dramatized",
       "tier": "primary",
-      "source": "SRC-01; H-07",
-      "note": "H-07 supports Shalabi's order for radio silence, not the depicted tapping, lips gesture, or specific man-to-man transmission method."
+      "source": "SRC-01; H-07; A2-03",
+      "note": "Permitted staging under P-01: the gestures visually show the sourced radio-silence order and add no new event or outcome."
     },
     {
-      "claim": "Shalabi raises his compass again, sets a new bearing, and points into the dark at that precise moment.",
-      "verdict": "flagged",
+      "claim": "Composite Sergeant Sayed hears the silence order and asks whether the enemy is waiting for them.",
+      "verdict": "creative",
+      "tier": "none",
+      "source": "",
+      "note": "Sayed is a composite character; the question is fictional character dialogue and does not credit him with a documented act."
+    },
+    {
+      "claim": "Shalabi uses his compass, changes the file's bearing, and directs the company toward an unexpected approach after the interception warning.",
+      "verdict": "dramatized",
       "tier": "primary",
-      "source": "SRC-01; H-07; H-08",
-      "note": "H-08 supports Shalabi's overall compass navigation during the march, and H-07 supports the alternate-route decision. Neither ledger item documents this beat's exact compass handling, new-bearing action, or pointing gesture by the named real person."
+      "source": "SRC-01; H-07; A2-03",
+      "note": "The route-change dialogue is an approved paraphrase of the source treatment that the enemy did not expect anyone to come from that direction. The compass and turning-file business are permitted P-01 staging."
     },
     {
-      "claim": "The company uses a 1970s Soviet-pattern manpack radio and Mahmoud decodes the message by red light.",
+      "claim": "The Soviet-pattern manpack radio, whip antenna, handset placement, and use of red light are presented as period equipment/detail.",
       "verdict": "flagged",
       "tier": "none",
-      "source": "none",
-      "note": "The ledger supports an intercepted coded signal and subsequent radio silence, but does not document this radio model, its configuration, red-light decoding practice, or the depicted radio-operation texture."
+      "source": "",
+      "note": "The ledger documents radio traffic and silence, but does not source this specific radio model/configuration or red-light procedure."
     }
   ],
   "flags": [
     {
       "kind": "unverifiable",
-      "detail": "Exact nighttime timing and immediate placement of Beat 2.4 in the Tina Plain marsh are not established by H-05 or H-08.",
+      "detail": "The beat fixes the company's first steps into the marsh at night, but the ledger does not establish the exact time for this moment.",
       "blocks_spend": false
     },
     {
       "kind": "unverifiable",
-      "detail": "H-07 documents Shalabi's radio-silence order, but not his tapping the radio, finger-across-lips gesture, or the order being passed physically man-to-man down the file.",
-      "blocks_spend": true
-    },
-    {
-      "kind": "unverifiable",
-      "detail": "H-07/H-08 do not document Shalabi raising a compass, setting a new bearing, or pointing into the dark in this specific moment.",
-      "blocks_spend": true
-    },
-    {
-      "kind": "unverifiable",
-      "detail": "No ledger source establishes the specific Soviet-pattern manpack radio, red-light decoding, or associated radio-operation texture shown in the beat.",
+      "detail": "The specific Soviet-pattern manpack radio configuration, whip antenna, handset placement, and red-light decoding procedure are not sourced in the ledger.",
       "blocks_spend": false
     }
   ],
@@ -167,6 +157,13 @@
       "action": "reviewed direction: pass",
       "cost_usd": 0.002212,
       "tokens": 554
+    },
+    {
+      "ts": "2026-10-17T09:11:47.422873+00:00",
+      "agent": "research",
+      "action": "inherited beat 2.4 fact check (8 claims)",
+      "cost_usd": 0.0,
+      "tokens": 0
     }
   ]
 }

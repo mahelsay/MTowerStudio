@@ -72,6 +72,7 @@
   - **Strictness = block.** Anything unverifiable is flagged and **no paid generation runs while a flag is open** (orchestrator-enforced).
   - **Tiered sourcing:** primary/archival > reputable secondary > weak. Weak-only sources are auto-flagged for the user's review.
   - **Human expert gate:** sensitive real-people and combat facts escalate to the user as final authority before being treated as settled.
+  - **Dramatized staging (P-01, ADR-0003, 2026-10-17):** gestures/staging that *show* a real person's sourced action are verdict `dramatized` (cite the `H-xx` event; never block). Staging that adds an unsourced fact is still flagged.
 - **DoD:** every real-world element in the shot (historical, geographic, cultural, technical) is marked verified/corrected/flagged **with a sourced tier**; no unresolved flag remains open at generation.
 - **Guardrails:** real people only through sourced actions (series rule); **never asserts from memory alone** — a claim without a citation is a flag, not a fact.
 - **Competence (L1–L4):** L1 lead researcher backed by specialist advisor hats (historian · geographer · military/technical advisor · cultural consultant), rigorous and source-citing; L2 Tone Bible factual corpus + episode fact-check docs + series bible, with live web for anything ungrounded; L3 web search, fact-check docs, Tone Bible + library lookup; L4 Script & Director (what to check), Set/Wardrobe/VFX (consume verdicts), Egyptian-Arabic (language/slang authenticity).

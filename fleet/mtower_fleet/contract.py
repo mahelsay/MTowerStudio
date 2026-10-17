@@ -30,8 +30,9 @@ class Intent(BaseModel):
 class ResearchClaim(BaseModel):
     claim: str
     # verified/corrected = factual claim checked against a source; flagged = cannot be confirmed (blocks spend);
-    # creative = allowed invention per the series bible (composite character, dramatized dialogue, family moment).
-    verdict: Literal["verified", "corrected", "flagged", "creative"]
+    # creative = allowed invention per the series bible (composite character, dramatized dialogue, family moment);
+    # dramatized = staging that shows a REAL person's sourced action (policy P-01 / ADR-0003); never blocks.
+    verdict: Literal["verified", "corrected", "flagged", "creative", "dramatized"]
     tier: Literal["primary", "secondary", "weak", "none"] = "none"
     source: str = ""
     note: str = ""

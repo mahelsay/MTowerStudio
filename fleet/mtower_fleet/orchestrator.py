@@ -65,10 +65,7 @@ class Orchestrator:
         self._log(f"● Script → intent")
         self._gated(shot, self.script, "intent", beat=g.beat_text or beat, shot_design=design, notes=notes, grounding=g)
         if beat_research is not None:
-            shot.research = [c.model_copy() for c in beat_research.research]
-            shot.flags = [f.model_copy() for f in beat_research.flags]
-            shot.escalations += [f"beat {beat_ref} {e}" for e in beat_research.escalations]
-            shot.log("research", f"inherited beat {beat_ref} fact check ({len(shot.research)} claims)")
+            self._inherit(shot, beat_research)
             self._log(f"● Research → inherited from beat {beat_ref} ({len(shot.research)} claims)")
         else:
             self._log(f"● Research → facts")
@@ -83,13 +80,33 @@ class Orchestrator:
             self._log(f"  ⓘ {len(advisories)} advisory flag(s) (don't block spend; for Wardrobe/Image QA to watch)")
         self._log(f"● Director → coverage")
         self._gated(shot, self.director, "direction")
+        self._settle(shot)
+        self._log(f"● done — status={shot.status}, cost≈${shot.cost_usd_total:.4f}, "
+                  f"blocking flags={len(shot.open_flags)}, advisory={len(advisories)}, "
+                  f"escalations={len(shot.escalations)}")
+        return shot
+
+    @staticmethod
+    def _settle(shot: Shot) -> None:
         if shot.escalations:
             shot.status = "needs_review"  # a human gate: the critic could not be satisfied
         else:
             shot.status = "prepped" if not shot.open_flags else "researching"
-        self._log(f"● done — status={shot.status}, cost≈${shot.cost_usd_total:.4f}, "
-                  f"blocking flags={len(shot.open_flags)}, advisory={len(advisories)}, "
-                  f"escalations={len(shot.escalations)}")
+
+    @staticmethod
+    def _inherit(shot: Shot, beat: Shot) -> None:
+        """Replace a shot's research with its beat's fact check (drops any earlier beat-level escalations)."""
+        prefix = f"beat {beat.beat_ref} "
+        shot.research = [c.model_copy() for c in beat.research]
+        shot.flags = [f.model_copy() for f in beat.flags]
+        shot.escalations = [e for e in shot.escalations if not e.startswith(prefix)]
+        shot.escalations += [f"{prefix}{e}" for e in beat.escalations]
+        shot.log("research", f"inherited beat {beat.beat_ref} fact check ({len(shot.research)} claims)")
+
+    def refresh(self, shot: Shot, beat: Shot) -> Shot:
+        """Apply a new beat fact check to an existing shot contract (Script/Director don't read research)."""
+        self._inherit(shot, beat)
+        self._settle(shot)
         return shot
 
     def research_beat(self, *, production: str, episode: str, beat_ref: str, g: "grounding.Grounding") -> Shot:

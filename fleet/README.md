@@ -53,12 +53,13 @@ Data-plane roles must be granted (done 2026-10-14). Models: `me-eus2-gpt-5-6-ter
 | `probe` | both models respond (free-ish) | — |
 | `run --demo` / `run --shot … --beat-ref …` | one shot through Wave 1; contract saved | — |
 | `beat --beat-ref 2.4 [--resume]` | fact-check the beat once, then every shot; contracts saved to `productions/<prod>/<ep>/contracts/` | `--confirm-cost` |
+| `beat --beat-ref 2.4 --refresh-research` | re-run only the beat fact check and apply it to the saved contracts (after a policy or ledger change) | `--confirm-cost` |
 | `qa --image …` | Image QA on one frame | — |
 | `batch-qa [--sample N \| --all \| --shots …]` | Image QA over approved keyframes; compares human / MTower QA / studio; report in `reports/` | `--confirm-cost` |
 
 ## How it behaves (2026-10-16)
 
-- **Grounded Research.** Research and the Critic read the production's own research (series-bible rules, the episode fact-check ledger, the locked beat, character profiles, act flags). Composite characters and *(dramatized)* lines are `creative`; real people's actions must cite the ledger.
+- **Grounded Research.** Research and the Critic read the production's own research (series-bible rules, the episode fact-check ledger, the locked beat, character profiles, act flags). Composite characters and *(dramatized)* lines are `creative`; real people's actions must cite the ledger. Gestures that show a real person's sourced action are `dramatized` (policy P-01, ADR-0003) — allowed, logged, non-blocking.
 - **Research runs once per beat.** Every shot inherits the beat's fact check (a crew fact-checks the scene, not each camera angle).
 - **Escalations block.** If the Critic still wants a revision after 2 rounds, the shot is `needs_review` (a human gate), never `prepped`.
 - **Image QA uses references** (casting portraits, prop photos, rank-insignia drawings), the full shot brief, and the production QA rules. Faces too small or hidden are `not_visible`, not an identity fail.

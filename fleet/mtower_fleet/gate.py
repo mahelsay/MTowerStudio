@@ -5,6 +5,8 @@ composes all three. Here are the free, deterministic Tier-1 rules per contract f
 """
 from __future__ import annotations
 
+import re
+
 from .contract import Shot
 
 
@@ -22,6 +24,8 @@ def tier1(shot: Shot, field: str) -> list[str]:
         for c in shot.research:
             if c.verdict == "verified" and not c.source:
                 problems.append(f"verified claim without a source: {c.claim!r}")
+            if c.verdict == "dramatized" and not re.search(r"\bH-\d+", c.source or ""):
+                problems.append(f"dramatized staging must cite the sourced event (H-xx): {c.claim!r}")
     elif field == "direction":
         d = shot.direction
         for k in ("coverage", "blocking", "pacing"):

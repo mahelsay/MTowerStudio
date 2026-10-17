@@ -72,6 +72,9 @@ def main() -> int:
     bt.add_argument("--shots", help="comma-separated subset of the beat's shot ids")
     bt.add_argument("--resume", action="store_true",
                     help="reuse the saved beat fact check and skip shots whose contract is already current")
+    bt.add_argument("--refresh-research", action="store_true",
+                    help="re-run only the beat fact check and apply it to the saved shot contracts "
+                         "(use after a policy or ledger change; Script/Director are not re-run)")
     bt.add_argument("--confirm-cost", type=float, default=None,
                     help="spend gate: must be >= the printed estimate (USD) or nothing runs")
 
@@ -139,6 +142,30 @@ def main() -> int:
 
     elif args.cmd == "beat":
         from . import grounding, store
+
+        if args.refresh_research:
+            saved = [s for s in store.list_contracts(args.production, args.episode) if s.beat_ref == args.beat_ref]
+            if not saved:
+                print(f"No saved contracts for beat {args.beat_ref} — run the beat first.")
+                return 1
+            print(f"Refresh beat {args.beat_ref} fact check → apply to {len(saved)} saved contract(s): "
+                  f"{', '.join(s.shot_id for s in saved)}")
+            print(f"Estimate: ${BEAT_RESEARCH_EST:.2f} (beat fact check only; Script/Director not re-run)")
+            if args.confirm_cost is None or args.confirm_cost < BEAT_RESEARCH_EST:
+                print(f"Not run. Re-run with --confirm-cost {BEAT_RESEARCH_EST} to approve this spend.")
+                return 0
+            orch = Orchestrator()
+            g = grounding.load(args.production, args.episode, args.beat_ref)
+            beat = orch.research_beat(production=args.production, episode=args.episode, beat_ref=args.beat_ref, g=g)
+            bpath = store.save_beat_research(beat, args.beat_ref)
+            print("\n===== REFRESHED =====")
+            print(f"beat fact check: {len(beat.research)} claims, {len(beat.open_flags)} blocking flag(s), "
+                  f"{len(beat.escalations)} escalation(s) · ${beat.cost_usd_total:.3f}  → {bpath}")
+            for s in saved:
+                before = s.status
+                store.save(orch.refresh(s, beat))
+                print(f"  {s.shot_id:8} {before:11} → {s.status}")
+            return 0
 
         ids = grounding.beat_shot_ids(args.production, args.episode, args.beat_ref)
         if args.shots:
