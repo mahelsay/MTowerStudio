@@ -157,11 +157,15 @@ def plan_training_set(lib: Library, actor_ids: list[str], keys: list[str] | None
     model_key: 'image_edit' (FLUX Kontext, cheap) or 'image_edit_identity' (Nano Banana Pro: re-roll drifted keys)."""
     refuse_locked(lib, actor_ids, "training images")
     recipe, stamp, jobs = training_recipe(), batch_id(), []
+    child = recipe.get("child_safe") or {}
     for aid in actor_ids:
         anchor = anchor_path(lib, aid)
         out = actor_dir(lib, aid) / "training_set" / stamp
+        is_child = (lib.actors[aid].get("apparent_age") or 99) < child.get("age_below", 0)
         for v in recipe["variations"]:
             if keys and v["key"] not in keys:
+                continue
+            if is_child and v["key"] in child.get("skip_keys", []):
                 continue
             edit, caption = training_text(lib.actors[aid], v)
             jobs.append(Job("training_set", f"{aid}:{v['key']}", f"{edit}. {recipe['identity_lock']}", model_key, 1,

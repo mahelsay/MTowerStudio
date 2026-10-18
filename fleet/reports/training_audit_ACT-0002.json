@@ -1,0 +1,47 @@
+{
+  "verdict": "redesign",
+  "fit": {
+    "ok": false,
+    "conflicts": [
+      "The anchor's greying, medium-length hair forms curled wings over the ears and extends at the nape; Sergeant Sayed is an Egyptian commando and must have short black military-groomed hair."
+    ]
+  },
+  "anchor": {
+    "score": 8,
+    "issues": [
+      "Photorealistic, ordinary and anatomically sound, with natural weathered skin and a period-plausible mustache.",
+      "Hair is visibly grey and too long at the sides and nape for the commando grooming rule."
+    ]
+  },
+  "training": {
+    "score": 7,
+    "drift_keys": [
+      "exhausted@154838",
+      "looking-up@154838",
+      "three-quarter-right-golden@154838"
+    ],
+    "defect_keys": [
+      "soaking-wet@154838"
+    ],
+    "issues": [
+      "exhausted@154838 has a narrower, older face, drooping eyes, tighter black hair and reduced temple greying compared with the anchor.",
+      "looking-up@154838 has a slimmer facial structure, altered nose and jaw, and short nearly all-black hair.",
+      "three-quarter-right-golden@154838 has unnaturally amber-looking eyes and noticeably darker, shorter hair than the anchor.",
+      "soaking-wet@154838 includes a modern-looking streetlight in the background.",
+      "Otherwise the set has strong variety in angles, framing, expressions, lighting, outfits and action, and the captions correctly describe only changing scene attributes."
+    ]
+  },
+  "redesign_change": "Keep the face, skin, build, receding hairline and thick bushy mustache unchanged, but replace the greying curled hair with short cropped black hair lying clear of the ears and nape.",
+  "summary": "The weathered Egyptian sergeant look is strong and photorealistic, but the signature greying, over-ear hair directly violates the required short-black-hair commando grooming rule; several training images also drift and one contains a modern-looking streetlight.",
+  "actor": "ACT-0002",
+  "name": "Hazem Abdallah",
+  "roles": [
+    "C-02"
+  ],
+  "training_images": 20,
+  "training_batch": "20261011-183945,20261018-153643,20261018-154838",
+  "identity_history": {
+    "C-02": null
+  },
+  "_cost_usd": 0.05974
+}

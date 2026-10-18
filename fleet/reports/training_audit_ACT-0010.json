@@ -1,0 +1,32 @@
+{
+  "verdict": "keep",
+  "fit": {
+    "ok": true,
+    "conflicts": []
+  },
+  "anchor": {
+    "score": 9,
+    "issues": []
+  },
+  "training": {
+    "score": 9,
+    "drift_keys": [],
+    "defect_keys": [],
+    "issues": [
+      "Strong variety in framing, angles, expressions, lighting, outfits, locations and full-body action without baking a single costume or composition into the face.",
+      "Captions appropriately describe variable pose, expression, lighting, setting and clothing rather than fixed facial identity."
+    ]
+  },
+  "summary": "The anchor is a convincing Egyptian boy of about eight with the required small thin build, round youthful face, large dark eyes and messy short black hair. It is photorealistic, anatomically clean and period-plausible. The training set consistently preserves his identity and is clean, varied and suitable for the 1973 village role.",
+  "actor": "ACT-0010",
+  "name": "Youssef Mamdouh",
+  "roles": [
+    "C-14"
+  ],
+  "training_images": 16,
+  "training_batch": "20261011-201827,20261018-133433,20261018-154531",
+  "identity_history": {
+    "C-14": null
+  },
+  "_cost_usd": 0.040608
+}

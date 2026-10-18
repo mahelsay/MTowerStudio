@@ -34,9 +34,11 @@ SYSTEM = (
     "2. ANCHOR QUALITY: photoreal ordinary person (not a model), natural skin, correct anatomy, no text/artifacts, "
     "1970s-plausible grooming.\n"
     "3. TRAINING SET: the same person in every image (flag image keys whose face drifts: different nose/eyes/age/"
-    "hair colour); defects (warped hands, extra fingers, plastic skin, text, modern items, duplicates); variety "
-    "(outfits, angles, light, action poses) so clothes and framing do not bake into the face; captions describe only "
-    "what changes, never the face.\n"
+    "hair colour, or facial hair the anchor does not have); defects (warped hands, extra fingers, plastic skin, text, "
+    "modern items, duplicates); variety (outfits, angles, light, action poses) so clothes and framing do not bake into "
+    "the face; captions describe only what changes, never the face. The recipe DELIBERATELY includes civilian outfits, "
+    "a 'headwear' key and village settings: they teach the face model to separate face from clothing — never flag "
+    "them as role conflicts.\n"
     "Verdict: 'keep' (fit and clean), 'reroll' (look fits; list training keys to re-roll), or 'redesign' (the look must "
     "change). Output JSON: { verdict, fit: { ok: bool, conflicts: [string] }, anchor: { score: 0-10, issues: [string] }, "
     "training: { score: 0-10, drift_keys: [string], defect_keys: [string], issues: [string] }, "
@@ -113,7 +115,7 @@ def audit_actor(actor: dict, roles: list[dict], rules: str, identity: dict) -> d
     for n, t in enumerate(m["training"], start=2):
         part = _image_part(str(t["path"]))
         part["image_url"]["detail"] = "low"
-        content += [{"type": "text", "text": f"IMAGE {n} — training key '{t['key']}' · caption: {t['caption'][:160]}"},
+        content += [{"type": "text", "text": f"IMAGE {n} — training key '{t['key']}' · caption: {t['caption'][:400]}"},
                     part]
     messages = [{"role": "system", "content": SYSTEM + "\nRespond ONLY with a single valid JSON object."},
                 {"role": "user", "content": content}]

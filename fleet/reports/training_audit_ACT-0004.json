@@ -1,0 +1,32 @@
+{
+  "verdict": "keep",
+  "fit": {
+    "ok": true,
+    "conflicts": []
+  },
+  "anchor": {
+    "score": 9,
+    "issues": []
+  },
+  "training": {
+    "score": 9,
+    "drift_keys": [],
+    "defect_keys": [],
+    "issues": [
+      "Strong variety in angles, framing, lighting, expressions, actions and period-plausible civilian clothing; identity, freckles, eye colour, haircut and facial hair remain consistent.",
+      "Captions describe variable pose, expression, lighting, setting and clothing without encoding permanent facial features."
+    ]
+  },
+  "summary": "The anchor is a photorealistic, anatomically sound Egyptian man of plausible mid-20s age with the required short black haircut, freckles, light green-grey eyes, prominent cheekbones and neat mustache. The training set consistently depicts the same person and has no clear artifacts, prohibited modern elements or caption problems.",
+  "actor": "ACT-0004",
+  "name": "Sherif Mansour",
+  "roles": [
+    "C-04"
+  ],
+  "training_images": 20,
+  "training_batch": "20261018-133352,20261018-153929,20261018-154641",
+  "identity_history": {
+    "C-04": null
+  },
+  "_cost_usd": 0.057
+}

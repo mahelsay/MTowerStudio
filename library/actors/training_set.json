@@ -152,5 +152,15 @@
       "outfit": "a grey work shirt with rolled sleeves",
       "outfit_female": "a grey cotton dress with rolled sleeves"
     }
-  ]
+  ],
+  "child_safe": {
+    "$note": "Actors with apparent_age < 16: these variations are skipped (undershirts / soaked clinging clothes are not suitable training images of a child, and Azure's safety filter rejects them). 'carrying' (a child straining under a load) trips Azure vision filters even fully clothed (2026-10-18).",
+    "age_below": 16,
+    "skip_keys": [
+      "carrying",
+      "exhausted",
+      "profile-right",
+      "soaking-wet"
+    ]
+  }
 }

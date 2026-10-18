@@ -1,0 +1,62 @@
+[
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor reads approximately 23–26 rather than a boyish 19: the long, sharply defined jaw and mature cheek structure conflict with Mostafa’s stated age and soft oval face with a narrow pointed chin.",
+        "The thick, relatively long top and the signature 'thick tousled hair' conflict with the consistently short regulation haircut required for a bare-headed Egyptian commando."
+      ]
+    },
+    "anchor": {
+      "score": 7,
+      "issues": [
+        "Photorealistic with credible Egyptian features, correct anatomy, natural-enough skin, and no visible text or artifacts.",
+        "The face is angular and mature rather than boyish and oval, and the chin is more squared than narrowly pointed.",
+        "The highly polished, symmetrical portrait and dramatic eye treatment read somewhat like an editorial model photograph rather than an ordinary young private.",
+        "The hair needs to be cropped shorter and more evenly for the military role."
+      ]
+    },
+    "training": {
+      "score": 5,
+      "drift_keys": [
+        "exhausted@133352",
+        "shouting@133352",
+        "soaking-wet@133352",
+        "three-quarter-left-sun@133352"
+      ],
+      "defect_keys": [
+        "exhausted@133352",
+        "front-closeup@133352",
+        "headwear@133352",
+        "soaking-wet@133352"
+      ],
+      "issues": [
+        "exhausted@133352 and soaking-wet@133352 look substantially older and more gaunt than the anchor, with pronounced stubble, altered jaw definition, and different nose proportions.",
+        "shouting@133352 shifts the eye color toward light hazel and lengthens the face; three-quarter-left-sun@133352 has a broader, rounder lower face than the anchor.",
+        "Facial stubble in exhausted@133352 and especially soaking-wet@133352 can bake an older, unshaven appearance into a clean-shaven 19-year-old character.",
+        "headwear@133352 hides the regulation haircut and introduces a cap that the bare-headed commando role must not wear.",
+        "The caption for front-closeup@133352 is truncated at 'cott' and must be repaired.",
+        "The set has useful expression, angle, lighting, full-body, and action variation, but beige shirts, scarves, and desert portrait settings recur too often and risk baking the anchor styling into the face.",
+        "There is no clean reference of the redesigned actor in a plain 1973 Egyptian field uniform or under marsh-march conditions, despite those being the character’s dominant screen contexts."
+      ]
+    },
+    "redesign_change": "Keep his Egyptian identity, warm olive-brown skin, large dark almond eyes, straight medium nose, full lips and strong brows, but give him a visibly boyish 19-year-old oval face with a softer jaw and narrow pointed chin, and replace the thick tousled top with an evenly close-cropped short black 1973 regulation army haircut.",
+    "summary": "The actor is regionally plausible and the images are mostly photoreal, but the approved look is too mature and angular for Mostafa and its signature hair conflicts with commando grooming; redesign the age structure and haircut, then rebuild the drifting and contaminated references.",
+    "actor": "ACT-0003",
+    "name": "Karim Nour",
+    "roles": [
+      "C-03"
+    ],
+    "training_images": 20,
+    "training_batch": "20261018-133352",
+    "identity_history": {
+      "C-03": {
+        "reviews": 82,
+        "fail": 17,
+        "rate": 0.21
+      }
+    },
+    "_cost_usd": 0.073468
+  }
+]

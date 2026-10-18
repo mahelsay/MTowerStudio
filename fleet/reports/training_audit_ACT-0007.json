@@ -1,0 +1,36 @@
+{
+  "verdict": "reroll",
+  "fit": {
+    "ok": true,
+    "conflicts": []
+  },
+  "anchor": {
+    "score": 9,
+    "issues": []
+  },
+  "training": {
+    "score": 8,
+    "drift_keys": [
+      "soaking-wet@155816"
+    ],
+    "defect_keys": [
+      "soaking-wet@155816"
+    ],
+    "issues": [
+      "In soaking-wet@155816, the signature blue forehead and chin tattoos are not visible, weakening identity consistency.",
+      "In soaking-wet@155816, the wet scarf exposes a substantial black frontal hairline despite the approved look requiring her hair always to be covered."
+    ]
+  },
+  "summary": "The anchor strongly fits the deliberately prematurely aged Nile Delta village woman and is photorealistic, anatomically sound, and period-plausible. The set has good variety and consistent identity elsewhere; re-roll only soaking-wet@155816 with the scarf fully covering the hair and both blue tattoo marks retained.",
+  "actor": "ACT-0007",
+  "name": "Souad Roshdy",
+  "roles": [
+    "C-11"
+  ],
+  "training_images": 20,
+  "training_batch": "20261018-153929,20261018-155816",
+  "identity_history": {
+    "C-11": null
+  },
+  "_cost_usd": 0.054
+}

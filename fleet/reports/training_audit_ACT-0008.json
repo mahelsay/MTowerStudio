@@ -1,0 +1,31 @@
+{
+  "verdict": "keep",
+  "fit": {
+    "ok": true,
+    "conflicts": []
+  },
+  "anchor": {
+    "score": 9,
+    "issues": []
+  },
+  "training": {
+    "score": 9,
+    "drift_keys": [],
+    "defect_keys": [],
+    "issues": [
+      "Hair is predominantly loose and center-parted; adding a two-braid reference would improve hairstyle separation for Zeinab, though the existing headwear image provides useful variation."
+    ]
+  },
+  "summary": "The anchor convincingly depicts a childlike 12-year-old Egyptian village girl with the required round face, large dark eyes, strong brows, long black hair and visible front-tooth gap. It is photorealistic, anatomically sound and period-plausible. The training set maintains identity across expressions, angles, lighting, framing, outfits and action, with no clear facial drift, artifacts, prohibited text or modern objects.",
+  "actor": "ACT-0008",
+  "name": "Malak Samy",
+  "roles": [
+    "C-12"
+  ],
+  "training_images": 16,
+  "training_batch": "20261018-153927,20261018-155324,20261018-160555",
+  "identity_history": {
+    "C-12": null
+  },
+  "_cost_usd": 0.05824
+}

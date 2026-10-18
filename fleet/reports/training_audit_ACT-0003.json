@@ -1,0 +1,35 @@
+{
+  "verdict": "keep",
+  "fit": {
+    "ok": true,
+    "conflicts": []
+  },
+  "anchor": {
+    "score": 9,
+    "issues": [
+      "The portrait has slightly polished editorial lighting, but skin texture, anatomy, age, Egyptian appearance and short regulation haircut remain credible."
+    ]
+  },
+  "training": {
+    "score": 9,
+    "drift_keys": [],
+    "defect_keys": [],
+    "issues": [
+      "Identity remains consistent across expressions, profiles, wet hair, fatigue and varied lighting.",
+      "The set provides strong variety in framing, pose, clothing, setting and illumination without obvious duplicates or clothing bake-in.",
+      "Captions describe variable conditions rather than fixed facial traits."
+    ]
+  },
+  "summary": "The youthful, clean-shaven Egyptian look fits Private Mostafa and the 1973 commando grooming rules. The anchor is photorealistic and the varied training set is consistent and free of material defects.",
+  "actor": "ACT-0003",
+  "name": "Karim Nour",
+  "roles": [
+    "C-03"
+  ],
+  "training_images": 20,
+  "training_batch": "20261018-133352,20261018-154415",
+  "identity_history": {
+    "C-03": null
+  },
+  "_cost_usd": 0.082992
+}

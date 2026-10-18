@@ -1,0 +1,34 @@
+{
+  "verdict": "reroll",
+  "fit": {
+    "ok": true,
+    "conflicts": []
+  },
+  "anchor": {
+    "score": 9,
+    "issues": []
+  },
+  "training": {
+    "score": 8,
+    "drift_keys": [
+      "soaking-wet@153928"
+    ],
+    "defect_keys": [],
+    "issues": [
+      "The soaking-wet image gives him several long strands of hair hanging over his forehead, inconsistent with the anchor's close buzz cut; reroll it with uniformly close-cropped black hair even when wet.",
+      "Otherwise the set maintains identity well and provides adequate variation in angle, lighting, expression, clothing, setting and action."
+    ]
+  },
+  "summary": "The rugged Upper Egyptian look, visible close-cropped black hair and trimmed beard fit Engineer Sergeant Hassan, and the anchor is highly photorealistic. Keep the anchor and reroll only soaking-wet@153928 for hair-length drift.",
+  "actor": "ACT-0013",
+  "name": "Mahmoud Abdel-Rahim",
+  "roles": [
+    "C-05"
+  ],
+  "training_images": 20,
+  "training_batch": "20261018-153928",
+  "identity_history": {
+    "C-05": null
+  },
+  "_cost_usd": 0.056904
+}

@@ -90,12 +90,12 @@
       "lora": {
         "trigger": "act0002hazem",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
-        "version": "20261011-193707",
-        "url": "https://v3b.fal.media/files/b/0aadf7ce/wMd967hqIjS8y54fgHDbS_pytorch_lora_weights.safetensors",
-        "media_path": "library/actors/ACT-0002_hazem-abdallah/lora/20261011-193707/act0002hazem.safetensors",
+        "version": "20261018-161238",
+        "url": "https://v3b.fal.media/files/b/0aaee397/4-F9BJdoo7RZAQRUfWzzD_pytorch_lora_weights.safetensors",
+        "media_path": "library/actors/ACT-0002_hazem-abdallah/lora/20261018-161238/act0002hazem.safetensors",
         "steps": 1000,
-        "training_images": 19,
-        "trained": "2026-10-11"
+        "training_images": 20,
+        "trained": "2026-10-18"
       },
       "status": "lora_trained",
       "reuse": "open",
@@ -137,7 +137,8 @@
       "redesign": {
         "opened": "2026-10-18",
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
+        "face_model": "retrained 20261018-161238 on the audited training set; studio LoRA check pending"
       },
       "audit_notes": [
         {
@@ -155,7 +156,7 @@
       "gender": "male",
       "apparent_age": 19,
       "face_and_body": "young Egyptian man, about 19, slim, boyish clean-shaven face, oval face with a narrow pointed chin, short black regulation army haircut, strong straight dark eyebrows, large almond-shaped dark-brown eyes, straight medium nose, full lips, warm olive-brown skin",
-      "signature_features": "boyish oval face, large almond dark eyes, thick tousled hair",
+      "signature_features": "boyish oval face, large almond dark eyes, short regulation haircut",
       "range": "young soldiers, students, sons",
       "lora": {
         "trigger": "act0003karim",
@@ -169,9 +170,10 @@
         "test_approved": "library/actors/ACT-0003_karim-nour/lora_tests/20261011-180559/act-0003-ref-expression_01.png",
         "test_approved_on": "2026-10-11",
         "test_approved_by": "mahelsay",
-        "notes": "v1 face model (recipe v1.1). First keyframes (2.5-05, 2.6-02, 2.6-05) keep the face well but carry the anchor scarf into every shot and pull toward posed portraits, because 15 of 18 training images kept the anchor outfit and framing. Retrain with recipe v1.2 (~$2.80) when fal is topped up. Reads slightly older than 19; add 'boyish, 19 years old' when needed."
+        "notes": "v1 face model (recipe v1.1). First keyframes (2.5-05, 2.6-02, 2.6-05) keep the face well but carry the anchor scarf into every shot and pull toward posed portraits, because 15 of 18 training images kept the anchor outfit and framing. Retrain with recipe v1.2 (~$2.80) when fal is topped up. Reads slightly older than 19; add 'boyish, 19 years old' when needed.",
+        "stale": "trained on the pre-2026-10-18 look (long hair); retrain pending (fal balance)"
       },
-      "status": "lora_trained",
+      "status": "anchor_approved",
       "reuse": "open",
       "roles": [
         {
@@ -227,12 +229,12 @@
       "lora": {
         "trigger": "act0004sherif",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
-        "version": "20261011-194113",
-        "url": "https://v3b.fal.media/files/b/0aadf7f2/QUa8MeuyNoD4Tn8dr7jNt_pytorch_lora_weights.safetensors",
-        "media_path": "library/actors/ACT-0004_sherif-mansour/lora/20261011-194113/act0004sherif.safetensors",
+        "version": "20261018-161238",
+        "url": "https://v3b.fal.media/files/b/0aaee383/hzsvAN8ncirSh6u8jPsd-_pytorch_lora_weights.safetensors",
+        "media_path": "library/actors/ACT-0004_sherif-mansour/lora/20261018-161238/act0004sherif.safetensors",
         "steps": 1000,
-        "training_images": 19,
-        "trained": "2026-10-11"
+        "training_images": 21,
+        "trained": "2026-10-18"
       },
       "status": "lora_trained",
       "reuse": "open",
@@ -272,7 +274,8 @@
       "redesign": {
         "opened": "2026-10-18",
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
+        "face_model": "retrained 20261018-161238 on the audited training set; studio LoRA check pending"
       }
     },
     {
@@ -404,12 +407,12 @@
       "lora": {
         "trigger": "act0007souad",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
-        "version": "20261011-185026",
-        "url": "https://v3b.fal.media/files/b/0aadf7b9/npRI4sfDDBS387dQzHfX-_pytorch_lora_weights.safetensors",
-        "media_path": "library/actors/ACT-0007_souad-roshdy/lora/20261011-185026/act0007souad.safetensors",
+        "version": "20261018-161238",
+        "url": "https://v3b.fal.media/files/b/0aaee3a7/XdpwkxpVZTpGLNPXYiAIZ_pytorch_lora_weights.safetensors",
+        "media_path": "library/actors/ACT-0007_souad-roshdy/lora/20261018-161238/act0007souad.safetensors",
         "steps": 1000,
-        "training_images": 18,
-        "trained": "2026-10-11"
+        "training_images": 21,
+        "trained": "2026-10-18"
       },
       "status": "lora_trained",
       "reuse": "open",
@@ -450,7 +453,8 @@
       "redesign": {
         "opened": "2026-10-18",
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
+        "face_model": "retrained 20261018-161238 on the audited training set; studio LoRA check pending"
       }
     },
     {
@@ -466,12 +470,12 @@
       "lora": {
         "trigger": "act0008malak",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
-        "version": "20261011-202302",
-        "url": "https://v3b.fal.media/files/b/0aadf8fb/4MaQ4c3PEB_j3cHH19yhW_pytorch_lora_weights.safetensors",
-        "media_path": "library/actors/ACT-0008_malak-samy/lora/20261011-202302/act0008malak.safetensors",
+        "version": "20261018-161239",
+        "url": "https://v3b.fal.media/files/b/0aaee3af/OviuzwnBAIuoSNhf2MK4j_pytorch_lora_weights.safetensors",
+        "media_path": "library/actors/ACT-0008_malak-samy/lora/20261018-161239/act0008malak.safetensors",
         "steps": 1000,
-        "training_images": 21,
-        "trained": "2026-10-11"
+        "training_images": 17,
+        "trained": "2026-10-18"
       },
       "status": "lora_trained",
       "reuse": "open",
@@ -512,7 +516,8 @@
       "redesign": {
         "opened": "2026-10-18",
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
+        "face_model": "retrained 20261018-161239 on the audited training set; studio LoRA check pending"
       }
     },
     {
@@ -634,7 +639,8 @@
       "redesign": {
         "opened": "2026-10-18",
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
+        "face_model": "training set fixed (QA 9); retrain pending (fal balance) — current model still valid (look unchanged)"
       }
     },
     {
@@ -645,7 +651,7 @@
       "gender": "male",
       "apparent_age": 52,
       "face_and_body": "Egyptian man from Cairo, early 50s, tall and lean with an upright military bearing, long oval face with high cheekbones and a narrow straight jaw, thin aquiline nose, calm hooded grey-green eyes behind thin steel-rimmed reading glasses, fine arched grey eyebrows, short neat silver senior officer's haircut, short back and sides, completely clean-shaven, fair olive skin with fine lines",
-      "signature_features": "lean long oval clean-shaven face, silver hair combed back, steel-rimmed glasses",
+      "signature_features": "lean long oval clean-shaven face, short silver officer haircut, steel-rimmed glasses",
       "range": "senior officers",
       "lora": {
         "trigger": null,
@@ -789,12 +795,12 @@
       "lora": {
         "trigger": "act0013mahmoud",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
-        "version": "20261012-181426",
-        "url": "https://v3b.fal.media/files/b/0aae17b3/K4cXDaxgx0M7rF-0s2Ibz_pytorch_lora_weights.safetensors",
-        "media_path": "library/actors/ACT-0013_mahmoud-abdel-rahim/lora/20261012-181426/act0013mahmoud.safetensors",
+        "version": "20261018-161239",
+        "url": "https://v3b.fal.media/files/b/0aaee392/U9mzl2Unppa-G9L5syk-6_pytorch_lora_weights.safetensors",
+        "media_path": "library/actors/ACT-0013_mahmoud-abdel-rahim/lora/20261018-161239/act0013mahmoud.safetensors",
         "steps": 1000,
-        "training_images": 20,
-        "trained": "2026-10-12"
+        "training_images": 21,
+        "trained": "2026-10-18"
       },
       "status": "lora_trained",
       "reuse": "open",
@@ -834,7 +840,8 @@
       "redesign": {
         "opened": "2026-10-18",
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
+        "face_model": "retrained 20261018-161239 on the audited training set; studio LoRA check pending"
       }
     }
   ],
