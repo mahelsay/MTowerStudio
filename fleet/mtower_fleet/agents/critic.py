@@ -83,16 +83,20 @@ class StudioCritic:
         return note
 
     # ------------------------------------------------------------------ Wave 2: the production meeting
-    def review_departments(self, shot, context: str, departments: list[str]) -> dict[str, CriticNote]:
-        """One review of all Wave-2 departments together: each against its definition of done, plus how they fit."""
+    def review_departments(self, shot, context: str, departments: list[str],
+                           context_only: list[str] | tuple = ()) -> dict[str, CriticNote]:
+        """One review of the Wave-2 departments: each against its definition of done, plus how they fit.
+        `context_only` departments already passed: shown so conflicts can be seen, but not re-judged."""
         dods = "\n".join(f"- {d}: {WAVE2_DOD[d]}" for d in departments)
         outputs = {d: _department_output(shot, d) for d in departments}
+        passed = {d: _department_output(shot, d) for d in context_only}
         user = (
             f"{context}\n\nDEFINITIONS OF DONE:\n{dods}\n- cross-department: the departments agree with each other "
             f"(a prop that motivates the light is placed by Set; a handled prop is a hand prop and matches the action; "
             f"makeup matches the wear state; nothing contradicts the scene intent or the Director).\n\n"
             f"DEPARTMENT OUTPUTS TO REVIEW:\n{outputs}\n\n"
-            "Return JSON: { departments: { <name>: { verdict: 'pass'|'revise', reasons: [string], "
+            + (f"ALREADY APPROVED (context only — do not return verdicts for these):\n{passed}\n\n" if passed else "")
+            + "Return JSON: { departments: { <name>: { verdict: 'pass'|'revise', reasons: [string], "
             "revise_instructions: [string] } }, cross_department: [string] }. Include every department listed. "
             "cross_department lists only PROBLEMS or conflicts (e.g. Director-vs-lock, department-vs-department) — "
             "leave it empty when there are none; never put confirmations or praise in it. "
@@ -102,7 +106,12 @@ class StudioCritic:
             "looks — outranks the Director's notes and the scene intent. A department that follows the lock against "
             "the Director is CORRECT: never ask it to follow the Director. Report any Director-vs-lock conflict in "
             "cross_department instead. Props carried as character additions are locked costume props, not "
-            "unauthorized props. Disagreement with the LOCKED design is not a reason to revise a department."
+            "unauthorized props. Disagreement with the LOCKED design is not a reason to revise a department.\n"
+            "IN FRAME: only the locked cast and crowd groups are in frame; never require entries for a person who is "
+            "not in the locked cast (they are off-screen). LOCK vs LOCK: when two locked items conflict (e.g. a wear "
+            "state's wording vs a location rule), a department that picks a reading satisfying both is CORRECT — "
+            "report the conflict in cross_department for the human, never fail a department for it. Items an actor "
+            "uses that have no library id belong in Set's hand_items (a library gap), not hand_props."
         )
         messages = [
             {"role": "system", "content": self.SYSTEM + "\nThis is a production meeting: you review the whole crew's "
@@ -203,7 +212,9 @@ WAVE2_DOD = {
         "with the previous shot."
     ),
     "set": (
-        "Every locked prop is placed; a prop an actor uses in this shot is a hand prop; dressing is period-correct "
+        "Every locked prop is placed; a library prop an actor uses in this shot is a hand prop, and an item an actor "
+        "uses that has no library id is listed in hand_items; props from elsewhere in the beat may appear when the "
+        "frame shows them; dressing is period-correct "
         "and plausible for the location; static atmosphere only (no explosions or moving smoke); set state fits the "
         "beat and the previous shot."
     ),

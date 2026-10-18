@@ -81,12 +81,11 @@ def tier1_wave2(shot: Shot, field: str, resolved, cat) -> list[str]:
         for pid in r.props:
             if pid not in placed:
                 p.append(f"set: locked prop {pid} is not placed (props or hand_props)")
-        carried = {m for w in resolved.wardrobe for m in re.findall(r"\bPRP-\d{4}\b", w.additions)}
         for pid in placed:
             if pid not in cat.props:
                 p.append(f"set: {pid} is not in the prop library")
-            elif pid not in r.props and pid not in carried:
-                p.append(f"set: {pid} is neither a locked shot prop nor carried by a character")
+            elif pid not in resolved.allowed_props:
+                p.append(f"set: {pid} is not a prop of this shot, its characters, or this beat")
         if not s.set_state:
             p.append("set: set_state is empty")
     elif field == "camera":

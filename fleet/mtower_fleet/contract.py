@@ -110,6 +110,7 @@ class SetDressing(BaseModel):            # Set decoration (6)
     vehicles: list[str] = Field(default_factory=list)
     props: list[str] = Field(default_factory=list)          # environmental props (library ids)
     hand_props: list[str] = Field(default_factory=list)     # props an actor actively uses (library ids)
+    hand_items: list[str] = Field(default_factory=list)     # items an actor uses that have NO library entry yet
     dressing: list[str] = Field(default_factory=list)
     set_state: str = ""
     notes: str = ""

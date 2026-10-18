@@ -21,7 +21,13 @@ _COMMON_RULES = (
     "`concerns` (one sentence each) — never silently change it. PRECEDENCE: the locked design and the location's "
     "own rules outrank the Director's notes and the scene intent; when they conflict, follow the lock and report the "
     "conflict in `concerns`. Props carried as a character addition (e.g. a compass on a lanyard) are locked "
-    "costume props. Be concrete and visual: your output becomes "
+    "costume props. "
+    "IN FRAME: only the shot's locked cast and crowd groups appear in the frame. Anyone else the design mentions "
+    "(e.g. 'the radio operator off to the side') is off-screen, or at most an unrecognizable partial shape — never "
+    "give them costume, makeup or action entries; report a design that seems to need them in `concerns`. "
+    "LOCK vs LOCK: if two locked items seem to conflict, choose the reading that satisfies both (e.g. shin-deep "
+    "water, but splashes soak the trousers higher) and report the conflict in `concerns`. "
+    "Be concrete and visual: your output becomes "
     "instructions for an image generator and checks for the image reviewer. No modern items. Restrained violence: "
     "no graphic wounds or gore (series bible §4.4). Keep each field short."
 )
@@ -35,9 +41,11 @@ def common_context(shot, cat, resolved, prev_design: str, include_rules: bool = 
     ward = "; ".join(f"{w.target}: {w.wardrobe_id} / {w.wear_state}" for w in s.wardrobe) or "none"
     st = s.set
     carried = sorted({m for w in s.wardrobe for m in re.findall(r"\bPRP-\d{4}\b", w.additions)})
+    others = sorted(set(s.beat_props) - set(st.props) - set(carried))
     sett = (f"location {st.location_id or '—'}" + (f", inside {st.vehicle_interior}" if st.vehicle_interior else "")
             + f", vehicles {st.vehicles or '—'}, props {st.props or '—'}"
-            + (f", carried by characters (costume props, locked): {carried}" if carried else ""))
+            + (f", carried by characters (costume props, locked): {carried}" if carried else "")
+            + (f", other props of this beat (may appear if the frame shows them): {others}" if others else ""))
     loc_rules = (cat.locations.get(st.location_id, {}) or {}).get("qa_rules") or []
     cam = (f"{s.camera.shot_size} / {s.camera.lens} / {s.camera.movement} / looks {s.camera.look_key} / "
            f"{s.camera.format}; lip-sync {s.policy.lip_sync}; face visible {s.policy.face_pass}")
@@ -75,6 +83,8 @@ class DeptAgent(Agent):
     def act(self, shot, **ctx: Any) -> dict:
         user = self.build_user(shot, **ctx)
         if ctx.get("revision"):
+            if ctx.get("crew"):
+                user += f"\n\nTHE REST OF THE CREW'S CURRENT PREP (stay consistent with it):\n{ctx['crew']}"
             user += f"\n\nREVISE per the Studio Critic: {ctx['revision']}\nReturn the corrected JSON."
         data, usage = self.run_json(user)
         self.apply(shot, data, **ctx)
@@ -184,19 +194,25 @@ class SetAgent(DeptAgent):
         "ids; describe anything else as generic period dressing.")
     TASK = (
         "Return JSON: { props: [library ids placed in the environment], hand_props: [library ids an actor actively "
-        "uses in this shot], dressing: [short concrete items], set_state (one sentence), notes, concerns: [string] }. "
-        "Every locked shot prop must appear in props or hand_props. Props carried as character additions stay with "
-        "Wardrobe — list them here only if an actor actively handles them in this shot.")
+        "uses in this shot], hand_items: [items an actor actively uses that have NO library id, e.g. 'small "
+        "red-filtered flashlight', 'scrap of paper' — these are library gaps], dressing: [short concrete items], "
+        "set_state (one sentence), notes, concerns: [string] }. Every locked shot prop must appear in props or "
+        "hand_props. You may also place props listed as 'other props of this beat' when the frame shows them. "
+        "Props carried as character additions stay with Wardrobe — list them here only if an actor actively "
+        "handles them in this shot.")
 
     def apply(self, shot, data, **ctx) -> None:
         r = ctx["resolved"]
         s = r.set.model_copy()
         ids = lambda xs: [m for x in (xs or []) for m in re.findall(r"\bPRP-\d{4}\b", str(x))]  # noqa: E731
         s.props, s.hand_props = ids(data.get("props")), ids(data.get("hand_props"))
+        s.hand_items = [str(x) for x in (data.get("hand_items") or []) if str(x).strip()]
         s.dressing = [str(x) for x in (data.get("dressing") or [])]
         s.set_state = str(data.get("set_state") or "")
         s.notes = str(data.get("notes") or "")
         shot.set = s
+        if s.hand_items:
+            shot.set_notes("library", [f"no prop library entry yet for: {', '.join(s.hand_items)}"])
 
 
 class CameraAgent(DeptAgent):

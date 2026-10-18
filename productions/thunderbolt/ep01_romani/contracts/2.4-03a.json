@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "needs_review",
+  "wave_ready": 2,
   "intent": {
     "subject": "Corporal Mahmoud (C-04), radio operator.",
     "action": "His thumb hovers over the field radio switch as he uneasily whispers that command will not know their position, warning Shalabi without defiance.",
@@ -103,6 +104,94 @@
     "pacing": "Hold the silence and hesitation before the line, then let the gesture remain unresolved for a beat afterward.",
     "tone_ref": "Restrained historical war realism: red-filtered practical light, marsh darkness, and quiet dread over overt drama."
   },
+  "cast": [
+    {
+      "character_id": "C-04",
+      "character": "Corporal Mahmoud",
+      "actor_id": "ACT-0004",
+      "face_model": "act0004sherif",
+      "actor_status": "locked",
+      "prominence": "lead"
+    }
+  ],
+  "crowd": [],
+  "wardrobe": [
+    {
+      "target": "C-04",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "short military haircut, backpack field radio with a whip antenna (PRP-0007); wire-rimmed glasses taped at the hinge",
+      "visible_details": [
+        "Bare-headed short black military-cut hair, damp and flattened at the hairline",
+        "Wire-rimmed glasses with a clearly taped hinge, catching a restrained red-filtered glint without obscuring his eyes",
+        "Sand-khaki cotton jacket with two buttoned chest pockets; sleeves rolled to the forearms",
+        "1970s Soviet-pattern khaki canvas chest rig: three closed-flap magazine pouches, cotton straps and simple metal buckles",
+        "Backpack field radio close beside his protective crouch, with its canvas harness/strap and whip antenna visible; his hand and hovering thumb remain clear of the switch",
+        "Plain khaki collar with no red tabs, no chest eagle badge, and no invented rank insignia",
+        "WEAR_MUD reads as wet dark brine-and-mud splashes across the jacket front, lower sleeves and webbing, with water-darkened fabric and restrained dripping",
+        "Where the lower frame admits it, trousers are soaked dark with mud and brine above the knees; black leather combat boots remain period-correct"
+      ],
+      "notes": "Continuity from the preceding moonlit shot: retain Mahmoud’s damp hair, wet curled mustache/light stubble, brine sheen and fine mud flecks; this shot newly reveals the same uniform, taped glasses and radio under localized red-filtered light."
+    }
+  ],
+  "makeup": [
+    {
+      "target": "C-04",
+      "skin_state": "Light-wheat skin, damp with exertion; restrained brine sheen on forehead, nose, upper lip and cheekbones, fine dark mud flecks across lower cheeks, jaw, nose freckles and hairline. Subtle tired shadows beneath light green-grey eyes; lips moist, intact.",
+      "hair_state": "Bare-headed short black military-cut hair, damp and flattened at the temples and hairline. Curled upturned mustache and light stubble are wet, intact and clearly recognizable.",
+      "injuries": [],
+      "notes": "Keep face readable but dark under red-filtered flashlight with a faint cool starlight edge; preserve oval face, prominent cheekbones, freckles, sparse brows and signature curled mustache. No blood, wounds, or excessive grime."
+    }
+  ],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [],
+    "hand_props": [
+      "PRP-0007"
+    ],
+    "dressing": [
+      "Thin broken white salt crust over black mud",
+      "Mid-shin shallow brine sheets with faint cold sky reflections",
+      "Sparse low marsh scrub reduced to near-black silhouettes",
+      "A small period red-filtered flashlight clipped immediately beside the PRP-0007 control panel, aimed inward at Mahmoud's thumb and face"
+    ],
+    "set_state": "Mahmoud crouches in the shallow mid-shin marsh, holding PRP-0007 braced above the brine and mud; its clipped red-filtered flashlight creates a tight red pool on the switch, hand, and three-quarter face without spilling across the marsh.",
+    "notes": "Keep the radio controls, handset, and Mahmoud’s hovering thumb unobscured; retain cool moonlit salt crust and near-black background beyond the contained red practical."
+  },
+  "camera": {
+    "shot_size": "MCU",
+    "lens": "LENS_85_PORTRAIT",
+    "movement": "static",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Cool, weak moon-and-starlight gives Mahmoud a blue-black three-quarter edge and minimal marsh separation; a tightly flagged red-filtered flashlight pools only across his lower face, hovering thumb, and radio switch, with no red spill into the distant marsh. Keep the red practical dim and directional so damp skin, mud-flecked khaki, and the switch remain legible without flattening the night.",
+    "exposure_note": "Expose approximately 1.5–2 stops under a normal night key: preserve a readable eye, mouth, thumb, and switch in the small red pool while allowing the background and lower marsh to fall into blue-black near-silhouette; retain fine 500T grain and avoid lifted black levels.",
+    "framing_note": "MCU in 16:9 with Mahmoud’s three-quarter face, visible mouth, near eye, hovering thumb, and radio switch all held inside the central crop-safe middle 75% height for the 2.39:1 extraction. Keep his eyeline just off-frame toward Shalabi, with shallow-focus priority on the eye and mouth for lip-sync and enough focus falloff control for the suspended thumb/switch to read."
+  },
+  "action": {
+    "applies": true,
+    "choreography": "Mahmoud holds a low, static crouch in mid-shin brine, torso protectively angled over PRP-0007. He braces the radio pack clear above the brine and mud beside his knee while keeping his thumb suspended over its switch; no transmission is completed.",
+    "weapon_handling": "",
+    "movement": "Minimal controlled movement under load: a slight eye turn toward Shalabi, then stillness around the switch.",
+    "beats": [
+      "Maintain the crouch with boots settled in shallow mud.",
+      "Support the radio pack above the marsh surface beside his knee.",
+      "Hold thumb a fraction above the radio switch.",
+      "Whisper the warning without moving into defiance.",
+      "Turn only his eyes toward Shalabi; leave the switch untouched."
+    ],
+    "safety_note": "Keep the radio, chest rig, and all carried load clear of brine and mud; standing water remains mid-shin or lower."
+  },
+  "generation_policy": {
+    "lip_sync": "required",
+    "video_model": "default",
+    "face_pass": true
+  },
   "critic": [
     {
       "target_field": "intent",
@@ -126,10 +215,136 @@
         "The tone reference is consistent with grounded historical war drama and the specified red-filtered light, marsh darkness, and quiet apprehension."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [
+        "C-04 is correctly bare-headed in mud-worn, period-appropriate Egyptian field uniform and Soviet-pattern webbing, with plain khaki collar and no forbidden collar tabs, chest eagle, or invented insignia.",
+        "The locked radio PRP-0007 is retained and described consistently with Mahmoud's protective crouch; the wardrobe wear state is compatible with the shallow salt-marsh environment and prior damp/mud continuity."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "Mahmoud's hair continuity conflicts with the previous-shot specification: it was established as short black military-cut hair, but this output changes it to medium-length wavy light-brown hair with tousled strands. Medium-length hair also conflicts with the production requirement for Egyptian commandos to have short black hair.",
+        "The revised hair description risks breaking recognition continuity despite retaining the curled mustache and damp, mud-flecked condition."
+      ],
+      "revise_instructions": [
+        "Replace the medium-length wavy light-brown hair description with Mahmoud's established short black military-cut hair, damp and flattened at the temple and hairline. Retain the curled mustache, light stubble, light-wheat damp skin, restrained brine sheen, mud flecks, and uninjured condition."
+      ]
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The red-filtered flashlight is required to motivate the red practical illumination, but Set specifies only a red glow and does not physically place or identify the flashlight source. This leaves the camera lighting without a defined on-set motivation.",
+        "PRP-0007 and the shallow-water rule are otherwise handled correctly: the radio is a hand prop and is kept above mud and standing water."
+      ],
+      "revise_instructions": [
+        "Specify the physical placement of the red-filtered flashlight practical—for example, secured immediately beside the radio controls or held just off-frame by Mahmoud—so it can cast the tight red pool on his face, thumb, and switch without adding red spill into the marsh. Keep it period-plausible and ensure it does not displace or obscure PRP-0007."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "The static MCU, 85 mm portrait lens, night looks, 16:9 generation with 2.39:1 crop-safe framing, and readable lip-sync mouth all match the locked shot design.",
+        "The exposure and lighting plan preserves a dark night image while keeping Mahmoud's eye, mouth, hovering thumb, and radio switch readable; it also maintains the intended red practical/cool moonlight separation."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "The choreography directly serves the beat: Mahmoud remains crouched, whispers with controlled professional unease, looks only toward Shalabi, and leaves the switch action unresolved.",
+        "It respects the shallow marsh constraint and keeps the radio close, still, and out of the water/mud as established by Set. No unsupported combat event or inappropriate weapon action is introduced."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The instruction to keep the radio pack “planted close beside his knee” is ambiguous in a shallow brine marsh and can imply that the locked carried radio is resting in mud or water. This conflicts with the production rule that weapons and loads must be carried clear of water and mud."
+      ],
+      "revise_instructions": [
+        "Specify that Mahmoud supports or braces PRP-0007 above the brine and mud beside his knee while operating it, rather than planting it on the marsh surface. Retain the static crouch, hovering thumb, and unresolved transmission."
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "The visible-details entry says Mahmoud's trousers are soaked with mud and brine above the knees. The locked location rule limits standing marsh water to mid-shin, with only occasional knee-depth pockets, and explicitly prohibits water above the knee unless a man has fallen or is kneeling; Mahmoud is described as crouching, not kneeling."
+      ],
+      "revise_instructions": [
+        "Revise the lower-trouser wear to wet mud/brine staining through the mid-shin area and, at most, around the knees if justified by the crouch. Do not specify soaking or water exposure above the knees."
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.017472,
-  "escalations": [],
+  "cost_usd_total": 0.14345,
+  "escalations": [
+    "design wardrobe: critic still requests revision — The visible-details entry says Mahmoud's trousers are soaked with mud and brine above the knees. The locked location rule limits standing marsh water to mid-shin, with only occasional knee-depth pockets, and explicitly prohibits water above the knee unless a man has fallen or is kneeling; Mahmoud is"
+  ],
+  "department_notes": [
+    "wardrobe: The director’s proposed cutaway-and-return coverage conflicts with the locked static MCU shot; retain Mahmoud, his hovering thumb and radio switch within one static composition.",
+    "camera: The locked LOOK_NIGHT_MOON specifies moonlight and starlight only with no artificial fill, which conflicts with the locked shot description’s red-filtered flashlight; the red practical should be retained as the shot-specific requirement but kept tightly contained.",
+    "makeup: The locked cast library describes Mahmoud with longer light-brown wavy hair, but production rules and prior-shot continuity lock him to short black military-cut hair; use the established short black hair.",
+    "set: The Director’s instruction to cut from Mahmoud’s face to the switch conflicts with the locked static MCU single-shot design; retain both face and radio-switch gesture within the locked frame.",
+    "critic: Wardrobe's specified above-knee brine-and-mud soaking conflicts with the locked shallow-marsh depth rule and the action department's mid-shin marsh staging."
+  ],
   "history": [
     {
       "ts": "2026-10-16T14:17:52.208366+00:00",
@@ -172,6 +387,90 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:23:37.758366+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:23:41.714921+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.0074,
+      "tokens": 2740
+    },
+    {
+      "ts": "2026-10-18T07:23:42.321011+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.00585,
+      "tokens": 1913
+    },
+    {
+      "ts": "2026-10-18T07:23:42.742521+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.009138,
+      "tokens": 3109
+    },
+    {
+      "ts": "2026-10-18T07:23:43.520214+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.010384,
+      "tokens": 3224
+    },
+    {
+      "ts": "2026-10-18T07:23:45.288566+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.010892,
+      "tokens": 3106
+    },
+    {
+      "ts": "2026-10-18T07:24:03.979232+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup revise, set revise, camera pass, action pass; cross: 2",
+      "cost_usd": 0.028194,
+      "tokens": 5925
+    },
+    {
+      "ts": "2026-10-18T07:24:06.897202+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.007462,
+      "tokens": 2875
+    },
+    {
+      "ts": "2026-10-18T07:24:10.154817+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.010422,
+      "tokens": 3367
+    },
+    {
+      "ts": "2026-10-18T07:24:18.458202+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action revise",
+      "cost_usd": 0.015414,
+      "tokens": 4583
+    },
+    {
+      "ts": "2026-10-18T07:24:21.505714+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.005508,
+      "tokens": 1974
+    },
+    {
+      "ts": "2026-10-18T07:24:28.935065+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup pass, set pass, camera pass, action pass; cross: 1",
+      "cost_usd": 0.015314,
+      "tokens": 4561
     }
   ]
 }

@@ -224,11 +224,15 @@ def main() -> int:
         todo, skipped = [], []
         for sid in [i for i in order if i in wanted]:
             s = by_id.get(sid)
+            design_only = s is not None and s.status == "needs_review" and s.escalations and all(
+                e.startswith("design ") for e in s.escalations)
             if s is None:
                 skipped.append(f"{sid} (no contract — run the beat first)")
             elif s.status == "ready_to_compose" and not args.redo:
                 skipped.append(f"{sid} (already designed — use --redo)")
-            elif s.status not in ("prepped", "ready_to_compose"):
+            elif design_only and not args.redo:
+                skipped.append(f"{sid} (design escalated — use --redo to re-design)")
+            elif s.status not in ("prepped", "ready_to_compose") and not design_only:
                 skipped.append(f"{sid} (status {s.status})")
             else:
                 todo.append(s)

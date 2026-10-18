@@ -203,7 +203,8 @@ class Orchestrator:
                 fill_deterministic(name)
                 shot.log(name, f"no {name} work in this shot (resolved without a model)")
                 return
-            self.departments[name].act(shot, **ctx, **({"revision": revision} if revision else {}))
+            extra = {"revision": revision, "crew": crew_minutes(shot, exclude=name)} if revision else {}
+            self.departments[name].act(shot, **ctx, **extra)
 
         def run_parallel(names: list[str], revisions: dict[str, str] | None = None) -> None:
             revisions = revisions or {}
@@ -232,10 +233,12 @@ class Orchestrator:
 
         reviewed = [n for n in ("casting",) + PARALLEL_DEPARTMENTS if not deterministic(n)]
         context = common_context(shot, cat, resolved, prev_text)
+        to_review = list(reviewed)          # passes stick: a department is re-judged only after it is revised
         for round_no in range(0, MAX_REVISE_ROUNDS + 1):
-            hard = {n: gate.tier1_wave2(shot, n, resolved, cat) for n in reviewed}
+            hard = {n: gate.tier1_wave2(shot, n, resolved, cat) for n in to_review}
             hard = {n: p for n, p in hard.items() if p}
-            notes = self.critic.review_departments(shot, context, reviewed)
+            approved = [n for n in reviewed if n not in to_review]
+            notes = self.critic.review_departments(shot, context, to_review, context_only=approved)
             revise = {n: "; ".join(hard.get(n, []) + nt.reasons + nt.revise_instructions)
                       for n, nt in notes.items() if nt.verdict != "pass" or n in hard}
             if not revise:
@@ -248,12 +251,15 @@ class Orchestrator:
                     shot.escalations.append(f"design {n}: critic still requests revision — {fb[:300]}")
                 break
             self._log(f"  ↻ meeting round {round_no + 1}: revise {', '.join(revise)}")
+            revised = set(revise)
             if "casting" in revise:
                 run("casting", revise.pop("casting"))
                 for dep in ("wardrobe", "makeup"):  # their targets follow the crowd
                     if dep in reviewed:
                         revise.setdefault(dep, "the crowd groups changed; update your entries to match")
+                        revised.add(dep)
             run_parallel(list(revise), revise)
+            to_review = [n for n in reviewed if n in revised]
 
         shot.wave_ready = max(shot.wave_ready, 2)
         self._settle(shot)
@@ -274,6 +280,20 @@ class Orchestrator:
             if on_shot:
                 on_shot(s)
         return out
+
+
+def crew_minutes(s: Shot, exclude: str = "") -> str:
+    """The other departments' current prep for this shot (given to a department while it revises)."""
+    parts = {
+        "casting": f"crowd: {[c.model_dump() for c in s.crowd]}",
+        "wardrobe": f"wardrobe: {[{'target': w.target, 'visible': w.visible_details} for w in s.wardrobe]}",
+        "makeup": f"makeup: {[{'target': m.target, 'skin': m.skin_state, 'hair': m.hair_state} for m in s.makeup]}",
+        "set": f"set: props {s.set.props}, hand props {s.set.hand_props}, hand items {s.set.hand_items}, "
+               f"dressing {s.set.dressing}, state {s.set.set_state}",
+        "camera": f"camera: light {s.camera.light}; exposure {s.camera.exposure_note}; framing {s.camera.framing_note}",
+        "action": f"action: {s.action.model_dump()}",
+    }
+    return "\n".join(f"- {v}" for k, v in parts.items() if k != exclude)
 
 
 def design_summary(s: Shot | None) -> str:

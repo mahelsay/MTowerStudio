@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "needs_review",
+  "wave_ready": 2,
   "intent": {
     "subject": "Shalabi (C-01) beside Mahmoud’s silenced radio",
     "action": "He gives the tiny answer almost under his breath, eyes hard as he accepts the loss of contact.",
@@ -102,6 +103,94 @@
     "pacing": "Hold in silence before and after the line, letting the lost signal register.",
     "tone_ref": "Restrained historical war realism—ominous resolve carried by darkness, stillness, and practical field detail."
   },
+  "cast": [
+    {
+      "character_id": "C-01",
+      "character": "Captain Hamdi Shalabi",
+      "actor_id": "ACT-0001",
+      "face_model": "act0001tarek",
+      "actor_status": "locked",
+      "prominence": "lead"
+    }
+  ],
+  "crowd": [],
+  "wardrobe": [
+    {
+      "target": "C-01",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
+      "visible_details": [
+        "Bare-headed short black hair, damp and flattened at the hairline",
+        "Sand-khaki cotton jacket with two buttoned chest pockets; sleeves rolled to the forearms",
+        "Plain khaki collar with no tabs, badges, or chest eagle",
+        "Exactly three small gold five-pointed captain's stars in a row on the near shoulder strap; opposite strap matching if revealed as he shifts",
+        "1970s Soviet-pattern khaki canvas chest rig: three closed-flap AK magazine pouches, cotton straps, simple metal buckles",
+        "Compass PRP-0008 on its lanyard, tucked against or just below the jacket/chest rig rather than prominently dangling",
+        "Jacket visibly wet and mud-splashed, with dark dampness along lower front, rolled cuffs, and webbing; no salt-crust or battle damage",
+        "No modern tactical equipment, helmet, eyewear, rank boards, or flag patches"
+      ],
+      "notes": "MCU prioritizes Shalabi's bare head, hard face, plain collar, near captain stars, and period canvas rig; WEAR_MUD must match the active brine-marsh passage, while soaked trousers and boots remain mostly below frame. No prior C-01 shot is supplied for direct costume matching."
+    }
+  ],
+  "makeup": [
+    {
+      "target": "C-01",
+      "skin_state": "Medium-olive skin damp with exertion and brine, with a restrained wet sheen on the high forehead, nose bridge, cheekbones and upper lip; fine dark marsh-mud flecks along the lower cheeks, jawline, hairline and neck. Subtle fatigue shadows beneath the narrow dark-brown eyes; thin lips moist, intact and unsplit.",
+      "hair_state": "Bare-headed short black hair remains recognizably neat and side-parted, but damp and slightly flattened at the temples and hairline; a few wet strands adhere naturally near the forehead. Thin upturned handlebar mustache is damp, intact and sharply recognizable.",
+      "injuries": [],
+      "notes": "Keep his long narrow face, hollow cheeks, pointed chin, strong straight brows and intense expression unobscured. The dim red practical may catch moisture on his lower face and mustache, while cool moonlight defines the three-quarter facial planes; mud and moisture match the wet, splashed WEAR_MUD uniform."
+    }
+  ],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [],
+    "hand_props": [
+      "PRP-0007"
+    ],
+    "dressing": [
+      "Thin broken white salt crust over black mud",
+      "Mid-shin shallow brine sheets with faint moon reflections",
+      "Sparse low salt-marsh scrub and scattered clumps of dead reed",
+      "Small boot-disturbed mud ridges and dark pooled footprints, all below knee depth"
+    ],
+    "set_state": "Mahmoud remains crouched immediately beside Shalabi, just outside the tight frame, actively bracing PRP-0007 above the brine with its handset, whip antenna, and dim red-filtered lamp kept clean and clear of mud and water.",
+    "notes": "Keep C-01 crouched at Mahmoud's shoulder; his locked PRP-0008 remains a worn costume-carried item and is not handled. Frame only near-black marsh texture behind Shalabi, with no horizon features or additional equipment visible; the radio's red practical may edge-light the lower frame without spilling across the marsh."
+  },
+  "camera": {
+    "shot_size": "MCU",
+    "lens": "LENS_85_PORTRAIT",
+    "movement": "static",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Motivate a very tight, flagged red-filtered practical pool from the clipped flashlight on PRP-0007 at the lower frame edge: let it graze Shalabi’s mouth, jaw and nearest cheek without lighting the marsh. Weak cool moon-and-starlight provides a blue-black three-quarter edge on his hair, shoulder and damp khaki, with the far marsh falling to soft darkness.",
+    "exposure_note": "Hold the night 1.5–2 stops under a normal face exposure: retain readable eyes, mouth and the red-lit jaw plane while preserving deep blue-black shadows and no broad artificial fill.",
+    "framing_note": "Static 85mm MCU, Shalabi in three-quarter view with his eyes and lip-sync mouth inside the central crop-safe band; retain only the dead radio edge and its contained red practical pool at the lower edge, with no Mahmoud or hand visible. Keep the radio silhouette, red switch glow, Shalabi’s face and his outward marsh eyeline readable after the 2.39:1 crop."
+  },
+  "action": {
+    "applies": true,
+    "choreography": "C-01 holds a low, stable crouch beside the dead manpack radio, which is securely braced clear of the mid-shin brine and mud. He makes a small controlled lean toward it for the whispered answer, then stills without splashing and fixes his gaze out into the marsh.",
+    "weapon_handling": "",
+    "movement": "Restrained crouched shift only; boots remain planted in shallow mud, chest rig and compass lanyard settle naturally with no broad movement.",
+    "beats": [
+      "Low crouch beside the braced radio",
+      "Tiny lean toward the radio",
+      "Whispered line, jaw set",
+      "Ease back to stillness",
+      "Eyes track outward into darkness"
+    ],
+    "safety_note": "Keep the radio elevated and stable above brine; no abrupt foot movement or water splash."
+  },
+  "generation_policy": {
+    "lip_sync": "required",
+    "video_model": "default",
+    "face_pass": true
+  },
   "critic": [
     {
       "target_field": "intent",
@@ -124,10 +213,142 @@
         "Silence before and after the line supports the ominous, restrained pacing and grounded historical-war tone."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The set does not place the dead manpack radio or its clipped red-filtered flashlight, despite the locked shot requiring Shalabi close to the dead radio and the camera/light plan relying on that practical.",
+        "PRP-0007 was actively braced above the brine in the preceding shot, but the current set state omits it entirely, breaking prop and lighting continuity."
+      ],
+      "revise_instructions": [
+        "Add PRP-0007 as the dead manpack radio in the immediate foreground beside Shalabi, with its clipped red-filtered flashlight physically placed and providing the tightly flagged red pool described by Camera. Preserve prior-shot continuity by keeping the radio braced above brine and mud, rather than submerged.",
+        "If any character handles or braces PRP-0007 in frame, list it as that character's hand prop and keep the handling consistent with the locked cast or resolve the cast conflict before assigning it to Mahmoud."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The framing explicitly requires Mahmoud's red-lit hand in frame even though the locked Wave-2 cast contains only C-01. This introduces an additional visible character without a corresponding locked cast, wardrobe, or makeup entry.",
+        "The radio silhouette and red practical are specified in the camera plan but are absent from Set, so the proposed lighting and key framing object currently have no placed source."
+      ],
+      "revise_instructions": [
+        "Revise the framing to comply with the locked cast: retain Shalabi, the radio edge, and the practical red pool, but do not require Mahmoud or Mahmoud's hand to be visible unless casting is formally updated.",
+        "Coordinate with Set so PRP-0007 and its clipped red-filtered flashlight are physically placed in the frame and motivate the red grazing light on Shalabi's mouth."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The choreography places Shalabi at Mahmoud's shoulder, introducing Mahmoud into the shot despite the locked cast listing only C-01.",
+        "The action relies on the dead radio but does not establish its in-frame placement or handling after the preceding shot, where Mahmoud was bracing it above the brine."
+      ],
+      "revise_instructions": [
+        "Revise the blocking to keep C-01 alone in accordance with the locked cast, positioned beside the placed dead radio rather than at Mahmoud's shoulder, unless casting is formally updated.",
+        "Specify that Shalabi's lean is toward the radio as it is securely braced clear of the brine; retain the existing restrained crouch, whisper, and no-splash movement."
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [
+        "C-01's wardrobe preserves the locked WRD-0001 / WEAR_MUD state, period Soviet-pattern canvas webbing, bare head, and the locked PRP-0008 compass lanyard.",
+        "Captain insignia is correctly specified as three gold five-pointed stars on each shoulder strap, with a plain khaki collar and no prohibited chest eagle, red tabs, modern equipment, or flag patches."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [
+        "The makeup maintains a plausible brine-marsh wear state through damp skin, restrained mud flecks, fatigue, and wet flattened hair.",
+        "Shalabi's required recognizable facial features remain visible and intact, with no graphic injury treatment; the red practical and moonlight treatment is consistent with the intended low-key night image."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The radio state breaks immediate continuity with shot 2.4-03a: Mahmoud is previously crouched holding PRP-0007 braced above the brine, while this setup places it on a hummock without any stated intervening placement or handoff.",
+        "The new radio placement is plausible in itself and keeps it above mud and water, but the transition must be established rather than silently changing the prop's holder/state between consecutive shots."
+      ],
+      "revise_instructions": [
+        "Restore continuity by keeping PRP-0007 braced by Mahmoud just outside the camera frame, or explicitly establish that Mahmoud has placed it securely on the hummock before Shalabi's whispered response. Keep the radio, antenna, handset, and active red-filtered flashlight clear of brine and mud."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "The static 85mm MCU follows the locked camera design, preserves Shalabi's three-quarter face and readable lip-sync mouth in the crop-safe area, and retains the radio edge and contained red practical.",
+        "The exposure note keeps the image genuinely dark while preserving readable eyes and mouth, with red practical motivation and cool moon/starlight consistent with the locked night looks."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "The action is restrained, concrete, and appropriate to the beat: Shalabi stays in a low crouch, leans minimally toward the silenced radio for the whispered line, then settles into controlled outward attention.",
+        "It avoids invented combat events, splashing, or improper handling of equipment in the shallow marsh."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.013894,
-  "escalations": [],
+  "cost_usd_total": 0.167524,
+  "escalations": [
+    "design set: critic still requests revision — set: PRP-0007 is neither a locked shot prop nor carried by a character"
+  ],
+  "department_notes": [
+    "action: The locked frame description places Shalabi close to Mahmoud, but the locked cast lists only C-01; Mahmoud should remain out of frame unless casting is formally updated.",
+    "camera: PRP-0007 and its clipped red-filtered flashlight are required as the visible radio-edge practical but are absent from the locked set/prop placement; Set must formally place them in frame while keeping Mahmoud off-camera.",
+    "set: The Director's requested brief wider two-shot conflicts with the locked MCU, static 3-second shot design; retain the locked MCU and imply Mahmoud just outside frame."
+  ],
   "history": [
     {
       "ts": "2026-10-16T14:38:23.054964+00:00",
@@ -170,6 +391,104 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:24:28.951937+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:24:32.441451+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008068,
+      "tokens": 2942
+    },
+    {
+      "ts": "2026-10-18T07:24:32.682998+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.007556,
+      "tokens": 2706
+    },
+    {
+      "ts": "2026-10-18T07:24:32.969882+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.00771,
+      "tokens": 2703
+    },
+    {
+      "ts": "2026-10-18T07:24:34.227530+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.006594,
+      "tokens": 1937
+    },
+    {
+      "ts": "2026-10-18T07:24:34.884386+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.009542,
+      "tokens": 3083
+    },
+    {
+      "ts": "2026-10-18T07:24:39.845471+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.009338,
+      "tokens": 3089
+    },
+    {
+      "ts": "2026-10-18T07:25:01.628849+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera revise, action revise; cross: 3",
+      "cost_usd": 0.02992,
+      "tokens": 5952
+    },
+    {
+      "ts": "2026-10-18T07:25:06.496944+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.009438,
+      "tokens": 3227
+    },
+    {
+      "ts": "2026-10-18T07:25:06.564348+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.006606,
+      "tokens": 2059
+    },
+    {
+      "ts": "2026-10-18T07:25:07.167605+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.0089,
+      "tokens": 2978
+    },
+    {
+      "ts": "2026-10-18T07:25:25.152611+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera pass, action pass; cross: 1",
+      "cost_usd": 0.02729,
+      "tokens": 5717
+    },
+    {
+      "ts": "2026-10-18T07:25:30.826173+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.010582,
+      "tokens": 3335
+    },
+    {
+      "ts": "2026-10-18T07:25:35.731083+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass",
+      "cost_usd": 0.012086,
+      "tokens": 4195
     }
   ]
 }

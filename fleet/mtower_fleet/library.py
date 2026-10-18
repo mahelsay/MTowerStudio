@@ -119,6 +119,28 @@ class Resolved:
     extras_text: str
     problems: list[str]                  # Tier-1 library-integrity problems
     briefs: dict[str, str]               # department -> library text for the agent
+    carried_props: list[str] = field(default_factory=list)   # PRP ids carried by this shot's characters
+    beat_props: list[str] = field(default_factory=list)      # PRP ids used or carried anywhere in the beat
+
+    @property
+    def allowed_props(self) -> set[str]:
+        """Props that may appear in this shot: its own, its characters' costume props, and the beat's props."""
+        return set(self.set.props) | set(self.carried_props) | set(self.beat_props)
+
+
+@lru_cache(maxsize=64)
+def beat_props(production: str, episode: str, beat_ref: str) -> tuple[str, ...]:
+    """Every PRP id listed as an asset, or carried as a character addition, in any shot of the beat."""
+    cat = catalog(production, episode)
+    found: set[str] = set()
+    for sid in grounding.beat_shot_ids(production, episode, beat_ref):
+        d = grounding.find_shot(production, episode, sid) or {}
+        for raw in d.get("assets") or []:
+            found |= set(re.findall(r"\bPRP-\d{4}\b", str(raw)))
+        for ch in _char_entries(d):
+            info = cat.cast.get(ch.get("id"), {})
+            found |= set(re.findall(r"\bPRP-\d{4}\b", info.get("character_additions") or ""))
+    return tuple(sorted(found))
 
 
 def _char_entries(design: dict) -> list[dict]:
@@ -213,7 +235,9 @@ def resolve(cat: Catalog, design: dict) -> Resolved:
 
     return Resolved(design=design, cast=cast, wardrobe=wardrobe, set=set_, camera=camera, policy=policy,
                     wear=beat_wear, extras_text=design.get("extras") or "", problems=problems,
-                    briefs=_briefs(cat, design, cast, wardrobe, set_, looks, lens, loc, beat_wear))
+                    briefs=_briefs(cat, design, cast, wardrobe, set_, looks, lens, loc, beat_wear),
+                    carried_props=sorted({m for w in wardrobe for m in re.findall(r"\bPRP-\d{4}\b", w.additions)}),
+                    beat_props=list(beat_props(cat.production, cat.episode, str(design.get("beat") or ""))))
 
 
 def _briefs(cat, design, cast, wardrobe, set_, looks, lens, loc, wear) -> dict[str, str]:

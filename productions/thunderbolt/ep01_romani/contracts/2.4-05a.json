@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "ready_to_compose",
+  "wave_ready": 2,
   "intent": {
     "subject": "Shalabi (C-01), face in three-quarter view, readable but held in darkness by red-filtered light and starlight.",
     "action": "He points along the newly chosen compass bearing and quietly states that the enemy waits on the known route, reclaiming the initiative.",
@@ -100,6 +101,94 @@
     "pacing": "A measured pause before the gesture, then a clean, decisive hold in silence.",
     "tone_ref": "Restrained historical war realism: red-filtered command-post darkness, cold starlight, and oppressive empty terrain."
   },
+  "cast": [
+    {
+      "character_id": "C-01",
+      "character": "Captain Hamdi Shalabi",
+      "actor_id": "ACT-0001",
+      "face_model": "act0001tarek",
+      "actor_status": "locked",
+      "prominence": "lead"
+    }
+  ],
+  "crowd": [],
+  "wardrobe": [
+    {
+      "target": "C-01",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
+      "visible_details": [
+        "Bare head with short, damp black hair; no headgear",
+        "Sand-khaki 1973 cotton field jacket, rolled to forearms, with two buttoned chest pockets",
+        "Soviet-pattern khaki canvas chest rig: three closed-flap magazine pouches, plain cotton straps, simple metal buckles",
+        "Exactly three small gold five-pointed captain’s stars in a row on the near plain-khaki shoulder strap; plain collar with no tabs or badges",
+        "PRP-0008 compass remains on its lanyard at his chest or controlled in the non-pointing hand, readable as the newly used navigation tool",
+        "Wet jacket splashes and dark brine-and-mud staining on trousers above the knees; black leather boots only implied at this MCU scale",
+        "No modern kit, helmet, body armor, flag patch, chest eagle, or visible text"
+      ],
+      "notes": "Continue directly from 2.4-05: same mud-wet uniform and damp bare-headed appearance. At MCU, prioritize captain stars, lanyarded compass, period canvas rig, rolled sleeves, and wet fabric sheen; his extended pointing arm must not obscure the rank or chest rig."
+    }
+  ],
+  "makeup": [
+    {
+      "target": "C-01",
+      "skin_state": "Medium-olive face cold-damp with sweat and brine sheen across brow, nose, cheekbones and exposed ear; sparse dark mud flecks at jawline, neck and lower cheeks; restrained fatigue shadows beneath narrow eyes. Mud-splashed hands and rolled forearms, with red-filtered light catching the wet sheen while cold starlight leaves the far cheek in shadow.",
+      "hair_state": "Bare-headed short black hair remains neatly side-parted, wet and lightly flattened at the crown; a few damp strands cling at the high forehead. Thin upturned handlebar mustache is damp and exact in shape.",
+      "injuries": [],
+      "notes": "Keep his long narrow face, hollow cheeks, intense dark-brown eyes and signature mustache fully recognizable in three-quarter profile; no blood, wounds, or heavy grime that obscures lip-sync."
+    }
+  ],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [],
+    "hand_props": [
+      "PRP-0008"
+    ],
+    "dressing": [
+      "Thin broken white salt crust over black mud at the firmer marsh edge",
+      "Shallow mid-shin brine sheets with faint cold sky reflections and halted boot prints",
+      "Fresh arcing turn tracks disappearing into the unlit flat",
+      "Sparse low salt-marsh scrub silhouettes, with no landmarks to the horizon",
+      "A period metal flashlight fitted with a red filter, held low by an unseen Egyptian commando immediately camera-right and just behind Shalabi; kept outside the MCU frame"
+    ],
+    "set_state": "Shalabi stands on a firmer salt-crust edge above shallow mid-shin brine, actively using PRP-0008 while the halted column's wet prints and abrupt route-change track remain visible behind him.",
+    "notes": "The unseen operator aims the red-filtered flashlight upward from camera-right at Shalabi’s lower cheek, jaw, and pointing-side forearm, creating a localized restrained red glow while cold moonlight and starlight retain the dark blue-black marsh and a thin wet rim; no visible practical enters frame."
+  },
+  "camera": {
+    "shot_size": "MCU",
+    "lens": "LENS_85_PORTRAIT",
+    "movement": "static",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Cold blue-black moon and starlight remain the dominant high rear-side key from camera-left, giving a thin wet rim and faint broken reflections. Coordinate with Set to place a hooded red-filtered flashlight just below and camera-right at the frame edge, angled up toward Shalabi’s near cheek and mouth; its muted red side/up-light stays tightly localized and falls away before his extended arm and the empty plain.",
+    "exposure_note": "Hold the marsh and background 2–3 stops under Shalabi’s moonlit rim; expose the localized red practical only enough to retain natural skin texture, clear eyes and lip-sync mouth movement without lifting the surrounding black-blue night.",
+    "framing_note": "Generate 16:9 for the 2.39:1 crop: keep Shalabi’s three-quarter face, eyes, speaking mouth, compass lanyard, and pointing hand within the central middle 75% height band. Let the arm lead toward frame-right darkness while preserving an unbroken dark bearing beyond the gesture."
+  },
+  "action": {
+    "applies": true,
+    "choreography": "Shalabi holds steady at the marsh edge, pauses after the off-screen hand sign, then turns his torso three-quarters and makes one controlled, low-forward pointing gesture into the darkness while delivering the line. His compass remains as the locked lanyard costume prop, settling against his chest rig without being raised or manipulated.",
+    "weapon_handling": "",
+    "movement": "Stationary, balanced stance in shallow mid-shin brine and mud; no step, splash, or wading action during the 7-second hold.",
+    "beats": [
+      "Stillness after the hand sign",
+      "Quiet breath and three-quarter turn",
+      "Delivers line low and certain",
+      "One deliberate arm extends on the new bearing",
+      "Holds the pointing line into darkness"
+    ],
+    "safety_note": "Keep the footing planted on the firmer marsh edge; shallow brine remains mid-shin and the gesture does not disturb the water."
+  },
+  "generation_policy": {
+    "lip_sync": "required",
+    "video_model": "default",
+    "face_pass": true
+  },
   "critic": [
     {
       "target_field": "intent",
@@ -122,10 +211,86 @@
         "The restrained historical-war realism, red-filtered light, starlight, and empty terrain are consistent with the requested grounded tone."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The shot’s readable red-filtered facial light is motivated by a flashlight, but Set places no red-filtered flashlight or specifies an off-screen practical/source position. This leaves the camera department’s stated localized red glow without a placed set element, contrary to the requirement that a prop motivating light be placed by Set."
+      ],
+      "revise_instructions": [
+        "Add a period-plausible red-filtered flashlight as a specifically placed off-screen or edge-of-frame practical source, with its operator/location defined so it can cast the localized low upward-side red glow on Shalabi while remaining unseen in the MCU. Do not add it as a new carried prop for Shalabi; PRP-0008 remains his locked carried compass."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The camera lighting plan relies on a localized red-filtered flashlight glow, but the Set output does not place or motivate that practical source. The source must be concretely coordinated with Set before this lighting instruction is production-ready."
+      ],
+      "revise_instructions": [
+        "After Set defines the off-screen/edge-of-frame red-filtered flashlight placement, specify that the muted red side/up-light is cast from that exact practical position and remains localized to Shalabi’s readable face and mouth. Preserve the moon/starlight-dominant low-key exposure and darkness beyond the gesture."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.01769,
+  "cost_usd_total": 0.114406,
   "escalations": [],
+  "department_notes": [
+    "wardrobe: The Director’s requested over-the-shoulder bearing view conflicts with the locked static MCU framing; retain the locked MCU and show the gesture entering the darkness without changing coverage.",
+    "action: The direction's requested over-the-shoulder bearing view conflicts with the locked static MCU framing and should not be introduced within this shot.",
+    "action: The director's red-filtered flashlight conflicts with the preceding shot's locked natural moonlight-and-starlight-only lighting continuity; no visible or implied flashlight source should be added.",
+    "makeup: The Director's requested shift into an over-the-shoulder bearing view conflicts with the locked static MCU framing; retain the locked MCU.",
+    "set: The Director’s requested shift into an over-the-shoulder bearing view conflicts with the locked static MCU framing; retain the MCU and let Shalabi’s extended arm lead into the darkness within frame.",
+    "camera: The locked LOOK_NIGHT_MOON and previous-shot continuity specify moonlight and starlight only, which conflicts with the locked shot description’s red-filtered flashlight; retain the practical only as a very localized motivated source."
+  ],
   "history": [
     {
       "ts": "2026-10-16T17:27:39.066462+00:00",
@@ -168,6 +333,76 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:27:58.325287+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:28:01.922812+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008822,
+      "tokens": 3231
+    },
+    {
+      "ts": "2026-10-18T07:28:02.348715+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.006298,
+      "tokens": 2121
+    },
+    {
+      "ts": "2026-10-18T07:28:02.843866+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.00796,
+      "tokens": 2960
+    },
+    {
+      "ts": "2026-10-18T07:28:03.491651+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.009184,
+      "tokens": 3064
+    },
+    {
+      "ts": "2026-10-18T07:28:03.644053+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.009596,
+      "tokens": 3302
+    },
+    {
+      "ts": "2026-10-18T07:28:12.653455+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera revise, action pass; cross: 2",
+      "cost_usd": 0.017288,
+      "tokens": 4888
+    },
+    {
+      "ts": "2026-10-18T07:28:18.977436+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011518,
+      "tokens": 3615
+    },
+    {
+      "ts": "2026-10-18T07:28:19.077438+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.010512,
+      "tokens": 3312
+    },
+    {
+      "ts": "2026-10-18T07:28:27.127675+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass",
+      "cost_usd": 0.015538,
+      "tokens": 4753
     }
   ]
 }

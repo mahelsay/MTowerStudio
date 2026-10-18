@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "needs_review",
+  "wave_ready": 2,
   "intent": {
     "subject": "Sayed (C-02), crouched beside the silenced radio set, face held in dark three-quarter view.",
     "action": "He quietly voices his fear to Shalabi that the enemy may be waiting for them.",
@@ -104,6 +105,93 @@
     "pacing": "Slow, suspended beats with a brief whispered line and no release afterward.",
     "tone_ref": "Grounded nocturnal war realism: oppressive silence, mud, darkness, and the sense of danger waiting beyond the reeds."
   },
+  "cast": [
+    {
+      "character_id": "C-02",
+      "character": "Sergeant Sayed",
+      "actor_id": "ACT-0002",
+      "face_model": "act0002hazem",
+      "actor_status": "locked",
+      "prominence": "lead"
+    }
+  ],
+  "crowd": [],
+  "wardrobe": [
+    {
+      "target": "C-02",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "sergeant's rank: three khaki cloth chevrons on the upper sleeve, plain shoulder straps and plain collar",
+      "visible_details": [
+        "Bare head with short black hair; no helmet or headgear",
+        "Sand-khaki 1973 cotton field jacket, wet and mud-splashed across the shoulder, sleeve and chest in the red-filtered side light",
+        "Sleeves rolled to the forearms",
+        "Soviet-pattern khaki canvas chest rig: closed-flap magazine pouches, plain cotton straps and small metal buckles; no modern tactical vest",
+        "Plain khaki collar and plain shoulder straps; no chest eagle badge or red collar tabs",
+        "Three khaki cloth sergeant chevrons on the upper sleeve, kept readable as he crouches",
+        "Mud-and-brine-darkened trousers visibly wet above the knees; only a restrained glimpse below the jacket at MCU scale"
+      ],
+      "notes": "Match the preceding radio insert: Sayed remains crouched beside the now-dark set, uniform wet rather than salt-crusted; red flashlight catches damp fabric texture while cool starlight outlines his hair and shoulder. Chest rig stays clear of the shallow brine and mud."
+    }
+  ],
+  "makeup": [
+    {
+      "target": "C-02",
+      "skin_state": "Sun-darkened weathered face damp with cold sweat; irregular marsh mud flecks along lower cheeks, jaw and neck, with a wet brine sheen on nose, brow and exposed ear. Under-eye shadows and deep forehead lines read as sleepless strain; keep mouth and thick mustache clear enough for lip-sync.",
+      "hair_state": "Bare-headed short receding black hair, wet and slightly flattened, with restrained grey at both temples; a few damp strands cling at the hairline. Thick bushy black mustache damp but intact in its signature shape.",
+      "injuries": [],
+      "notes": "Preserve his broad round heavy-jawed face, broad nose, small deep-set eyes and bushy eyebrows. Red-filtered flashlight catches one cheek, lips and moustache edge; cool moon/starlight gives only a faint wet rim, leaving the far side in shadow."
+    }
+  ],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [
+      "PRP-0007"
+    ],
+    "hand_props": [],
+    "dressing": [
+      "thin broken white salt crust over black mud",
+      "mid-shin shallow brine with small still reflective patches",
+      "low wet mud ridges around Sayed's crouched boots",
+      "generic period red-filtered flashlight placed low beside the radio, aimed upward without revealing the wider marsh"
+    ],
+    "set_state": "PRP-0007 is environmental dressing, braced just above the mud with its dial fully dark after the silence order; the surrounding salt crust is disturbed only by fresh crouching and halted-footprint impressions.",
+    "notes": "Keep the frame claustrophobic: wet black mud, salt glare and a narrow red lift on Sayed's face against blue-black starlit marsh; no visible company, vehicles, or horizon detail."
+  },
+  "camera": {
+    "shot_size": "MCU",
+    "lens": "LENS_85_PORTRAIT",
+    "movement": "static",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Cool blue-black moonlight and starlight provide a very faint high rear-side rim along Sayed’s mud-wet hair, cheek and shoulder; a hooded red-filtered flashlight held low beside the silenced radio gives a restrained upward-side graze across his three-quarter face and mouth. Keep the radio faceplate dark after the switch-off, with only a subdued red spill catching its near edge and Sayed’s fingers.",
+    "exposure_note": "Hold the marsh and background near black, exposing Sayed roughly 1.5–2 stops under a normal night portrait while retaining a readable eye glint, lip shape and cheek contour; preserve the red practical without clipping, with fine 500T grain in the shadows.",
+    "framing_note": "Generate 16:9 for the 2.39:1 crop: keep Sayed’s eyes, visible speaking mouth, near hand and the dark radio edge within the central middle 75% height band. Frame Sayed alone in a tight MCU, three-quarter face turned toward off-frame Shalabi; leave the soft reed-and-marsh background unreadable and empty of other figures."
+  },
+  "action": {
+    "applies": true,
+    "choreography": "Sayed remains crouched low beside the switched-off radio, keeping his body still and contained; he shifts only his eyes toward nearby off-frame Shalabi and whispers the warning with his mouth visible in three-quarter view. The halted company remains entirely off-frame.",
+    "weapon_handling": "",
+    "movement": "No travel or weapon action; only a minimal eye shift and controlled whispered speech while crouched in shallow marsh mud.",
+    "beats": [
+      "Hold crouched beside the dark radio.",
+      "Keep shoulders low and still, listening into the silence.",
+      "Shift eyes toward Shalabi at frame edge without turning the head.",
+      "Whisper the warning, mouth visible and breath restrained.",
+      "Settle back into watchful stillness."
+    ],
+    "safety_note": "Crouched footing is in shallow mid-shin mud/brine; keep the radio held clear of standing water and avoid any deeper-pocket kneel."
+  },
+  "generation_policy": {
+    "lip_sync": "required",
+    "video_model": "default",
+    "face_pass": true
+  },
   "critic": [
     {
       "target_field": "intent",
@@ -127,10 +215,127 @@
         "The tone reference is consistent with the Tina Plain night-marsh setting and the scene’s tense, hushed mood."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The required silenced radio from the preceding insert is described only as generic dressing while the formal props list is empty. PRP-0007 must be explicitly placed and carried forward as the now-dark radio set for continuity."
+      ],
+      "revise_instructions": [
+        "Add PRP-0007 to the set props list and identify it as the raised, switched-off radio beside Sayed; retain its placement clear of brine and mud. The flashlight may remain placed dressing/practical unless Sayed handles it."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The lighting plan omits the locked red-filtered flashlight as a facial source and instead attributes facial readability solely to moon/starlight. The shot design requires both red-filtered flashlight and starlight, with the mouth readable for lip-sync."
+      ],
+      "revise_instructions": [
+        "Revise the light and exposure notes to include the low hooded red-filtered flashlight as a restrained warm/red grazing practical on Sayed's lips, lower cheek, moustache edge and hands, while preserving the cool moon/starlight rim and overall dark exposure."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The shot includes concrete on-camera action: Sayed quietly voices danger to Shalabi and turns only his eyes toward him. Marking action as not applicable leaves the required performance beat unplanned."
+      ],
+      "revise_instructions": [
+        "Set applies to true and specify restrained choreography: Sayed stays crouched by the dark radio, shifts only his eyes toward off-frame Shalabi, and whispers the warning with his mouth visible. State that no weapon handling occurs and that the halted company remains off-frame."
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The locked cast contains only C-02, and the action/set keep Shalabi and the halted company off-frame. The camera light and framing notes nevertheless permit and call for a visible sliver/soft presence of Shalabi at frame edge, which would introduce an unlisted on-screen character without wardrobe or makeup coverage."
+      ],
+      "revise_instructions": [
+        "Remove the visible Shalabi/frame-edge presence from the lighting and framing plan. Keep Sayed alone in frame, with his eyeline directed toward off-frame Shalabi; retain the readable mouth, dark three-quarter view, radio edge, and restrained red practical."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The lighting description says the red-filtered flashlight is 'held low,' while Set establishes it as placed low beside the radio. This creates an unresolved continuity/prop-handling conflict: a held flashlight would require an identified holder and, if Sayed holds it, a hand-prop/action acknowledgment."
+      ],
+      "revise_instructions": [
+        "Match Set: specify that the hooded red-filtered flashlight is placed low beside the radio and aimed upward, producing the restrained red facial graze. Do not imply that Sayed or an unseen person is holding it."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.01492,
-  "escalations": [],
+  "cost_usd_total": 0.157088,
+  "escalations": [
+    "design set: critic still requests revision — set: PRP-0007 is neither a locked shot prop nor carried by a character",
+    "design camera: critic still requests revision — The lighting description says the red-filtered flashlight is 'held low,' while Set establishes it as placed low beside the radio. This creates an unresolved continuity/prop-handling conflict: a held flashlight would require an identified holder and, if Sayed holds it, a hand-prop/action acknowledgme"
+  ],
+  "department_notes": [
+    "critic: Director coverage calls for Shalabi to appear at frame edge in a restrained two-shot, but the locked Wave-2 cast contains only C-02 and the locked camera design is an MCU. The camera/action correctly retain Shalabi off-frame under locked-design precedence.",
+    "critic: Camera describes the red-filtered flashlight as held low, whereas Set places it low beside the radio; this must be reconciled so prop placement and implied handling agree."
+  ],
   "history": [
     {
       "ts": "2026-10-16T15:19:38.702454+00:00",
@@ -173,6 +378,111 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:48.486913+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:50.391948+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.003006,
+      "tokens": 1371
+    },
+    {
+      "ts": "2026-10-18T07:25:51.915326+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.00712,
+      "tokens": 2640
+    },
+    {
+      "ts": "2026-10-18T07:25:52.144985+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.006352,
+      "tokens": 2388
+    },
+    {
+      "ts": "2026-10-18T07:25:53.545512+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.008442,
+      "tokens": 2785
+    },
+    {
+      "ts": "2026-10-18T07:25:54.187684+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.008656,
+      "tokens": 2628
+    },
+    {
+      "ts": "2026-10-18T07:26:01.924637+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011428,
+      "tokens": 3110
+    },
+    {
+      "ts": "2026-10-18T07:26:13.626967+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera revise, action revise; cross: 1",
+      "cost_usd": 0.018658,
+      "tokens": 4449
+    },
+    {
+      "ts": "2026-10-18T07:26:17.145606+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.0048,
+      "tokens": 1636
+    },
+    {
+      "ts": "2026-10-18T07:26:17.981049+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.00716,
+      "tokens": 2572
+    },
+    {
+      "ts": "2026-10-18T07:26:18.045219+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.008296,
+      "tokens": 2856
+    },
+    {
+      "ts": "2026-10-18T07:26:29.345934+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera revise, action pass; cross: 1",
+      "cost_usd": 0.019034,
+      "tokens": 4649
+    },
+    {
+      "ts": "2026-10-18T07:26:34.549992+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.008192,
+      "tokens": 2688
+    },
+    {
+      "ts": "2026-10-18T07:26:35.885985+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011068,
+      "tokens": 3074
+    },
+    {
+      "ts": "2026-10-18T07:26:48.057891+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera revise, action pass; cross: 2",
+      "cost_usd": 0.019956,
+      "tokens": 4718
     }
   ]
 }

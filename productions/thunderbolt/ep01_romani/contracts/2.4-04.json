@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "ready_to_compose",
+  "wave_ready": 2,
   "intent": {
     "subject": "A finger on the power switch of a 1970s field radio.",
     "action": "The finger clicks the switch off and the illuminated dial dies.",
@@ -97,6 +98,53 @@
     "pacing": "Slow, watchful setup followed by one crisp mechanical action and a suspended silent beat.",
     "tone_ref": "Restrained historical war realism: damp darkness, muffled menace, and the sudden absence of human-made light."
   },
+  "cast": [],
+  "crowd": [],
+  "wardrobe": [],
+  "makeup": [],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [],
+    "hand_props": [
+      "PRP-0007"
+    ],
+    "dressing": [
+      "Thin white salt crust broken by black mud",
+      "shallow mirror-like brine sheets at ground level",
+      "sparse low salt-marsh scrub reduced to soft dark silhouettes",
+      "wet khaki webbing edge behind the radio, damp and mud-specked"
+    ],
+    "set_state": "PRP-0007 is braced low against unseen soldier webbing but held clear of brine and mud; its dim red-filtered dial is initially illuminated, then the operator’s finger switches it off, leaving the faceplate dark.",
+    "notes": "Extreme macro framing isolates the period radio switch, red-lit dial, coiled handset cord, and one naturally proportioned mud-damp finger; retain only a soft moonlit blue-black marsh reflection beyond the shallow focus."
+  },
+  "camera": {
+    "shot_size": "INSERT",
+    "lens": "LENS_MACRO_DETAIL",
+    "movement": "static",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Use only a faint cool blue-black moon-and-starlight rim across the wet knuckle, radio casing and raised antenna base; let the pre-click dial’s own dim red instrument illumination graze the fingertip, then vanish completely at switch-off.",
+    "exposure_note": "Hold the moonlit radio body 1.5–2 stops under middle gray: the live red dial is readable without blooming, and after it dies retain only a barely legible cool rim on the switch and finger silhouette.",
+    "framing_note": "100mm macro extreme close-up, static; keep the switch, fingertip, illuminated/dead dial and the small mechanical click action within the central 75% crop band, with shallow focus locked on the switch plane."
+  },
+  "action": {
+    "applies": false,
+    "choreography": "",
+    "weapon_handling": "",
+    "movement": "",
+    "beats": [],
+    "safety_note": ""
+  },
+  "generation_policy": {
+    "lip_sync": "avoid",
+    "video_model": "default",
+    "face_pass": true
+  },
   "critic": [
     {
       "target_field": "intent",
@@ -120,10 +168,34 @@
         "Pacing and tone are coherent with the night-marsh setting and tense, covert mood: watchful anticipation, a crisp shutdown, and a suspended silent aftermath."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [
+        "PRP-0007 is correctly identified as the sole hand prop and is braced against webbing while kept clear of brine and mud, matching the marsh carry rule and previous-shot state.",
+        "The described red-lit dial, switch-off action, wet webbing, salt crust, shallow brine, and subdued marsh silhouettes support the covert night insert without adding period-inappropriate or conflicting dressing.",
+        "The isolated macro staging appropriately avoids introducing an unapproved visible character while still supplying the required finger action."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "The camera specification matches the locked INSERT, LENS_MACRO_DETAIL, static movement, night looks, and 16:9 generation / 2.39:1 delivery requirements.",
+        "The exposure plan keeps the night image dark but readable, with the red dial legible before switch-off and a restrained moonlit rim retaining the switch and finger silhouette afterward.",
+        "Framing places the switch, fingertip, dial, and mechanical action within the crop-safe central band and supports the intended crisp click followed by a held, dark faceplate."
+      ],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.01339,
+  "cost_usd_total": 0.040952,
   "escalations": [],
+  "department_notes": [
+    "set: The locked design lists no cast while the action requires an unseen soldier’s finger; show only the hand entering frame, with no identifiable performer.",
+    "camera: The Director’s requested clipped red-filtered flashlight conflicts with LOOK_NIGHT_MOON’s requirement for night exteriors lit only by moonlight and starlight; retain only the radio dial’s motivated self-illumination."
+  ],
   "history": [
     {
       "ts": "2026-10-16T15:04:47.745253+00:00",
@@ -166,6 +238,55 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:35.740910+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:35.741466+00:00",
+      "agent": "wardrobe",
+      "action": "no wardrobe work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:35.741601+00:00",
+      "agent": "makeup",
+      "action": "no makeup work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:35.744473+00:00",
+      "agent": "action",
+      "action": "no action work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:25:38.855131+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.007234,
+      "tokens": 2805
+    },
+    {
+      "ts": "2026-10-18T07:25:41.414981+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.00846,
+      "tokens": 2714
+    },
+    {
+      "ts": "2026-10-18T07:25:48.456068+00:00",
+      "agent": "critic",
+      "action": "production meeting: set pass, camera pass",
+      "cost_usd": 0.011868,
+      "tokens": 3278
     }
   ]
 }

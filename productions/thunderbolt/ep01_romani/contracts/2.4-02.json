@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "needs_review",
+  "wave_ready": 2,
   "intent": {
     "subject": "Corporal Mahmoud (C-04), the radio operator, in profile with taped wire-rimmed glasses.",
     "action": "He lifts his gaze from the decoded note and whispers the warning, his lips slightly parted.",
@@ -106,6 +107,87 @@
     "pacing": "Slow, suspended hold with no cut after the whispered warning.",
     "tone_ref": "Grounded wartime dread—red practical glow swallowed by marsh-black shadow."
   },
+  "cast": [
+    {
+      "character_id": "C-04",
+      "character": "Corporal Mahmoud",
+      "actor_id": "ACT-0004",
+      "face_model": "act0004sherif",
+      "actor_status": "locked",
+      "prominence": "not_visible"
+    }
+  ],
+  "crowd": [],
+  "wardrobe": [
+    {
+      "target": "C-04",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "short military haircut, backpack field radio with a whip antenna (PRP-0007); wire-rimmed glasses taped at the hinge",
+      "visible_details": [
+        "Taped wire-rimmed glasses, with the red-filtered torch glinting on the taped hinge and thin rims.",
+        "Bare-headed short black military hair, damp and flattened at the temples; curled mustache and light stubble remain readable in profile.",
+        "Sand-khaki cotton jacket with rolled forearm sleeve and a wet mud/brine splash at the visible chest and shoulder.",
+        "One edge of the Soviet-pattern khaki canvas chest rig: closed-flap pouch, plain cotton strap and dull metal buckle only; no modern tactical equipment.",
+        "PRP-0007 period manpack radio remains strapped high on his back, only a dark shoulder-side silhouette/strap or whip-base glimpse if it enters the tight frame."
+      ],
+      "notes": "Continue WEAR_MUD from 2.4-01: jacket damp and irregularly mud-splashed; lower soaked trousers and boots are outside this close-up. No rank insignia is applicable to Corporal Mahmoud."
+    }
+  ],
+  "makeup": [
+    {
+      "target": "C-04",
+      "skin_state": "Light wheat skin damp with exertion, freckles visible across nose and cheekbone in the low red glow; restrained brine sheen on forehead, nose, upper lip and jaw, with fine dark mud flecks at the lower cheek and jawline. No wounds; tired shadow beneath the visible eye.",
+      "hair_state": "Bare-headed short black military-cut hair, damp and flattened at the temple and hairline; curled mustache and light stubble wet but intact. Preserve taped wire-rimmed glasses and their red glint.",
+      "injuries": [],
+      "notes": "Keep the profile mostly swallowed by moon-black shadow, with only a narrow red practical reveal on the lips, cheek, glasses tape and nose edge; no clean studio fill. Mud/brine wear must read as fresh and wet, consistent with the soaked march."
+    }
+  ],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [],
+    "hand_props": [],
+    "dressing": [
+      "thin broken white salt crust over black mud",
+      "shallow brine sheen and small reflective puddles at the crouched marsh edge",
+      "sparse low salt-marsh vegetation silhouettes, kept indistinct in shadow"
+    ],
+    "set_state": "Mahmoud crouches at the firm marsh edge, holding the blank scrap low in one hand and the red-filtered flashlight angled beneath it; PRP-0007 remains strapped high on his back above the mid-shin brine.",
+    "notes": "Keep all surrounding terrain featureless to the horizon and nearly black; no environmental clutter enters the tight frame. The red practical glow is limited to the paper, fingertips, lower profile, and taped glasses."
+  },
+  "camera": {
+    "shot_size": "CU",
+    "lens": "LENS_85_PORTRAIT",
+    "movement": "static",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Motivated solely by the small red-filtered flashlight angled up beneath Mahmoud’s decoded paper: a dim, tightly contained crimson under-key grazes his lower cheek, lips, nose bridge, fingertips and taped wire-rim glasses. Keep the locked cool blue-black moon/starlight as a faint rear three-quarter rim on hair, shoulder and radio silhouette, with no added fill; all marsh beyond him falls to near-black.",
+    "exposure_note": "Expose for readable red detail on the paper, mouth and glasses while holding deep shadow; retain a faint blue moon rim at roughly 2–3 stops below the red practical, with no lifted blacks or artificial-looking facial fill.",
+    "framing_note": "Generate 16:9 for the 2.39:1 crop; hold Mahmoud’s profile, taped glasses, whispering mouth, raised eyeline, both hands, note and red torch spill within the central middle 75% height. Use shallow 85mm focus on the near eye/glasses, lips and paper edge; preserve mouth shape clearly enough for lip-sync while his face remains mostly shadowed."
+  },
+  "action": {
+    "applies": true,
+    "choreography": "Mahmoud remains crouched and balanced at the firm marsh edge, keeping the radio high on his back and the decoded scrap low in one hand. He angles the red-filtered flashlight up beneath the paper, then raises only his eyes into the darkness and releases the warning as a breath-thin whisper.",
+    "weapon_handling": "",
+    "movement": "Minimal upper-body action only; no wading, turning, or visible repositioning.",
+    "beats": [
+      "Crouched profile holds steady in deep shadow.",
+      "Paper stays low; red-filtered beam pools tightly on its surface.",
+      "Glasses catch a brief red glint as his eyes lift.",
+      "His lips part for the quiet warning without turning his head."
+    ],
+    "safety_note": "Keep his crouch on firm salt-crusted mud at the marsh edge; avoid a slip into deeper brine and keep the radio clear of water."
+  },
+  "generation_policy": {
+    "lip_sync": "required",
+    "video_model": "default",
+    "face_pass": false
+  },
   "critic": [
     {
       "target_field": "intent",
@@ -128,10 +210,122 @@
         "The visual language of a red practical source consumed by deep marsh shadow is consistent with a grounded historical war drama at night."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The decoding scrap and red-filtered flashlight are handled by Mahmoud in this shot, but are listed only as dressing rather than hand props. The definition of done requires any prop an actor uses to be identified as a hand prop."
+      ],
+      "revise_instructions": [
+        "Add the unmarked decoding scrap and the small period red-filtered flashlight to hand_props, while retaining PRP-0007 as Mahmoud's locked carried radio. Keep the paper free of legible writing and the flashlight’s red spill tightly confined as specified."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The decoding scrap and small red-filtered flashlight are explicitly placed as items Mahmoud is holding and are essential to the shot, but neither is listed in hand_props. The definition of done requires any prop an actor uses in the shot to be a hand prop."
+      ],
+      "revise_instructions": [
+        "Add the blank decoding scrap and the small period-plausible red-filtered flashlight to hand_props, and identify them in the set prop placement as held low by Mahmoud. Keep the scrap free of legible writing or symbols and retain PRP-0007 high on his back above the brine."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The set explicitly provides an empty hand_props list even though Mahmoud actively holds and uses both the decoded paper scrap and the small red-filtered flashlight. Under the definition of done, props an actor uses in the shot must be listed as hand props."
+      ],
+      "revise_instructions": [
+        "Add the decoded scrap of paper and the small period-plausible red-filtered flashlight to hand_props, and retain their stated placement: paper low in one hand and flashlight angled beneath it. Keep any paper markings non-legible and free of scripture or readable text."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.015206,
-  "escalations": [],
+  "cost_usd_total": 0.129218,
+  "escalations": [
+    "design set: critic still requests revision — The set explicitly provides an empty hand_props list even though Mahmoud actively holds and uses both the decoded paper scrap and the small red-filtered flashlight. Under the definition of done, props an actor uses in the shot must be listed as hand props.; Add the decoded scrap of paper and the sma"
+  ],
+  "department_notes": [
+    "makeup: The cast library specifies Mahmoud's signature wavy light-brown hair worn longer and tousled, while the locked commando design requires short black military hair; retain the locked short black hair.",
+    "wardrobe: The locked CU/profile darkness and face-visible False conflict with the director’s request for a restrained medium close-up and clearly mouth-visible lip-sync; preserve the locked tight shadowed profile while keeping the lips readable in red spill.",
+    "camera: The Director’s requested progression from a tight profile insert to a restrained medium close-up conflicts with the locked static CU size; retain the locked close-up throughout.",
+    "action: The Director's requested shift to a restrained medium close-up conflicts with the locked static CU and cannot be executed in this shot.",
+    "set: The Director’s requested restrained medium close-up conflicts with the locked CU framing; retain the locked CU.",
+    "critic: Set's empty hand_props inventory conflicts with the action and camera plans, both of which depend on Mahmoud holding the paper and operating the red-filtered flashlight."
+  ],
   "history": [
     {
       "ts": "2026-10-16T14:07:59.164789+00:00",
@@ -174,6 +368,83 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:22:01.371799+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:22:05.655428+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.007574,
+      "tokens": 2879
+    },
+    {
+      "ts": "2026-10-18T07:22:05.656726+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008388,
+      "tokens": 3146
+    },
+    {
+      "ts": "2026-10-18T07:22:06.407804+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.008016,
+      "tokens": 2940
+    },
+    {
+      "ts": "2026-10-18T07:22:06.538670+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.006714,
+      "tokens": 2121
+    },
+    {
+      "ts": "2026-10-18T07:22:09.268372+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011982,
+      "tokens": 3515
+    },
+    {
+      "ts": "2026-10-18T07:22:21.212684+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera pass, action pass; cross: 2",
+      "cost_usd": 0.02079,
+      "tokens": 5175
+    },
+    {
+      "ts": "2026-10-18T07:22:26.596038+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.010366,
+      "tokens": 3443
+    },
+    {
+      "ts": "2026-10-18T07:22:33.090803+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera pass, action pass; cross: 1",
+      "cost_usd": 0.013646,
+      "tokens": 4431
+    },
+    {
+      "ts": "2026-10-18T07:22:38.132455+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.010286,
+      "tokens": 3447
+    },
+    {
+      "ts": "2026-10-18T07:22:46.674268+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera pass, action pass; cross: 1",
+      "cost_usd": 0.01625,
+      "tokens": 4689
     }
   ]
 }
