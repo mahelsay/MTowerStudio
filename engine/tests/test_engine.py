@@ -480,7 +480,14 @@ class LoraPipelineTests(unittest.TestCase):
         self.assertEqual(row[2 * 4 + 3], 255)   # far left: keep
 
     def test_solo_shot_keeps_single_pass_with_face_model(self):
-        plan = jobs.plan_keyframes(self.lib, self.prod, "02_act_two", ["2.5-05"], "draft", 1)
+        import copy
+        lib = copy.deepcopy(self.lib)  # every cast actor has a face model (independent of live status; no leak)
+        for c in self.prod.casting["cast"].values():
+            a = lib.actors.get(c.get("actor"))
+            if a:
+                a.update({"status": "lora_trained", "lora": {**(a.get("lora") or {}), "trigger": "testtrigger",
+                                                             "url": "https://example.invalid/face.safetensors"}})
+        plan = jobs.plan_keyframes(lib, self.prod, "02_act_two", ["2.5-05"], "draft", 1)
         self.assertEqual([j.kind for j in plan], ["keyframe"])
         self.assertEqual(plan[0].model_key, "image_lora")
 
