@@ -4,7 +4,8 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "prepped",
+  "status": "ready_to_compose",
+  "wave_ready": 2,
   "intent": {
     "subject": "Corporal Mahmoud and Captain Shalabi wading together through the marsh, with Mahmoud carrying the manpack radio high on his back.",
     "action": "They move side by side through the water as Mahmoud listens intently to the handset pressed to his ear.",
@@ -93,11 +94,126 @@
     }
   ],
   "direction": {
-    "coverage": "Wide moonlit two-shot to establish the marsh, then a restrained medium tracking profile and tight handset reaction insert.",
-    "blocking": "Mahmoud and Shalabi wade shoulder-to-shoulder through waist-deep reeds, Mahmoud keeping the radio above water as Shalabi scans ahead.",
-    "performance_note": "Mahmoud goes still to listen, eyes sharpened; Shalabi registers the reply with controlled, wordless concern.",
-    "pacing": "Slow, deliberate movement interrupted by a brief held silence as the coded transmission arrives.",
-    "tone_ref": "Grounded nocturnal war realism: muted, suspenseful, and unsentimental."
+    "coverage": "Medium 50mm lateral tracking two-shot, holding both men against the empty moonlit salt marsh as the handset reply lands.",
+    "blocking": "Mahmoud and Shalabi wade side by side through mid-shin brine, Mahmoud keeping the manpack high and handset sealed to his ear while Shalabi scans ahead.",
+    "performance_note": "Mahmoud goes still with concentrated restraint at the coded reply; Shalabi catches the shift without breaking his forward vigilance.",
+    "pacing": "Slow, measured advance with a brief tightening pause on the incoming transmission.",
+    "tone_ref": "Hushed, grounded nocturnal war realism—moon-silvered isolation and contained dread."
+  },
+  "cast": [
+    {
+      "character_id": "C-04",
+      "character": "Corporal Mahmoud",
+      "actor_id": "ACT-0004",
+      "face_model": "act0004sherif",
+      "actor_status": "locked",
+      "prominence": "lead"
+    },
+    {
+      "character_id": "C-01",
+      "character": "Captain Hamdi Shalabi",
+      "actor_id": "ACT-0001",
+      "face_model": "act0001tarek",
+      "actor_status": "locked",
+      "prominence": "lead"
+    }
+  ],
+  "crowd": [],
+  "wardrobe": [
+    {
+      "target": "C-04",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "short military haircut, backpack field radio with a whip antenna (PRP-0007); wire-rimmed glasses taped at the hinge",
+      "visible_details": [
+        "Bare head with short black military haircut; wire-rimmed glasses with tape at one hinge, catching a faint moon edge.",
+        "Sand-khaki cotton jacket with two buttoned chest pockets, sleeves rolled to the forearms; Soviet-pattern khaki canvas chest rig with three closed-flap magazine pouches, cotton straps and plain metal buckles.",
+        "PRP-0007 period manpack radio strapped high on his back, above the waterline; whip antenna visible; handset held firmly to his ear.",
+        "Aluminium canteen in canvas cover on web belt; no modern tactical equipment.",
+        "Black leather boots and lower trouser legs saturated only to mid-shin; dark mud-and-brine smears, wet splash marks rising irregularly to the knees and slightly above from movement."
+      ],
+      "notes": "WEAR_MUD reads as damp, dark lower legs and restrained wet splatter on jacket hem and trousers; shallow-water movement only, with no above-knee soaking or generalized dripping. First shot of beat: establish this wear state."
+    },
+    {
+      "target": "C-01",
+      "wardrobe_id": "WRD-0001",
+      "wear_state": "WEAR_MUD",
+      "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
+      "visible_details": [
+        "Bare head with short black hair; plain khaki collar with no tabs, badges or chest eagle.",
+        "Exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, legible in the medium side-tracking view.",
+        "Sand-khaki cotton jacket with two buttoned chest pockets and rolled forearm sleeves; khaki canvas chest rig with three closed-flap pouches, cotton straps and metal buckles.",
+        "PRP-0008 compass on its lanyard, kept visible at the upper chest without a modern-looking device.",
+        "Canvas-covered aluminium canteen at web belt; black leather boots and lower trouser legs wet and dark to mid-shin, with mud/brine smears and modest splashes reaching knee height or slightly above."
+      ],
+      "notes": "WEAR_MUD remains consistent with shallow mid-shin marsh: wet lower legs, muddy boot tops, restrained moving splashes, and a damply spotted jacket hem; no thigh-deep immersion reading. First shot of beat: establish this wear state."
+    }
+  ],
+  "makeup": [
+    {
+      "target": "C-04",
+      "skin_state": "Light wheat skin damp with exertion; freckles remain visible across nose and cheeks beneath a restrained brine sheen, with fine mud flecks at jaw and lower cheeks.",
+      "hair_state": "Short black military hair, bare-headed, damp and flattened at the temples from brine and exertion; curled mustache and light stubble wet but intact.",
+      "injuries": [],
+      "notes": "Moonlight catches moisture on brow and cheekbones; no salt crust yet, only fresh marsh dampness and mud."
+    },
+    {
+      "target": "C-01",
+      "skin_state": "Medium olive skin lightly sweat-sheened in cold moonlight, with sparse muddy brine specks along cheek and jaw; face remains clean enough to read his intense eyes.",
+      "hair_state": "Short neatly side-parted black hair, dampened and slightly flattened at the hairline while retaining its disciplined part; thin handlebar mustache intact.",
+      "injuries": [],
+      "notes": "Subtle fatigue in the hollow cheeks and under-eyes; fresh wet mud only, no dried salt crust."
+    }
+  ],
+  "set": {
+    "location_id": "LOC-0003",
+    "vehicle_interior": "",
+    "vehicles": [],
+    "props": [],
+    "hand_props": [
+      "PRP-0007"
+    ],
+    "dressing": [
+      "thin broken white salt crust over black mud",
+      "mid-shin sheets of still brine reflecting moonlight",
+      "low scattered salt ridges and irregular mud fissures",
+      "sparse flattened marsh scrub, dark and widely spaced",
+      "faint disturbed wading trails closing into brine behind them"
+    ],
+    "set_state": "An empty, featureless night marsh remains mostly firm salt-crusted mud with shallow mid-shin brine in the low pockets; no debris, structures, vehicles, or other troops break the horizon.",
+    "notes": "PRP-0007 is strapped high on Mahmoud’s back; he actively holds its handset tight to his ear, with the whip antenna clear of the brine. Keep Shalabi’s locked PRP-0008 carried but not handled or foregrounded."
+  },
+  "camera": {
+    "shot_size": "MS",
+    "lens": "LENS_50",
+    "movement": "tracking with them",
+    "look_key": [
+      "LOOK_BASE",
+      "LOOK_NIGHT_MOON"
+    ],
+    "format": "generate 16:9, deliver 2.39:1",
+    "light": "Natural moonlight and starlight only: a cool blue-black, high-side back/three-quarter moon key from frame rear, catching wet shoulders, the radio silhouette, brine ripples and salt crust; let faces fall into soft, readable shadow with no artificial fill.",
+    "exposure_note": "Hold a low-key night exposure: retain detail in Mahmoud’s face, handset at his ear, Captain Shalabi’s scanning eyes, and the high-strapped radio while preserving deep black-blue negative space; moonlit reflections must not clip or read as daylight.",
+    "framing_note": "50mm lateral medium two-shot tracking alongside them, both men side by side in mid-shin brine; keep both faces/eyes, Mahmoud’s handset and elevated manpack radio within the central crop-safe middle band. Preserve empty marsh and a low, featureless horizon around them; no lip-sync emphasis."
+  },
+  "action": {
+    "applies": true,
+    "choreography": "Mahmoud and Shalabi advance abreast in measured, quiet steps through mid-shin brine; Mahmoud keeps the radio load upright and the handset sealed to his ear while Shalabi scans forward. On the incoming reply, Mahmoud briefly checks his step without stopping the formation, and Shalabi registers the change while maintaining forward vigilance.",
+    "weapon_handling": "",
+    "movement": "Lateral tracking pace matches their slow wade; each man places boots carefully through mud, making restrained low splashes. Radio remains strapped high above the waterline; the whip antenna flexes lightly with each step.",
+    "beats": [
+      "Both men enter frame already moving side by side.",
+      "Mahmoud takes deliberate mid-shin steps, one hand holding the handset to his ear.",
+      "Shalabi keeps his shoulders forward and eyes searching the empty marsh ahead.",
+      "Mahmoud tightens and momentarily slows at the coded transmission.",
+      "They resume the same controlled pace, maintaining abreast spacing."
+    ],
+    "safety_note": "Use stable, prepared shallow footing with concealed uneven pockets marked for performers; keep brine below the radio pack and protect the handset/cable from snagging on mud or reeds."
+  },
+  "generation_policy": {
+    "lip_sync": "avoid",
+    "video_model": "default",
+    "face_pass": true
   },
   "critic": [
     {
@@ -122,10 +238,255 @@
         "The slow pace, held silence, and muted/unsentimental nocturnal-war tone are consistent with tense, hushed vigilance and a restrained grounded historical war drama."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "no verdict returned"
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "Captain Shalabi is assigned a compass on a lanyard (PRP-0008), but the locked prop list contains only PRP-0007 and Set does not place or support PRP-0008. This introduces an uncoordinated additional prop into the shot."
+      ],
+      "revise_instructions": [
+        "Remove PRP-0008 from Captain Shalabi's wardrobe additions and visible details, unless production formally adds and coordinates it as an approved hand/wardrobe prop across Set and Action. Retain the correctly specified captain stars, plain khaki collar, wet/muddy 1973 uniform, and Soviet-pattern webbing."
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [
+        "Both visible performers have complete makeup entries consistent with cold moonlit marsh conditions, fresh brine mud, wet hair, and restrained fatigue.",
+        "The entries preserve stated signature features and explicitly avoid blood, wounds, and graphic injury."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The dressing specifies only mid-shin shallow brine, while the locked direction and Action require the pair to wade through waist-deep marsh water and reeds. This is a material physical continuity conflict.",
+        "The note restricting water contact to lower trousers and boots is incompatible with waist-deep wading; the waterline and resulting wetness must support the required blocking."
+      ],
+      "revise_instructions": [
+        "Revise the marsh dressing and set-state description to provide waist-deep brackish water around the actors, with reeds/submerged stems at that depth and an appropriately dark, moonlit water surface. Remove the instruction limiting water contact to lower trousers and boots; maintain the radio pack, handset, antenna, and other equipment above the waterline. Keep PRP-0007 as the placed hand prop."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "The MS, 50 mm tracking setup, moonlit look, dark-but-readable exposure plan, and 16:9-to-2.39:1 crop protection match the locked design.",
+        "Framing explicitly protects both faces, the handset hand, and elevated manpack radio within the crop-safe middle band, supporting the listening action without requiring lip-sync readability."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "The concrete slow wading steps, held listening beat, Mahmoud's elevated radio handling, and Shalabi's restrained forward scan match the scene intent and the director's tense, hushed staging.",
+        "The action keeps the radio, handset connection, and antenna above water and does not invent combat or weapon use."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "direction",
+      "verdict": "pass",
+      "reasons": [
+        "Coverage, blocking, performance direction, pacing, and tone reference are all explicitly present.",
+        "The lateral medium two-shot and side-by-side wading blocking clearly serve the stated action, preserve visibility of Mahmoud's elevated manpack and handset, and situate both characters in the moonlit marsh.",
+        "The performance note communicates restrained reaction and continued tactical vigilance, matching the tense, hushed incoming coded reply.",
+        "The slow advance and brief pause support grounded historical-war-drama pacing rather than heightened or stylized action.",
+        "The tone reference is consistent with moonlit Tina Plain marshland, isolation, and contained dread."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "Both wardrobe entries describe trousers as soaked with brine and mud from above the knees downward and fabric actively dripping, which implies substantially deeper immersion than the locked marsh condition permits. The location is predominantly mid-shin brine, with only occasional knee-deep pockets."
+      ],
+      "revise_instructions": [
+        "Keep boots and lower trouser legs visibly saturated to mid-shin, with mud/brine smears and restrained splash marks reaching the knees or slightly above through movement. Remove the above-knee soaking and generalized dripping that reads as thigh-deep or deeper wading."
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "C-04's hair is specified as thick, wavy, light-brown, tousled-length hair, directly contradicting the locked/wardrobe requirement that Egyptian commandos are bare-headed with short black hair."
+      ],
+      "revise_instructions": [
+        "Change C-04 to short black military hair, damp and flattened at the temples from brine and exertion. Preserve the stated freckles, mustache, stubble, and restrained damp/mud treatment where compatible with the corrected hair specification."
+      ]
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [
+        "The shallow marsh dressing is period-plausible and conforms to the locked location rule: mid-shin still brine, salt crust, black mud, sparse scrub, and no water above the permitted depth.",
+        "The radio is correctly treated as an active hand prop while mounted high on Mahmoud's back, and the locked compass is acknowledged as a carried costume prop rather than incorrectly requiring it to be handled."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "The medium 50mm lateral tracking two-shot matches the locked shot design and Director's coverage.",
+        "The low-key moonlight exposure plan keeps the faces, handset, and elevated radio readable while retaining a dark night image, and the crop-safe framing protects the required action for the 2.39:1 delivery."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "The choreography directly serves the beat: the two men wade abreast, Mahmoud keeps the radio above the waterline and listens through the handset, and Shalabi scans ahead.",
+        "Movement remains restrained and physically consistent with shallow mid-shin brine; it does not invent combat, violence, or unsupported signal-decoding business."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [
+        "Both locked characters have complete period-appropriate wardrobe entries with the required muddy wear state.",
+        "Mahmoud is bare-headed, carries the high-strapped period radio, and has no modern tactical equipment.",
+        "Shalabi's captain insignia is correctly specified as three gold five-pointed stars on each khaki shoulder strap, with a plain khaki collar and no prohibited chest eagle or red tabs.",
+        "Wetness and mud remain consistent with the locked shallow mid-shin marsh depth."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [
+        "Both visible performers have makeup and hair entries consistent with bare-headed nighttime wading.",
+        "Damp skin, restrained brine sheen, and minor mud flecks align with the muddy wet wardrobe state without creating injuries or graphic content.",
+        "Signature facial features are retained and no continuity conflict exists, as this is the first shot of the beat."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [
+        "The set establishes a plausible empty Tina Plain salt marsh with salt crust, black mud, sparse scrub, and shallow mid-shin brine.",
+        "The radio is explicitly placed high on Mahmoud's back and its handset is actively used as a hand prop; the antenna remains clear of brine.",
+        "Shalabi's locked compass is acknowledged as carried costume equipment, while no unauthorized modern or period-inappropriate dressing is introduced.",
+        "The stated water depth complies with the locked location rule."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "The specified MS, 50mm lateral tracking two-shot and locked night looks are followed.",
+        "The exposure plan keeps the night image low-key while preserving readable faces, handset action, radio, and Shalabi's forward vigilance.",
+        "The central crop-safe placement protects both faces and the key handset/radio action for the 2.39:1 delivery crop."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "The physical action directly serves the beat: the men wade side by side, Mahmoud listens intently with the handset to his ear, and Shalabi scans ahead.",
+        "Movement remains controlled and hushed, with a restrained reaction to the coded reply rather than invented combat action.",
+        "The radio remains elevated above the waterline throughout, consistent with the production water-and-load rule."
+      ],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.014202,
+  "cost_usd_total": 0.279378,
   "escalations": [],
+  "department_notes": [
+    "makeup: C-04’s corrected short black commando haircut conflicts with the cast library’s light-brown wavy-hair signature, but the locked Egyptian commando hair rule takes precedence.",
+    "critic: Wardrobe, makeup, set, camera, and action consistently depict two bare-headed Egyptian commandos moving through shallow moonlit brine with mud and wetness limited to a plausible mid-shin wading state.",
+    "critic: PRP-0007 is consistently high-strapped, visible, and actively handled; PRP-0008 is consistently carried by Shalabi as his locked costume prop.",
+    "critic: No Director-versus-lock conflict is present in the submitted preparation."
+  ],
   "history": [
     {
       "ts": "2026-10-16T13:59:09.170514+00:00",
@@ -168,6 +529,223 @@
       "action": "inherited beat 2.4 fact check (8 claims)",
       "cost_usd": 0.0,
       "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:13:26.539964+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:13:31.007782+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.006752,
+      "tokens": 2268
+    },
+    {
+      "ts": "2026-10-18T07:13:31.196246+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.006422,
+      "tokens": 2151
+    },
+    {
+      "ts": "2026-10-18T07:13:31.366823+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.00579,
+      "tokens": 1595
+    },
+    {
+      "ts": "2026-10-18T07:13:31.480850+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008728,
+      "tokens": 2716
+    },
+    {
+      "ts": "2026-10-18T07:13:31.525786+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.007014,
+      "tokens": 2411
+    },
+    {
+      "ts": "2026-10-18T07:13:39.282990+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup revise, set revise, camera revise, action revise",
+      "cost_usd": 0.013512,
+      "tokens": 4056
+    },
+    {
+      "ts": "2026-10-18T07:13:43.948333+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008334,
+      "tokens": 2691
+    },
+    {
+      "ts": "2026-10-18T07:13:44.424357+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.00643,
+      "tokens": 2167
+    },
+    {
+      "ts": "2026-10-18T07:13:44.501313+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.00721,
+      "tokens": 2445
+    },
+    {
+      "ts": "2026-10-18T07:13:44.604636+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.006648,
+      "tokens": 2272
+    },
+    {
+      "ts": "2026-10-18T07:13:44.814350+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.005986,
+      "tokens": 1629
+    },
+    {
+      "ts": "2026-10-18T07:13:52.599031+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup revise, set revise, camera revise, action revise",
+      "cost_usd": 0.01363,
+      "tokens": 3983
+    },
+    {
+      "ts": "2026-10-18T07:13:57.014305+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.009224,
+      "tokens": 2780
+    },
+    {
+      "ts": "2026-10-18T07:13:57.350371+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.00733,
+      "tokens": 2457
+    },
+    {
+      "ts": "2026-10-18T07:13:57.562792+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.007018,
+      "tokens": 2309
+    },
+    {
+      "ts": "2026-10-18T07:13:57.655836+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.006096,
+      "tokens": 1640
+    },
+    {
+      "ts": "2026-10-18T07:13:57.830687+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.00707,
+      "tokens": 2231
+    },
+    {
+      "ts": "2026-10-18T07:14:11.667838+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup pass, set revise, camera pass, action pass; cross: 2",
+      "cost_usd": 0.020866,
+      "tokens": 4729
+    },
+    {
+      "ts": "2026-10-18T07:18:40.446172+00:00",
+      "agent": "director",
+      "action": "wrote director output",
+      "cost_usd": 0.002368,
+      "tokens": 616
+    },
+    {
+      "ts": "2026-10-18T07:18:42.827894+00:00",
+      "agent": "critic",
+      "action": "reviewed direction: pass",
+      "cost_usd": 0.002306,
+      "tokens": 589
+    },
+    {
+      "ts": "2026-10-18T07:18:49.283302+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:18:53.472226+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008362,
+      "tokens": 2825
+    },
+    {
+      "ts": "2026-10-18T07:18:53.558690+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.006056,
+      "tokens": 2260
+    },
+    {
+      "ts": "2026-10-18T07:18:53.701871+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.005424,
+      "tokens": 1704
+    },
+    {
+      "ts": "2026-10-18T07:18:53.987645+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.007216,
+      "tokens": 2460
+    },
+    {
+      "ts": "2026-10-18T07:18:53.998145+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.007596,
+      "tokens": 2634
+    },
+    {
+      "ts": "2026-10-18T07:19:14.790667+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup revise, set pass, camera pass, action pass; cross: 2",
+      "cost_usd": 0.036488,
+      "tokens": 9552
+    },
+    {
+      "ts": "2026-10-18T07:19:19.906326+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.008226,
+      "tokens": 2645
+    },
+    {
+      "ts": "2026-10-18T07:19:20.133356+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.00968,
+      "tokens": 3052
+    },
+    {
+      "ts": "2026-10-18T07:19:29.798984+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass; cross: 3",
+      "cost_usd": 0.017394,
+      "tokens": 4625
     }
   ]
 }

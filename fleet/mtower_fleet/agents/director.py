@@ -17,9 +17,23 @@ class DirectorAgent(Agent):
 
     def build_user(self, shot, **ctx) -> str:
         i = shot.intent
+        design = ctx.get("shot_design") or {}
+        locked = ""
+        if design:
+            from .. import library
+            cat = library.catalog(shot.production, shot.episode)
+            loc = cat.locations.get(design.get("location") or "", {})
+            rules = "\n".join(f"- {r}" for r in (loc.get("qa_rules") or []))
+            locked = (
+                f"\n\nLOCKED SHOT DESIGN (from the shot list — your direction must fit it):\n"
+                f"- size/lens/move: {design.get('size')} / {design.get('lens')} / {design.get('move')}\n"
+                f"- frame: {design.get('prompt', '')}\n"
+                + (f"- location {loc.get('id')}: {loc.get('prompt', '')}\n" if loc else "")
+                + (f"LOCATION RULES (never contradict them):\n{rules}\n" if rules else "")
+            )
         return (
             f"Scene intent to direct:\n- subject: {i.subject}\n- action: {i.action}\n- setting: {i.setting}\n"
-            f"- time_of_day: {i.time_of_day}\n- mood: {i.mood}\n\n"
+            f"- time_of_day: {i.time_of_day}\n- mood: {i.mood}{locked}\n\n"
             "Give visual direction consistent with a restrained, grounded historical war drama."
         )
 

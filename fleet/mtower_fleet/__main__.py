@@ -78,6 +78,15 @@ def main() -> int:
     bt.add_argument("--confirm-cost", type=float, default=None,
                     help="spend gate: must be >= the printed estimate (USD) or nothing runs")
 
+    dz = sub.add_parser("design", help="Wave 2: design prepped shots (casting, wardrobe, makeup, set, camera, stunt)")
+    dz.add_argument("--beat-ref", required=True)
+    dz.add_argument("--production", default="thunderbolt")
+    dz.add_argument("--episode", default="ep01_romani")
+    dz.add_argument("--shots", help="comma-separated subset of the beat's shot ids")
+    dz.add_argument("--redo", action="store_true", help="also re-design shots that are already designed")
+    dz.add_argument("--confirm-cost", type=float, default=None,
+                    help="spend gate: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -203,11 +212,57 @@ def main() -> int:
         for s in shots:
             print(f"  {s.shot_id:8} {s.status:11} critic rounds={sum(1 for c in s.critic):2}  ${s.cost_usd_total:.3f}")
         print(f"total ≈ ${total:.3f} · {len(saved)} contract(s) saved under {saved[0].parent if saved else '-'}")
+
+    elif args.cmd == "design":
+        from . import grounding, store
+        from .orchestrator import design_summary
+
+        order = grounding.beat_shot_ids(args.production, args.episode, args.beat_ref)
+        by_id = {s.shot_id: s for s in store.list_contracts(args.production, args.episode)
+                 if s.beat_ref == args.beat_ref}
+        wanted = [s.strip() for s in args.shots.split(",")] if args.shots else order
+        todo, skipped = [], []
+        for sid in [i for i in order if i in wanted]:
+            s = by_id.get(sid)
+            if s is None:
+                skipped.append(f"{sid} (no contract — run the beat first)")
+            elif s.status == "ready_to_compose" and not args.redo:
+                skipped.append(f"{sid} (already designed — use --redo)")
+            elif s.status not in ("prepped", "ready_to_compose"):
+                skipped.append(f"{sid} (status {s.status})")
+            else:
+                todo.append(s)
+        for x in skipped:
+            print(f"  skip {x}")
+        if not todo:
+            print(f"Nothing to design for beat {args.beat_ref}.")
+            return 0
+        estimate = round(len(todo) * DESIGN_EST, 2)
+        print(f"Design beat {args.beat_ref}: {len(todo)} shot(s): {', '.join(s.shot_id for s in todo)}")
+        print(f"Estimate: ${estimate:.2f} (≈${DESIGN_EST} per shot: up to 6 departments + production meeting)")
+        if args.confirm_cost is None or args.confirm_cost < estimate:
+            print(f"Not run. Re-run with --confirm-cost {estimate} to approve this spend.")
+            return 0
+        # continuity: the shot just before the first one, if it is already designed
+        first = order.index(todo[0].shot_id)
+        prev = by_id.get(order[first - 1]) if first > 0 else None
+        start_cost = {s.shot_id: s.cost_usd_total for s in todo}
+        orch = Orchestrator()
+        orch.design_beat(todo, on_shot=store.save, prev=prev if prev and design_summary(prev) else None)
+        print("\n===== DESIGN SUMMARY =====")
+        spent = 0.0
+        for s in todo:
+            delta = s.cost_usd_total - start_cost[s.shot_id]
+            spent += delta
+            print(f"  {s.shot_id:8} {s.status:17} concerns={len(s.department_notes):2}  "
+                  f"escalations={len(s.escalations)}  ${delta:.3f}")
+        print(f"design spend ≈ ${spent:.3f} · contracts saved")
     return 0
 
 
 BEAT_RESEARCH_EST = 0.20
 SHOT_EST = 0.10
+DESIGN_EST = 0.15
 
 
 if __name__ == "__main__":

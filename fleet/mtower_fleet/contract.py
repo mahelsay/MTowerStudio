@@ -6,6 +6,7 @@ so later waves can fill cast/wardrobe/set/camera/vfx/audio without a schema chan
 """
 from __future__ import annotations
 
+import threading
 from datetime import datetime, timezone
 from typing import Any, Literal, Optional
 
@@ -67,6 +68,82 @@ class HistoryEntry(BaseModel):
     tokens: int = 0
 
 
+# ---------------------------------------------------------------- Wave 2 — the creative crew (schema v1, doc 09)
+
+class CastEntry(BaseModel):              # Casting (4) — resolved from casting.json + the actor library
+    character_id: str
+    character: str = ""
+    actor_id: str = ""
+    face_model: str = ""                 # LoRA trigger of the trained face model ("" = anchor only)
+    actor_status: str = ""               # library status, e.g. 'locked'
+    prominence: str = ""                 # lead / background / not_visible (face hidden by design)
+
+
+class CrowdEntry(BaseModel):             # Casting (4) — archetype extras, not individually tracked
+    archetype: str
+    count: Optional[int] = None
+    wardrobe_id: str = ""
+    wear_state: str = ""
+    note: str = ""
+
+
+class WardrobeEntry(BaseModel):          # Wardrobe (5)
+    target: str                          # character id (C-xx) or crowd archetype
+    wardrobe_id: str = ""
+    wear_state: str = ""
+    additions: str = ""                  # character_additions / face_additions that must read on screen
+    visible_details: list[str] = Field(default_factory=list)
+    notes: str = ""
+
+
+class MakeupEntry(BaseModel):            # Makeup & Hair (5b)
+    target: str
+    skin_state: str = ""
+    hair_state: str = ""
+    injuries: list[str] = Field(default_factory=list)   # restrained — implied, never graphic (bible §4.4)
+    notes: str = ""
+
+
+class SetDressing(BaseModel):            # Set decoration (6)
+    location_id: str = ""
+    vehicle_interior: str = ""           # e.g. 'VEH-0001 cabin' when the shot lives inside a vehicle
+    vehicles: list[str] = Field(default_factory=list)
+    props: list[str] = Field(default_factory=list)          # environmental props (library ids)
+    hand_props: list[str] = Field(default_factory=list)     # props an actor actively uses (library ids)
+    dressing: list[str] = Field(default_factory=list)
+    set_state: str = ""
+    notes: str = ""
+
+
+class CameraSpec(BaseModel):             # Camera / DoP (7)
+    shot_size: str = ""
+    lens: str = ""
+    movement: str = ""
+    look_key: list[str] = Field(default_factory=list)
+    format: str = ""
+    light: str = ""
+    exposure_note: str = ""
+    framing_note: str = ""
+
+
+class ActionSpec(BaseModel):             # Stunt / Action (7b) — only shots with physical action
+    applies: bool = False
+    choreography: str = ""
+    weapon_handling: str = ""
+    movement: str = ""
+    beats: list[str] = Field(default_factory=list)
+    safety_note: str = ""
+
+
+class GenerationPolicy(BaseModel):       # Engine / Orchestrator — not a craft field
+    lip_sync: str = "avoid"
+    video_model: str = "default"
+    face_pass: bool = True
+
+
+_LOG_LOCK = threading.Lock()  # Wave 2 departments run in parallel and share one shot
+
+
 class Shot(BaseModel):
     schema_version: int = SCHEMA_VERSION
     shot_id: str
@@ -74,20 +151,40 @@ class Shot(BaseModel):
     episode: str = ""
     beat_ref: str = ""
     status: str = "drafting"
+    wave_ready: int = 0                  # highest wave whose agents have run
 
     intent: Intent = Field(default_factory=Intent)
     research: list[ResearchClaim] = Field(default_factory=list)
     flags: list[Flag] = Field(default_factory=list)
     direction: Direction = Field(default_factory=Direction)
+
+    cast: list[CastEntry] = Field(default_factory=list)
+    crowd: list[CrowdEntry] = Field(default_factory=list)
+    wardrobe: list[WardrobeEntry] = Field(default_factory=list)
+    makeup: list[MakeupEntry] = Field(default_factory=list)
+    set: SetDressing = Field(default_factory=SetDressing)
+    camera: CameraSpec = Field(default_factory=CameraSpec)
+    action: ActionSpec = Field(default_factory=ActionSpec)
+    generation_policy: GenerationPolicy = Field(default_factory=GenerationPolicy)
+
     critic: list[CriticNote] = Field(default_factory=list)
 
     cost_usd_total: float = 0.0
     escalations: list[str] = Field(default_factory=list)  # gate failures awaiting a human decision
+    department_notes: list[str] = Field(default_factory=list)  # concerns about the LOCKED design; non-blocking
     history: list[HistoryEntry] = Field(default_factory=list)
 
     def log(self, agent: str, action: str, cost_usd: float = 0.0, tokens: int = 0) -> None:
-        self.history.append(HistoryEntry(agent=agent, action=action, cost_usd=cost_usd, tokens=tokens))
-        self.cost_usd_total = round(self.cost_usd_total + cost_usd, 6)
+        with _LOG_LOCK:
+            self.history.append(HistoryEntry(agent=agent, action=action, cost_usd=cost_usd, tokens=tokens))
+            self.cost_usd_total = round(self.cost_usd_total + cost_usd, 6)
+
+    def set_notes(self, department: str, notes: list[str]) -> None:
+        """Replace one department's concerns (thread-safe; re-runs don't duplicate)."""
+        prefix = f"{department}: "
+        with _LOG_LOCK:
+            self.department_notes = [n for n in self.department_notes if not n.startswith(prefix)] + [
+                f"{prefix}{n}" for n in notes if n]
 
     @property
     def open_flags(self) -> list[Flag]:

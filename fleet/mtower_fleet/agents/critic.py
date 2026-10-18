@@ -81,3 +81,139 @@ class StudioCritic:
         shot.critic.append(note)
         shot.log(self.NAME, f"reviewed {field}: {note.verdict}", cost_usd=_cost(usage, False), tokens=usage.get("total", 0))
         return note
+
+    # ------------------------------------------------------------------ Wave 2: the production meeting
+    def review_departments(self, shot, context: str, departments: list[str]) -> dict[str, CriticNote]:
+        """One review of all Wave-2 departments together: each against its definition of done, plus how they fit."""
+        dods = "\n".join(f"- {d}: {WAVE2_DOD[d]}" for d in departments)
+        outputs = {d: _department_output(shot, d) for d in departments}
+        user = (
+            f"{context}\n\nDEFINITIONS OF DONE:\n{dods}\n- cross-department: the departments agree with each other "
+            f"(a prop that motivates the light is placed by Set; a handled prop is a hand prop and matches the action; "
+            f"makeup matches the wear state; nothing contradicts the scene intent or the Director).\n\n"
+            f"DEPARTMENT OUTPUTS TO REVIEW:\n{outputs}\n\n"
+            "Return JSON: { departments: { <name>: { verdict: 'pass'|'revise', reasons: [string], "
+            "revise_instructions: [string] } }, cross_department: [string] }. Include every department listed. "
+            "cross_department lists only PROBLEMS or conflicts (e.g. Director-vs-lock, department-vs-department) — "
+            "leave it empty when there are none; never put confirmations or praise in it. "
+            "Ask for a revision only for a real problem (missing, wrong, inconsistent, implausible, modern, graphic), "
+            "never for wording.\nPRECEDENCE: the LOCKED design — casting (incl. character additions and the props "
+            "they carry, e.g. a compass on a lanyard), costumes and wear states, the location and its rules, lens and "
+            "looks — outranks the Director's notes and the scene intent. A department that follows the lock against "
+            "the Director is CORRECT: never ask it to follow the Director. Report any Director-vs-lock conflict in "
+            "cross_department instead. Props carried as character additions are locked costume props, not "
+            "unauthorized props. Disagreement with the LOCKED design is not a reason to revise a department."
+        )
+        messages = [
+            {"role": "system", "content": self.SYSTEM + "\nThis is a production meeting: you review the whole crew's "
+             "prep for one shot.\nRespond ONLY with a single valid JSON object."},
+            {"role": "user", "content": user},
+        ]
+        text, usage = client.complete(messages, response_format={"type": "json_object"}, max_completion_tokens=8000)
+        data = _parse_json(text)
+        got = _meeting_verdicts(data, departments)
+        missing = [d for d in departments if d not in got]
+        if missing:  # a format slip, not a design failure: ask once more for the missing verdicts
+            retry = messages + [{"role": "assistant", "content": text}, {"role": "user", "content": (
+                f"Your answer has no verdict for: {', '.join(missing)}. Return the full JSON again, with "
+                f"departments as an object keyed exactly by: {', '.join(departments)}.")}]
+            text2, u2 = client.complete(retry, response_format={"type": "json_object"}, max_completion_tokens=8000)
+            usage = {k: usage.get(k, 0) + u2.get(k, 0) if isinstance(usage.get(k), int) else usage.get(k) for k in usage}
+            data2 = _parse_json(text2)
+            got = {**got, **_meeting_verdicts(data2, departments)}
+            data = data2 if data2.get("cross_department") else data
+        cross = [str(x) for x in (data.get("cross_department") or [])]
+        notes: dict[str, CriticNote] = {}
+        for d in departments:
+            v = got.get(d)
+            if v is None:
+                note = CriticNote(target_field=d, verdict="revise",
+                                  reasons=[f"critic returned no verdict for {d} (keys seen: {list(data)[:6]})"])
+            else:
+                verdict = str(v.get("verdict", "")).strip().lower()
+                verdict = "pass" if verdict in ("pass", "approved", "approve", "ok", "accept") else "revise"
+                note = CriticNote(target_field=d, verdict=verdict,
+                                  reasons=[str(x) for x in (v.get("reasons") or [])],
+                                  revise_instructions=[str(x) for x in (v.get("revise_instructions") or [])])
+            notes[d] = note
+            shot.critic.append(note)
+        shot.set_notes("critic", cross)
+        verdicts = ", ".join(f"{d} {n.verdict}" for d, n in notes.items())
+        shot.log(self.NAME, f"production meeting: {verdicts}" + (f"; cross: {len(cross)}" if cross else ""),
+                 cost_usd=_cost(usage, False), tokens=usage.get("total", 0))
+        return notes
+
+
+def _meeting_verdicts(data: dict, departments: list[str]) -> dict[str, dict]:
+    """Normalize the meeting answer: object keyed by department, a list of {name, verdict…}, or top-level keys."""
+    raw = data.get("departments", data)
+    found: dict[str, object] = {}
+    if isinstance(raw, list):
+        for item in raw:
+            if isinstance(item, dict):
+                found[str(item.get("name") or item.get("department") or item.get("target") or "")] = item
+    elif isinstance(raw, dict):
+        found = dict(raw)
+    alias = {"stunt": "action", "stunt/action": "action", "stunt_action": "action", "dop": "camera",
+             "camera/dop": "camera", "set decoration": "set", "set_decoration": "set", "makeup & hair": "makeup",
+             "makeup_and_hair": "makeup", "makeup and hair": "makeup"}
+    out: dict[str, dict] = {}
+    for key, v in found.items():
+        k = alias.get(str(key).strip().lower(), str(key).strip().lower())
+        if isinstance(v, str):
+            v = {"verdict": v}
+        if not isinstance(v, dict):
+            continue
+        for d in departments:
+            if k == d or k.startswith(d):
+                out[d] = v
+    return out
+
+
+def _department_output(shot, d: str):
+    if d == "casting":
+        return {"cast (locked)": [c.model_dump() for c in shot.cast], "crowd": [c.model_dump() for c in shot.crowd]}
+    if d == "wardrobe":
+        return [w.model_dump() for w in shot.wardrobe]
+    if d == "makeup":
+        return [m.model_dump() for m in shot.makeup]
+    if d == "set":
+        return shot.set.model_dump()
+    if d == "camera":
+        return shot.camera.model_dump()
+    if d == "action":
+        return shot.action.model_dump()
+    return None
+
+
+WAVE2_DOD = {
+    "casting": (
+        "Every group in the extras line is a crowd entry using a production extras archetype, with the count and look "
+        "the design gives; no new named characters; the locked cast is untouched."
+    ),
+    "wardrobe": (
+        "Every character and crowd group has an entry; visible details are right for the shot size (a close-up names "
+        "small items such as insignia or glasses; a wide shot does not promise detail no one can see); rank insignia "
+        "and character additions from casting are kept; the wear state reads consistently with the previous shot; "
+        "period-correct, nothing modern."
+    ),
+    "makeup": (
+        "Every person in frame has an entry; skin and hair match the wear state (salt on the uniform means salt on "
+        "skin); the actor's signature features are preserved; injuries are implied only, never graphic; continuity "
+        "with the previous shot."
+    ),
+    "set": (
+        "Every locked prop is placed; a prop an actor uses in this shot is a hand prop; dressing is period-correct "
+        "and plausible for the location; static atmosphere only (no explosions or moving smoke); set state fits the "
+        "beat and the previous shot."
+    ),
+    "camera": (
+        "Light matches the locked looks and the location's light; night or low-key shots have an exposure note that "
+        "keeps the image dark but readable; framing keeps faces, hands and the key action in the middle band for "
+        "the 2.39:1 crop; a lip-sync shot keeps the mouth readable; consistent with the Director's coverage."
+    ),
+    "action": (
+        "'applies' is true only for real physical action; when true, choreography and beats are concrete, weapon "
+        "handling is period-correct and plain, nothing invents combat facts beyond the beat, restraint is kept."
+    ),
+}
