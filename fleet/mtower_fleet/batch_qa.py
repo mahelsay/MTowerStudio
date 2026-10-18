@@ -15,7 +15,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-from . import grounding
+from . import grounding, lessons
 from .agents.image_qa import ImageQAAgent
 from .contract import Shot
 
@@ -169,13 +169,23 @@ def run(production: str, episode: str, frames: list[dict], *, verbose: bool = Tr
         shot.intent.subject = design.get("prompt", "")
         shot.intent.action = design.get("motion", "")
         refs = references_for(production, episode, design)
+        tags = lessons.tags_for_design(design, kind="keyframe")
+        advice = lessons.advise(tags, department="image_qa", limit=10)
         if verbose:
-            print(f"[{n}/{len(frames)}] {f['shot_id']} — {len(refs)} reference image(s) …", flush=True)
+            print(f"[{n}/{len(frames)}] {f['shot_id']} — {len(refs)} reference image(s), "
+                  f"{len(advice.lessons)} lesson check(s) …", flush=True)
         try:
             qa = agent.review(shot, f["image"], references=refs, design=design_text(production, episode, design),
-                              rules=rules)
+                              rules=rules, lesson_checks=advice.checks())
         except Exception as e:  # noqa: BLE001 — record and continue the batch
             qa = {"error": str(e)}
+        if "error" not in qa and qa.get("verdict") != "pass":
+            lessons.capture(kind="keyframe", target=f["shot_id"], production=production, episode=episode,
+                            department="image_qa", source="studio-qa", resolved=False,
+                            problem=" || ".join(str(x) for x in qa.get("issues") or [])[:1200],
+                            fix="; ".join(str(x) for x in qa.get("fix_instructions") or [])[:800],
+                            score_before=qa.get("score"), tags=tags, human_approved=f.get("human") == "approved"
+                            or bool(f.get("approved_at")))
         results.append({
             **f,
             "design_prompt": design.get("prompt", ""),

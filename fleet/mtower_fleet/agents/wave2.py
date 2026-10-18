@@ -33,7 +33,7 @@ _COMMON_RULES = (
 )
 
 
-def common_context(shot, cat, resolved, prev_design: str, include_rules: bool = True) -> str:
+def common_context(shot, cat, resolved, prev_design: str, include_rules: bool = True, memory: str = "") -> str:
     from .. import library
 
     s = resolved
@@ -68,6 +68,9 @@ def common_context(shot, cat, resolved, prev_design: str, include_rules: bool = 
         + ("\n".join(adv) if adv else "- none"),
         f"PREVIOUS SHOT IN THE BEAT (for continuity):\n{prev_design or 'none — first shot of the beat'}",
     ]
+    if memory:
+        parts.append(memory + "\nWhen a lesson applies to your department, build it into your output and cite its "
+                     "id in brackets (e.g. [L-0004]). A lesson never overrides the locked design.")
     return "\n\n".join(parts)
 
 
@@ -78,7 +81,8 @@ class DeptAgent(Agent):
 
     def build_user(self, shot, **ctx) -> str:
         r = ctx["resolved"]
-        return (common_context(shot, ctx["cat"], r, ctx.get("prev_design", ""), self.RULES_IN_CONTEXT)
+        return (common_context(shot, ctx["cat"], r, ctx.get("prev_design", ""), self.RULES_IN_CONTEXT,
+                               memory=(ctx.get("memory") or {}).get(self.NAME, ""))
                 + f"\n\nYOUR DEPARTMENT'S LIBRARY:\n{r.briefs.get(self.BRIEF, '—')}\n\nTASK:\n{self.TASK}")
 
     def act(self, shot, **ctx: Any) -> dict:

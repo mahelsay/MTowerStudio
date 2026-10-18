@@ -87,6 +87,17 @@ def main() -> int:
     dz.add_argument("--confirm-cost", type=float, default=None,
                     help="spend gate: must be >= the printed estimate (USD) or nothing runs")
 
+    ls = sub.add_parser("lessons", help="Learning Keeper: studio memory (harvest / distill / show / approve / retire)")
+    ls.add_argument("action", choices=("status", "harvest", "distill", "show", "approve", "retire", "advise"))
+    ls.add_argument("ids", nargs="*", help="lesson ids for approve/retire; shot id for advise")
+    ls.add_argument("--status", choices=("rule", "candidate", "retired"), help="show: filter by status")
+    ls.add_argument("--batches", type=int, help="distill: at most N batches")
+    ls.add_argument("--reason", default="", help="retire: why")
+    ls.add_argument("--production", default="thunderbolt")
+    ls.add_argument("--episode", default="ep01_romani")
+    ls.add_argument("--confirm-cost", type=float, default=None,
+                    help="spend gate for distill: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -261,6 +272,58 @@ def main() -> int:
             print(f"  {s.shot_id:8} {s.status:17} concerns={len(s.department_notes):2}  "
                   f"escalations={len(s.escalations)}  ${delta:.3f}")
         print(f"design spend ≈ ${spent:.3f} · contracts saved")
+
+    elif args.cmd == "lessons":
+        return _lessons_cmd(args)
+    return 0
+
+
+def _lessons_cmd(args) -> int:
+    from . import grounding, harvest, lessons
+    from .agents import keeper
+
+    if args.action == "status":
+        print(json.dumps(lessons.summary(), indent=1))
+    elif args.action == "harvest":
+        print("Harvesting incidents from the engine's history (free) …")
+        print(json.dumps(harvest.harvest_engine(args.production, args.episode), indent=1))
+    elif args.action == "distill":
+        pending, est = keeper.estimate()
+        if args.batches:
+            est = round(min(est, args.batches * keeper.EST_PER_BATCH_USD), 2)
+        print(f"Distill {pending} incident(s) into lessons — estimate ${est:.2f} (gpt-5.6-terra, "
+              f"{keeper.BATCH} incidents per call)")
+        if not pending:
+            return 0
+        if args.confirm_cost is None or args.confirm_cost < est:
+            print(f"Not run. Re-run with --confirm-cost {est} to approve this spend.")
+            return 0
+        res = keeper.distill_pending(limit_batches=args.batches, on_batch=lambda t: print(
+            f"  batch {t['batches']}: +{t['added']} new, {t['updated']} merged, ${t['cost_usd']:.3f}", flush=True))
+        print(json.dumps(res, indent=1))
+    elif args.action == "show":
+        for l in lessons.load_lessons():
+            if args.status and l["status"] != args.status:
+                continue
+            print(f"{l['id']} [{l['status']}] {l['title']}  ({len(set(l.get('targets', [])))} targets, "
+                  f"{l.get('proven_fixes', 0)} proven fixes, applied {l.get('applied', {})})\n"
+                  f"   prevent: {l['prevention']}\n   check:   {l.get('check', '')}\n"
+                  f"   who: {l['applies_to'].get('departments')} · tags: {l['applies_to'].get('tags') or 'general'}")
+    elif args.action in ("approve", "retire"):
+        all_l = lessons.load_lessons()
+        for l in all_l:
+            if l["id"] in args.ids:
+                if args.action == "approve":
+                    l.update(status="rule", approved_by="human", promoted_at=lessons._now())
+                else:
+                    l.update(status="retired", retired_by="human", retired_reason=args.reason or "human decision")
+                print(f"{l['id']} → {l['status']}")
+        lessons.save_lessons(all_l)
+    elif args.action == "advise":
+        for sid in args.ids:
+            design = grounding.find_shot(args.production, args.episode, sid)
+            adv = lessons.advise(lessons.tags_for_design(design, kind="keyframe"), limit=12)
+            print(f"── {sid} ──\n{adv.text() or '(no lessons)'}\n")
     return 0
 
 

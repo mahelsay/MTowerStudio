@@ -46,7 +46,7 @@ class ImageQAAgent:
     )
 
     def review(self, shot, image: str, *, gate: float = 8.0, references: list[tuple[str, str]] | None = None,
-               design: str = "", rules: str = "") -> dict:
+               design: str = "", rules: str = "", lesson_checks: str = "") -> dict:
         i = shot.intent
         user_text = (
             f"Shot intent — subject: {i.subject}; action: {i.action}; setting: {i.setting}; "
@@ -56,6 +56,9 @@ class ImageQAAgent:
             user_text = f"{rules}\n\n{user_text}"
         if design:
             user_text += f"\n\nShot design from the locked shot list:\n{design}"
+        if lesson_checks:
+            user_text += ("\n\nKNOWN FAILURE MODES on similar shots (Learning Keeper) — verify each explicitly; when "
+                          "one recurs, start that issue with its id, e.g. '[L-0004] ...':\n" + lesson_checks)
         refs = references or []
         if refs:
             user_text += (

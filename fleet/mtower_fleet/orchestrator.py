@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor
 
-from . import client, gate, grounding, library
+from . import client, gate, grounding, lessons, library
 from .agents.critic import StudioCritic
 from .agents.director import DirectorAgent
 from .agents.research import ResearchAgent
@@ -40,14 +40,18 @@ class Orchestrator:
         """Run an agent, then enforce Tier-1 rules + Tier-2 critic with bounded revise rounds."""
         agent.act(shot, **ctx)
         grounding = ctx.get("grounding")
+        first_feedback = ""
         for round_no in range(0, MAX_REVISE_ROUNDS + 1):
             problems = gate.tier1(shot, field)
             note = self.critic.review(shot, field, grounding=grounding)
             if not problems and note.verdict == "pass":
                 suffix = f" (after {round_no} revision{'s' if round_no != 1 else ''})" if round_no else ""
                 self._log(f"  ✓ {field}: tier-1 clean, critic pass{suffix}")
+                if first_feedback:
+                    self._capture(shot, field, first_feedback, resolved=True, attempts=round_no + 1)
                 return
             feedback = "; ".join(problems + note.reasons + note.revise_instructions) or "tighten and complete the field"
+            first_feedback = first_feedback or feedback
             if round_no == MAX_REVISE_ROUNDS:
                 break
             self._log(f"  ↻ {field} revise (round {round_no + 1}): {feedback[:400]}{'…' if len(feedback) > 400 else ''}")
@@ -59,6 +63,17 @@ class Orchestrator:
         self._log(f"  ⚠ {field}: still failing after {MAX_REVISE_ROUNDS} revisions — escalate to human")
         shot.escalations.append(f"{field}: critic still requests revision after {MAX_REVISE_ROUNDS} rounds — "
                                 f"{feedback[:300]}")
+        self._capture(shot, field, first_feedback, resolved=False, attempts=MAX_REVISE_ROUNDS + 1, last=feedback)
+
+    @staticmethod
+    def _capture(shot: Shot, department: str, problem: str, *, resolved: bool, attempts: int, last: str = "",
+                 fix: str = "") -> None:
+        """Learning Keeper capture: a step that failed its gate (and whether the crew fixed it)."""
+        design = grounding.find_shot(shot.production, shot.episode, shot.shot_id)
+        lessons.capture(kind="design", target=shot.shot_id, production=shot.production, episode=shot.episode,
+                        department=department, problem=problem, resolved=resolved, attempts=attempts,
+                        fix=fix or ("revised per the Studio Critic" if resolved else f"still failing: {last[:500]}"),
+                        tags=lessons.tags_for_design(design, kind="design"), source="studio")
 
     def run_shot(self, *, shot_id: str, beat: str, production: str, episode: str, beat_ref: str, notes: str = "",
                  g: "grounding.Grounding | None" = None, beat_research: Shot | None = None) -> Shot:
@@ -177,7 +192,16 @@ class Orchestrator:
         people = bool([c for c in resolved.cast if c.actor_id]) or bool(resolved.extras_text)
         insert = (resolved.camera.shot_size or "").upper() in ("INSERT", "CARD")
         prev_text = design_summary(prev) if prev is not None else ""
-        ctx = {"resolved": resolved, "cat": cat, "prev_design": prev_text}
+        # Learning Keeper: consult studio memory before the crew works (deterministic tag match; free)
+        mem_tags = lessons.tags_for_design(design, kind="keyframe")
+        advice = {n: lessons.advise(mem_tags, department=n) for n in ("casting",) + PARALLEL_DEPARTMENTS}
+        critic_advice = lessons.advise(mem_tags, limit=12)
+        shot.lessons_applied = sorted({i for a in advice.values() for i in a.ids} | set(critic_advice.ids))
+        if shot.lessons_applied:
+            self._log(f"● Learning Keeper → {len(shot.lessons_applied)} lesson(s) for this shot: "
+                      f"{', '.join(shot.lessons_applied)}")
+        ctx = {"resolved": resolved, "cat": cat, "prev_design": prev_text,
+               "memory": {n: a.text() for n, a in advice.items()}}
 
         def deterministic(name: str) -> bool:
             if name == "casting":
@@ -232,8 +256,14 @@ class Orchestrator:
         tier1_fix(list(PARALLEL_DEPARTMENTS))
 
         reviewed = [n for n in ("casting",) + PARALLEL_DEPARTMENTS if not deterministic(n)]
-        context = common_context(shot, cat, resolved, prev_text)
+        memory = critic_advice.text()
+        if memory:
+            memory += ("\nRULES are binding: a department whose output contradicts a RULE that applies to it must "
+                       "revise (cite the id). ADVISORIES are not grounds for a revision.")
+        context = common_context(shot, cat, resolved, prev_text, memory=memory)
         to_review = list(reviewed)          # passes stick: a department is re-judged only after it is revised
+        first_fail: dict[str, str] = {}
+        passed_first: set[str] = set()
         for round_no in range(0, MAX_REVISE_ROUNDS + 1):
             hard = {n: gate.tier1_wave2(shot, n, resolved, cat) for n in to_review}
             hard = {n: p for n, p in hard.items() if p}
@@ -241,6 +271,10 @@ class Orchestrator:
             notes = self.critic.review_departments(shot, context, to_review, context_only=approved)
             revise = {n: "; ".join(hard.get(n, []) + nt.reasons + nt.revise_instructions)
                       for n, nt in notes.items() if nt.verdict != "pass" or n in hard}
+            if round_no == 0:
+                passed_first = {n for n in to_review if n not in revise}
+            for n, fb in revise.items():
+                first_fail.setdefault(n, fb)
             if not revise:
                 suffix = f" (after {round_no} revision{'s' if round_no != 1 else ''})" if round_no else ""
                 self._log(f"  ✓ production meeting: all departments pass{suffix}")
@@ -260,6 +294,14 @@ class Orchestrator:
                         revised.add(dep)
             run_parallel(list(revise), revise)
             to_review = [n for n in reviewed if n in revised]
+
+        # Learning Keeper: capture what the meeting had to fix (or couldn't), and credit lessons that held up
+        escalated = {e.split(":")[0].replace("design ", "") for e in shot.escalations if e.startswith("design ")}
+        for n, fb in first_fail.items():
+            if fb.startswith("the crowd groups changed"):
+                continue
+            self._capture(shot, n, fb, resolved=n not in escalated, attempts=MAX_REVISE_ROUNDS + 1 if n in escalated else 2)
+        lessons.record_outcome(sorted({i for n in passed_first for i in advice.get(n, lessons.Advice([])).ids}), True)
 
         shot.wave_ready = max(shot.wave_ready, 2)
         self._settle(shot)

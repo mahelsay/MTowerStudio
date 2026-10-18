@@ -173,6 +173,7 @@ class Shot(BaseModel):
     cost_usd_total: float = 0.0
     escalations: list[str] = Field(default_factory=list)  # gate failures awaiting a human decision
     department_notes: list[str] = Field(default_factory=list)  # concerns about the LOCKED design; non-blocking
+    lessons_applied: list[str] = Field(default_factory=list)   # Learning Keeper lesson ids given to the crew
     history: list[HistoryEntry] = Field(default_factory=list)
 
     def log(self, agent: str, action: str, cost_usd: float = 0.0, tokens: int = 0) -> None:
