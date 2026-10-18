@@ -225,7 +225,9 @@ def _plan(args, lib: Library, prod: Production) -> list[jobs.Job]:
                                      args.model or "image_edit_identity", args.source)
     props = bool(args.ids) and all(i.startswith("PRP-") for i in args.ids)
     if args.kind == "training-set":
-        return (jobs.plan_prop_training_set if props else jobs.plan_training_set)(lib, args.ids, args.only)
+        if props:
+            return jobs.plan_prop_training_set(lib, args.ids, args.only)
+        return jobs.plan_training_set(lib, args.ids, args.only, args.model or "image_edit")
     if args.kind == "lora":
         return (jobs.plan_prop_lora if props else jobs.plan_lora)(
             lib, args.ids, args.steps or engine_config().get("training", {}).get("default_steps", 1000), args.allow_weak_set)

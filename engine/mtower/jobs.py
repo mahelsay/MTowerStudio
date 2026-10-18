@@ -151,8 +151,10 @@ def training_text(actor: dict, variation: dict) -> tuple[str, str]:
     return edit + keep_scarf, f"photo of {trigger}, {caption}"
 
 
-def plan_training_set(lib: Library, actor_ids: list[str], keys: list[str] | None = None) -> list[Job]:
-    """One reference edit of the approved anchor per recipe variation (new angle, light, expression, outfit)."""
+def plan_training_set(lib: Library, actor_ids: list[str], keys: list[str] | None = None,
+                      model_key: str = "image_edit") -> list[Job]:
+    """One reference edit of the approved anchor per recipe variation (new angle, light, expression, outfit).
+    model_key: 'image_edit' (FLUX Kontext, cheap) or 'image_edit_identity' (Nano Banana Pro: re-roll drifted keys)."""
     refuse_locked(lib, actor_ids, "training images")
     recipe, stamp, jobs = training_recipe(), batch_id(), []
     for aid in actor_ids:
@@ -162,7 +164,7 @@ def plan_training_set(lib: Library, actor_ids: list[str], keys: list[str] | None
             if keys and v["key"] not in keys:
                 continue
             edit, caption = training_text(lib.actors[aid], v)
-            jobs.append(Job("training_set", f"{aid}:{v['key']}", f"{edit}. {recipe['identity_lock']}", "image_edit", 1,
+            jobs.append(Job("training_set", f"{aid}:{v['key']}", f"{edit}. {recipe['identity_lock']}", model_key, 1,
                             out, {"num_images": 1, "image_path": str(anchor), "_caption": caption}))
     return jobs
 
