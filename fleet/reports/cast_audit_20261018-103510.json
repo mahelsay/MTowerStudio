@@ -1,0 +1,630 @@
+[
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor has a dense, broad handlebar mustache rather than the written thin handlebar mustache with fine upturned ends.",
+        "The prominent soul patch is an unapproved facial-hair feature and weakens the specified narrow, pointed-chin silhouette."
+      ]
+    },
+    "anchor": {
+      "score": 8,
+      "issues": [
+        "Facial hair does not match the approved written look.",
+        "Otherwise photorealistic with natural skin, correct anatomy, short period-plausible black hair, an Egyptian appearance, and no visible text or artifacts."
+      ]
+    },
+    "training": {
+      "score": 7,
+      "drift_keys": [],
+      "defect_keys": [
+        "profile-right@183945",
+        "village-street@183945"
+      ],
+      "issues": [
+        "The identity is consistent across angles, expressions, lighting conditions and apparent ages.",
+        "profile-right@183945 has a small logo-like mark on the white undershirt.",
+        "village-street@183945 has a small logo-like mark on the white shirt.",
+        "Olive or khaki collared shirts recur in many images, creating some risk of baking military-style clothing and collar shapes into the face model.",
+        "The captions appropriately describe pose, expression, lighting, setting and clothing without describing facial anatomy.",
+        "Because the anchor requires a facial-hair redesign, the entire training set must be regenerated with the corrected mustache and no soul patch."
+      ]
+    },
+    "redesign_change": "Replace the dense broad mustache with a thin handlebar mustache with fine upturned ends and remove the soul patch, keeping every other feature unchanged.",
+    "summary": "The actor otherwise fits a 30-year-old Egyptian captain and the training identity is stable, but the signature facial hair contradicts the written design; redesign the facial hair and rebuild the set, also removing the two shirt-logo defects.",
+    "actor": "ACT-0001",
+    "name": "Tarek Selim",
+    "roles": [
+      "C-01"
+    ],
+    "training_images": 18,
+    "training_batch": "20261011-183945",
+    "identity_history": {
+      "C-01": {
+        "reviews": 123,
+        "fail": 27,
+        "rate": 0.22
+      }
+    },
+    "_cost_usd": 0.067896
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The swept-back, ear-length hair with prominent grey temples contradicts the required short black hair for Egyptian commandos.",
+        "The anchor's light hazel-grey irises do not match the specified brown eyes.",
+        "He reads closer to his late 40s than a weathered mid-30s, although the broad Egyptian face, heavy jaw, thick neck and bushy mustache otherwise fit Sergeant Sayed."
+      ]
+    },
+    "anchor": {
+      "score": 5,
+      "issues": [
+        "Garbled watermark text is visible along the bottom edge, violating the no-text rule.",
+        "Hair is too long and too grey for the commando role.",
+        "Irises appear hazel-grey rather than brown.",
+        "Skin is somewhat over-polished and the portrait has a stylized prestige-casting finish rather than an ordinary documentary realism.",
+        "Anatomy is otherwise coherent, and the broad weathered face and mustache are strong identity features."
+      ]
+    },
+    "training": {
+      "score": 6,
+      "drift_keys": [
+        "soaking-wet@183945"
+      ],
+      "defect_keys": [
+        "headwear@183945",
+        "looking-up@183945",
+        "three-quarter-right-golden@183945"
+      ],
+      "issues": [
+        "soaking-wet@183945 drifts to an older, narrower face with a longer-looking nose, heavier beard growth and altered hairline/mustache balance.",
+        "looking-up@183945 and three-quarter-right-golden@183945 contain garbled watermark text along the bottom edge.",
+        "headwear@183945 uses a cloth cap despite the character being required bare-headed; it also hides the hairline needed for stable identity training.",
+        "The set repeatedly reinforces swept-back, greying, medium-length hair that is invalid for the commando role.",
+        "Most references are civilian portrait poses; there is insufficient variety in period field-uniform action, marsh exertion, weapon-carrying poses and low-light military conditions.",
+        "The set has useful angle, expression, outfit and lighting variety, and the remaining images generally depict the same person with plausible anatomy."
+      ]
+    },
+    "redesign_change": "Replace the swept-back, greying, ear-length hair with a short black 1973 Egyptian Army cut that retains the same receding hairline, and make the irises dark brown while keeping the face, build, skin weathering and bushy mustache unchanged.",
+    "summary": "The broad, weathered Egyptian face suits Sergeant Sayed, but the signature long greying hair violates the commando grooming rule and the eye color misses the written look; redesign the anchor, remove all watermark-bearing references, exclude the cap image, and reroll the wet-face identity drift.",
+    "actor": "ACT-0002",
+    "name": "Hazem Abdallah",
+    "roles": [
+      "C-02"
+    ],
+    "training_images": 19,
+    "training_batch": "20261011-183945",
+    "identity_history": {
+      "C-02": {
+        "reviews": 75,
+        "fail": 19,
+        "rate": 0.25
+      }
+    },
+    "_cost_usd": 0.061312
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The thick, long tousled hair contradicts the required short military haircut for an Egyptian commando.",
+        "Visible moustache and jaw stubble contradict the written clean-shaven look.",
+        "The anchor reads closer to the early-to-mid twenties than 19 and lacks the specified strongly boyish quality."
+      ]
+    },
+    "anchor": {
+      "score": 7,
+      "issues": [
+        "Hair is too long and fashionably tousled for the role's military grooming.",
+        "Visible facial stubble ages the actor and contradicts the clean-shaven design.",
+        "The face appears older and more sculpted than the specified boyish 19-year-old ordinary private.",
+        "Portrait is photorealistic with credible skin and anatomy, but has a polished casting-model quality."
+      ]
+    },
+    "training": {
+      "score": 7,
+      "drift_keys": [],
+      "defect_keys": [
+        "white-shirt@175037",
+        "smile@183945"
+      ],
+      "issues": [
+        "Every image reinforces the prohibited long tousled hairstyle; there are no references showing the required short military haircut.",
+        "The set repeatedly reinforces facial stubble rather than a clean-shaven 19-year-old appearance.",
+        "white-shirt@175037 and smile@183945 contain potentially modern cars in the background.",
+        "front-closeup@175037 is effectively a near-duplicate of the anchor in clothing, framing, background and lighting, adding little useful variation.",
+        "The set has otherwise strong variety in angles, expressions, lighting, outfits and action, with no clear identity drift or anatomical defects.",
+        "No references establish the slightly oversized 1973 field uniform or the actor under role-specific military conditions, increasing the risk of identity failure in production shots."
+      ]
+    },
+    "redesign_change": "Replace only the grooming and age presentation with a regulation-short black military haircut, fully clean-shaven skin, and a softer boyish 19-year-old appearance while retaining the same oval face, narrow pointed chin, eyebrows, large dark eyes, nose, lips and warm olive-brown complexion.",
+    "summary": "Redesign is required because the anchor's signature tousled hair directly violates commando grooming, while stubble and mature facial presentation undermine the clean-shaven 19-year-old role; rebuild the training set around the corrected look and remove modern-background references.",
+    "actor": "ACT-0003",
+    "name": "Karim Nour",
+    "roles": [
+      "C-03"
+    ],
+    "training_images": 17,
+    "training_batch": "20261011-175037,20261011-183945",
+    "identity_history": {
+      "C-03": {
+        "reviews": 82,
+        "fail": 17,
+        "rate": 0.21
+      }
+    },
+    "_cost_usd": 0.047216
+  },
+  {
+    "verdict": "keep",
+    "fit": {
+      "ok": true,
+      "conflicts": []
+    },
+    "anchor": {
+      "score": 8,
+      "issues": [
+        "Skin texture and specular highlights are slightly over-sharpened and polished, but remain photorealistic.",
+        "Portrait lighting and grooming are more refined than an ordinary-documentary look, though no period or anatomy violation is present."
+      ]
+    },
+    "training": {
+      "score": 9,
+      "drift_keys": [],
+      "defect_keys": [],
+      "issues": [
+        "Identity, dark-brown skin tone, close-shaved black hair, full beard, square jaw, broad nose, heavy eyebrows and central frown line remain consistent across the set.",
+        "The set provides strong variation in framing, profiles, expressions, lighting, clothing, locations and full-body action poses without obvious duplicates.",
+        "The single cloth-cap image adds useful occlusion variety but should not be overrepresented in any future expansion.",
+        "Captions describe changing pose, scene, lighting and clothing rather than facial identity."
+      ]
+    },
+    "summary": "The unassigned actor matches the written early-30s Upper Egyptian look, including all signature features, and has a clean, varied, identity-consistent training set. The beard and closely shaved head are 1973-plausible for civilian casting; reassess grooming if he is later assigned an Egyptian commando role requiring short visible hair.",
+    "actor": "ACT-0005",
+    "name": "Yasser Hamdan",
+    "roles": [],
+    "training_images": 19,
+    "training_batch": "20261011-183945,20261011-201825",
+    "identity_history": {},
+    "_cost_usd": 0.053776
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor and nearly all training images show a distinct moustache and chin/goatee growth, contradicting the required clean-shaven look.",
+        "The sharply edged hairline and high skin fade read as contemporary barbering rather than a natural 1973 Egyptian Army close crop.",
+        "The required barely visible healed nick interrupting the left eyebrow is absent throughout the anchor and training set.",
+        "Training key 'headwear@202340' uses a cloth cap despite Private Adel being specified as bare-headed with visible short black hair.",
+        "Training key 'village-street@202340' gives him a broader, heavier upper-body build than the signature tall, very thin physique."
+      ]
+    },
+    "anchor": {
+      "score": 6,
+      "issues": [
+        "Distinct moustache and chin/goatee growth instead of a clean-shaven face.",
+        "Overly precise modern lineup and high fade are not convincingly 1973-plausible military grooming.",
+        "The small healed left-eyebrow nick is not visible.",
+        "Highly polished editorial lighting, symmetry and skin sheen make the portrait feel more like a fashion casting image than an ordinary-person documentary portrait.",
+        "Anatomy is sound, with no text or visible generation artifacts."
+      ]
+    },
+    "training": {
+      "score": 7,
+      "drift_keys": [],
+      "defect_keys": [
+        "headwear@202340",
+        "village-street@202340"
+      ],
+      "issues": [
+        "The incorrect facial hair, modern-edged haircut and missing eyebrow nick are repeated across the set, strongly baking the wrong design into the model.",
+        "'headwear@202340' conceals the identifying hair shape and conflicts with the role's mandatory bare-headed presentation.",
+        "'village-street@202340' has a noticeably broader neck, shoulders and torso than the established very thin build.",
+        "The set has useful lighting, expression, angle, outfit and limited action variety, but remains dominated by posed portraits and lacks profile/action coverage associated with operating or carrying the Malyutka equipment.",
+        "The mustard scarf recurs in three images, creating some avoidable wardrobe association, though other outfits provide adequate counter-variety.",
+        "No clear hand malformations, extra fingers, text, watermarks or prohibited modern devices are visible.",
+        "Captions appropriately describe changing pose, clothing, lighting and scene conditions rather than defining facial identity."
+      ]
+    },
+    "redesign_change": "Keep the same face, age, skin tone, eyes and thin build, but remove all moustache and chin hair, replace the sharp high fade and lineup with a natural 1973 close-cropped tight-curled cut, and add a barely visible healed nick interrupting the left eyebrow.",
+    "summary": "The underlying Nubian Egyptian look and signature facial structure fit Private Adel, but the facial hair, contemporary barbering and absent eyebrow nick are systematic anchor-level design errors that require redesign before retraining.",
+    "actor": "ACT-0006",
+    "name": "Amr Fahmy",
+    "roles": [
+      "C-06"
+    ],
+    "training_images": 19,
+    "training_batch": "20261011-202340",
+    "identity_history": {
+      "C-06": {
+        "reviews": 21,
+        "fail": 5,
+        "rate": 0.24
+      }
+    },
+    "_cost_usd": 0.071476
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor reads as approximately 65–75 rather than a mid-40s woman who merely looks prematurely aged.",
+        "Dark frontal hair is visibly exposed despite the written requirement that her hair always be covered.",
+        "The forehead tattoo is a dot plus a vertical blue streak; the approved written look specifies small blue dot tattoos on the forehead and chin."
+      ]
+    },
+    "anchor": {
+      "score": 7,
+      "issues": [
+        "Photorealistic, ordinary appearance with natural wrinkles, credible anatomy and no visible text or watermark.",
+        "The very elderly facial structure exceeds the stated apparent-age target, not just the required work-worn aging.",
+        "Hair is exposed above the forehead wrap.",
+        "The extra vertical forehead tattoo mark does not match the specified dot tattoo."
+      ]
+    },
+    "training": {
+      "score": 6,
+      "drift_keys": [
+        "night-moonlight@183945",
+        "shouting@183945",
+        "village-street@183945"
+      ],
+      "defect_keys": [
+        "night-moonlight@183945"
+      ],
+      "issues": [
+        "night-moonlight@183945 has a substantially broader, more masculine lower face and darker-looking eyes than the anchor.",
+        "shouting@183945 has a fuller jaw, wider nose and younger-looking facial volume than the anchor.",
+        "village-street@183945 is markedly smoother and younger, with altered eye and jaw shapes.",
+        "Age and facial-volume variation across the set likely contributes to the reported identity failures.",
+        "The set has useful variation in framing, profiles, lighting, clothing and action, and the captions appropriately describe changing conditions rather than intrinsic facial traits.",
+        "Hair is exposed in multiple references, reinforcing a look that conflicts with the always-covered requirement.",
+        "The set lacks a role-specific flour-on-hands reference for Umm Mostafa.",
+        "night-moonlight@183945 has overly waxy facial rendering and moustache-like upper-lip shadowing."
+      ]
+    },
+    "redesign_change": "Keep the olive-brown deeply wrinkled face, light hazel eyes, straight nose and small chin, but make her read as a prematurely aged mid-40s woman, conceal all hair beneath the headscarf, and replace the forehead dot-plus-streak with one small blue dot matching the single chin dot.",
+    "summary": "The core Egyptian village-woman concept is suitable and photorealistic, but the approved identity is too elderly, exposes hair and has the wrong forehead tattoo configuration; redesign the anchor, then reroll the listed drifting references before retraining.",
+    "actor": "ACT-0007",
+    "name": "Souad Roshdy",
+    "roles": [
+      "C-11"
+    ],
+    "training_images": 17,
+    "training_batch": "20261011-183945",
+    "identity_history": {
+      "C-11": {
+        "reviews": 30,
+        "fail": 10,
+        "rate": 0.33
+      }
+    },
+    "_cost_usd": 0.058544
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor reads as a late teenager or young adult, not an apparent 12-year-old; the long oval face, defined nose, mature mouth and overall proportions conflict with Zeinab's age.",
+        "The face lacks the written round childlike shape, soft small chin and small button nose.",
+        "The required small gap between the front teeth is not visible; the open smile in 'smile@183945' instead shows evenly spaced adult-looking teeth."
+      ]
+    },
+    "anchor": {
+      "score": 7,
+      "issues": [
+        "Photorealistic with natural skin texture, coherent anatomy and no text or visible generation artifacts.",
+        "The portrait has polished editorial/model styling rather than the requested ordinary 12-year-old village-girl quality.",
+        "The facial structure and grooming read substantially older than 12.",
+        "The written button nose and front-tooth gap are not represented."
+      ]
+    },
+    "training": {
+      "score": 4,
+      "drift_keys": [
+        "smile@183945",
+        "full-body-galabeya@194122",
+        "walking@194122"
+      ],
+      "defect_keys": [
+        "walking@194122"
+      ],
+      "issues": [
+        "The set reinforces an inconsistent late-teen-to-adult apparent age rather than a stable 12-year-old identity.",
+        "'smile@183945' has a more mature face and smile morphology and clearly lacks the required front-tooth gap.",
+        "'full-body-galabeya@194122' has a broader, older face with altered eye and cheek proportions.",
+        "'walking@194122' reads as an adult with a more mature body and face, and its layered black outfit looks contemporary rather than securely 1973 Delta-village clothing.",
+        "There are no references with Zeinab's required two long braids, while loose hair dominates the set; this is likely to cause hairstyle-linked identity failure in production shots.",
+        "The same pale button-front dress, patterned brown scarf, gold earrings and ochre-wall portrait setup recur too often and risk baking wardrobe and background into the model.",
+        "Angles, lighting, expressions and body framing are otherwise reasonably varied, and the captions describe changing pose, light, action and wardrobe rather than facial identity."
+      ]
+    },
+    "redesign_change": "Rebuild her as an unmistakably 12-year-old Egyptian village girl with a rounder, shorter child face, softer small chin, smaller button nose and visible slight gap between the front incisors, while retaining the large round dark-brown eyes, strong straight brows, sun-browned olive-brown skin and long straight black hair, styled in two long braids for Zeinab.",
+    "summary": "The core look is too mature and misses several defining facial traits, so training cleanup alone cannot solve the repeated identity failures; redesign the anchor for a clear age-12 face, then regenerate a consistent set that prominently includes two-braid references and period-appropriate child clothing.",
+    "actor": "ACT-0008",
+    "name": "Malak Samy",
+    "roles": [
+      "C-12"
+    ],
+    "training_images": 20,
+    "training_batch": "20261011-183945,20261011-194122",
+    "identity_history": {
+      "C-12": {
+        "reviews": 22,
+        "fail": 10,
+        "rate": 0.45
+      }
+    },
+    "_cost_usd": 0.070896
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor reads approximately 24–26 rather than the specified apparent age of about 30.",
+        "The polished beauty-editorial appearance lacks the specified faint tired under-eye shadows and does not read as an ordinary Suez woman in a 1973 home setting."
+      ]
+    },
+    "anchor": {
+      "score": 5,
+      "issues": [
+        "Skin is heavily polished and luminous, with beauty-retouching rather than fully natural texture.",
+        "Visible eye and lip enhancement gives a fashion-model presentation.",
+        "The face appears younger than 30.",
+        "The specified faint tired shadows beneath the eyes are absent.",
+        "Anatomy, headscarf, Egyptian facial plausibility and signature eye, brow and cheekbone features are otherwise sound; no text or artifacts are visible."
+      ]
+    },
+    "training": {
+      "score": 6,
+      "drift_keys": [
+        "profile-right@203704"
+      ],
+      "defect_keys": [
+        "smile@203704"
+      ],
+      "issues": [
+        "profile-right@203704 has a shorter, less aquiline nose profile, smaller-looking eyes and a broader lower face than the anchor.",
+        "smile@203704 uses a low-cut cardigan with visible cleavage, conflicting with the production's modest household styling.",
+        "Several images retain glossy, beauty-shoot skin and makeup, reinforcing the anchor's overly glamorous look.",
+        "The set has useful variation in framing, profiles, lighting, expressions, outfits and physical actions, but rust-red headscarves and centered portrait compositions recur heavily.",
+        "No sewing or thimble-use example is included for Fatma, despite the thimble being her defining action prop.",
+        "Captions generally describe changing pose, clothing, lighting and expression without redefining identity."
+      ]
+    },
+    "redesign_change": "Age the same face to an ordinary apparent 30-year-old by removing beauty makeup and retouching, adding natural pores and faint tired under-eye shadows, while preserving the light-brown skin, pointed oval face, high cheekbones, slightly aquiline nose, large hazel eyes, thick straight brows and rust headscarf.",
+    "summary": "The core Egyptian facial design and signature features fit Fatma, but the approved anchor is too young and fashion-polished for the written 30-year-old ordinary 1973 character; redesign the anchor, then replace profile-right@203704 for identity drift and smile@203704 for immodest styling.",
+    "actor": "ACT-0009",
+    "name": "Nadia Fouad",
+    "roles": [
+      "C-13"
+    ],
+    "training_images": 20,
+    "training_batch": "20261011-201827,20261011-203704",
+    "identity_history": {
+      "C-13": {
+        "reviews": 18,
+        "fail": 1,
+        "rate": 0.06
+      }
+    },
+    "_cost_usd": 0.071692
+  },
+  {
+    "verdict": "reroll",
+    "fit": {
+      "ok": true,
+      "conflicts": []
+    },
+    "anchor": {
+      "score": 8,
+      "issues": [
+        "The face, coloring, short black hair and grooming fit an Egyptian village boy in 1973.",
+        "He reads near the upper edge of the stated apparent age of eight, but remains credible for the role.",
+        "The portrait is slightly polished and symmetrical, though skin texture and anatomy remain acceptably photorealistic."
+      ]
+    },
+    "training": {
+      "score": 5,
+      "drift_keys": [
+        "carrying@201827",
+        "exhausted@201827",
+        "looking-up@201827",
+        "profile-right@201827",
+        "village-street@201827",
+        "window-interior@201827"
+      ],
+      "defect_keys": [
+        "full-body-galabeya@201827",
+        "intense@201827",
+        "night-moonlight@201827",
+        "village-street@201827"
+      ],
+      "issues": [
+        "Several references make him look older and more angular than the anchor, especially profile-right, village-street and window-interior; the nose, jaw length, eye size and apparent age drift.",
+        "looking-up changes the large dark-brown eyes toward lighter amber eyes and lengthens the lower face.",
+        "exhausted and carrying narrow the face and reduce the anchor's round-eyed, soft-chinned child appearance.",
+        "full-body-galabeya is captioned as a grey galabeya, but the image shows a brown, belted, shirt-collared garment.",
+        "intense is captioned as an olive-green shirt, but the depicted shirt is brown/taupe.",
+        "night-moonlight is captioned as a wool jacket, but the visible seams, pockets and hardware read as a denim-style jacket.",
+        "village-street has a clean contemporary-looking paved residential setting and a modern-looking white T-shirt presentation rather than a clearly 1973 Delta-village context.",
+        "The set overuses brown or khaki collared shirts and centered portrait framing, increasing the risk of baking clothing and composition into the face model.",
+        "There is only one distant full-body reference and limited hand interaction; add clean period references of him holding and examining a small tin toy airplane.",
+        "The listed drift is consistent with the reported identity failures in real-shot keyframes."
+      ]
+    },
+    "summary": "The approved look fits Ali and requires no redesign, but the training set contains substantial age and facial-structure drift plus several caption or period-context defects. Re-roll the named keys with the anchor's rounder face, large dark eyes, small soft chin and apparent age held constant, while expanding period-appropriate outfit, framing and toy-handling variety.",
+    "actor": "ACT-0010",
+    "name": "Youssef Mamdouh",
+    "roles": [
+      "C-14"
+    ],
+    "training_images": 17,
+    "training_batch": "20261011-201827",
+    "identity_history": {
+      "C-14": {
+        "reviews": 14,
+        "fail": 4,
+        "rate": 0.29
+      }
+    },
+    "_cost_usd": 0.061964
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The thick silver-white hair is incompatible with the production rule that Egyptian Sa'iqa personnel have short black hair.",
+        "The voluminous swept-back hairstyle is too long for the required military grooming.",
+        "The anchor reads closer to his late 50s or early 60s than the stated apparent age of 52."
+      ]
+    },
+    "anchor": {
+      "score": 8,
+      "issues": [
+        "Photorealistic with natural skin texture, credible anatomy, and no visible text or image artifacts.",
+        "The steel-rimmed glasses and clean-shaven Egyptian appearance are plausible for 1973.",
+        "Hair color, length, and volume violate the specified Sa'iqa look.",
+        "Heavy whitening and facial aging make him appear older than the approved apparent age."
+      ]
+    },
+    "training": {
+      "score": 0,
+      "drift_keys": [],
+      "defect_keys": [],
+      "issues": [
+        "No training images were supplied, so identity consistency, defects, caption quality, and visual variety cannot be validated.",
+        "A zero-image training set cannot support stable identity across angles, lighting, uniforms, glasses states, or action poses and is consistent with the reported keyframe failures."
+      ]
+    },
+    "redesign_change": "Replace only the thick silver-white swept-back hair with short, military-trimmed black hair with minimal natural temple greying, while retaining the long clean-shaven face, steel-rimmed glasses, grey-green eyes, and all other features.",
+    "summary": "The face is a strong photoreal anchor, but its signature silver, relatively long hair directly contradicts the mandated Sa'iqa grooming; redesign the hair and then build a varied, identity-consistent training set.",
+    "actor": "ACT-0011",
+    "name": "Farouk El-Desouky",
+    "roles": [
+      "C-07"
+    ],
+    "training_images": 0,
+    "training_batch": null,
+    "identity_history": {
+      "C-07": {
+        "reviews": 28,
+        "fail": 6,
+        "rate": 0.21
+      }
+    },
+    "_cost_usd": 0.024232
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor reads as approximately mid-50s rather than the required apparent age of 45.",
+        "His hair is grey across most of the scalp, whereas the approved signature look requires dark cropped hair with greying limited primarily to the temples."
+      ]
+    },
+    "anchor": {
+      "score": 8,
+      "issues": [
+        "Photorealistic ordinary Egyptian appearance, natural skin texture, plausible anatomy and no visible text or artifacts.",
+        "The broad facial greying and mature under-eye and forehead ageing make him look substantially older than the written mid-40s character.",
+        "A faint natural post-shave shadow is visible, but there is no actual beard or moustache."
+      ]
+    },
+    "training": {
+      "score": 0,
+      "drift_keys": [],
+      "defect_keys": [],
+      "issues": [
+        "No training images were supplied, so identity consistency, defect control, caption quality and variation in angle, lighting, wardrobe and action cannot be assessed.",
+        "A complete varied training set must be generated after the anchor redesign."
+      ]
+    },
+    "redesign_change": "Make him read as 45 with closely cropped predominantly dark hair greying only at the temples, while retaining the same round clean-shaven Egyptian face, firm square jaw, broad nose, light-brown eyes, wheat-brown skin and sturdy build.",
+    "summary": "The portrait is technically clean and regionally plausible, but its older apparent age and extensively grey hair contradict the required signature look; redesign the anchor before creating the missing training set.",
+    "actor": "ACT-0012",
+    "name": "Magdy Riad",
+    "roles": [
+      "C-08"
+    ],
+    "training_images": 0,
+    "training_batch": null,
+    "identity_history": {
+      "C-08": null
+    },
+    "_cost_usd": 0.02704
+  },
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The anchor has medium-sized, relatively exposed amber-brown eyes rather than the written signature of small, deep-set black eyes.",
+        "Full-body references depict a lean, athletic, average-to-tall build rather than Hassan's specified short-stocky, broad-shouldered build with thick forearms.",
+        "The anchor is highly polished and conventionally model-like, weakening the intended ordinary, weathered Upper Egyptian outdoor-worker character."
+      ]
+    },
+    "anchor": {
+      "score": 7,
+      "issues": [
+        "Eyes are too large, exposed and light brown for the approved written look.",
+        "Beauty-style lighting, symmetry and glossy skin make the portrait look more like a commercial model than an ordinary weathered laborer.",
+        "The skin is less visibly sun-weathered and reddish-brown than specified.",
+        "The close black buzz cut is compatible with the short-hair commando rule, and the beard, anatomy and period plausibility are otherwise acceptable."
+      ]
+    },
+    "training": {
+      "score": 6,
+      "drift_keys": [
+        "profile-left@165233",
+        "profile-right@165233",
+        "smile@165233",
+        "three-quarter-left-sun@165233",
+        "window-interior@165233"
+      ],
+      "defect_keys": [
+        "headwear@165233",
+        "kneeling@165233",
+        "profile-left@165233"
+      ],
+      "issues": [
+        "The two profile images disagree on nasal shape: profile-left has a substantially more hooked projection, while profile-right has a straighter bridge and different tip.",
+        "smile has larger, rounder, lighter eyes, a softer younger face and a shorter-looking nose than the anchor.",
+        "three-quarter-left-sun has a broader, squarer face and shorter/wider nose than the anchor.",
+        "window-interior has a narrower nose and conspicuously lighter eyes than the anchor.",
+        "kneeling has poorly resolved, merged-looking interlocked fingers.",
+        "profile-left has an irregular smeared bald patch at the temple/hairline.",
+        "headwear introduces a cap despite this commando being consistently bare-headed with short black hair; it risks teaching an unwanted head covering.",
+        "Most references reinforce a lean athletic body rather than the specified short-stocky build.",
+        "Angle, lighting, expression, outfit and framing variety are otherwise strong, and the captions correctly describe only changing scene attributes rather than facial identity."
+      ]
+    },
+    "redesign_change": "Keep the aquiline nose, high cheekbones, angular jaw, close black buzz cut, trimmed beard and complexion, but make the eyes small, deeply set and near-black, reduce the commercial-model polish with more natural weathered skin, and give him a short-stocky, broad-shouldered build with thick forearms.",
+    "summary": "The actor is regionally and period-plausible, but the anchor contradicts signature eye characteristics and the body references contradict Hassan's specified physique; redesign those traits, then reroll the listed identity-drift and artifact images before retraining.",
+    "actor": "ACT-0013",
+    "name": "Mahmoud Abdel-Rahim",
+    "roles": [
+      "C-05"
+    ],
+    "training_images": 19,
+    "training_batch": "20261012-165233",
+    "identity_history": {
+      "C-05": {
+        "reviews": 15,
+        "fail": 7,
+        "rate": 0.47
+      }
+    },
+    "_cost_usd": 0.072968
+  }
+]

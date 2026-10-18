@@ -218,6 +218,11 @@ def cmd_cast_check(args) -> int:
 def _plan(args, lib: Library, prod: Production) -> list[jobs.Job]:
     if args.kind == "anchors":
         return jobs.plan_anchors(lib, prod, args.ids, args.variants or 8, args.tier or "final", args.model)
+    if args.kind == "anchor-edit":
+        if len(args.ids) != 1:
+            raise ValueError("name one actor, e.g. 'generate anchor-edit ACT-0004 --instruction \"...\"'")
+        return jobs.plan_anchor_edit(lib, args.ids[0], args.instruction or "", args.variants or 3,
+                                     args.model or "image_edit_identity", args.source)
     props = bool(args.ids) and all(i.startswith("PRP-") for i in args.ids)
     if args.kind == "training-set":
         return (jobs.plan_prop_training_set if props else jobs.plan_training_set)(lib, args.ids, args.only)
@@ -673,7 +678,7 @@ def main(argv: list[str] | None = None) -> int:
     sp.add_argument("--beat", required=True, help="e.g. 1.4")
 
     sp = sub.add_parser("generate", help="plan (dry run) or run a paid generation batch")
-    sp.add_argument("kind", choices=["anchors", "training-set", "lora", "lora-tests", "plates", "keyframes", "composition", "edit", "face-pass", "clips"])
+    sp.add_argument("kind", choices=["anchors", "anchor-edit", "training-set", "lora", "lora-tests", "plates", "keyframes", "composition", "edit", "face-pass", "clips"])
     sp.add_argument("ids", nargs="*", help="actor/asset/shot IDs")
     sp.add_argument("--part", help="shot-list part for keyframes/clips, e.g. 02_act_two")
     sp.add_argument("--tier", choices=["draft", "final"])

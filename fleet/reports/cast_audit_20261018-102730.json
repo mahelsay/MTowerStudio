@@ -1,0 +1,57 @@
+[
+  {
+    "verdict": "redesign",
+    "fit": {
+      "ok": false,
+      "conflicts": [
+        "The long, tousled light-brown hair directly conflicts with Corporal Mahmoud's required short black military haircut and the production rule that Egyptian commandos have short black hair.",
+        "The conspicuously curled mustache with upturned ends is overly stylized for a 1973 commando in field service and should be conventionally trimmed.",
+        "The anchor has very thick dark eyebrows rather than the written sparse light-brown eyebrows."
+      ]
+    },
+    "anchor": {
+      "score": 6,
+      "issues": [
+        "Photorealistic with credible anatomy, skin texture and freckles, but the highly groomed hair, curled mustache, striking eyes and polished portrait treatment read more like a fashion casting image than an ordinary serviceman.",
+        "Hair length and color are incompatible with the role and production rules.",
+        "The elaborate mustache is not credible field grooming for this commando role.",
+        "The eyebrows do not match the written look.",
+        "No visible text, watermark or anatomical artifact."
+      ]
+    },
+    "training": {
+      "score": 6,
+      "drift_keys": [
+        "night-moonlight",
+        "soaking-wet"
+      ],
+      "defect_keys": [],
+      "issues": [
+        "The night-moonlight face appears older and narrower than the anchor, with altered cheek, eye and mustache proportions.",
+        "The soaking-wet face has a longer, harder facial structure and different nose, jaw and eye proportions from the anchor.",
+        "Every image reinforces the prohibited long tousled hair and curled mustache; there are no references with the required short black military haircut.",
+        "There are no references showing the character's taped wire-rim glasses, leaving the model unprepared to preserve identity under this recurring facial occlusion.",
+        "There are no military-uniform or field-radio character references, despite the actor playing only this commando role.",
+        "The set otherwise has useful variation in angles, expressions, lighting, outfits, framing and action, with no obvious duplicates, hand defects, text or modern props.",
+        "Captions appropriately identify changing pose, lighting, setting and clothing without describing facial identity."
+      ]
+    },
+    "redesign_change": "Replace the long light-brown hair with a short regulation black military haircut, trim the curled upturned mustache into a short natural service mustache, and make the eyebrows sparse light brown while retaining the same age, oval freckled face, green-grey eyes, nose, chin and slight build.",
+    "summary": "The current signature grooming cannot represent a bare-headed 1973 Egyptian commando and is consistently baked into the training set; redesign the anchor first, then rebuild the set around the regulation haircut with limited glasses and character-costume coverage.",
+    "actor": "ACT-0004",
+    "name": "Sherif Mansour",
+    "roles": [
+      "C-04"
+    ],
+    "training_images": 18,
+    "training_batch": "20261011-183945",
+    "identity_history": {
+      "C-04": {
+        "reviews": 7,
+        "fail": 6,
+        "rate": 0.86
+      }
+    },
+    "_cost_usd": 0.067812
+  }
+]

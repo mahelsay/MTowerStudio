@@ -75,6 +75,24 @@ def plan_anchors(lib: Library, prod: Production, actor_ids: list[str], candidate
     return jobs
 
 
+def plan_anchor_edit(lib: Library, actor_id: str, instruction: str, candidates: int = 3,
+                     model_key: str = "image_edit_identity", source_path: str | None = None) -> list[Job]:
+    """Re-design one feature of an actor (hair, grooming, eyebrows …) on top of the approved anchor with FLUX Kontext:
+    the face and everything else are kept. The candidates land in a new anchor batch for review/approval; after the
+    new anchor is approved, regenerate the training set and the face model from it."""
+    if not instruction.strip():
+        raise ValueError("say what to change, e.g. --instruction \"Give him a short regulation black military haircut.\"")
+    refuse_locked(lib, [actor_id], "anchor portraits")
+    source = Path(source_path) if source_path else anchor_path(lib, actor_id)
+    out = actor_dir(lib, actor_id) / "anchor" / batch_id()
+    prompt = (f"{instruction.strip()}. Change only what this instruction names. Keep exactly the same person: the same "
+              "face, face shape, bone structure, nose, eyes, skin tone and skin marks, age, build, expression, pose, "
+              "framing, clothing and background. Photorealistic 35mm film photograph, natural unretouched skin texture, "
+              "1970s Egypt, no text or lettering anywhere.")
+    return [Job("anchor", actor_id, prompt, model_key, candidates, out,
+                {"num_images": candidates, "image_path": str(source)})]
+
+
 # ---- actor face models (LoRA) ---------------------------------------------------------
 def actor_dir(lib: Library, actor_id: str) -> Path:
     return media_root() / "library" / "actors" / f"{actor_id}_{lib.actors[actor_id]['slug']}"
@@ -1132,7 +1150,7 @@ def run(jobs: list[Job], confirm_cost: float | None, production_key: str) -> flo
         if "image_path" in payload:
             image = payload.pop("image_path")
             uploads.setdefault(image, client.upload_file(Path(image), expiry))
-            payload[m.get("image_field", "image_url")] = uploads[image]
+            payload[m.get("image_field", "image_url")] = [uploads[image]] if m.get("image_list") else uploads[image]
             if "end_image_path" in payload:
                 end = payload.pop("end_image_path")
                 uploads.setdefault(end, client.upload_file(Path(end), expiry))

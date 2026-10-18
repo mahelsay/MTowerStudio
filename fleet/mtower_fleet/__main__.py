@@ -98,6 +98,13 @@ def main() -> int:
     ls.add_argument("--confirm-cost", type=float, default=None,
                     help="spend gate for distill: must be >= the printed estimate (USD) or nothing runs")
 
+    ca = sub.add_parser("cast-audit", help="Phase D: vision audit of every library actor (anchor + training set + fit)")
+    ca.add_argument("ids", nargs="*", help="actor ids (default: all)")
+    ca.add_argument("--production", default="thunderbolt")
+    ca.add_argument("--episode", default="ep01_romani")
+    ca.add_argument("--confirm-cost", type=float, default=None,
+                    help="spend gate: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -275,6 +282,22 @@ def main() -> int:
 
     elif args.cmd == "lessons":
         return _lessons_cmd(args)
+    elif args.cmd == "cast-audit":
+        from . import audit_cast
+        from datetime import datetime
+        from pathlib import Path
+        n, est = audit_cast.estimate(args.ids or None)
+        print(f"Cast audit: {n} actor(s) — estimate ${est:.2f} (gpt-5.6-sol, anchor + low-detail training set)")
+        if args.confirm_cost is None or args.confirm_cost < est:
+            print(f"Not run. Re-run with --confirm-cost {est} to approve this spend.")
+            return 0
+        res = audit_cast.run(args.production, args.episode, args.ids or None, on_actor=lambda r: print(
+            f"  {r['actor']:9} {r.get('verdict', 'ERROR'):9} anchor {(r.get('anchor') or {}).get('score', '-')} · "
+            f"training {(r.get('training') or {}).get('score', '-')} · {r.get('training_images', '?')} imgs · "
+            f"${r.get('_cost_usd', 0):.3f} · {(r.get('summary') or r.get('error', ''))[:110]}", flush=True))
+        out = Path(__file__).resolve().parents[1] / "reports" / f"cast_audit_{datetime.now():%Y%m%d-%H%M%S}.json"
+        out.write_text(json.dumps(res, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+        print(f"spend ≈ ${sum(r.get('_cost_usd', 0) for r in res):.3f} · report {out}")
     return 0
 
 

@@ -33,6 +33,7 @@ $client = $envVars['AZURE_CLIENT_ID']
 $rg     = $envVars['AZURE_RESOURCE_GROUP']
 $foundry = 'me-eus2-mtowerstudio-fdy'
 $storage = 'meeus2mtowerstudiost01'
+$mediaFoundry = 'me-swc-mtowerstudio-fdy'   # second-region media Foundry (gpt-image-2, sora-2)
 
 # --- Interactive Owner sign-in ---
 Write-Host "Sign in as the subscription Owner (a browser window will open)..." -ForegroundColor Cyan
@@ -46,7 +47,7 @@ if ($UserObjectId) { $principals += @{ id = $UserObjectId; type = 'User' } }
 Write-Host "Granting roles to: $($principals.id -join ', ')" -ForegroundColor Cyan
 
 $deployName = "mtowerstudio-access-$(Get-Date -Format yyyyMMdd-HHmmss)"
-$p = @{ foundryName = $foundry; storageAccountName = $storage; principals = $principals }
+$p = @{ foundryName = $foundry; storageAccountName = $storage; mediaFoundryName = $mediaFoundry; principals = $principals }
 
 if ($Apply) {
   New-AzResourceGroupDeployment -ResourceGroupName $rg -Name $deployName -TemplateFile $access -TemplateParameterObject $p

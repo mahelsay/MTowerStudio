@@ -72,10 +72,32 @@ param modelDeployments = [
     sku: 'GlobalStandard'
     capacity: 10
   }
-  // PENDING quota (subscription-wide, currently all held by the MTower Foundry): gpt-image-2 (2/2),
-  // gpt-image-2.5-flare (2/2), sora-2 (9/9). Add here when MTower's deployments are released at cutover
-  // (or after a quota increase): me-eus2-gpt-image-2 (2026-04-21, cap 2), me-eus2-gpt-image-2-5-flare
-  // (2026-09-08, cap 2), me-eus2-sora-2 (2025-12-08, cap 9).
+  // gpt-image-2.5-flare: the subscription limit is 2 in EVERY region and the legacy MTower Foundry holds both
+  // (checked 2026-10-18 across 10 regions). Add it here only after MTower's deployment is deleted at cutover.
+]
+
+// Second-region media Foundry (me-swc-mtowerstudio-fdy, same RG): East US 2 quota for these is held by the legacy
+// MTower Foundry; Sweden Central had free quota (checked 2026-10-18: gpt-image-2 0/2, sora-2 0/9).
+param mediaLocation = 'swedencentral'
+param mediaRegionCode = 'swc'
+param mediaDeployments = [
+  {
+    // Compositions with prop references + face swap (engine image_compose / face_swap)
+    name: 'me-swc-gpt-image-2'
+    format: 'OpenAI'
+    model: 'gpt-image-2'
+    version: '2026-04-21'
+    sku: 'GlobalStandard'
+    capacity: 2
+  }
+  {
+    name: 'me-swc-sora-2'
+    format: 'OpenAI'
+    model: 'sora-2'
+    version: '2025-12-08'
+    sku: 'GlobalStandard'
+    capacity: 9
+  }
 ]
 
 // Budget: $700 ceiling (the target tenant's monthly), 70% alert (~$490) per ADR-0002.

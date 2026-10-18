@@ -58,6 +58,8 @@ class AzureClient:
     def __init__(self) -> None:
         cfg = engine_config()["providers"]["azure"]
         self.endpoint = cfg["endpoint"].rstrip("/")
+        self.routes = {k: v.rstrip("/") for k, v in (cfg.get("deployment_endpoints") or {}).items()
+                       if not k.startswith("$")}
         self.api_version = cfg["api_version"]
         self.timeout = cfg.get("timeout_seconds", 300)
         self.scope = cfg.get("scope", "https://cognitiveservices.azure.com/.default")
@@ -113,12 +115,17 @@ class AzureClient:
                 raise AzureError(f"Azure request failed: network error {err} (not retried: it may have been billed)") from None
         raise AzureError("Azure request failed: still rate-limited after 4 attempts")
 
+    def _base(self, deployment: str) -> str:
+        """The Foundry that hosts a deployment: providers.azure.deployment_endpoints overrides the default endpoint
+        (e.g. gpt-image-2 / sora-2 on the second-region media Foundry)."""
+        return self.routes.get(deployment, self.endpoint)
+
     def images(self, deployment: str, prompt: str, references: list[Path] | None = None, n: int = 1,
                size: str = "1280x720", quality: str = "medium", output_format: str = "png",
                moderation: str | None = None) -> ImageResult:
         """Generate n images; with references, the edits endpoint uses them as visual references (up to 16).
         moderation "low" relaxes gpt-image's own output moderation (the OpenAI image-API setting; Azure accepts it)."""
-        base = f"{self.endpoint}/openai/deployments/{urllib.parse.quote(deployment)}/images"
+        base = f"{self._base(deployment)}/openai/deployments/{urllib.parse.quote(deployment)}/images"
         query = f"?api-version={self.api_version}"
         extra = {"moderation": moderation} if moderation else {}
         if references:
@@ -145,7 +152,7 @@ class AzureClient:
             fields["moderation"] = moderation
         files = [("image[]", p) for p in images[:16]] + ([("mask", mask)] if mask else [])
         body, ctype = _multipart(fields, files)
-        data = self._post(f"{self.endpoint}/openai/deployments/{urllib.parse.quote(deployment)}/images/edits"
+        data = self._post(f"{self._base(deployment)}/openai/deployments/{urllib.parse.quote(deployment)}/images/edits"
                           f"?api-version={self.api_version}", body, ctype)
         out = [base64.b64decode(item["b64_json"]) for item in data.get("data") or [] if item.get("b64_json")]
         if not out:

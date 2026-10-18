@@ -1,0 +1,4928 @@
+{
+  "$note": "Studio memory, kept by the Learning Keeper. status: candidate (advisory) | rule (must follow) | retired. Edit freely: set status 'rule' to approve (approved_by: human) or 'retired' to drop.",
+  "updated_at": "2026-10-18T09:19:47+00:00",
+  "lessons": [
+    {
+      "id": "L-0001",
+      "status": "rule",
+      "title": "Encode shot geography and scale before rendering",
+      "problem": "Keyframes often lose the designed camera position, lens-specific scale, screen direction, or subject orientation, producing a plausible image that tells the wrong beat.",
+      "cause": "The prompt describes scene elements without locking their spatial relationship to the camera and the intended frame hierarchy.",
+      "prevention": "State the camera position, lens, framing scale, subject distance, screen direction, and required dominant visual subject before listing atmosphere or details.",
+      "check": "Verify camera side, shot size, subject scale, eyeline direction, and story focus match the board.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-adfa5c9342",
+          "target": "1.1-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-59ba9df243",
+          "target": "1.1-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-185ff42ec9",
+          "target": "1.10-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0364fe3de8",
+          "target": "1.10-06",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-420d15a582",
+          "target": "1.10-06b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2e42307939",
+          "target": "1.3-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a23bb87786",
+          "target": "1.3-06",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9c3ab682b1",
+          "target": "1.3-06b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-03c0f1f7b8",
+          "target": "1.3-06d",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-115b7d2a52",
+          "target": "1.5-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f6ee365109",
+          "target": "1.5-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4464bda7c4",
+          "target": "1.6-04b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7220c6a73d",
+          "target": "1.7-07",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5ba8beca3c",
+          "target": "1.7-07b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6fe6279871",
+          "target": "1.7-08",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-51520a044b",
+          "target": "1.8-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7a431e16b8",
+          "target": "2.4-03b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b55ebbba3c",
+          "target": "4.8-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-40f4c9eae4",
+          "target": "T.3-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-aff943c6ec",
+          "target": "1.1-08",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8fab106629",
+          "target": "1.10-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d2014aadfb",
+          "target": "2.16-05b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-af5dbb1feb",
+          "target": "2.5-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a5643c01e9",
+          "target": "3.1-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-c7f2c7d594",
+          "target": "3.1-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-aba4836c6b",
+          "target": "3.1-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-187c4249e7",
+          "target": "3.11-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-74d59d21bd",
+          "target": "3.12-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0e7d41e557",
+          "target": "3.12-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-eea52e6a21",
+          "target": "3.2-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9defb64ec7",
+          "target": "3.3-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-28bb6c2773",
+          "target": "3.4-08",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d37692d6a0",
+          "target": "3.5-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-297e684246",
+          "target": "3.6-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-46ce8e1aa8",
+          "target": "3.7-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-56353b35ca",
+          "target": "3.7-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-db918bf5a8",
+          "target": "3.8-07",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d220d1345a",
+          "target": "3.8-08",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7afa1de48a",
+          "target": "4.2-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e0ea8defa8",
+          "target": "4.7-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-61b64efb3a",
+          "target": "4.9-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3bfffb1d42",
+          "target": "5.6-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-dc3c6b6656",
+          "target": "T.1-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.1-01",
+        "1.1-02",
+        "1.10-01",
+        "1.10-06",
+        "1.10-06b",
+        "1.3-01",
+        "1.3-06",
+        "1.3-06b",
+        "1.3-06d",
+        "1.5-03",
+        "1.5-05",
+        "1.6-04b",
+        "1.7-07",
+        "1.7-07b",
+        "1.7-08",
+        "1.8-04",
+        "2.4-03b",
+        "4.8-03",
+        "T.3-03",
+        "1.1-08",
+        "1.10-05",
+        "2.16-05b",
+        "2.5-06",
+        "3.1-01",
+        "3.1-03",
+        "3.1-04",
+        "3.11-03",
+        "3.12-01",
+        "3.12-02",
+        "3.2-02",
+        "3.3-04",
+        "3.4-08",
+        "3.5-01",
+        "3.6-01",
+        "3.7-05",
+        "3.7-06",
+        "3.8-07",
+        "3.8-08",
+        "4.2-01",
+        "4.7-01",
+        "4.9-01",
+        "5.6-05",
+        "T.1-01"
+      ],
+      "proven_fixes": 19,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:35+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:14:35+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0002",
+      "status": "rule",
+      "title": "Make the opening keyframe visibly contain the scripted action",
+      "problem": "Keyframes omit the physical cue that establishes the next action, such as rescue contact, a spray of water, a passed canteen, or a plate under a character's gaze.",
+      "cause": "Prompts name the dramatic beat but do not specify the visible body-object relationship or transitional pose needed for animation.",
+      "prevention": "Describe the exact opening-phase pose, contact, prop position, and visible physical effect that makes the imminent action readable in one frame.",
+      "check": "Confirm the required action cue, contact point, prop, and direction of movement are visibly readable.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "script",
+          "director",
+          "action",
+          "prompting",
+          "image_qa",
+          "video"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-80d1cf44e3",
+          "target": "1.1-03a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-c4173d00a9",
+          "target": "1.1-03b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1e080b62e9",
+          "target": "1.11-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-33cb7fbbff",
+          "target": "1.12-02c",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e9d1bf60bc",
+          "target": "1.3-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-261f750e35",
+          "target": "1.5-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b5d9ab44e2",
+          "target": "1.7-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-72837df51e",
+          "target": "1.7-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-866803e55e",
+          "target": "1.9-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8232762db9",
+          "target": "2.12-03a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-608d9e88f1",
+          "target": "3.13-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5d076030ef",
+          "target": "3.2-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3e1c5ac9b1",
+          "target": "5.3-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-95a77e9cb6",
+          "target": "1.10-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-820bc15289",
+          "target": "1.11-01b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4b338efff8",
+          "target": "1.11-01c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3d1d9fe501",
+          "target": "1.4-04b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e81a816df8",
+          "target": "1.4-05d",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b038d43e3d",
+          "target": "1.5-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4801c8852f",
+          "target": "1.5-04c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b2d9c68a4b",
+          "target": "1.6-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-65ead7b539",
+          "target": "1.6-04c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1f17243cb0",
+          "target": "1.9-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-621cefcd27",
+          "target": "1.9-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-32e5050b90",
+          "target": "1.9-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-bb0f17843f",
+          "target": "1.9-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2ee21086fa",
+          "target": "2.1-03b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6a8303c440",
+          "target": "2.11-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-89f5090fcc",
+          "target": "2.11-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-fcf6ff8d78",
+          "target": "2.11-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-c2bf2b9ec0",
+          "target": "2.13-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2151285a7e",
+          "target": "2.14-01a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-df2390f011",
+          "target": "2.14-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b57ed0956c",
+          "target": "2.7-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ba6028a73b",
+          "target": "3.1-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4db467bb4e",
+          "target": "3.10-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d869ace9a2",
+          "target": "3.3-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5c47bbf041",
+          "target": "3.9-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-151d8ddadd",
+          "target": "3.9-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-26165901f3",
+          "target": "4.1-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f9625900c6",
+          "target": "4.4-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-66ba1f2334",
+          "target": "4.4-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a5ddcf7b0c",
+          "target": "4.5-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-54e97ca52a",
+          "target": "4.6-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7cc1664f12",
+          "target": "4.6-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-50798a8980",
+          "target": "4.7-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-663d2489dd",
+          "target": "4.9-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-067ea6adc1",
+          "target": "5.2-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f76443ca2f",
+          "target": "5.5-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f0a1789cbe",
+          "target": "5.5-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.1-03a",
+        "1.1-03b",
+        "1.11-01",
+        "1.12-02c",
+        "1.3-02",
+        "1.5-01",
+        "1.7-02",
+        "1.7-03",
+        "1.9-04",
+        "2.12-03a",
+        "3.13-01",
+        "3.2-03",
+        "5.3-03",
+        "1.10-04",
+        "1.11-01b",
+        "1.11-01c",
+        "1.4-04b",
+        "1.4-05d",
+        "1.5-04",
+        "1.5-04c",
+        "1.6-03a",
+        "1.6-04c",
+        "1.9-02b",
+        "1.9-03",
+        "1.9-03a",
+        "1.9-05a",
+        "2.1-03b",
+        "2.11-02",
+        "2.11-02a",
+        "2.11-03",
+        "2.13-01",
+        "2.14-01a",
+        "2.14-02b",
+        "2.7-04",
+        "3.1-03a",
+        "3.10-04",
+        "3.3-03",
+        "3.9-01",
+        "3.9-03",
+        "4.1-05",
+        "4.4-02",
+        "4.4-04",
+        "4.5-04",
+        "4.6-02",
+        "4.6-04",
+        "4.7-03",
+        "4.9-03",
+        "5.2-02",
+        "5.5-02",
+        "5.5-03"
+      ],
+      "proven_fixes": 13,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:35+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:14:35+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0003",
+      "status": "rule",
+      "title": "Constrain 1973 Egyptian military identifiers",
+      "problem": "Generated commandos acquire modern tactical rigs, headgear, malformed AKMs, or incorrect rank insignia instead of the production's approved period military appearance.",
+      "cause": "Models default to generic contemporary military equipment and decorative insignia unless each constrained identifier is explicitly visualized.",
+      "prevention": "Specify bare heads, approved canvas webbing, coherent period AKM construction, and the exact rank device count and shape for every visible commando.",
+      "check": "Inspect headgear, webbing closures, weapon construction, and every visible rank device for approved period details.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "wardrobe",
+          "set",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-14cac5b12e",
+          "target": "1.1-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ca044c25d2",
+          "target": "1.1-06b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-de76ca7221",
+          "target": "1.1-08a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0a74856ab9",
+          "target": "1.1-09",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3ae7c70d86",
+          "target": "1.11-03a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6a11205db6",
+          "target": "1.2-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ff7c98a85a",
+          "target": "1.2-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3cff5b2433",
+          "target": "1.2-04b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-325ff283ed",
+          "target": "1.4-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d779f4d977",
+          "target": "1.4-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f5356a4a96",
+          "target": "1.4-03b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5e461892e5",
+          "target": "1.4-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ad41a6cf0b",
+          "target": "1.4-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1fd59dcc6b",
+          "target": "1.4-05b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-122279ec43",
+          "target": "1.6-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1b74f08614",
+          "target": "1.6-04a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-eed46c04ff",
+          "target": "1.7-06",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f0d6f598bc",
+          "target": "1.9-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3616660d9b",
+          "target": "1.9-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f8567dd843",
+          "target": "2.11-02c",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-11e34ade77",
+          "target": "2.12-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-223e6eb114",
+          "target": "2.12-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b9a0fc885a",
+          "target": "2.13-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5f7f9bf9b3",
+          "target": "2.2-02a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b9858c28bd",
+          "target": "2.2-03c",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-62e3a11a4f",
+          "target": "2.3-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-74149e76f2",
+          "target": "2.4-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ad50132cb0",
+          "target": "2.8-02a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6d0e55117d",
+          "target": "2.9-02b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-92b801610b",
+          "target": "3.6-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5570bfecdf",
+          "target": "T.3-08",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-286f4af12f",
+          "target": "1.1-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-85a7b3e037",
+          "target": "1.1-07",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-49374691fe",
+          "target": "1.1-10",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-352511f005",
+          "target": "1.2-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-076b327768",
+          "target": "1.7-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0988ba0ae2",
+          "target": "1.7-02c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e4c8944af7",
+          "target": "1.7-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1f8dbfa705",
+          "target": "2.10-01a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-bb0f17843f",
+          "target": "1.9-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-fcf6ff8d78",
+          "target": "2.11-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-c2bf2b9ec0",
+          "target": "2.13-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a31c575a5d",
+          "target": "2.16-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-707330f9ed",
+          "target": "2.3-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-fa5a454d65",
+          "target": "2.4-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-fdc530db86",
+          "target": "2.6-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5456fda312",
+          "target": "3.11-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d33627b01f",
+          "target": "3.13-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-15a7ddb91b",
+          "target": "3.4-06a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-dc77ecf308",
+          "target": "3.5-03b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8756a93735",
+          "target": "3.9-04b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-bd55adb9ca",
+          "target": "3.9-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3b40fd4541",
+          "target": "4.1-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-542fa4638d",
+          "target": "4.3-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-74f19bedf7",
+          "target": "4.5-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-437d7db3ca",
+          "target": "5.1-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-fe691ca58a",
+          "target": "5.1-02c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e13b1bad2f",
+          "target": "5.1-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-11b58f0154",
+          "target": "5.2-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.1-04",
+        "1.1-06b",
+        "1.1-08a",
+        "1.1-09",
+        "1.11-03a",
+        "1.2-01",
+        "1.2-04",
+        "1.2-04b",
+        "1.4-01",
+        "1.4-03",
+        "1.4-03b",
+        "1.4-04",
+        "1.4-05",
+        "1.4-05b",
+        "1.6-04",
+        "1.6-04a",
+        "1.7-06",
+        "1.9-02",
+        "1.9-05",
+        "2.11-02c",
+        "2.12-01",
+        "2.12-03",
+        "2.13-02",
+        "2.2-02a",
+        "2.2-03c",
+        "2.3-02",
+        "2.4-03",
+        "2.8-02a",
+        "2.9-02b",
+        "3.6-03",
+        "T.3-08",
+        "1.1-06",
+        "1.1-07",
+        "1.1-10",
+        "1.2-06",
+        "1.7-01",
+        "1.7-02c",
+        "1.7-05",
+        "2.10-01a",
+        "1.9-05a",
+        "2.11-03",
+        "2.13-01",
+        "2.16-04a",
+        "2.3-02b",
+        "2.4-05a",
+        "2.6-04",
+        "3.11-01",
+        "3.13-03",
+        "3.4-06a",
+        "3.5-03b",
+        "3.9-04b",
+        "3.9-06",
+        "4.1-01",
+        "4.3-03",
+        "4.5-02",
+        "5.1-02b",
+        "5.1-02c",
+        "5.1-03",
+        "5.2-04a"
+      ],
+      "proven_fixes": 31,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:35+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00",
+      "promoted_at": "2026-10-18T09:14:35+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0004",
+      "status": "rule",
+      "title": "Protect the clean-and-pressed costume state",
+      "problem": "Characters designated clean arrive with salt, dust, mottling, stains, or excessive rumpling that changes continuity and characterization.",
+      "cause": "Desert and airfield context biases generation toward weathered uniforms despite the specified wear state.",
+      "prevention": "Explicitly render designated uniforms and webbing clean, evenly sand-khaki, recently pressed, and free of dust or salt while retaining only natural movement folds.",
+      "check": "Verify no conspicuous dust, salt, stains, mottling, or heavy rumpling appears on clean-designated wardrobe.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "wardrobe",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "WEAR_CLEAN"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-553a64b856",
+          "target": "1.1-09a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5cd4bbcdfc",
+          "target": "1.11-01d",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1b15e9e051",
+          "target": "1.7-02b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-01a6e6e07c",
+          "target": "1.1-09c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-39c7d7afc6",
+          "target": "1.4-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.1-09a",
+        "1.11-01d",
+        "1.7-02b",
+        "1.1-09c",
+        "1.4-05a"
+      ],
+      "proven_fixes": 3,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:35+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:16:49+00:00",
+      "promoted_at": "2026-10-18T09:15:08+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0005",
+      "status": "candidate",
+      "title": "Use period retail dressing without modern packaging",
+      "problem": "Village grocery and domestic-shop backgrounds contain modern plastic bottles, bright packaging, labels, or pseudo-text that break the period setting.",
+      "cause": "Unconstrained product generation defaults to contemporary packaged merchandise and text-like graphics.",
+      "prevention": "Dress 1973 Egyptian retail shelves only with unlabeled glass bottles, plain tins, paper packets, cloth sacks, simple jars, and worn subdued signage.",
+      "check": "Reject modern plastic, bright branded packaging, readable labels, and pseudo-text in visible shop goods.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-4fe75d069b",
+          "target": "1.12-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-71435c72ee",
+          "target": "1.12-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.12-01",
+        "1.12-04"
+      ],
+      "proven_fixes": 2,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:35+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:15:08+00:00"
+    },
+    {
+      "id": "L-0006",
+      "status": "rule",
+      "title": "Use character anchors when a face is visible",
+      "problem": "A recurring character's facial structure, tattoo, or profile drifts from the approved identity when the face is visible in a new angle.",
+      "cause": "Prompt-only identity descriptions do not reliably preserve specific facial anchors across poses and lighting conditions.",
+      "prevention": "Use the approved character reference and explicitly retain the defining facial anchors; choose a rearward angle when the beat does not require a visible face.",
+      "check": "Compare visible facial structure, marks, and profile against the approved character reference.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "casting",
+          "prompting",
+          "face_pass",
+          "image_qa"
+        ],
+        "tags": [
+          "C-11"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-3f873ebb01",
+          "target": "1.12-02b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d3c5013b2d",
+          "target": "1.12-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f55fb359c7",
+          "target": "2.3-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7ec24e93f1",
+          "target": "2.7-03b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8a124487e9",
+          "target": "5.5-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8e7c2ad81e",
+          "target": "1.12-02d",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a084d144f7",
+          "target": "1.8-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-feacd8e34d",
+          "target": "1.9-02c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f19c4b4d21",
+          "target": "2.16-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e238e9fe0d",
+          "target": "2.4-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-cb7e1b02b5",
+          "target": "3.2-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-24d7b259a9",
+          "target": "3.9-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b68b2e5482",
+          "target": "4.4-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0d9b9af7df",
+          "target": "5.6-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3d22eb8fa7",
+          "target": "5.6-07",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.12-02b",
+        "1.12-05",
+        "2.3-03",
+        "2.7-03b",
+        "5.5-04",
+        "1.12-02d",
+        "1.8-02",
+        "1.9-02c",
+        "2.16-02a",
+        "2.4-01",
+        "3.2-05",
+        "3.9-04",
+        "4.4-04a",
+        "5.6-06",
+        "5.6-07"
+      ],
+      "proven_fixes": 5,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:35+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:15:29+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0007",
+      "status": "rule",
+      "title": "Specify exact aircraft count in formations",
+      "problem": "Generated aerial formations can omit required vehicles, weakening the designed scale and formation read.",
+      "cause": "The generation brief did not make the exact aircraft count a visually verifiable formation constraint.",
+      "prevention": "State the exact number, type, relative altitude, spacing, and silhouette treatment of every aircraft in the visible formation.",
+      "check": "Count every visible aircraft and verify each matches the required type, spacing, and scale.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "VEH-0001"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-d5e9870664",
+          "target": "1.12-06",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2017ee9d07",
+          "target": "T.2-07",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b69dd5ac74",
+          "target": "T.3-10",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-18e02a56d2",
+          "target": "1.11-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-76d604d4d2",
+          "target": "3.1-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.12-06",
+        "T.2-07",
+        "T.3-10",
+        "1.11-03",
+        "3.1-02"
+      ],
+      "proven_fixes": 3,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:54+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:23+00:00",
+      "promoted_at": "2026-10-18T09:16:14+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0008",
+      "status": "rule",
+      "title": "Render RPG-7 inserts with complete period-defining geometry",
+      "problem": "RPG-7s lose their recognizable loaded-round, optic, and launcher geometry in close prop shots.",
+      "cause": "Weapon prompts omitted the distinctive PG-7V warhead, side-mounted PGO-7 optic, and complete launcher construction.",
+      "prevention": "Specify an accurate loaded RPG-7 with wooden heat shields, rear venturi, pistol grips, side-mounted PGO-7 optic, and a broad PG-7V warhead inserted through the muzzle.",
+      "check": "Verify the PG-7V warhead, PGO-7 side optic, wooden shields, grips, and venturi are all recognizable.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0002"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-9990b56a1a",
+          "target": "1.2-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-66ecb632e4",
+          "target": "1.2-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-c0b53814ff",
+          "target": "T.2-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-688589ec05",
+          "target": "2.6-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8ec0b8cd77",
+          "target": "3.8-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0ba1699de9",
+          "target": "4.4-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2380ebaa7c",
+          "target": "B3_the_ambush",
+          "kind": "poster",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.2-02",
+        "1.2-03",
+        "T.2-04",
+        "2.6-03a",
+        "3.8-02",
+        "4.4-01",
+        "B3_the_ambush"
+      ],
+      "proven_fixes": 3,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:54+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:16:14+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0009",
+      "status": "candidate",
+      "title": "Motivate bare-bulb interiors with one practical source",
+      "problem": "Barracks interiors gain extra visible bulbs or incoherent facial illumination despite a single-bulb lighting design.",
+      "cause": "The practical source count and its intended key direction were not constrained before rendering.",
+      "prevention": "Show only one bare incandescent practical and explicitly place its warm key direction, falloff, and required facial shadow or mouth visibility.",
+      "check": "Verify exactly one visible practical bulb and facial lighting consistent with its position.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "set",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOOK_BARE_BULB"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-dfaff7d9d4",
+          "target": "1.2-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.2-05"
+      ],
+      "proven_fixes": 1,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:54+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:14:54+00:00"
+    },
+    {
+      "id": "L-0010",
+      "status": "rule",
+      "title": "Use verified Arabic handwriting for readable text inserts",
+      "problem": "Macro shots of Arabic letters produce pseudo-Arabic with broken connections, malformed marks, and illegible words.",
+      "cause": "Image generation was asked to synthesize Arabic text rather than reproduce vetted fluent handwriting.",
+      "prevention": "Use a vetted fluent-writer Arabic passage as the visible text reference and preserve its right-to-left connected handwriting in the insert.",
+      "check": "Inspect every visible word for natural right-to-left connections, marks, and legibility.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0010"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-0f16252ed4",
+          "target": "1.3-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1fd3d2b101",
+          "target": "5.3-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4b09a28fae",
+          "target": "5.3-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.3-05",
+        "5.3-02",
+        "5.3-06"
+      ],
+      "proven_fixes": 1,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:14:54+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00",
+      "promoted_at": "2026-10-18T09:19:21+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0011",
+      "status": "rule",
+      "title": "Direct the opening performance state explicitly",
+      "problem": "Generated performers default to alert, neutral, or minimally expressive faces when the shot requires a specific emotional state or intelligible vocal effort.",
+      "cause": "Expression, eyelid state, gaze target, and mouth shape were under-specified relative to the intended opening performance beat.",
+      "prevention": "State the exact eyelid, brow, gaze, mouth shape, facial tension, and emotional state required at the opening moment; explicitly forbid camera acknowledgement.",
+      "check": "Verify expression, gaze, and mouth visibly convey the scripted opening emotional or speaking state.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "casting",
+          "prompting",
+          "face_pass",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-8ff7173f80",
+          "target": "1.5-04a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9fc5233b9c",
+          "target": "1.7-02a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ab980db719",
+          "target": "1.9-02a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-921cdcd654",
+          "target": "2.13-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e372dc0fdf",
+          "target": "2.2-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6451126d1d",
+          "target": "2.6-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a8a634e505",
+          "target": "T.2-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-5874dc01f9",
+          "target": "T.2-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-87b5e0389a",
+          "target": "T.3-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d80c1f6382",
+          "target": "T.3-09",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2ba000d8d2",
+          "target": "1.1-09b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0fb56e3b1f",
+          "target": "1.10-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-37bfe45b07",
+          "target": "1.10-06c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b003bdbf0c",
+          "target": "1.3-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d18513087c",
+          "target": "1.6-03b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-826a4bb08c",
+          "target": "2.11-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f19c4b4d21",
+          "target": "2.16-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f22c3112c9",
+          "target": "3.10-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-bbb2b72364",
+          "target": "3.4-07",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-eb5240b27f",
+          "target": "4.3-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d6e1b80f8b",
+          "target": "4.8-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7b8394c651",
+          "target": "4.8-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f910abf28f",
+          "target": "5.5-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.5-04a",
+        "1.7-02a",
+        "1.9-02a",
+        "2.13-04",
+        "2.2-03",
+        "2.6-05",
+        "T.2-03",
+        "T.2-05",
+        "T.3-01",
+        "T.3-09",
+        "1.1-09b",
+        "1.10-04a",
+        "1.10-06c",
+        "1.3-03",
+        "1.6-03b",
+        "2.11-02b",
+        "2.16-02a",
+        "3.10-02a",
+        "3.4-07",
+        "4.3-04",
+        "4.8-02",
+        "4.8-05",
+        "5.5-02a"
+      ],
+      "proven_fixes": 10,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:08+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:15:08+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0012",
+      "status": "candidate",
+      "title": "Specify Egyptian commando ensemble casting",
+      "problem": "Wide military ensembles default to fair European-looking soldiers rather than credible Egyptian commandos.",
+      "cause": "The visible group’s Egyptian casting and grooming variation were not explicitly constrained before rendering.",
+      "prevention": "Specify every clearly visible commando as an Egyptian man with varied authentic Egyptian features, short black military hair, and no European-looking foreground casting.",
+      "check": "Verify all clearly visible commandos read as Egyptian men with short black hair.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "casting",
+          "director",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-dd9e2a1343",
+          "target": "1.6-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-176e4a77a7",
+          "target": "1.7-09",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.6-01",
+        "1.7-09"
+      ],
+      "proven_fixes": 2,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:08+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:15:08+00:00"
+    },
+    {
+      "id": "L-0013",
+      "status": "rule",
+      "title": "Maintain natural adult head-to-body proportions in portrait keyframes",
+      "problem": "Close and medium-close portraits can render oversized heads and undersized shoulders, weakening realism and actor interaction.",
+      "cause": "Portrait-oriented generation tends to favor facial scale, especially when more than one character shares a tightly framed shot.",
+      "prevention": "Specify natural adult proportions: each visible man has shoulders approximately 2.5–3 head widths across, with anatomically proportionate neck, torso, and head scale.",
+      "check": "Verify every visible adult has believable head, neck, shoulder, and upper-torso proportions.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "casting",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-d27d9e1a0d",
+          "target": "2.1-01a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b0a627ff6d",
+          "target": "2.1-03a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-37bf696339",
+          "target": "2.3-02c",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-a02cc27683",
+          "target": "3.10-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-cbc5e5607b",
+          "target": "5.6-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0c63e362bd",
+          "target": "1.8-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-cee6808f79",
+          "target": "3.9-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-aa4b784a9d",
+          "target": "5.1-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3aa2051d82",
+          "target": "5.2-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-be1e13b3d1",
+          "target": "5.4-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-91c65c2099",
+          "target": "5.5-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.1-01a",
+        "2.1-03a",
+        "2.3-02c",
+        "3.10-03",
+        "5.6-02",
+        "1.8-02a",
+        "3.9-04a",
+        "5.1-02",
+        "5.2-01",
+        "5.4-01",
+        "5.5-05a"
+      ],
+      "proven_fixes": 5,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:29+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:15:29+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0014",
+      "status": "rule",
+      "title": "Render red-filtered flashlight spill as a localized practical source",
+      "problem": "Night keyframes omit the required red-filtered flashlight contribution and default to uniform cool moonlight.",
+      "cause": "Without an explicit source direction and affected surfaces, the model treats colored tactical illumination as optional atmosphere rather than motivated light.",
+      "prevention": "Place a subtle red-filtered flashlight just off-frame and specify its localized spill across the near face, mouth, neck, and adjacent uniform, balanced by blue moonlit shadows.",
+      "check": "Verify localized red spill shapes the designated subject while surrounding shadows remain cool and dark.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-40ad57f9b5",
+          "target": "2.14-02a",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7a431e16b8",
+          "target": "2.4-03b",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-dca030032b",
+          "target": "2.4-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.14-02a",
+        "2.4-03b",
+        "2.4-02"
+      ],
+      "proven_fixes": 2,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:29+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:23+00:00",
+      "promoted_at": "2026-10-18T09:17:23+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0015",
+      "status": "rule",
+      "title": "Stage salt-marsh crossings at visibly shallow depth",
+      "problem": "Salt-marsh shots can render water as ankle-deep sheets or turn a shallow crossing into implausibly deep water around the soldier and weapon.",
+      "cause": "The prompt did not make the mid-shin immersion, salt-crust terrain, and equipment clearance visually explicit.",
+      "prevention": "For salt-marsh crossings, require every standing soldier visibly mid-shin in brine over fractured white salt crust and black mud, with carried equipment held above the water unless the scripted action states otherwise.",
+      "check": "Verify standing soldiers are immersed between ankle and knee, with salt crust and black mud visible; no gear touches brine.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOC-0003"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-a52fd7401d",
+          "target": "2.5-01",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f4cca4a15d",
+          "target": "2.5-03",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e7a0551402",
+          "target": "1.1-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9ec56103c2",
+          "target": "A_the_march",
+          "kind": "poster",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.5-01",
+        "2.5-03",
+        "1.1-05",
+        "A_the_march"
+      ],
+      "proven_fixes": 2,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:55+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:16:30+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0016",
+      "status": "candidate",
+      "title": "Render marsh mud as cohesive broken clumps",
+      "problem": "Macro wet-mud details can form repeated long cords or tentacles beneath boots, creating obvious generated-detail artifacts.",
+      "cause": "Mud separation was unspecified at macro scale, allowing uniform stretched tendrils instead of heavy cohesive material.",
+      "prevention": "Describe boot-lift mud as one heavy irregular black clump with a few short uneven strands, falling droplets, clean boot separation, and fractured salt crust around the contact point.",
+      "check": "Verify mud forms irregular cohesive clumps, not repeated long cords, roots, tentacles, or melted strands.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LENS_MACRO_DETAIL",
+          "LOC-0003"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-ad2f0387fe",
+          "target": "2.5-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.5-02"
+      ],
+      "proven_fixes": 1,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:55+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:15:55+00:00"
+    },
+    {
+      "id": "L-0017",
+      "status": "candidate",
+      "title": "Specify closed Malyutka transport cases as compact briefcases",
+      "problem": "A 9M14 Malyutka transport prop can become an oversized generic missile assembly instead of a closed suitcase launcher.",
+      "cause": "The transport-state silhouette and compact scale were not constrained clearly enough.",
+      "prevention": "When the Malyutka is carried closed, specify a small closed fibreglass case about the size of a large briefcase, carried above water, with no missile, tube, or hardware mounted externally.",
+      "check": "Verify the prop reads as a compact closed carrying case, not a missile, launcher tube, or oversized weapon assembly.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0003"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-5b1f3cc2a5",
+          "target": "2.5-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.5-04"
+      ],
+      "proven_fixes": 1,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:55+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:15:55+00:00"
+    },
+    {
+      "id": "L-0018",
+      "status": "rule",
+      "title": "Match faces to the scene's motivated illumination",
+      "problem": "Faces can appear warm, bright, or front-filled against otherwise dark cool moonlit scenes, breaking integration with the environment.",
+      "cause": "Portrait and character prompts prioritized facial readability without specifying that skin exposure, color, shadow, and grain must share the scene lighting.",
+      "prevention": "Light faces and exposed skin only with the scene's stated motivated source, matching its color temperature, exposure, shadow direction, wet highlights, and film grain; forbid warm frontal fill when the scene is moonlit.",
+      "check": "Verify face, neck, and clothing share the environment's color, exposure, shadow direction, and source motivation.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "face_pass",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-523bf20af9",
+          "target": "2.5-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-592d498e6f",
+          "target": "2.5-07",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-bab91367fe",
+          "target": "2.8-04",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1cccaa9493",
+          "target": "1.11-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-159a8d7ac1",
+          "target": "1.11-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-00650bdf4f",
+          "target": "1.8-02c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.5-05",
+        "2.5-07",
+        "2.8-04",
+        "1.11-04",
+        "1.11-05",
+        "1.8-02c"
+      ],
+      "proven_fixes": 3,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:55+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:02+00:00",
+      "promoted_at": "2026-10-18T09:15:55+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0019",
+      "status": "candidate",
+      "title": "Constrain limb count and grip contacts in strenuous action",
+      "problem": "Complex overhead weapon actions can generate extra arms or detached hands, especially during falls and splashes.",
+      "cause": "The action description did not explicitly constrain limb count, limb origin, and each hand's contact with the prop.",
+      "prevention": "For complex action poses, state exactly two arms originating at the shoulders and identify both hands' continuous natural grip points on the prop throughout the movement.",
+      "check": "Verify exactly two anatomically connected arms and two hands, with both grips physically continuous and plausible.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-20d426bdad",
+          "target": "2.6-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1afc06b55e",
+          "target": "2.5-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.6-02",
+        "2.5-04a"
+      ],
+      "proven_fixes": 1,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:15:55+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:23+00:00"
+    },
+    {
+      "id": "L-0020",
+      "status": "rule",
+      "title": "Light red aircraft cabins exclusively from the red practical",
+      "problem": "Aircraft-cabin keyframes repeatedly introduce neutral or amber frontal illumination, weakening the intended dim red practical source, hard side/rim treatment, and deep shadow.",
+      "cause": "The cabin look is not sufficiently constrained as a sole motivated source; the successful edits explicitly removed neutral key light and converted the visible practical to a subdued red cabin lamp.",
+      "prevention": "Specify one subdued red electric cabin practical as the only key, placing its hard red side or rim direction and requiring the opposite facial half to fall into deep shadow.",
+      "check": "Verify the practical reads red and no neutral, amber, or frontal fill illuminates faces or uniforms.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "set",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOOK_RED_CABIN"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-308ba1b543",
+          "target": "T.2-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-2e65522303",
+          "target": "T.3-05",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4214ab30f6",
+          "target": "T.3-07",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "T.2-02",
+        "T.3-05",
+        "T.3-07"
+      ],
+      "proven_fixes": 2,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:14+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00",
+      "promoted_at": "2026-10-18T09:19:39+00:00",
+      "promoted_by": "auto"
+    },
+    {
+      "id": "L-0021",
+      "status": "candidate",
+      "title": "Specify functional cockpit control inserts and flight gloves",
+      "problem": "Cockpit detail inserts substitute generic gauges or modern-looking gloves for the scripted period radio panel and full-finger flight equipment.",
+      "cause": "The control context and handwear are under-specified, allowing models to default to generic avionics, readable gibberish displays, and tactical gloves.",
+      "prevention": "For cockpit hand inserts, name the exact period analog control unit, require no readable display text, and specify a full-finger dark leather flying glove.",
+      "check": "Verify the hand wears a full-finger leather flight glove and operates the specified analog panel rather than generic gauges or digital text.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "wardrobe",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-32b505c490",
+          "target": "T.3-02",
+          "kind": "keyframe",
+          "resolved": true,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "T.3-02"
+      ],
+      "proven_fixes": 1,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:14+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:16:14+00:00"
+    },
+    {
+      "id": "L-0022",
+      "status": "candidate",
+      "title": "Build face-model anchors as neutral, specification-faithful training portraits",
+      "problem": "Actor anchors are accepted despite inconsistent age, facial geometry, eye color, grooming, eyebrow details, gaze, head angle, and portrait illumination, reducing their reliability for downstream identity matching.",
+      "cause": "Human approval overrode unresolved anchor QA findings, and the anchor renders did not consistently enforce the actor specification or standardized training-portrait pose and lighting.",
+      "prevention": "Generate each actor anchor square to camera with direct aligned gaze, broad soft neutral frontal light, and every approved age, facial, eye, hair, eyebrow, and grooming trait explicitly retained.",
+      "check": "Verify square frontal pose, aligned lens gaze, neutral even light, and all actor-specific identity traits before approving an anchor.",
+      "applies_to": {
+        "kinds": [
+          "anchor",
+          "training_set"
+        ],
+        "departments": [
+          "casting",
+          "face_pass",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-219b93fe3d",
+          "target": "ACT-0001",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-06d6496a5e",
+          "target": "ACT-0002",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-693caa1f5a",
+          "target": "ACT-0003",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-bdeec9eb04",
+          "target": "ACT-0004",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-406a06b41b",
+          "target": "ACT-0005",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ee809e9d69",
+          "target": "ACT-0006",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-459c672672",
+          "target": "ACT-0007",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9e08a491aa",
+          "target": "ACT-0011",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-90eb6535a7",
+          "target": "ACT-0012",
+          "kind": "anchor",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "ACT-0001",
+        "ACT-0002",
+        "ACT-0003",
+        "ACT-0004",
+        "ACT-0005",
+        "ACT-0006",
+        "ACT-0007",
+        "ACT-0011",
+        "ACT-0012"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:14+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:16:30+00:00"
+    },
+    {
+      "id": "L-0023",
+      "status": "candidate",
+      "title": "Explicitly place every required supporting performer in the frame",
+      "problem": "Keyframes omit required companions, background ranks, or secondary participants when the prompt concentrates on the foreground lead.",
+      "cause": "Models preferentially render a single salient protagonist unless every required secondary performer is named, placed, and assigned a readable role in the composition.",
+      "prevention": "Name each required supporting performer, state their screen position and depth, and require their recognizable visible presence without competing with the designated foreground lead.",
+      "check": "Verify every scripted companion or group is visibly present at its specified position and depth.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-1e06161d1a",
+          "target": "1.1-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1f0a08da30",
+          "target": "1.1-06a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-01a6e6e07c",
+          "target": "1.1-09c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-fc1e74492e",
+          "target": "1.4-05c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-62f923d66f",
+          "target": "1.8-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1f8dbfa705",
+          "target": "2.10-01a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-586d4e84b4",
+          "target": "2.12-01a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4a080e7149",
+          "target": "2.14-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-62eea85325",
+          "target": "2.3-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f2273d046a",
+          "target": "2.3-02d",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-84c22fa87e",
+          "target": "2.5-06a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-cb42ce9086",
+          "target": "3.2-04b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-473f5d91d3",
+          "target": "5.3-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e2d47d66d4",
+          "target": "T.2-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.1-02b",
+        "1.1-06a",
+        "1.1-09c",
+        "1.4-05c",
+        "1.8-03",
+        "2.10-01a",
+        "2.12-01a",
+        "2.14-01",
+        "2.3-02a",
+        "2.3-02d",
+        "2.5-06a",
+        "3.2-04b",
+        "5.3-05a",
+        "T.2-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:30+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00"
+    },
+    {
+      "id": "L-0024",
+      "status": "candidate",
+      "title": "Specify unmistakable Mi-8 transport geometry",
+      "problem": "Helicopters intended as Mi-8 transports render as generic or Huey-like aircraft with skids, narrow fuselages, and incorrect rotor forms.",
+      "cause": "The aircraft designation alone does not sufficiently constrain the model's helicopter silhouette and landing-gear geometry.",
+      "prevention": "Describe every Mi-8 as a broad-bodied transport with wheeled landing gear, twin-engine upper housing, large side door, and five-blade main rotor; explicitly forbid Huey-like skids and narrow fuselages.",
+      "check": "Verify each helicopter has a broad Mi-8 silhouette, wheels, upper twin-engine housing, and no Huey-like skids.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-c55f456019",
+          "target": "1.11-01e",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.11-01e"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:30+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:16:30+00:00"
+    },
+    {
+      "id": "L-0025",
+      "status": "candidate",
+      "title": "Lock character-defining civilian wardrobe, hair, and hand-state details",
+      "problem": "Civilian women are repeatedly substituted with generic beige veils and garments, erasing specified black dress, exposed braids, and flour-dusted working hands.",
+      "cause": "The prompt did not sufficiently bind character-specific costume, hair visibility, and hand condition against the model's generic rural-woman styling. Plausible prevention; no passing fix was recorded.",
+      "prevention": "Specify each visible civilian's exact garment color, garment type, hair exposure or braids, face visibility, and required hand condition; explicitly forbid substitute beige veils or face coverings.",
+      "check": "Verify each named civilian retains specified clothing, visible hair, uncovered face, and required hand detail.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "wardrobe",
+          "makeup",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "C-11",
+          "C-12"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-ae833577fd",
+          "target": "1.12-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-57a8b69541",
+          "target": "3.2-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.12-02",
+        "3.2-04a"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:49+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:41+00:00"
+    },
+    {
+      "id": "L-0026",
+      "status": "candidate",
+      "title": "Make a narrative empty plate visually contrast with served dishes",
+      "problem": "An intended empty plate is unreadable when all visible vessels appear empty or nearly empty.",
+      "cause": "The prompt named the empty plate but did not establish filled neighboring dishes as a clear visual contrast. Plausible prevention; no passing fix was recorded.",
+      "prevention": "Place the designated empty plate directly beneath the actor's hand and visibly fill adjacent central and side dishes with modest period-appropriate food.",
+      "check": "Verify the designated plate is plainly empty and at least two neighboring vessels visibly contain food.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "set",
+          "director",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "C-12",
+          "LOC-0006"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-ec75139cca",
+          "target": "1.12-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.12-02a"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:49+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:16:49+00:00"
+    },
+    {
+      "id": "L-0027",
+      "status": "candidate",
+      "title": "Render deployed Malyutka launchers from a geometry reference",
+      "problem": "Open 9M14 Malyutka launchers become oversized vertical rockets or inaccurate missiles, and their suitcase rail, sight, control box, and wire spool disappear.",
+      "cause": "The model lacks a stable association between the weapon name and its deployed suitcase-launcher configuration. Plausible prevention; no passing fix was recorded.",
+      "prevention": "Use the approved 9M14 reference and specify a horizontally resting missile on an opened fibreglass suitcase rail, with separate control box, periscope sight, and visible wire spool.",
+      "check": "Verify horizontal scaled missile, opened suitcase rail, correct fins and nose probe, sight, control box, and wire spool.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0003"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-42ac266771",
+          "target": "1.6-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-b2d9c68a4b",
+          "target": "1.6-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ab66645092",
+          "target": "3.7-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0c09dccaba",
+          "target": "B_the_ambush",
+          "kind": "poster",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "1.6-03",
+        "1.6-03a",
+        "3.7-02",
+        "B_the_ambush"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:16:49+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:47+00:00"
+    },
+    {
+      "id": "L-0028",
+      "status": "candidate",
+      "title": "Use recognizable period backpack-radio assemblies",
+      "problem": "Field-radio beats produce generic modern handheld speakers or omit the radio, antenna, handset, and scripted control interaction.",
+      "cause": "Without an explicit reference and visible component layout, models default to contemporary compact communications devices rather than coherent period field-radio systems.",
+      "prevention": "Use an approved 1973 Soviet-pattern backpack-radio reference; show an olive-drab pack, whip antenna from the pack, wired handset or control assembly, analog controls, and the scripted tap, hover, or dead-radio interaction.",
+      "check": "Verify the radio is a coherent period backpack system with visible antenna connection and the required hand-control state.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-19c83c939d",
+          "target": "2.4-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7d56a1ec23",
+          "target": "2.4-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f760915f1c",
+          "target": "2.4-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-1c3b438f9f",
+          "target": "3.6-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "2.4-03a",
+        "2.4-04a",
+        "2.4-05",
+        "3.6-02"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:17:23+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:02+00:00"
+    },
+    {
+      "id": "L-0029",
+      "status": "candidate",
+      "title": "Make passing aircraft shadows visibly alter the subject exposure",
+      "problem": "A required reconnaissance-aircraft shadow is absent, or reads as an unrelated dark strip while the subject remains in direct dawn light.",
+      "cause": "Soft moving shadows are often omitted unless their broad coverage, edge quality, and exposure change are explicitly made the central visual event.",
+      "prevention": "Render a broad soft-edged aircraft shadow crossing the actor, nearby ground, and pit wall, cooling and dimming them while direct dawn illumination remains visibly brighter beyond the shadow.",
+      "check": "Verify the shadow clearly covers subject and local set, with cooler dimmer exposure than the sunlit background.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-e0b21e87ba",
+          "target": "3.1-03b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e51ffa57a3",
+          "target": "3.1-03c",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.1-03b",
+        "3.1-03c"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:17:41+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:41+00:00"
+    },
+    {
+      "id": "L-0030",
+      "status": "candidate",
+      "title": "Direct airborne guided missiles with readable period scale and trajectory",
+      "problem": "An anti-tank missile becomes an oversized flaming rocket or travels opposite its specified target direction.",
+      "cause": "Projectile prompts insufficiently constrain compact missile silhouette, screen direction, target relation, and the trail's position behind the moving missile.",
+      "prevention": "Specify a compact period-guided missile traveling toward its named target, with its nose leading in screen direction and a restrained exhaust trail extending only behind it.",
+      "check": "Verify compact missile scale, nose-to-target direction, and exhaust trail trailing behind rather than ahead.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "research",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-916f554f89",
+          "target": "3.11-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-045b94a0e8",
+          "target": "3.7-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.11-02",
+        "3.7-03"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:17:41+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:02+00:00"
+    },
+    {
+      "id": "L-0031",
+      "status": "candidate",
+      "title": "Identify M3 half-tracks by their mixed wheel-and-track running gear",
+      "problem": "Background M3-type half-tracks render as fully tracked APCs, losing the scripted vehicle identity.",
+      "cause": "Naming a half-track without its visible front axle and rear track geometry permits generic tracked armored vehicles.",
+      "prevention": "Describe every readable M3-type half-track with a wheeled front axle, open-bodied half-track silhouette, and distinct rear track unit; explicitly forbid fully tracked APC geometry.",
+      "check": "Verify each readable convoy lead vehicle has front wheels and rear tracks, not continuous tracks.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-0005883df5",
+          "target": "3.13-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.13-03a"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:17:41+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:41+00:00"
+    },
+    {
+      "id": "L-0032",
+      "status": "candidate",
+      "title": "Render salt-marsh tanker coveralls as mud- and salt-caked one-piece garments",
+      "problem": "Tank crew clothing appears as clean dry shirts or olive garments instead of heavily contaminated period coveralls.",
+      "cause": "Wet sand, salt residue, embedded grit, and one-piece coverall construction are lost when uniform condition is not individually specified.",
+      "prevention": "Dress visible tank crew in period olive one-piece coveralls heavily caked with wet sand, black mud, pale salt residue, and crease-embedded grit.",
+      "check": "Verify one-piece coveralls and dense wet-sand, mud, salt, and crease-level contamination on every visible crewman.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "wardrobe",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "WEAR_SAND"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-a28c401e4d",
+          "target": "3.3-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.3-02"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:17:41+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:17:41+00:00"
+    },
+    {
+      "id": "L-0033",
+      "status": "candidate",
+      "title": "Do not override unresolved failures of a keyframe's essential tableau",
+      "problem": "Human approval accepts frames that omit the scripted setting, required ensemble, core action, or intended composition despite unresolved major review findings.",
+      "cause": "Review approval is being based on general image appeal rather than hard verification of the shot's non-negotiable narrative constraints.",
+      "prevention": "Before generation, mark the shot's required action, setting, cast count, prop tableau, and framing as non-negotiable reject criteria in the review brief.",
+      "check": "Reject any frame missing a marked required tableau element, even if faces, lighting, or general image quality are appealing.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "script",
+          "director",
+          "prompting",
+          "image_qa",
+          "editor"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-e54fa08e86",
+          "target": "3.10-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8eca4c549e",
+          "target": "3.2-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-eea52e6a21",
+          "target": "3.2-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4bcdc2cb86",
+          "target": "3.3-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3c07924e6e",
+          "target": "3.4-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-7c1e4e3009",
+          "target": "3.7-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-eee19ea079",
+          "target": "4.1-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f53f4cce86",
+          "target": "4.1-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-089e80b9ad",
+          "target": "4.1-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3c68b05b02",
+          "target": "4.3-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-eb35ffea41",
+          "target": "4.5-02b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-8dce1e2f1b",
+          "target": "4.5-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-ff6b82fb9a",
+          "target": "5.4-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.10-01",
+        "3.2-01",
+        "3.2-02",
+        "3.3-03a",
+        "3.4-05",
+        "3.7-01",
+        "4.1-03",
+        "4.1-04",
+        "4.1-06",
+        "4.3-02",
+        "4.5-02b",
+        "4.5-03",
+        "5.4-05"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:17:41+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00"
+    },
+    {
+      "id": "L-0034",
+      "status": "candidate",
+      "title": "Keep the triggering threat visible behind reactive portrait performances",
+      "problem": "Portrait reaction shots omit the convoy or tank that motivates the actor's signal, alarm, or attention.",
+      "cause": "Shallow-focus portrait prompting prioritizes the face and lets the causal background event disappear; unresolved failures indicate the prevention is inferred.",
+      "prevention": "Place the named convoy or armored threat in the soft background at a readable scale, behind and clear of the reacting actor, while preserving the specified portrait framing.",
+      "check": "Verify the background contains the named triggering threat and that its vehicle type and relationship to the actor remain readable.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-a66c9d266d",
+          "target": "3.3-03b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6b78d3ace6",
+          "target": "3.4-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.3-03b",
+        "3.4-05a"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:02+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:02+00:00"
+    },
+    {
+      "id": "L-0035",
+      "status": "candidate",
+      "title": "Render Sho't Kal columns with decisive Centurion identification",
+      "problem": "Israeli tank columns drift into generic tracked vehicles, APCs, or tanks lacking the required Centurion skirts and fume-extractor gun.",
+      "cause": "Vehicle prompts do not make the few externally readable Sho't Kal identifiers non-negotiable at the intended shot distance; unresolved failures indicate the prevention is inferred.",
+      "prevention": "Use the approved Sho't Kal reference and require every readable tank to show Centurion side skirts and a proportionate 105 mm gun with prominent fume extractor; forbid turretless APC substitutions.",
+      "check": "Verify each readable tank has side skirts, a turret, and a 105 mm gun with visible fume extractor.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "VEH-0005"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-dd69e9d50f",
+          "target": "3.4-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-78ea5f2d60",
+          "target": "3.4-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6b78d3ace6",
+          "target": "3.4-05a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-541043658d",
+          "target": "B4_the_ambush_loaded",
+          "kind": "poster",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.4-02",
+        "3.4-03",
+        "3.4-05a",
+        "B4_the_ambush_loaded"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:02+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:47+00:00"
+    },
+    {
+      "id": "L-0036",
+      "status": "candidate",
+      "title": "Use low period roadside barriers and non-text tactical markings",
+      "problem": "Desert-road imagery substitutes tall modern security fencing and readable alphanumeric vehicle markings for the designed low wire and non-text markings.",
+      "cause": "Generic military-road generation introduces contemporary perimeter infrastructure and legible symbols; unresolved failures indicate the prevention is inferred.",
+      "prevention": "Specify low barbed wire on short simple pickets and use only simple non-text tactical chevrons on visible vehicles; explicitly forbid tall security fences and readable letters.",
+      "check": "Verify fencing stays low on short pickets and all visible vehicle markings are non-text chevrons, not letters or words.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOC-0002",
+          "VEH-0005"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-28721a4111",
+          "target": "3.5-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d0db15cabc",
+          "target": "4.2-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.5-03",
+        "4.2-03"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:02+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:45+00:00"
+    },
+    {
+      "id": "L-0037",
+      "status": "candidate",
+      "title": "Stage RPG firing frames with a clear rear danger zone",
+      "problem": "RPG firing images can show a loaded rocket during backblast or place supporting soldiers directly behind the rear venturi.",
+      "cause": "Unresolved; the firing phase, projectile state, and rear clearance were not made explicit as one synchronized physical tableau.",
+      "prevention": "For an RPG firing instant, show the PG-7V clear of the muzzle as backblast erupts and keep every person completely lateral to the rear venturi danger cone.",
+      "check": "Rocket is leaving or clear of the tube, backblast originates at the rear, and no person occupies the rear cone.",
+      "applies_to": {
+        "kinds": [
+          "keyframe",
+          "clip"
+        ],
+        "departments": [
+          "director",
+          "action",
+          "prompting",
+          "image_qa",
+          "video"
+        ],
+        "tags": [
+          "PRP-0002"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-7af9c8cbd0",
+          "target": "3.8-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.8-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:24+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:24+00:00"
+    },
+    {
+      "id": "L-0038",
+      "status": "candidate",
+      "title": "Anchor fighting-pit portraits to the pit wall and localized backblast",
+      "problem": "Portraits intended at a fighting-pit line read as open desert because the nearby sand wall and interacting RPG dust are absent.",
+      "cause": "Unresolved; the environmental anchor behind the performer was treated as optional atmosphere rather than required scene geography.",
+      "prevention": "Place the performer directly beside a low pit-line sand wall and show localized RPG dust or backblast curling against that wall behind them.",
+      "check": "A nearby low sand wall is visible, and dust/backblast is localized to it rather than generic distant smoke.",
+      "applies_to": {
+        "kinds": [
+          "keyframe",
+          "clip"
+        ],
+        "departments": [
+          "director",
+          "set",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOC-0004"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-d067487cc9",
+          "target": "3.8-01a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-34ed575134",
+          "target": "3.8-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.8-01a",
+        "3.8-02a"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:24+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:24+00:00"
+    },
+    {
+      "id": "L-0039",
+      "status": "candidate",
+      "title": "Preserve the coverless flat-desert battlefield ground plane",
+      "problem": "Battlefield shots introduce rocks, scrub, berms, trenches, or clumped terrain where the setting requires flat, coverless sand.",
+      "cause": "Unresolved; generic desert terrain generation overrides the location's deliberately minimal ground specification.",
+      "prevention": "Render LOC-0004 as uninterrupted level wind-rippled sand with no rocks, scrub, berms, trenches, or cover except explicitly scripted shallow fighting pits and road.",
+      "check": "Ground is flat and coverless; no unscripted rocks, vegetation, earthworks, or elevated cover appear.",
+      "applies_to": {
+        "kinds": [
+          "keyframe",
+          "clip"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "camera",
+          "prompting",
+          "image_qa",
+          "video"
+        ],
+        "tags": [
+          "LOC-0004"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-d5e9f55f37",
+          "target": "3.8-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9a14bb35b7",
+          "target": "3.9-07",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.8-03",
+        "3.9-07"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:24+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:24+00:00"
+    },
+    {
+      "id": "L-0040",
+      "status": "candidate",
+      "title": "Limit escaping Sho't Kal crews to four identifiable tankers",
+      "problem": "Tank escape shots show too many personnel or dress them as infantry rather than the four-person vehicle crew.",
+      "cause": "Unresolved; crew count and tanker-specific wardrobe were not constrained before generating the evacuation tableau.",
+      "prevention": "Show exactly four escaping Sho't Kal crewmen in olive tanker coveralls and padded headset helmets, emerging from hatches or running into smoke without infantry packs or webbing.",
+      "check": "Exactly four figures read as tank crew, with tanker coveralls and padded headset helmets rather than infantry equipment.",
+      "applies_to": {
+        "kinds": [
+          "keyframe",
+          "clip"
+        ],
+        "departments": [
+          "research",
+          "wardrobe",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "VEH-0005"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-52aed1310e",
+          "target": "3.8-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "3.8-05"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:24+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:24+00:00"
+    },
+    {
+      "id": "L-0041",
+      "status": "candidate",
+      "title": "Specify full-length FN FAL geometry for readable Israeli rifles",
+      "problem": "Israeli infantry rifles can collapse into short AR/M16-like or generic weapon silhouettes instead of full-length FN FALs.",
+      "cause": "Unresolved; the weapon was named without enough visible silhouette and component constraints for distant battlefield generation.",
+      "prevention": "For every readable Israeli rifle, require a full-length 1973 FN FAL silhouette with fixed stock, long barrel, receiver, magazine, and handguard; forbid AR/M16 profiles.",
+      "check": "Each readable rifle has the long fixed-stock FN FAL profile, not a short AR/M16 or generic carbine.",
+      "applies_to": {
+        "kinds": [
+          "keyframe",
+          "clip"
+        ],
+        "departments": [
+          "research",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-b45d9dee5c",
+          "target": "4.1-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.1-02"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:24+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:24+00:00"
+    },
+    {
+      "id": "L-0042",
+      "status": "candidate",
+      "title": "Stage armored defensive formations as readable geometric dispositions",
+      "problem": "Multi-tank arrangements lose their intended U-shaped defensive geometry and shared aiming direction.",
+      "cause": "Prompts name a formation concept without assigning each vehicle a distinct position, orientation, and common firing sector.",
+      "prevention": "Arrange every tank around three sides of a broad U, leave its open side facing the named desert sector, and turn every turret and gun toward that same open sector.",
+      "check": "Verify a readable three-sided U, clear open desert side, and no friendly tanks targeted across the road.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOC-0002",
+          "VEH-0005"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-1d8787198b",
+          "target": "4.2-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.2-02"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:45+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:45+00:00"
+    },
+    {
+      "id": "L-0043",
+      "status": "candidate",
+      "title": "Keep fighting-pit portraits visibly enclosed by the position",
+      "problem": "Portraits scripted inside fighting pits render as exposed open-desert shots without a rim, wall, or falling dust.",
+      "cause": "Portrait prompts prioritize face and background while omitting the nearby physical evidence that establishes below-grade shelter.",
+      "prevention": "Frame the performer visibly below a shallow fighting-pit rim with a close compacted sand wall beside or behind them and fine dust actively falling from it.",
+      "check": "Verify a readable pit edge or wall, below-rim placement, and falling dust near the performer.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "set",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOC-0004"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-1d8f765a96",
+          "target": "4.2-03b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-17b72b315f",
+          "target": "4.3-03a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-45e66ee1ff",
+          "target": "4.3-04a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-0a326e40ef",
+          "target": "4.3-04b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-703fc1ea16",
+          "target": "4.4-01a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-663e8f110d",
+          "target": "4.5-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.2-03b",
+        "4.3-03a",
+        "4.3-04a",
+        "4.3-04b",
+        "4.4-01a",
+        "4.5-05"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:45+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:05+00:00"
+    },
+    {
+      "id": "L-0044",
+      "status": "candidate",
+      "title": "Render sand fighting-pit walls with irregular natural granular structure",
+      "problem": "Compacted sand walls develop repeated embossed, woven, or footprint-like generated patterns.",
+      "cause": "Texture generation over-regularizes close sandy surfaces instead of producing varied granular strata and collapse detail.",
+      "prevention": "Render pit walls as irregular compacted granular sand with uneven strata, small collapses, loose grains, and nonrepeating surface variation; forbid woven, stamped, or embossed motifs.",
+      "check": "Verify sand texture is irregular and granular, with no repeating textile, tread, or stamped pattern.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "LOC-0004"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-542fa4638d",
+          "target": "4.3-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.3-03"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:45+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:45+00:00"
+    },
+    {
+      "id": "L-0045",
+      "status": "candidate",
+      "title": "Show empty AKM magazines with a visible follower",
+      "problem": "Empty AKM magazine inserts render as implausibly deep hollow openings without internal follower geometry.",
+      "cause": "The empty-state instruction removes cartridges but fails to specify the remaining functional magazine component.",
+      "prevention": "For an empty AKM steel magazine insert, show the follower seated immediately below the feed lips with no cartridges visible.",
+      "check": "Verify the magazine is cartridge-free and its follower is visible directly beneath the feed lips.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0001"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-f9351f38f0",
+          "target": "4.4-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.4-03"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:45+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:45+00:00"
+    },
+    {
+      "id": "L-0046",
+      "status": "candidate",
+      "title": "Render RKG-3 grenades from their distinctive long-handled geometry",
+      "problem": "RKG-3 anti-tank grenades deform into bulbous or conventional hand-grenade shapes.",
+      "cause": "The prop is requested by name without its diagnostic cylindrical warhead, single handle, and safety-hardware silhouette.",
+      "prevention": "Use the approved RKG-3 reference and show an olive-drab straight cylindrical warhead with flat base, correct collar and safety hardware, and one long handle.",
+      "check": "Verify one long handle and a straight cylindrical warhead, not a bulbous or conventional grenade silhouette.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "action",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0004"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-70ca42e93b",
+          "target": "4.4-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-6bc14d0cb3",
+          "target": "4.5-02a",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.4-05",
+        "4.5-02a"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:18:45+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:18:45+00:00"
+    },
+    {
+      "id": "L-0047",
+      "status": "candidate",
+      "title": "Preserve deliberately empty tactical ground",
+      "problem": "Wide battlefield frames gain unscripted soldiers, crewmen, or posed walkers, defeating beats built around abandonment, waiting, or nobody returning.",
+      "cause": "Generation models tend to populate military landscapes unless empty zones and any permitted figures are explicitly constrained.",
+      "prevention": "State that the named ground corridor is completely empty of personnel, forbid approaching or walking figures, and specify that any permitted crew remain still and visually subordinate.",
+      "check": "Verify the required ground between positions is empty and no visible figure implies movement or approach.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-935bcfbeac",
+          "target": "4.5-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-e77c877a72",
+          "target": "4.7-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-9de82b5c58",
+          "target": "5.7-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.5-06",
+        "4.7-02",
+        "5.7-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:05+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00"
+    },
+    {
+      "id": "L-0048",
+      "status": "candidate",
+      "title": "Carry RPG rounds in a readable period canvas carrier",
+      "problem": "Loose rockets or shells strapped upright to a soldier's back replace the required RPG ammunition carrier bag.",
+      "cause": "Without an explicit carry configuration, models expose ammunition as a generic strapped projectile rather than contained equipment.",
+      "prevention": "Show RPG ammunition only inside a naturally back-secured 1973 Soviet-pattern canvas rocket carrier bag, with no loose rocket, shell, or upright projectile visible externally.",
+      "check": "Verify a canvas carrier bag is visible and no exposed projectile is strapped to the performer.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "wardrobe",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-957255dd06",
+          "target": "4.6-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-794105cc81",
+          "target": "4.9-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-d5b5b274af",
+          "target": "5.2-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-179e04a04d",
+          "target": "5.4-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-4b22c6cd3f",
+          "target": "5.6-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.6-01",
+        "4.9-05",
+        "5.2-04",
+        "5.4-04",
+        "5.6-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:05+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00"
+    },
+    {
+      "id": "L-0049",
+      "status": "candidate",
+      "title": "Lock the opening state to the clip's next action",
+      "problem": "A keyframe specifies a state that contradicts the following motion, such as already holding a letter instead of an envelope or closed eyes before an instructed closing action.",
+      "cause": "The keyframe and animation beats were authored as incompatible temporal states.",
+      "prevention": "Define one continuous start-to-end prop and performance state, ensuring the opening pose leaves the exact required transition visibly possible.",
+      "check": "Verify the opening state neither contradicts nor pre-completes the clip's next action.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "script",
+          "director",
+          "prompting",
+          "image_qa",
+          "video"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-32e22e4d35",
+          "target": "4.6-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.6-03"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:05+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:05+00:00"
+    },
+    {
+      "id": "L-0050",
+      "status": "candidate",
+      "title": "Operate kerosene lamps through accessible real controls",
+      "problem": "Lamp inserts show hands using chimney hardware instead of the wick wheel, or passing a match through intact glass.",
+      "cause": "The lamp's functional parts and access state are not specified, allowing visually plausible but mechanically impossible interaction.",
+      "prevention": "For lamp actions, name the wick-adjustment wheel and its hand grip; require the chimney lifted or removed before a match touches the exposed wick.",
+      "check": "Verify fingers use the wick wheel and flame-lighting tools never intersect intact glass.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "research",
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "PRP-0016"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-5b2280ea1e",
+          "target": "4.8-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3219196b51",
+          "target": "4.8-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.8-01",
+        "4.8-04"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:05+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:05+00:00"
+    },
+    {
+      "id": "L-0051",
+      "status": "candidate",
+      "title": "Make toy-airplane props unmistakable at screen scale",
+      "problem": "A child's specified painted tin toy airplane renders as an ambiguous object without a readable aircraft silhouette.",
+      "cause": "Small props lose their defining form unless their silhouette and handling are explicitly described.",
+      "prevention": "Specify a small worn hand-painted tin airplane with a readable fuselage, two wings, and tail, held unobscured in the child's natural two-handed grip.",
+      "check": "Verify the object immediately reads as a toy airplane with fuselage, wings, and tail.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "set",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-992f18ac85",
+          "target": "4.8-04b",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.8-04b"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:05+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:05+00:00"
+    },
+    {
+      "id": "L-0052",
+      "status": "candidate",
+      "title": "Exclude visible bodies when fallen soldiers must remain offscreen",
+      "problem": "Frames communicate battlefield loss by showing prone soldiers despite a production rule prohibiting visible corpses.",
+      "cause": "Models add fallen bodies as generic battlefield dressing unless the restriction and alternate storytelling device are explicit.",
+      "prevention": "Forbid all visible prone bodies and corpses; communicate losses only through abandoned equipment, empty positions, smoke, or surviving performers' reactions.",
+      "check": "Verify no human body is visible lying prone or reads as a corpse anywhere in frame.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "script",
+          "director",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-18aa12abd4",
+          "target": "4.9-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.9-04"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:05+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:05+00:00"
+    },
+    {
+      "id": "L-0053",
+      "status": "candidate",
+      "title": "Preserve defining eyewear in portrait keyframes",
+      "problem": "Portrait generations omit character-defining glasses, their repair detail, intended gaze, and the required practical reflection.",
+      "cause": "Small transparent facial accessories and their reflections are easily deprioritized unless explicitly made visible design requirements.",
+      "prevention": "Render the approved taped wire-rim glasses prominently on both eyes, face the gaze as scripted, and place controlled motivated practical reflections in both lenses.",
+      "check": "Both lenses, taped hinge, scripted gaze, and restrained matching reflections are clearly visible.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "prompting",
+          "image_qa",
+          "face_pass"
+        ],
+        "tags": [
+          "C-04",
+          "PRP-0007"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-1639d83795",
+          "target": "4.9-06",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "4.9-06"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:21+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00"
+    },
+    {
+      "id": "L-0054",
+      "status": "candidate",
+      "title": "Maintain natural child proportions in youth keyframes",
+      "problem": "A child performer renders with an oversized head and childlike body scale inconsistent with the specified age.",
+      "cause": "Adult proportion guidance does not reliably constrain younger performers' head-to-body scale.",
+      "prevention": "Specify the child's approved age and a naturally proportioned slim youth body, with a visibly smaller head centered on the neck and shoulders proportionate to the torso.",
+      "check": "The child reads as the specified age with natural head, shoulder, torso, and limb proportions.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "casting",
+          "prompting",
+          "image_qa",
+          "face_pass"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-0e0195190b",
+          "target": "5.3-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "5.3-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:21+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00"
+    },
+    {
+      "id": "L-0055",
+      "status": "candidate",
+      "title": "Render accumulated depletion for gaunt survivor states",
+      "problem": "Long-march survivors appear healthy, clean, and lightly dusty instead of visibly exhausted and worn.",
+      "cause": "Default portrait beautification suppresses gauntness, cracked lips, sun exposure, grime, and cumulative wear unless these are foregrounded.",
+      "prevention": "For gaunt survivor states, render sunburned hollow cheeks, cracked lips, natural grime, and heavily accumulated dust with restrained mud staining across uniform, straps, and carrier.",
+      "check": "Face, lips, skin, uniform, and kit visibly show sustained exhaustion and accumulated field wear.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "wardrobe",
+          "makeup",
+          "prompting",
+          "image_qa",
+          "face_pass"
+        ],
+        "tags": [
+          "WEAR_GAUNT"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-db09590a97",
+          "target": "5.4-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "5.4-02"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:21+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00"
+    },
+    {
+      "id": "L-0056",
+      "status": "candidate",
+      "title": "Remove combat webbing from unarmed home-leave appearances",
+      "problem": "A home-leave soldier renders with ammunition webbing and combat straps despite an unarmed civilian-context beat.",
+      "cause": "Military character priors retain tactical load-bearing gear unless the off-duty loadout is explicitly excluded.",
+      "prevention": "For unarmed home-leave shots, forbid weapons, webbing, ammunition pouches, and double load straps; allow only the specified small plain canvas kit bag on one shoulder.",
+      "check": "No tactical gear or weapon is visible; only the approved minimal personal bag is carried.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "script",
+          "wardrobe",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "WEAR_POSTWAR"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-9bacdd9359",
+          "target": "5.5-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "5.5-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:21+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:21+00:00"
+    },
+    {
+      "id": "L-0057",
+      "status": "candidate",
+      "title": "Block multi-person contact beats as named hand-and-body relationships",
+      "problem": "Generated group reunions can substitute the wrong recipient of a gesture and omit the required attachment between supporting performers.",
+      "cause": "The interaction was described as a general emotional grouping rather than as explicit, individually assigned body positions and contact relationships.",
+      "prevention": "Name each actor's screen position, posture, receiving hand, touching hand, and continuous contact target; explicitly forbid every incorrect recipient or substituted embrace.",
+      "check": "Verify each named hand reaches the correct actor and every required cling, bend, or supporting contact is visibly readable.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "director",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": [
+          "C-03",
+          "C-11",
+          "C-12"
+        ]
+      },
+      "evidence": [
+        {
+          "incident": "I-7463e8d3cc",
+          "target": "5.5-05",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "5.5-05"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:39+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00"
+    },
+    {
+      "id": "L-0058",
+      "status": "candidate",
+      "title": "Define card shots as a specific graphic or still before rendering",
+      "problem": "Undefined epilogue, end-credit, and title-card shots are being rendered as unrelated live-action wartime tableaux.",
+      "cause": "The card content, presentation type, and any typography exception were left undefined, allowing the model to infer a generic war scene.",
+      "prevention": "Specify every card's exact graphic or still-image composition, text policy, subject matter, and prohibited live-action content before generation.",
+      "check": "Verify the frame is the specified card composition, not an unrelated battlefield, patrol, village, or military tableau.",
+      "applies_to": {
+        "kinds": [
+          "keyframe"
+        ],
+        "departments": [
+          "script",
+          "director",
+          "prompting",
+          "image_qa"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-687bfe01d1",
+          "target": "5.8-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f211e28074",
+          "target": "5.8-02",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-f9e6905268",
+          "target": "5.8-03",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-83659a200e",
+          "target": "5.8-04",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-30929071d1",
+          "target": "5.9-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        },
+        {
+          "incident": "I-3c07266239",
+          "target": "T.4-01",
+          "kind": "keyframe",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "5.8-01",
+        "5.8-02",
+        "5.8-03",
+        "5.8-04",
+        "5.9-01",
+        "T.4-01"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:39+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:39+00:00"
+    },
+    {
+      "id": "L-0059",
+      "status": "candidate",
+      "title": "Remove forbidden portrait remnants from poster skies",
+      "problem": "Poster revisions can retain ghostly faces or facial nebulae in sky areas after a portrait element has been removed.",
+      "cause": "Composite-layer removal was not treated as a full-background reconstruction requirement.",
+      "prevention": "Replace the entire removed-portrait region with continuous natural sky texture matching adjacent clouds, stars, grain, and illumination; explicitly forbid faces, facial features, portrait silhouettes, seams, and face-shaped nebulosity.",
+      "check": "Verify the sky contains no recognizable facial anatomy, translucent portrait, composite seam, or face-shaped cloud formation.",
+      "applies_to": {
+        "kinds": [
+          "poster"
+        ],
+        "departments": [
+          "director",
+          "prompting",
+          "image_qa",
+          "editor"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-1a5b30caf2",
+          "target": "C2_night_march_edit",
+          "kind": "poster",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "C2_night_march_edit"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:47+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:47+00:00"
+    },
+    {
+      "id": "L-0060",
+      "status": "candidate",
+      "title": "Unify horizon and scale hierarchy in split-environment posters",
+      "problem": "Composite posters can create mismatched horizon lines and oversized secondary figures that disrupt the intended dominant subject.",
+      "cause": "The poster composition lacked an explicitly shared horizon and quantified visual hierarchy between blended environments and secondary silhouettes.",
+      "prevention": "Set one shared horizon across all blended environments and specify the sole dominant figure; render secondary figures as small silhouettes confined below that horizon.",
+      "check": "Verify both environments meet on one horizon and no secondary figure rivals the designated dominant subject.",
+      "applies_to": {
+        "kinds": [
+          "poster"
+        ],
+        "departments": [
+          "director",
+          "camera",
+          "prompting",
+          "image_qa",
+          "editor"
+        ],
+        "tags": []
+      },
+      "evidence": [
+        {
+          "incident": "I-4fcdb8ce89",
+          "target": "C_home_and_front",
+          "kind": "poster",
+          "resolved": false,
+          "source": "engine-history"
+        }
+      ],
+      "targets": [
+        "C_home_and_front"
+      ],
+      "proven_fixes": 0,
+      "applied": {
+        "passes": 0,
+        "fails": 0
+      },
+      "created_at": "2026-10-18T09:19:47+00:00",
+      "source": "keeper",
+      "updated_at": "2026-10-18T09:19:47+00:00"
+    }
+  ]
+}

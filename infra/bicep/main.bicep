@@ -77,6 +77,24 @@ module budget 'modules/budget.bicep' = {
   }
 }
 
+@description('Second-region media Foundry (same RG): region, region code, and its deployments. Empty deployments = none.')
+param mediaLocation string = 'swedencentral'
+param mediaRegionCode string = 'swc'
+param mediaDeployments array = []
+
+module media 'modules/media.bicep' = if (!empty(mediaDeployments)) {
+  scope: rg
+  name: '${owner}-${mediaRegionCode}-${workload}-media'
+  params: {
+    location: mediaLocation
+    name: '${owner}-${mediaRegionCode}-${workload}-fdy'
+    allowedIps: allowedIps
+    modelDeployments: mediaDeployments
+    logAnalyticsWorkspaceId: logAnalyticsWorkspaceId
+    tags: tags
+  }
+}
+
 output resourceGroupName string = rg.name
 output foundryName string = studio.outputs.foundryName
 output foundryEndpoint string = studio.outputs.foundryEndpoint
@@ -85,3 +103,4 @@ output projectEndpoint string = studio.outputs.projectEndpoint
 output storageAccountName string = studio.outputs.storageAccountName
 output blobEndpoint string = studio.outputs.blobEndpoint
 output deploymentNames array = studio.outputs.deploymentNames
+output mediaEndpoint string = !empty(mediaDeployments) ? 'https://${owner}-${mediaRegionCode}-${workload}-fdy.cognitiveservices.azure.com' : ''

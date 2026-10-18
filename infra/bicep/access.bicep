@@ -10,6 +10,9 @@
 param foundryName string
 param storageAccountName string
 
+@description('Second-region media Foundry (same RG). Empty = none.')
+param mediaFoundryName string = ''
+
 @description('Principals to grant: [{ id: <object id>, type: \'ServicePrincipal\' | \'User\' }]')
 param principals array
 
@@ -57,6 +60,22 @@ resource mediaWriters 'Microsoft.Authorization/roleAssignments@2022-04-01' = [
     scope: storage
     properties: {
       roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', roles.storageBlobDataContributor)
+      principalId: p.id
+      principalType: p.type
+    }
+  }
+]
+
+resource mediaFoundry 'Microsoft.CognitiveServices/accounts@2025-06-01' existing = if (!empty(mediaFoundryName)) {
+  name: empty(mediaFoundryName) ? foundryName : mediaFoundryName
+}
+
+resource mediaModelUsers 'Microsoft.Authorization/roleAssignments@2022-04-01' = [
+  for p in (empty(mediaFoundryName) ? [] : principals): {
+    name: guid(mediaFoundry.id, p.id, roles.cognitiveServicesUser)
+    scope: mediaFoundry
+    properties: {
+      roleDefinitionId: subscriptionResourceId('Microsoft.Authorization/roleDefinitions', roles.cognitiveServicesUser)
       principalId: p.id
       principalType: p.type
     }

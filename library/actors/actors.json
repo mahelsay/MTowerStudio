@@ -22,8 +22,8 @@
       "name_ar": "طارق سليم",
       "gender": "male",
       "apparent_age": 30,
-      "face_and_body": "Egyptian man from Cairo, about 30, lean and wiry, long narrow face with hollow cheeks and a narrow pointed chin, high forehead, short neatly side-parted black hair, thin straight nose, thin lips, a thin handlebar mustache with upturned ends, narrow intense dark-brown eyes under straight strong black eyebrows, slightly protruding ears, medium olive skin",
-      "signature_features": "long narrow face, side-parted hair, thin handlebar mustache, intense narrow eyes",
+      "face_and_body": "Egyptian man from Cairo, about 30, lean and wiry, long narrow face with hollow cheeks and a narrow pointed chin, high forehead, short neatly side-parted black hair, thin straight nose, thin lips, a full dark handlebar mustache with upturned ends and a small tuft of hair under the lower lip, narrow intense dark-brown eyes under straight strong black eyebrows, slightly protruding ears, medium olive skin",
+      "signature_features": "long narrow face, side-parted hair, full handlebar mustache, intense narrow eyes",
       "range": "officers, leaders, quiet authority",
       "lora": {
         "trigger": "act0001tarek",
@@ -68,7 +68,14 @@
         "approved_by": "mahelsay",
         "outfit": "a dark olive collared work shirt"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "audit_notes": [
+        {
+          "date": "2026-10-18",
+          "by": "studio cast audit",
+          "note": "Card corrected to match the approved anchor and face model (full handlebar mustache, small tuft under the lip); the anchor was kept because C-01 has many approved shots. Open question for the owner: keep the lip tuft for a 1973 captain?"
+        }
+      ]
     },
     {
       "id": "ACT-0002",
@@ -90,7 +97,7 @@
         "training_images": 19,
         "trained": "2026-10-11"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -113,18 +120,32 @@
         "build": "heavy-set"
       },
       "anchor": {
-        "media_path": "library/actors/ACT-0002_hazem-abdallah/anchor/20261011-155514/act-0002_04.png",
+        "media_path": "library/actors/ACT-0002_hazem-abdallah/anchor/20261018-135352-crop/act-0002_01.png",
         "model_id": "fal-ai/flux-pro/v1.1",
         "batch_seeds": [
           3353992259
         ],
         "approved": "2026-10-11",
-        "approved_by": "mahelsay",
+        "approved_by": "studio cast QA (crop: generated text removed, face untouched)",
         "note": "bottom edge has garbled caption text, so the anchor itself is left out of the LoRA training data (use_in_training: false); training-set edits are told to keep no text — reject any that still show it",
         "use_in_training": false,
-        "outfit": "a light beige shirt with a brown cotton scarf"
+        "outfit": "a light beige shirt with a brown cotton scarf",
+        "previous": "library/actors/ACT-0002_hazem-abdallah/anchor/20261011-155514/act-0002_04.png",
+        "approved_at": "2026-10-18T09:54:24+00:00"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      },
+      "audit_notes": [
+        {
+          "date": "2026-10-18",
+          "by": "studio cast audit",
+          "note": "Original anchor had generated text along the bottom edge (cropped off). Greying, slightly long hair kept as a casting decision (written signature; 'looks older'); hair edits drifted identity or were refused by the provider filter."
+        }
+      ]
     },
     {
       "id": "ACT-0003",
@@ -133,7 +154,7 @@
       "name_ar": "كريم نور",
       "gender": "male",
       "apparent_age": 19,
-      "face_and_body": "young Egyptian man, about 19, slim, boyish clean-shaven face, oval face with a narrow pointed chin, thick tousled black hair, strong straight dark eyebrows, large almond-shaped dark-brown eyes, straight medium nose, full lips, warm olive-brown skin",
+      "face_and_body": "young Egyptian man, about 19, slim, boyish clean-shaven face, oval face with a narrow pointed chin, short black regulation army haircut, strong straight dark eyebrows, large almond-shaped dark-brown eyes, straight medium nose, full lips, warm olive-brown skin",
       "signature_features": "boyish oval face, large almond dark eyes, thick tousled hair",
       "range": "young soldiers, students, sons",
       "lora": {
@@ -150,7 +171,7 @@
         "test_approved_by": "mahelsay",
         "notes": "v1 face model (recipe v1.1). First keyframes (2.5-05, 2.6-02, 2.6-05) keep the face well but carry the anchor scarf into every shot and pull toward posed portraits, because 15 of 18 training images kept the anchor outfit and framing. Retrain with recipe v1.2 (~$2.80) when fal is topped up. Reads slightly older than 19; add 'boyish, 19 years old' when needed."
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -160,15 +181,17 @@
         }
       ],
       "anchor": {
-        "media_path": "library/actors/ACT-0003_karim-nour/anchor/20261011-153723/act-0003_02.png",
+        "media_path": "library/actors/ACT-0003_karim-nour/anchor/20261018-104935/act-0003_02.png",
         "model_id": "fal-ai/flux-pro/v1.1",
         "batch_seeds": [
           3627757259,
           1081570356
         ],
         "approved": "2026-10-11",
-        "approved_by": "mahelsay",
-        "outfit": "a beige collared cotton shirt and a brown-and-beige cotton scarf"
+        "approved_by": "studio cast QA (owner mandate 2026-10-18)",
+        "outfit": "a beige collared cotton shirt and a brown-and-beige cotton scarf",
+        "approved_at": "2026-10-18T09:54:24+00:00",
+        "previous": "library/actors/ACT-0003_karim-nour/anchor/20261011-153723/act-0003_02.png"
       },
       "region": "Nile Delta (Menoufia)",
       "family_resemblance": "Shares the straight nose and olive-brown skin of ACT-0007 (mother) and the strong straight brows of ACT-0008 (sister) in thunderbolt/ep01_romani",
@@ -179,12 +202,17 @@
         "eye_color": "dark-brown",
         "eyebrows": "straight-strong",
         "jaw_chin": "narrow-pointed",
-        "hair": "thick-tousled",
+        "hair": "short-black-regulation",
         "facial_hair": "clean-shaven",
         "skin_tone": "olive-brown",
         "build": "slim"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      }
     },
     {
       "id": "ACT-0004",
@@ -193,8 +221,8 @@
       "name_ar": "شريف منصور",
       "gender": "male",
       "apparent_age": 25,
-      "face_and_body": "Egyptian man from Alexandria, mid-20s, slight build, oval face with prominent cheekbones and a soft small chin under light stubble, light wheat-colored skin with freckles across the nose and cheeks, straight medium nose, thick wavy light-brown hair worn a little long and tousled, a curled mustache with upturned ends, wide light green-grey eyes, sparse light-brown eyebrows",
-      "signature_features": "wavy light-brown hair, freckles, light green-grey eyes, curled mustache",
+      "face_and_body": "Egyptian man from Alexandria, mid-20s, slight build, oval face with prominent cheekbones and a soft small chin under light stubble, light wheat-colored skin with freckles across the nose and cheeks, straight medium nose, short black regulation army haircut, a short neat service mustache, wide light green-grey eyes, straight dark eyebrows",
+      "signature_features": "freckles, light green-grey eyes, oval face with prominent cheekbones, short neat service mustache",
       "range": "technicians, clerks, radio operators, intellectuals",
       "lora": {
         "trigger": "act0004sherif",
@@ -206,7 +234,7 @@
         "training_images": 19,
         "trained": "2026-10-11"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -221,24 +249,31 @@
         "nose": "straight-medium",
         "eyes": "light-wide",
         "eye_color": "green-grey",
-        "eyebrows": "sparse-light",
+        "eyebrows": "straight-dark",
         "jaw_chin": "soft-small",
-        "hair": "wavy-light-brown",
-        "facial_hair": "curled-mustache",
+        "hair": "short-black-regulation",
+        "facial_hair": "short-service-mustache",
         "skin_tone": "light-wheat",
         "build": "slight"
       },
       "anchor": {
-        "media_path": "library/actors/ACT-0004_sherif-mansour/anchor/20261011-155832/act-0004_01.png",
+        "media_path": "library/actors/ACT-0004_sherif-mansour/anchor/20261018-104348/act-0004_02.png",
         "model_id": "fal-ai/flux-pro/v1.1",
         "batch_seeds": [
           3544288273
         ],
         "approved": "2026-10-11",
-        "approved_by": "mahelsay",
-        "outfit": "a light shirt under a beige cotton shawl"
+        "approved_by": "studio cast QA (owner mandate 2026-10-18)",
+        "outfit": "a light shirt under a beige cotton shawl",
+        "approved_at": "2026-10-18T09:54:24+00:00",
+        "previous": "library/actors/ACT-0004_sherif-mansour/anchor/20261011-155832/act-0004_01.png"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      }
     },
     {
       "id": "ACT-0005",
@@ -286,7 +321,14 @@
         "approved": "2026-10-11",
         "approved_by": "mahelsay",
         "outfit": "a beige cotton shawl"
-      }
+      },
+      "audit_notes": [
+        {
+          "date": "2026-10-18",
+          "by": "studio cast audit",
+          "note": "Audit: keep (anchor 8, training 9). Unassigned."
+        }
+      ]
     },
     {
       "id": "ACT-0006",
@@ -340,7 +382,14 @@
         "approved_by": "mahelsay",
         "outfit": "a mustard-brown cotton scarf wrapped around the neck"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "audit_notes": [
+        {
+          "date": "2026-10-18",
+          "by": "studio cast audit",
+          "note": "Kept the original anchor and face model: clean-shave edits passed the change but QA judged identity drifted (6.7). The faint facial hair is handled per shot by Makeup ('clean-shaven')."
+        }
+      ]
     },
     {
       "id": "ACT-0007",
@@ -362,7 +411,7 @@
         "training_images": 18,
         "trained": "2026-10-11"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -386,16 +435,23 @@
         "build": "sturdy"
       },
       "anchor": {
-        "media_path": "library/actors/ACT-0007_souad-roshdy/anchor/20261011-155832/act-0007_02.png",
+        "media_path": "library/actors/ACT-0007_souad-roshdy/anchor/20261018-104617/act-0007_02.png",
         "model_id": "fal-ai/flux-pro/v1.1",
         "batch_seeds": [
           2985857601
         ],
         "approved": "2026-10-11",
-        "approved_by": "mahelsay",
-        "outfit": "a beige headwrap and headscarf over a faded dress"
+        "approved_by": "studio cast QA (owner mandate 2026-10-18)",
+        "outfit": "a beige headwrap and headscarf over a faded dress",
+        "approved_at": "2026-10-18T09:54:24+00:00",
+        "previous": "library/actors/ACT-0007_souad-roshdy/anchor/20261011-155832/act-0007_02.png"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      }
     },
     {
       "id": "ACT-0008",
@@ -404,7 +460,7 @@
       "name_ar": "ملك سامي",
       "gender": "female",
       "apparent_age": 12,
-      "face_and_body": "Egyptian village girl, 12, slim, round face with a soft small chin, large round dark-brown eyes, strong straight dark eyebrows, small button nose, a small gap between her front teeth, sun-browned olive-brown skin, long straight loose black hair",
+      "face_and_body": "Egyptian village girl, 12, slim, with an unmistakably childlike round face with a soft small chin, large round dark-brown eyes, strong straight dark eyebrows, small button nose, a small gap between her front teeth, sun-browned olive-brown skin, long straight loose black hair",
       "signature_features": "large round dark eyes, strong straight brows, long black hair",
       "range": "daughters, sisters, schoolgirls",
       "lora": {
@@ -417,7 +473,7 @@
         "training_images": 21,
         "trained": "2026-10-11"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -441,16 +497,23 @@
         "build": "slim"
       },
       "anchor": {
-        "media_path": "library/actors/ACT-0008_malak-samy/anchor/20261011-155832/act-0008_04.png",
+        "media_path": "library/actors/ACT-0008_malak-samy/anchor/20261018-103910/act-0008_01.png",
         "model_id": "fal-ai/flux-pro/v1.1",
         "batch_seeds": [
           3027304878
         ],
         "approved": "2026-10-11",
-        "approved_by": "mahelsay",
-        "outfit": "a light dress with a patterned brown scarf"
+        "approved_by": "studio cast QA (owner mandate 2026-10-18)",
+        "outfit": "a light dress with a patterned brown scarf",
+        "approved_at": "2026-10-18T09:54:24+00:00",
+        "previous": "library/actors/ACT-0008_malak-samy/anchor/20261011-155832/act-0008_04.png"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      }
     },
     {
       "id": "ACT-0009",
@@ -505,7 +568,14 @@
         "approved_by": "mahelsay",
         "outfit": "a rust-red headscarf"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "audit_notes": [
+        {
+          "date": "2026-10-18",
+          "by": "studio cast audit",
+          "note": "Anchor reads late 20s and slightly polished vs 'about 30, faint tired shadows'; kept: her face model has the best identity record in the cast (1 fail in 18 reviews). Prompt the tired look per shot through Makeup."
+        }
+      ]
     },
     {
       "id": "ACT-0010",
@@ -527,7 +597,7 @@
         "training_images": 18,
         "trained": "2026-10-11"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -560,7 +630,12 @@
         "approved_by": "mahelsay",
         "outfit": "a brown collared cotton shirt"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      }
     },
     {
       "id": "ACT-0011",
@@ -569,7 +644,7 @@
       "name_ar": "فاروق الدسوقي",
       "gender": "male",
       "apparent_age": 52,
-      "face_and_body": "Egyptian man from Cairo, early 50s, tall and lean with an upright military bearing, long oval face with high cheekbones and a narrow straight jaw, thin aquiline nose, calm hooded grey-green eyes behind thin steel-rimmed reading glasses, fine arched grey eyebrows, thick silver-white hair neatly combed back, completely clean-shaven, fair olive skin with fine lines",
+      "face_and_body": "Egyptian man from Cairo, early 50s, tall and lean with an upright military bearing, long oval face with high cheekbones and a narrow straight jaw, thin aquiline nose, calm hooded grey-green eyes behind thin steel-rimmed reading glasses, fine arched grey eyebrows, short neat silver senior officer's haircut, short back and sides, completely clean-shaven, fair olive skin with fine lines",
       "signature_features": "lean long oval clean-shaven face, silver hair combed back, steel-rimmed glasses",
       "range": "senior officers",
       "lora": {
@@ -596,7 +671,7 @@
         "eye_color": "green-grey",
         "eyebrows": "fine-arched",
         "jaw_chin": "narrow-straight",
-        "hair": "silver-combed-back",
+        "hair": "silver-short-officer",
         "facial_hair": "clean-shaven",
         "skin_tone": "fair",
         "build": "tall-lean"
@@ -617,11 +692,18 @@
       ],
       "redesign_note": "Redesigned 2026-10-13 at the user's request: the visual look-alike check found ACT-0011 too close to ACT-0002 Sergeant Sayed (risk 8/10) — the old portrait is kept under previous_anchors.",
       "anchor": {
-        "media_path": "library/actors/ACT-0011_farouk-desouky/anchor/20261013-170744/act-0011_01.png",
+        "media_path": "library/actors/ACT-0011_farouk-desouky/anchor/20261018-104644/act-0011_01.png",
         "model_id": "azure/me-eus2-gpt-image-2",
         "approved": "2026-10-13",
-        "approved_by": "mahelsay",
-        "outfit": "a light shirt"
+        "approved_by": "studio cast QA (owner mandate 2026-10-18)",
+        "outfit": "a light shirt",
+        "approved_at": "2026-10-18T09:54:24+00:00",
+        "previous": "library/actors/ACT-0011_farouk-desouky/anchor/20261013-170744/act-0011_01.png"
+      },
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
       }
     },
     {
@@ -631,8 +713,8 @@
       "name_ar": "مجدي رياض",
       "gender": "male",
       "apparent_age": 45,
-      "face_and_body": "Egyptian man from Tanta, mid-40s, fit sturdy medium build with a normal neck, full round face with a firm square jawline, short wide flat nose, calm wide-set light-brown eyes behind slightly puffy lids, straight medium-thick eyebrows, closely cropped dark hair greying at the temples with a receding hairline, completely clean-shaven, light wheat-brown skin",
-      "signature_features": "round clean-shaven face with a firm jaw, cropped hair greying at the temples, solid medium build",
+      "face_and_body": "Egyptian man from Tanta, late 40s, fit sturdy medium build with a normal neck, full round face with a firm square jawline, short wide flat nose, calm wide-set light-brown eyes behind slightly puffy lids, straight medium-thick eyebrows, closely cropped greying hair, grey at the temples and darker at the crown, with a receding hairline, completely clean-shaven, light wheat-brown skin",
+      "signature_features": "round clean-shaven face with a firm jaw, cropped greying hair, solid medium build",
       "range": "pilots, officers",
       "lora": {
         "trigger": null,
@@ -685,7 +767,14 @@
         "approved_by": "mahelsay",
         "note": "portrait 1 chosen by the user, made slimmer at their request (edit, input_fidelity high)",
         "outfit": "a dark grey shirt"
-      }
+      },
+      "audit_notes": [
+        {
+          "date": "2026-10-18",
+          "by": "studio cast audit",
+          "note": "Card corrected to match the approved anchor (reads late 40s, mostly grey cropped hair). Fits a Mi-8 squadron leader."
+        }
+      ]
     },
     {
       "id": "ACT-0013",
@@ -707,7 +796,7 @@
         "training_images": 20,
         "trained": "2026-10-12"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {
@@ -730,16 +819,23 @@
         "build": "short-stocky"
       },
       "anchor": {
-        "media_path": "library/actors/ACT-0013_mahmoud-abdel-rahim/anchor/20261012-163903/act-0013_03.png",
+        "media_path": "library/actors/ACT-0013_mahmoud-abdel-rahim/anchor/20261018-104716/act-0013_02.png",
         "model_id": "fal-ai/flux-pro/v1.1",
         "batch_seeds": [
           1304782699
         ],
         "approved": "2026-10-12",
-        "approved_by": "mahelsay",
-        "outfit": "a khaki cotton shirt with a loose brown scarf"
+        "approved_by": "studio cast QA (owner mandate 2026-10-18)",
+        "outfit": "a khaki cotton shirt with a loose brown scarf",
+        "approved_at": "2026-10-18T09:54:24+00:00",
+        "previous": "library/actors/ACT-0013_mahmoud-abdel-rahim/anchor/20261012-163903/act-0013_03.png"
       },
-      "locked_on": "2026-10-12"
+      "locked_on": "2026-10-12",
+      "redesign": {
+        "opened": "2026-10-18",
+        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
+        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes."
+      }
     }
   ],
   "distinctness_rule": "Every actor must be clearly a different person. Each actor card carries structured 'traits' using the trait_vocabulary below; the engine ('mtower cast-check') compares every pair of actors of the same gender and age group and blocks new anchor generation when two cards share too many traits. Only actors whose family_resemblance names each other may look related. New anchors are reviewed side by side with the approved roster before approval.",
@@ -799,6 +895,7 @@
       "fine-arched",
       "heavy-low",
       "sparse-light",
+      "straight-dark",
       "straight-strong",
       "thick-bushy",
       "thick-straight",
@@ -831,8 +928,10 @@
       "receding-grey-combed-back",
       "receding-greying",
       "shaved-close",
+      "short-black-regulation",
       "short-side-parted",
       "silver-combed-back",
+      "silver-short-officer",
       "thick-tousled",
       "tight-curls-cropped",
       "wavy-light-brown",
@@ -847,6 +946,7 @@
       "grey-full-beard",
       "handlebar-mustache",
       "none",
+      "short-service-mustache",
       "sideburns",
       "stubble",
       "thick-bushy-mustache",

@@ -21,13 +21,18 @@
       "monthly_limit_env": "MTOWER_AZURE_MONTHLY_LIMIT_USD",
       "monthly_limit_usd": 300,
       "timeout_seconds": 300,
-      "note": "The studio's Foundry resource (studio/infra). Entra ID only; network security perimeter admits only the studio PC. Spending counts against its own monthly limit (budget me-eus2-mtowerstudio-budget)."
+      "note": "The studio's Foundry resource (studio/infra). Entra ID only; network security perimeter admits only the studio PC. Spending counts against its own monthly limit (budget me-eus2-mtowerstudio-budget).",
+      "deployment_endpoints": {
+        "$note": "Deployments hosted on the second-region media Foundry (East US 2 quota for them is held by the legacy MTower Foundry).",
+        "me-swc-gpt-image-2": "https://me-swc-mtowerstudio-fdy.cognitiveservices.azure.com",
+        "me-swc-sora-2": "https://me-swc-mtowerstudio-fdy.cognitiveservices.azure.com"
+      }
     }
   },
   "models": {
     "image_compose": {
       "provider": "azure",
-      "model_id": "me-eus2-gpt-image-2",
+      "model_id": "me-swc-gpt-image-2",
       "unit": "image",
       "price_usd": 0.08,
       "quality_prices_usd": { "low": 0.02, "medium": 0.08, "high": 0.3 },
@@ -113,6 +118,22 @@
       },
       "verify": "Shots and tests with trained actor LoRAs (FLUX.1 dev base)",
       "price_note": "$0.035 per megapixel, rounded up; our sizes are under 1 MP, so this is per image. Verified on fal.ai 2026-10-11."
+    },
+    "image_edit_identity": {
+      "provider": "fal",
+      "model_id": "fal-ai/nano-banana-pro/edit",
+      "unit": "image",
+      "price_usd": 0.15,
+      "price_note": "$0.15 per edit. Verified on fal.ai 2026-10-18.",
+      "image_field": "image_urls",
+      "image_list": true,
+      "payload": {
+        "aspect_ratio": "3:4",
+        "output_format": "png",
+        "resolution": "1K",
+        "safety_tolerance": "4"
+      },
+      "verify": "Identity-preserving feature edits of an approved actor portrait (hair, grooming, age cues) — Kontext redraws the face on large changes (studio cast audit 2026-10-18)"
     },
     "image_edit": {
       "provider": "fal",
@@ -202,7 +223,7 @@
     },
     "face_swap": {
       "provider": "azure",
-      "model_id": "me-eus2-gpt-image-2",
+      "model_id": "me-swc-gpt-image-2",
       "unit": "image",
       "price_usd": 0.06,
       "pricing_per_m_tokens": { "text_input_per_m": 5, "image_input_per_m": 8, "output_per_m": 30 },
