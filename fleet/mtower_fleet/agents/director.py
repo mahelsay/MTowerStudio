@@ -24,10 +24,14 @@ class DirectorAgent(Agent):
             cat = library.catalog(shot.production, shot.episode)
             loc = cat.locations.get(design.get("location") or "", {})
             rules = "\n".join(f"- {r}" for r in (loc.get("qa_rules") or []))
+            ids = design.get("character_ids") or design.get("characters") or []
+            in_frame = ", ".join(f"{cid} {(cat.cast.get(cid) or {}).get('character', '')}".strip() for cid in ids)
             locked = (
                 f"\n\nLOCKED SHOT DESIGN (from the shot list — your direction must fit it):\n"
                 f"- size/lens/move: {design.get('size')} / {design.get('lens')} / {design.get('move')}\n"
                 f"- frame: {design.get('prompt', '')}\n"
+                f"- IN FRAME (locked cast — nobody else is visible; anyone else named is off-screen): "
+                f"{in_frame or 'no tracked characters'}\n"
                 + (f"- location {loc.get('id')}: {loc.get('prompt', '')}\n" if loc else "")
                 + (f"LOCATION RULES (never contradict them):\n{rules}\n" if rules else "")
             )

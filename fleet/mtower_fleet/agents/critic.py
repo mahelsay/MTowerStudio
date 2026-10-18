@@ -212,9 +212,10 @@ WAVE2_DOD = {
         "with the previous shot."
     ),
     "set": (
-        "Every locked prop is placed; a library prop an actor uses in this shot is a hand prop, and an item an actor "
-        "uses that has no library id is listed in hand_items; props from elsewhere in the beat may appear when the "
-        "frame shows them; dressing is period-correct "
+        "Every locked prop of THIS shot (its 'props' list) is placed; a library prop an actor uses in this shot is a "
+        "hand prop, and an item an actor uses that has no library id is listed in hand_items; 'other props of this "
+        "beat' are OPTIONAL — never require them, and a prop carried by a character who is not in this shot must not "
+        "appear unattended; dressing is period-correct "
         "and plausible for the location; static atmosphere only (no explosions or moving smoke); set state fits the "
         "beat and the previous shot."
     ),

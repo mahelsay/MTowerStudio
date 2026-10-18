@@ -45,7 +45,8 @@ def common_context(shot, cat, resolved, prev_design: str, include_rules: bool = 
     sett = (f"location {st.location_id or '—'}" + (f", inside {st.vehicle_interior}" if st.vehicle_interior else "")
             + f", vehicles {st.vehicles or '—'}, props {st.props or '—'}"
             + (f", carried by characters (costume props, locked): {carried}" if carried else "")
-            + (f", other props of this beat (may appear if the frame shows them): {others}" if others else ""))
+            + (f", other props of this beat (OPTIONAL, not locked for this shot — mostly carried by characters who "
+               f"are off-screen here; never required): {others}" if others else ""))
     loc_rules = (cat.locations.get(st.location_id, {}) or {}).get("qa_rules") or []
     cam = (f"{s.camera.shot_size} / {s.camera.lens} / {s.camera.movement} / looks {s.camera.look_key} / "
            f"{s.camera.format}; lip-sync {s.policy.lip_sync}; face visible {s.policy.face_pass}")
@@ -197,7 +198,8 @@ class SetAgent(DeptAgent):
         "uses in this shot], hand_items: [items an actor actively uses that have NO library id, e.g. 'small "
         "red-filtered flashlight', 'scrap of paper' — these are library gaps], dressing: [short concrete items], "
         "set_state (one sentence), notes, concerns: [string] }. Every locked shot prop must appear in props or "
-        "hand_props. You may also place props listed as 'other props of this beat' when the frame shows them. "
+        "hand_props. Props listed as 'other props of this beat' are optional: place one only when the frame "
+        "plausibly shows it, never one carried by a character who is not in this shot. "
         "Props carried as character additions stay with Wardrobe — list them here only if an actor actively "
         "handles them in this shot.")
 
