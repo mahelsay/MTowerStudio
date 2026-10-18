@@ -1,0 +1,165 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A controlled, actor-friendly waiting beat with a clear progression: accounting, equipment checks, nervous humor, then the delayed signal. The dialogue is concise, period-appropriate and differentiated by rank and temperament; the sealed envelope gives the final report dramatic weight without exposition.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained vigilance",
+        "delivery": "Ask Mahmoud for confirmation, not information you have forgotten. Keep the voice controlled; the pressure is carried in the brief pause before his name."
+      },
+      "text": "عَدِّيتْهُمْ يَا مَحْمُودْ؟"
+    },
+    {
+      "n": 2,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 8,
+        "intensity": 8,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "careful concentration",
+        "delivery": "Read directly from the notebook to Shalabi. Land clearly on the total and attached elements, with no flourish or uncertainty."
+      },
+      "text": "مية واتنين وعشرين يَا فَنْدِمْ… بِفَصِيلْةِ الْمَالُوتْكَا وِالْمُهَنْدِسِينْ."
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "gruff protectiveness",
+        "delivery": "Project along the resting row while continuing to inspect the men. Bite off «مِشْ هُنَاكْ» as a warning born from concern, not swagger."
+      },
+      "text": "أَرْبَعْ خَزَايِنْ لِكُلّْ وَاحِدْ. اللِّي نَاقْصُهْ حَاجَةْ يِقُولْ دِلْوَقْتِي… مِشْ هُنَاكْ."
+    },
+    {
+      "n": 4,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 8,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "anxiety hidden inside a joke",
+        "delivery": "Keep looking at the wire as though the question is casual. Let the final «فِينْ؟» reveal that Adel genuinely needs the answer."
+      },
+      "text": "يَا شَاوِيشْ حَسَنْ… السِّلْكْ دَهْ لَوْ اتْقَطَعْ، الصَّارُوخْ يِرُوحْ فِينْ؟"
+    },
+    {
+      "n": 5,
+      "speaker": "HASSAN",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "unruffled reassurance",
+        "delivery": "Do not look up from the reel. State «يِرُوحْ أَعْمَى» as a plain fact, then give the instruction with quiet confidence."
+      },
+      "text": "يِرُوحْ أَعْمَى… عَشَانْ كِدَهْ ثَبِّتْ إِيدَكْ."
+    },
+    {
+      "n": 6,
+      "speaker": "MAHMOUD",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "restrained frustration and misplaced guilt",
+        "delivery": "Lower the headset before reporting to Shalabi. Keep the apology implicit, as if a more careful operator might somehow have produced the signal."
+      },
+      "text": "لِسَّهْ مَافِيشْ إِشَارَةْ يَا فَنْدِمْ."
+    }
+  ],
+  "beat": "1.6",
+  "file": "01_act_one_v2.md",
+  "hash": "47167f4fb6625bea",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:50:05+00:00",
+  "seconds": 64.7,
+  "usage": {
+    "prompt_tokens": 3029,
+    "completion_tokens": 5801
+  },
+  "cost_usd": 0.12814
+}

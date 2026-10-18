@@ -1,0 +1,189 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A strong, playable beat with a clean turn from stunned recognition to controlled mission focus. The reactions feel Egyptian and restrained, while Shalabi’s briefing carries the documented objective without becoming a speech.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "disbelief breaking into hope",
+        "delivery": "Throw the question up into the aircraft noise rather than toward Sayed. Use Mostafa’s full adult chest voice; he is overwhelmed, not childishly excited."
+      },
+      "text": "دُولْ بِتُوعْنَا؟!"
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "measured",
+        "emotion": "buried relief and old grief",
+        "delivery": "Keep hold of Mostafa’s shoulder and force the words through the roar. Let the catch come only on the pause, then recover immediately."
+      },
+      "text": "أَيْوَهْ… بِتُوعْنَا!"
+    },
+    {
+      "n": 3,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 7,
+        "character": 7,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "slow",
+        "emotion": "awed fear",
+        "delivery": "Say it almost to yourself as the meaning lands. «خَلَاصْ» means the waiting is over, not that the danger has passed."
+      },
+      "text": "يَعْنِي… خَلَاصْ؟"
+    },
+    {
+      "n": 4,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 8,
+        "intensity": 8,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "disciplined urgency",
+        "delivery": "Arrive short of breath, but clip the report cleanly for the captain. The urgency comes from the signal, never from panic."
+      },
+      "text": "يَا فَنْدِمْ! إِشَارَةْ فَتْحْ الظَّرْفْ وِصْلِتْ!"
+    },
+    {
+      "n": 5,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 8,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled weight of command",
+        "delivery": "Brief the tight circle of leaders, not the audience. Place the road and the armored brigade precisely, then make «هَنْعَطَّلُهْ» a decision already taken."
+      },
+      "text": "كَمِينْ عَلَى طَرِيقْ رُمَّانَةْ – بَالُوظَةْ. لِوَاءْ مُدَرَّعْ نَازِلْ عَلَى الْقَنَاةْ… وِإِحْنَا هَنْعَطَّلُهْ."
+    },
+    {
+      "n": 6,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 7,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "practical apprehension",
+        "delivery": "Ask only for the required duration; Sayed already understands the rest. Keep it level and professional, with no challenge in the tone."
+      },
+      "text": "قَدّْ إِيهْ يَا فَنْدِمْ؟"
+    },
+    {
+      "n": 7,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 8,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "grim resolve",
+        "delivery": "Give three hours, then allow the pause to stretch the burden to four. Finish on the men east of the canal, making clear why his commandos must hold without turning it into a slogan."
+      },
+      "text": "تلات سَاعَاتْ… أربعة. لَحَدّْ مَا رِجَّالِتْنَا يِثَبِّتُوا رِجْلِيهُمْ شَرْقْ الْقَنَاةْ."
+    }
+  ],
+  "beat": "1.9",
+  "file": "01_act_one_v2.md",
+  "hash": "2cd68cc5c5afc2ef",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:53:56+00:00",
+  "seconds": 59.8,
+  "usage": {
+    "prompt_tokens": 3018,
+    "completion_tokens": 4970
+  },
+  "cost_usd": 0.11147
+}

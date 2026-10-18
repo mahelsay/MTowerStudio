@@ -1,0 +1,1133 @@
+{
+  "$schema_note": "Shot list v1.2 — see shot_list_01_act_one.json for field conventions. Beat-level location/look/wear are defaults; VO and dialogue are referenced from the locked screenplay.",
+  "version": "2.0",
+  "episode": "ep01_romani",
+  "part": "05_act_five",
+  "screenplay": "../01_development/screenplay/05_act_five.md",
+  "screenplay_lock": "ep01-script-v2.0-act5",
+  "production_config": "production_config.json",
+  "casting": "casting.json",
+  "status": "draft — v2.0 drama rewrite shot list update",
+  "target_length_s": 445,
+  "defaults": {
+    "lip_sync": "avoid",
+    "model": "default"
+  },
+  "rules": "The march theme returns softly in 5.2 and builds to the end. The letters are the emotional heart: keep faces quiet and let the voices carry. Final image: the empty road at dusk.",
+  "beats": [
+    {
+      "beat": "5.1",
+      "title": "West",
+      "target_s": 30,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_FIRE"
+      ],
+      "wear": "WEAR_BATTLE",
+      "vo": null,
+      "sfx": "Wind; distant fire",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "5.1-01",
+          "duration_s": 6.2,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "three small groups of survivors",
+          "prompt": "three small groups of men slipping away from the pits into the dark, the orange glow of burning tanks behind them",
+          "motion": "The groups move off in different directions into the dark."
+        },
+        {
+          "shot_id": "5.1-02",
+          "duration_s": 6.9,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain, last to leave, turning to look back once at the burning road",
+          "motion": "He looks back at the road for a long moment."
+        },
+        {
+          "shot_id": "5.1-02a",
+          "duration_s": 4.6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "at the burning pit line at night before the survivors split west: SHALABI delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled urgency under exhaustion",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.1-02b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "at the burning pit line at night before the survivors split west: MAHMOUD delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "alert concern",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.1-02c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "at the burning pit line at night before the survivors split west: SHALABI delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "absolute control",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.1-03",
+          "duration_s": 6.3,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain turning away from the firelight and following his men into the dark dunes",
+          "motion": "He turns and walks into the darkness."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-01",
+          "line": 1,
+          "shot_id": "5.1-02a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "controlled urgency under exhaustion",
+          "delivery": "Address the crouching survivors without raising the voice. Separate the three instructions cleanly, making each one final and immediately actionable."
+        },
+        {
+          "speaker": "C-04",
+          "line": 2,
+          "shot_id": "5.1-02b",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "alert concern",
+          "delivery": "Touch the radio as the question is asked. Mahmoud needs one precise decision before the groups separate, not reassurance."
+        },
+        {
+          "speaker": "C-01",
+          "line": 3,
+          "shot_id": "5.1-02c",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "absolute control",
+          "delivery": "Answer Mahmoud directly, with a slight beat after «مَعَاكْ». Land «وِمَقْفُولْ» as an order that permits no radio transmission."
+        }
+      ]
+    },
+    {
+      "beat": "5.2",
+      "title": "Five days",
+      "target_s": 50,
+      "location": "LOC-0001",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_GAUNT",
+      "vo": {
+        "ref": "screenplay 5.2 VO",
+        "placement": "over selected shots",
+        "est_s": 8
+      },
+      "sfx": "Wind, footsteps, a canteen shaken",
+      "music": "The march theme from Act Two returns, very softly",
+      "shots": [
+        {
+          "shot_id": "5.2-01",
+          "duration_s": 7.8,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "extras": "survivors",
+          "prompt": "a few men lying motionless in the thin shade of a dune crest at harsh midday",
+          "motion": "Heat shimmers; nobody moves."
+        },
+        {
+          "shot_id": "5.2-02",
+          "duration_s": 5.9,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "cracked lips, and a hand shaking an empty canteen",
+          "motion": "The canteen is shaken; nothing sloshes."
+        },
+        {
+          "shot_id": "5.2-03",
+          "duration_s": 9.8,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [],
+          "extras": "a small file of men",
+          "prompt": "a small single file of men walking over a dune crest under a sky full of stars",
+          "motion": "The file crosses the crest under the stars."
+        },
+        {
+          "shot_id": "5.2-04",
+          "duration_s": 10.7,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAWN_HAZE"
+          ],
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0001"
+          ],
+          "prompt": "the young private, gaunt and sunburned, walking at dawn with two rifles on his shoulders",
+          "motion": "He walks steadily, two rifles on his shoulders.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "5.2-04a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "on the five-day desert march, gaunt and sunburned with wind over the dunes: MOSTAFA delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "exhausted generosity masked by a weak lie",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.2-04b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "on the five-day desert march, gaunt and sunburned with wind over the dunes: MAHMOUD delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "tender reproach pierced by grief",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.2-05",
+          "duration_s": 9.8,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DUSK_RED"
+          ],
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0008"
+          ],
+          "prompt": "the captain at the head of the file at dusk checking his compass",
+          "motion": "He checks the compass, points, and walks on."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-03",
+          "line": 1,
+          "shot_id": "5.2-04a",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "slow",
+          "emotion": "exhausted generosity masked by a weak lie",
+          "delivery": "Offer the canteen with barely enough breath to speak. Try to make the lie sound casual, because admitting thirst might make Mahmoud refuse."
+        },
+        {
+          "speaker": "C-04",
+          "line": 2,
+          "shot_id": "5.2-04b",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "slow",
+          "emotion": "tender reproach pierced by grief",
+          "delivery": "Hold Mostafa’s gaze and let the single word carry recognition of Sayed. Keep it dry and intimate, with no sentimental emphasis."
+        }
+      ]
+    },
+    {
+      "beat": "5.3",
+      "title": "The letter arrives",
+      "target_s": 70,
+      "location": "LOC-0006",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_VILLAGE_DELTA"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-12",
+          "line": 1,
+          "shot_id": "5.3-03",
+          "intensity": 4,
+          "volume": "normal",
+          "pace": "slow",
+          "emotion": "hopeful but halting",
+          "delivery": "Reading her brother's letter aloud to her mother, not knowing if he is alive."
+        },
+        {
+          "speaker": "C-03",
+          "line": 2,
+          "shot_id": "5.3-04",
+          "note": "Mostafa's letter (V.O.) — voice-over, not lip-synced",
+          "intensity": 7,
+          "volume": "normal",
+          "pace": "measured",
+          "emotion": "brave reassurance giving way to need",
+          "delivery": "He is composing the letter to calm his mother, keeping a young man's steady warmth through the family details. On «ادْعِيلِي كِتِيرْ», let the courage thin slightly without breaking into fear."
+        },
+        {
+          "speaker": "C-12",
+          "line": 3,
+          "shot_id": "5.3-03a",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "sudden dread",
+          "delivery": "She reads the date, makes the connection, then tells her mother without looking away from the page. Leave a small stunned gap before the final phrase; do not sob."
+        },
+        {
+          "speaker": "C-11",
+          "line": 4,
+          "shot_id": "5.3-05a",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "fear held under iron control",
+          "delivery": "She gives the letter back as if hearing his words again can keep him present. It is a mother's insistence, not a barked command, with no visible collapse."
+        }
+      ],
+      "sfx": "Bicycle bell, chickens",
+      "music": "March theme continues softly",
+      "shots": [
+        {
+          "shot_id": "5.3-01",
+          "duration_s": 8.6,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "extras": "a postman on a bicycle",
+          "prompt": "a postman on a bicycle stopping at a mud-brick doorway and handing a cheap army envelope to a girl; the bread oven in the courtyard is cold",
+          "motion": "The postman hands over the envelope; the girl looks at the handwriting and runs inside."
+        },
+        {
+          "shot_id": "5.3-02",
+          "duration_s": 8.6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-11",
+            "C-12"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "mother and daughter on a bench, the girl opening a letter, the mother's hands clenched in her lap",
+          "motion": "The girl opens the letter; the mother's hands tighten."
+        },
+        {
+          "shot_id": "5.3-03",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the girl sitting on a bench in the courtyard reading her brother's letter aloud to her mother, who is just out of frame beside her, holding the lined paper in both hands, looking down at the page, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She reads the first line aloud, hopeful but halting; her mother leans closer.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "hopeful, halting",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.3-03a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "in the village courtyard with the letter open between mother and daughter: ZEINAB delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "sudden dread",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.3-04",
+          "duration_s": 12.9,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking",
+          "location": "LOC-0001",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAY_DESERT"
+          ],
+          "wear": "WEAR_GAUNT",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0001"
+          ],
+          "prompt": "intercut: the young private, gaunt, walking in the desert file with two rifles on his shoulders",
+          "motion": "He walks on through the dunes.",
+          "notes": "Mostafa's letter (V.O.) — voice-over, not lip-synced; updated v2 text."
+        },
+        {
+          "shot_id": "5.3-05",
+          "duration_s": 12.9,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "very slow push-in",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "the mother listening, eyes wet but not crying, her face turned slightly away",
+          "motion": "Very slow push-in; she listens without moving.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "5.3-05a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "in the village courtyard with the letter open between mother and daughter: UMM MOSTAFA delivering line 4, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "fear held under iron control",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.3-06",
+          "duration_s": 13,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "Umm Mostafa in her kitchen doorway holding a folded letter flat against her chest with both hands, eyes closed",
+          "motion": "She takes the letter and presses it to her chest, eyes closed."
+        }
+      ]
+    },
+    {
+      "beat": "5.4",
+      "title": "Across the water",
+      "target_s": 50,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DUSK_RED"
+      ],
+      "wear": "WEAR_GAUNT",
+      "vo": {
+        "ref": "screenplay 5.4 VO",
+        "placement": "over selected shots",
+        "est_s": 8
+      },
+      "sfx": "Wind over the flat; then oars dipping silently on night water",
+      "music": "March theme continues, restrained",
+      "shots": [
+        {
+          "shot_id": "5.4-01",
+          "duration_s": 8.4,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "extras": "survivors",
+          "prompt": "survivors coming down off the last dune at dusk and stopping at the edge of a vast white salt flat",
+          "motion": "They stop at the edge of the salt flat."
+        },
+        {
+          "shot_id": "5.4-02",
+          "duration_s": 6.3,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Private Mostafa, a grown man of twenty, staring out at the salt flat where it all began, recognition in his eyes",
+          "motion": "He stares; a flicker of recognition."
+        },
+        {
+          "shot_id": "5.4-03",
+          "duration_s": 8.4,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "extras": "an Egyptian infantryman (WRD-0001)",
+          "prompt": "across the salt flat at dusk, a distant Egyptian infantry sentry rising from cover with rifle up, shouting a challenge, then lowering it and waving the gaunt survivors in",
+          "motion": "He rises, aims, lowers the rifle, and waves them in.",
+          "notes": "v2 restage: Infantry sentry shouts from a distance; no lip-sync required."
+        },
+        {
+          "shot_id": "5.4-04",
+          "duration_s": 10.4,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "location": "LOC-0010",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            "C-03"
+          ],
+          "extras": "survivors and boatmen",
+          "assets": [
+            "VEH-0010"
+          ],
+          "prompt": "small wooden boats crossing the black water of the Suez Canal at night, survivors sitting low with weapons across their knees",
+          "motion": "Oars dip without a sound; the boats glide across.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "5.4-05",
+          "duration_s": 13.6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "location": "LOC-0010",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            "C-01"
+          ],
+          "extras": "seven gaunt, exhausted commandos sitting on the sand",
+          "prompt": "night on the west bank of the Suez Canal: the captain has just stepped out of a small rubber assault boat beached at the water's edge behind him and stands still in the foreground, his hand on the shoulder of one of a short row of survivors sitting on the sand, counting them; black still water and the low dark far bank behind; faint moonlight, faces dimly readable",
+          "motion": "He steps ashore and counts them by touch, slowly."
+        },
+        {
+          "shot_id": "5.4-05a",
+          "duration_s": 2.9,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "on the west-bank crossing after five days, dusk wind and canal darkness behind: SHALABI delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "exhausted control with buried relief",
+          "lip_sync": "required"
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "INFANTRY SENTRY",
+          "line": 1,
+          "shot_id": "5.4-03",
+          "intensity": 8,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "nervous vigilance",
+          "delivery": "Challenge the distant figures while keeping the rifle trained on them. The fear is controlled by sentry discipline, not played as panic."
+        },
+        {
+          "speaker": "C-01",
+          "line": 2,
+          "shot_id": "5.4-05a",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "exhausted control with buried relief",
+          "delivery": "Force the single word across the flat through a dry, damaged throat. Keep it clipped and authoritative; Shalabi is identifying his men and stopping a fatal mistake."
+        }
+      ]
+    },
+    {
+      "beat": "5.5",
+      "title": "The son returns",
+      "target_s": 55,
+      "location": "LOC-0006",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_VILLAGE_DELTA"
+      ],
+      "wear": "WEAR_CLEAN",
+      "on_screen_text": [
+        "SUPER «نُوفَمْبِرُ ١٩٧٣» over 5.5-01"
+      ],
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-12",
+          "line": 1,
+          "shot_id": "5.5-02a",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "rushed",
+          "emotion": "disbelieving joy",
+          "delivery": "Call to Mostafa first as recognition bursts out, then throw «يَامَّا» back toward the house while running. Keep the voice recognizably a twelve-year-old's, breathless but not shrill."
+        },
+        {
+          "speaker": "C-11",
+          "line": 2,
+          "shot_id": "5.5-04",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "slow",
+          "emotion": "overwhelming relief, disbelief",
+          "delivery": "Barely a whisper, touching his face; she cannot believe he is real."
+        },
+        {
+          "speaker": "C-03",
+          "line": 3,
+          "shot_id": "5.5-05a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "homesick tenderness",
+          "delivery": "Look toward the oven because speaking directly about the reunion is too difficult. Let the question catch slightly, with a young man's weighted voice rather than a child's vulnerability."
+        },
+        {
+          "speaker": "C-11",
+          "line": 4,
+          "shot_id": "5.5-05b",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "relief breaking through old worry",
+          "delivery": "Answer him at close range, smiling through tears without turning the line into a punchline. «كُلّْ يُومْ» should reveal her private ritual simply, not ask for pity."
+        }
+      ],
+      "sfx": "A water jar breaking, a girl shouting a name, chickens scattering",
+      "music": "March theme, gentle",
+      "shots": [
+        {
+          "shot_id": "5.5-01",
+          "duration_s": 8.6,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "wear": "WEAR_POSTWAR",
+          "characters": [
+            "C-03"
+          ],
+          "kit": {
+            "C-03": "short military haircut, uniform slightly too big for him, a small canvas kit bag over one shoulder"
+          },
+          "prompt": "a young soldier on home leave in a clean pressed uniform with no webbing and no weapons, walking toward camera down a dirt village lane between green fields, a small canvas kit bag slung over one shoulder, soft winter sun",
+          "motion": "He walks slowly down the lane toward camera."
+        },
+        {
+          "shot_id": "5.5-02",
+          "duration_s": 7.6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "on a dirt lane between mud-brick houses in a Nile Delta village, palm trees and green fields beyond: a 12-year-old girl in a modest long-sleeved ankle-length dress walking along the lane, balancing a round terracotta water jar on her head with one hand; seen from the side in three-quarter view, caught mid-stride, her head turned to stare down the lane, eyes wide, at someone she recognises, not looking at the camera",
+          "motion": "She sees him; the jar falls and breaks; she runs."
+        },
+        {
+          "shot_id": "5.5-02a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "in the Nile Delta village lane and courtyard when the son returns: ZEINAB delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "disbelieving joy",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.5-03",
+          "duration_s": 8.6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "the mother half-risen from kneeling in front of a waist-high beehive-shaped domed clay bread oven in the mud-brick courtyard, flour on her hands and forearms, staring past the camera toward the lane",
+          "motion": "She rises slowly and walks toward him as if he might disappear."
+        },
+        {
+          "shot_id": "5.5-04",
+          "duration_s": 5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "wear": "WEAR_POSTWAR",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "close-up of the mother's face as she raises her floury hands to touch the face of her son standing in front of her, only the blurred back of his head in the near foreground, whispering his name, tears in her eyes, her face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "Her hands touch his face; she whispers his name; tears she cannot stop.",
+          "model": "premium",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "overwhelming relief and disbelief",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.5-05",
+          "duration_s": 16.2,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "very slow push-in",
+          "wear": "WEAR_POSTWAR",
+          "characters": [
+            "C-03",
+            "C-11",
+            "C-12"
+          ],
+          "prompt": "the son bending to kiss his mother's hand, flour on his cheek, his sister clinging to his arm",
+          "motion": "He kisses her hand; she leaves flour on his cheek; the sister holds his arm."
+        },
+        {
+          "shot_id": "5.5-05a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "in the Nile Delta village lane and courtyard when the son returns: MOSTAFA delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "homesick tenderness",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.5-05b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "in the Nile Delta village lane and courtyard when the son returns: UMM MOSTAFA delivering line 4, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "relief breaking through old worry",
+          "lip_sync": "required"
+        }
+      ]
+    },
+    {
+      "beat": "5.6",
+      "title": "Sayed's letter",
+      "target_s": 85,
+      "location": "LOC-0007",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_CAIRO_BLUE_GLASS"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-03",
+          "line": 1,
+          "shot_id": "5.6-02",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "grief-stricken duty; voice almost breaking",
+          "delivery": "At her door, holding out the letter; he has carried this for days and can barely say it."
+        },
+        {
+          "speaker": "C-02",
+          "line": 2,
+          "shot_id": "5.6-04",
+          "note": "Sayed's letter (V.O.) — voice-over, not lip-synced",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained love and settled resolve",
+          "delivery": "Read it as words Sayed wrote practically before danger, not as a ghost speaking from beyond death. Stay plain and intimate, allowing only «وِأَنَا مِشْ نَدْمَانْ» to carry a quiet final release."
+        },
+        {
+          "speaker": "C-14",
+          "line": 3,
+          "shot_id": "5.6-06a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "fearful curiosity",
+          "delivery": "Ali looks directly at Mostafa and asks the literal question he needs answered. Keep it small and unperformed, with no adult understanding added to the child’s voice."
+        },
+        {
+          "speaker": "C-03",
+          "line": 4,
+          "shot_id": "5.6-07a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "tenderness under guilt",
+          "delivery": "At the boy’s height, Mostafa gives him one firm truth and one kindness. Hold Ali’s gaze and resist smiling or sounding falsely cheerful."
+        },
+        {
+          "speaker": "C-13",
+          "line": 5,
+          "shot_id": "5.6-07b",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "grief held behind hospitality",
+          "delivery": "Fatma steps aside and addresses Mostafa almost maternally, accepting both him and what he has brought. Keep the words steady; the effort not to cry should register only in the breath."
+        }
+      ],
+      "sfx": "A knock; the stairwell; quiet",
+      "music": "March theme, carrying into the next beat",
+      "shots": [
+        {
+          "shot_id": "5.6-01",
+          "duration_s": 8.2,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "wear": "WEAR_POSTWAR",
+          "characters": [
+            "C-03",
+            "C-13",
+            "C-14"
+          ],
+          "prompt": "a door opening in a dim stairwell: a woman looking at a young soldier standing alone, a boy peering from behind her skirt",
+          "motion": "The door opens; she sees him alone, and understands."
+        },
+        {
+          "shot_id": "5.6-02",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "wear": "WEAR_POSTWAR",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the young soldier standing at a flat door in a Cairo stairwell, holding out a folded, worn letter to the woman just out of frame, face in three-quarter view, mouth and lips clearly visible, not looking at the camera",
+          "motion": "He holds out the letter and speaks; his voice almost breaks; he does not look away.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "grief-stricken duty",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.6-03",
+          "duration_s": 8.2,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "a woman's hand with a thimble taking a folded, salt-stained letter and opening it",
+          "motion": "She takes the letter and unfolds it."
+        },
+        {
+          "shot_id": "5.6-04",
+          "duration_s": 12.3,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "slow drift",
+          "characters": [],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "Arabic pencil handwriting on a stained page, grains of sand in the folds, very shallow depth of field: only a few loose pencil strokes are sharp and the rest of the line melts into soft grey blur, so the handwriting reads as texture and rhythm rather than as words",
+          "motion": "Slow drift along the handwriting.",
+          "notes": "Sayed's letter (V.O.) — voice-over, not lip-synced; updated v2 text."
+        },
+        {
+          "shot_id": "5.6-05",
+          "duration_s": 14.4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "very slow push-in",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "the woman reading, composed, not crying, daylight seeping around the blue-painted window behind her",
+          "motion": "She reads; her jaw tightens; she does not cry.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "5.6-06",
+          "duration_s": 10.3,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-13",
+            "C-14"
+          ],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "the woman folding the letter and resting her hand on her son's head, the soldier's portrait on the wall behind them",
+          "motion": "She folds the letter and rests her hand on the boy's head."
+        },
+        {
+          "shot_id": "5.6-06a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "at Fatma's dim Cairo doorway with Sayed's portrait on the wall: ALI delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "fearful curiosity",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.6-07",
+          "duration_s": 15.4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "wear": "WEAR_POSTWAR",
+          "characters": [
+            "C-03",
+            "C-14"
+          ],
+          "prompt": "Mostafa, a grown man of twenty, standing in a village sitting room before a framed photograph of Sayed on the wall, standing a little straighter; Ali and his mother beside him",
+          "motion": "He looks at Sayed's photo and straightens slightly; the boy watches him.",
+          "model": "premium",
+          "notes": "v2 restage: no salute — Mostafa looks at Sayed's photo and straightens slightly."
+        },
+        {
+          "shot_id": "5.6-07a",
+          "duration_s": 4.1,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "at Fatma's dim Cairo doorway with Sayed's portrait on the wall: MOSTAFA delivering line 4, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "tenderness under guilt",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "5.6-07b",
+          "duration_s": 3.1,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "at Fatma's dim Cairo doorway with Sayed's portrait on the wall: FATMA delivering line 5, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "grief held behind hospitality",
+          "lip_sync": "required"
+        }
+      ]
+    },
+    {
+      "beat": "5.7",
+      "title": "The road",
+      "target_s": 30,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DUSK_RED"
+      ],
+      "wear": null,
+      "vo": {
+        "ref": "screenplay 5.7 VO",
+        "placement": "over selected shots",
+        "est_s": 8
+      },
+      "sfx": "Wind",
+      "music": "March theme builds gently",
+      "shots": [
+        {
+          "shot_id": "5.7-01",
+          "duration_s": 30,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "the empty straight desert road at red dusk, burned-out tank hulls along it, thin smoke rising into a violet sky, nothing moving",
+          "motion": "Nothing moves except thin smoke and the slow fading light.",
+          "model": "premium",
+          "notes": "Final image of the episode — one long held shot."
+        }
+      ]
+    },
+    {
+      "beat": "5.8",
+      "title": "Epilogue cards",
+      "target_s": 45,
+      "location": null,
+      "look": [],
+      "wear": null,
+      "vo": {
+        "ref": "screenplay 5.8 VO",
+        "placement": "over 5.8-04",
+        "est_s": 6
+      },
+      "on_screen_text": [
+        "SUPER 1",
+        "SUPER 2",
+        "SUPER 3",
+        "SUPER 4 (source note)"
+      ],
+      "sfx": null,
+      "music": "March theme resolves",
+      "shots": [
+        {
+          "shot_id": "5.8-01",
+          "duration_s": 10,
+          "size": "CARD",
+          "model": "none",
+          "characters": [],
+          "prompt": null,
+          "motion": null,
+          "edit_note": "SUPER 1 — white text on black, from the screenplay."
+        },
+        {
+          "shot_id": "5.8-02",
+          "duration_s": 12,
+          "size": "CARD",
+          "model": "none",
+          "characters": [],
+          "prompt": null,
+          "motion": null,
+          "edit_note": "SUPER 2."
+        },
+        {
+          "shot_id": "5.8-03",
+          "duration_s": 10,
+          "size": "CARD",
+          "model": "none",
+          "characters": [],
+          "prompt": null,
+          "motion": null,
+          "edit_note": "SUPER 3."
+        },
+        {
+          "shot_id": "5.8-04",
+          "duration_s": 13,
+          "size": "CARD",
+          "model": "none",
+          "characters": [],
+          "prompt": null,
+          "motion": null,
+          "edit_note": "SUPER 4 (source note); narrator reads the dedication."
+        }
+      ]
+    },
+    {
+      "beat": "5.9",
+      "title": "End credits",
+      "target_s": 30,
+      "location": null,
+      "look": [],
+      "wear": null,
+      "vo": null,
+      "sfx": null,
+      "music": "March theme, full statement",
+      "shots": [
+        {
+          "shot_id": "5.9-01",
+          "duration_s": 30,
+          "size": "CARD",
+          "model": "none",
+          "characters": [],
+          "prompt": null,
+          "motion": null,
+          "edit_note": "Series title, episode title, credits — built in the editor."
+        }
+      ]
+    }
+  ]
+}

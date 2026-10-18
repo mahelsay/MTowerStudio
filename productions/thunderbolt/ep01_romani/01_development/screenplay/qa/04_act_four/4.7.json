@@ -1,0 +1,69 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A spare, controlled aftermath beat with a strong dramatic turn: the earlier count of 122 becomes an unspoken casualty count. Both lines are natural, militarily credible and playable without overstatement.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 10,
+        "character": 9,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "contained dread under command discipline",
+        "delivery": "Keep his eyes on the line rather than on Mahmoud. Leave a slight weight before «يَا مَحْمُودْ»; he is forcing himself to turn loss into an order."
+      },
+      "text": "عِدّْ اللِّي فَاضْلِينْ يَا مَحْمُودْ."
+    },
+    {
+      "n": 2,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "shock immediately mastered",
+        "delivery": "Let the look absorb the meaning before he answers. The words stay automatic and disciplined; no tremble or added emphasis."
+      },
+      "text": "حَاضِرْ يَا فَنْدِمْ."
+    }
+  ],
+  "beat": "4.7",
+  "file": "04_act_four_v2.md",
+  "hash": "b6b7cc522e3b7992",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:50:45+00:00",
+  "seconds": 11.9,
+  "usage": {
+    "prompt_tokens": 2279,
+    "completion_tokens": 783
+  },
+  "cost_usd": 0.02478
+}

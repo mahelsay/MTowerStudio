@@ -1,0 +1,95 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A strong physical-progression beat: Adel defines the practical danger, Mostafa reveals private strain, and Sayed turns concern into dry field humor. The dialogue stays sparse enough for concealment and exhaustion, while the final line gives the sequence its human turn.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ADEL",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 8,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "strained vigilance",
+        "delivery": "He keeps his end of the missile case high and forces the warning through clenched teeth. Aim it only at his partner; the fear is for the weapon and mission, not himself."
+      },
+      "text": "مَا تِنَزِّلْهَاشْ… لَوْ شِرْبِتْ مَيَّةْ، نِبْقَى شَايْلِينْ حَدِيدَةْ عَ الْفَاضِي."
+    },
+    {
+      "n": 2,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The bare count «تِسْعَةْ وِتِسْعِينْ… مِيَّةْ…» is not verbally distinctive to Mostafa; his identity must come from the close shot and performance."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "exhausted self-control",
+        "delivery": "Count against the rhythm of his steps, almost without breath, using the numbers to stop panic and fatigue taking over. Keep a young adult's chest resonance even at a whisper."
+      },
+      "text": "تِسْعَةْ وِتِسْعِينْ… مِيَّةْ… وَاحِدْ… اتْنِينْ…"
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 8,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "gruff concern masked by dry humor",
+        "delivery": "Lean close as he passes each man and clip the first order firmly. Let the second sentence carry protection without softness; do not play the joke for a laugh."
+      },
+      "text": "فُوقْ… السِّلَاحْ فُوقْ. اللِّي إِيدُهْ تِتْعَبْ يِقُولِّي… مِشْ يِقُولْ لِلْمَيَّةْ."
+    }
+  ],
+  "beat": "2.5",
+  "file": "02_act_two_v2.md",
+  "hash": "c8f31358a7b95108",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:25:36+00:00",
+  "seconds": 44.8,
+  "usage": {
+    "prompt_tokens": 2831,
+    "completion_tokens": 3938
+  },
+  "cost_usd": 0.09008
+}

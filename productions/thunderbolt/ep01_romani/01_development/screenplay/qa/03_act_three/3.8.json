@@ -1,0 +1,69 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A clean, playable combat montage. Sayed’s terse drill protects the men while keeping the action legible, and Mostafa’s confident call completes his visual turn from fear to steadiness. The formal VO is appropriate and is not scored as dialogue.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "controlled urgency with protective anger",
+        "delivery": "Bark each verb as the men expose themselves, fire and drop. Drive «مَحَدِّشْ يِقَفْ بَرَّهْ» at anyone lingering above cover; he is saving lives, not making a speech."
+      },
+      "text": "اِطْلَعْ… اِضْرَبْ… وِانْزِلْ! مَحَدِّشْ يِقَفْ بَرَّهْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "focused courage under fire",
+        "delivery": "Shout directly into the gunner’s awareness as the helmet slap lands. The voice is firm and full-chested now, with fear forced underneath the task."
+      },
+      "text": "جَاهِزْ! اِضْرَبْ!"
+    }
+  ],
+  "beat": "3.8",
+  "file": "03_act_three_v2.md",
+  "hash": "d4ada0d28ce38a70",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:45:33+00:00",
+  "seconds": 16.7,
+  "usage": {
+    "prompt_tokens": 2522,
+    "completion_tokens": 1221
+  },
+  "cost_usd": 0.03451
+}

@@ -1,0 +1,117 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A restrained, actor-friendly beat with a clear emotional turn: Ali asks about his father, recognizes Fatma’s unease, and receives a tender evasion. The short lines, darkness and withheld answer carry the anxiety without exposition or melodrama.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "shy hope edged with worry",
+        "delivery": "Ask Fatma after holding the question in for some time. Keep it simple and childlike, with a tiny pause before «إِمْتَى» rather than forcing sadness."
+      },
+      "text": "هُوَّ بَابَا هَيِيجِي إِمْتَى؟"
+    },
+    {
+      "n": 2,
+      "speaker": "FATMA",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "tender avoidance",
+        "delivery": "Say it while settling the blanket around him. The gentleness is genuine, but the quick change of subject must reveal that she cannot answer."
+      },
+      "text": "نَامْ يَا عَلِي."
+    },
+    {
+      "n": 3,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "innocent suspicion",
+        "delivery": "He notices that she is still sitting up and quietly catches her in the evasion. Let the question rise naturally, without sounding accusatory."
+      },
+      "text": "وِإِنْتِي مِشْ هَتْنَامِي؟"
+    },
+    {
+      "n": 4,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "exhausted love under concealed fear",
+        "delivery": "Answer with a tired smile he cannot see, keeping the first word reassuring. After the pause, place a soft emphasis on «إِنْتَ» as she makes his sleep—not her fear—the subject."
+      },
+      "text": "هَنَامْ… لَمَّا تْنَامْ إِنْتَ."
+    }
+  ],
+  "beat": "4.8",
+  "file": "04_act_four_v2.md",
+  "hash": "6dbedea55b0f9b3e",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:51:05+00:00",
+  "seconds": 22.8,
+  "usage": {
+    "prompt_tokens": 2322,
+    "completion_tokens": 1905
+  },
+  "cost_usd": 0.04739
+}

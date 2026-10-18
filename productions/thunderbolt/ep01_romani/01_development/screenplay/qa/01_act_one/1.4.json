@@ -1,0 +1,237 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A restrained, playable orders scene with a clear progression: readiness of the men, personal testing of Shalabi, then controlled anticipation outside. The dialogue is concise, period-appropriate and militarily credible; the repetition of «جاهزين/جاهز» works as a deliberate shift from unit readiness to personal resolve.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "COMMANDER",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled scrutiny",
+        "delivery": "Keep his eyes on Shalabi and ask without ceremony. The question tests the captain as much as the men."
+      },
+      "text": "رِجَّالْتَكْ جَاهْزِينْ؟"
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "disciplined certainty",
+        "delivery": "Answer immediately from attention, with no attempt to impress. Let the firmness come from the lack of hesitation."
+      },
+      "text": "جَاهْزِينْ يَا فَنْدِمْ."
+    },
+    {
+      "n": 3,
+      "speaker": "COMMANDER",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "grave authority",
+        "delivery": "Slide the envelope across during the first sentence, then hold Shalabi's gaze. Make the prohibition quieter and harder than the explanation."
+      },
+      "text": "الظَّرْفْ دَهْ فِيهْ تَفَاصِيلْ الْمُهِمَّةْ. مَا تِفْتَحْهُوشْ إِلَّا بِأَمْرْ."
+    },
+    {
+      "n": 4,
+      "speaker": "COMMANDER",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "fatherly challenge",
+        "delivery": "After a short beat, use his first name deliberately. He is no longer asking about the company; he is testing the man carrying the order."
+      },
+      "text": "جَاهِزْ يَا حَمْدِي؟"
+    },
+    {
+      "n": 5,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "quiet resolve",
+        "delivery": "Take the envelope before answering. Keep the voice contained, as though accepting the weight rather than announcing bravery."
+      },
+      "text": "جَاهِزْ يَا فَنْدِمْ."
+    },
+    {
+      "n": 6,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "guarded concern",
+        "delivery": "Fall into step and search Shalabi's face instead of looking at the pocket. Ask as a seasoned sergeant who knows not to press too far."
+      },
+      "text": "خِيرْ يَا فَنْدِمْ؟"
+    },
+    {
+      "n": 7,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained anticipation",
+        "delivery": "Touch the pocket, but keep walking and looking ahead. Give the preparation order plainly; let «جِهْ دُورْنَا» carry the private recognition of what is coming."
+      },
+      "text": "خَلِّي الرِّجَّالَةْ جَاهْزِينْ يَا سَيِّدْ. جِهْ دُورْنَا."
+    },
+    {
+      "n": 8,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "practical urgency",
+        "delivery": "Ask at once, still matching Shalabi's stride. He wants the one fact needed to start preparing the men."
+      },
+      "text": "إِمْتَى يَا فَنْدِمْ؟"
+    },
+    {
+      "n": 9,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled uncertainty",
+        "delivery": "Do not slow or turn toward Sayed. Close the exchange with the exact limit of what Shalabi knows, keeping his own impatience buried."
+      },
+      "text": "لَمَّا يِيجِي الْأَمْرْ."
+    }
+  ],
+  "beat": "1.4",
+  "file": "01_act_one_v2.md",
+  "hash": "54464f1037c62284",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:53:44+00:00",
+  "seconds": 47.7,
+  "usage": {
+    "prompt_tokens": 2969,
+    "completion_tokens": 4034
+  },
+  "cost_usd": 0.09256
+}

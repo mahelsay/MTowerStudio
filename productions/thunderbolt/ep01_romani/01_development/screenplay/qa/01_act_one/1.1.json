@@ -1,0 +1,295 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A strong drama-first opening beat: physical hardship establishes the men, Shalabi’s answer turns the race into a statement of command, and the parade-ground joke pivots the victory toward war without losing warmth. Performances and military behavior are credible, with only two minor pronunciation marks and one slightly explicit foreshadowing line.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 7,
+        "lipsync": 10
+      },
+      "issues": [
+        "Egyptian pronunciation is normally «بِدَقِيقْتِينْ», not «بِدِقِيقْتِينْ»."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "gruff competitive drive",
+        "delivery": "Project down the moving file over splashing and heavy breathing. He is driving trained men, not delivering a parade-ground slogan."
+      },
+      "text": "يَلَّا يَا رِجَّالَةْ! السَّرِيَّةْ التَّانْيَةْ سَابْقَانَا بِدِقِيقْتِينْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 7,
+        "lipsync": 10
+      },
+      "issues": [
+        "Egyptian pronunciation is normally «دَقِيقْتِينْ», not «دِقِيقْتِينْ»."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "exhausted deadpan amusement",
+        "delivery": "Speak only to Mostafa while fighting for breath. Let the joke fall out dryly, without setting up a punchline."
+      },
+      "text": "دِقِيقْتِينْ إِيهْ… دَانَا رِجْلَيَّا بِقِتْ مِلْحْ."
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "protective anger",
+        "delivery": "Hold Mostafa close by the webbing and make the distinction coldly clear. The restraint should feel more serious than another shout."
+      },
+      "text": "إِنْتَ تِتْبِلّْ… السِّلَاحْ لَأْ. فَاهِمْ؟"
+    },
+    {
+      "n": 4,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 8,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "Bare «فَاهِمْ» is less regulation than «فَاهِمْ يَا فَنْدِمْ», but the omission is credible while he is spitting out brine."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "shame and immediate compliance",
+        "delivery": "Force the word out between breaths after spitting away the salt water. Do not sound sulky; he knows Sayed is right."
+      },
+      "text": "فَاهِمْ."
+    },
+    {
+      "n": 5,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "contained pride",
+        "delivery": "Report to Shalabi while still recovering his breath. He is fishing for acknowledgment without openly asking for it."
+      },
+      "text": "أَوِّلْ رَاجِلْ عَدَّى مِنْ بَدْرِي يَا فَنْدِمْ."
+    },
+    {
+      "n": 6,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "unyielding responsibility",
+        "delivery": "Keep watching the last man and answer without looking at Sayed. The line means the unit finishes together, but do not explain that meaning."
+      },
+      "text": "لِسَّهْ مَا وِصِلْنَاشْ."
+    },
+    {
+      "n": 7,
+      "speaker": "COMMANDER",
+      "score": 9,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "raised",
+        "pace": "measured",
+        "emotion": "formal approval",
+        "delivery": "Read the result across the parade ground with seasoned authority. Give the company designation and Shalabi’s name equal official weight, with no celebratory flourish."
+      },
+      "text": "أَكْفَأْ سَرِيَّةْ… السَّرِيَّةْ الْأُولَى. النَّقِيبْ حَمْدِي شَلَبِي."
+    },
+    {
+      "n": 8,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The plural «عَارْفِينْ» requires Mahmoud to be quietly addressing more than Adel; the blocking should make that clear."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "thrilled unease",
+        "delivery": "Keep his head and body rigid in ranks and move only his lips. He wants to share the warning but is afraid of being caught talking."
+      },
+      "text": "عَارْفِينْ يَعْنِي إِيهْ الْأُولَى؟"
+    },
+    {
+      "n": 9,
+      "speaker": "ADEL",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 3,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "hopeful mischief",
+        "delivery": "Answer without turning, as if he genuinely wants this to be the reward. Keep it dry and small rather than playing broadly for comedy."
+      },
+      "text": "يَعْنِي إِجَازَةْ؟"
+    },
+    {
+      "n": 10,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "«أَتْقَلْ مُهِمَّةْ هَتِتْرِمِي عَلِينَا» makes the foreshadowing explicit, though it remains plausible soldier talk."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "certain dread beneath excitement",
+        "delivery": "Give Adel the answer quietly while remaining motionless in formation. Land the final words as a practical conclusion, not a prophecy."
+      },
+      "text": "يَعْنِي أَوِّلْ مَا الْحَرْبْ تِقُومْ… أَتْقَلْ مُهِمَّةْ هَتِتْرِمِي عَلِينَا."
+    },
+    {
+      "n": 11,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "dry disciplinary finality",
+        "delivery": "Do not turn or break attention. Cut both men off with the minimum breath, showing that he heard every whispered word."
+      },
+      "text": "اِسْكُتْ إِنْتَ وِهُوَّ."
+    }
+  ],
+  "beat": "1.1",
+  "file": "01_act_one_v2.md",
+  "hash": "6245c2a9f39594a4",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:50:07+00:00",
+  "seconds": 66.6,
+  "usage": {
+    "prompt_tokens": 3663,
+    "completion_tokens": 6080
+  },
+  "cost_usd": 0.13625
+}

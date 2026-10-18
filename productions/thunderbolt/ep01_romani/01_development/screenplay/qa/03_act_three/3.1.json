@@ -1,0 +1,93 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A tight suspense beat with a clean three-step shape: command, fearful question, dry release. Sayed’s final line gives character and restrained humour without puncturing the danger.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "controlled alarm",
+        "delivery": "Hiss the order toward the neighbouring pits without lifting the head. Keep it clipped and forceful enough to stop an involuntary movement despite the approaching engine."
+      },
+      "text": "مَحَدِّشْ يِتْحَرَّكْ… وَلَا رِمْشْ."
+    },
+    {
+      "n": 2,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "fearful uncertainty",
+        "delivery": "Let the question escape only after the engine fades. Adel is still rigid in the pit and barely has enough breath to form the word."
+      },
+      "text": "شَافِتْنَا؟"
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "grim reassurance hidden as dry humour",
+        "delivery": "Answer without looking toward Adel and without relaxing. The first half acknowledges the danger; the second quietly cuts through the younger soldier’s panic."
+      },
+      "text": "لَوْ كَانِتْ شَافِتْنَا… كُنْتْ عِرِفْتْ لِوَحْدَكْ."
+    }
+  ],
+  "beat": "3.1",
+  "file": "03_act_three_v2.md",
+  "hash": "5f5f1e7877bee3f3",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:45:28+00:00",
+  "seconds": 12.5,
+  "usage": {
+    "prompt_tokens": 2366,
+    "completion_tokens": 928
+  },
+  "cost_usd": 0.02802
+}

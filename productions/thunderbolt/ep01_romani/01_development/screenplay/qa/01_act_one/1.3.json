@@ -1,0 +1,189 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, actor-led family beat with a clean emotional turn: careful reading becomes teasing warmth, then lands on the mother’s unspoken fear that Mostafa may not come home soon. The letter stays plausible and reveals no information the family should not know.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ZEINAB",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 3,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "careful pride",
+        "delivery": "Read to her mother from the page, concentrating on Mostafa’s handwriting. Let the small pauses come from decoding the words, not from performing sadness."
+      },
+      "text": "«أُمِّي الْغَالْيَةْ… أَنَا بِخِيرْ وَالْحَمْدُ لِلَّهْ. التَّدْرِيبْ صَعْبْ…»"
+    },
+    {
+      "n": 2,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "bravery covering fatigue",
+        "delivery": "Enter smoothly over Zeinab’s fading voice. Give his mother the confidence he meant to put on the page, with only a trace of strain underneath."
+      },
+      "text": "«…بَسّْ أَنَا قَدُّهْ.»"
+    },
+    {
+      "n": 3,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "pride touched by worry",
+        "delivery": "Say it toward the oven rather than to Zeinab. She repeats his claim because she wants to believe it, not because she is questioning him."
+      },
+      "text": "قَدُّهْ…"
+    },
+    {
+      "n": 4,
+      "speaker": "ZEINAB",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 3,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "affectionate mischief",
+        "delivery": "Peek ahead and enjoy having a piece of news that will make her mother react. Keep it spontaneous and childlike, without pushing for a laugh."
+      },
+      "text": "وِكَاتِبْ كَمَانْ… إِنُّهْ نِفْسُهْ فِي فِطِيرْ مِنْ إِيدِكْ."
+    },
+    {
+      "n": 5,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "guarded affection",
+        "delivery": "Keep facing the oven and pretend to suspect Zeinab of inventing it. The slowing hands betray that she hopes every word is true."
+      },
+      "text": "اِقْرِي اللِّي مَكْتُوبْ… مَا تِأَلِّفِيشْ."
+    },
+    {
+      "n": 6,
+      "speaker": "ZEINAB",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 3,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "delighted insistence",
+        "delivery": "Hold up the letter as proof and answer through a brief laugh. She is pleased to have caught her mother caring."
+      },
+      "text": "وَاللَّهِ مَكْتُوبْ!"
+    },
+    {
+      "n": 7,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "hope held against dread",
+        "delivery": "After the long pause, make the first phrase practical and the second almost involuntary. Stay turned toward the fire; admitting uncertainty to Zeinab would expose too much."
+      },
+      "text": "يِبْقَى أَعْمِلُّهْ… يِمْكِنْ يِيجِي."
+    }
+  ],
+  "beat": "1.3",
+  "file": "01_act_one_v2.md",
+  "hash": "de153bd5dd5a3442",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:35:33+00:00",
+  "seconds": 44.5,
+  "usage": {
+    "prompt_tokens": 2672,
+    "completion_tokens": 3841
+  },
+  "cost_usd": 0.08751
+}

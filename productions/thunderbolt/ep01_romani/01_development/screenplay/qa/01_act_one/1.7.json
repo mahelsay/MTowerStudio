@@ -1,0 +1,193 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, playable beat with a clean turn from sleepy teasing to contained dread. The letters reveal affection and fear without exposition, and Sayed’s restraint keeps the familiar death-letter device grounded.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "filial warmth masking fear",
+        "delivery": "Read the words as he writes them, in a young man’s full chest voice. Keep the letter formula natural and let the pauses, not sentimentality, reveal his fear."
+      },
+      "text": "«أُمِّي الْغَالْيَةْ… أَنَا بِخِيرْ وَالْحَمْدُ لِلَّهْ. مَا تِقْلَقِيشْ عَلَيَّا…»"
+    },
+    {
+      "n": 2,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 2,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "sleepy mischief",
+        "delivery": "Speak without fully lifting his head from the pack. The teasing is habitual barracks warmth, not a performance for the other men."
+      },
+      "text": "بِتِكْتِبْ لِمِينْ يَا مُصْطَفَى؟ لِلْبِتّْ اللِّي فِي الْبَلَدْ؟"
+    },
+    {
+      "n": 3,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "quiet attachment",
+        "delivery": "Answer without looking up or interrupting the pencil. Keep it simple and unembarrassed; the single word should make Adel’s joke fall away."
+      },
+      "text": "لِأُمِّي."
+    },
+    {
+      "n": 4,
+      "speaker": "ADEL",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "sudden tenderness",
+        "delivery": "Let the grin disappear before speaking. Address Mostafa softly, then retreat into the pack as though the mention of a mother has touched something private."
+      },
+      "text": "… سَلِّمْلِي عَلِيهَا."
+    },
+    {
+      "n": 5,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 7,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [
+        "«لَوْ مَا رِجِعْتِشْ» is a familiar war-drama death flag; restrained delivery is essential to keep it from feeling prewritten."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled dread and responsibility",
+        "delivery": "Hold the folded page out to Mostafa and speak as if assigning an ordinary chore. Do not catch the voice or seek sympathy; the effort to stay practical is the emotion."
+      },
+      "text": "خُدْ دَهْ. لَوْ مَا رِجِعْتِشْ… وَصَّلُهْ لِفَاطْمَةْ بِإِيدَكْ."
+    },
+    {
+      "n": 6,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 10,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "«يَا عَمّْ سَيِّدْ» is informal for a private addressing his sergeant; it works because this is a private, filial exchange rather than a report or order."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "alarmed loyalty",
+        "delivery": "Look up immediately and reject the possibility before thinking. Keep the voice weighted and adult, with the upset compressed so the sleeping men are not disturbed."
+      },
+      "text": "إِنْتَ رَاجِعْ يَا عَمّْ سَيِّدْ."
+    },
+    {
+      "n": 7,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "gentle finality",
+        "delivery": "Close the argument without looking for reassurance. Soften only slightly on «مَعَاكْ», then make «وِخَلَاصْ» a firm full stop."
+      },
+      "text": "خَلِّيهْ مَعَاكْ وِخَلَاصْ."
+    }
+  ],
+  "beat": "1.7",
+  "file": "01_act_one_v2.md",
+  "hash": "461c769b342f0fd8",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:51:22+00:00",
+  "seconds": 79.0,
+  "usage": {
+    "prompt_tokens": 2776,
+    "completion_tokens": 6984
+  },
+  "cost_usd": 0.15078
+}

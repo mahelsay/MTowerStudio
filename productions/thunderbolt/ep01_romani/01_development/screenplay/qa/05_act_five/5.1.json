@@ -1,0 +1,93 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, tense withdrawal beat. The radio question creates a practical turn, and Shalabi’s clipped answer establishes discipline without exposition. The final look back supplies the emotional release visually.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "controlled urgency under exhaustion",
+        "delivery": "Address the crouching survivors without raising the voice. Separate the three instructions cleanly, making each one final and immediately actionable."
+      },
+      "text": "تَلَاتْ مَجْمُوعَاتْ… كُلّْ مَجْمُوعَةْ لِوَحْدَهَا. وِنِتْقَابِلْ غَرْبْ الْقَنَاةْ."
+    },
+    {
+      "n": 2,
+      "speaker": "MAHMOUD",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "alert concern",
+        "delivery": "Touch the radio as the question is asked. Mahmoud needs one precise decision before the groups separate, not reassurance."
+      },
+      "text": "وِالْجِهَازْ يَا فَنْدِمْ؟"
+    },
+    {
+      "n": 3,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "absolute control",
+        "delivery": "Answer Mahmoud directly, with a slight beat after «مَعَاكْ». Land «وِمَقْفُولْ» as an order that permits no radio transmission."
+      },
+      "text": "مَعَاكْ… وِمَقْفُولْ."
+    }
+  ],
+  "beat": "5.1",
+  "file": "05_act_five_v2.md",
+  "hash": "d78311ce18ed8d0c",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T12:01:04+00:00",
+  "seconds": 19.3,
+  "usage": {
+    "prompt_tokens": 2340,
+    "completion_tokens": 1512
+  },
+  "cost_usd": 0.0396
+}

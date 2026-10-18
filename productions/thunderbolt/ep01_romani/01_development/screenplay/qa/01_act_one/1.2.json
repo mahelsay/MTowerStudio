@@ -1,0 +1,193 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, actor-led barracks beat with a clean emotional turn: practical instruction exposes Mostafa’s fear, Sayed answers it with dry solidarity, then briefly reveals the private promise underneath his toughness. The dialogue is natural, restrained and credible for an informal moment between an NCO and a young commando.",
+  "scene_issues": [
+    "Mostafa’s trouble with the straps must visibly come from nerves, not simple clumsiness, so «خَايِفْ؟» feels observed rather than inserted as a theme."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "concealed paternal patience",
+        "delivery": "He demonstrates the adjustment while keeping his eyes mostly on the straps. Let the practical instruction carry the affection he would never state openly."
+      },
+      "text": "شُدّْ السُّيُورْ كِدَهْ… عَشَانْ لَمَّا تِجْرِي، الشَّنْطَةْ مَا تْخَبَّطْشْ فِيكْ."
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "quiet recognition",
+        "delivery": "Look directly at Mostafa after noticing what his hands have betrayed. Ask without accusation; Sayed already knows the answer."
+      },
+      "text": "خَايِفْ؟"
+    },
+    {
+      "n": 3,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "instinctive denial",
+        "delivery": "The answer escapes before he can compose himself. Keep the full young man’s chest voice, but make the speed expose him."
+      },
+      "text": "لَأْ."
+    },
+    {
+      "n": 4,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "dry warmth and shared fear",
+        "delivery": "Land «كَدَّابْ» as affectionate exposure, not rebuke. After the beat, admit his own fear plainly, with only the trace of a smile."
+      },
+      "text": "كَدَّابْ… وَأَنَا كَمَانْ خَايِفْ."
+    },
+    {
+      "n": 5,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [
+        "«يَا عَمّْ سَيِّدْ» is very informal for a private addressing a sergeant, but it works if their established barracks relationship supports it."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "tentative concern",
+        "delivery": "Ask carefully, aware that he is crossing a personal boundary with an older NCO. The curiosity is sincere, not nosy."
+      },
+      "text": "وِإِنْتَ خَايِفْ مِنْ إِيهْ يَا عَمّْ سَيِّدْ؟"
+    },
+    {
+      "n": 6,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 8,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "buried dread and homesickness",
+        "delivery": "Let the photograph pull the words out of him after a real silence. Keep it contained: the danger is in how rarely Sayed permits himself to say this aloud."
+      },
+      "text": "إِنِّي مَا أَرَجَّعْشْ عَلِي ابْنِي لِلسُّوِيسْ… زَيّْ مَا وَعَدْتُهْ."
+    },
+    {
+      "n": 7,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "gruff tenderness restored",
+        "delivery": "Break the intimacy with the light slap and speak while already turning away. «نَامْ يَا ابْنِي» carries the care; the parade time gives him cover."
+      },
+      "text": "نَامْ يَا ابْنِي… طَابُورْ بُكْرَةْ السَّاعَةْ أربعة."
+    }
+  ],
+  "beat": "1.2",
+  "file": "01_act_one.md",
+  "hash": "c53fb3d6fca9a4ea",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T12:52:41+00:00",
+  "seconds": 57.5,
+  "usage": {
+    "prompt_tokens": 2873,
+    "completion_tokens": 4900
+  },
+  "cost_usd": 0.10949
+}

@@ -1,0 +1,47 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A sharp, visual action beat with one clean fire command, a strong release of Hassan’s restraint, and a restrained aftermath image. The dialogue is natural, playable, and militarily credible.",
+  "scene_issues": [
+    "The metadata says this follows Beat 4.2, while the scene heading labels it Beat 4.1; clarify the sequence."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "HASSAN",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 10,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 10,
+        "volume": "shout",
+        "pace": "rushed",
+        "emotion": "pent-up fear released as command",
+        "delivery": "Hassan holds until the advancing infantry reaches the chosen range, then erupts at his men. Hit «دِلْوَقْتِي» as the trigger and drive straight through «اِضْرَبْ» without a dramatic pause."
+      },
+      "text": "دِلْوَقْتِي! اِضْرَبْ!"
+    }
+  ],
+  "beat": "4.1",
+  "file": "04_act_four_v2.md",
+  "hash": "459397cf15455ffd",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:50:12+00:00",
+  "seconds": 10.1,
+  "usage": {
+    "prompt_tokens": 2264,
+    "completion_tokens": 760
+  },
+  "cost_usd": 0.02426
+}

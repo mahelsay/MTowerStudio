@@ -1,0 +1,117 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A spare, actor-led homecoming with a clean emotional turn: Zeinab announces the return, the mother can only say his name, and the feteer exchange carries the family's months of fear without exposition. The restraint and rural domestic detail keep it from becoming sentimental speechmaking.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ZEINAB",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "rushed",
+        "emotion": "disbelieving joy",
+        "delivery": "Call to Mostafa first as recognition bursts out, then throw «يَامَّا» back toward the house while running. Keep the voice recognizably a twelve-year-old's, breathless but not shrill."
+      },
+      "text": "مُصْطَفَى! يَامَّا… مُصْطَفَى!"
+    },
+    {
+      "n": 2,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 8,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "slow",
+        "emotion": "contained shock and relief",
+        "delivery": "Say his name only after touching his face, as though the touch has proved he is real. Keep the grief held down in the chest; do not openly sob."
+      },
+      "text": "مُصْطَفَى…"
+    },
+    {
+      "n": 3,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 7,
+        "character": 9,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "homesick tenderness",
+        "delivery": "Look toward the oven because speaking directly about the reunion is too difficult. Let the question catch slightly, with a young man's weighted voice rather than a child's vulnerability."
+      },
+      "text": "عَامْلَةْ فِطِيرْ؟"
+    },
+    {
+      "n": 4,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "relief breaking through old worry",
+        "delivery": "Answer him at close range, smiling through tears without turning the line into a punchline. «كُلّْ يُومْ» should reveal her private ritual simply, not ask for pity."
+      },
+      "text": "عَامْلَاهُولَكْ كُلّْ يُومْ."
+    }
+  ],
+  "beat": "5.5",
+  "file": "05_act_five_v2.md",
+  "hash": "9344b3f0872c684d",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T12:01:32+00:00",
+  "seconds": 35.5,
+  "usage": {
+    "prompt_tokens": 2487,
+    "completion_tokens": 2951
+  },
+  "cost_usd": 0.06897
+}

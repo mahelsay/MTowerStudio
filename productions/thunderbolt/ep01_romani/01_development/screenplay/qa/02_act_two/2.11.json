@@ -1,0 +1,99 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, playable transition: the headcount releases the minefield tension, then Shalabi immediately turns that relief into forward movement. The clipped exchange suits both men and the need for silence.",
+  "scene_issues": [
+    "The tactile headcount must remain clear on camera so «كَامْ؟» is understood as asking how many men made it through, not how many were hurt."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "Its meaning depends on the preceding headcount action, but the staging supplies that context."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "controlled dread",
+        "delivery": "Keep it clipped and almost breathless, directed at Sayed as he reaches the rear of the file. Shalabi needs confirmation before he permits himself any relief."
+      },
+      "text": "كَامْ؟"
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [
+        "The initial vowel in «اتْأَذَى» is unmarked; fully marked text would use «اِتْأَذَى»."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "normal",
+        "emotion": "guarded relief",
+        "delivery": "Report directly to Shalabi without celebration. Let a trace of relief enter only on the second sentence; Sayed is still protecting the men by keeping them quiet and moving."
+      },
+      "text": "كُلُّهُمْ يَا فَنْدِمْ. مَحَدِّشْ اتْأَذَى."
+    },
+    {
+      "n": 3,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 8,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "renewed resolve",
+        "delivery": "Take a brief beat on «رُمَّانَةْ», then indicate the bearing with the hand and finish firmly. The relief is over; Shalabi has already moved mentally to the next danger."
+      },
+      "text": "رُمَّانَةْ… مِنْ هِنَا."
+    }
+  ],
+  "beat": "2.11",
+  "file": "02_act_two_v2.md",
+  "hash": "c1044715bb8826bd",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:22:05+00:00",
+  "seconds": 33.2,
+  "usage": {
+    "prompt_tokens": 2333,
+    "completion_tokens": 3039
+  },
+  "cost_usd": 0.07011
+}

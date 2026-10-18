@@ -1,0 +1,3112 @@
+{
+  "$schema_note": "Shot list v2.0. Beat-level fields (location, look, wear) are defaults inherited by every shot unless the shot overrides them. Narration and dialogue are referenced by beat and line order in the locked screenplay (single source of truth for the Arabic text); the engine extracts them. Characters resolve through casting.json; LOC/VEH/PRP/WRD IDs resolve from the studio library; look/lens keys from studio/library/looks/looks.json via production_config.json. lip_sync defaults to 'avoid' unless a shot says otherwise. Durations are planning targets in seconds.",
+  "version": "2.0",
+  "episode": "ep01_romani",
+  "part": "01_act_one",
+  "screenplay": "../01_development/screenplay/01_act_one.md",
+  "screenplay_lock": "ep01-script-v2.0-act1",
+  "production_config": "production_config.json",
+  "casting": "casting.json",
+  "status": "draft — Phase 2, task 2.2",
+  "target_length_s": 635,
+  "defaults": {
+    "lip_sync": "avoid",
+    "model": "default"
+  },
+  "beats": [
+    {
+      "beat": "1.1",
+      "title": "Salt and sweat",
+      "target_s": 95,
+      "location": "LOC-0008",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_SALT",
+      "on_screen_text": [
+        "SUPER «صَيْفُ ١٩٧٣» over 1.1-01",
+        "EPISODE TITLE CARD «كَمِينُ رُمَّانَةَ» — The Romani Ambush over 1.1-02"
+      ],
+      "vo": {
+        "ref": "screenplay 1.1 VO",
+        "placement": "over 1.1-01 to 1.1-03, before the shouted line takes over",
+        "est_s": 7
+      },
+      "sfx": "Wading, heavy breathing, wind, a whistle, distant voice reading names",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.1-01",
+          "duration_s": 4,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "extras": "a long file of commandos (WRD-0001) far away",
+          "prompt": "blinding white salt flat to the horizon, a long thin line of soldiers marching through ankle-deep brine in the far distance, heat shimmer",
+          "motion": "The distant file of men moves slowly across the frame through the shimmer."
+        },
+        {
+          "shot_id": "1.1-02",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "slow pan with the file",
+          "characters": [],
+          "extras": "file of commandos in full kit, weapons held high",
+          "prompt": "a file of Egyptian commandos in full kit marching straight toward camera through shallow brine, weapons held above their heads, compressed by a long lens, heat haze",
+          "motion": "The men march toward camera, splashing brine; the long lens makes them bob in the shimmer."
+        },
+        {
+          "shot_id": "1.1-02a",
+          "duration_s": 9,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sergeant Sayed wading back along the moving file through brine, shouting down the line over the men's breathing, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He projects down the file without breaking stride.",
+          "face": "rough drive, pushing them hard",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-02b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Private Adel, tall and thin, trudging beside Mostafa through the brine, deadpan despite exhaustion, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He pants through the joke while keeping his weapon high.",
+          "face": "dry exhaustion, trying to make Mostafa laugh",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-03",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "tracking low with the boots",
+          "characters": [],
+          "prompt": "black leather combat boots crusted white with salt splashing through shallow brine",
+          "motion": "Boots stomp through the brine in rhythm; droplets fly."
+        },
+        {
+          "shot_id": "1.1-03a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed hauling Mostafa up by the webbing in the salt water, hard and close to him, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He shoves the RPG launcher back above Mostafa's head and speaks close, not shouting.",
+          "face": "hard protective anger",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-03b",
+          "duration_s": 2,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa soaked in brine, spitting salt water and clutching the RPG launcher above his head, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He forces the answer out while blinking salt from his eyes.",
+          "face": "ashamed, shaken, obedient",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-04",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Captain Shalabi's hand holding a 1970s mechanical stopwatch at the finish line, sweat on the wrist, small solid-red triangular pennants on thin wooden stakes and the salt flat blurred behind",
+          "motion": "The stopwatch hand ticks; his thumb waits over the button while men struggle toward the flags.",
+          "notes": "v2 restage: the stopwatch is now in Captain Shalabi's hand at the finish line, not an instructor's."
+        },
+        {
+          "shot_id": "1.1-05",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "handheld, walking backward with him",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain marching at the back of his company through the brine, scanning his men, face streaked with sweat and salt",
+          "motion": "He marches forward, eyes moving from man to man."
+        },
+        {
+          "shot_id": "1.1-06",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static at the finish line",
+          "characters": [
+            "C-01",
+            "C-03"
+          ],
+          "assets": [],
+          "prompt": "a line of small solid-red triangular pennants on thin wooden stakes marking a finish line on the salt flat, Captain Shalabi standing with a stopwatch and counting men across, Mostafa still the last man staggering in",
+          "motion": "Men stagger across the line; Shalabi counts without pressing the stopwatch until Mostafa crosses last.",
+          "notes": "v2 restage: Shalabi stands at the finish line with the stopwatch, counting men across; Mostafa is the last man."
+        },
+        {
+          "shot_id": "1.1-06a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed beside Shalabi at the finish line of small solid-red triangular pennants on thin wooden stakes, breathing hard but proud after the march, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He catches his breath and reports without taking his eyes off the last man.",
+          "face": "breathless pride",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-06b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Captain Shalabi at the finish line of small solid-red triangular pennants on thin wooden stakes with the stopwatch, eyes still on Mostafa in the brine, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers without pressing the stopwatch yet.",
+          "face": "low command restraint",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-07",
+          "duration_s": 3,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private doubled over, hands on knees, gasping, salt crystals on his eyebrows",
+          "motion": "He breathes hard, then straightens and looks up."
+        },
+        {
+          "shot_id": "1.1-08",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "slow push-in",
+          "location": "LOC-0008",
+          "wear": "WEAR_CLEAN",
+          "characters": [
+            "C-01",
+            "C-02",
+            "C-03",
+            "C-07"
+          ],
+          "extras": "the company standing in ranks (WRD-0001)",
+          "prompt": "a dusty parade ground, a company of commandos standing rigid in ranks while the Commander of Sa'iqa Forces reads results from a clipboard in front of them",
+          "motion": "Slow push-in on the ranks; nobody moves except the Commander reading and the pages in the wind.",
+          "notes": "v2 restage: the parade-ground results are read by the Commander C-07 from a clipboard."
+        },
+        {
+          "shot_id": "1.1-08a",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-07"
+          ],
+          "wear": "WEAR_CLEAN",
+          "prompt": "the Commander of Sa'iqa Forces on the parade ground holding a clipboard, voice carrying to the ranks, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He reads the result cleanly from the clipboard.",
+          "face": "formal authority carrying across the ground",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-09",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "wear": "WEAR_CLEAN",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "the sergeant standing at attention in the ranks, eyes moving sideways toward the officer, the hint of a smile",
+          "motion": "Only his eyes move; a faint smile appears."
+        },
+        {
+          "shot_id": "1.1-09a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "wear": "WEAR_CLEAN",
+          "prompt": "Corporal Mahmoud in the second rank, glasses taped at the hinge, whispering without turning his head, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "Only his mouth moves; his eyes stay forward.",
+          "face": "half thrilled, half afraid",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-09b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "wear": "WEAR_CLEAN",
+          "prompt": "Adel in the ranks, whispering hopefully while trying not to smile, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "His mouth barely moves as he whispers.",
+          "face": "hopeful joke under discipline",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-09c",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "wear": "WEAR_CLEAN",
+          "prompt": "Mahmoud still staring front in the parade ranks, whispering the real meaning of first place, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He whispers the warning without moving his head.",
+          "face": "quiet dread, precise",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-09d",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "wear": "WEAR_CLEAN",
+          "prompt": "Sayed in the front rank, not turning his head, ending the whispers, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "His jaw barely moves; the order kills the chatter.",
+          "face": "low and final",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.1-10",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "very slow push-in",
+          "wear": "WEAR_CLEAN",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain standing in front of his company at attention, expressionless, the parade ground dust drifting",
+          "motion": "Very slow push-in on his still face as the results are read; a breeze moves the dust.",
+          "model": "premium",
+          "notes": "Long hold under the end of the VO; may be split into two clips in the edit."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-02",
+          "line": 1,
+          "shot_id": "1.1-02a",
+          "intensity": 6,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "gruff competitive drive",
+          "delivery": "Project down the moving file over splashing and heavy breathing. He is driving trained men, not delivering a parade-ground slogan."
+        },
+        {
+          "speaker": "C-06",
+          "line": 2,
+          "shot_id": "1.1-02b",
+          "intensity": 5,
+          "volume": "normal",
+          "pace": "quick",
+          "emotion": "exhausted deadpan amusement",
+          "delivery": "Speak only to Mostafa while fighting for breath. Let the joke fall out dryly, without setting up a punchline."
+        },
+        {
+          "speaker": "C-02",
+          "line": 3,
+          "shot_id": "1.1-03a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "protective anger",
+          "delivery": "Hold Mostafa close by the webbing and make the distinction coldly clear. The restraint should feel more serious than another shout."
+        },
+        {
+          "speaker": "C-03",
+          "line": 4,
+          "shot_id": "1.1-03b",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "shame and immediate compliance",
+          "delivery": "Force the word out between breaths after spitting away the salt water. Do not sound sulky; he knows Sayed is right."
+        },
+        {
+          "speaker": "C-02",
+          "line": 5,
+          "shot_id": "1.1-06a",
+          "intensity": 5,
+          "volume": "normal",
+          "pace": "measured",
+          "emotion": "contained pride",
+          "delivery": "Report to Shalabi while still recovering his breath. He is fishing for acknowledgment without openly asking for it."
+        },
+        {
+          "speaker": "C-01",
+          "line": 6,
+          "shot_id": "1.1-06b",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "unyielding responsibility",
+          "delivery": "Keep watching the last man and answer without looking at Sayed. The line means the unit finishes together, but do not explain that meaning."
+        },
+        {
+          "speaker": "C-07",
+          "line": 7,
+          "shot_id": "1.1-08a",
+          "intensity": 4,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "formal approval",
+          "delivery": "Read the result across the parade ground with seasoned authority. Give the company designation and Shalabi’s name equal official weight, with no celebratory flourish."
+        },
+        {
+          "speaker": "C-04",
+          "line": 8,
+          "shot_id": "1.1-09a",
+          "intensity": 5,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "thrilled unease",
+          "delivery": "Keep his head and body rigid in ranks and move only his lips. He wants to share the warning but is afraid of being caught talking."
+        },
+        {
+          "speaker": "C-06",
+          "line": 9,
+          "shot_id": "1.1-09b",
+          "intensity": 3,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "hopeful mischief",
+          "delivery": "Answer without turning, as if he genuinely wants this to be the reward. Keep it dry and small rather than playing broadly for comedy."
+        },
+        {
+          "speaker": "C-04",
+          "line": 10,
+          "shot_id": "1.1-09c",
+          "intensity": 6,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "certain dread beneath excitement",
+          "delivery": "Give Adel the answer quietly while remaining motionless in formation. Land the final words as a practical conclusion, not a prophecy."
+        },
+        {
+          "speaker": "C-02",
+          "line": 11,
+          "shot_id": "1.1-09d",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "dry disciplinary finality",
+          "delivery": "Do not turn or break attention. Cut both men off with the minimum breath, showing that he heard every whispered word."
+        }
+      ]
+    },
+    {
+      "beat": "1.2",
+      "title": "\"Afraid?\"",
+      "target_s": 60,
+      "location": "LOC-0009",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_BARE_BULB"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-02",
+          "line": 1,
+          "shot_id": "1.2-03a",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "protective concentration",
+          "delivery": "Keep his eyes and hands on the straps as he demonstrates. He is quietly preventing a field mistake, not giving a lecture."
+        },
+        {
+          "speaker": "C-02",
+          "line": 2,
+          "shot_id": "1.2-04",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "probing, quietly direct",
+          "delivery": "One word, looking the boy in the eye; not a test, a real question."
+        },
+        {
+          "speaker": "C-03",
+          "line": 3,
+          "shot_id": "1.2-04b",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "defensive; hiding fear",
+          "delivery": "Too quick, too firm — a boy pretending; the voice gives away what the word denies."
+        },
+        {
+          "speaker": "C-02",
+          "line": 4,
+          "shot_id": "1.2-05",
+          "intensity": 3,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "dry humor, honest warmth",
+          "delivery": "Dry, almost a smile; the second half is a confession that makes the boy feel less alone."
+        },
+        {
+          "speaker": "C-03",
+          "line": 5,
+          "shot_id": "1.2-05a",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "careful curiosity",
+          "delivery": "The laugh has faded. Ask gently, aware that «يَا عَمّْ سَيِّدْ» crosses into personal territory."
+        },
+        {
+          "speaker": "C-02",
+          "line": 6,
+          "shot_id": "1.2-05b",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "contained grief and longing",
+          "delivery": "Let the photograph pull the answer out of him after a real pause. Do not break or sentimentalize it; this is a promise he fears he may fail to keep."
+        },
+        {
+          "speaker": "C-02",
+          "line": 7,
+          "shot_id": "1.2-05c",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "gruff tenderness",
+          "delivery": "Use the light slap and the practical order to close the intimacy. Start moving away before the line is fully finished."
+        }
+      ],
+      "sfx": "Barracks night sounds, bunk springs, buckles",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.2-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "slow dolly down the aisle",
+          "characters": [],
+          "extras": "soldiers packing kit on bunks",
+          "prompt": "a long barracks room at night, iron bunks, kit laid out on grey blankets, one bare bulb, soldiers packing",
+          "motion": "Slow dolly down the aisle between the bunks."
+        },
+        {
+          "shot_id": "1.2-02",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "the young private sitting on a bunk struggling with the tangled straps of an RPG rocket carrier bag",
+          "motion": "He tugs at the straps, frustrated; they twist again."
+        },
+        {
+          "shot_id": "1.2-03",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "extreme close-up of a sergeant's strong weathered hands pulling a wide olive canvas strap tight through a steel buckle on an olive canvas rocket carrier bag lying on a grey army blanket, under a bare bulb",
+          "motion": "His hands pull the strap through the buckle and tighten it with one sharp tug.",
+          "notes": "v2 restage (2026-10-15): hands only; Sayed's first line is now on camera in 1.2-03a."
+        },
+        {
+          "shot_id": "1.2-03a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "Sayed crouched beside Mostafa's bunk under the bare bulb, re-threading the RPG rocket bag straps while teaching patiently, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He speaks low while his hands finish the strap work.",
+          "face": "patient, practical teacher",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.2-04",
+          "duration_s": 2,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "the sergeant crouched by the bunk under the bare bulb, holding the strapped rocket bag, looking at the young private off to the side, asking a quiet question, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He looks the boy in the eye and asks one quiet word; a small tilt of the head.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "calm, searching, a hint of warmth",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.2-04b",
+          "duration_s": 2,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private sitting on the bunk under the bare bulb, looking up at the sergeant off to the side, answering too quickly, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He looks up and answers too quickly, then swallows.",
+          "face": "defensive, hiding fear",
+          "lip_sync": "required",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced."
+        },
+        {
+          "shot_id": "1.2-05",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "the sergeant in three-quarter profile under the bare bulb, half in shadow but with his mouth clearly visible, a dry almost-smile",
+          "motion": "He glances sideways with a dry almost-smile; his mouth is in shadow.",
+          "notes": "v2 restage: approved keyframe kept, with the mouth visible for the retained lip-synced line.",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.2-05a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa on the bunk, looking up at Sayed with careful curiosity after laughing despite himself, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks softly, choosing the personal question with care.",
+          "face": "curious, newly trusting",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.2-05b",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed by the bunk, eyes drifting to the small family photo tucked in the bed frame, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He lets the truth out after a long beat, still keeping his voice low.",
+          "face": "honest worry hidden under control",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.2-05c",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed standing and turning back into his gruff sergeant self under the bare bulb, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He tosses the order back over his shoulder as he leaves.",
+          "face": "gruff affection, moving on",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.2-06",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-02",
+            "C-03"
+          ],
+          "prompt": "the sergeant seen from behind walking away down the narrow aisle between iron bunks under a bare bulb; in the foreground the young private sitting on his bunk, rubbing the back of his neck, a small surprised smile, watching him go",
+          "motion": "Sayed walks away down the aisle; Mostafa rubs his neck, smiles, then looks down at the strapped bag.",
+          "notes": "v2 restage (2026-10-15): the light slap has just happened; we see its aftermath."
+        }
+      ]
+    },
+    {
+      "beat": "1.3",
+      "title": "The letter from the front",
+      "target_s": 60,
+      "location": "LOC-0006",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_VILLAGE_DELTA"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-12",
+          "line": 1,
+          "shot_id": "1.3-04",
+          "note": "Zeinab reading aloud",
+          "intensity": 3,
+          "volume": "normal",
+          "pace": "slow",
+          "emotion": "a child proud to read; careful",
+          "delivery": "A 12-year-old reading her brother's handwriting aloud to her mother, sounding out the words."
+        },
+        {
+          "speaker": "C-03",
+          "line": 2,
+          "shot_id": "1.3-05",
+          "note": "Mostafa's voice takes over the letter (V.O.); not lip-synced",
+          "intensity": 3,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "reassuring; young pride hiding hardship",
+          "delivery": "Letter voice-over: the brother's own voice takes over the letter, light and brave for his mother."
+        },
+        {
+          "speaker": "C-11",
+          "line": 3,
+          "shot_id": "1.3-06",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "quiet pride mixed with worry",
+          "delivery": "To herself, repeating his word; a mother's quiet pride with fear underneath. Barely more than a breath."
+        },
+        {
+          "speaker": "C-12",
+          "line": 4,
+          "shot_id": "1.3-06a",
+          "intensity": 3,
+          "volume": "normal",
+          "pace": "quick",
+          "emotion": "affectionate mischief",
+          "delivery": "Peek ahead and enjoy having a piece of news that will make her mother react. Keep it spontaneous and childlike, without pushing for a laugh."
+        },
+        {
+          "speaker": "C-11",
+          "line": 5,
+          "shot_id": "1.3-06b",
+          "intensity": 4,
+          "volume": "normal",
+          "pace": "measured",
+          "emotion": "guarded affection",
+          "delivery": "Keep facing the oven and pretend to suspect Zeinab of inventing it. The slowing hands betray that she hopes every word is true."
+        },
+        {
+          "speaker": "C-12",
+          "line": 6,
+          "shot_id": "1.3-06c",
+          "intensity": 3,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "delighted insistence",
+          "delivery": "Hold up the letter as proof and answer through a brief laugh. She is pleased to have caught her mother caring."
+        },
+        {
+          "speaker": "C-11",
+          "line": 7,
+          "shot_id": "1.3-06d",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "hope held against dread",
+          "delivery": "After the long pause, make the first phrase practical and the second almost involuntary. Stay turned toward the fire; admitting uncertainty to Zeinab would expose too much."
+        }
+      ],
+      "sfx": "Chickens, fire crackling in the oven, distant water wheel",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.3-01",
+          "duration_s": 6,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "slow pan",
+          "characters": [],
+          "prompt": "lush green Nile Delta fields with palm trees, a mud-brick village at the edge of the fields in soft golden light",
+          "motion": "Slow pan across the fields to the village; palms sway.",
+          "notes": "First image of the village world — the palette shift from white salt to green."
+        },
+        {
+          "shot_id": "1.3-02",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "a village woman kneeling in front of a waist-high beehive-shaped domed clay bread oven with a round opening and glowing embers inside, in a mud-brick courtyard, her right hand reaching into the opening to slap a round flat disc of dough onto the oven's inner wall, a round straw tray of dough rounds and a dusting of flour beside her, chickens around her feet",
+          "face": "face in three-quarter profile turned toward the oven, eyes on her hand",
+          "motion": "She slaps the dough onto the oven wall and pulls her hand back from the heat."
+        },
+        {
+          "shot_id": "1.3-03",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "a 12-year-old girl sitting on the doorstep carefully unfolding a letter",
+          "motion": "She unfolds the letter carefully, smoothing it on her knee."
+        },
+        {
+          "shot_id": "1.3-04",
+          "duration_s": 12,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the girl sitting on the doorstep reading her brother's letter aloud, holding the lined paper in both hands, looking down at the page, lips forming the words, face in three-quarter view, mouth clearly visible, not looking at the camera",
+          "motion": "She reads aloud slowly, her finger following the line; she glances up at her mother once, proudly.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "concentrating, proud",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.3-05",
+          "duration_s": 6,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "slow drift along the line",
+          "characters": [],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "extreme close-up of Arabic pencil handwriting on lined paper at a low raking angle, very shallow depth of field: only a few loose pencil strokes in the centre are sharp and the rest of the line melts into soft grey blur, so the handwriting reads as texture and rhythm rather than as words",
+          "motion": "The camera drifts slowly along the handwritten line.",
+          "notes": "Mostafa's voice takes over the letter here."
+        },
+        {
+          "shot_id": "1.3-06",
+          "duration_s": 3,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "the mother pausing at the clay oven, a slow private smile, looking at the fire rather than at her daughter, flour on her hands, face in three-quarter view toward the fire, mouth visible, not looking at the camera",
+          "motion": "She stops working; a slow smile; she murmurs one word to herself, looking at the fire.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "quiet pride with worry underneath",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.3-06a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "Zeinab on the doorstep with the letter, peeking at the next line and grinning mischievously, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She lifts the letter a little as if she has found treasure.",
+          "face": "mischievous, teasing pride",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.3-06b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "Umm Mostafa at the clay oven, not turning from the fire as she corrects her daughter, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She keeps her eyes on the oven, but the corner of her mouth almost moves.",
+          "face": "dry maternal warning, hands slowing",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.3-06c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "Zeinab holding up the page in both hands, laughing because the line really is written there, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She points at the page as proof.",
+          "face": "laughing, triumphant",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.3-06d",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "Umm Mostafa facing the oven fire, flour on her hands, allowing herself one soft hope, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She answers to the fire more than to Zeinab.",
+          "face": "soft hope under worry",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        }
+      ]
+    },
+    {
+      "beat": "1.4",
+      "title": "The orders",
+      "target_s": 55,
+      "location": "LOC-0011",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_LAMP_TENT"
+      ],
+      "wear": "WEAR_CLEAN",
+      "on_screen_text": [
+        "SUPER «٥ أُكْتُوبَرَ ١٩٧٣» over 1.4-01"
+      ],
+      "vo": {
+        "ref": "screenplay 1.4 VO",
+        "placement": "over 1.4-01 and 1.4-02 before the Commander speaks",
+        "est_s": 8
+      },
+      "dialogue_refs": [
+        {
+          "speaker": "C-07",
+          "line": 1,
+          "shot_id": "1.4-03",
+          "intensity": 5,
+          "volume": "normal",
+          "pace": "measured",
+          "emotion": "formal gravity",
+          "delivery": "A general's question that is also a judgement; formal, measured, in a lamp-lit tent."
+        },
+        {
+          "speaker": "C-01",
+          "line": 2,
+          "shot_id": "1.4-03b",
+          "intensity": 5,
+          "volume": "normal",
+          "pace": "normal",
+          "emotion": "crisp military certainty",
+          "delivery": "Standing at attention: crisp and certain, no hesitation."
+        },
+        {
+          "speaker": "C-07",
+          "line": 3,
+          "shot_id": "1.4-04b",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "grave authority",
+          "delivery": "Slide the envelope across during the first sentence, then hold Shalabi's gaze. Make the prohibition quieter and harder than the explanation."
+        },
+        {
+          "speaker": "C-07",
+          "line": 4,
+          "shot_id": "1.4-04b",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "personal, fatherly concern under formality",
+          "delivery": "Using his first name: the formality drops for a moment; this is one man asking another."
+        },
+        {
+          "speaker": "C-01",
+          "line": 5,
+          "shot_id": "1.4-05",
+          "intensity": 6,
+          "volume": "normal",
+          "pace": "measured",
+          "emotion": "resolute; the weight registers",
+          "delivery": "Taking the envelope: the same words as before, but now he feels their weight. Steady."
+        },
+        {
+          "speaker": "C-02",
+          "line": 6,
+          "shot_id": "1.4-05a",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "guarded concern",
+          "delivery": "Fall into step and search Shalabi's face instead of looking at the pocket. Ask as a seasoned sergeant who knows not to press too far."
+        },
+        {
+          "speaker": "C-01",
+          "line": 7,
+          "shot_id": "1.4-05b",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained anticipation",
+          "delivery": "Touch the pocket, but keep walking and looking ahead. Give the preparation order plainly; let «جِهْ دُورْنَا» carry the private recognition of what is coming."
+        },
+        {
+          "speaker": "C-02",
+          "line": 8,
+          "shot_id": "1.4-05c",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "practical urgency",
+          "delivery": "Ask at once, still matching Shalabi's stride. He wants the one fact needed to start preparing the men."
+        },
+        {
+          "speaker": "C-01",
+          "line": 9,
+          "shot_id": "1.4-05d",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "controlled uncertainty",
+          "delivery": "Do not slow or turn toward Sayed. Close the exchange with the exact limit of what Shalabi knows, keeping his own impatience buried."
+        }
+      ],
+      "sfx": "Canvas breathing in the wind, lamp hiss",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.4-01",
+          "duration_s": 6,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "slow push-in",
+          "characters": [
+            "C-01",
+            "C-07"
+          ],
+          "extras": "an operations officer standing to one side",
+          "prompt": "inside a lamp-lit command tent, a captain at attention facing a senior officer across a field table, map boards behind",
+          "motion": "Slow push-in; the lamp flickers; the canvas walls breathe."
+        },
+        {
+          "shot_id": "1.4-02",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "a brown military envelope sealed with red wax lying on a field table under lamplight",
+          "motion": "Lamplight flickers on the wax seal."
+        },
+        {
+          "shot_id": "1.4-03",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-07"
+          ],
+          "prompt": "the senior officer standing at the lamp-lit field table, looking at the captain off to the side, asking a short formal question, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He looks the captain over and asks the question; a measured, formal stillness.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "grave, formal, judging",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.4-03b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain standing at attention in the lamp-lit command tent, answering the senior officer off to the side, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He answers crisply at attention; not a blink.",
+          "face": "crisp military certainty",
+          "lip_sync": "required",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced."
+        },
+        {
+          "shot_id": "1.4-04",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-07"
+          ],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "an older officer's hand sliding the sealed envelope across the table toward the captain",
+          "motion": "The hand slides the envelope across the table and stops.",
+          "notes": "Commander's lines play over the hand."
+        },
+        {
+          "shot_id": "1.4-04b",
+          "duration_s": 12,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-07"
+          ],
+          "prompt": "the senior officer at the lamp-lit field table, his hand still on the sealed envelope, looking at the captain off to the side with fatherly concern, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He gives the order with his hand still on the envelope, then softens and asks the captain by name.",
+          "face": "fatherly concern under formality",
+          "lip_sync": "required",
+          "notes": "v2 restage: the Commander's envelope order and follow-up question now play on his lip-synced close shot."
+        },
+        {
+          "shot_id": "1.4-05",
+          "duration_s": 3,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain at attention holding the sealed envelope against his chest, lamp-lit, steady eyes on the senior officer off to the side, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He holds the envelope against his chest and answers; steady, his jaw firm.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "resolute, the weight of the moment in his eyes",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.4-05a",
+          "duration_s": 2,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "location": "LOC-0011",
+          "prompt": "Sayed waiting outside the command tent in the dark by a taut tent rope, searching Shalabi's face, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He falls in beside Shalabi and asks without ceremony.",
+          "face": "low concern, reading the captain",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.4-05b",
+          "duration_s": 10,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "location": "LOC-0011",
+          "prompt": "Shalabi walking out of the command tent into darkness, touching the breast pocket that holds the sealed envelope, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He keeps walking as he gives Sayed the order.",
+          "face": "quiet certainty, mission accepted",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.4-05c",
+          "duration_s": 2,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "location": "LOC-0011",
+          "prompt": "Sayed outside the tent at night, straight to the point beside his captain, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks the only question that matters.",
+          "face": "practical urgency",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.4-05d",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "location": "LOC-0011",
+          "prompt": "Shalabi outside the command tent, walking on without slowing, the sealed envelope in his pocket, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers while continuing into the dark.",
+          "face": "controlled, certain",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        }
+      ]
+    },
+    {
+      "beat": "1.5",
+      "title": "The blue windows",
+      "target_s": 50,
+      "location": "LOC-0007",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_CAIRO_BLUE_GLASS"
+      ],
+      "wear": "WEAR_CLEAN",
+      "on_screen_text": [
+        "SUPER «الْقَاهِرَةُ — حَيُّ شُبْرَا» over 1.5-01"
+      ],
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-14",
+          "line": 1,
+          "shot_id": "1.5-04",
+          "intensity": 2,
+          "volume": "normal",
+          "pace": "normal",
+          "emotion": "childish pride and excitement",
+          "delivery": "Keep flying the toy while announcing the promise to Fatma. Lean happily on «بِجَدّْ» as proof that this is not just part of the game."
+        },
+        {
+          "speaker": "C-13",
+          "line": 2,
+          "shot_id": "1.5-04a",
+          "intensity": 3,
+          "volume": "normal",
+          "pace": "measured",
+          "emotion": "fondness covering disappointment",
+          "delivery": "Stay focused on the needle and answer almost automatically over the machine. Let the smile warm the line, but leave a trace of old weariness underneath."
+        },
+        {
+          "speaker": "C-14",
+          "line": 3,
+          "shot_id": "1.5-04b",
+          "intensity": 3,
+          "volume": "normal",
+          "pace": "normal",
+          "emotion": "innocent curiosity, a little impatient",
+          "delivery": "An 8-year-old asking his mother from the floor, playing with his tin airplane."
+        },
+        {
+          "speaker": "C-13",
+          "line": 4,
+          "shot_id": "1.5-04c",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "gentle, tired hope; holding back sadness",
+          "delivery": "Without stopping the sewing machine; gentle, a hope she has repeated for six years."
+        },
+        {
+          "speaker": "C-14",
+          "line": 5,
+          "shot_id": "1.5-05a",
+          "intensity": 6,
+          "volume": "normal",
+          "pace": "normal",
+          "emotion": "innocent insistence",
+          "delivery": "Hold Fatma’s gaze and follow the logic of her answer exactly as a child would. Apply pressure without accusation; he genuinely expects there to be a date."
+        }
+      ],
+      "sfx": "Sewing machine clatter, muffled street noise",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.5-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [
+            "C-13",
+            "C-14"
+          ],
+          "assets": [
+            "PRP-0014",
+            "PRP-0015"
+          ],
+          "prompt": "one small room in a Cairo flat, window glass painted dark blue, a woman at a foot-pedal sewing machine, a boy lying on a mattress on the floor",
+          "motion": "The treadle rocks; the boy flies his toy plane above his head."
+        },
+        {
+          "shot_id": "1.5-02",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0014"
+          ],
+          "prompt": "the needle of a black sewing machine racing through fabric, a thimble on a finger guiding it",
+          "motion": "The needle hammers through the cloth; the thimbled finger guides it."
+        },
+        {
+          "shot_id": "1.5-03",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "slow pan up the wall",
+          "characters": [],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "a wall with a framed black-and-white portrait of a soldier in uniform and an old postcard of the Suez seafront; on top of the wardrobe beside it, a packed suitcase",
+          "motion": "Slow pan from the portrait and postcard up to the suitcase.",
+          "notes": "PRP-0011 uses ACT-0002 (Sayed) once his LoRA is locked."
+        },
+        {
+          "shot_id": "1.5-04",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static, low angle",
+          "characters": [
+            "C-14"
+          ],
+          "assets": [
+            "PRP-0015"
+          ],
+          "prompt": "low angle: the boy lying flat on his back on a thin mattress, seen in profile, both arms stretched straight up holding a small painted tin toy airplane (metal wings and a propeller clearly visible) against the blue-painted window glass, his face turned up toward the toy",
+          "face": "face in profile, looking up at the toy above him",
+          "motion": "He swoops the plane through the blue light while he asks; his face is turned up and away.",
+          "notes": "v2 restage: Ali's retained low-angle plane keyframe now carries his first toy-airplane line, mouth visible for lip-sync. Approved keyframe kept.",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.5-04a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "Fatma at the foot-pedal sewing machine, not looking up from the needle as she answers her son, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The machine keeps clattering while she speaks.",
+          "face": "fond, tired realism",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.5-04b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "assets": [
+            "PRP-0015"
+          ],
+          "prompt": "Ali on the floor with the tin airplane now landed beside him, suddenly serious as he asks about Suez, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He turns from the toy toward his mother.",
+          "face": "serious child curiosity",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.5-04c",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "Fatma at the sewing machine, looking toward Sayed's framed photo before answering for the boy's sake, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The machine stops for the answer.",
+          "face": "quiet certainty covering sadness",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.5-05",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "face_pass": false,
+          "prompt": "over-the-shoulder close-up from directly behind the woman: the back of her headscarf and her shoulder large and blurred in the left foreground, her hands paused on an old black hand-crank sewing machine in front of her; on the wall facing her, a framed black-and-white portrait of a young soldier; she is looking up at the portrait, her face only partly visible in three-quarter rear profile",
+          "face": "face in three-quarter profile from behind, looking up at the portrait, not at the camera",
+          "motion": "The machine stops; she lifts her eyes to the portrait and answers without turning around.",
+          "notes": "Fatma answers from behind / over the shoulder."
+        },
+        {
+          "shot_id": "1.5-05a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "assets": [
+            "PRP-0015"
+          ],
+          "prompt": "Ali sitting up on the mattress, refusing to let the question go, the blue-painted window behind him, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks again, smaller but more serious.",
+          "face": "insistent, innocent pressure",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.5-06",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0014"
+          ],
+          "prompt": "a woman's foot on the iron treadle of a sewing machine",
+          "motion": "The foot starts pumping the treadle again."
+        }
+      ]
+    },
+    {
+      "beat": "1.6",
+      "title": "Waiting in the groves",
+      "target_s": 50,
+      "location": "LOC-0005",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAWN_HAZE"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "sfx": "Magazines clicking into pouches, a spool ticking, birds, the hiss of an open radio channel",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.6-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "slow pan",
+          "characters": [],
+          "extras": "commandos lying dispersed under trees with their kit",
+          "prompt": "pre-dawn tree groves of eucalyptus beside an airfield, commandos lying dispersed under the trees, each beside his weapon and kit",
+          "motion": "Slow pan across the groves; a man turns in his sleep."
+        },
+        {
+          "shot_id": "1.6-02",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0001",
+            "PRP-0005"
+          ],
+          "prompt": "hands checking AK magazines on a blanket; round anti-tank mines stacked under camouflage netting behind",
+          "motion": "Fingers press rounds into a magazine."
+        },
+        {
+          "shot_id": "1.6-04",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "the captain sitting apart against a tree trunk, the sealed envelope in his breast pocket, watching his men",
+          "motion": "He touches the envelope in his pocket, then looks out at his men."
+        },
+        {
+          "shot_id": "1.6-04a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "Shalabi sitting apart under the trees before dawn, sealed envelope in his breast pocket, looking to Mahmoud, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks without taking his eyes off the dispersed men.",
+          "face": "low command, controlled waiting",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.6-04b",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "Mahmoud kneeling beside Shalabi with the radio and notebook, reading the count precisely, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He reads from the notebook as if accuracy can steady everyone.",
+          "face": "precise, careful report",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.6-02a",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed walking the row of resting commandos under eucalyptus trees, checking magazines and kit, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He projects just enough for the row, not wasting breath.",
+          "face": "no-nonsense readiness",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.6-03",
+          "face": "eyes looking down at the missile, head bowed, concentrating",
+          "face_strength": 0.75,
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "the missile operator checking a Malutka wire-guided missile in its fibreglass suitcase launcher under the trees",
+          "motion": "He opens the case and runs a careful hand along the missile."
+        },
+        {
+          "shot_id": "1.6-03a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "Adel kneeling over his Malutka suitcase launcher, finger turning the wire spool as he half-jokes, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He watches the wire spool instead of Hassan's face.",
+          "face": "half joking, half afraid",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.6-03b",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "assets": [
+            "PRP-0006"
+          ],
+          "prompt": "Engineer Sergeant Hassan coiling white marking tape with slow careful hands, answering without looking up, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "His hands never speed up as he answers.",
+          "face": "slow, calm, exact",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.6-04c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "Mahmoud with the headset pressed to one ear in the morning light, lowering it apologetically toward Shalabi, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He reports the silence as if it were his fault.",
+          "face": "quiet apology, frustration held in",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-01",
+          "line": 1,
+          "shot_id": "1.6-04a",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained vigilance",
+          "delivery": "Ask Mahmoud for confirmation, not information you have forgotten. Keep the voice controlled; the pressure is carried in the brief pause before his name."
+        },
+        {
+          "speaker": "C-04",
+          "line": 2,
+          "shot_id": "1.6-04b",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "careful concentration",
+          "delivery": "Read directly from the notebook to Shalabi. Land clearly on the total and attached elements, with no flourish or uncertainty."
+        },
+        {
+          "speaker": "C-02",
+          "line": 3,
+          "shot_id": "1.6-02a",
+          "intensity": 6,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "gruff protectiveness",
+          "delivery": "Project along the resting row while continuing to inspect the men. Bite off «مِشْ هُنَاكْ» as a warning born from concern, not swagger."
+        },
+        {
+          "speaker": "C-06",
+          "line": 4,
+          "shot_id": "1.6-03a",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "anxiety hidden inside a joke",
+          "delivery": "Keep looking at the wire as though the question is casual. Let the final «فِينْ؟» reveal that Adel genuinely needs the answer."
+        },
+        {
+          "speaker": "C-05",
+          "line": 5,
+          "shot_id": "1.6-03b",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "unruffled reassurance",
+          "delivery": "Do not look up from the reel. State «يِرُوحْ أَعْمَى» as a plain fact, then give the instruction with quiet confidence."
+        },
+        {
+          "speaker": "C-04",
+          "line": 6,
+          "shot_id": "1.6-04c",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "restrained frustration and misplaced guilt",
+          "delivery": "Lower the headset before reporting to Shalabi. Keep the apology implicit, as if a more careful operator might somehow have produced the signal."
+        }
+      ]
+    },
+    {
+      "beat": "1.7",
+      "title": "Letters",
+      "target_s": 60,
+      "location": "LOC-0005",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAWN_HAZE"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-03",
+          "line": 1,
+          "shot_id": "1.7-02",
+          "note": "Mostafa's letter (V.O.); not lip-synced",
+          "intensity": 3,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "tender; a brave face for his mother",
+          "delivery": "Letter voice-over written before dawn on the day of the war; warm and light on purpose."
+        },
+        {
+          "speaker": "C-06",
+          "line": 2,
+          "shot_id": "1.7-02a",
+          "intensity": 2,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "sleepy mischief",
+          "delivery": "Speak without fully lifting his head from the pack. The teasing is habitual barracks warmth, not a performance for the other men."
+        },
+        {
+          "speaker": "C-03",
+          "line": 3,
+          "shot_id": "1.7-02b",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "quiet attachment",
+          "delivery": "Answer without looking up or interrupting the pencil. Keep it simple and unembarrassed; the single word should make Adel’s joke fall away."
+        },
+        {
+          "speaker": "C-06",
+          "line": 4,
+          "shot_id": "1.7-02c",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "sudden tenderness",
+          "delivery": "Let the grin disappear before speaking. Address Mostafa softly, then retreat into the pack as though the mention of a mother has touched something private."
+        },
+        {
+          "speaker": "C-02",
+          "line": 5,
+          "shot_id": "1.7-06",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "matter-of-fact masking deep feeling",
+          "delivery": "Handing over his folded letter; plain and practical so the boy will not see what it costs him."
+        },
+        {
+          "speaker": "C-03",
+          "line": 6,
+          "shot_id": "1.7-07",
+          "intensity": 6,
+          "volume": "normal",
+          "pace": "quick",
+          "emotion": "insistent; refusing the thought",
+          "delivery": "Pushing back, voice tight with emotion; he will not accept the idea."
+        },
+        {
+          "speaker": "C-02",
+          "line": 7,
+          "shot_id": "1.7-07b",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "gentle but closes the subject",
+          "delivery": "Soft and final; a hand on the boy's shoulder in his voice."
+        }
+      ],
+      "sfx": "Birds waking, a cough, pencil scratching",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.7-01",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the young private writing on a page balanced on his rifle stock with a pencil stub, grey pre-dawn light through the branches",
+          "motion": "He writes slowly, stops, licks the pencil, writes again."
+        },
+        {
+          "shot_id": "1.7-02",
+          "duration_s": 7,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "a pencil stub forming Arabic letters on lined paper resting on a wooden rifle stock",
+          "motion": "The pencil forms Arabic words.",
+          "notes": "Mostafa's letter in his voice."
+        },
+        {
+          "shot_id": "1.7-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAWN_HAZE"
+          ],
+          "prompt": "Adel half-awake against his pack under the trees, teasing Mostafa from the ground, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He rolls his head toward Mostafa and grins.",
+          "face": "sleepy teasing that fades",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.7-02b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "Mostafa writing on a page balanced on his rifle stock, not looking up from the letter, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers without stopping the pencil.",
+          "face": "simple, private tenderness",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.7-02c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel lying back against his pack, grin gone, eyes closing with unexpected tenderness, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He lets the tease die and sends the greeting quietly.",
+          "face": "softened, respectful",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.7-03",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the sergeant a few meters away also writing, crossing out a word, starting again",
+          "motion": "He crosses out a word with a hard stroke and starts again."
+        },
+        {
+          "shot_id": "1.7-04",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "strong hands folding a single page twice",
+          "motion": "The page is folded twice, slowly."
+        },
+        {
+          "shot_id": "1.7-05",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "the sergeant looking at the folded letter in his hands for a long moment",
+          "motion": "He looks at the letter; his thumb runs along the fold."
+        },
+        {
+          "shot_id": "1.7-06",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the sergeant sitting against a tree trunk in grey pre-dawn light, holding out a folded letter toward the young private off to the side, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He holds out the folded letter and speaks plainly, not letting the feeling show; his hand stays steady.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "plain, practical, feeling held back",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.7-07",
+          "duration_s": 3,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private under a tree in grey pre-dawn light, holding the folded letter, looking at the sergeant off to the side, insisting, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He pushes back, insisting; his eyes glisten but he does not look away.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "insistent, upset, refusing the thought",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "1.7-07b",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "the sergeant leaning back against the tree trunk in grey pre-dawn light, answering the young private off to the side softly, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He answers softly and closes the subject, then leans his head back against the trunk and closes his eyes.",
+          "face": "gentle but final",
+          "lip_sync": "required",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced."
+        },
+        {
+          "shot_id": "1.7-08",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0010"
+          ],
+          "prompt": "the folded letter being buttoned into a uniform breast pocket",
+          "motion": "Fingers button the pocket over the letter."
+        },
+        {
+          "shot_id": "1.7-09",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "commandos waking under the trees",
+          "prompt": "first sunlight breaking through the eucalyptus over the waking commandos",
+          "motion": "Sunlight spreads through the branches; men stir."
+        }
+      ]
+    },
+    {
+      "beat": "1.8",
+      "title": "The tenth of Ramadan",
+      "target_s": 35,
+      "location": "LOC-0006",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_VILLAGE_DELTA"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "sfx": "Quiet midday, an old Egyptian song from a radio somewhere, donkey cart",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.8-01",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "men dozing in the shade",
+          "prompt": "a quiet village lane at midday, men dozing in the shade of a wall, bright sun",
+          "motion": "Heat shimmers; a man shifts in the shade."
+        },
+        {
+          "shot_id": "1.8-02",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking with them",
+          "characters": [
+            "C-11",
+            "C-12"
+          ],
+          "prompt": "the mother and daughter walking down the lane carrying a large tray of fresh round loaves",
+          "motion": "They walk toward camera carrying the tray; camera tracks backward."
+        },
+        {
+          "shot_id": "1.8-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "Zeinab stopped in the shade of a village wall with the bread tray, asking suddenly about her brother, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She shifts the tray and blurts the question.",
+          "face": "worried thought arriving at once",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.8-02b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "Umm Mostafa carrying the bread tray in the lane, plain and steady about Mostafa's fasting, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She adjusts her grip before answering.",
+          "face": "plain truth, no softness added",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.8-02c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "Zeinab under the noon shade, practical worry in her eyes as the donkey cart passes behind, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She looks at the loaves, then back to her mother.",
+          "face": "practical worry",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.8-02d",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "Umm Mostafa lifting the heavy tray again, refusing to say she does not know, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She raises the tray and gives the only answer she can.",
+          "face": "faith used as steadiness, worry hidden",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.8-03",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "a boy with a donkey cart",
+          "prompt": "a boy leading a donkey cart past mud-brick houses",
+          "motion": "The cart rolls slowly past."
+        },
+        {
+          "shot_id": "1.8-04",
+          "duration_s": 4,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "slow pan",
+          "characters": [],
+          "prompt": "the whole village in the midday haze, a small mosque minaret, green fields all around",
+          "motion": "Slow pan across the peaceful village."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-12",
+          "line": 1,
+          "shot_id": "1.8-02a",
+          "intensity": 4,
+          "volume": "normal",
+          "pace": "normal",
+          "emotion": "sudden concern",
+          "delivery": "She has been helping with the bread when the thought of her brother abruptly surfaces. Ask her mother directly, with a child’s expectation that she will know."
+        },
+        {
+          "speaker": "C-11",
+          "line": 2,
+          "shot_id": "1.8-02b",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "worry held down",
+          "delivery": "Answer without looking at Zeinab. Let the small pause admit that Mustafa’s hardship is what she has really been thinking about."
+        },
+        {
+          "speaker": "C-12",
+          "line": 3,
+          "shot_id": "1.8-02c",
+          "intensity": 5,
+          "volume": "normal",
+          "pace": "quick",
+          "emotion": "practical worry",
+          "delivery": "The next question follows immediately because food is the part of danger she can understand. Keep it simple and genuinely concerned, not ominous."
+        },
+        {
+          "speaker": "C-11",
+          "line": 4,
+          "shot_id": "1.8-02d",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "helplessness concealed as faith",
+          "delivery": "Take the beat while lifting the tray so the work saves her from meeting Zeinab’s eyes. Give the answer as something firm enough for the child, though the mother does not believe she knows."
+        }
+      ]
+    },
+    {
+      "beat": "1.9",
+      "title": "2:00 P.M.: the war begins",
+      "target_s": 55,
+      "location": "LOC-0005",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": {
+        "ref": "screenplay 1.9 VO",
+        "placement": "over the first jet pass, 1.9-01",
+        "est_s": 7
+      },
+      "sfx": "Jet roar overhead tearing the sky, then silence",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.9-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static, low angle",
+          "characters": [],
+          "assets": [
+            "VEH-0003"
+          ],
+          "prompt": "Egyptian Air Force jets roaring very low overhead in formation above the tree groves, seen from below",
+          "motion": "Jets streak over the treetops left to right; branches whip in the wake."
+        },
+        {
+          "shot_id": "1.9-02",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "extras": "commandos looking up",
+          "prompt": "commandos in the groves looking up at the sky, one gripping his neighbor's arm",
+          "motion": "Heads snap up; one man grips another's arm; no one cheers."
+        },
+        {
+          "shot_id": "1.9-02a",
+          "duration_s": 2,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa on his feet in the groves, staring up at the jets and shouting over the roar, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "His face is lifted to the sky as he shouts.",
+          "face": "astonished, needing confirmation",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.9-02b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed beside Mostafa, one hand gripping the boy's shoulder while he shouts over the jet roar, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He keeps his hand on Mostafa's shoulder as the jets pass.",
+          "face": "proud, voice catching",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.9-02c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel under the trees after the jets pass, barely whispering as the meaning lands, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "His mouth barely opens; the joke is gone.",
+          "face": "small frightened realization",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.9-03",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "a runner",
+          "prompt": "a runner sprinting through the trees to the captain",
+          "motion": "The runner arrives breathless; the captain rises."
+        },
+        {
+          "shot_id": "1.9-03a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "Mahmoud running through the trees with the headset half off his head, breathless with the signal, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He stops just close enough to report to Shalabi.",
+          "face": "urgent, breathless precision",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.9-04",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "fingers breaking the red wax seal of a military envelope",
+          "motion": "The wax cracks; the envelope opens."
+        },
+        {
+          "shot_id": "1.9-05",
+          "duration_s": 5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "very slow push-in",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain reading the orders, his face giving nothing away, harsh afternoon light through leaves",
+          "motion": "Very slow push-in as he reads; his eyes move along the lines; nothing else moves."
+        },
+        {
+          "shot_id": "1.9-05a",
+          "duration_s": 9,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "Shalabi after reading the opened orders, Sayed and platoon leaders gathered close around him, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He looks up from the order and states the mission without drama.",
+          "face": "low, every word placed",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.9-05b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed in the tight group around Shalabi in harsh afternoon light, steady and practical, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks for the measure of the task.",
+          "face": "steady, focused",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.9-05c",
+          "duration_s": 8,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0009"
+          ],
+          "prompt": "Shalabi folding the order into his pocket under the trees, already thinking in hours, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He folds the order as he gives the time they must hold.",
+          "face": "controlled weight, precise",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-03",
+          "line": 1,
+          "shot_id": "1.9-02a",
+          "intensity": 8,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "disbelief breaking into hope",
+          "delivery": "Throw the question up into the aircraft noise rather than toward Sayed. Use Mostafa’s full adult chest voice; he is overwhelmed, not childishly excited."
+        },
+        {
+          "speaker": "C-02",
+          "line": 2,
+          "shot_id": "1.9-02b",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "buried relief and old grief",
+          "delivery": "Keep hold of Mostafa’s shoulder and force the words through the roar. Let the catch come only on the pause, then recover immediately."
+        },
+        {
+          "speaker": "C-06",
+          "line": 3,
+          "shot_id": "1.9-02c",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "slow",
+          "emotion": "awed fear",
+          "delivery": "Say it almost to yourself as the meaning lands. «خَلَاصْ» means the waiting is over, not that the danger has passed."
+        },
+        {
+          "speaker": "C-04",
+          "line": 4,
+          "shot_id": "1.9-03a",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "disciplined urgency",
+          "delivery": "Arrive short of breath, but clip the report cleanly for the captain. The urgency comes from the signal, never from panic."
+        },
+        {
+          "speaker": "C-01",
+          "line": 5,
+          "shot_id": "1.9-05a",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "controlled weight of command",
+          "delivery": "Brief the tight circle of leaders, not the audience. Place the road and the armored brigade precisely, then make «هَنْعَطَّلُهْ» a decision already taken."
+        },
+        {
+          "speaker": "C-02",
+          "line": 6,
+          "shot_id": "1.9-05b",
+          "intensity": 7,
+          "volume": "normal",
+          "pace": "quick",
+          "emotion": "practical apprehension",
+          "delivery": "Ask only for the required duration; Sayed already understands the rest. Keep it level and professional, with no challenge in the tone."
+        },
+        {
+          "speaker": "C-01",
+          "line": 7,
+          "shot_id": "1.9-05c",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "grim resolve",
+          "delivery": "Give three hours, then allow the pause to stretch the burden to four. Finish on the men east of the canal, making clear why his commandos must hold without turning it into a slogan."
+        }
+      ]
+    },
+    {
+      "beat": "1.10",
+      "title": "\"Here is Cairo\"",
+      "target_s": 45,
+      "location": "LOC-0007",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_CAIRO_BLUE_GLASS"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "RADIO ANNOUNCER",
+          "line": 1,
+          "shot_id": "1.10-01",
+          "intensity": 7,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "triumphant formal announcement",
+          "delivery": "A 1973 Egyptian state radio announcer reading a military communique in formal Arabic: proud, ringing, declamatory.",
+          "fx": "radio"
+        },
+        {
+          "speaker": "C-14",
+          "line": 2,
+          "shot_id": "1.10-04a",
+          "intensity": 8,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "astonished, overflowing excitement",
+          "delivery": "Call from the window toward Fatma, barely able to get the news out. The repeated «عَدِّينَا» bursts from Ali as if he personally took part."
+        },
+        {
+          "speaker": "C-13",
+          "line": 3,
+          "shot_id": "1.10-06a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained hope edged with fear",
+          "delivery": "Answer Ali without looking away from Sayed’s photograph. She is acknowledging him while refusing, for one more moment, to surrender to the celebration."
+        },
+        {
+          "speaker": "C-14",
+          "line": 4,
+          "shot_id": "1.10-06b",
+          "intensity": 7,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "breathless hope seeking certainty",
+          "delivery": "Turn from the window and ask Fatma directly over the radio and ululation. The question is simple and literal: for Ali, crossing means going home."
+        },
+        {
+          "speaker": "C-13",
+          "line": 5,
+          "shot_id": "1.10-06c",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "fragile hope breaking through grief",
+          "delivery": "Let the long silence happen before speaking. Give the first «قَرَّبْنَا» to Ali and the second almost to herself, with the smile arriving through tears."
+        }
+      ],
+      "sfx": "Radio, ululation rising floor by floor, children shouting in the street",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.10-01",
+          "duration_s": 7,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0013"
+          ],
+          "prompt": "a narrow stairwell of an old Cairo apartment building, a neighbor's door open with a tabletop radio glowing inside",
+          "motion": "The radio dial glows; a neighbor leans in to turn up the volume."
+        },
+        {
+          "shot_id": "1.10-02",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "slow tilt up the stairwell",
+          "characters": [],
+          "extras": "women on the landings",
+          "prompt": "women stepping out onto the landings of the stairwell, faces lit with joy, ululating",
+          "motion": "Slow tilt up past landings as women come out and ululate."
+        },
+        {
+          "shot_id": "1.10-03",
+          "duration_s": 3,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0014"
+          ],
+          "prompt": "a woman's foot stopping dead on a sewing machine treadle",
+          "motion": "The foot stops; the treadle swings and halts."
+        },
+        {
+          "shot_id": "1.10-04",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "the boy at the blue-painted window scratching at the paint with his fingernail until a tiny clear spot appears, pressing his eye to it",
+          "motion": "He scratches the paint; a pinhole of daylight appears; he presses his eye to it."
+        },
+        {
+          "shot_id": "1.10-04a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "Ali pressed to the blue-painted window after scratching a peephole, shouting back into the room, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He turns from the pinhole and shouts for his mother.",
+          "face": "breathless joy, beside himself",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.10-05",
+          "duration_s": 3,
+          "size": "ECU",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "a tiny scratched hole in blue window paint with bright daylight and a glimpse of a celebrating street beyond",
+          "motion": "Through the pinhole, figures move in the bright street."
+        },
+        {
+          "shot_id": "1.10-06",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "the woman not moving from the sewing machine, looking at the soldier's portrait on the wall, celebration sounds outside",
+          "motion": "She stays still, eyes on the portrait; her hand slowly leaves the fabric.",
+          "model": "premium",
+          "notes": "The emotional counterpoint of the act — premium."
+        },
+        {
+          "shot_id": "1.10-06a",
+          "duration_s": 2,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "Fatma at the sewing machine, not going to the window, eyes fixed on Sayed's portrait, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "Only her mouth moves while the celebrations rise outside.",
+          "face": "very quiet, holding herself still",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.10-06b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "Ali turning from the window toward his mother, breathless and needing the promise said aloud, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He points back toward the street light through the pinhole.",
+          "face": "hopeful, urgent child logic",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.10-06c",
+          "duration_s": 16,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "Fatma looking at Sayed's portrait as a smile finally breaks and her eyes fill, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She answers after a long beat, almost to the photograph.",
+          "face": "relief and tears held together",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        }
+      ]
+    },
+    {
+      "beat": "1.11",
+      "title": "Six Mi-8s",
+      "target_s": 50,
+      "location": "LOC-0005",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DUSK_RED"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": {
+        "ref": "screenplay 1.11 VO",
+        "placement": "after boarding, over 1.11-04 to 1.11-06 as the doors close and the formation lifts",
+        "est_s": 7
+      },
+      "sfx": "Rotors spinning up, rotor wash, wind, shouted orders",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.11-01",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-02",
+            "C-03"
+          ],
+          "extras": "commandos standing beside helicopters",
+          "prompt": "commandos standing beside helicopters at about 5:35 P.M., moments after sunset, breaking their fast with dates and canteens passed hand to hand",
+          "motion": "A date is passed from hand to hand; a man drinks from a canteen and passes it on.",
+          "notes": "v2 restage: beat now begins at sunset, about 5:35 P.M., with the men breaking their fast beside the aircraft."
+        },
+        {
+          "shot_id": "1.11-01a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed passing dates down the line beside the Mi-8s, shouting over the rotor noise, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He thrusts dates into hands while yelling over the rotors.",
+          "face": "gruff morale under noise",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.11-01b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel taking a date beside the helicopters, grinning over the rotor wash, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He grins into the noise as dust whips past.",
+          "face": "raised joking hope",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.11-01c",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed leaning close to Mostafa's ear by the helicopter line, closing the boy's hand around the date, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He speaks into Mostafa's ear over the noise.",
+          "face": "gruff kindness, protective",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.11-01d",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "Mahmoud tugging at his plain web gear beside the aircraft, looking along the men with no armor, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He looks down at his own chest as he calls over the rotors.",
+          "face": "half joking, half afraid",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.11-01e",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed slapping Mahmoud's shoulder and then the next man's shoulder beside the helicopters, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He turns the fear into an order the men can use.",
+          "face": "raised, practical brotherhood",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.11-02",
+          "duration_s": 3,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "a hand passing a single date to another hand, a canteen behind, last violet light",
+          "motion": "The date passes between two hands."
+        },
+        {
+          "shot_id": "1.11-03",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "six Mi-8 helicopters on an airfield apron at blue dusk, rotors turning, dust whipping",
+          "motion": "Rotors spin up; dust whips across the apron."
+        },
+        {
+          "shot_id": "1.11-03a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "Shalabi standing at the door of the lead Mi-8, arm sweeping the company aboard over the rotor roar, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He sweeps his arm toward the open door and shouts them in.",
+          "face": "urgent command, controlled",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.11-04",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "handheld",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            "C-05",
+            "C-06"
+          ],
+          "extras": "commandos running aboard in sticks",
+          "assets": [
+            "VEH-0001",
+            "PRP-0002",
+            "PRP-0003",
+            "PRP-0006"
+          ],
+          "prompt": "commandos running aboard a Mi-8 in sticks carrying RPG launchers, Malutka cases, mine sacks, and engineer probes",
+          "motion": "Men run up and pile in through the side door, passing equipment."
+        },
+        {
+          "shot_id": "1.11-05",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "the captain hauling the last commando in through the helicopter door and sliding it shut",
+          "motion": "He pulls the last man in and slams the door shut."
+        },
+        {
+          "shot_id": "1.11-06",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "six Mi-8 helicopters lifting off one after another into the blue-black sky, dust clouds below",
+          "motion": "The helicopters lift off in sequence and tilt forward into the dark."
+        }
+      ],
+      "on_screen_text": [
+        "SUPER «٥:٣٥ مَسَاءً — الصَّالِحِيَّة» over 1.11-01"
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-02",
+          "line": 1,
+          "shot_id": "1.11-01a",
+          "intensity": 7,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "rough cheer masking danger",
+          "delivery": "Pass the dates briskly without turning the line into a speech. Throw the Sinai joke down the line to keep the young men moving and eating."
+        },
+        {
+          "speaker": "C-06",
+          "line": 2,
+          "shot_id": "1.11-01b",
+          "intensity": 6,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "playful nerves",
+          "delivery": "Take the date and answer Sayed at once, grinning because joking is easier than looking at the aircraft. Do not wait for a laugh."
+        },
+        {
+          "speaker": "C-02",
+          "line": 3,
+          "shot_id": "1.11-01c",
+          "intensity": 7,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "gruff protectiveness",
+          "delivery": "Close Mostafa's fist around the date and speak directly into his ear. Make «كُلْ» an instruction; let the kindness appear only in the second sentence."
+        },
+        {
+          "speaker": "C-04",
+          "line": 4,
+          "shot_id": "1.11-01d",
+          "intensity": 6,
+          "volume": "raised",
+          "pace": "normal",
+          "emotion": "uneasy humor",
+          "delivery": "Check the web gear while looking along the unarmored line. Aim the question at Sayed as a joke whose answer Mahmoud already knows."
+        },
+        {
+          "speaker": "C-02",
+          "line": 5,
+          "shot_id": "1.11-01e",
+          "intensity": 7,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "stern reassurance",
+          "delivery": "Reject the idea of armor with a clipped «لَأْ». Mark «إِنْتَ» and «هُوَّ» with the two shoulder slaps, making mutual responsibility physical rather than sentimental."
+        },
+        {
+          "speaker": "C-01",
+          "line": 6,
+          "shot_id": "1.11-03a",
+          "intensity": 8,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "controlled operational urgency",
+          "delivery": "Sweep the men toward the aircraft and project over the rotor roar. The repetition is for movement and audibility, never panic."
+        }
+      ]
+    },
+    {
+      "beat": "1.12",
+      "title": "Iftar",
+      "target_s": 40,
+      "location": "LOC-0006",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DUSK_RED"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "sfx": "Maghrib call to prayer → hard cut to rotor thunder",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "1.12-01",
+          "duration_s": 4,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "prompt": "orange sunset over green fields and the village minaret",
+          "motion": "The sun sinks; birds cross the sky."
+        },
+        {
+          "shot_id": "1.12-02",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-11",
+            "C-12"
+          ],
+          "prompt": "a family sitting around a low round table (tabliya) with bread, beans, and dates at sunset, a girl breaking her fast with a date",
+          "motion": "The girl eats a date; the mother arranges the dishes."
+        },
+        {
+          "shot_id": "1.12-02a",
+          "duration_s": 6,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "Zeinab at the low iftar table pointing gently at the empty plate among the full dishes, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She points softly, not accusing.",
+          "face": "gentle curiosity, careful not to hurt",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.12-02b",
+          "duration_s": 2,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "Umm Mostafa seated at the iftar table, answering simply beside the empty plate, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She says it as if the answer should be obvious.",
+          "face": "simple certainty",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.12-02c",
+          "duration_s": 3,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "Zeinab lowering her hand at the table, softly saying the truth nobody wants to say, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She looks from the plate to her mother.",
+          "face": "soft, afraid of hurting her mother",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.12-02d",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "Umm Mostafa rising from the table without eating, level and ordinary about keeping the plate warm, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She gives the instruction while standing, not looking at Zeinab.",
+          "face": "level, grief hidden inside routine",
+          "lip_sync": "required",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced."
+        },
+        {
+          "shot_id": "1.12-03",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "an empty plate set at a low round table among full dishes",
+          "motion": "Still. Steam drifts from the dish beside the empty plate."
+        },
+        {
+          "shot_id": "1.12-04",
+          "duration_s": 3,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "the mother rising from the table without eating and walking to the doorway",
+          "motion": "She rises and walks to the doorway."
+        },
+        {
+          "shot_id": "1.12-05",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "the mother in the doorway seen from behind, looking up at the darkening sky to the east",
+          "motion": "She stands in the doorway, looking east as the light fades."
+        },
+        {
+          "shot_id": "1.12-06",
+          "duration_s": 4,
+          "size": "EWS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "location": "LOC-0001",
+          "characters": [],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "six dark helicopter silhouettes flying low and east against the last violet light over the desert",
+          "motion": "The six silhouettes cross the frame low and fast.",
+          "model": "premium",
+          "notes": "SMASH CUT from the call to prayer to rotor thunder. Act-out."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-12",
+          "line": 1,
+          "shot_id": "1.12-02a",
+          "intensity": 4,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "gentle curiosity edged with concern",
+          "delivery": "Point to the spare plate and ask your mother directly. Keep it innocent, but let a slight hesitation show that Zeinab already suspects the answer."
+        },
+        {
+          "speaker": "C-11",
+          "line": 2,
+          "shot_id": "1.12-02b",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained worry presented as certainty",
+          "delivery": "Answer without looking up or explaining. Make the two words sound settled because admitting uncertainty would break her composure."
+        },
+        {
+          "speaker": "C-12",
+          "line": 3,
+          "shot_id": "1.12-02c",
+          "intensity": 5,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "childlike honesty softened by care",
+          "delivery": "Speak carefully to your mother, not as a correction but as a warning against disappointment. Let the last word fall rather than pressing the point."
+        },
+        {
+          "speaker": "C-11",
+          "line": 4,
+          "shot_id": "1.12-02d",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "fear held down by stubborn routine",
+          "delivery": "Do not look at Zeinab. Give the instruction as an ordinary household chore; the refusal to acknowledge his absence carries the pain."
+        }
+      ]
+    }
+  ]
+}

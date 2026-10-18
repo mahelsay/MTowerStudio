@@ -1,0 +1,147 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, actor-playable bereavement beat with a clear progression: dreaded arrival, Sayed’s last words, the child’s direct question, then Fatma’s controlled invitation. The letter is period-plausible and emotionally effective, provided the final phrases are delivered without patriotic grandeur.",
+  "scene_issues": [
+    "The march cue may overstate the patriotic note immediately after an intimate loss; keep it restrained until the transition into the next beat."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "suppressed grief and obligation",
+        "delivery": "Mostafa remains upright and offers the letter directly to Fatma because he promised Sayed. Let the pause after «سَيِّدْ» catch slightly, but do not openly break down."
+      },
+      "text": "عَمّْ سَيِّدْ… وَصَّانِي أَدِّيهُولِكْ بِإِيدِي."
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [
+        "«وِرَبِّيهْ رَاجِلْ» and «مِشْ نَدْمَانْ» approach familiar patriotic-death phrasing, so the performance must keep them personal rather than slogan-like."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained love and settled resolve",
+        "delivery": "Read it as words Sayed wrote practically before danger, not as a ghost speaking from beyond death. Stay plain and intimate, allowing only «وِأَنَا مِشْ نَدْمَانْ» to carry a quiet final release."
+      },
+      "text": "«فَاطْمَةْ… لَوْ الْجَوَابْ دَهْ وِصِلِّكْ مِنْ إِيدْ غِيرْ إِيدِي، يِبْقَى خَلَاصْ. مَا تِعَيَّطِيشْ قُدَّامْ عَلِي. قُولِيلُهْ أَبُوهْ رَاحْ عَشَانْ نِرْجَعْ السُّوِيسْ… وِرَبِّيهْ رَاجِلْ. وِأَنَا مِشْ نَدْمَانْ.»"
+    },
+    {
+      "n": 3,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "fearful curiosity",
+        "delivery": "Ali looks directly at Mostafa and asks the literal question he needs answered. Keep it small and unperformed, with no adult understanding added to the child’s voice."
+      },
+      "text": "إِنْتَ كُنْتْ مَعَ بَابَا؟"
+    },
+    {
+      "n": 4,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The reassurance is natural but familiar and only lightly individualized to Mostafa."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "tenderness under guilt",
+        "delivery": "At the boy’s height, Mostafa gives him one firm truth and one kindness. Hold Ali’s gaze and resist smiling or sounding falsely cheerful."
+      },
+      "text": "كُنْتْ مَعَاهْ. وِكَانْ بِيِحْكِي عَنَّكْ عَلَى طُولْ."
+    },
+    {
+      "n": 5,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "grief held behind hospitality",
+        "delivery": "Fatma steps aside and addresses Mostafa almost maternally, accepting both him and what he has brought. Keep the words steady; the effort not to cry should register only in the breath."
+      },
+      "text": "اِتْفَضَّلْ يَا ابْنِي."
+    }
+  ],
+  "beat": "5.6",
+  "file": "05_act_five_v2.md",
+  "hash": "81f4c6d2bc317534",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T12:04:11+00:00",
+  "seconds": 60.2,
+  "usage": {
+    "prompt_tokens": 2997,
+    "completion_tokens": 4848
+  },
+  "cost_usd": 0.10895
+}

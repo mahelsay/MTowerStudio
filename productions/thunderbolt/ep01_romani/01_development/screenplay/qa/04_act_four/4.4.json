@@ -1,0 +1,71 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A spare, effective depletion beat. Both lines are natural, playable and brief; the progression from empty rocket bag to last missile to anti-tank grenade clearly turns the action toward desperate close combat.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The report is necessarily functional and could be spoken by almost any private; it carries little specifically Menoufia or Mostafa texture."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "stunned dread",
+        "delivery": "He keeps his empty hand inside the bag for half a beat, then looks at Sayed. Report the fact quietly, as if saying it aloud makes their danger real."
+      },
+      "text": "الشَّنْطَةْ فَاضْيَةْ يَا شَاوِيشْ."
+    },
+    {
+      "n": 2,
+      "speaker": "ADEL",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "exhausted disbelief with gallows amusement",
+        "delivery": "He watches the impact, then sees the empty launcher. Let a tiny breath of laughter escape before the words; he is speaking mainly to himself, not celebrating."
+      },
+      "text": "دَهْ كَانْ آخِرْ وَاحِدْ."
+    }
+  ],
+  "beat": "4.4",
+  "file": "04_act_four_v2.md",
+  "hash": "d98d2ed813c67edb",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:52:52+00:00",
+  "seconds": 23.6,
+  "usage": {
+    "prompt_tokens": 2227,
+    "completion_tokens": 1873
+  },
+  "cost_usd": 0.04637
+}

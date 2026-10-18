@@ -1,0 +1,141 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, actor-led family beat with a clean turn: innocent play opens the wound of displacement, Fatma answers with borrowed certainty, and Ali’s follow-up leaves her trapped. The stopped and restarted sewing machine carries the silence effectively without narration.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ALI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 2,
+        "volume": "normal",
+        "pace": "normal",
+        "emotion": "childish pride and excitement",
+        "delivery": "Keep flying the toy while announcing the promise to Fatma. Lean happily on «بِجَدّْ» as proof that this is not just part of the game."
+      },
+      "text": "بَابَا قَالْ هَيِرَكِّبْنِي طَيَّارَةْ بِجَدّْ."
+    },
+    {
+      "n": 2,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 3,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "fondness covering disappointment",
+        "delivery": "Stay focused on the needle and answer almost automatically over the machine. Let the smile warm the line, but leave a trace of old weariness underneath."
+      },
+      "text": "بَابَاكْ بِيِوْعِدْ كْتِيرْ."
+    },
+    {
+      "n": 3,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "homesickness surfacing suddenly",
+        "delivery": "Land the plane and look directly at Fatma. Ask simply and sincerely, with none of an adult’s awareness of how painful the question is."
+      },
+      "text": "مَامَا… إِحْنَا هَنِرْجَعْ السُّوِيسْ إِمْتَى؟"
+    },
+    {
+      "n": 4,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 9,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "forced certainty over fear",
+        "delivery": "After looking at Sayed’s photograph, give Ali the answer he needs. Do not make it patriotic or declarative; she is steadying her child and herself."
+      },
+      "text": "لَمَّا بَابَاكْ يِرَجَّعْهَا."
+    },
+    {
+      "n": 5,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "normal",
+        "pace": "normal",
+        "emotion": "innocent insistence",
+        "delivery": "Hold Fatma’s gaze and follow the logic of her answer exactly as a child would. Apply pressure without accusation; he genuinely expects there to be a date."
+      },
+      "text": "وِهُوَّ هَيِرَجَّعْهَا إِمْتَى؟"
+    }
+  ],
+  "beat": "1.5",
+  "file": "01_act_one_v2.md",
+  "hash": "25698d8a6bdfc0be",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:36:17+00:00",
+  "seconds": 44.3,
+  "usage": {
+    "prompt_tokens": 2429,
+    "completion_tokens": 3252
+  },
+  "cost_usd": 0.07476
+}

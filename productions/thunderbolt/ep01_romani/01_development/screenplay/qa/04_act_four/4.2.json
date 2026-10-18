@@ -1,0 +1,71 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A clean tactical turn: Mahmoud spots the guns traversing, and Shalabi answers with an immediate protective order. Both lines are short, playable over the engines, and appropriate to rank and danger.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 7,
+        "lipsync": 10
+      },
+      "issues": [
+        "The internal sukun in «بِيْلِفُّوا» is unnecessary; «بِيلِفُّوا» is cleaner vocalization."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "controlled alarm",
+        "delivery": "Mahmoud snaps his attention toward Shalabi and projects over the engines. Report exactly what he sees without letting fear turn into panic."
+      },
+      "text": "يَا فَنْدِمْ! بِيْلِفُّوا الْمَدَافِعْ عَلِينَا!"
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "compressed lethal urgency",
+        "delivery": "Shalabi throws the order down the line in one clipped burst. Strike «كُلُّهْ» and «حُفْرِتُهْ» hard; keep «يَلَّا» short, not theatrical."
+      },
+      "text": "كُلُّهْ يِنْزِلْ فِي حُفْرِتُهْ! يَلَّا!"
+    }
+  ],
+  "beat": "4.2",
+  "file": "04_act_four_v2.md",
+  "hash": "293901e2fa3edb57",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:58:10+00:00",
+  "seconds": 341.8,
+  "usage": {
+    "prompt_tokens": 2407,
+    "completion_tokens": 2558
+  },
+  "cost_usd": 0.06079
+}

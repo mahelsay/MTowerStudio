@@ -1,0 +1,117 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, actor-led beat with a clear turn from carefree play to Fatma’s suppressed wartime fear. The embrace and minimal dialogue carry the subtext without giving the family impossible knowledge.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 2,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "carefree excitement",
+        "delivery": "Throw the imaginary grenade toward the other boys and announce the role proudly. It is pure play, with no awareness of the real fighting."
+      },
+      "text": "أَنَا الصَّاعْقَةْ! بُوووومْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "FATMA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "fear breaking through control",
+        "delivery": "Call from the doorway before thinking. The sharpness comes from sudden panic, not anger at Ali."
+      },
+      "text": "عَلِي! تَعَالَ هِنَا!"
+    },
+    {
+      "n": 3,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 3,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "puzzled mild protest",
+        "delivery": "Speak into her shoulder while passively accepting the hug. He is explaining himself because he cannot understand what frightened her."
+      },
+      "text": "إِحْنَا بِنِلْعَبْ يَا مَامَا…"
+    },
+    {
+      "n": 4,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "suppressed fear and relief",
+        "delivery": "Keep holding him with her eyes shut and speak close to his hair. The repetition reassures herself more than it answers him."
+      },
+      "text": "عَارْفَةْ… عَارْفَةْ."
+    }
+  ],
+  "beat": "3.10",
+  "file": "03_act_three_v2.md",
+  "hash": "616b910956ebff1b",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:43:26+00:00",
+  "seconds": 41.6,
+  "usage": {
+    "prompt_tokens": 2323,
+    "completion_tokens": 3566
+  },
+  "cost_usd": 0.08061
+}

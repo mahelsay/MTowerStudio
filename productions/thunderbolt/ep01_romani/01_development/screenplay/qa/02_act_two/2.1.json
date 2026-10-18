@@ -1,0 +1,95 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, playable insertion beat with a clear progression: hesitation, forced movement, efficient unloading, then a dry joke that releases pressure without weakening the danger. The rotor-noise performance logic and military address are convincing.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "rushed",
+        "emotion": "controlled urgency with protective impatience",
+        "delivery": "Get directly into Mostafa’s ear over the rotors. Hit «مِتْرِينْ» as reassurance, then snap «اِنْطّْ» as an order that leaves him no time to think."
+      },
+      "text": "مِتْرِينْ يَا مُصْطَفَى! اِنْطّْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 8,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "hard concentration",
+        "delivery": "Punch each word in time with the hand-to-hand unloading. Keep it gravelly and practical, with no wasted breath or visible panic."
+      },
+      "text": "خُدْ! وَرَاكْ! خُدْ!"
+    },
+    {
+      "n": 3,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 8,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [
+        "The mud joke is familiar, but the deadpan timing makes it useful and begins to define Adel."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "raised",
+        "pace": "measured",
+        "emotion": "disgust masking nerves",
+        "delivery": "Call it loudly enough to beat the rotors, but do not perform the joke. Pull the trapped boot free, inspect the mud, and deliver «شُورْبَةْ» with flat disbelief."
+      },
+      "text": "دِي مِشْ أَرْضْ… دِي شُورْبَةْ!"
+    }
+  ],
+  "beat": "2.1",
+  "file": "02_act_two_v2.md",
+  "hash": "e93f70eeeb69e63f",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:20:25+00:00",
+  "seconds": 24.3,
+  "usage": {
+    "prompt_tokens": 2488,
+    "completion_tokens": 2023
+  },
+  "cost_usd": 0.05041
+}

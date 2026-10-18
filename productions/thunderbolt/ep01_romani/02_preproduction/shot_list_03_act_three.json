@@ -1,0 +1,1749 @@
+{
+  "$schema_note": "Shot list v1.2 — see shot_list_01_act_one.json for field conventions. Beat-level location/look/wear are defaults; VO and dialogue are referenced from the locked screenplay.",
+  "version": "2.0",
+  "episode": "ep01_romani",
+  "part": "03_act_three",
+  "screenplay": "../01_development/screenplay/03_act_three.md",
+  "screenplay_lock": "ep01-script-v2.0-act3",
+  "production_config": "production_config.json",
+  "casting": "casting.json",
+  "status": "draft — v2.0 drama rewrite shot list update",
+  "target_length_s": 515,
+  "defaults": {
+    "lip_sync": "avoid",
+    "model": "default"
+  },
+  "rules": "Sound-only from the order to fire (3.6) until the half-tracks arrive (3.13). Violence restrained: no wounds, no bodies, crews escape into smoke. Israeli figures distant only. Tanks are Sho't Kal Centurions (VEH-0005).",
+  "beats": [
+    {
+      "beat": "3.1",
+      "title": "The reconnaissance flight",
+      "target_s": 35,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAWN_HAZE"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": {
+        "ref": "screenplay 3.1 VO",
+        "placement": "over selected shots",
+        "est_s": 7
+      },
+      "sfx": "Jet engine growing to a roar, then fading; silence",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.1-01",
+          "duration_s": 5.1,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "prompt": "flat empty desert in low morning sun, a faint rising engine whine, nothing visible",
+          "motion": "Still desert; heat begins to shimmer at the horizon."
+        },
+        {
+          "shot_id": "3.1-02",
+          "duration_s": 6.7,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "pan with the aircraft",
+          "characters": [],
+          "assets": [
+            "VEH-0004"
+          ],
+          "prompt": "a single jet flying low over a straight desert road, banking slowly, sweeping the desert on both sides",
+          "motion": "The jet banks low along the road; the camera pans to follow."
+        },
+        {
+          "shot_id": "3.1-03",
+          "duration_s": 6.7,
+          "size": "ECU",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private's unblinking eye at ground level inside a pit, a jet's shadow sweeping across the sand above",
+          "motion": "A fast shadow sweeps across the sand; the eye does not blink."
+        },
+        {
+          "shot_id": "3.1-03a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "inside a shallow sand pit under the passing reconnaissance aircraft shadow, dust on the pit wall: SAYED delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled alarm",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.1-03b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "inside a shallow sand pit under the passing reconnaissance aircraft shadow, dust on the pit wall: ADEL delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "fearful uncertainty",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.1-03c",
+          "duration_s": 3.7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "inside a shallow sand pit under the passing reconnaissance aircraft shadow, dust on the pit wall: SAYED delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "grim reassurance hidden as dry humour",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.1-04",
+          "duration_s": 6.8,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0004"
+          ],
+          "prompt": "the jet shrinking into the distance over the empty flat desert",
+          "motion": "The aircraft dwindles into the haze; the sound fades to silence."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-02",
+          "line": 1,
+          "shot_id": "3.1-03a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "controlled alarm",
+          "delivery": "Hiss the order toward the neighbouring pits without lifting the head. Keep it clipped and forceful enough to stop an involuntary movement despite the approaching engine."
+        },
+        {
+          "speaker": "C-06",
+          "line": 2,
+          "shot_id": "3.1-03b",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "fearful uncertainty",
+          "delivery": "Let the question escape only after the engine fades. Adel is still rigid in the pit and barely has enough breath to form the word."
+        },
+        {
+          "speaker": "C-02",
+          "line": 3,
+          "shot_id": "3.1-03c",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "grim reassurance hidden as dry humour",
+          "delivery": "Answer without looking toward Adel and without relaxing. The first half acknowledges the danger; the second quietly cuts through the younger soldier’s panic."
+        }
+      ]
+    },
+    {
+      "beat": "3.2",
+      "title": "\"They crossed!\"",
+      "target_s": 45,
+      "location": "LOC-0006",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_VILLAGE_DELTA"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-12",
+          "line": 1,
+          "shot_id": "3.2-03",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "rushed",
+          "emotion": "breathless joy",
+          "delivery": "A 12-year-old girl who has just run from the radio, out of breath, shouting with joy."
+        },
+        {
+          "speaker": "C-11",
+          "line": 2,
+          "shot_id": "3.2-04",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "joy stopped by fear; a mother's only question",
+          "delivery": "Taking her daughter by the shoulders; quiet, the celebration goes silent around her."
+        },
+        {
+          "speaker": "C-12",
+          "line": 3,
+          "shot_id": "3.2-04a",
+          "intensity": 6,
+          "volume": "normal",
+          "pace": "quick",
+          "emotion": "hope strained by uncertainty",
+          "delivery": "She invents reassurance the instant she sees what her mother needs. Begin brightly, then let the certainty weaken slightly by «يَامَّا»."
+        },
+        {
+          "speaker": "C-11",
+          "line": 4,
+          "shot_id": "3.2-04b",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "worry sealed behind resolve",
+          "delivery": "She releases Zeinab, lifts the basket and ends the conversation before hope can become a lie. The pause is practical rather than sentimental."
+        }
+      ],
+      "sfx": "Radio news, men's voices, cheering",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.2-01",
+          "duration_s": 9.3,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "extras": "eight village men in galabeyas and skullcaps on wooden benches",
+          "assets": [
+            "PRP-0012"
+          ],
+          "prompt": "wide shot of the open front of a small 1970s Egyptian village grocery in the morning, sacks and tins on wooden shelves, a portable transistor radio on the wooden counter, village men crowded on wooden benches leaning toward the radio; in the right foreground, standing apart from them, a village woman in a black tarha holding a woven basket, listening",
+          "lead_face": "right",
+          "motion": "The men lean toward the radio; the woman stands still at the edge."
+        },
+        {
+          "shot_id": "3.2-02",
+          "duration_s": 9.3,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "handheld",
+          "characters": [
+            "C-12"
+          ],
+          "extras": "village men in galabeyas seated on benches",
+          "prompt": "inside a cramped 1970s Egyptian village grocery shop, shelves of tins and sacks of rice, warm daylight from the open door: a 12-year-old schoolgirl in a long-sleeved dress squeezing between village men in galabeyas seated shoulder to shoulder on wooden benches, leaning toward an old brown leather-cased transistor radio on the shop counter, her face in profile turned toward the radio, listening intently, not looking at the camera",
+          "motion": "She squeezes in, listens a second, then spins and runs out."
+        },
+        {
+          "shot_id": "3.2-03",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "the girl running toward her mother, who is just out of frame, outside the village grocery, breathless with joy, calling out to her, wearing her faded blue cotton dress, face in three-quarter view, mouth open mid-shout, not looking at the camera",
+          "motion": "She runs up breathless and shouts the news to her mother, beaming.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "breathless joy",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.2-04",
+          "duration_s": 5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "the mother holding her daughter by the shoulders, her face close, asking one quiet question, her face in three-quarter view, mouth visible below the headscarf, eyes searching the girl's face, not looking at the camera",
+          "motion": "She grips the girl's shoulders; one quiet question; her eyes search the girl's face.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "joy stopped by fear",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.2-04a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-12"
+          ],
+          "prompt": "outside the crowded village grocery with the radio crowd behind: ZEINAB delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "hope strained by uncertainty",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.2-04b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-11"
+          ],
+          "prompt": "outside the crowded village grocery with the radio crowd behind: UMM MOSTAFA delivering line 4, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "worry sealed behind resolve",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.2-05",
+          "duration_s": 9.4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-12",
+            "C-11"
+          ],
+          "extras": "men cheering behind",
+          "prompt": "the girl with no answer, mother and daughter still, the men behind them cheering around the radio",
+          "motion": "Behind them the men cheer and raise their arms; mother and daughter stay still."
+        }
+      ]
+    },
+    {
+      "beat": "3.3",
+      "title": "The bait",
+      "target_s": 35,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Engines and track clatter passing and fading",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.3-01",
+          "duration_s": 6.1,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0006",
+            "VEH-0007"
+          ],
+          "prompt": "a military jeep leading five tracked armored vehicles along a straight desert road in bright morning heat haze",
+          "motion": "The small column approaches through the shimmer."
+        },
+        {
+          "shot_id": "3.3-02",
+          "duration_s": 6.1,
+          "size": "MS",
+          "lens": "LENS_135_LONG",
+          "move": "pan",
+          "characters": [],
+          "assets": [
+            "VEH-0007"
+          ],
+          "extras": "crews scanning the dunes (WRD-0004)",
+          "prompt": "crews standing in the hatches of tracked vehicles scanning the desert on both sides with binoculars, seen from a distance",
+          "motion": "The crews sweep their binoculars across the desert as they pass."
+        },
+        {
+          "shot_id": "3.3-03",
+          "duration_s": 7.4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static, ground level",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain inside a pit watching through a narrow gap between his forearm and the sand, vehicles passing beyond",
+          "motion": "His eyes follow the vehicles; his hand stays flat on the ground.",
+          "notes": "v2 restage: Mahmoud passes a flat-hand sign; Shalabi keeps his hand flat on the sand and forbids engagement."
+        },
+        {
+          "shot_id": "3.3-03a",
+          "duration_s": 3.3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "inside the hidden desert command pit as the bait convoy passes; Mahmoud gives a flat-hand sign through dust: MAHMOUD delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "focused vigilance",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.3-03b",
+          "duration_s": 5.4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "inside the hidden desert command pit as the bait convoy passes; Mahmoud gives a flat-hand sign through dust: SHALABI delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled alarm",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.3-04",
+          "duration_s": 6.7,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0006",
+            "VEH-0007"
+          ],
+          "prompt": "the small column of vehicles passing on into the distance down the road, dust settling",
+          "motion": "The vehicles recede; their dust settles on the road."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-04",
+          "line": 1,
+          "shot_id": "3.3-03a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "focused vigilance",
+          "delivery": "Count each vehicle while keeping his face down beside Shalabi. The report is precise and barely voiced, timed through the engine noise."
+        },
+        {
+          "speaker": "C-01",
+          "line": 2,
+          "shot_id": "3.3-03b",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "controlled alarm",
+          "delivery": "Keep his eyes on the vehicles and his palm pressed flat as a physical order to hold. The realization tightens his voice, but the command remains clipped and completely controlled."
+        }
+      ]
+    },
+    {
+      "beat": "3.4",
+      "title": "The battalion passes",
+      "target_s": 60,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": {
+        "ref": "screenplay 3.4 VO",
+        "placement": "over selected shots",
+        "est_s": 8
+      },
+      "dialogue_refs": [
+        {
+          "speaker": "C-01",
+          "line": 1,
+          "shot_id": "3.4-04",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "extreme tension held in iron control",
+          "delivery": "Into the radio handset, barely audible, while a tank battalion thunders past a few hundred meters away."
+        },
+        {
+          "speaker": "C-02",
+          "line": 2,
+          "shot_id": "3.4-06",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "urgent restraint",
+          "delivery": "Whispering hard, gripping the boy's hand on the trigger: not these — wait."
+        },
+        {
+          "speaker": "C-03",
+          "line": 3,
+          "shot_id": "3.4-05a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "fear compressed into protest",
+          "delivery": "Keep the RPG sight fixed and force the line through clenched teeth. Use a weighted adult chest voice under strain, not a frightened boy’s tremble."
+        },
+        {
+          "speaker": "C-02",
+          "line": 4,
+          "shot_id": "3.4-06a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "protective, immovable calm",
+          "delivery": "Answer Mostafa’s panic without looking away from the tank. Land the first sentence as a hard correction, then make the second a quiet order."
+        }
+      ],
+      "sfx": "Ground rumble, diesel roar, track squeal; sand trickling into the pits",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.4-01",
+          "duration_s": 5.8,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "grains of sand trembling and trickling down the wall of a pit from ground vibration",
+          "motion": "The sand grains dance and trickle down."
+        },
+        {
+          "shot_id": "3.4-02",
+          "duration_s": 7.6,
+          "size": "EWS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "a towering dust plume rising on the horizon, the dark shapes of tanks emerging from it on a straight road",
+          "motion": "The dust plume grows; tanks emerge from it one after another."
+        },
+        {
+          "shot_id": "3.4-03",
+          "duration_s": 7.6,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "pan",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "extras": "tank commander upright in a hatch with binoculars (WRD-0004) — the battalion commander, unnamed",
+          "prompt": "a column of Centurion tanks rolling down the desert road, a tank commander upright in his hatch scanning the desert with binoculars, seen from a distance",
+          "motion": "Tank after tank rolls past; the commander sweeps his binoculars across the desert."
+        },
+        {
+          "shot_id": "3.4-04",
+          "duration_s": 5.8,
+          "size": "INSERT",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01",
+            "C-04"
+          ],
+          "assets": [
+            "PRP-0007"
+          ],
+          "prompt": "the captain's hand taking a radio handset from the radio operator inside a pit, held close to a hidden mouth",
+          "motion": "He takes the handset and murmurs into it, hand cupped over his mouth.",
+          "notes": "Shalabi into the handset; voice carried close and low, no lip-sync."
+        },
+        {
+          "shot_id": "3.4-05",
+          "duration_s": 7.6,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "slow push-in",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "close-up from just behind and beside the young private, crouched in a shallow sand pit: an RPG-7 launcher resting on his right shoulder, its conical warhead pointing forward, his cheek against the tube and his eye at the optical sight, his right index finger curling on the trigger of the pistol grip; beyond the warhead, an Israeli Patton tank crossing the flat desert close by, filling the background",
+          "face": "face in profile, cheek pressed to the launcher, one eye at the sight",
+          "motion": "Slow push-in; his finger tightens on the trigger."
+        },
+        {
+          "shot_id": "3.4-05a",
+          "duration_s": 3.7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "inside a vibrating sand pit beside the road as tanks thunder past in dust: MOSTAFA delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "fear compressed into protest",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.4-06",
+          "duration_s": 7.6,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-02",
+            "C-03"
+          ],
+          "prompt": "a veteran's weathered hand reaching across and closing over a young man's trigger hand",
+          "motion": "The older hand closes over the younger one and holds it.",
+          "notes": "Sayed's whisper over the hands.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.4-06a",
+          "duration_s": 3.7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "inside a vibrating sand pit beside the road as tanks thunder past in dust: SAYED delivering line 4, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "protective, immovable calm",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.4-07",
+          "duration_s": 5.8,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Private Mostafa, a grown man of twenty, his trigger finger relaxing on the stock, eyes closing for a second",
+          "motion": "His finger loosens; he breathes out and closes his eyes."
+        },
+        {
+          "shot_id": "3.4-08",
+          "duration_s": 4.8,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "the tank battalion rolling on down the road and away into its own dust",
+          "motion": "The last tanks roll away into the dust."
+        }
+      ]
+    },
+    {
+      "beat": "3.5",
+      "title": "The road looks clear",
+      "target_s": 35,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "ISRAELI RADIO",
+          "line": 1,
+          "shot_id": "3.5-01",
+          "language": "Hebrew with Arabic subtitles",
+          "intensity": 4,
+          "volume": "normal",
+          "pace": "normal",
+          "emotion": "routine, confident report",
+          "delivery": "Israeli military radio, Hebrew: a routine all-clear report, confident.",
+          "fx": "radio"
+        },
+        {
+          "speaker": "C-04",
+          "line": 2,
+          "shot_id": "3.5-03a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "contained urgency",
+          "delivery": "Keep his lips close to Shalabi’s ear and push the report out in one controlled breath. He is precise, but he expects this may be the signal they have been waiting for."
+        },
+        {
+          "speaker": "C-01",
+          "line": 3,
+          "shot_id": "3.5-03b",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "compressed resolve",
+          "delivery": "Do not look at Mahmoud; keep watching the road. Let the pause after «لِسَّهْ» stop Mahmoud’s momentum, then give the condition with absolute control."
+        }
+      ],
+      "sfx": "Radio static, distant engines",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.5-01",
+          "duration_s": 7.5,
+          "size": "EWS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "prompt": "heat shimmer over an empty asphalt road, a second, much larger dust plume rising on the horizon",
+          "motion": "The heat shimmers; the dust plume swells.",
+          "notes": "Hebrew radio over the image."
+        },
+        {
+          "shot_id": "3.5-02",
+          "duration_s": 11.2,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "slow pan",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "the main column of an armored brigade advancing out of the heat shimmer, tanks and vehicles spaced along the road, stretching back further than the eye can follow",
+          "motion": "The long column advances; slow pan along its length.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.5-03",
+          "duration_s": 9.3,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static, ground level",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "ground-level view from beside a hidden pit, tanks rolling past on the road in the middle distance",
+          "motion": "Tanks roll past across the frame; sand trembles in the foreground."
+        },
+        {
+          "shot_id": "3.5-03a",
+          "duration_s": 3.3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "at the hidden pit wall beside the road, dust from the larger column rising beyond: MAHMOUD delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "contained urgency",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.5-03b",
+          "duration_s": 3.7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "at the hidden pit wall beside the road, dust from the larger column rising beyond: SHALABI delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "compressed resolve",
+          "lip_sync": "required"
+        }
+      ]
+    },
+    {
+      "beat": "3.6",
+      "title": "The order",
+      "target_s": 25,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-01",
+          "line": 1,
+          "shot_id": "3.6-03",
+          "intensity": 10,
+          "volume": "shout",
+          "pace": "rushed",
+          "emotion": "the release of all held tension",
+          "delivery": "One word into the handset after a long held breath: an explosive command to fire."
+        }
+      ],
+      "sfx": "The column's roar unchanged for one second, then —",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.6-01",
+          "duration_s": 12.6,
+          "size": "ECU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "extreme close-up of the captain's eyes moving along the column from front to rear, hard overhead sun",
+          "motion": "His eyes travel slowly from the front of the column to the rear.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.6-02",
+          "duration_s": 8.4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01",
+            "C-04"
+          ],
+          "assets": [
+            "PRP-0007"
+          ],
+          "prompt": "a hand taking a radio handset, thumb on the press-to-talk switch",
+          "motion": "The thumb rests on the switch; a breath."
+        },
+        {
+          "shot_id": "3.6-03",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "close-up of the captain in his pit in hard midday sun, a black Soviet-style radio telephone handset with a coiled cord held to the side of his face, shouting the order to fire into it, face in three-quarter view, mouth open and clearly visible, eyes on the column off to the side, not looking at the camera",
+          "motion": "A held breath, then he shouts one word into the handset with everything in him.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "the release of all held tension",
+          "lip_sync": "required"
+        }
+      ]
+    },
+    {
+      "beat": "3.7",
+      "title": "First and last",
+      "target_s": 40,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAY_DESERT"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Missile launch hiss, thin wire whine, heavy impact",
+      "music": "None — sound only",
+      "shots": [
+        {
+          "shot_id": "3.7-01",
+          "duration_s": 4.5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "the missile operator kneeling in a shallow sand pit in flat open desert (no roads), his eye pressed to the rubber eyecup of the small periscope sight of a Malutka control box resting on the sand in front of him, his right thumb on its small control stick; a thin guidance wire trailing from the launcher a few metres ahead",
+          "face": "face in profile, one eye pressed to the sight",
+          "motion": "His thumb nudges the stick; total concentration."
+        },
+        {
+          "shot_id": "3.7-01a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "in a shallow missile pit with smoke from the first impacts drifting across the pit wall: ADEL delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "total concentration under mortal pressure",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.7-02",
+          "duration_s": 4.5,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "a Malutka missile launching from its suitcase launcher in the sand with a burst of smoke and dust",
+          "motion": "The missile leaps from the launcher in a burst of smoke."
+        },
+        {
+          "shot_id": "3.7-03",
+          "duration_s": 5.2,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "track the missile",
+          "characters": [],
+          "prompt": "a wire-guided missile flying in a long slow wobbling arc low over the desert toward a road, a thin wire trailing behind",
+          "motion": "The missile wobbles across the desert, trailing wire."
+        },
+        {
+          "shot_id": "3.7-04",
+          "duration_s": 5.8,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "the lead tank of a column struck by a missile, lurching and stopping, smoke pouring out",
+          "motion": "The impact; the lead tank lurches and stops; smoke pours out.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.7-05",
+          "duration_s": 5.8,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "at the far end of the column the last tank hit by a missile, shuddering, smoke pouring from it, its tracks still turning",
+          "motion": "The last tank shudders and smokes — but its tracks keep turning."
+        },
+        {
+          "shot_id": "3.7-06",
+          "duration_s": 7.1,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "ANGLE_AERIAL_HIGH slow drift",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "high aerial view of a long tank column on a straight desert road, smoke rising at both the front and the rear, the column trapped between",
+          "motion": "Slow aerial drift; smoke columns rise at both ends."
+        },
+        {
+          "shot_id": "3.7-06a",
+          "duration_s": 4.1,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "in a shallow missile pit with smoke from the first impacts drifting across the pit wall: SAYED delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled alarm and command urgency",
+          "lip_sync": "required"
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-06",
+          "line": 1,
+          "shot_id": "3.7-01a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "total concentration under mortal pressure",
+          "delivery": "Count almost soundlessly to himself, eye fixed to the sight. Keep each number tied to the missile’s slow flight, with no panic or triumph."
+        },
+        {
+          "speaker": "C-02",
+          "line": 2,
+          "shot_id": "3.7-06a",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "controlled alarm and command urgency",
+          "delivery": "Sayed catches the moving tracks and hurls the correction down the firing line. Make it gravelly and clipped: urgency without loss of control."
+        }
+      ]
+    },
+    {
+      "beat": "3.8",
+      "title": "The battle",
+      "target_s": 60,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_BATTLE_SMOKE"
+      ],
+      "wear": "WEAR_BATTLE",
+      "vo": {
+        "ref": "screenplay 3.8 VO",
+        "placement": "over selected shots",
+        "est_s": 8
+      },
+      "sfx": "Layered battle: RPG launches, impacts, tank guns, machine guns, secondary explosions",
+      "music": "None — sound only",
+      "shots": [
+        {
+          "shot_id": "3.8-01",
+          "duration_s": 5.4,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "handheld",
+          "characters": [],
+          "extras": "an RPG team",
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "an RPG team rising out of a pit and firing at the column, backblast kicking up a cloud of sand behind them",
+          "motion": "They rise, fire, and drop back as the backblast blows sand."
+        },
+        {
+          "shot_id": "3.8-01a",
+          "duration_s": 3.7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "in the battle smoke at the pit line, dust and RPG backblast around the sand wall: SAYED delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled urgency with protective anger",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.8-02",
+          "duration_s": 6.2,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-03",
+            "C-02"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "the young private feeding a rocket into the launcher on the sergeant's shoulder, hands steady",
+          "motion": "He slides the rocket in and taps the sergeant's shoulder twice: ready."
+        },
+        {
+          "shot_id": "3.8-02a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "in the battle smoke at the pit line, dust and RPG backblast around the sand wall: MOSTAFA delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "focused courage under fire",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.8-03",
+          "duration_s": 6.2,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "a Centurion tank trying to turn off the road being struck in the side by a missile, smoke billowing",
+          "motion": "The tank swings off the road; a hit; black smoke billows."
+        },
+        {
+          "shot_id": "3.8-04",
+          "duration_s": 7.1,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "tank turrets traversing toward the open desert and firing blindly; sand erupting behind empty-looking dunes",
+          "motion": "Turrets swing and fire; sand erupts far behind the hidden pits."
+        },
+        {
+          "shot_id": "3.8-05",
+          "duration_s": 7.1,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "extras": "tank crews (WRD-0004) climbing out, distant",
+          "prompt": "hatches opening on a smoking tank, crew figures climbing out and running into the smoke, seen from a distance",
+          "motion": "Hatches open; small figures climb out and disappear into the smoke.",
+          "notes": "No injuries shown."
+        },
+        {
+          "shot_id": "3.8-06",
+          "duration_s": 7.1,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking low",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain moving crouched between pits through drifting smoke, pointing out a new target",
+          "motion": "He runs crouched, drops beside a pit, and points."
+        },
+        {
+          "shot_id": "3.8-07",
+          "duration_s": 7.1,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "columns of black oily smoke and grey-white smoke rising along three kilometers of road, the sun turning amber behind them",
+          "motion": "The smoke columns climb and lean in the wind; the sun dims to amber.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.8-08",
+          "duration_s": 7.1,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "RPG team",
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "another RPG volley from the pits, rockets streaking toward the road through the smoke",
+          "motion": "Two rockets streak out of the sand toward the road."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-02",
+          "line": 1,
+          "shot_id": "3.8-01a",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "controlled urgency with protective anger",
+          "delivery": "Bark each verb as the men expose themselves, fire and drop. Drive «مَحَدِّشْ يِقَفْ بَرَّهْ» at anyone lingering above cover; he is saving lives, not making a speech."
+        },
+        {
+          "speaker": "C-03",
+          "line": 2,
+          "shot_id": "3.8-02a",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "focused courage under fire",
+          "delivery": "Shout directly into the gunner’s awareness as the helmet slap lands. The voice is firm and full-chested now, with fear forced underneath the task."
+        }
+      ]
+    },
+    {
+      "beat": "3.9",
+      "title": "The hours",
+      "target_s": 55,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_BATTLE_SMOKE"
+      ],
+      "wear": "WEAR_BATTLE",
+      "vo": null,
+      "sfx": "Battle with gaps: missile wire whine, Adel's breathing, Shalabi's footsteps",
+      "music": "None — sound only",
+      "shots": [
+        {
+          "shot_id": "3.9-01",
+          "duration_s": 7.1,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "the missile operator's eye pressed to the periscope sight, lips moving as he counts seconds, sweat and dust on his face",
+          "motion": "His lips count silently; his thumb makes tiny corrections.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.9-02",
+          "duration_s": 4.6,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "a thumb making tiny corrections on a missile control stick",
+          "motion": "The thumb twitches left, then right."
+        },
+        {
+          "shot_id": "3.9-03",
+          "duration_s": 5.9,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "an RPG team",
+          "prompt": "an RPG team running crouched from one pit to another thirty meters away; seconds later a tank shell explodes on the pit they left",
+          "motion": "They sprint and dive into the new pit; the old pit erupts behind them."
+        },
+        {
+          "shot_id": "3.9-04",
+          "duration_s": 7.1,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "tracking",
+          "characters": [
+            "C-01",
+            "C-04"
+          ],
+          "assets": [
+            "PRP-0007"
+          ],
+          "prompt": "the captain and the radio operator running bent double between platoons through the smoke, the radio antenna whipping behind",
+          "motion": "They run crouched through the smoke; the antenna whips."
+        },
+        {
+          "shot_id": "3.9-04a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "moving pit to pit through smoke and falling sand along the ambush line: MAHMOUD delivering line 2, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "shock held behind discipline",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.9-04b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "moving pit to pit through smoke and falling sand along the ambush line: SHALABI delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "grief suppressed into resolve",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.9-05",
+          "duration_s": 5.9,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain kneeling at the lip of a pit, pointing out a target to the men inside, then moving on",
+          "motion": "He points, says one word, and runs on."
+        },
+        {
+          "shot_id": "3.9-05a",
+          "duration_s": 5.4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "moving pit to pit through smoke and falling sand along the ambush line: SHALABI delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled tactical urgency",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.9-06",
+          "duration_s": 7.1,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain stopping and looking at one pit along the line that has gone quiet, nothing visible inside it, smoke drifting over it",
+          "motion": "He looks at the silent pit for a long moment; then keeps moving.",
+          "notes": "Nothing inside the pit is shown."
+        },
+        {
+          "shot_id": "3.9-07",
+          "duration_s": 5.9,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "prompt": "the sun a dull disc behind the smoke over the battlefield, sand drifting across the pits after an impact",
+          "motion": "The sun pulses dimly through the smoke; sand drifts down."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-01",
+          "line": 1,
+          "shot_id": "3.9-05a",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "controlled tactical urgency",
+          "delivery": "Point hard toward the turning vehicle and drive the order across the gunfire. Keep the words clipped and exact; he is calculating, not panicking."
+        },
+        {
+          "speaker": "C-04",
+          "line": 2,
+          "shot_id": "3.9-04a",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "shock held behind discipline",
+          "delivery": "Call to Shalabi from close beside him, intending to acknowledge the silent pit or ask what to do. Let the unfinished address die when Mahmoud reads the captain’s face."
+        },
+        {
+          "speaker": "C-01",
+          "line": 3,
+          "shot_id": "3.9-04b",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "grief suppressed into resolve",
+          "delivery": "Say it without looking back, already pushing up to move. It is both an order to Mahmoud and a command to himself not to stop."
+        }
+      ]
+    },
+    {
+      "beat": "3.10",
+      "title": "War games",
+      "target_s": 40,
+      "location": "LOC-0007",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_CITY_ALLEY_DAY"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "C-14",
+          "line": 1,
+          "shot_id": "3.10-02a",
+          "intensity": 2,
+          "volume": "shout",
+          "pace": "quick",
+          "emotion": "carefree excitement",
+          "delivery": "Throw the imaginary grenade toward the other boys and announce the role proudly. It is pure play, with no awareness of the real fighting."
+        },
+        {
+          "speaker": "C-13",
+          "line": 2,
+          "shot_id": "3.10-03",
+          "intensity": 6,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "sharp worry",
+          "delivery": "Calling her son in from the alley game of war; sharp, a fear she cannot explain to him."
+        },
+        {
+          "speaker": "C-14",
+          "line": 3,
+          "shot_id": "3.10-03a",
+          "intensity": 3,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "puzzled mild protest",
+          "delivery": "Speak into her shoulder while passively accepting the hug. He is explaining himself because he cannot understand what frightened her."
+        },
+        {
+          "speaker": "C-13",
+          "line": 4,
+          "shot_id": "3.10-03b",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "suppressed fear and relief",
+          "delivery": "Keep holding him with her eyes shut and speak close to his hair. The repetition reassures herself more than it answers him."
+        }
+      ],
+      "sfx": "Children's explosion noises — an echo of the battle",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "3.10-01",
+          "duration_s": 8.2,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "extras": "three neighborhood boys",
+          "prompt": "a narrow Cairo alley in hard afternoon light, laundry lines overhead, four boys playing war in the dust — two crawling on all fours as tanks, two jumping out from a doorway",
+          "motion": "The 'tanks' crawl; the boys leap out of the doorway shouting."
+        },
+        {
+          "shot_id": "3.10-02",
+          "duration_s": 6.6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "the boy throwing a pretend grenade with a big swing and shouting, joyful",
+          "motion": "He winds up and throws an invisible grenade, shouting."
+        },
+        {
+          "shot_id": "3.10-02a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "in the Cairo alley doorway during the children's war game: ALI delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "carefree excitement",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.10-03",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "the woman stepping into the building doorway and calling sharply down the alley toward her son, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She steps into the doorway and calls out sharply; worry in her face.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced.",
+          "face": "sharp worry",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.10-03a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "in the Cairo alley doorway during the children's war game: ALI delivering line 3, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "puzzled mild protest",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.10-03b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "in the Cairo alley doorway during the children's war game: FATMA delivering line 4, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "suppressed fear and relief",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.10-04",
+          "duration_s": 11.2,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "slow push-in",
+          "characters": [
+            "C-13",
+            "C-14"
+          ],
+          "prompt": "the woman kneeling in the doorway holding the confused boy tight, longer than he understands",
+          "motion": "She holds him tight; he stays still, puzzled; slow push-in.",
+          "model": "premium"
+        }
+      ]
+    },
+    {
+      "beat": "3.11",
+      "title": "The bus",
+      "target_s": 20,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_BATTLE_SMOKE"
+      ],
+      "wear": "WEAR_BATTLE",
+      "vo": null,
+      "sfx": "Distant engine, missile, a distant flash",
+      "music": "None — sound only",
+      "shots": [
+        {
+          "shot_id": "3.11-01",
+          "duration_s": 6.4,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0008"
+          ],
+          "prompt": "a dusty 1970s bus carrying soldiers coming along the road out of drifting smoke",
+          "motion": "The bus emerges from the smoke and drives on."
+        },
+        {
+          "shot_id": "3.11-02",
+          "duration_s": 5.7,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "prompt": "a missile streaking low across the desert toward the road",
+          "motion": "The missile streaks across the frame."
+        },
+        {
+          "shot_id": "3.11-03",
+          "duration_s": 7.9,
+          "size": "EWS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0008"
+          ],
+          "prompt": "far away down the road, a flash, and a bus stopped and burning, black smoke rising",
+          "motion": "A distant flash; the bus stops; smoke rises.",
+          "notes": "Seen only from a distance."
+        }
+      ]
+    },
+    {
+      "beat": "3.12",
+      "title": "Stuck in the sand",
+      "target_s": 30,
+      "location": "LOC-0001",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_BATTLE_SMOKE"
+      ],
+      "wear": "WEAR_BATTLE",
+      "vo": null,
+      "dialogue_refs": [
+        {
+          "speaker": "ISRAELI TANK COMMANDER",
+          "line": 1,
+          "shot_id": "3.12-01",
+          "language": "Hebrew with Arabic subtitles",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "rushed",
+          "emotion": "confused panic under fire",
+          "delivery": "Israeli tank commander over the radio, Hebrew, under fire and unable to see the shooters.",
+          "fx": "radio"
+        },
+        {
+          "speaker": "ISRAELI BRIGADE COMMANDER",
+          "line": 2,
+          "shot_id": "3.12-02",
+          "language": "Hebrew with Arabic subtitles",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "controlled tactical frustration",
+          "delivery": "Report the failed armored maneuver as a hard fact, then turn immediately to the demand. Keep command authority intact; he is pressured, not panicking.",
+          "fx": "radio"
+        }
+      ],
+      "sfx": "Tracks grinding and spinning in sand, engines straining, radio static",
+      "music": "None — sound only",
+      "shots": [
+        {
+          "shot_id": "3.12-01",
+          "duration_s": 10,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "a Centurion tank trying to climb off the road into deep soft dunes, its tracks spinning and digging in, sand spraying",
+          "motion": "The tracks spin and dig; the tank slews sideways and stops, engine roaring.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.12-02",
+          "duration_s": 10,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "a second tank halted behind it, turret swinging back and forth searching the empty dunes",
+          "motion": "The turret swings left, right, left — searching."
+        },
+        {
+          "shot_id": "3.12-03",
+          "duration_s": 10,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0005"
+          ],
+          "prompt": "a tank track churning uselessly in soft sand",
+          "motion": "The track churns; sand pours over it."
+        }
+      ]
+    },
+    {
+      "beat": "3.13",
+      "title": "Half-tracks behind",
+      "target_s": 35,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_BATTLE_SMOKE"
+      ],
+      "wear": "WEAR_BATTLE",
+      "vo": {
+        "ref": "screenplay 3.13 VO",
+        "placement": "over selected shots",
+        "est_s": 8
+      },
+      "sfx": "Engines and track clatter from the wrong direction",
+      "music": "Score enters for the first time since the order to fire — a single low sustained cue that carries into Act Four",
+      "shots": [
+        {
+          "shot_id": "3.13-01",
+          "face": "head lifted and turned toward a sound off to the side, alert, listening, three-quarter view",
+          "face_strength": 0.75,
+          "duration_s": 6.9,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "extras": "his small rear-security group",
+          "prompt": "the engineer sergeant and four or five of his men lying prone on their stomachs, rifles forward, in a shallow fold of sand, all facing away from the distant battle smoke; the sergeant in front lifts his head at a sound; behind them only an empty narrow 1970s two-lane road with no vehicles on it",
+          "motion": "He lifts his head; the men around him go still."
+        },
+        {
+          "shot_id": "3.13-02",
+          "duration_s": 8.5,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0009"
+          ],
+          "extras": "Israeli infantry (WRD-0005), distant",
+          "prompt": "a line of half-tracks swinging off the road out of drifting smoke behind the ambush line, infantry jumping down and spreading into a line, seen from a distance",
+          "motion": "The half-tracks swing in; infantry drop down and spread out.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "3.13-03",
+          "duration_s": 6.1,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "the engineer sergeant looking along his handful of men, checking his magazine",
+          "motion": "He checks his magazine and looks at each man."
+        },
+        {
+          "shot_id": "3.13-03a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "in the rear-security fold of sand, half-tracks arriving behind through smoke: HASSAN delivering line 1, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "The speaker delivers the line in place; the rest of the frame holds still around the performance.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled alarm",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "3.13-04",
+          "duration_s": 8.5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "very slow push-in",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "the engineer sergeant giving a single calm nod",
+          "motion": "A single nod. Hold.",
+          "notes": "Act-out: END OF ACT THREE."
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-05",
+          "line": 1,
+          "shot_id": "3.13-03a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "controlled alarm",
+          "delivery": "Keep his body still and his eyes on the approaching infantry. He quietly confirms the feared move to his men, then makes the final sentence a firm fire-control order."
+        }
+      ]
+    }
+  ]
+}

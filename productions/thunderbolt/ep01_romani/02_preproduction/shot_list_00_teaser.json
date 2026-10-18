@@ -1,0 +1,866 @@
+{
+  "$schema_note": "Shot list v1.2 — see shot_list_01_act_one.json for field conventions. Beat-level fields are defaults; VO and dialogue are referenced from the locked screenplay (single source of truth for the Arabic text).",
+  "version": "1.2",
+  "episode": "ep01_romani",
+  "part": "00_teaser",
+  "screenplay": "../01_development/screenplay/00_teaser.md",
+  "production_config": "production_config.json",
+  "casting": "casting.json",
+  "screenplay_lock": "ep01-script-lock-v1.2",
+  "status": "draft — Phase 2, task 2.2 (format pilot)",
+  "target_length_s": 130,
+  "legend": {
+    "shot_size": "EWS extreme wide · WS wide · MS medium · MCU medium close-up · CU close-up · ECU extreme close-up · INSERT detail",
+    "video_model": "default = Kling · premium = Veo (key shots only) · none = still card or graphic",
+    "lip_sync": "avoid = mouth hidden or not speaking on camera (preferred) · required = speaking face visible"
+  },
+  "beats": [
+    {
+      "beat": "T.1",
+      "title": "The order",
+      "target_length_s": 21,
+      "vo": null,
+      "on_screen_text": "See screenplay T.1 (SUPER / title card)",
+      "sfx": "Silence under the card; helicopters lift off; distant rotors at dusk",
+      "music": "Teaser score starts with the helicopters lifting off",
+      "shots": [
+        {
+          "shot_id": "T.1-01",
+          "duration_s": 11,
+          "shot_size": "CARD",
+          "description": "Black screen. White text fades in line by line, holds, fades.",
+          "video_model": "none",
+          "image_prompt_core": null,
+          "motion_prompt": null,
+          "edit_note": "Built in the editor as a title card (Arabic font, white on black). No AI generation.",
+          "card": {
+            "style": "lines",
+            "font": "Amiri-Regular.ttf",
+            "size": 60,
+            "line_height": 1.9,
+            "lines": [
+              "أمرُ المهمّة:",
+              "عطِّل اللواء المدرَّع عن التقدُّم ثلاث ساعات أو أربعًا…",
+              "وحافِظ على حياة رجالك."
+            ],
+            "first": 1.0,
+            "gap": 2.2,
+            "fade": 0.8,
+            "hold_until": 9.6,
+            "fade_out": 1.2,
+            "note": "On-screen text with light vowel marks for reading (full marks are for the voice models only). Decided 2026-10-17.",
+            "lines_en": [
+              "Mission order:",
+              "Delay the armored brigade's advance by three or four hours…",
+              "And keep your men alive."
+            ],
+            "size_en": 30,
+            "line_height_en": 2.45
+          }
+        },
+        {
+          "shot_id": "T.1-03",
+          "duration_s": 5,
+          "shot_size": "WS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "tilt up with the lead helicopter",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "assets": [
+            "VEH-0001"
+          ],
+          "reused_from": "1.11-06",
+          "image_prompt_core": "six Mi-8 helicopters lifting off one after another into the blue-black dusk sky at Salhiya airfield, dust clouds boiling below, eucalyptus trees",
+          "motion_prompt": "The helicopters lift off in sequence, dip their noses and climb away over the trees; dust boils up under them; the camera tilts up with the lead helicopter.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "several heavy military helicopters taking off together, rotor thunder rising, turbine whine, dust and grit blowing",
+          "super": {
+            "text": "٦ أكتوبر ١٩٧٣ — مطار الصالحية — السادسة مساءً",
+            "start": 0.8,
+            "duration": 4.0,
+            "font": "Amiri-Regular.ttf",
+            "size": 52,
+            "text_en": "October 6, 1973 — Salhiya Airfield — 6 P.M."
+          },
+          "notes": "Takeoff about 6 P.M., blue dusk just after sunset (Act One beat 1.11). 2026-10-18: the date moved here from the cut jets shot (T.1-02)."
+        },
+        {
+          "shot_id": "T.1-04",
+          "duration_s": 5,
+          "shot_size": "EWS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "assets": [
+            "VEH-0001"
+          ],
+          "reused_from": "1.12-06",
+          "image_prompt_core": "six dark Mi-8 helicopter silhouettes flying low and east over the desert against the last violet light on the horizon",
+          "motion_prompt": "The six silhouettes cross the frame low and fast, heading east, rotor blades blurring; the last violet glow fades on the horizon.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a formation of helicopters passing low in the distance at dusk, deep rotor thump fading east, desert wind",
+          "notes": "Last light before the night flight (Act One beat 1.12)."
+        }
+      ]
+    },
+    {
+      "beat": "T.2",
+      "title": "The red cabin",
+      "target_length_s": 30,
+      "vo": null,
+      "on_screen_text": "See screenplay T.2 (SUPER / title card)",
+      "sfx": "Rotor beat, airframe rattle, metal buckles tapping in rhythm, breathing",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "T.2-01",
+          "duration_s": 6,
+          "shot_size": "WS",
+          "lens": "LENS_WIDE_24",
+          "camera_move": "slow push-in down the aisle",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [],
+          "extras": "about 18 Egyptian commandos (extras: WRD-0001, WEAR_CLEAN), faces darkened",
+          "assets": [
+            "VEH-0001 (cabin interior)",
+            "PRP-0002",
+            "PRP-0003"
+          ],
+          "image_prompt_core": "interior of a Mi-8 helicopter cabin at night seen from the rear, Egyptian commandos sitting shoulder to shoulder on fold-down side benches, faces darkened, RPG-7 launchers held upright between their knees, Malutka missile cases and mine sacks stacked down the center aisle, small round portholes black with night, at the very far end of the aisle, small and distant, an officer seated at the forward bulkhead with his head lowered over a map case, nobody looking at the camera, the whole cabin lit only by one dim red lamp with deep shadows",
+          "motion_prompt": "Slow push-in down the aisle. The whole cabin vibrates; men sway slightly with the airframe. The red lamp flickers faintly. Subtle handheld shake.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "on_screen_text_here": true,
+          "face_pass": false,
+          "notes": "Director's notes 2026-10-17: Shalabi is only a small distant figure here, so he is not cast in this shot (no face pass); the foreground is the backs and shoulders of seated commandos. The Mi-8 cabin's round portholes are correct. At this distance the closed Malyutka suitcases read as stacked olive-green cases — acceptable.",
+          "flow_to": "T.2-02",
+          "flow_motion": "From the very first frame the camera moves forward at a steady walking pace down the center aisle between the two benches, passing the seated men one by one, then swings left and pushes in on a young commando sitting on the left bench until his face fills the frame, the red lamp glowing beside him; his lips move silently."
+        },
+        {
+          "shot_id": "T.2-02",
+          "duration_s": 4,
+          "shot_size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "camera_move": "static, slight vibration",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [
+            {
+              "id": "C-03",
+              "wear": "WEAR_CLEAN"
+            }
+          ],
+          "image_prompt_core": "close-up of a young commando with eyes half closed, lips moving in silent prayer, red light on one side of his face, the dark cabin behind him",
+          "motion_prompt": "His lips move silently in prayer; eyes flicker. Gentle vibration of the cabin. No camera movement.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "notes": "Silent prayer — lips move but no audio dialogue, so no lip-sync needed.",
+          "flow_to": "T.2-03",
+          "flow_motion": "The camera slides sideways along the bench, leaving the young commando and settling on the veteran sergeant sitting beside him, staring at nothing under the red rim light."
+        },
+        {
+          "shot_id": "T.2-03",
+          "duration_s": 4,
+          "shot_size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [
+            {
+              "id": "C-02",
+              "wear": "WEAR_CLEAN"
+            }
+          ],
+          "image_prompt_core": "close-up of a veteran commando sergeant staring at nothing, unblinking, red rim light, deep shadows",
+          "motion_prompt": "Almost still. He blinks once, slowly. The cabin vibration shakes the frame slightly.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "flow_to": "T.2-04",
+          "flow_motion": "The camera tilts slowly down from the sergeant's face, past his chest rig, to the hands gripping an RPG-7 launcher tube held upright between his knees."
+        },
+        {
+          "shot_id": "T.2-04",
+          "duration_s": 3,
+          "shot_size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "image_prompt_core": "detail of two hands gripping the tube of an RPG-7 launcher held upright between a commando's knees, canvas trousers, red light glinting on the metal",
+          "motion_prompt": "The launcher tube trembles with the vibration; fingers tighten their grip.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "flow_to": "T.2-05",
+          "flow_motion": "The camera rises from the trembling launcher and travels forward along the cabin to the captain sitting at the forward bulkhead under the red lamp, eyes closed, map case on his knee."
+        },
+        {
+          "shot_id": "T.2-05",
+          "duration_s": 5,
+          "shot_size": "MS",
+          "lens": "LENS_50",
+          "camera_move": "very slow push-in",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [
+            {
+              "id": "C-01",
+              "wear": "WEAR_CLEAN"
+            }
+          ],
+          "face": "eyes fully closed, lids shut, awake and tense, not sleeping",
+          "image_prompt_core": "the captain sitting at the forward bulkhead of the cabin, map case on his knee, eyes closed but clearly awake, compass on a lanyard at his chest, red lamp above him",
+          "motion_prompt": "Very slow push-in on his face. He stays still, eyes closed; only his thumb moves, tapping the map case once.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "flow_to": "T.2-06",
+          "flow_motion": "From the very first frame the camera tilts down from the captain's face, past his chest rig and the map case, to the bench beside his knee, and pushes in close on the aluminium canteen and the canvas web-belt pouches hanging there, which tap and rattle with the rotor vibration in the red light."
+        },
+        {
+          "shot_id": "T.2-06",
+          "duration_s": 3,
+          "shot_size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "image_prompt_core": "detail of metal buckles and canteens on canvas web belts of seated soldiers, tapping against each other, red light",
+          "motion_prompt": "Buckles and canteens tap and rattle in rhythm with the rotor vibration.",
+          "video_model": "default",
+          "lip_sync": "avoid"
+        },
+        {
+          "shot_id": "T.2-07",
+          "duration_s": 5,
+          "shot_size": "EWS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "slow pan following the formation",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "assets": [
+            "VEH-0001"
+          ],
+          "image_prompt_core": "six Mi-8 helicopters flying very low in a loose line over a dark coastline at night, black silhouettes against a faint moonlit sea, no lights",
+          "motion_prompt": "The six helicopters move left to right low over the coast; the camera pans slowly to follow. Faint rotor blur.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "sfx": "a formation of heavy military helicopters flying low and fast overhead at night, deep rotor thump and turbine roar, wind"
+        }
+      ]
+    },
+    {
+      "beat": "T.3",
+      "title": "Phantoms on the radar",
+      "target_length_s": 55,
+      "vo": null,
+      "sfx": "A radio warning crackling in the headset, intercom hiss, rotor pitch changing as the formation descends",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "T.3-01",
+          "duration_s": 5,
+          "shot_size": "MCU",
+          "lens": "LENS_35",
+          "camera_move": "static, slight vibration",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_COCKPIT_GREEN"
+          ],
+          "characters": [
+            {
+              "id": "C-08"
+            }
+          ],
+          "image_prompt_core": "Mi-8 cockpit at night, the pilot in flight helmet and boom microphone leaning toward the instrument panel, face lit green from below, black windscreen",
+          "motion_prompt": "He presses his headset to his ear, listening hard; his jaw sets. Instrument lights flicker.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "sfx": "inside a helicopter cockpit at night: a crackling military radio warning in the headset, intercom hiss, rotor and turbine noise",
+          "flow_to": "T.3-02",
+          "flow_motion": "The pilot presses his headset to his ear; the camera pushes in tight onto his gloved hand pressing the earcup against the helmet, a small red warning lamp blinking behind."
+        },
+        {
+          "shot_id": "T.3-02",
+          "duration_s": 4,
+          "shot_size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_COCKPIT_GREEN"
+          ],
+          "image_prompt_core": "extreme close-up of a helicopter pilot's hand in a full-finger dark leather flying glove pressing the earcup of his flight helmet against his ear, green instrument glow from below on the glove and the helmet, a small red warning lamp glowing out of focus in the dark background",
+          "motion_prompt": "His hand presses the earcup tighter; the red lamp blinks.",
+          "notes": "v2 restage (2026-10-15, script board): a Mi-8 transport has no air-search radar; the Phantom warning arrives over the radio from ground radar.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "sfx": "inside a helicopter cockpit: a gloved hand pressing a switch with a click, radio static, rotor and turbine noise",
+          "flow_to": "T.3-03",
+          "flow_motion": "The camera tilts up off the pilot's helmet, through the black windscreen, into the night sky over the sea, where a pair of tiny jets catch the moonlight far above."
+        },
+        {
+          "shot_id": "T.3-03",
+          "duration_s": 4,
+          "shot_size": "EWS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "assets": [
+            "VEH-0002"
+          ],
+          "image_prompt_core": "night sky over the sea, far away a pair of tiny jet silhouettes catching faint moonlight, high above",
+          "motion_prompt": "Two distant jets slide across the sky, very small, very fast.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "notes": "Distant only — never show the Phantoms close (Act Two visual rule).",
+          "sfx": "far-away jet fighters at night, a faint distant jet engine rumble rising, wind"
+        },
+        {
+          "shot_id": "T.3-04",
+          "duration_s": 7,
+          "shot_size": "MCU",
+          "lens": "LENS_50",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_COCKPIT_GREEN"
+          ],
+          "characters": [
+            {
+              "id": "C-08"
+            }
+          ],
+          "image_prompt_core": "the pilot, wearing a dull olive-green flight helmet with a thin boom microphone, in three-quarter front view pressing the intercom switch on his control stick and speaking urgently, the thin boom microphone curving to just beside the corner of his mouth, his lips and whole face clearly visible in the green instrument glow",
+          "motion_prompt": "He presses the switch and speaks urgently over the rotor noise; small head movements while talking, eyes flicking to the cabin and back to the night.",
+          "video_model": "default",
+          "lip_sync": "required",
+          "notes": "Drama-first (D-20): face and lips visible; dialogue is lip-synced to the character's voice track. Earlier design hid the mouth behind the microphone.",
+          "dialogue_en": [
+            [
+              "Hamdi… radar's picked up a Phantom formation.",
+              "We'll have to drop the whole force at the nearest zone."
+            ]
+          ]
+        },
+        {
+          "shot_id": "T.3-05",
+          "duration_s": 5,
+          "shot_size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [
+            {
+              "id": "C-01",
+              "wear": "WEAR_CLEAN"
+            }
+          ],
+          "image_prompt_core": "the captain in the red-lit cabin pressing a headset earphone to one ear with his hand, face in three-quarter view toward the camera, mouth and lips clearly visible, answering with a frown, objecting",
+          "motion_prompt": "He presses the earphone tighter and answers, objecting, his jaw tight between words; his eyes stay on the cockpit door.",
+          "video_model": "default",
+          "lip_sync": "required",
+          "notes": "Drama-first (D-20): mouth visible, lip-synced. The hand stays at the ear, not over the mouth.",
+          "dialogue_en": [
+            "What do you mean, sir? That puts me far from the ambush."
+          ]
+        },
+        {
+          "shot_id": "T.3-06",
+          "duration_s": 9,
+          "shot_size": "MS",
+          "lens": "LENS_50",
+          "camera_move": "slow push-in",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_COCKPIT_GREEN"
+          ],
+          "characters": [
+            {
+              "id": "C-08"
+            }
+          ],
+          "image_prompt_core": "the pilot, wearing a dull olive-green flight helmet with a thin boom microphone, seen from the side and slightly in front, gripping the controls, the black night beyond the windscreen, turning his head toward the cabin to speak firmly, the boom microphone beside his mouth, lips visible",
+          "motion_prompt": "Slow push-in; he turns his head toward the cabin and speaks firmly, then looks back at the night; his hands stay steady on the controls.",
+          "video_model": "default",
+          "lip_sync": "required",
+          "dialogue_en": [
+            [
+              "If we're hit with you on board, we lose the aircraft — and we lose you.",
+              "My job is to get you there… and keep you alive."
+            ]
+          ]
+        },
+        {
+          "shot_id": "T.3-07",
+          "duration_s": 5,
+          "shot_size": "WS",
+          "lens": "LENS_35",
+          "camera_move": "static, POV from the forward bulkhead",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "extras": "about 18 commandos (extras: WRD-0001, WEAR_CLEAN)",
+          "characters": [
+            {
+              "id": "C-02",
+              "prominence": "background"
+            },
+            {
+              "id": "C-03",
+              "prominence": "background"
+            }
+          ],
+          "image_prompt_core": "point of view from the forward bulkhead looking down the length of the same red-lit Mi-8 cabin: two rows of commandos seated shoulder to shoulder on the fold-down benches along both walls, knees almost touching across the narrow aisle of stacked cases, RPG-7 launchers upright between their knees, every face turned up toward the camera, waiting, faces half in shadow under one dim red lamp, small round portholes black with night",
+          "motion_prompt": "The men look up at the camera one after another; the cabin vibrates. Nobody speaks.",
+          "video_model": "premium",
+          "lip_sync": "avoid",
+          "notes": "Key emotional shot of the teaser — premium model. 2026-10-17: no face pass — in the dark red crowd the face swap made Sayed's and Mostafa's faces too large and too bright; the prompt's descriptions place them.",
+          "face_pass": false
+        },
+        {
+          "shot_id": "T.3-08",
+          "duration_s": 4,
+          "shot_size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [
+            {
+              "id": "C-01",
+              "wear": "WEAR_CLEAN"
+            }
+          ],
+          "image_prompt_core": "tight close-up of the captain's face, red light, eyes locked forward, decision made, mouth closed and visible",
+          "motion_prompt": "His eyes lift and lock forward; a single small nod; he says one quiet word.",
+          "video_model": "default",
+          "lip_sync": "required",
+          "notes": "Drama-first (D-20): close-up with the mouth visible for the single word «نَزِّلْنَا». Was an eyes-only ECU. Held at 4 s (not fitted to the 1.2 s line): the pause before «نزّلنا» is the decision. 2026-10-17.",
+          "dialogue_en": [
+            "Put us down."
+          ]
+        },
+        {
+          "shot_id": "T.3-09",
+          "duration_s": 3,
+          "shot_size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_RED_CABIN"
+          ],
+          "characters": [
+            {
+              "id": "C-03",
+              "wear": "WEAR_CLEAN"
+            }
+          ],
+          "image_prompt_core": "the young commando looking up sharply as the helicopter lurches, grabbing the bench, red light",
+          "motion_prompt": "The cabin drops suddenly; he grabs the bench and looks up, startled.",
+          "video_model": "default",
+          "lip_sync": "avoid"
+        },
+        {
+          "shot_id": "T.3-10",
+          "duration_s": 10,
+          "shot_size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "camera_move": "slow tilt down with the descending formation",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "assets": [
+            "VEH-0001"
+          ],
+          "image_prompt_core": "six Mi-8 helicopters banking and descending in darkness toward a vast black flat plain shining faintly with standing water under the moon",
+          "motion_prompt": "The helicopters bank and descend toward the flat wet plain; the camera tilts down with them. Moonlight glints on the water below.",
+          "video_model": "premium",
+          "lip_sync": "avoid",
+          "notes": "Hold, then SMASH CUT TO BLACK on the edit. Premium: first view of the Tina Plain.",
+          "sfx": "a formation of heavy military helicopters banking and descending at night, rotor pitch changing, turbine whine, wind"
+        }
+      ],
+      "dialogue_refs": [
+        {
+          "speaker": "C-08",
+          "line": 1,
+          "shot_id": "T.3-04",
+          "intensity": 7,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "urgent alarm held under professional control",
+          "delivery": "Over the intercom, shouting over the rotors: clipped and urgent, a pilot reporting danger, not panicking."
+        },
+        {
+          "speaker": "C-01",
+          "line": 2,
+          "shot_id": "T.3-05",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "sharp objection, frustration, thinking fast",
+          "delivery": "Cuts in almost before the pilot finishes; clipped, teeth clenched; he is already counting the extra kilometers."
+        },
+        {
+          "speaker": "C-08",
+          "line": 3,
+          "shot_id": "T.3-06",
+          "intensity": 7,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "firm authority with respect; protective",
+          "delivery": "Firm and final, leaving no room to argue; a short pause before the last phrase, which he means personally."
+        },
+        {
+          "speaker": "C-01",
+          "line": 4,
+          "shot_id": "T.3-08",
+          "intensity": 8,
+          "volume": "normal",
+          "pace": "slow",
+          "emotion": "the weight of a decision that risks all his men; resolve",
+          "delivery": "One hard word after a split second of thought: short, firm, final, tension in the throat. Not a whisper."
+        }
+      ]
+    },
+    {
+      "beat": "T.4",
+      "title": "The mission",
+      "target_length_s": 22,
+      "vo": null,
+      "on_screen_text": null,
+      "sfx": "Spot effects per shot: splash, mud, silence at the wire, the ground shaking, the column, the hit, the guns",
+      "music": "teaser_montage: silent through the night shots; drums slam in on the ground-shaking shot and stop dead at the smash cut",
+      "notes": "Mission montage (user request 2026-10-18): the landing, the march, the wire, the armour, the first hit. Every keyframe reused from an episode shot that passed QA (8-9/10).",
+      "shots": [
+        {
+          "shot_id": "T.4-01",
+          "duration_s": 3,
+          "shot_size": "MS",
+          "lens": "LENS_35",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            {
+              "id": "C-03"
+            }
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "reused_from": "2.6-02",
+          "image_prompt_core": "the young private pitching forward onto his knees in shin-deep brine, splashing down to his chest, both arms straight up holding an RPG launcher clear above the water",
+          "motion_prompt": "From the very first frame he lunges forward through the chest-deep black brine, water splashing and churning around his chest, both arms locked straight up holding the RPG launcher dry above his head; his face strains with effort. Camera static.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a soldier splashing heavily through chest-deep salt water at night, water churning, hard breathing, wind",
+          "notes": "Act Two 2.6: right after the landing the young private goes under in the salt marsh, launcher held high."
+        },
+        {
+          "shot_id": "T.4-02",
+          "duration_s": 2,
+          "shot_size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "reused_from": "2.5-02",
+          "image_prompt_core": "a combat boot tearing free of black mud, white salt crust breaking around the ankle",
+          "motion_prompt": "From the very first frame the boot heaves up out of the sucking black mud, salt crust cracking and breaking around the ankle, mud and brine dripping off it. Low camera, almost static.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a boot pulling free of thick sucking mud with a wet squelch, salt crust cracking, dripping water",
+          "notes": "Act Two 2.5: the 42 km march through mud and salt."
+        },
+        {
+          "shot_id": "T.4-03",
+          "duration_s": 3,
+          "shot_size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            {
+              "id": "C-01"
+            }
+          ],
+          "reused_from": "2.9-02b",
+          "image_prompt_core": "Shalabi lying low in the sand, eyes on the wire as he orders Hassan brought forward, moonlight on sand and wire keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion_prompt": "Almost still: he lies flat in the sand, eyes fixed on the barbed wire ahead, breathing slowly; his eyes narrow; his lips stay closed. A faint breeze stirs the sand. Camera static.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "night desert silence, a faint breeze over sand, a low tense breath, distant wire creaking",
+          "notes": "Act Two 2.9: Shalabi at the wire before the road. Silent here (his line is in the episode)."
+        },
+        {
+          "shot_id": "T.4-04",
+          "duration_s": 3,
+          "shot_size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAY_DESERT"
+          ],
+          "reused_from": "3.4-01",
+          "image_prompt_core": "grains of sand trembling and trickling down the wall of a pit from ground vibration",
+          "motion_prompt": "Locked-off macro: the grains of sand on the pit wall start to tremble and dance, then trickle down in small streams, faster and faster as the ground vibration grows.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a deep low rumble of heavy tank engines approaching through the ground, sand grains trickling and hissing",
+          "notes": "Act Three 3.4: the ground starts to shake as the armour approaches the hidden pits."
+        },
+        {
+          "shot_id": "T.4-05",
+          "duration_s": 3,
+          "shot_size": "WS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAY_DESERT"
+          ],
+          "assets": [
+            "VEH-0005"
+          ],
+          "reused_from": "3.5-02",
+          "image_prompt_core": "the main column of an armored brigade advancing out of the heat shimmer, tanks and vehicles spaced along the road, stretching back further than the eye can follow",
+          "motion_prompt": "Static long-lens shot: the armored column rolls steadily toward the camera along the road through the heat shimmer, the lead tank growing slowly larger, soldiers walking beside the vehicles; heat haze ripples the air. No camera movement.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a long column of tanks and armored vehicles rumbling and clanking along a road, engines roaring, tracks squealing",
+          "notes": "Act Three 3.5: the main column of the armored brigade."
+        },
+        {
+          "shot_id": "T.4-06",
+          "duration_s": 2.5,
+          "shot_size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAY_DESERT"
+          ],
+          "characters": [
+            {
+              "id": "C-02"
+            },
+            {
+              "id": "C-03"
+            }
+          ],
+          "reused_from": "3.4-06",
+          "image_prompt_core": "a veteran's weathered hand reaching across and closing over a young man's trigger hand",
+          "motion_prompt": "From the very first frame the older weathered hand presses down firmly over the younger hand on the trigger and holds it still; the young fingers stop moving. Camera static.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "tense silence, a held breath, the distant rumble of approaching tanks, cloth rustling",
+          "notes": "Act Three 3.4: Sayed's hand over Mostafa's — not yet."
+        },
+        {
+          "shot_id": "T.4-07",
+          "duration_s": 3,
+          "shot_size": "WS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAY_DESERT"
+          ],
+          "assets": [
+            "VEH-0005"
+          ],
+          "reused_from": "3.7-04",
+          "image_prompt_core": "the lead tank of a column struck by a missile, lurching and stopping, smoke pouring out",
+          "motion_prompt": "Static long-lens shot: thick black smoke surges and billows up out of the stricken lead tank, which rocks on its tracks and settles; flames flicker at the turret; the vehicles behind it halt.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a missile impact explosion on a tank, metal clang, then roaring fire and billowing smoke, secondary pops",
+          "notes": "Act Three 3.7: the first missile hits the lead tank."
+        },
+        {
+          "shot_id": "T.4-08",
+          "duration_s": 2.5,
+          "shot_size": "WS",
+          "lens": "LENS_135_LONG",
+          "camera_move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_BATTLE_SMOKE"
+          ],
+          "assets": [
+            "VEH-0005"
+          ],
+          "reused_from": "4.3-01",
+          "image_prompt_core": "a line of tanks firing together, muzzle blasts and dust",
+          "motion_prompt": "Static long-lens shot: the tank guns fire one after another, each muzzle blast flashing and the tank rocking back on its tracks, dust and smoke bursting up around each tank.",
+          "video_model": "default",
+          "lip_sync": "avoid",
+          "face_pass": false,
+          "sfx": "a line of tank cannons firing in rapid succession, huge booming blasts, shockwaves, dust",
+          "notes": "Act Four 4.3: the tanks fire back together — smash cut to black."
+        }
+      ]
+    },
+    {
+      "beat": "T.5",
+      "title": "Main title",
+      "target_length_s": 30,
+      "vo": null,
+      "on_screen_text": "See screenplay T.4 (SUPER / title card)",
+      "sfx": "Rotor sound cuts out instantly; silence; then wind over sand",
+      "music": "Series main title theme (~30 s)",
+      "shots": [
+        {
+          "shot_id": "T.5-01",
+          "duration_s": 22,
+          "shot_size": "CARD",
+          "description": "Series main title «الصَّاعِقَةُ» in white on black, per series bible §7.",
+          "video_model": "none",
+          "image_prompt_core": null,
+          "motion_prompt": null,
+          "edit_note": "Title design is a separate Phase 3 task; reused in every episode.",
+          "card": {
+            "style": "title",
+            "font": "NotoKufiArabic-Black.ttf",
+            "size": 230,
+            "lines": [
+              "الصاعقة"
+            ],
+            "first": 3.0,
+            "fade": 2.5,
+            "hold_until": 18.5,
+            "fade_out": 2.5,
+            "zoom": 0.05,
+            "note": "Temporary main title until the series title design (Phase 3); no vowel marks on the title."
+          }
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "shots_total": 19,
+    "shots_generated": 17,
+    "premium_shots": 2,
+    "lip_sync_required": 0,
+    "planned_length_s": 130
+  },
+  "sound": {
+    "$note": "See studio/engine/mtower/sound.py. Levels are linear gains before the final -16 LUFS loudness pass; effects and music duck under dialogue. Measured 2026-10-17: dialogue takes about -17.5 LUFS (x1.5 in the mix), rotor bed -11.5, wind -25.5, music -14.",
+    "spot_level": 0.55,
+    "beds": [
+      {
+        "id": "rotor",
+        "from": "T.2-01",
+        "offset": 0,
+        "to": "T.3-10",
+        "level": 0.35,
+        "fade_in": 1.0,
+        "fade_out": 0,
+        "prompt": "Inside a large military transport helicopter in flight at night: a deep, steady, heavy rotor thump and turbine whine, constant airframe vibration and loose metal rattling. No voices, no music."
+      },
+      {
+        "id": "wind",
+        "from": "T.5-01",
+        "offset": 1.5,
+        "to": "T.5-01",
+        "level": 0.7,
+        "fade_in": 2.5,
+        "fade_out": 3.0,
+        "prompt": "Wind blowing over open desert sand at night, soft gusts and fine sand hiss, empty and still. No voices, no music."
+      }
+    ],
+    "music": [
+      {
+        "id": "teaser_score",
+        "from": "T.1-03",
+        "offset": 0,
+        "seconds": 101,
+        "level": 0.5,
+        "fade_out": 0.15,
+        "prompt": "A 101-second dramatic underscore for the teaser of a historical war drama about Egyptian commandos in October 1973. Cinematic orchestral, instrumental only. 0-15 s: a bold, determined brass and string swell with timpani hits as jets roar overhead and helicopters take off at dusk, ending on a held, darkening chord. 15-45 s: night flight - very low, dark, pulsing strings and a slow heartbeat-like low drum, sparse and tense, lots of space. 45-60 s: the tension tightens - ticking string ostinato, rising pitch, a sense of danger on the radar. 60-95 s: sustained, restrained suspense under dialogue: low strings and soft pulse only, nothing melodic in the mid range, building slowly. 95-101 s: a fast, steep crescendo with racing strings and pounding drums that stops dead at the very end. Subtle Middle-Eastern modal colour (Hijaz) in the strings only. No vocals, no choir, no chant, no synthesizers, no modern hybrid trailer effects.",
+        "play_seconds": 96,
+        "$play_note": "2026-10-18: the jets shot was cut, so 96 s run from the lift-off to the smash cut. Played at its own speed (no slow-down): the v2 peak at 90-95 s now lands just before the smash cut, which cuts it off at 96 s."
+      },
+      {
+        "id": "teaser_montage",
+        "from": "T.4-04",
+        "offset": 0,
+        "seconds": 22,
+        "play_seconds": 14,
+        "level": 0.55,
+        "fade_out": 0.08,
+        "prompt": "A 22-second action montage cue for the teaser of a historical war drama about Egyptian commandos in October 1973. Cinematic orchestral, instrumental only, the same world as the teaser score: strings, low brass, timpani and big war drums, with a subtle Middle-Eastern modal colour (Hijaz) in the strings. It starts instantly on a heavy drum hit and a driving, pounding rhythm of low drums and urgent ostinato strings; it keeps building and rising for the whole length - brass stabs, faster strings, harder drums - and is at its loudest and most intense in the very last second, with no ending, no resolution and no fade. No vocals, no choir, no chant, no synthesizers, no modern hybrid trailer effects.",
+        "$note": "2026-10-18: both generated options fade out after ~17 s, so the cue enters on its opening drum hit at the ground-shaking shot (T.4-04) and plays its loud first 14 s to the smash cut. The night shots before it (landing, mud, wire) play on their own sound only, right after the teaser score stops dead."
+      },
+      {
+        "id": "main_title",
+        "from": "T.5-01",
+        "offset": 1.5,
+        "seconds": 27,
+        "level": 0.6,
+        "fade_out": 3.0,
+        "prompt": "A 27-second main title theme for a historical war drama about Egyptian commandos in 1973. Cinematic orchestral: low strings and deep brass carry a slow, heroic yet grieving motif, with a subtle Middle-Eastern modal colour (Hijaz mode) from a solo oud over the orchestra; a soft timpani pulse builds to a restrained climax, then resolves to a held low chord. Instrumental only: no vocals, no choir, no chant, no modern drums or synthesizers.",
+        "play_seconds": 20.5
+      }
+    ]
+  },
+  "$note_flow": "flow_to: the shot's clip is one unbroken camera move ending on the next shot's approved keyframe (Kling O3 end frame). Used only inside one space; places change on a hard cut. Decided 2026-10-17.",
+  "$note_score": "teaser_score runs under the whole teaser from the helicopters lifting off to the smash cut (ducked under dialogue); main_title plays after the silence. Inspired by the user's reference film (Oct 17): music under everything, day-to-dusk-to-night light, spectacle wides.",
+  "$note_cut": "2026-10-18, user review: T.1-02 (Egyptian jets over the trees) cut from the teaser — in both generated clips the jets slid across the sky like a still image. The teaser opens on the lift-off at Salhiya.",
+  "$note_english": "English subtitles (2026-10-18, user choice: the whole teaser): card lines_en, super text_en, dialogue_en per spoken line; build the cut with 'animatic ... --english'.",
+  "$note_montage": "T.4 mission montage added 2026-10-18 at the user's request (more of the mission, less helicopter). The teaser score still stops dead at the landing; teaser_montage drives the montage; the main title moved to T.5."
+}

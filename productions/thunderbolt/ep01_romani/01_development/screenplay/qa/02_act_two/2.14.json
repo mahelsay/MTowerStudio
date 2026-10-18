@@ -1,0 +1,93 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A lean, playable deployment beat with a clear dramatic turn: Shalabi divides the ground, then Hassan quietly accepts the exposed rear position. The dialogue is period-appropriate, militarily credible and supported rather than duplicated by the aerial action.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled concentration under pressure",
+        "delivery": "Keep his eyes and finger on the map. Each pause marks a new position; the final instruction lands as the danger he has been calculating all along."
+      },
+      "text": "فَصِيلَةْ هِنَا… كِيلُو… وِفَصِيلَةْ… كِيلُو… وِفَصِيلَةْ. وِكُلّْ فَصِيلَةْ تِسِيبْ جَمَاعَةْ وَرَا… تِحْمِي ضَهْرِنَا."
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained trust and grave responsibility",
+        "delivery": "Look directly at Hassan and make the assignment personal without softening it. Tighten slightly on «مَحَدِّشْ» but never raise the voice."
+      },
+      "text": "حَسَنْ… إِنْتَ وَرَا. مَحَدِّشْ يِيجِي مِنْ ضَهْرِنَا."
+    },
+    {
+      "n": 3,
+      "speaker": "HASSAN",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "quiet resolve without display",
+        "delivery": "Answer Shalabi plainly, almost as if confirming a routine task. Do not sell the heroism; let the danger register only in the stillness before «يَا فَنْدِمْ»."
+      },
+      "text": "يِعَدُّوا عَلَيَّا الْأَوِّلْ يَا فَنْدِمْ."
+    }
+  ],
+  "beat": "2.14",
+  "file": "02_act_two_v2.md",
+  "hash": "9dd87b3150832e12",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:22:17+00:00",
+  "seconds": 23.7,
+  "usage": {
+    "prompt_tokens": 2526,
+    "completion_tokens": 1999
+  },
+  "cost_usd": 0.05008
+}

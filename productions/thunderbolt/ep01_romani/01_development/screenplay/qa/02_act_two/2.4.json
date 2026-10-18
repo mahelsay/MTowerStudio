@@ -1,0 +1,165 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A tight, playable escalation: warning, immediate radio silence, Mahmoud’s necessary objection, then Shalabi’s sharp tactical turn. The dialogue is concise, period-plausible and well differentiated, with «وَلَا هُمَّ» providing the beat’s strongest dramatic pivot.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MAHMOUD",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "contained alarm",
+        "delivery": "Mahmoud gives Shalabi the decoded warning without stopping his careful movement. Keep it precise; the fear appears only in the slight pause after «يَا فَنْدِمْ»."
+      },
+      "text": "يَا فَنْدِمْ… الْقِيَادَةْ رَدِّتْ. الْعَدُوّْ لَقَطْ إِشَارِتْنَا."
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 10,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "instant controlled resolve",
+        "delivery": "Shalabi decides before the danger can spread through the column. Give each imperative cleanly and quietly, with no visible debate."
+      },
+      "text": "اِقْفِلْ الْجِهَازْ. مَحَدِّشْ يِفْتَحْ لَاسِلْكِي لِحَدّْ مَا أَقُولْ."
+    },
+    {
+      "n": 3,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "professional unease",
+        "delivery": "Mahmoud is not challenging command; he is making sure Shalabi has accepted the operational cost. His thumb remains over the switch as he speaks."
+      },
+      "text": "كِدَهْ الْقِيَادَةْ مِشْ هَتِعْرَفْ إِحْنَا فِينْ يَا فَنْدِمْ."
+    },
+    {
+      "n": 4,
+      "speaker": "SHALABI",
+      "score": 10,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "cold tactical certainty",
+        "delivery": "Shalabi answers Mahmoud directly, almost under his breath. Let the tiny pause before «هُمَّ» reveal that he has already weighed both risks."
+      },
+      "text": "وَلَا هُمَّ."
+    },
+    {
+      "n": 5,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "normal",
+        "emotion": "grim suspicion",
+        "delivery": "Sayed quietly voices what the experienced men are thinking. Keep it gravelly and practical, without turning it into panic or a challenge."
+      },
+      "text": "يِبْقَى مِسْتَنِّيِّينَّا يَا فَنْدِمْ؟"
+    },
+    {
+      "n": 6,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "tight tactical confidence",
+        "delivery": "Shalabi points out the new direction while resetting the bearing. The first sentence diagnoses the trap; after the pause, the second quietly takes back the initiative."
+      },
+      "text": "مِسْتَنِّيِّينَّا عَ السِّكَّةْ اللِّي عَارْفِينْهَا. هَنْلِفّْ… وِنِطْلَعْلُهُمْ مِنْ حِتَّةْ تَانْيَةْ."
+    }
+  ],
+  "beat": "2.4",
+  "file": "02_act_two_v2.md",
+  "hash": "87d24dca3c1a7b7b",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:34:09+00:00",
+  "seconds": 51.8,
+  "usage": {
+    "prompt_tokens": 2944,
+    "completion_tokens": 4610
+  },
+  "cost_usd": 0.10398
+}

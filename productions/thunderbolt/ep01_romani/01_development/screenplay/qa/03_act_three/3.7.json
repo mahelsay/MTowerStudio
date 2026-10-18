@@ -1,0 +1,71 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A tight combat beat with a clear escalation: Adel’s concentrated guidance disables the lead tank, then Sayed spots the incomplete rear kill and immediately redirects fire. Both lines are playable, period-appropriate and concise.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The count is inherently generic and reveals little about Adel, but it works as focused combat behavior."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "total concentration under mortal pressure",
+        "delivery": "Count almost soundlessly to himself, eye fixed to the sight. Keep each number tied to the missile’s slow flight, with no panic or triumph."
+      },
+      "text": "تَلَاتَةْ… أَرْبَعَةْ… خَمْسَةْ…"
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "controlled alarm and command urgency",
+        "delivery": "Sayed catches the moving tracks and hurls the correction down the firing line. Make it gravelly and clipped: urgency without loss of control."
+      },
+      "text": "الْأَخْرَانِيَّةْ لِسَّهْ مَاشْيَةْ! آرْ بِي جِي عَلِيهَا!"
+    }
+  ],
+  "beat": "3.7",
+  "file": "03_act_three_v2.md",
+  "hash": "ac0ef67b13c45ffe",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:42:44+00:00",
+  "seconds": 20.7,
+  "usage": {
+    "prompt_tokens": 2290,
+    "completion_tokens": 1551
+  },
+  "cost_usd": 0.04018
+}

@@ -1,0 +1,95 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, actor-led survival beat with a clear turn from panic to Sayed’s grim reassurance. The dialogue is natural, playable and credible under bombardment; the only notable weakness is that the VO partly describes what the image already shows.",
+  "scene_issues": [
+    "The VO phrase «تَضْرِبُ رِجَالًا فِي حُفَرٍ» repeats the visible action; the documented tank count is the part the scene cannot convey by itself."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "protective urgency under control",
+        "delivery": "Sayed forces the words through the barrage directly into Mostafa’s ear. Make both commands sharp and practical, with no comforting softness."
+      },
+      "text": "اِلْزَقْ فِي الْحِيطَةْ! وِافْتَحْ بُقَّكْ… عَشَانْ وِدَانَكْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "rushed",
+        "emotion": "terror breaking through trained discipline",
+        "delivery": "Mostafa spits sand from his mouth and shouts toward Sayed without moving from the wall. The question escapes him before he can make himself sound brave."
+      },
+      "text": "هِيَّ مِشْ هَتِخْلَصْ؟!"
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "measured",
+        "emotion": "grim reassurance with buried fatalism",
+        "delivery": "Sayed answers Mostafa while still shielding the optic. Punch the first sentence across the noise, then give the second a dry, weighty certainty rather than playing it as a speech."
+      },
+      "text": "هَتِخْلَصْ! كُلّْ حَاجَةْ بِتِخْلَصْ!"
+    }
+  ],
+  "beat": "4.3",
+  "file": "04_act_four_v2.md",
+  "hash": "edda82b0084237d4",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:52:54+00:00",
+  "seconds": 25.6,
+  "usage": {
+    "prompt_tokens": 2490,
+    "completion_tokens": 2038
+  },
+  "cost_usd": 0.05072
+}

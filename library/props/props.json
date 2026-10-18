@@ -1,0 +1,347 @@
+{
+  "$schema_note": "MTower Studio — props catalog (weapons, equipment, everyday objects). Prompts describe the object only.",
+  "catalog": "props",
+  "version": "1.0",
+  "id_format": "PRP-0000",
+  "props": [
+    {
+      "id": "PRP-0001",
+      "slug": "akm-rifle",
+      "legacy_ids": [
+        "CMD-05"
+      ],
+      "name": "AKM assault rifle",
+      "period": "1960s–",
+      "prompt": "AKM assault rifle with wooden stock and handguard and a curved magazine",
+      "verify": "Fixed vs. folding stock for 1973 Sa'iqa units",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0002",
+      "slug": "rpg-7",
+      "legacy_ids": [
+        "CMD-06"
+      ],
+      "name": "RPG-7 launcher",
+      "period": "1960s–",
+      "prompt": "Soviet RPG-7 launcher with PGO-7 optical sight and a PG-7V rocket loaded, canvas rocket carrier bag",
+      "states": [
+        "slung",
+        "loaded",
+        "firing with backblast",
+        "empty rocket bag"
+      ],
+      "lora": {
+        "trigger": "prp0002rpg7",
+        "scale": 0.8,
+        "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
+        "version": "20261012-093320",
+        "url": "https://v3b.fal.media/files/b/0aae0b7c/hmJtmKPm-x6v7BTnSBEQZ_pytorch_lora_weights.safetensors",
+        "media_path": "library/props/PRP-0002_rpg-7/lora/20261012-093320/prp0002rpg7.safetensors",
+        "steps": 1000,
+        "training_images": 12,
+        "trained": "2026-10-12"
+      },
+      "training_note": "Launcher: dark steel tube with reddish-brown wooden heat guard and pistol grip, a flared black exhaust cone at the rear, about 95 cm long. Rocket: olive-green tail tube with a black pointed warhead; when loaded, only the warhead sticks out of the front of the launcher.",
+      "training_actions": [
+        {
+          "key": "on-shoulder",
+          "edit": "Show a soldier in a plain 1970s khaki uniform aiming the {NAME} on his right shoulder, seen from the side, his face hidden behind the optical sight",
+          "caption": "aimed on a soldier's shoulder, side view"
+        },
+        {
+          "key": "upright-knees",
+          "edit": "Show the {NAME} held upright between the knees of a seated soldier in khaki trousers: the full-size launcher (about 95 cm long) stands with its flared exhaust cone on the floor and reaches up to his chest, loaded so only the black warhead sticks out of the top; no separate rocket; only his hands and knees visible",
+          "caption": "held upright between a seated soldier's knees"
+        },
+        {
+          "key": "overhead-wading",
+          "edit": "Show a soldier in a 1970s khaki uniform seen from behind, holding the {NAME} above his head with both arms while wading through shallow water that reaches only his knees, his thighs and hips dry above the water",
+          "caption": "held overhead by a soldier wading knee-deep, seen from behind"
+        },
+        {
+          "key": "loaded-side",
+          "edit": "Show only the launcher, loaded: the rocket pushed fully into the FRONT end of the launcher so only the black pointed warhead sticks out of the front, the flared exhaust cone at the rear; no separate rocket, no people, side view on a plain grey background",
+          "caption": "loaded, only the warhead sticking out of the front, side view"
+        }
+      ],
+      "status": "lora_trained",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0003",
+      "slug": "malyutka-at3-sagger",
+      "legacy_ids": [
+        "CMD-10"
+      ],
+      "name": "9M14 Malyutka (AT-3 Sagger) anti-tank missile",
+      "period": "1960s–1980s",
+      "prompt": "Soviet 9M14 Malyutka (AT-3 Sagger) wire-guided anti-tank missile on its fibreglass suitcase launcher, with the separate control box and periscope sight",
+      "states": [
+        "closed case",
+        "set up in sand",
+        "launch with smoke",
+        "empty launcher"
+      ],
+      "scale_note": "Missile about 0.86 m long and 12.5 cm across, on a launch rail on the lid of a knee-high fibreglass suitcase; reaches about knee height on a standing man.",
+      "lora": {
+        "trigger": "prp0003malyutka",
+        "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
+        "version": "20261012-091006",
+        "url": "https://v3b.fal.media/files/b/0aae0ae2/tzbikut9eilTgeJLAm-JA_pytorch_lora_weights.safetensors",
+        "media_path": "library/props/PRP-0003_malyutka-at3-sagger/lora/20261012-091006/prp0003malyutka.safetensors",
+        "steps": 1000,
+        "training_images": 12,
+        "trained": "2026-10-12",
+        "scale": 0.9
+      },
+      "training_note": "The missile, its fins, and the suitcase launcher are all painted matt olive-drab green (not silver or grey).",
+      "train_references": [
+        "ref_02_launcher_on_case.png"
+      ],
+      "training_actions": [
+        {
+          "key": "operator-prone",
+          "edit": "Show a soldier in a plain 1970s khaki uniform lying prone a few metres behind the {NAME}, looking into the periscope sight of a small separate control box, his face hidden by the sight",
+          "caption": "with an operator lying prone at the control box behind it"
+        }
+      ],
+      "status": "lora_trained",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0004",
+      "slug": "rkg-3-grenade",
+      "legacy_ids": [
+        "CMD-11"
+      ],
+      "name": "RKG-3 anti-tank hand grenade",
+      "period": "1950s–1980s",
+      "prompt": "Soviet RKG-3 stick-handled anti-tank hand grenade",
+      "verify": "Model used by Egyptian commandos in 1973",
+      "lora": {
+        "trigger": "prp0004rkg3",
+        "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
+        "version": "20261012-092836",
+        "url": "https://v3b.fal.media/files/b/0aae0b56/SqDgd8FBWKZ4HGjWgLHfO_pytorch_lora_weights.safetensors",
+        "media_path": "library/props/PRP-0004_rkg-3-grenade/lora/20261012-092836/prp0004rkg3.safetensors",
+        "steps": 1000,
+        "training_images": 12,
+        "trained": "2026-10-12",
+        "scale": 0.7
+      },
+      "training_note": "Painted olive-drab green: a fat ribbed cylindrical head on a long thin tubular handle, about 36 cm long in total — the length of a forearm. Always shown lying on its side or held in a hand, never standing on end.",
+      "training_actions": [
+        {
+          "key": "in-hand",
+          "edit": "Show a soldier's hand in a khaki sleeve gripping the {NAME} by its handle, close-up",
+          "caption": "gripped by its handle in a soldier's hand"
+        },
+        {
+          "key": "throw",
+          "edit": "Show a soldier in a 1970s khaki uniform seen from behind, arm raised, about to throw the {NAME}",
+          "caption": "about to be thrown by a soldier, seen from behind"
+        }
+      ],
+      "status": "lora_trained",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0005",
+      "slug": "soviet-at-mines",
+      "legacy_ids": [
+        "CMD-07"
+      ],
+      "name": "Soviet-pattern anti-tank mines",
+      "period": "1950s–1980s",
+      "prompt": "round Soviet-pattern anti-tank mines stacked under camouflage netting",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0006",
+      "slug": "mine-probe-and-tape-reel",
+      "legacy_ids": [
+        "CMD-12",
+        "PRP-08"
+      ],
+      "name": "Mine probe and marking tape reel",
+      "period": "any",
+      "prompt": "steel mine-probing rod and a reel of white marking tape worn on the back",
+      "states": [
+        "worn on the back",
+        "tape being paid out across sand",
+        "reel alone in the sand, loose end lifting in the wind"
+      ],
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0007",
+      "slug": "backpack-field-radio",
+      "legacy_ids": [],
+      "name": "Soviet-pattern backpack field radio",
+      "period": "1960s–1970s",
+      "prompt": "Soviet-pattern backpack field radio with a whip antenna and a handset on a coiled cord",
+      "verify": "Model used by Egyptian units in 1973",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0008",
+      "slug": "compass-and-map",
+      "legacy_ids": [],
+      "name": "Lensatic compass and topographic map",
+      "period": "1970s",
+      "prompt": "military lensatic compass on a folded 1970s topographic map, map dividers, a red-filtered flashlight beam",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0009",
+      "slug": "sealed-military-envelope",
+      "legacy_ids": [],
+      "name": "Sealed military envelope",
+      "period": "any",
+      "prompt": "brown military envelope sealed with red wax",
+      "states": [
+        "sealed",
+        "torn open"
+      ],
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0010",
+      "slug": "handwritten-arabic-letter",
+      "legacy_ids": [
+        "PRP-01",
+        "PRP-02"
+      ],
+      "name": "Handwritten Arabic letter",
+      "period": "1960s–1980s",
+      "prompt": "a page of lined paper with an everyday family letter in Arabic handwriting in pencil (greetings to his mother and his little sister, news from the camp, asking after the neighbours), written in soft, loose, slightly smudged pencil strokes that read as handwriting texture rather than as sharp legible words, folded",
+      "states": [
+        "being written",
+        "folded in thirds",
+        "folded twice",
+        "stained with salt",
+        "gritty with sand",
+        "in a cheap army envelope"
+      ],
+      "note": "Arabic handwriting must look like real Arabic script — review closely. No legible religious phrases (Basmala, verses): keep the words soft and unreadable (global no-Quran rule, 2026-10-14).",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0011",
+      "slug": "framed-soldier-portrait",
+      "legacy_ids": [
+        "PRP-03"
+      ],
+      "name": "Framed black-and-white soldier portrait",
+      "period": "1960s–1970s",
+      "prompt": "black-and-white studio portrait of {ACTOR_TRIGGER} in uniform in a simple wooden frame",
+      "note": "Generated per production once the actor's LoRA is locked.",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0012",
+      "slug": "transistor-radio-1970s",
+      "legacy_ids": [
+        "PRP-04"
+      ],
+      "name": "1970s battery transistor radio",
+      "period": "1960s–1980s",
+      "prompt": "1970s battery transistor radio with a leather case and a telescopic antenna",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0013",
+      "slug": "tabletop-valve-radio",
+      "legacy_ids": [
+        "PRP-04"
+      ],
+      "name": "Tabletop valve radio",
+      "period": "1950s–1970s",
+      "prompt": "wooden tabletop valve radio with a fabric speaker grille and a glowing dial",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0014",
+      "slug": "foot-pedal-sewing-machine",
+      "legacy_ids": [
+        "PRP-05"
+      ],
+      "name": "Foot-pedal sewing machine",
+      "period": "1920s–1980s",
+      "prompt": "black foot-pedal sewing machine with gold decals on a wooden table with an iron treadle",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0015",
+      "slug": "tin-toy-airplane",
+      "legacy_ids": [
+        "PRP-06"
+      ],
+      "name": "Tin toy airplane",
+      "period": "1950s–1970s",
+      "prompt": "small painted tin toy airplane, slightly dented",
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    },
+    {
+      "id": "PRP-0016",
+      "slug": "kerosene-lamp",
+      "legacy_ids": [
+        "PRP-07"
+      ],
+      "name": "Kerosene lamp",
+      "period": "any (pre-2000)",
+      "prompt": "kerosene lamp with a glass chimney and a brass base",
+      "states": [
+        "unlit",
+        "lit, low flame"
+      ],
+      "status": "concept",
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
+    }
+  ]
+}

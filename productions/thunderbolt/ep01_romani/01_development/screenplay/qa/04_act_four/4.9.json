@@ -1,0 +1,45 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A restrained, actor-led act ending. The repeated «رِجَّالَةْ» risks sentimentality on paper, but Shalabi’s exhausted whisper and the silent burial action make it credible and specific to the moment.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "slow",
+        "emotion": "contained grief and exhausted pride",
+        "delivery": "Speak down toward the grave, not out to the men. Let the pause carry the loss; the second phrase should come on a failing breath, without sobbing or declamation."
+      },
+      "text": "اللَّهْ يِرْحَمْكُمْ يَا رِجَّالَةْ… كُنْتُوا رِجَّالَةْ."
+    }
+  ],
+  "beat": "4.9",
+  "file": "04_act_four_v2.md",
+  "hash": "b699c2fd2e6f4586",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:50:59+00:00",
+  "seconds": 14.0,
+  "usage": {
+    "prompt_tokens": 2187,
+    "completion_tokens": 1112
+  },
+  "cost_usd": 0.03099
+}

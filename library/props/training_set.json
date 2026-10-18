@@ -1,0 +1,21 @@
+{
+  "$schema_note": "MTower Studio — training-set recipe for prop models (LoRAs). Each variation is one FLUX.1 Kontext edit of a real reference photo in media/library/props/<PRP-ID>_<slug>/references/. {NAME} is replaced by the prop's name. Per-prop 'training_actions' in props.json are added to these.",
+  "version": "1.0",
+  "identity_lock": "Keep the {NAME} exactly as in the photo: the same shape, proportions, parts, colour and markings. Do not redesign, simplify, or add parts. No text, letters, or numbers anywhere; no photo border or rounded corners. Realistic photograph, 1970s.",
+  "aspect_ratio": "4:3",
+  "gate": { "min_kept": 10, "min_references": 1 },
+  "variations": [
+    { "key": "plain-side", "edit": "Show only the {NAME}, alone, in side view on a plain light grey background, evenly lit, no people", "caption": "side view, alone on a plain grey background" },
+    { "key": "plain-three-quarter", "edit": "Show only the {NAME}, alone, in three-quarter view from slightly above on a plain light grey background, no people", "caption": "three-quarter view from above, alone on a plain grey background" },
+    { "key": "sand-day", "edit": "Place the {NAME} alone on flat desert sand in bright midday sun with hard shadows, no people", "caption": "lying on desert sand in bright midday sun" },
+    { "key": "salt-night", "edit": "Place the {NAME} alone on a wet salt flat at night under cold blue moonlight, no people", "caption": "on a wet salt flat at night in moonlight" },
+    { "key": "dusk-red", "edit": "Place the {NAME} alone on sand at dusk in warm low red light with long shadows, no people", "caption": "on sand at dusk in low red light" },
+    { "key": "close-detail", "edit": "Close-up detail of the {NAME}, filling most of the frame, shallow depth of field, no people", "caption": "close-up detail" },
+    { "key": "top-down", "edit": "Top-down view of the {NAME} lying on sand, no people", "caption": "top-down view lying on sand" },
+    { "key": "dusty", "edit": "Show the {NAME} covered in fine dust and sand in harsh daylight, no people", "caption": "covered in dust and sand in harsh daylight" },
+    { "key": "under-trees", "edit": "Place the {NAME} alone in the dappled shade under palm and acacia trees in morning light, no people", "caption": "in dappled shade under trees in morning light" },
+    { "key": "dug-in", "edit": "Place the {NAME} in a shallow sand pit lined with sandbags, as in a desert firing position, no people", "caption": "in a sandbagged desert firing pit" },
+    { "key": "scale-kneeling", "edit": "Add a soldier in a plain 1970s khaki uniform kneeling right beside the {NAME} with one hand resting on it, so its real size next to a man is obvious; the soldier's face turned away from the camera", "caption": "with a kneeling soldier beside it for scale" },
+    { "key": "scale-standing", "edit": "Show the {NAME} on the ground next to the boots and legs of a standing soldier in 1970s khaki trousers, only his legs visible, so its real size is obvious", "caption": "on the ground next to a standing soldier's legs for scale" }
+  ]
+}

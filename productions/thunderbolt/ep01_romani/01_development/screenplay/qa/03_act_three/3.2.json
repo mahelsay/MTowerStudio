@@ -1,0 +1,117 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, actor-led beat with a sharp turn from national jubilation to one mother’s private fear. The sparse dialogue feels credible for a Menoufia mother and daughter, and the final withdrawal lands without overstatement.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ZEINAB",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "rushed",
+        "emotion": "breathless pride and excitement",
+        "delivery": "She has run straight from the radio and blurts the news to her mother before fully catching her breath. The repeated phrase should tumble out with a child’s certainty."
+      },
+      "text": "عَدُّوا يَا أُمَّهْ! عَدُّوا الْقَنَاةْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "UMM MOSTAFA",
+      "score": 10,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained dread",
+        "delivery": "She grips Zeinab’s shoulders and cuts through the public celebration with the only name she cares about. Keep it quiet and direct, with fear held firmly underneath."
+      },
+      "text": "وِمُصْطَفَى؟"
+    },
+    {
+      "n": 3,
+      "speaker": "ZEINAB",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "hope strained by uncertainty",
+        "delivery": "She invents reassurance the instant she sees what her mother needs. Begin brightly, then let the certainty weaken slightly by «يَامَّا»."
+      },
+      "text": "أَكِيدْ عَدَّى مَعَاهُمْ يَامَّا…"
+    },
+    {
+      "n": 4,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "worry sealed behind resolve",
+        "delivery": "She releases Zeinab, lifts the basket and ends the conversation before hope can become a lie. The pause is practical rather than sentimental."
+      },
+      "text": "يَلَّا… عَ الْبِيتْ."
+    }
+  ],
+  "beat": "3.2",
+  "file": "03_act_three_v2.md",
+  "hash": "5c69be15d757b728",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:42:12+00:00",
+  "seconds": 25.4,
+  "usage": {
+    "prompt_tokens": 2360,
+    "completion_tokens": 2102
+  },
+  "cost_usd": 0.05148
+}

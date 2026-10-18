@@ -26,3 +26,27 @@ media/
 fleet/sample*.json
 fleet/reports/*.log
 fleet/reports/*.log.err
+
+# Imported production toolchain (engine/) — binaries and local data never committed
+inbox/
+*.mov
+*.m4v
+*.webm
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.webp
+*.gif
+*.tif
+*.tiff
+*.zip
+*.7z
+*.pem
+*.ckpt
+*.pt
+*.bin
+*.log
+.pytest_cache/
+.gallery/

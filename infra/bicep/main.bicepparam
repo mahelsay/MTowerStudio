@@ -36,6 +36,46 @@ param modelDeployments = [
     sku: 'GlobalStandard'
     capacity: 100
   }
+  // ---- Generation models (the studio's own production engine, engine/). Pay-per-use: idle = $0.
+  {
+    // Compositions with children + Kontext edits (engine image_compose_flux)
+    name: 'me-eus2-flux-kontext-pro'
+    format: 'Black Forest Labs'
+    model: 'FLUX.1-Kontext-pro'
+    version: '1'
+    sku: 'GlobalStandard'
+    capacity: 1
+  }
+  {
+    name: 'me-eus2-flux-2-pro'
+    format: 'Black Forest Labs'
+    model: 'FLUX.2-pro'
+    version: '1'
+    sku: 'GlobalStandard'
+    capacity: 1
+  }
+  {
+    // Crowd voices (engine voice_gpt_mini_tts)
+    name: 'me-eus2-gpt-4o-mini-tts'
+    format: 'OpenAI'
+    model: 'gpt-4o-mini-tts'
+    version: '2025-12-15'
+    sku: 'GlobalStandard'
+    capacity: 10
+  }
+  {
+    // Acted character voices + narrator (engine voice_gpt_audio)
+    name: 'me-eus2-gpt-audio-1-5'
+    format: 'OpenAI'
+    model: 'gpt-audio-1.5'
+    version: '2026-02-23'
+    sku: 'GlobalStandard'
+    capacity: 10
+  }
+  // PENDING quota (subscription-wide, currently all held by the MTower Foundry): gpt-image-2 (2/2),
+  // gpt-image-2.5-flare (2/2), sora-2 (9/9). Add here when MTower's deployments are released at cutover
+  // (or after a quota increase): me-eus2-gpt-image-2 (2026-04-21, cap 2), me-eus2-gpt-image-2-5-flare
+  // (2026-09-08, cap 2), me-eus2-sora-2 (2025-12-08, cap 9).
 ]
 
 // Budget: $700 ceiling (the target tenant's monthly), 70% alert (~$490) per ADR-0002.

@@ -1,0 +1,117 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact concealment beat with clear physical stakes and an effective turn into dry trench humour. The orders are credible, the whispered performances suit the danger, and Sayed’s answer sharply establishes his gruff, protective voice.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 8,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "controlled vigilance",
+        "delivery": "Keep working as he addresses the nearest men without gathering them around. Make the second phrase a firm reminder that every lifted piece must be saved."
+      },
+      "text": "وِشّْ الْأَرْضْ عَلَى جَنْبْ… هَيِرْجَعْ فُوقْ."
+    },
+    {
+      "n": 2,
+      "speaker": "HASSAN",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 8,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "methodical urgency",
+        "delivery": "Move his attention from the loose sand to the paling horizon. He is correcting the men quietly because concealment must be finished before the reconnaissance aircraft arrives."
+      },
+      "text": "الرَّمْلَةْ اللِّي طَلَّعْتُوهَا دِي… الصُّبْحْ مَا يِبْقَاشْ لِيهَا أَثَرْ. الطَّيَّارَةْ هَتِعَدِّي."
+    },
+    {
+      "n": 3,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "whisper",
+        "pace": "normal",
+        "emotion": "fear masked by black humour",
+        "delivery": "Say it while studying the walls of the pit, not as a joke offered to an audience. Let the humour escape because the depth has suddenly made the danger tangible."
+      },
+      "text": "أَنَا كِدَهْ بَحْفَرْ قَبْرِي بِإِيدِي."
+    },
+    {
+      "n": 4,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "deadpan concern",
+        "delivery": "Do not look at Adel or stop shovelling. Land «الْقَبْرْ أَعْمَقْ» dryly, then make «اِحْفَرْ» a quiet order that ends the exchange and keeps the frightened private moving."
+      },
+      "text": "دِي حُفْرَةْ يَا عَادِلْ… الْقَبْرْ أَعْمَقْ مِنْ كِدَهْ. اِحْفَرْ."
+    }
+  ],
+  "beat": "2.16",
+  "file": "02_act_two_v2.md",
+  "hash": "20827a63726a53ab",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:26:25+00:00",
+  "seconds": 37.5,
+  "usage": {
+    "prompt_tokens": 2688,
+    "completion_tokens": 3133
+  },
+  "cost_usd": 0.07341
+}

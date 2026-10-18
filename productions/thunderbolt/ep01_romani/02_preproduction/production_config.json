@@ -1,0 +1,522 @@
+{
+  "$schema_note": "Production configuration: which library looks this production uses, per-production token values, review lists, model choices, and the map from the episode's legacy asset IDs to library IDs.",
+  "production": "thunderbolt/ep01_romani",
+  "version": "1.0",
+  "libraries": {
+    "looks": "../../../../studio/library/looks/looks.json",
+    "actors": "../../../../studio/library/actors/actors.json",
+    "wardrobe": "../../../../studio/library/wardrobe/wardrobe.json",
+    "props": "../../../../studio/library/props/props.json",
+    "vehicles": "../../../../studio/library/vehicles/vehicles.json",
+    "locations": "../../../../studio/library/locations/locations.json"
+  },
+  "casting": "casting.json",
+  "format": "inherit studio format_defaults (16:9 generation, 2.39:1 delivery, 24 fps)",
+  "look_aliases": {
+    "LOOK_BASE": "{LOOK_BASE_FILM_70S}, 1973"
+  },
+  "worlds": {
+    "desert": {
+      "looks": [
+        "LOOK_DAY_DESERT",
+        "LOOK_NIGHT_MOON",
+        "LOOK_DAWN_HAZE",
+        "LOOK_BATTLE_SMOKE",
+        "LOOK_NIGHT_FIRE",
+        "LOOK_DUSK_RED"
+      ],
+      "palette": "sand, salt-white, night blue, smoke grey, firelight orange"
+    },
+    "village": {
+      "looks": [
+        "LOOK_VILLAGE_DELTA",
+        "LOOK_DUSK_RED"
+      ],
+      "palette": "green and gold, warm mud-brick, orange sunset"
+    },
+    "cairo_flat": {
+      "looks": [
+        "LOOK_CAIRO_BLUE_GLASS",
+        "LOOK_KEROSENE"
+      ],
+      "palette": "muted blue, warm bulb, amber lamp"
+    },
+    "interiors": {
+      "looks": [
+        "LOOK_RED_CABIN",
+        "LOOK_COCKPIT_GREEN",
+        "LOOK_LAMP_TENT",
+        "LOOK_BARE_BULB"
+      ]
+    }
+  },
+  "token_overrides": {
+    "HEADGEAR": "bare-headed with short black hair",
+    "HEADGEAR_status": "placeholder pending verification (1973 Sa'iqa headgear)"
+  },
+  "prop_bindings": {
+    "PRP-0011": {
+      "ACTOR_TRIGGER": "ACT-0002",
+      "note": "Sayed's framed portrait shows actor ACT-0002 (Hazem Abdallah)"
+    }
+  },
+  "review_lists": [
+    "AVOID_GENERAL",
+    "AVOID_MODERN_MILITARY",
+    "AVOID_ANATOMY"
+  ],
+  "script_rules": {
+    "_note": "Checked by './mtower.ps1 check' in the screenplay, narration_*.md and the shot lists (vowel marks are ignored). Series bible §4.5.",
+    "forbidden": [
+      {
+        "pattern": "(?i)\\bqur'?an(ic)?\\b|\\bkoran\\b|قرآن|القران|\\brecitation\\b|تلاوة|سورة",
+        "why": "No Quran in the series (user rule 2026-10-14)"
+      },
+      {
+        "pattern": "فئة قليلة|بسم الله الرحمن الرحيم|قل هو الله|الحمد لله رب العالمين",
+        "why": "Quran verse — no Quran in the series (user rule 2026-10-14)"
+      }
+    ]
+  },
+  "speakers": {
+    "_note": "Screenplay speaker name → character ID (script-qa and casting). Names not listed are voice_cast keys themselves (e.g. RADIO ANNOUNCER).",
+    "SHALABI": "C-01",
+    "SAYED": "C-02",
+    "MOSTAFA": "C-03",
+    "MAHMOUD": "C-04",
+    "HASSAN": "C-05",
+    "ADEL": "C-06",
+    "COMMANDER": "C-07",
+    "SQUADRON LEADER": "C-08",
+    "UMM MOSTAFA": "C-11",
+    "ZEINAB": "C-12",
+    "FATMA": "C-13",
+    "ALI": "C-14"
+  },
+  "dialogue": {
+    "tempo": 1.08,
+    "_note": "Pitch-preserving speed-up applied to every finished Egyptian take (user note 2026-10-16: the voices drag their words — 'pleeease sleeeep'). Together with the TEMPO_RULE in the voice direction."
+  },
+  "grades": {
+    "_note": "Colour grade per look, applied to every shot with that look when the cut is built (ffmpeg filter). Image models light night interiors warmer than designed; the grade restores the scene's light. Set 2026-10-17 on T.2-01 / T.3-07. Lifted 2026-10-17 (user's reference film): night shots averaged 17-35 of 255 luma, too dark on a phone; gamma lift to ~40-50 with the black point kept.",
+    "LOOK_RED_CABIN": "colorchannelmixer=rr=1.08:rg=0.10:gr=0.04:gg=0.78:bg=0.02:bb=0.70,eq=contrast=1.06:gamma=1.45:saturation=1.12,curves=all='0/0 0.05/0.03 1/1',vignette=angle=PI/7",
+    "LOOK_COCKPIT_GREEN": "eq=gamma=1.35:contrast=1.06:saturation=1.05,curves=all='0/0 0.05/0.03 1/1'",
+    "LOOK_NIGHT_MOON": "colorbalance=bs=0.05:bm=0.03,eq=gamma=1.2:contrast=1.05,curves=all='0/0 0.05/0.03 1/1'"
+  },
+  "narration": {
+    "script": "hamdi",
+    "cast": "N-01",
+    "voices": [
+      "ar-EG-ShakirNeural",
+      "ar-EG-SalmaNeural"
+    ],
+    "_note": "Drama-first (D-20, D-21): the narration is old Hamdi Shalabi remembering, in his own Egyptian Arabic, about a third of the old documentary VO — read from 03_production/voice/narration_hamdi.md and voiced by the N-01 cast voice (voice_cast). Beats marked '—' there are deliberately silent. 'voice --script egyptian' reads the earlier documentary version; '--script formal' reads the screenplay VO, which stays the source of truth for facts."
+  },
+  "voice_cast": {
+    "_note": "One fixed voice per character (D-21). 'voice' set = cast; otherwise the character's approved audition in the review app (Voice casting) is used. Candidates are what 'audition' tries. engine: gpt-audio-1.5 | gpt-4o-mini-tts | azure-speech | group. pitch > 1 raises the voice (children). language: egyptian (default) | msa | hebrew. Performance per line lives in the shot lists (dialogue_refs: intensity, volume, pace, emotion, delivery, fx); the guide is 03_production/voice/performance_guide.md.",
+    "N-01": {
+      "name": "Hamdi Shalabi, old (narrator)",
+      "persona": "Hamdi Shalabi in his late seventies, the retired commando officer, remembering the Romani ambush fifty years later for his grandchildren: a low, slightly worn voice, Cairo Arabic, plain words, memories that still move him; never a documentary reader.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "echo",
+          "pitch": 0.95
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "cedar"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ballad"
+        }
+      ],
+      "audition_narration": [
+        "2.2",
+        "4.9"
+      ]
+    },
+    "C-01": {
+      "name": "Captain Hamdi Shalabi",
+      "engine": "gpt-audio-1.5",
+      "voice": "echo",
+      "status": "approved 2026-10-13 (Dialogue Test T.3-08)",
+      "persona": "Egyptian commando captain about 30 from Cairo, commander of 122 men (with the attached Malutka platoon and engineers): few words, low and controlled, carries every decision alone; under pressure his voice tightens, it never panics."
+    },
+    "C-02": {
+      "name": "Sergeant Sayed",
+      "persona": "Egyptian commando sergeant, mid-30s, from Suez, displaced since 1967: a gravelly, sparing, dry voice; protective of the young men; humor hidden under gruffness.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "cedar"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "verse"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy"
+        }
+      ]
+    },
+    "C-03": {
+      "name": "Private Mostafa",
+      "persona": "Egyptian commando private of 20 from a Menoufia village, fit and hardened by a year of special-forces training: a young man's voice, never a boy's or a teenager's — a full chest voice with weight, earnest, trying to sound braver than he feels. Clearly a different man from Sergeant Sayed, who is older and gravelly.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ash",
+          "pitch": 0.95
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy",
+          "pitch": 0.9
+        },
+        {
+          "engine": "gpt-4o-mini-tts",
+          "voice": "onyx"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ballad",
+          "pitch": 0.9
+        }
+      ],
+      "recast_note": "2026-10-14 user: alloy sounded like a teenager and too close to Sayed (verse); re-auditioned with deeper voices."
+    },
+    "C-04": {
+      "name": "Corporal Mahmoud",
+      "persona": "Egyptian commando radio operator, mid-20s, careful and precise, always at the captain's side; speaks in whispers on the march.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ballad"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy"
+        }
+      ]
+    },
+    "C-05": {
+      "name": "Engineer Sergeant Hassan",
+      "persona": "Early-30s Sa'idi engineer sergeant, the slowest and calmest voice in the company: patient, careful, few words, never rattled even when others are joking or afraid.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ash",
+          "pitch": 0.92
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "cedar",
+          "pitch": 0.9
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ballad",
+          "pitch": 0.86
+        }
+      ],
+      "casting_note": "Must not sound like Mahmoud (ballad) or Shalabi (echo), who share 1.6, 2.14 with him: slower, deeper, Sa'idi."
+    },
+    "C-06": {
+      "name": "Private Adel",
+      "persona": "Early-20s Malutka operator from the Delta, tall and dry-witted: the unit's calm joker, joking when scared but dead steady at the control box.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "cedar",
+          "pitch": 1.04
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ash",
+          "pitch": 1.04
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy",
+          "pitch": 1.05
+        }
+      ],
+      "casting_note": "Shares most scenes with Sayed (verse), Mostafa (alloy 0.90) and Mahmoud (ballad): must be clearly a different young man — lighter, quicker, dry."
+    },
+    "C-07": {
+      "name": "Commander of Sa'iqa Forces",
+      "persona": "Egyptian major general in his early fifties, Cairo, thirty years in the army: a deep, low, mature voice with gravel in it, formal and measured authority, fatherly warmth underneath; never young-sounding.",
+      "candidates": [
+        {
+          "engine": "gpt-4o-mini-tts",
+          "voice": "onyx",
+          "pitch": 0.95
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ash",
+          "pitch": 0.88
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "verse",
+          "pitch": 0.88
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ballad",
+          "pitch": 0.86
+        }
+      ],
+      "recast_note": "2026-10-14 user: ballad sounded like a teenager; re-auditioned with deeper, older voices."
+    },
+    "C-08": {
+      "name": "Mi-8 squadron leader",
+      "engine": "gpt-audio-1.5",
+      "voice": "ash",
+      "status": "approved 2026-10-13 (Dialogue Test T.3)",
+      "persona": "Egyptian Air Force helicopter squadron leader in his mid-forties from Tanta: calm professional authority on the intercom, protective of the men he carries."
+    },
+    "C-11": {
+      "name": "Umm Mostafa",
+      "persona": "Widowed village mother from Menoufia in her mid-forties who looks older: rural Delta Egyptian Arabic, very few words, a strong low voice that hides worry.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "sage"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "coral",
+          "pitch": 0.95
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "marin",
+          "pitch": 0.95
+        }
+      ]
+    },
+    "C-12": {
+      "name": "Zeinab (12)",
+      "persona": "A 12-year-old Egyptian village girl from Menoufia: bright, quick, a child's voice, proud that she can read.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "shimmer",
+          "pitch": 1.12
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "coral",
+          "pitch": 1.15
+        }
+      ]
+    },
+    "C-13": {
+      "name": "Fatma",
+      "persona": "Egyptian woman about 30 from Suez, living displaced in Cairo, a seamstress: composed and soft-spoken, tired, holding everything in for her son.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "marin"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "coral"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "sage"
+        }
+      ]
+    },
+    "C-14": {
+      "name": "Ali (8)",
+      "persona": "An 8-year-old Egyptian boy in Cairo: a small child's voice, curious, a little shy.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "shimmer",
+          "pitch": 1.2
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "coral",
+          "pitch": 1.22
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy",
+          "pitch": 1.28
+        }
+      ]
+    },
+    "RADIO ANNOUNCER": {
+      "name": "Cairo radio announcer",
+      "language": "msa",
+      "persona": "A 1973 Egyptian state radio announcer reading a military communique.",
+      "candidates": [
+        {
+          "engine": "azure-speech",
+          "voice": "ar-EG-ShakirNeural"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "cedar"
+        }
+      ]
+    },
+    "INFANTRY SENTRY": {
+      "name": "Egyptian infantry sentry (5.4)",
+      "persona": "A young Egyptian infantry conscript from Upper Egypt on the canal front, nervous after days of fighting, challenging strangers across a salt flat at dusk.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy",
+          "pitch": 0.96
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "verse",
+          "pitch": 1.0
+        }
+      ]
+    },
+    "COMMANDOS": {
+      "name": "Commandos (murmur)",
+      "engine": "group",
+      "persona": "Several exhausted commandos murmuring together.",
+      "members": [
+        {
+          "engine": "gpt-4o-mini-tts",
+          "voice": "onyx"
+        },
+        {
+          "engine": "gpt-4o-mini-tts",
+          "voice": "fable"
+        },
+        {
+          "engine": "gpt-4o-mini-tts",
+          "voice": "verse"
+        },
+        {
+          "engine": "gpt-4o-mini-tts",
+          "voice": "ballad"
+        }
+      ]
+    },
+    "ISRAELI RADIO": {
+      "name": "Israeli radio (all clear)",
+      "language": "hebrew",
+      "persona": "An Israeli army radio operator in 1973.",
+      "candidates": [
+        {
+          "engine": "azure-speech",
+          "voice": "he-IL-AvriNeural"
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "alloy"
+        }
+      ]
+    },
+    "ISRAELI TANK COMMANDER": {
+      "name": "Israeli tank commander",
+      "language": "hebrew",
+      "persona": "An Israeli tank commander in his twenties under fire in 1973.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "verse"
+        },
+        {
+          "engine": "azure-speech",
+          "voice": "he-IL-AvriNeural"
+        }
+      ]
+    },
+    "ISRAELI BRIGADE COMMANDER": {
+      "name": "Israeli brigade commander",
+      "language": "hebrew",
+      "persona": "An Israeli armored brigade commander in his forties in 1973.",
+      "candidates": [
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "cedar",
+          "pitch": 0.95
+        },
+        {
+          "engine": "gpt-audio-1.5",
+          "voice": "ballad"
+        }
+      ]
+    }
+  },
+  "qa": {
+    "story": "Thunderbolt (الصاعقة), episode 1 'The Romani Ambush': a photorealistic historical war drama. October 1973, the Yom Kippur / October War. The 1st Company of the Egyptian 183rd Sa'iqa (commando) Battalion under Captain Hamdi Shalabi lands by Mi-8 helicopter on the Tina Plain salt marsh in northern Sinai, marches about 42 km at night through mud and brine, and ambushes an Israeli armored column on the Romani road. Intercut with the families at home in a Nile Delta village (Menoufia) and a blacked-out Cairo flat.",
+    "rules": [
+      "Flags: course and finish-line markers are small plain red marker flags, never national flags. Any Egyptian national flag in 1973 is the Federation of Arab Republics flag (1972–1984): red, white and black horizontal bands with a gold Hawk of Quraish in the white band — never a plain tricolour, never the eagle flag of today.",
+      "Period: 1973. Nothing modern: no kevlar helmets, plate carriers, digital or multicam camouflage, modern rifles, sunglasses, digital watches, plastic bottles, phones, modern vehicles or modern radios.",
+      "Egyptian commandos: bare-headed with short black hair (the HEADGEAR placeholder), 1970s Egyptian army field uniforms with Soviet-pattern webbing; AKM rifles with fixed wooden stocks, RPG-7 launchers, 9M14 Malyutka (AT-3 Sagger) suitcase missiles, RKG-3 anti-tank grenades, anti-tank mines. They are Egyptian men with Egyptian faces.",
+      "Egyptian rank insignia (1973, British-pattern system with the Eagle of Saladin, checked 2026-10-16): a captain (naqib) wears three gold five-pointed stars on each shoulder strap; a sergeant wears three chevrons on the sleeve. ONLY general officers (the Commander, a major general / liwa) wear red collar tabs (gorget patches), and his shoulder insignia is a gold eagle above two crossed curved sabres — never a crossed sword and baton (British) and never Soviet-style shoulder boards. Nobody wears a large eagle badge on the chest. Captains, NCOs and soldiers have plain khaki collars.",
+      "Weapons and loads are carried clear of the water and mud in the marsh: held at the chest, on the shoulders or above the head, never lying in the water.",
+      "Israeli side: Sho't Kal Centurion tanks, M3-type half-tracks and APCs, 1973 Israeli uniforms; Israeli crews are seen only at a distance.",
+      "Egyptian home scenes: a Muslim Egyptian household in 1973; no Christian crosses or other out-of-place religious symbols; women and girls dressed modestly for a 1973 Delta village or Cairo flat; children look their stated age.",
+      "No text, captions, logos, watermarks, borders or black letterbox bars in the frame; no blood, gore, visible wounds or corpses.",
+      "No Quran anywhere (series rule): no Quran verse, Basmala (بسم الله الرحمن الرحيم) or other scripture in any written text in the frame — letters, walls, signs, books. A letter is an everyday family letter.",
+      "Night shots stay night: lit by moonlight, starlight, fire or the named lamp; faces take the same light as the scene."
+    ]
+  },
+  "models": {
+    "image_draft": "Flux (fast/dev tier) via fal.ai or Replicate — verify current model IDs in task 2.3",
+    "image_final": "Flux (pro tier) with actor LoRAs — verify in task 2.3",
+    "image_reference_editing": "reference-conditioned editing model for LoRA training sets — verify in task 2.3",
+    "video_default": "Kling image-to-video — verify in task 2.3",
+    "video_premium": "Google Veo — key shots only",
+    "voice": "ElevenLabs multilingual model with an Arabic voice"
+  },
+  "legacy_id_map": {
+    "ENV-01": "LOC-0001",
+    "ENV-02": "LOC-0002",
+    "ENV-03": "LOC-0003",
+    "ENV-04": "LOC-0004",
+    "ENV-05": "LOC-0005",
+    "ENV-06": "LOC-0006",
+    "ENV-07": "LOC-0007",
+    "ENV-08": "LOC-0008",
+    "ENV-09": "LOC-0009",
+    "ENV-10": "LOC-0010",
+    "AIR-01": "VEH-0001",
+    "AIR-02": "VEH-0002",
+    "AIR-03": "VEH-0003",
+    "AIR-04": "VEH-0004",
+    "ARM-02": "VEH-0005",
+    "ARM-04": "VEH-0005 (damage states)",
+    "ARM-05": "VEH-0006 + VEH-0007",
+    "ARM-06": "VEH-0008",
+    "ARM-07": "VEH-0009",
+    "CMD-02": "WRD-0001",
+    "CMD-03": "WRD-0001 (HEADGEAR token)",
+    "CMD-04": "WRD-0001",
+    "CMD-05": "PRP-0001",
+    "CMD-06": "PRP-0002",
+    "CMD-07": "PRP-0005",
+    "CMD-10": "PRP-0003",
+    "CMD-11": "PRP-0004",
+    "CMD-12": "PRP-0006",
+    "PRP-01": "PRP-0010",
+    "PRP-02": "PRP-0010",
+    "PRP-03": "PRP-0011",
+    "PRP-04": "PRP-0012 + PRP-0013",
+    "PRP-05": "PRP-0014",
+    "PRP-06": "PRP-0015",
+    "PRP-07": "PRP-0016",
+    "PRP-08": "PRP-0006",
+    "CMD-01": "ACT-0001 (via casting C-01)",
+    "CMD-09": "casting.json"
+  }
+}

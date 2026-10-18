@@ -1,0 +1,93 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A tight suspense beat with clear dramatic irony: the Israeli all-clear brings the main column forward, Mahmoud believes the moment has come, and Shalabi holds for the final tactical marker. The whispers are concise, period-appropriate and playable.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ISRAELI RADIO",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "routine confidence",
+        "delivery": "Give a clipped radio report with professional certainty. The operator believes the route is secure and treats the advance as routine."
+      },
+      "text": "הַצִּיר נָקִי. אֵין מַגָּע. הַכּוֹחַ הָעִקָּרִי — קָדִימָה."
+    },
+    {
+      "n": 2,
+      "speaker": "MAHMOUD",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "contained urgency",
+        "delivery": "Keep his lips close to Shalabi’s ear and push the report out in one controlled breath. He is precise, but he expects this may be the signal they have been waiting for."
+      },
+      "text": "الرَّتْلْ كُلُّهْ دَخَلْ يَا فَنْدِمْ."
+    },
+    {
+      "n": 3,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 10,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "compressed resolve",
+        "delivery": "Do not look at Mahmoud; keep watching the road. Let the pause after «لِسَّهْ» stop Mahmoud’s momentum, then give the condition with absolute control."
+      },
+      "text": "لِسَّهْ… لَمَّا آخِرْ دَبَّابَةْ تِعَدِّي الْعَلَامَةْ."
+    }
+  ],
+  "beat": "3.5",
+  "file": "03_act_three_v2.md",
+  "hash": "315430aaba84217f",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:42:32+00:00",
+  "seconds": 26.8,
+  "usage": {
+    "prompt_tokens": 2472,
+    "completion_tokens": 2195
+  },
+  "cost_usd": 0.05379
+}

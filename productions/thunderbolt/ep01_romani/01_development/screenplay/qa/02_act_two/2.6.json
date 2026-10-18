@@ -1,0 +1,69 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A tight physical beat with a clear turn: Mostafa’s instinctive protection of the launcher reveals his training and pride, while Sayed’s single-word approval supplies restrained warmth without slowing the march.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "rushed",
+        "emotion": "shaken pride under physical distress",
+        "delivery": "Force the words out between suppressed coughs while looking up at Sayed. He is struggling for breath but needs Sayed to see that he protected the launcher."
+      },
+      "text": "اِتْبَلِّيتْ… بَسّْ السِّلَاحْ لَأْ."
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 8,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "gruff relief and concealed affection",
+        "delivery": "Check the launcher first, then meet Mostafa’s eyes. Give the word quietly and without softness; the almost-smile carries the affection."
+      },
+      "text": "شَاطِرْ."
+    }
+  ],
+  "beat": "2.6",
+  "file": "02_act_two_v2.md",
+  "hash": "602cff164c3f9ebf",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:21:05+00:00",
+  "seconds": 17.0,
+  "usage": {
+    "prompt_tokens": 2317,
+    "completion_tokens": 1241
+  },
+  "cost_usd": 0.03409
+}

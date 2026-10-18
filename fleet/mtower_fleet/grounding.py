@@ -1,6 +1,6 @@
 """L2 grounding — loads a production's own research and rules for the agents.
 
-For a beat this assembles, from the MTower production repo:
+For a beat this assembles, from the studio's own production data (productions/, library/):
   * series-bible rules (§4: history & real people, home front, enemy, violence)
   * the episode fact-check ledger (research/sources.md: SRC-xx sources, H-xx claims, D-x decisions)
   * the beat text from the locked screenplay
@@ -17,7 +17,14 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-MTOWER_REPO = Path(os.getenv("MTOWER_REPO", r"C:\dev\github-personal\MTower"))
+STUDIO_ROOT = Path(__file__).resolve().parents[2]          # the MTowerStudio repository
+PRODUCTIONS_DIR = STUDIO_ROOT / "productions"
+LIBRARY_DIR = STUDIO_ROOT / "library"
+
+
+def media_root() -> Path:
+    env = os.getenv("MTOWER_MEDIA_ROOT", "").strip()
+    return Path(env) if env else STUDIO_ROOT / "media"
 
 # Studio policies that refine the series bible. Decided by the owner; recorded in docs/adr/.
 STUDIO_POLICIES = (
@@ -32,7 +39,7 @@ STUDIO_POLICIES = (
 
 
 def _production_dir(production: str) -> Path:
-    return MTOWER_REPO / "productions" / production
+    return PRODUCTIONS_DIR / production
 
 
 def _episode_dir(production: str, episode: str) -> Path:

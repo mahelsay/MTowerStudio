@@ -1,0 +1,93 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A lean, actor-driven battle beat with a clear emotional turn: tactical urgency gives way to a brief recognition of loss, which Shalabi suppresses to keep the unit moving. The dialogue is natural, playable and properly restrained.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 9
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "controlled tactical urgency",
+        "delivery": "Point hard toward the turning vehicle and drive the order across the gunfire. Keep the words clipped and exact; he is calculating, not panicking."
+      },
+      "text": "اللِّي عَ الشِّمَالْ بِتْلِفّْ! اِضْرَبُوهَا قَبْلْ مَا تِطْلَعْ مِنْ الطَّرِيقْ!"
+    },
+    {
+      "n": 2,
+      "speaker": "MAHMOUD",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 8,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "measured",
+        "emotion": "shock held behind discipline",
+        "delivery": "Call to Shalabi from close beside him, intending to acknowledge the silent pit or ask what to do. Let the unfinished address die when Mahmoud reads the captain’s face."
+      },
+      "text": "يَا فَنْدِمْ…"
+    },
+    {
+      "n": 3,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 8,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "grief suppressed into resolve",
+        "delivery": "Say it without looking back, already pushing up to move. It is both an order to Mahmoud and a command to himself not to stop."
+      },
+      "text": "يَلَّا."
+    }
+  ],
+  "beat": "3.9",
+  "file": "03_act_three_v2.md",
+  "hash": "93d676300e5a66a8",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:43:05+00:00",
+  "seconds": 28.7,
+  "usage": {
+    "prompt_tokens": 2448,
+    "completion_tokens": 2389
+  },
+  "cost_usd": 0.05757
+}

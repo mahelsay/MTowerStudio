@@ -1,0 +1,165 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, playable night beat with a clean progression: daunting distance, whispered gallows humour, then Shalabi’s practical order. The dialogue is period-plausible, restrained and easy to perform under concealment.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "contained concern",
+        "delivery": "Sayed comes alongside Shalabi without disturbing his calculation. He asks as a seasoned NCO who already suspects the answer will be bad."
+      },
+      "text": "بِعِيدْ يَا فَنْدِمْ؟"
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "controlled burden",
+        "delivery": "Shalabi keeps his eyes on the map and gives the figure without softening it. Let the pause carry his awareness of what he is asking from the men."
+      },
+      "text": "اتنين وأربعين كِيلُو… عَلَى رِجْلِينَا."
+    },
+    {
+      "n": 3,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "disbelieving fatigue",
+        "delivery": "Adel leans toward Mostafa and repeats the number as if checking he heard correctly. Keep it involuntary and hushed, not comic in itself."
+      },
+      "text": "اتنين وأربعين… مَشْي؟"
+    },
+    {
+      "n": 4,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "dry resignation",
+        "delivery": "Mostafa looks at the water and answers without smiling. The humour comes from his dead seriousness and his attempt to master his own dread."
+      },
+      "text": "لَأْ… عُومْ."
+    },
+    {
+      "n": 5,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "firm vigilance",
+        "delivery": "Shalabi turns from the map and gives the nearest men a practical survival order. Keep the voice low enough for concealment but edged so it passes down the file."
+      },
+      "text": "السِّلَاحْ فُوقْ رَاسْكُو. مَحَدِّشْ يِغَرَّقْ سِلَاحُهْ."
+    },
+    {
+      "n": 6,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "decisive resolve",
+        "delivery": "Shalabi closes the calculation and sets the column moving. Give «يَلَّا» quiet forward force rather than parade-ground volume."
+      },
+      "text": "هَنِمْشِي عَلَى الْبُوصْلَةْ… يَلَّا."
+    }
+  ],
+  "beat": "2.3",
+  "file": "02_act_two_v2.md",
+  "hash": "bde92de320796fc1",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:27:36+00:00",
+  "seconds": 20.2,
+  "usage": {
+    "prompt_tokens": 2648,
+    "completion_tokens": 1797
+  },
+  "cost_usd": 0.04653
+}

@@ -1,0 +1,45 @@
+{
+  "beat_score": 10,
+  "verdict": "pass",
+  "summary": "A precise, actor-ready command that releases the beat’s accumulated pressure without explanation or ornament.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 10,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 10,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "controlled lethal resolve",
+        "delivery": "Into the handset, after confirming the last tank has entered the kill zone. Strike the word once, sharply; the force comes from certainty, not panic."
+      },
+      "text": "اِضْرَبْ!"
+    }
+  ],
+  "beat": "3.6",
+  "file": "03_act_three_v2.md",
+  "hash": "792a1c0588b65111",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:42:23+00:00",
+  "seconds": 11.7,
+  "usage": {
+    "prompt_tokens": 2080,
+    "completion_tokens": 783
+  },
+  "cost_usd": 0.02398
+}

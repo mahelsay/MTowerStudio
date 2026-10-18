@@ -1,0 +1,47 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A spare, highly visual suspense beat. Hassan’s warning is natural, tactically clear and specific to the engineer leading men through a lethal lane.",
+  "scene_issues": [],
+  "history_issues": [
+    "The mine model remains marked “TBD”; confirm the Israeli mine variant before production without changing the action."
+  ],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "HASSAN",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "slow",
+        "emotion": "controlled dread and responsibility",
+        "delivery": "Hassan looks back at the prone file and fixes each man with the warning. Keep the whisper dry and exact, with a small pause between the two sentences; he is suppressing fear so nobody makes a fatal move."
+      },
+      "text": "عَلَى الشَّرِيطْ وَبَسّْ. وَلَا شِبْرْ بَرَّاهْ."
+    }
+  ],
+  "beat": "2.10",
+  "file": "02_act_two_v2.md",
+  "hash": "8914d6491e632ce4",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:21:32+00:00",
+  "seconds": 10.9,
+  "usage": {
+    "prompt_tokens": 2211,
+    "completion_tokens": 735
+  },
+  "cost_usd": 0.02354
+}

@@ -1,0 +1,117 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A spare, actor-friendly domestic beat. Ali’s second question gently corners Fatma, and her evasive reassurance lands as both comfort and self-protection. The photo action supplies the turn without explanatory dialogue.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ALI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 6,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "sleepy unease",
+        "delivery": "Ask from the mattress without lifting your head. The question sounds casual, but you are waiting closely for your mother’s answer."
+      },
+      "text": "مَامَا… هُوَّ بَابَا نَايِمْ دِلْوَقْتِي؟"
+    },
+    {
+      "n": 2,
+      "speaker": "FATMA",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 6,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained fear",
+        "delivery": "Answer without turning from the radio. Keep it gentle but slightly clipped, as if ending his questions will also quiet your own thoughts."
+      },
+      "text": "نَامْ يَا عَلِي."
+    },
+    {
+      "n": 3,
+      "speaker": "ALI",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 6,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "normal",
+        "emotion": "innocent persistence",
+        "delivery": "You are more awake now, though still physically sleepy. Ask plainly, with a child’s expectation that there must be a real place and a simple answer."
+      },
+      "text": "هُوَّ بِيِنَامْ فِينْ؟"
+    },
+    {
+      "n": 4,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 7,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "tenderness covering dread",
+        "delivery": "Give him the comforting image as you straighten the already-straight photograph. Let the pause hold your uncertainty, then make «نَامْ بَقَى» gently firmer."
+      },
+      "text": "فِي حِتَّةْ دَافْيَةْ… نَامْ بَقَى."
+    }
+  ],
+  "beat": "2.7",
+  "file": "02_act_two_v2.md",
+  "hash": "e5bcecaee132769e",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:21:32+00:00",
+  "seconds": 36.7,
+  "usage": {
+    "prompt_tokens": 2351,
+    "completion_tokens": 2781
+  },
+  "cost_usd": 0.06502
+}

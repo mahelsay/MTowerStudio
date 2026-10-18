@@ -1,0 +1,119 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A tight, playable teaser beat with a clean escalation: warning, objection, life-or-death rationale, then Shalabi’s clipped acceptance. The technical information comes through urgent operational speech rather than documentary exposition, and the final line gives the beat a strong turn into the smash cut.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SQUADRON LEADER",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 8,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 8
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "controlled alarm",
+        "delivery": "He keys the intercom and gives Shalabi the threat and the unavoidable decision in one professional burst. Keep the voice firm and close to the microphone, never panicked."
+      },
+      "text": "يَا حَمْدِي… الرَّادَارْ لَاقِطْ تَشْكِيلْ فَانْتُومْ. هَنِضْطَرّْ نِنَزِّلْ الْقُوَّةْ كُلَّهَا فِي أَقْرَبْ مَنْطِقَةْ."
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "tight resistance",
+        "delivery": "He reacts to the mission consequence, not out of fear for himself. Bite down on «يَعْنِي إِيهْ» and tighten further on «الْكَمِينْ» without raising the voice."
+      },
+      "text": "يَعْنِي إِيهْ يَا فَنْدِمْ؟ دَهْ هَيْبَعِّدْنِي عَنْ الْكَمِينْ."
+    },
+    {
+      "n": 3,
+      "speaker": "SQUADRON LEADER",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 8
+      },
+      "issues": [
+        "The line is at the five-second limit; keep the pause after «أَوَصَّلَكْ» brief."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "protective urgency",
+        "delivery": "He cuts off the objection with the concrete cost, speaking over rotor and radio noise. Stress «الطَّيَّارَاتْ» and «وِنِخْسَرْكُو», then make the last sentence a firm statement of duty."
+      },
+      "text": "لَوْ اِتْضَرَبْنَا وِإِنْتُو جُوَّهْ، هَنِخْسَرْ الطَّيَّارَاتْ وِنِخْسَرْكُو. أَنَا مُهِمِّتِي إِنِّي أَوَصَّلَكْ… وَأَحَافِظْ عَلَى حَيَاتَكْ."
+    },
+    {
+      "n": 4,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 8,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "grim acceptance",
+        "delivery": "After looking at his men, he gives the word directly into the headset. It is consent to the pilot’s decision, not an order barked at him; land the final syllable and stop."
+      },
+      "text": "نَزِّلْنَا."
+    }
+  ],
+  "beat": "T.3",
+  "file": "00_teaser.md",
+  "hash": "d482c9eaf67a9d2b",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:14:13+00:00",
+  "seconds": 69.1,
+  "usage": {
+    "prompt_tokens": 2818,
+    "completion_tokens": 5912
+  },
+  "cost_usd": 0.12951
+}

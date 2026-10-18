@@ -1,0 +1,71 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, effective escalation beat: unseen fire disorients the tank crew, the sand defeats the armored response, and the brigade commander is forced to call for infantry. The Hebrew is concise, natural, and playable over combat radio.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ISRAELI TANK COMMANDER",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 9,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The line is necessarily generic; the immediate panic defines the speaker more than individual character does."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "shout",
+        "pace": "rushed",
+        "emotion": "disoriented fear under fire",
+        "delivery": "Fight the engine and radio noise while scanning for a target that never appears. The second sentence breaks out more sharply as the commander realizes he is exposed and blind."
+      },
+      "text": "מֵאֵיפֹה הֵם יוֹרִים? אֲנִי לֹא רוֹאֶה אוֹתָם!"
+    },
+    {
+      "n": 2,
+      "speaker": "ISRAELI BRIGADE COMMANDER",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 8,
+        "intensity": 8,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "controlled tactical frustration",
+        "delivery": "Report the failed armored maneuver as a hard fact, then turn immediately to the demand. Keep command authority intact; he is pressured, not panicking."
+      },
+      "text": "הַטַּנְקִים נִתְקָעִים בַּחוֹל. תִּשְׁלְחוּ לִי חִי״ר!"
+    }
+  ],
+  "beat": "3.12",
+  "file": "03_act_three_v2.md",
+  "hash": "1265b9a8cb3a4cf8",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:45:45+00:00",
+  "seconds": 17.1,
+  "usage": {
+    "prompt_tokens": 2458,
+    "completion_tokens": 1382
+  },
+  "cost_usd": 0.03747
+}

@@ -1,0 +1,47 @@
+{
+  "$schema_note": "Casting for one production: maps each story character (from 01_development/characters.md) to a library actor and wardrobe, plus character-specific additions (costume details, props, signatures; face_additions such as glasses are also kept by the face pass). The engine builds a character's prompt as: actor face_and_body + wardrobe prompt + character_additions + wear state. rank_reference (optional) names an insignia drawing in studio/library/wardrobe/insignia/ that is attached to compositions and QA.",
+  "production": "thunderbolt/ep01_romani",
+  "version": "1.0",
+  "status": "draft — Phase 2",
+  "libraries": {
+    "actors": "../../../../studio/library/actors/actors.json",
+    "wardrobe": "../../../../studio/library/wardrobe/wardrobe.json",
+    "props": "../../../../studio/library/props/props.json"
+  },
+
+  "cast": {
+    "C-01": { "character": "Captain Hamdi Shalabi", "actor": "ACT-0001", "wardrobe": "WRD-0001", "character_additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)", "rank_reference": "eg-army-captain-OF02.png", "wear_states": ["WEAR_CLEAN", "WEAR_MUD", "WEAR_SALT", "WEAR_SAND", "WEAR_BATTLE", "WEAR_GAUNT"], "lora_needed": true },
+    "C-02": { "character": "Sergeant Sayed", "actor": "ACT-0002", "wardrobe": "WRD-0001", "character_additions": "sergeant's rank: three khaki cloth chevrons on the upper sleeve, plain shoulder straps and plain collar", "wear_states": ["WEAR_CLEAN", "WEAR_MUD", "WEAR_SALT", "WEAR_SAND", "WEAR_BATTLE"], "lora_needed": true },
+    "C-03": { "character": "Private Mostafa", "actor": "ACT-0003", "wardrobe": "WRD-0001", "character_additions": "short military haircut, uniform slightly too big for him, RPG-7 rocket carrier bag on his back (PRP-0002)", "wear_states": ["WEAR_CLEAN", "WEAR_MUD", "WEAR_SALT", "WEAR_SAND", "WEAR_BATTLE", "WEAR_GAUNT", "WEAR_POSTWAR"], "lora_needed": true },
+    "C-04": { "character": "Corporal Mahmoud", "actor": "ACT-0004", "wardrobe": "WRD-0001", "face_additions": "wire-rimmed glasses taped at the hinge", "character_additions": "short military haircut, backpack field radio with a whip antenna (PRP-0007)", "wear_states": ["WEAR_MUD", "WEAR_SALT", "WEAR_SAND", "WEAR_BATTLE", "WEAR_GAUNT"], "lora_needed": true },
+    "C-05": { "character": "Engineer Sergeant Hassan", "actor": "ACT-0013", "recast_note": "Recast from ACT-0005 on 2026-10-12: the earlier face read West-African rather than Sa'idi.", "wardrobe": "WRD-0001", "character_additions": "reel of white marking tape strapped to his back and a steel mine probe (PRP-0006)", "wear_states": ["WEAR_CLEAN", "WEAR_MUD", "WEAR_SALT", "WEAR_SAND", "WEAR_BATTLE"], "lora_needed": true },
+    "C-06": { "character": "Private Adel", "actor": "ACT-0006", "wardrobe": "WRD-0001", "character_additions": "Malutka control box and periscope sight (PRP-0003)", "wear_states": ["WEAR_CLEAN", "WEAR_SALT", "WEAR_SAND", "WEAR_BATTLE"], "lora_needed": true },
+    "C-07": { "character": "Commander of Sa'iqa Forces (unnamed on screen)", "actor": "ACT-0011", "wardrobe": "WRD-0003", "rank_reference": "eg-army-major-general-OF07.png", "character_additions": "", "wear_states": ["WEAR_CLEAN"], "lora_needed": false },
+    "C-08": { "character": "Mi-8 Squadron Leader", "actor": "ACT-0012", "wardrobe": "WRD-0002", "character_additions": "", "wear_states": ["WEAR_CLEAN"], "lora_needed": false },
+    "C-11": { "character": "Umm Mostafa", "actor": "ACT-0007", "wardrobe": "WRD-0006", "character_additions": "flour on her hands", "wear_states": ["WEAR_CLEAN"], "lora_needed": true },
+    "C-12": { "character": "Zeinab", "actor": "ACT-0008", "wardrobe": "WRD-0008", "character_additions": "hair in two long black braids", "wear_states": ["WEAR_CLEAN"], "lora_needed": true },
+    "C-13": { "character": "Fatma", "actor": "ACT-0009", "wardrobe": "WRD-0007", "character_additions": "a thimble on her finger", "wear_states": ["WEAR_CLEAN"], "lora_needed": true },
+    "C-14": { "character": "Ali", "actor": "ACT-0010", "wardrobe": "WRD-0009", "character_additions": "holding a small painted tin toy airplane (PRP-0015)", "wear_states": ["WEAR_CLEAN"], "lora_needed": true }
+  },
+
+  "uncast_roles": {
+    "C-09": { "character": "Israeli battalion commander (Assaf Yagouri, unnamed on screen)", "treatment": "distant figure only, WRD-0004; no locked face" },
+    "C-10": { "character": "Israeli brigade commander", "treatment": "radio voice only" }
+  },
+
+  "extras": {
+    "egyptian_commandos": { "wardrobe": "WRD-0001", "note": "The rest of the 122 men; same uniform and wear states as the main cast in each scene; no locked faces" },
+    "israeli_tank_crews": { "wardrobe": "WRD-0004", "note": "Distant only" },
+    "israeli_infantry": { "wardrobe": "WRD-0005", "note": "Distant only (half-tracks, Beats 3.13, 4.1)" },
+    "villagers": { "wardrobe": "WRD-0006", "note": "Village lane, grocery, mosque" },
+    "cairo_neighbors_children": { "wardrobe": "WRD-0007 / WRD-0009", "note": "Stairwell, alley" },
+    "egyptian_infantry_and_boatmen": { "wardrobe": "WRD-0001 (infantry variant)", "note": "Beat 5.4" },
+    "postman": { "wardrobe": "period civilian", "note": "Beat 5.3, bicycle" }
+  },
+
+  "lora_plan": {
+    "count": 10,
+    "actors": ["ACT-0001", "ACT-0002", "ACT-0003", "ACT-0004", "ACT-0013", "ACT-0006", "ACT-0007", "ACT-0008", "ACT-0009", "ACT-0010"],
+    "workflow": "studio/handbook/README.md#casting-and-face-models"
+  }
+}

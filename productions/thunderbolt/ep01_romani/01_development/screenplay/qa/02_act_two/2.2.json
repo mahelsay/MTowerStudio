@@ -1,0 +1,119 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A restrained, actor-led beat with a clean turn from shocked recognition to survivor’s debt. The silence, delayed impact and short lines carry the loss without overstatement or documentary exposition.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "horrified disbelief",
+        "delivery": "Mostafa keeps staring at the distant flash, barely able to form the question. Let the repeated «دِي» catch in his throat without making him sound childish."
+      },
+      "text": "دِي… دِي وَاحْدَةْ مِنْ بِتُوعْنَا؟"
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "suppressed shock and survivor’s guilt",
+        "delivery": "Shalabi does not turn from the horizon. He calculates what would have happened to his men, then lets the unfinished thought die rather than displaying the feeling."
+      },
+      "text": "لَوْ كُنَّا لِسَّهْ فُوقْ…"
+    },
+    {
+      "n": 3,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "«اللَّهْ يِرْحَمْهُمْ» is truthful and natural, but necessarily generic; it does little to distinguish Mahmoud from another soldier."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "stunned grief",
+        "delivery": "Mahmoud answers the sight rather than either man. Keep it compact and private, with no devotional flourish or sob."
+      },
+      "text": "اللَّهْ يِرْحَمْهُمْ."
+    },
+    {
+      "n": 4,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "gratitude burdened by guilt",
+        "delivery": "Shalabi states the debt without looking for agreement. Give slight weight to «هُوَّ», then contain the emotion in «نَجَّانَا» rather than swelling it."
+      },
+      "text": "قَائِدْ السِّرْبْ… هُوَّ اللِّي نَجَّانَا."
+    }
+  ],
+  "beat": "2.2",
+  "file": "02_act_two_v2.md",
+  "hash": "795ff4d00526f650",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:30:01+00:00",
+  "seconds": 37.9,
+  "usage": {
+    "prompt_tokens": 2644,
+    "completion_tokens": 3286
+  },
+  "cost_usd": 0.0763
+}

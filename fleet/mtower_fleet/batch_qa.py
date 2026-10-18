@@ -25,7 +25,7 @@ MAX_REFS = 5
 
 def _media_root() -> Path:
     env = os.getenv("MTOWER_MEDIA_ROOT")
-    return Path(env) if env else grounding.MTOWER_REPO / "media"
+    return grounding.media_root()
 
 
 def _keyframes_dir(production: str, episode: str) -> Path:
@@ -71,9 +71,8 @@ def _load_json(p: Path) -> dict:
 
 
 def references_for(production: str, episode: str, design: dict) -> list[tuple[str, str]]:
-    repo = grounding.MTOWER_REPO
-    casting = _load_json(repo / "productions" / production / episode / "02_preproduction" / "casting.json").get("cast", {})
-    actors = {a["id"]: a for a in _load_json(repo / "studio" / "library" / "actors" / "actors.json").get("actors", [])}
+    casting = _load_json(grounding.PRODUCTIONS_DIR / production / episode / "02_preproduction" / "casting.json").get("cast", {})
+    actors = {a["id"]: a for a in _load_json(grounding.LIBRARY_DIR / "actors" / "actors.json").get("actors", [])}
     refs: list[tuple[str, str]] = []
     face_visible = design.get("face_pass", True) is not False
     for cid in design.get("character_ids", []) if face_visible else []:
@@ -91,7 +90,7 @@ def references_for(production: str, episode: str, design: dict) -> list[tuple[st
             for p in sorted((folder / "references").glob("*"))[:2]:
                 if p.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
                     refs.append((f"real reference photo of prop {m.group(0)}", str(p)))
-    insignia = repo / "studio" / "library" / "wardrobe" / "insignia"
+    insignia = grounding.LIBRARY_DIR / "wardrobe" / "insignia"
     seen: set[str] = set()
     for cid in design.get("character_ids", []):
         name = casting.get(cid, {}).get("rank_reference")
@@ -105,7 +104,7 @@ def references_for(production: str, episode: str, design: dict) -> list[tuple[st
 
 
 def production_rules(production: str, episode: str) -> str:
-    qa = _load_json(grounding.MTOWER_REPO / "productions" / production / episode / "02_preproduction"
+    qa = _load_json(grounding.PRODUCTIONS_DIR / production / episode / "02_preproduction"
                     / "production_config.json").get("qa", {})
     if not qa:
         return ""
@@ -123,9 +122,8 @@ def mtower_verdict(frame: dict) -> dict:
 
 
 def design_text(production: str, episode: str, design: dict) -> str:
-    repo = grounding.MTOWER_REPO
-    casting = _load_json(repo / "productions" / production / episode / "02_preproduction" / "casting.json").get("cast", {})
-    locations = {l["id"]: l for l in _load_json(repo / "studio" / "library" / "locations" / "locations.json")
+    casting = _load_json(grounding.PRODUCTIONS_DIR / production / episode / "02_preproduction" / "casting.json").get("cast", {})
+    locations = {l["id"]: l for l in _load_json(grounding.LIBRARY_DIR / "locations" / "locations.json")
                  .get("locations", [])}
     lines = [
         f"Shot {design.get('shot_id')} — beat {design.get('beat')} '{design.get('beat_title', '')}'.",

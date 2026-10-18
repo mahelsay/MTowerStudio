@@ -1,0 +1,117 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A restrained, actor-friendly family beat. Zeinab’s practical questions expose the mother’s buried fear without giving the family impossible knowledge, and the final answer lands with quiet dramatic irony before the war begins.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ZEINAB",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 4,
+        "volume": "normal",
+        "pace": "normal",
+        "emotion": "sudden concern",
+        "delivery": "She has been helping with the bread when the thought of her brother abruptly surfaces. Ask her mother directly, with a child’s expectation that she will know."
+      },
+      "text": "يَامَّا… هُوَّ مُصْطَفَى صَايِمْ هِنَاكْ؟"
+    },
+    {
+      "n": 2,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "worry held down",
+        "delivery": "Answer without looking at Zeinab. Let the small pause admit that Mustafa’s hardship is what she has really been thinking about."
+      },
+      "text": "صَايِمْ… وِبِيِتْعَبْ."
+    },
+    {
+      "n": 3,
+      "speaker": "ZEINAB",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "normal",
+        "pace": "quick",
+        "emotion": "practical worry",
+        "delivery": "The next question follows immediately because food is the part of danger she can understand. Keep it simple and genuinely concerned, not ominous."
+      },
+      "text": "طَبْ هَيِفْطَرْ عَلَى إِيهْ؟"
+    },
+    {
+      "n": 4,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 10,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "helplessness concealed as faith",
+        "delivery": "Take the beat while lifting the tray so the work saves her from meeting Zeinab’s eyes. Give the answer as something firm enough for the child, though the mother does not believe she knows."
+      },
+      "text": "اللِّي رَبِّنَا يِبْعَتُهْ."
+    }
+  ],
+  "beat": "1.8",
+  "file": "01_act_one_v2.md",
+  "hash": "150a954caeab8e0f",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:37:02+00:00",
+  "seconds": 26.4,
+  "usage": {
+    "prompt_tokens": 2188,
+    "completion_tokens": 2088
+  },
+  "cost_usd": 0.05051
+}

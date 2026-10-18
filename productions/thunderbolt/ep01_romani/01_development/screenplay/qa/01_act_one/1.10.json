@@ -1,0 +1,141 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A strong, economical domestic beat. Public triumph reaches the flat through sound, while Fatma’s restraint keeps the moment personal and historically credible. Ali’s innocent question creates the turn, and Fatma’s answer carries hope without claiming knowledge she could not possess.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "RADIO ANNOUNCER",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 8
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "controlled national gravity",
+        "delivery": "Read directly into the studio microphone with formal precision. Keep the crossing news weighty but restrained, without adding a celebratory flourish."
+      },
+      "text": "هُنَا الْقَاهِرَةُ… بَيَانٌ مِنَ الْقِيَادَةِ الْعَامَّةِ لِلْقُوَّاتِ الْمُسَلَّحَةِ: نَجَحَتْ قُوَّاتُنَا فِي عُبُورِ قَنَاةِ السُّوَيْسِ…"
+    },
+    {
+      "n": 2,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "astonished, overflowing excitement",
+        "delivery": "Call from the window toward Fatma, barely able to get the news out. The repeated «عَدِّينَا» bursts from Ali as if he personally took part."
+      },
+      "text": "مَامَا! بِيِقُولُوا عَدِّينَا! عَدِّينَا!"
+    },
+    {
+      "n": 3,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "contained hope edged with fear",
+        "delivery": "Answer Ali without looking away from Sayed’s photograph. She is acknowledging him while refusing, for one more moment, to surrender to the celebration."
+      },
+      "text": "سَامْعَاكْ يَا عَلِي."
+    },
+    {
+      "n": 4,
+      "speaker": "ALI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "breathless hope seeking certainty",
+        "delivery": "Turn from the window and ask Fatma directly over the radio and ululation. The question is simple and literal: for Ali, crossing means going home."
+      },
+      "text": "يَعْنِي هَنِرْجَعْ السُّوِيسْ؟"
+    },
+    {
+      "n": 5,
+      "speaker": "FATMA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "slow",
+        "emotion": "fragile hope breaking through grief",
+        "delivery": "Let the long silence happen before speaking. Give the first «قَرَّبْنَا» to Ali and the second almost to herself, with the smile arriving through tears."
+      },
+      "text": "قَرَّبْنَا يَا عَلِي… قَرَّبْنَا."
+    }
+  ],
+  "beat": "1.10",
+  "file": "01_act_one_v2.md",
+  "hash": "adfc7014758bd621",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T10:53:34+00:00",
+  "seconds": 38.4,
+  "usage": {
+    "prompt_tokens": 2611,
+    "completion_tokens": 3071
+  },
+  "cost_usd": 0.07186
+}

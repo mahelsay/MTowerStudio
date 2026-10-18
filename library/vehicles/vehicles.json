@@ -1,0 +1,84 @@
+{
+  "$schema_note": "MTower Studio — vehicles and aircraft catalog. Each entry can list interiors and damage/state variants.",
+  "catalog": "vehicles",
+  "version": "1.0",
+  "id_format": "VEH-0000",
+
+  "vehicles": [
+    {
+      "id": "VEH-0001", "slug": "mi8-egyptian-af-1973", "legacy_ids": ["AIR-01"],
+      "name": "Mil Mi-8 transport helicopter — Egyptian Air Force, 1973",
+      "prompt": "Soviet-built Mil Mi-8 transport helicopter in Egyptian Air Force sand-and-brown desert camouflage with Egyptian roundels",
+      "interiors": {
+        "cabin": "interior of a Mi-8 cabin: fold-down side benches, small round windows, cargo stacked in the aisle",
+        "cockpit": "Mi-8 cockpit with analog instruments and a round radar scope"
+      },
+      "states": ["parked at dusk", "in flight at night, no lights", "low hover over water with rotor spray", "distant fireball (destroyed)"],
+      "verify": "1973 Egyptian camouflage pattern and roundel",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0002", "slug": "f4e-phantom-iaf", "legacy_ids": ["AIR-02"],
+      "name": "F-4E Phantom II — Israeli Air Force",
+      "prompt": "McDonnell Douglas F-4E Phantom II jet in Israeli Air Force sand-and-green camouflage",
+      "states": ["far away in the sky"],
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0003", "slug": "egyptian-af-jets-1973", "legacy_ids": ["AIR-03"],
+      "name": "Egyptian Air Force strike jets, 1973 (type TBD)",
+      "prompt": "Egyptian Air Force jet fighters flying very low in formation",
+      "verify": "Aircraft type for the Oct 6 low pass",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0004", "slug": "israeli-recon-jet-1973", "legacy_ids": ["AIR-04"],
+      "name": "Israeli reconnaissance aircraft, 1973 (type TBD)",
+      "prompt": "single jet aircraft flying low over flat desert, seen from the ground",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0005", "slug": "shot-kal-centurion", "legacy_ids": ["ARM-02", "ARM-04"],
+      "name": "Sho't Kal (upgraded Centurion) main battle tank — IDF, 1973",
+      "prompt": "Israeli Sho't Kal Centurion main battle tank, 1973, pale Sinai grey paint, 105mm gun with fume extractor, side skirts, turret stowage baskets, tactical chevron markings",
+      "states": ["intact", "moving in column", "hit and smoking but still moving", "disabled", "burning with black oily smoke", "burned-out hull", "stuck in soft sand"],
+      "verify": "217th Brigade markings and hull numbers",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0006", "slug": "idf-jeep-1973", "legacy_ids": ["ARM-05"],
+      "name": "IDF military jeep, 1973",
+      "prompt": "Israeli military jeep, 1973, pale grey-sand paint",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0007", "slug": "idf-tracked-apc-1973", "legacy_ids": ["ARM-05"],
+      "name": "IDF tracked armored vehicle, 1973 (type TBD)",
+      "prompt": "Israeli tracked armored vehicle, 1973, pale grey-sand paint",
+      "verify": "Type in the 217th Brigade's advance guard",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0008", "slug": "bus-1970s", "legacy_ids": ["ARM-06"],
+      "name": "1970s bus used as troop transport",
+      "prompt": "1970s civilian-style bus with dusty paint carrying soldiers",
+      "states": ["moving", "stopped and burning, seen from a distance"],
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0009", "slug": "idf-m3-halftrack", "legacy_ids": ["ARM-07"],
+      "name": "M3-type armored half-track — IDF, 1973",
+      "prompt": "Israeli M3-type armored half-track, 1973, pale grey-sand paint, machine gun on a ring mount",
+      "states": ["moving through smoke", "stopped, troops dismounting"],
+      "verify": "Exact model",
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    },
+    {
+      "id": "VEH-0010", "slug": "wooden-rowing-boat", "legacy_ids": [],
+      "name": "Small wooden rowing boat",
+      "prompt": "small wooden rowing boat with oars",
+      "states": ["moored at a bank", "crossing dark water at night"],
+      "status": "concept", "used_in": ["thunderbolt/ep01_romani"]
+    }
+  ]
+}

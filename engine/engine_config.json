@@ -1,0 +1,371 @@
+{
+  "$schema_note": "Production engine configuration (shared by all productions). Model IDs and prices change often: verify them on the provider's website before any paid run. A price of null means 'not verified' and the engine refuses to run that model.",
+  "version": "1.1",
+  "providers": {
+    "fal": {
+      "queue_url": "https://queue.fal.run",
+      "env_key": "FAL_KEY",
+      "poll_seconds": 3,
+      "timeout_seconds": 900
+    },
+    "elevenlabs": {
+      "api_url": "https://api.elevenlabs.io/v1",
+      "env_key": "ELEVENLABS_API_KEY",
+      "timeout_seconds": 120
+    },
+    "azure": {
+      "endpoint": "https://me-eus2-mtowerstudio-fdy.cognitiveservices.azure.com",
+      "api_version": "2025-04-01-preview",
+      "scope": "https://cognitiveservices.azure.com/.default",
+      "env": { "tenant": "AZURE_TENANT_ID", "client_id": "AZURE_CLIENT_ID", "client_secret": "AZURE_CLIENT_SECRET" },
+      "monthly_limit_env": "MTOWER_AZURE_MONTHLY_LIMIT_USD",
+      "monthly_limit_usd": 300,
+      "timeout_seconds": 300,
+      "note": "The studio's Foundry resource (studio/infra). Entra ID only; network security perimeter admits only the studio PC. Spending counts against its own monthly limit (budget me-eus2-mtowerstudio-budget)."
+    }
+  },
+  "models": {
+    "image_compose": {
+      "provider": "azure",
+      "model_id": "me-eus2-gpt-image-2",
+      "unit": "image",
+      "price_usd": 0.08,
+      "quality_prices_usd": { "low": 0.02, "medium": 0.08, "high": 0.3 },
+      "reference_price_usd": 0.03,
+      "pricing_per_m_tokens": { "text_input_per_m": 5, "image_input_per_m": 8, "output_per_m": 30 },
+      "price_note": "Token-billed (gpt-image-2, Global Standard, eastus2 retail meters 2026-10-12): $5 text in, $8 image in, $30 image out per 1M tokens. Per-image prices are safe ceilings for 1280x720; the ledger records the ACTUAL cost from the token usage the API returns. Reference photos add image-input tokens (ceiling $0.03 each).",
+      "payload": { "size": "1280x720", "quality": "medium", "output_format": "png", "moderation": "low" },
+      "verify": "Hard compositions (crowds, props, exact poses) with prop reference photos; no face models — the face pass adds the cast's faces"
+    },
+    "image_compose_flux": {
+      "provider": "azure",
+      "api": "bfl",
+      "model_id": "me-eus2-flux-kontext-pro",
+      "model_path": "flux-kontext-pro",
+      "unit": "image",
+      "price_usd": 0.04,
+      "price_note": "FLUX.1 Kontext [pro] on Foundry, Global Standard: $0.04 per image (flat).",
+      "payload": { "aspect_ratio": "16:9", "output_format": "png", "safety_tolerance": 5 },
+      "verify": "Compositions with children: Azure gpt-image-2 / 2.5-flare and FLUX.2-pro all refuse photorealistic minors (tested 2026-10-12); FLUX.1 Kontext pro accepts them. Text only (no prop reference photos); the face pass adds the cast's faces"
+    },
+    "image_draft": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux/dev",
+      "unit": "image",
+      "price_usd": 0.025,
+      "payload": {
+        "image_size": {
+          "width": 1280,
+          "height": 720
+        },
+        "num_inference_steps": 28,
+        "guidance_scale": 3.5,
+        "enable_safety_checker": true,
+        "output_format": "png"
+      },
+      "verify": "Check the model page and price on fal.ai",
+      "price_note": "$0.025 per megapixel, rounded up; our image sizes are under 1 MP, so this is per image. Verified on fal.ai 2026-10-11."
+    },
+    "image_final": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux-pro/v1.1",
+      "unit": "image",
+      "price_usd": 0.04,
+      "payload": {
+        "image_size": {
+          "width": 1280,
+          "height": 720
+        },
+        "enable_safety_checker": true,
+        "output_format": "png"
+      },
+      "verify": "Check the model page and price on fal.ai",
+      "price_note": "$0.04 per megapixel, rounded up; our image sizes are under 1 MP, so this is per image. Verified on fal.ai 2026-10-11."
+    },
+    "image_ultra": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux-pro/v1.1-ultra",
+      "unit": "image",
+      "price_usd": 0.06,
+      "price_note": "$0.06 per image. Verified on fal.ai 2026-10-11.",
+      "payload": {
+        "raw": true,
+        "aspect_ratio": "3:4",
+        "output_format": "png",
+        "safety_tolerance": "2"
+      },
+      "verify": "Raw mode gives more natural, less idealized faces"
+    },
+    "image_lora": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux-lora",
+      "unit": "image",
+      "price_usd": 0.035,
+      "payload": {
+        "image_size": {
+          "width": 1280,
+          "height": 720
+        },
+        "num_inference_steps": 28,
+        "guidance_scale": 3.5,
+        "enable_safety_checker": true,
+        "output_format": "png"
+      },
+      "verify": "Shots and tests with trained actor LoRAs (FLUX.1 dev base)",
+      "price_note": "$0.035 per megapixel, rounded up; our sizes are under 1 MP, so this is per image. Verified on fal.ai 2026-10-11."
+    },
+    "image_edit": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux-pro/kontext",
+      "unit": "image",
+      "price_usd": 0.04,
+      "price_note": "$0.04 per image. Verified on fal.ai 2026-10-11.",
+      "payload": {
+        "aspect_ratio": "3:4",
+        "output_format": "png",
+        "safety_tolerance": "2",
+        "guidance_scale": 3.5
+      },
+      "verify": "Reference editing: same person in a new angle, light, expression, or outfit (LoRA training sets)"
+    },
+    "voice_azure": {
+      "provider": "azure",
+      "model_id": "azure-speech",
+      "unit": "1k characters",
+      "price_usd": 0.022,
+      "price_note": "Azure Speech on the Foundry resource, eastus2 retail 2026-10-12: Neural HD $22 per 1M characters (standard neural is cheaper); $0.022 per 1k characters is the ceiling for every voice.",
+      "voices": ["ar-AE-Rashid:DragonHDLatestNeural", "ar-EG-ShakirNeural", "ar-SA-HamedNeural"],
+      "verify": "Temporary / comparison narrator (Look Test). ElevenLabs remains the planned final voice."
+    },
+    "voice_gpt_audio": {
+      "provider": "azure",
+      "model_id": "me-eus2-gpt-audio-1-5",
+      "unit": "second",
+      "price_usd": 0.0035,
+      "per_call_usd": 0.004,
+      "pricing_per_m_tokens": { "text_input_per_m": 2.5, "audio_input_per_m": 32, "text_output_per_m": 10, "audio_output_per_m": 64 },
+      "price_note": "Character voices and narration (D-20/D-21): gpt-audio-1.5 (2026-02-23), GlobalStandard. Token-billed; the actual cost of each take is computed from the response usage with pricing_per_m_tokens (OpenAI list price, same on Azure Global). price_usd per second of speech + per_call_usd (the long acting direction) are planning ceilings.",
+      "api_version": "2025-04-01-preview"
+    },
+    "voice_gpt_mini_tts": {
+      "provider": "azure",
+      "model_id": "me-eus2-gpt-4o-mini-tts",
+      "unit": "second",
+      "price_usd": 0.0003,
+      "per_call_usd": 0.001,
+      "price_note": "gpt-4o-mini-tts (2025-12-15): about $0.015 per minute of speech ($12 per 1M audio tokens + $0.60 per 1M text tokens); used for crowd voices.",
+      "api_version": "2025-03-01-preview"
+    },
+    "lipsync_kling_avatar": {
+      "provider": "fal",
+      "model_id": "fal-ai/kling-video/ai-avatar/v2/pro",
+      "unit": "second",
+      "price_usd": 0.115,
+      "verify": "Lip-sync talking shots: keyframe + voice line → video with the line in sync (user pick 2026-10-13, Dialogue Test)."
+    },
+    "lipsync_omnihuman": {
+      "provider": "fal",
+      "model_id": "fal-ai/bytedance/omnihuman/v1.5",
+      "unit": "second",
+      "price_usd": 0.16,
+      "payload": { "resolution": "1080p" }
+    },
+    "lipsync_minimax": {
+      "provider": "fal",
+      "model_id": "minimax/h3-max/lip-sync/image-to-video",
+      "unit": "second",
+      "price_usd": 0.05,
+      "payload": { "resolution": "1080P", "enable_transcription": true },
+      "verify": "Needs at least 5 s of audio; no prompt."
+    },
+    "qa_review": {
+      "provider": "azure",
+      "model_id": "me-eus2-gpt-5-6-sol",
+      "unit": "image",
+      "price_usd": 0.1,
+      "pricing_per_m_tokens": { "input_per_m": 4, "output_per_m": 20 },
+      "price_note": "gpt-5.6-sol Global Standard, eastus2 retail meters 2026-10-12: $4 input, $20 output per 1M tokens (short context). One review = the image + up to 5 reference images + the rubric (about 4-5k tokens in, 2-3.5k out incl. reasoning): measured $0.05-0.085 (2026-10-12); $0.10 is the ceiling. The ledger records the actual cost from the usage.",
+      "reasoning_effort": "medium",
+      "max_completion_tokens": 8000,
+      "verify": "Vision QA reviewer (mtower qa): checks each image against its design, anatomy, identity, period, props, physics, location rules, light and artifacts; JSON verdict saved as <image>.qa.json"
+    },
+    "script_review": {
+      "provider": "azure",
+      "model_id": "me-eus2-gpt-5-6-sol",
+      "unit": "beat",
+      "price_usd": 0.3,
+      "pricing_per_m_tokens": { "input_per_m": 4, "output_per_m": 20 },
+      "price_note": "Same deployment and meters as qa_review. One beat = the rubric, the cast, the beat's text and its neighbours (about 5-7k tokens in) and a line-by-line verdict with rewrites and reasoning (up to ~12k out): ceiling $0.30; the ledger records the actual cost.",
+      "reasoning_effort": "high",
+      "max_completion_tokens": 24000,
+      "verify": "Script QA board (mtower script-qa): Egyptian street dialect, 1973 army register, intensity vs situation, character voice, drama, history and series rules, diacritics for TTS, lip-sync length"
+    },
+    "face_swap": {
+      "provider": "azure",
+      "model_id": "me-eus2-gpt-image-2",
+      "unit": "image",
+      "price_usd": 0.06,
+      "pricing_per_m_tokens": { "text_input_per_m": 5, "image_input_per_m": 8, "output_per_m": 30 },
+      "price_note": "Token-billed like image_compose: frame + anchor portrait in, one 1280x720 image out. Measured $0.043 (2.5-07, 2026-10-12); $0.06 is the ceiling. The ledger records the actual cost.",
+      "payload": { "size": "1280x720", "quality": "medium", "output_format": "png", "input_fidelity": "high", "moderation": "low" },
+      "mask": { "pad_w": 1.25, "pad_h": 1.35 },
+      "check": { "enabled": false, "min_area": 0.65, "max_area": 1.45, "max_shift": 0.5, "note": "Re-detects the face after the swap (+$0.02 on fal). Off by default: the QA reviewer (mtower qa / autofix) measures head size, placement and light on every image anyway." },
+      "verify": "Default face pass (adults): gpt-image-2 masked edit with the actor's approved anchor portrait as image 2. Keeps the frame's head size, angle and moonlight, which the fal LoRA inpaint did not (2.5-07: head grew, turned to camera, warm-lit). Children stay on fal (gpt-image refuses minors). Faces are found with face_detect (fal, $0.02) unless the batch already has faces.json; the check re-detects after the swap."
+    },
+    "image_inpaint": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux-lora/inpainting",
+      "unit": "image",
+      "price_usd": 0.035,
+      "price_note": "$0.035 per megapixel, rounded up; keyframes are 0.92 MP, so this is per image. Verified with the fal pricing API 2026-10-12.",
+      "payload": {
+        "num_inference_steps": 28,
+        "guidance_scale": 3.5,
+        "strength": 0.75,
+        "enable_safety_checker": true,
+        "output_format": "png"
+      },
+      "patch": { "resolution": 960, "factor": 2.6,
+                 "note": "Face pass works on a close-up: a square 2.6x the face is enlarged to 960x960 (0.92 MP, one price unit), repainted, then blended back" },
+      "verify": "Face pass for group shots: repaints only the lead's face with the actor's face model"
+    },
+    "face_detect": {
+      "provider": "fal",
+      "model_id": "fal-ai/moondream2/object-detection",
+      "unit": "image",
+      "price_usd": 0.02,
+      "price_note": "Moondream 2 object detection, $0.02 per request. Verified with the fal pricing API 2026-10-12.",
+      "payload": { "object": "face" },
+      "verify": "Finds EVERY face (normalised boxes). Chosen 2026-10-12: Florence-2 found 0 faces in a sunlit 6-man group (3.13-01) where Moondream found all 6"
+    },
+    "face_detect_fallback": {
+      "provider": "fal",
+      "model_id": "fal-ai/florence-2-large/open-vocabulary-detection",
+      "unit": "image",
+      "price_usd": 0.005,
+      "price_note": "$0.00125 per compute second (about 1-3 s per image); $0.005 is a safe ceiling. Verified with the fal pricing API 2026-10-12.",
+      "payload": { "text_input": "human face" },
+      "verify": "Used only when the primary detector finds fewer faces than leads; returns the single most face-like box"
+    },
+    "lora_training": {
+      "provider": "fal",
+      "model_id": "fal-ai/flux-lora-fast-training",
+      "unit": "1000_steps",
+      "price_usd": 2.0,
+      "price_note": "$2 per training run at 1,000 steps, scales linearly with steps. Verified on fal.ai 2026-10-11.",
+      "payload": {
+        "create_masks": true,
+        "is_style": false
+      },
+      "timeout_seconds": 3600,
+      "verify": "Trains an actor face LoRA for FLUX.1 dev; output works with fal-ai/flux-lora"
+    },
+    "video_default": {
+      "provider": "fal",
+      "model_id": "fal-ai/kling-video/o3/pro/image-to-video",
+      "unit": "second",
+      "price_usd": 0.14,
+      "image_field": "image_url",
+      "end_image_field": "end_image_url",
+      "durations": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "duration_format": "{s}",
+      "negative_prompt": false,
+      "payload": {
+        "generate_audio": false
+      },
+      "timeout_seconds": 1500,
+      "price_checked": "2026-10-12, fal pricing API: $0.14 per second",
+      "chosen": "2026-10-12 by the user after the 2.5-05 bake-off (more alive than Kling v3 Pro; Veo refused)"
+    },
+    "video_kling_v3": {
+      "provider": "fal",
+      "model_id": "fal-ai/kling-video/v3/pro/image-to-video",
+      "unit": "second",
+      "price_usd": 0.14,
+      "image_field": "start_image_url",
+      "durations": [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "duration_format": "{s}",
+      "negative_prompt": true,
+      "payload": {
+        "generate_audio": false
+      },
+      "timeout_seconds": 1500,
+      "price_checked": "2026-10-12, fal pricing API: $0.14 per second"
+    },
+    "video_premium": {
+      "provider": "fal",
+      "model_id": "fal-ai/veo3.1/fast/image-to-video",
+      "unit": "second",
+      "price_usd": 0.15,
+      "image_field": "image_url",
+      "durations": [4, 6, 8],
+      "duration_format": "{s}s",
+      "negative_prompt": false,
+      "payload": {
+        "generate_audio": false,
+        "resolution": "720p",
+        "aspect_ratio": "16:9",
+        "safety_tolerance": "5"
+      },
+      "timeout_seconds": 1500,
+      "price_checked": "2026-10-12, fal pricing API: $0.15 per second (the with-audio price; without audio may be lower)"
+    },
+    "sfx_video": {
+      "provider": "fal",
+      "model_id": "fal-ai/mmaudio-v2",
+      "unit": "second",
+      "price_usd": 0.001,
+      "max_seconds": 30,
+      "negative_prompt": "speech, talking, voices, singing, music, melody",
+      "payload": { "num_steps": 25, "cfg_strength": 4.5 },
+      "price_checked": "2026-10-17, fal pricing API: $0.001 per second",
+      "note": "Video-to-audio: sound effects generated from a clip's motion, so they land on the action (spot effects)."
+    },
+    "sfx_text": {
+      "provider": "fal",
+      "model_id": "fal-ai/elevenlabs/sound-effects/v2",
+      "unit": "second",
+      "price_usd": 0.002,
+      "max_seconds": 22,
+      "payload": { "prompt_influence": 0.5, "loop": true, "output_format": "mp3_44100_192" },
+      "price_checked": "2026-10-17, fal pricing API: $0.002 per second",
+      "note": "Text-to-sound: seamless loops for continuous beds (rotor, wind) laid under several shots."
+    },
+    "music": {
+      "provider": "fal",
+      "model_id": "fal-ai/elevenlabs/music",
+      "unit": "minute",
+      "price_usd": 0.6,
+      "payload": { "force_instrumental": true, "output_format": "mp3_44100_192" },
+      "price_checked": "2026-10-17, fal pricing API: $0.60 per minute"
+    },
+    "voice": {
+      "provider": "elevenlabs",
+      "model_id": "eleven_multilingual_v2",
+      "unit": "1k_characters",
+      "price_usd": null,
+      "payload": {
+        "voice_settings": {
+          "stability": 0.7,
+          "similarity_boost": 0.8,
+          "style": 0.1
+        }
+      },
+      "verify": "Check the ElevenLabs plan price per 1,000 characters"
+    }
+  },
+  "face_pass": { "method": "azure", "note": "azure = face_swap (gpt-image-2 masked edit with the anchor portrait, default); fal = image_inpaint (LoRA). Children always use fal. A shot can set face_method." },
+  "qa_gate": { "min_score": { "keyframe": 8, "clip": 8, "default": 7 }, "reviewed_kinds": ["keyframe", "anchor", "poster"], "note": "Agreed with the user 2026-10-13: images that go to video need QA 8/10; casting portraits, posters and other artifacts 7/10. Below the gate (or without a review) the gallery approves only with a written director's override, saved in approved.json." },
+  "reference_image_size": "portrait_4_3",
+  "budget_defaults": {
+    "batch_limit_usd": 5,
+    "monthly_limit_usd": 50
+  },
+  "training": {
+    "default_steps": 1000,
+    "upload_expiry_seconds": 604800,
+    "lora_scale": 1.0,
+    "test_image_size": "portrait_4_3"
+  },
+  "$cost_note": "fal bills image models per megapixel rounded UP, so any size up to 1.0 MP costs the same as a tiny one. Keyframes use 1280x720 (0.92 MP, matches 720p video input) at the 1 MP price. Don't exceed 1 MP: 1344x768 (1.03 MP) costs double."
+}

@@ -73,9 +73,8 @@ class Catalog:
 
 @lru_cache(maxsize=8)
 def catalog(production: str, episode: str) -> Catalog:
-    repo = grounding.MTOWER_REPO
-    lib = repo / "studio" / "library"
-    pre = repo / "productions" / production / episode / "02_preproduction"
+    lib = grounding.LIBRARY_DIR
+    pre = grounding.PRODUCTIONS_DIR / production / episode / "02_preproduction"
     actors = _load(lib / "actors" / "actors.json")
     wardrobe = _load(lib / "wardrobe" / "wardrobe.json")
     looks = _load(lib / "looks" / "looks.json")

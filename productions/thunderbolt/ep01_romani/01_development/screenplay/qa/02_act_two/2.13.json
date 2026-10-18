@@ -1,0 +1,93 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, playable beat with a clear turn: Shalabi gives the men a tactical reason for confidence, their restrained answer shows discipline, and Sayed quietly exposes the cost of failure. The language, military register and low-volume staging suit concealed, exhausted commandos.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled resolve under pressure",
+        "delivery": "Crouched among the nearest men, he makes brief eye contact instead of addressing them theatrically. Admit the odds without self-pity, then tighten slightly on «مَا يِعْرَفُوشْ» as the tactical advantage."
+      },
+      "text": "يَا رِجَّالَةْ… هُمَّ كْتِيرْ، وِإِحْنَا قُلَيِّلِينْ. بَسّْ مَا يِعْرَفُوشْ إِحْنَا فِينْ."
+    },
+    {
+      "n": 2,
+      "speaker": "COMMANDOS",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "exhausted but steady faith",
+        "delivery": "Two or three nearby men answer separately, not as a rehearsed chorus. Each keeps his body down and gives Shalabi only enough voice to show he is ready."
+      },
+      "text": "تَمَامْ يَا فَنْدِمْ… إِنْ شَاءَ اللَّهْ."
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "grim certainty masked by dryness",
+        "delivery": "Say it only to Mostafa, almost without turning toward him. Sayed is not spreading panic; he is making sure the younger man understands what the calm briefing really means."
+      },
+      "text": "اللِّوَا دَهْ لَوْ عَدَّى… يِبْقَى إِحْنَا كُلِّنَا رُحْنَا."
+    }
+  ],
+  "beat": "2.13",
+  "file": "02_act_two_v2.md",
+  "hash": "1c3ac59bcb0f7dc7",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:30:16+00:00",
+  "seconds": 52.3,
+  "usage": {
+    "prompt_tokens": 2505,
+    "completion_tokens": 4232
+  },
+  "cost_usd": 0.09466
+}

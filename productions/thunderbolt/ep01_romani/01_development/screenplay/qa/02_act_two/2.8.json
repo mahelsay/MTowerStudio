@@ -1,0 +1,69 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, playable transition beat. Sayed’s practical warning carries authority and protective instinct, while Mostafa’s clipped response preserves stealth and forward momentum.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "gruff concentration masking concern",
+        "delivery": "Wrap the rifle while demonstrating the movement to Mostafa. Keep the warning tight and practical; the final order should carry quiet sergeant’s authority."
+      },
+      "text": "الرَّمْلَةْ دِي تِعَطَّلْ أَجْدَعْ سِلَاحْ. لِفُّهْ كِدَهْ… وِمَا تْفُكُّوشْ غِيرْ لَمَّا أَقُولَّكْ."
+    },
+    {
+      "n": 2,
+      "speaker": "MOSTAFA",
+      "score": 8,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "alert obedience with contained nerves",
+        "delivery": "Answer Sayed immediately while copying the wrap. The full chest voice stays controlled, showing that Mostafa is frightened but trained."
+      },
+      "text": "حَاضِرْ."
+    }
+  ],
+  "beat": "2.8",
+  "file": "02_act_two_v2.md",
+  "hash": "cca0003e2452053c",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:26:05+00:00",
+  "seconds": 28.2,
+  "usage": {
+    "prompt_tokens": 2382,
+    "completion_tokens": 2106
+  },
+  "cost_usd": 0.05165
+}

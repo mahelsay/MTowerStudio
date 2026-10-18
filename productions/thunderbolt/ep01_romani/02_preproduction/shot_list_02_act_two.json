@@ -1,0 +1,2409 @@
+{
+  "$schema_note": "Shot list v1.2 — see shot_list_01_act_one.json for field conventions. Beat-level location/look/wear are defaults; VO and dialogue are referenced from the locked screenplay.",
+  "version": "2.0",
+  "episode": "ep01_romani",
+  "part": "02_act_two",
+  "screenplay": "../01_development/screenplay/02_act_two.md",
+  "screenplay_lock": "ep01-script-v2.0-act2",
+  "production_config": "production_config.json",
+  "casting": "casting.json",
+  "status": "draft — v2.0 drama rewrite shot list",
+  "target_length_s": 580,
+  "defaults": {
+    "lip_sync": "avoid",
+    "model": "default"
+  },
+  "visual_centerpiece": "Beats 2.5–2.6, the salt march: intimate close-ups of hands, boots, salt, faces",
+  "beats": [
+    {
+      "beat": "2.1",
+      "title": "The low hover",
+      "target_s": 35,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_MUD",
+      "vo": {
+        "ref": "screenplay 2.1 VO",
+        "placement": "over 2.1-01 to 2.1-02",
+        "est_s": 7
+      },
+      "sfx": "Rotor wash, splash and suck of bodies hitting mud, grunts, equipment clanking",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-02",
+          "shot_id": "2.1-01a",
+          "intensity": 9,
+          "volume": "shout",
+          "pace": "rushed",
+          "emotion": "controlled urgency with protective impatience",
+          "delivery": "Get directly into Mostafa’s ear over the rotors. Hit «مِتْرِينْ» as reassurance, then snap «اِنْطّْ» as an order that leaves him no time to think."
+        },
+        {
+          "line": 2,
+          "speaker": "C-02",
+          "shot_id": "2.1-03a",
+          "intensity": 8,
+          "volume": "raised",
+          "pace": "quick",
+          "emotion": "hard concentration",
+          "delivery": "Punch each word in time with the hand-to-hand unloading. Keep it gravelly and practical, with no wasted breath or visible panic."
+        },
+        {
+          "line": 3,
+          "speaker": "C-06",
+          "shot_id": "2.1-03b",
+          "intensity": 6,
+          "volume": "raised",
+          "pace": "measured",
+          "emotion": "disgust masking nerves",
+          "delivery": "Call it loudly enough to beat the rotors, but do not perform the joke. Pull the trapped boot free, inspect the mud, and deliver «شُورْبَةْ» with flat disbelief."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.1-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static, low over the water",
+          "characters": [],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "a Mi-8 helicopter hovering two meters above a black waterlogged salt marsh at night, rotor wash flattening the water into rings and throwing spray",
+          "motion": "The helicopter holds a low hover; rotor wash ripples the water outward in rings."
+        },
+        {
+          "shot_id": "2.1-01a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed braced in the open Mi-8 door shouting into Mostafa’s ear over the rotors, red cabin spill and moonlit rotor wash keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He leans close and snaps the jump order.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled urgency with protective impatience",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.1-02",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "handheld",
+          "wear": "WEAR_CLEAN",
+          "characters": [
+            "C-03"
+          ],
+          "extras": "commandos jumping from the door",
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "commandos jumping from a hovering helicopter's side door down into shin-deep mud and brine at night (the water below their knees)",
+          "motion": "Men leap from the door one after another and land with heavy splashes."
+        },
+        {
+          "shot_id": "2.1-03",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-02",
+            "C-05"
+          ],
+          "assets": [
+            "PRP-0002",
+            "PRP-0003",
+            "PRP-0006"
+          ],
+          "prompt": "men standing in mud receiving RPG launchers, missile cases, and mine sacks passed down from the helicopter door, hand to hand, lifting each load clear of the water",
+          "motion": "Equipment is passed down hand to hand and held high above the water."
+        },
+        {
+          "shot_id": "2.1-03a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed at the helicopter door passing gear down by hand over the mud, red cabin spill and moonlit rotor wash keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He punches each word in rhythm with the unloading.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "hard concentration",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.1-03b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel shin-deep in brine pulling one boot free with disgust, moonlight and rotor spray keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He glances down at the sucking mud and mutters the joke over the rotors.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "disgust masking nerves",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.1-04",
+          "duration_s": 6,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "a combat boot sinking into black mud under a thin salt crust, brine welling up around it",
+          "motion": "The boot sinks; brine wells up and floods the print."
+        }
+      ]
+    },
+    {
+      "beat": "2.2",
+      "title": "The price in the sky",
+      "target_s": 40,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_MUD",
+      "vo": {
+        "ref": "screenplay 2.2 VO",
+        "placement": "over 2.2-04",
+        "est_s": 7
+      },
+      "sfx": "Receding rotors; a delayed, distant explosion; then wind and water only",
+      "music": "Score enters — a single low, sustained cue under the flash, fading out with the rotors",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-03",
+          "shot_id": "2.2-02a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "horrified disbelief",
+          "delivery": "Mostafa keeps staring at the distant flash, barely able to form the question. Let the repeated «دِي» catch in his throat without making him sound childish."
+        },
+        {
+          "line": 2,
+          "speaker": "C-01",
+          "shot_id": "2.2-03a",
+          "intensity": 9,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "suppressed shock and survivor’s guilt",
+          "delivery": "Shalabi does not turn from the horizon. He calculates what would have happened to his men, then lets the unfinished thought die rather than displaying the feeling."
+        },
+        {
+          "line": 3,
+          "speaker": "C-04",
+          "shot_id": "2.2-03b",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "stunned grief",
+          "delivery": "Mahmoud answers the sight rather than either man. Keep it compact and private, with no devotional flourish or sob."
+        },
+        {
+          "line": 4,
+          "speaker": "C-01",
+          "shot_id": "2.2-03c",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "gratitude burdened by guilt",
+          "delivery": "Shalabi states the debt without looking for agreement. Give slight weight to «هُوَّ», then contain the emotion in «نَجَّانَا» rather than swelling it."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.2-01",
+          "duration_s": 6,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "commandos standing in the brine, weapons raised",
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "commandos standing shin-deep in black brine at night (the water below their knees), weapons held above their shoulders, watching dark helicopter shapes and faint exhaust glows shrink into the night with no navigation lights",
+          "motion": "The helicopters' dark shapes and exhaust glows shrink into the dark; the men's heads turn to follow.",
+          "notes": "v2 restage: helicopters are dark shapes with exhaust glow only, no lights."
+        },
+        {
+          "shot_id": "2.2-02",
+          "duration_s": 8,
+          "size": "EWS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "VEH-0001"
+          ],
+          "prompt": "far away on the night horizon over a flat marsh, a tiny streak of light and then a small orange fireball in the sky, seen only from the mud with dark helicopter shapes beyond it",
+          "motion": "A thin streak of light, then a distant silent orange bloom; it fades.",
+          "model": "premium",
+          "notes": "v2 restage: the loss stays distant and ground-bound; helicopters have no lights, only exhaust glow."
+        },
+        {
+          "shot_id": "2.2-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa staring up from the brine at the distant orange bloom, faint orange flash and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He barely forms the whispered question.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "horrified disbelief",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.2-03",
+          "duration_s": 4,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain's face turned up, lit for a moment by a distant orange glow reflected off the water",
+          "motion": "A faint orange glow flickers across his face and fades; he does not look away."
+        },
+        {
+          "shot_id": "2.2-03a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi turned toward the horizon as the glow fades across his wet face, faint orange reflection and moonlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He speaks almost to himself without looking away.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "suppressed shock and survivor’s guilt",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.2-03b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "Mahmoud in the brine with the radio set high on his back, eyes fixed on the distant flash, starlight and fading orange glow keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He whispers a compact prayer for the lost crew.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "stunned grief",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.2-03c",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi still facing the empty sky as the rotor sound fades west, moonlight and fading reflected fire keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He states the debt quietly and contains the feeling.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "gratitude burdened by guilt",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.2-04",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "extras": "commandos in the marsh",
+          "prompt": "the dark empty sky over the wide salt marsh, the men small in the water, silence",
+          "motion": "Nothing moves but the ripples settling around the men."
+        }
+      ]
+    },
+    {
+      "beat": "2.3",
+      "title": "Compass and map",
+      "target_s": 35,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_MUD",
+      "vo": null,
+      "sfx": "Wind across the water, stars, a low murmur",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-02",
+          "shot_id": "2.3-02a",
+          "intensity": 6,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "contained concern",
+          "delivery": "Sayed comes alongside Shalabi without disturbing his calculation. He asks as a seasoned NCO who already suspects the answer will be bad."
+        },
+        {
+          "line": 2,
+          "speaker": "C-01",
+          "shot_id": "2.3-02b",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "controlled burden",
+          "delivery": "Shalabi keeps his eyes on the map and gives the figure without softening it. Let the pause carry his awareness of what he is asking from the men."
+        },
+        {
+          "line": 3,
+          "speaker": "C-06",
+          "shot_id": "2.3-02c",
+          "intensity": 6,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "disbelieving fatigue",
+          "delivery": "Adel leans toward Mostafa and repeats the number as if checking he heard correctly. Keep it involuntary and hushed, not comic in itself."
+        },
+        {
+          "line": 4,
+          "speaker": "C-03",
+          "shot_id": "2.3-02d",
+          "intensity": 5,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "dry resignation",
+          "delivery": "Mostafa looks at the water and answers without smiling. The humour comes from his dead seriousness and his attempt to master his own dread."
+        },
+        {
+          "line": 5,
+          "speaker": "C-01",
+          "shot_id": "2.3-03",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "tense control behind enemy lines",
+          "delivery": "Low to the men around him in the dark marsh; a clear order without raising the voice."
+        },
+        {
+          "line": 6,
+          "speaker": "C-01",
+          "shot_id": "2.3-03",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "decisive; moving out",
+          "delivery": "One quick low order to march; the decision is made."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.3-01",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0008"
+          ],
+          "prompt": "a red-filtered flashlight cupped in a palm lighting a folded topographic map and a lensatic compass",
+          "motion": "The compass needle swings and settles; red light trembles on the map."
+        },
+        {
+          "shot_id": "2.3-02",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0008"
+          ],
+          "prompt": "map dividers walking across a topographic map under red light",
+          "motion": "The dividers step across the map once, then again — measuring twice."
+        },
+        {
+          "shot_id": "2.3-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed wading up beside Shalabi and the red-lit map, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks quietly without disturbing the calculation.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "contained concern",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.3-02b",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi over the folded map and compass giving the distance without softening it, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He keeps his eyes on the map as he answers.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled burden",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.3-02c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel leaning close to Mostafa a few men back in the file, starlight reflected off the brine keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He repeats the number involuntarily in a hushed breath.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "disbelieving fatigue",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.3-02d",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa looking down at the water around his shins beside Adel, starlight reflected off the brine keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers deadpan without smiling.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "dry resignation",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.3-03",
+          "duration_s": 7,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain standing shin-deep in the moonlit brine, half turned toward the men around him, speaking low, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He turns to the men and gives a low order; the men nearby raise their weapons higher.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "tense, controlled",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.3-04",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "commandos",
+          "prompt": "the captain pointing along a compass bearing across the dark marsh, men starting to wade after him",
+          "motion": "He points; the men begin to wade forward into the dark."
+        }
+      ]
+    },
+    {
+      "beat": "2.4",
+      "title": "The intercepted signal",
+      "target_s": 45,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_MUD",
+      "vo": null,
+      "sfx": "Brief radio squelch, then the click of the set going dead. Wind and water only",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-04",
+          "shot_id": "2.4-02",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "alarm forced down into a whisper",
+          "delivery": "Whispering urgently by red light; scared but disciplined, reporting bad news to his captain."
+        },
+        {
+          "line": 2,
+          "speaker": "C-01",
+          "shot_id": "2.4-03",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "instant controlled resolve",
+          "delivery": "Shalabi decides before the danger can spread through the column. Give each imperative cleanly and quietly, with no visible debate."
+        },
+        {
+          "line": 3,
+          "speaker": "C-04",
+          "shot_id": "2.4-03a",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "professional unease",
+          "delivery": "Mahmoud is not challenging command; he is making sure Shalabi has accepted the operational cost. His thumb remains over the switch as he speaks."
+        },
+        {
+          "line": 4,
+          "speaker": "C-01",
+          "shot_id": "2.4-03b",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "cold tactical certainty",
+          "delivery": "Shalabi answers Mahmoud directly, almost under his breath. Let the tiny pause before «هُمَّ» reveal that he has already weighed both risks."
+        },
+        {
+          "line": 5,
+          "speaker": "C-02",
+          "shot_id": "2.4-04a",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "normal",
+          "emotion": "grim suspicion",
+          "delivery": "Sayed quietly voices what the experienced men are thinking. Keep it gravelly and practical, without turning it into panic or a challenge."
+        },
+        {
+          "line": 6,
+          "speaker": "C-01",
+          "shot_id": "2.4-05a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "tight tactical confidence",
+          "delivery": "Shalabi points out the new direction while resetting the bearing. The first sentence diagnoses the trap; after the pause, the second quietly takes back the initiative."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.4-01",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking with them",
+          "characters": [
+            "C-04",
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0007"
+          ],
+          "prompt": "the radio operator wading beside the captain, backpack radio strapped high, handset pressed to his ear, moonlit marsh",
+          "motion": "They wade side by side; the operator listens hard to the handset."
+        },
+        {
+          "shot_id": "2.4-02",
+          "duration_s": 6,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "close-up of the radio operator in profile at night, his face lit only by the dim red glow of a small red-filtered flashlight on a scrap of paper he is decoding in his hands, the red light glinting on his taped wire-rimmed glasses, lips parted in a whisper, the rest of the frame in deep shadow but his profile clearly readable",
+          "face_pass": false,
+          "motion": "He looks up from the note and whispers, face mostly in shadow.",
+          "notes": "Drama-first restage (D-21, 2026-10-14): speaker on camera, mouth visible, lip-synced. Approved keyframe kept.",
+          "lip_sync": "required",
+          "face": "alarm forced down into a whisper"
+        },
+        {
+          "shot_id": "2.4-03",
+          "duration_s": 6,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "close-up of the captain in moonlight, taking in bad news from the radio operator off to the side, giving a quiet order, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "His eyes harden; he gives a short, low, absolute order.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "cold, urgent command, no panic",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.4-03a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-04"
+          ],
+          "prompt": "Mahmoud with his thumb hovering over the field radio switch, uneasy in the red light, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He warns Shalabi of the cost without challenging him.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "professional unease",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.4-03b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi close to Mahmoud and the dead radio, eyes hard, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He gives the tiny answer almost under his breath.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "cold tactical certainty",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.4-04",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0007"
+          ],
+          "prompt": "a finger switching off a 1970s field radio, the dial light going dark",
+          "motion": "The switch clicks; the dial light dies."
+        },
+        {
+          "shot_id": "2.4-04a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed crouched beside the radio set after hearing the silence order, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He voices the danger quietly to Shalabi.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "grim suspicion",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.4-05",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "the column",
+          "prompt": "Shalabi taps the dead radio set, draws a finger across his lips, then raises the compass and points along a new bearing as the no-radio hand sign passes back down the file",
+          "motion": "He taps the radio, signs silence, then points a new way; the file quietly swings around and follows.",
+          "notes": "v2 restage: radio silence is passed by a hand sign before the new route."
+        },
+        {
+          "shot_id": "2.4-05a",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi pointing into the dark along the new compass bearing after the hand sign passes, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He diagnoses the trap and quietly takes back the initiative.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "tight tactical confidence",
+          "lip_sync": "required"
+        }
+      ]
+    },
+    {
+      "beat": "2.5",
+      "title": "Twenty kilometers of salt",
+      "target_s": 60,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SALT",
+      "vo": {
+        "ref": "screenplay 2.5 VO",
+        "placement": "over 2.5-01 to 2.5-03",
+        "est_s": 8
+      },
+      "sfx": "Wading, breathing, salt crust cracking, equipment straps creaking",
+      "music": "The march theme enters — slow, restrained, built on a low repeating figure, never overpowering the breathing",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-06",
+          "shot_id": "2.5-04a",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "quick",
+          "emotion": "strained vigilance",
+          "delivery": "He keeps his end of the missile case high and forces the warning through clenched teeth. Aim it only at his partner; the fear is for the weapon and mission, not himself."
+        },
+        {
+          "line": 2,
+          "speaker": "C-03",
+          "shot_id": "2.5-05a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "exhausted self-control",
+          "delivery": "Count against the rhythm of his steps, almost without breath, using the numbers to stop panic and fatigue taking over. Keep a young adult's chest resonance even at a whisper."
+        },
+        {
+          "line": 3,
+          "speaker": "C-02",
+          "shot_id": "2.5-06a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "gruff concern masked by dry humor",
+          "delivery": "Lean close as he passes each man and clip the first order firmly. Let the second sentence carry protection without softness; do not play the joke for a laugh."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.5-01",
+          "duration_s": 8,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "very slow push",
+          "characters": [],
+          "face_pass": false,
+          "extras": "a long single file of silhouettes",
+          "prompt": "a long single file of bare-headed commando silhouettes (no helmets) against a starlit horizon wading shin-deep across an endless flat salt marsh, every weapon raised overhead",
+          "motion": "The file moves slowly across the horizon; stars glitter on the water.",
+          "model": "premium",
+          "notes": "Hero image of the march — possibly the episode's poster frame."
+        },
+        {
+          "shot_id": "2.5-02",
+          "duration_s": 5,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "tracking low",
+          "characters": [],
+          "prompt": "a combat boot tearing free of black mud, white salt crust breaking around the ankle",
+          "motion": "The boot pulls free with effort; salt crust cracks around it."
+        },
+        {
+          "shot_id": "2.5-03",
+          "duration_s": 6,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "a hand white with dried, crusted salt, the knuckles cracked and split (no blood), gripping the smooth middle of an RPG-7 launcher tube held above the waterline; the sight and the ends of the tube are out of frame",
+          "motion": "The hand tightens; salt flakes from the knuckles."
+        },
+        {
+          "shot_id": "2.5-04",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking with them",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "two men wading shin-deep while carrying a closed Malyutka suitcase between them above the water — a small closed fibreglass carrying case about the size of a large briefcase, nothing mounted on it — forearms shaking",
+          "motion": "Their arms shake but the case stays high above the water."
+        },
+        {
+          "shot_id": "2.5-04a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel straining under one end of the Malutka case, teeth clenched, starlight reflected from salt water keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He warns his partner through clenched teeth while keeping the case high.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "strained vigilance",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.5-05",
+          "duration_s": 5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private's face, salt crystals in his eyebrows, lips cracked, eyes fixed on the back in front of him",
+          "motion": "He blinks salt from his eyes; his gaze never leaves the man ahead."
+        },
+        {
+          "shot_id": "2.5-05a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa wading in the file, salt in his eyebrows and cracked lips moving, starlight reflected from salt water keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He counts his steps under his breath to stay sane.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "exhausted self-control",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.5-06",
+          "duration_s": 5,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "a uniform trouser leg stiffening grey and rigid as white salt dries into the fabric",
+          "motion": "Salt crystals spread across the fabric as it dries."
+        },
+        {
+          "shot_id": "2.5-06a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed moving back along the file, leaning close to a man with a raised weapon, starlight reflected from salt water keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He clips the first order firmly and keeps moving.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "gruff concern masked by dry humor",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.5-07",
+          "duration_s": 8,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "the file behind him",
+          "prompt": "the captain in the foreground, wading, his head turned over his shoulder to look back down the long file of men behind him, counting them",
+          "motion": "He looks back along the file, counting; he turns forward and wades on."
+        }
+      ]
+    },
+    {
+      "beat": "2.6",
+      "title": "Mostafa goes under",
+      "target_s": 30,
+      "location": "LOC-0003",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_MUD",
+      "vo": null,
+      "sfx": "A splash, choking, then wading resumes",
+      "music": "March theme continues",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-03",
+          "shot_id": "2.6-03a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "rushed",
+          "emotion": "shaken pride under physical distress",
+          "delivery": "Force the words out between suppressed coughs while looking up at Sayed. He is struggling for breath but needs Sayed to see that he protected the launcher."
+        },
+        {
+          "line": 2,
+          "speaker": "C-02",
+          "shot_id": "2.6-04",
+          "intensity": 5,
+          "volume": "whisper",
+          "pace": "slow",
+          "emotion": "relief and pride",
+          "delivery": "Whispering after hauling the boy out of the brine with the launcher still dry; one word of real praise."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.6-01",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "a boot stuck fast in deep mud under brine",
+          "motion": "The leg pulls; the boot will not come free."
+        },
+        {
+          "shot_id": "2.6-02",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "face": "straining grimace of effort, eyes squeezed half shut, teeth clenched, head tilted, face wet and streaming with brine",
+          "face_strength": 0.75,
+          "prompt": "the young private pitching forward onto his knees in shin-deep brine, splashing down to his chest, both arms straight up holding an RPG launcher clear above the water",
+          "motion": "He falls forward into the water, but his arms stay straight up, the launcher dry."
+        },
+        {
+          "shot_id": "2.6-03",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-02",
+            "C-03"
+          ],
+          "prompt": "a strong hand grabbing the back of the young private's chest rig and hauling him upright out of the water",
+          "motion": "The sergeant hauls him up in one pull; water pours off them."
+        },
+        {
+          "shot_id": "2.6-03a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa just hauled upright, coughing brine but still holding the RPG clear, moonlight and wet salt glare keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He forces the words out between suppressed coughs.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "shaken pride under physical distress",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.6-04",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "the sergeant standing in the moonlit brine, one hand gripping the chest rig of a young private just out of frame, glancing at the dry rocket launcher and then at the boy, whispering one word, face in three-quarter view, mouth and lips clearly visible, not looking at the camera",
+          "motion": "He checks the dry launcher, looks at the boy and whispers one word of praise with a small nod.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "relief and pride",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.6-05",
+          "duration_s": 8,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "tracking",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private wading on, face streaming with salt water, not wiping it",
+          "motion": "He wades on; the water runs down his face; he does not wipe it."
+        }
+      ]
+    },
+    {
+      "beat": "2.7",
+      "title": "The first night",
+      "target_s": 40,
+      "location": "LOC-0007",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_CLEAN",
+      "vo": null,
+      "sfx": "The muffled radio, indistinct; a car with taped headlights passing below",
+      "music": "March theme thins to a single sustained note under this beat, then returns with the march",
+      "look_note": "Interior at night with no lamp: only faint moonlight around the blue-painted window",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-14",
+          "shot_id": "2.7-02a",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "sleepy unease",
+          "delivery": "Ask from the mattress without lifting your head. The question sounds casual, but you are waiting closely for your mother’s answer."
+        },
+        {
+          "line": 2,
+          "speaker": "C-13",
+          "shot_id": "2.7-03a",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained fear",
+          "delivery": "Answer without turning from the radio. Keep it gentle but slightly clipped, as if ending his questions will also quiet your own thoughts."
+        },
+        {
+          "line": 3,
+          "speaker": "C-14",
+          "shot_id": "2.7-03b",
+          "intensity": 6,
+          "volume": "low",
+          "pace": "normal",
+          "emotion": "innocent persistence",
+          "delivery": "You are more awake now, though still physically sleepy. Ask plainly, with a child’s expectation that there must be a real place and a simple answer."
+        },
+        {
+          "line": 4,
+          "speaker": "C-13",
+          "shot_id": "2.7-04a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "tenderness covering dread",
+          "delivery": "Give him the comforting image as you straighten the already-straight photograph. Let the pause hold your uncertainty, then make «نَامْ بَقَى» gently firmer."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.7-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [
+            "C-13",
+            "C-14"
+          ],
+          "prompt": "a dark one-room flat at night, the blue-painted window a dull rectangle, a woman sitting on the floor beside a sewing machine, a boy asleep on a mattress",
+          "motion": "Almost still; a car's taped headlights sweep a thin line across the ceiling."
+        },
+        {
+          "shot_id": "2.7-02",
+          "duration_s": 3,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [],
+          "assets": [
+            "PRP-0015"
+          ],
+          "prompt": "a sleeping boy's fist closed around a small tin toy airplane",
+          "motion": "The small fist tightens in sleep."
+        },
+        {
+          "shot_id": "2.7-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "Ali lying on the mattress with the tin airplane in his fist, asking into the dark, faint blue window light keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks without lifting his head.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "sleepy unease",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.7-03",
+          "duration_s": 5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "the woman sitting with knees drawn up in the dark, listening to a radio murmuring through the wall",
+          "motion": "She listens; her eyes move to the wall, then away."
+        },
+        {
+          "shot_id": "2.7-03a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "Fatma sitting beside the sewing machine, listening to the radio through the wall, faint blue window light keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She answers gently without turning from the radio.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "contained fear",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.7-03b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-14"
+          ],
+          "prompt": "Ali more awake on the mattress, clutching the tin airplane, faint blue window light keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks plainly, waiting for a simple answer.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "innocent persistence",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.7-04",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "characters": [
+            "C-13"
+          ],
+          "assets": [
+            "PRP-0011"
+          ],
+          "prompt": "the woman reaching up in the dark to straighten a framed soldier's portrait that is already straight",
+          "motion": "She reaches up and adjusts the frame by a millimeter, then lowers her hand."
+        },
+        {
+          "shot_id": "2.7-04a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-13"
+          ],
+          "prompt": "Fatma straightening Sayed’s already-straight portrait in the dark, faint blue window light keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "She gives Ali a gentle lie, then quietly ends the questions.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "tenderness covering dread",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.7-05",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_NIGHT_MOON"
+          ],
+          "location": "LOC-0007",
+          "characters": [],
+          "prompt": "a blacked-out Cairo street at night seen from above, a single car with headlights painted blue creeping along",
+          "motion": "The car creeps along the dark street."
+        }
+      ]
+    },
+    {
+      "beat": "2.8",
+      "title": "Into the dunes",
+      "target_s": 25,
+      "location": "LOC-0001",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Sand hiss on the wind, heavy footsteps sinking into soft sand",
+      "music": "March theme continues, thinning out as the road comes into view",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-02",
+          "shot_id": "2.8-02a",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "gruff concentration masking concern",
+          "delivery": "Wrap the rifle while demonstrating the movement to Mostafa. Keep the warning tight and practical; the final order should carry quiet sergeant’s authority."
+        },
+        {
+          "line": 2,
+          "speaker": "C-03",
+          "shot_id": "2.8-02b",
+          "intensity": 6,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "alert obedience with contained nerves",
+          "delivery": "Answer Sayed immediately while copying the wrap. The full chest voice stays controlled, showing that Mostafa is frightened but trained."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.8-01",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [],
+          "extras": "the file climbing",
+          "prompt": "a file of soldiers climbing out of a salt marsh onto soft moonlit sand dunes, fine sand blowing off the crests",
+          "motion": "The men climb the first dune; sand streams off the crest in the wind."
+        },
+        {
+          "shot_id": "2.8-02",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0001"
+          ],
+          "prompt": "hands wrapping a strip of cloth around the action of an AK rifle, sand stuck to wet fingers",
+          "motion": "The cloth is wound tight around the rifle action."
+        },
+        {
+          "shot_id": "2.8-02a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed demonstrating the rifle wrap to Mostafa with fast hands, moonlight on pale sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He explains while wrapping, then makes the final order tight.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "gruff concentration masking concern",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.8-02b",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "Mostafa copying Sayed’s wrap on his own rifle, moonlight on pale sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers immediately while working.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "alert obedience with contained nerves",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.8-03",
+          "duration_s": 3,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "sand sliding down a dune face over a wet, sand-caked boot",
+          "motion": "Sand slides down and buries the boot."
+        },
+        {
+          "shot_id": "2.8-04",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "the engineer sergeant trudging up a dune, uniform caked with sand over salt and mud",
+          "motion": "He trudges upward, sinking with every step."
+        }
+      ]
+    },
+    {
+      "beat": "2.9",
+      "title": "The road and the wire",
+      "target_s": 25,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Boots on asphalt, quickly muffled; wind in the wire",
+      "music": "None — the score cuts out as the fist goes up",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-02",
+          "shot_id": "2.9-02a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "alert caution",
+          "delivery": "Sayed has crawled close enough to be heard. He reports the obstacle in one gravelly breath, keeping his eyes on the wire."
+        },
+        {
+          "line": 2,
+          "speaker": "C-01",
+          "shot_id": "2.9-02b",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "controlled apprehension",
+          "delivery": "Shalabi confirms the danger to himself, then gives Sayed the next order without looking away from the wire. Keep both clauses low and exact; the second is slightly tighter."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.9-01",
+          "duration_s": 6,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "commandos crossing in pairs",
+          "prompt": "commandos crossing a dark asphalt road in silent bounds, two at a time, moonlight on the asphalt",
+          "motion": "Pairs of men dash across the road and vanish into the sand on the far side."
+        },
+        {
+          "shot_id": "2.9-02",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [],
+          "extras": "the point man",
+          "prompt": "a point man lying flat in the sand raising a closed fist, a low barbed-wire fence on pickets just ahead",
+          "motion": "He drops flat and raises a fist; everyone behind him freezes."
+        },
+        {
+          "shot_id": "2.9-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed crawled close to Shalabi with the barbed wire just ahead, moonlight on sand and wire keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He reports the obstacle in one gravelly breath.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "alert caution",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.9-02b",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi lying low in the sand, eyes on the wire as he orders Hassan brought forward, moonlight on sand and wire keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He confirms the mine danger and gives the next order.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled apprehension",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.9-03",
+          "duration_s": 5,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "barbed wire on a picket in moonlight, a thread of wind moving it",
+          "motion": "The wire trembles in the wind."
+        }
+      ]
+    },
+    {
+      "beat": "2.10",
+      "title": "Breaching the minefield",
+      "target_s": 40,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "The probe sliding into sand. Breathing. Cloth dragging. Nothing else",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-05",
+          "shot_id": "2.10-01a",
+          "intensity": 9,
+          "volume": "whisper",
+          "pace": "slow",
+          "emotion": "controlled dread and responsibility",
+          "delivery": "Hassan looks back at the prone file and fixes each man with the warning. Keep the whisper dry and exact, with a small pause between the two sentences; he is suppressing fear so nobody makes a fatal move."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.10-01",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static, ground level",
+          "characters": [
+            "C-05"
+          ],
+          "assets": [
+            "PRP-0006"
+          ],
+          "prompt": "the engineer sergeant sliding on his belly under barbed wire, a steel probe in his hand, a reel of white tape on his back",
+          "motion": "He slides under the wire on his belly, slowly."
+        },
+        {
+          "shot_id": "2.10-01a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "Hassan lying at the wire, looking back once at the prone file before entering the minefield, near-black moonlight keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He fixes the men with the warning before he goes.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled dread and responsibility",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.10-02",
+          "duration_s": 7,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0006"
+          ],
+          "prompt": "a steel probe easing into sand at a shallow angle and stopping against something hard",
+          "motion": "The probe slides in, then stops dead."
+        },
+        {
+          "shot_id": "2.10-03",
+          "duration_s": 7,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0006"
+          ],
+          "prompt": "white marking tape being paid out across dark sand, curving around a small marker stick",
+          "motion": "The tape unreels across the sand and curves around the marker."
+        },
+        {
+          "shot_id": "2.10-04",
+          "duration_s": 9,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static, ground level",
+          "characters": [
+            "C-03",
+            "C-02"
+          ],
+          "extras": "the whole company crawling in single file",
+          "prompt": "ground-level view of a long single file of soldiers crawling on their bellies along a thin white tape line across dark sand, weapons dragged beside them",
+          "motion": "The file crawls toward camera along the tape; a hand signal; everyone freezes; a second signal; the crawl resumes.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "2.10-05",
+          "duration_s": 5,
+          "size": "CU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private's face pressed close to the sand, eyes fixed on the white tape inches away",
+          "motion": "He holds his breath; his eyes follow the tape forward."
+        }
+      ]
+    },
+    {
+      "beat": "2.11",
+      "title": "Toward Romani",
+      "target_s": 25,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Wind and the company breathing in the fold of sand",
+      "music": "The march theme returns quietly and carries into the next beat, fading as the company reaches the ambush area",
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-01",
+          "shot_id": "2.11-02a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "controlled dread",
+          "delivery": "Keep it clipped and almost breathless, directed at Sayed as he reaches the rear of the file. Shalabi needs confirmation before he permits himself any relief."
+        },
+        {
+          "line": 2,
+          "speaker": "C-02",
+          "shot_id": "2.11-02b",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "normal",
+          "emotion": "guarded relief",
+          "delivery": "Report directly to Shalabi without celebration. Let a trace of relief enter only on the second sentence; Sayed is still protecting the men by keeping them quiet and moving."
+        },
+        {
+          "line": 3,
+          "speaker": "C-01",
+          "shot_id": "2.11-02c",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "renewed resolve",
+          "delivery": "Take a brief beat on «رُمَّانَةْ», then indicate the bearing with the hand and finish firmly. The relief is over; Shalabi has already moved mentally to the next danger."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.11-01",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "the last man",
+          "prompt": "the last soldier crawling clear of the white tape line at the far edge of a minefield",
+          "motion": "He crawls off the end of the tape and rolls onto his back, breathing."
+        },
+        {
+          "shot_id": "2.11-02",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "seven exhausted commandos sitting and lying close together",
+          "prompt": "pre-dawn in a shallow fold of sand between dunes: a row of exhausted commandos sitting and lying close together, heads down, rifles across their laps; the captain in the foreground walking along the row, bending, his hand resting on one seated man's shoulder as he counts them; faint grey light on the dune crests, faces dimly readable",
+          "motion": "He counts them by touch, one shoulder at a time."
+        },
+        {
+          "shot_id": "2.11-02a",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi counting shoulders by touch, turning to Sayed from the rear of the file, faint grey light on dune crests keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks for the count clipped and almost breathless.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled dread",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.11-02b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed just in from the rear of the file, reporting to Shalabi in the fold of sand, faint grey light on dune crests keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He reports without celebration.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "guarded relief",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.11-02c",
+          "duration_s": 3,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi checking the compass one more time and pointing east, faint grey light on dune crests keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He names Romani and sets the bearing.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "renewed resolve",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.11-03",
+          "duration_s": 6,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "the company",
+          "prompt": "the company rising from the sand and moving off into the dark toward faint grey dune crests, the captain pointing east",
+          "motion": "He points east; the men rise and move off into the dark."
+        }
+      ]
+    },
+    {
+      "beat": "2.12",
+      "title": "A desert like a carpet",
+      "target_s": 30,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": {
+        "ref": "screenplay 2.12 VO",
+        "placement": "over 2.12-01 and 2.12-02",
+        "est_s": 6
+      },
+      "sfx": "Wind, a distant jackal call, breathing",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-02",
+          "shot_id": "2.12-01a",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "quick",
+          "emotion": "grim disbelief masking concern",
+          "delivery": "Still prone beside Shalabi, Sayed scans the exposed ground as he speaks. Keep it gravelly and practical; the complaint is really a warning about the men."
+        },
+        {
+          "line": 2,
+          "speaker": "C-01",
+          "shot_id": "2.12-03a",
+          "intensity": 8,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "controlled resolve as the solution crystallizes",
+          "delivery": "Shalabi watches the sand run through his fingers, then answers Sayed without looking up. Let a tiny pause carry the instant in which the metaphor becomes a tactical decision."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.12-01",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "the captain crawling to a low rise in the starlit desert and looking out",
+          "motion": "He crawls up and raises his head slowly."
+        },
+        {
+          "shot_id": "2.12-01a",
+          "duration_s": 5,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed prone beside Shalabi, scanning the exposed flat ground, starlight across flat sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He asks the warning as a practical complaint.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "grim disbelief masking concern",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.12-02",
+          "duration_s": 7,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "slow pan left to right",
+          "characters": [],
+          "location": "LOC-0002",
+          "prompt": "a perfectly flat starlit desert with a dead-straight road running to the horizon in both directions, no hills, no rocks, no cover",
+          "motion": "Slow pan across the empty, flat land."
+        },
+        {
+          "shot_id": "2.12-03",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "a hand scooping sand and letting it run through the fingers",
+          "motion": "Sand runs through the fingers and drifts away."
+        },
+        {
+          "shot_id": "2.12-03a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi watching sand run through his fingers as the solution arrives, starlight across flat sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers without looking up.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled resolve as the solution crystallizes",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.12-04",
+          "duration_s": 5,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [],
+          "extras": "the company lying flat in a line",
+          "prompt": "a long line of exhausted soldiers lying flat in the sand behind the captain, salt- and sand-caked",
+          "motion": "Nobody moves; a man lifts his head and lowers it."
+        }
+      ]
+    },
+    {
+      "beat": "2.13",
+      "title": "Few against many",
+      "target_s": 30,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Wind; two or three exhausted men murmur close by",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-01",
+          "shot_id": "2.13-02",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "controlled resolve under pressure",
+          "delivery": "Crouched among the nearest men, he makes brief eye contact instead of addressing them theatrically. Admit the odds without self-pity, then tighten slightly on «مَا يِعْرَفُوشْ» as the tactical advantage."
+        },
+        {
+          "line": 2,
+          "speaker": "COMMANDOS",
+          "shot_id": "2.13-03",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "exhausted but steady faith",
+          "delivery": "Two or three nearby men answer separately, not as a rehearsed chorus. Each keeps his body down and gives Shalabi only enough voice to show he is ready."
+        },
+        {
+          "line": 3,
+          "speaker": "C-02",
+          "shot_id": "2.13-04",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "grim certainty masked by dryness",
+          "delivery": "Say it only to Mostafa, almost without turning toward him. Sayed is not spreading panic; he is making sure the younger man understands what the calm briefing really means."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.13-01",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "tracking with him",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "commandos straightening as he passes",
+          "prompt": "the company still lying together in one shallow fold of ground before spreading out; Shalabi moves crouched among the nearest exhausted commandos, looking each man in the face",
+          "motion": "He moves along the close line; each man straightens slightly as he reaches them.",
+          "notes": "v2 restage: the company is still together in one fold of ground before the platoons spread out."
+        },
+        {
+          "shot_id": "2.13-02",
+          "duration_s": 11,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "extras": "commandos gathered close",
+          "prompt": "the captain crouching among his commandos in starlight, speaking low to the faces around him, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He looks from face to face and speaks low and steady; the men around him lift their heads.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "quiet faith and resolve",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.13-03",
+          "duration_s": 6,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "slow pan",
+          "characters": [
+            "C-02",
+            "C-03"
+          ],
+          "extras": "commandos nearby in the same fold of ground",
+          "prompt": "Sayed and Mostafa crouched low in starlight, listening as two or three nearby commandos murmur their answer off-camera in the same shallow fold of ground",
+          "motion": "Their eyes stay on Shalabi; the off-camera murmur passes between the nearby men.",
+          "notes": "v2 restage: COMMANDOS murmur is off-camera on a reaction shot; no individual lip-sync."
+        },
+        {
+          "shot_id": "2.13-04",
+          "duration_s": 7,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "the sergeant crouching in starlight, saying something quietly to the men beside him, face in three-quarter view, mouth and lips clearly visible, eyes on the other person off to the side, not looking at the camera",
+          "motion": "He speaks quietly, a vow rather than a boast; then he looks out at the road.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "grim determination",
+          "lip_sync": "required"
+        }
+      ]
+    },
+    {
+      "beat": "2.14",
+      "title": "Three platoons, three kilometers",
+      "target_s": 40,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Wind; quiet movement",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-01",
+          "shot_id": "2.14-01a",
+          "intensity": 7,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "controlled concentration under pressure",
+          "delivery": "Keep his eyes and finger on the map. Each pause marks a new position; the final instruction lands as the danger he has been calculating all along."
+        },
+        {
+          "line": 2,
+          "speaker": "C-01",
+          "shot_id": "2.14-02a",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "measured",
+          "emotion": "contained trust and grave responsibility",
+          "delivery": "Look directly at Hassan and make the assignment personal without softening it. Tighten slightly on «مَحَدِّشْ» but never raise the voice."
+        },
+        {
+          "line": 3,
+          "speaker": "C-05",
+          "shot_id": "2.14-02b",
+          "intensity": 8,
+          "volume": "low",
+          "pace": "slow",
+          "emotion": "quiet resolve without display",
+          "delivery": "Answer Shalabi plainly, almost as if confirming a routine task. Do not sell the heroism; let the danger register only in the stillness before «يَا فَنْدِمْ»."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.14-01",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-01",
+            "C-02",
+            "C-05"
+          ],
+          "extras": "three platoon leaders",
+          "assets": [
+            "PRP-0008"
+          ],
+          "prompt": "Shalabi kneeling over a map with Sayed, Hassan, and three platoon leaders, a red-filtered flashlight cupped in his hand",
+          "motion": "Heads lean in over the red-lit map; Sayed and Hassan flank Shalabi.",
+          "notes": "v2 restage: Hassan and Sayed are with Shalabi at the map."
+        },
+        {
+          "shot_id": "2.14-01a",
+          "duration_s": 8,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi over the red-lit map marking three platoon positions along the road, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He keeps his eyes and finger on the map, each pause marking a position.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "controlled concentration under pressure",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.14-02",
+          "duration_s": 3,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "assets": [
+            "PRP-0008"
+          ],
+          "prompt": "a finger touching three points along a road on a red-lit topographic map",
+          "motion": "The finger taps three points along the road, one by one.",
+          "notes": "v2 restage: map insert supports Shalabi assigning three platoons and rear groups."
+        },
+        {
+          "shot_id": "2.14-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-01"
+          ],
+          "prompt": "Shalabi looking directly to Hassan after marking the map, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He makes the rear-guard assignment personal without softening it.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "contained trust and grave responsibility",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.14-02b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "Hassan receiving Shalabi’s rear-guard order beside the red-lit map, red-filtered flashlight and starlight keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He answers plainly, almost as if confirming a routine task.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "quiet resolve without display",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.14-03",
+          "duration_s": 8,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "ANGLE_AERIAL_HIGH slow drift",
+          "characters": [],
+          "extras": "three dark clusters of men spreading along the road",
+          "prompt": "high aerial view at night of a straight road through flat desert, three small dark clusters of men spreading apart along it about a kilometer from each other",
+          "motion": "Slow aerial drift; the three clusters move apart along the road.",
+          "model": "premium"
+        },
+        {
+          "shot_id": "2.14-04",
+          "duration_s": 4,
+          "size": "WS",
+          "lens": "LENS_35",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "extras": "a small group peeling away",
+          "prompt": "a small group of six to twelve men peeling away to the rear of a platoon, led by the shaved-headed engineer sergeant",
+          "motion": "The small group moves off to the rear and drops into the sand."
+        },
+        {
+          "shot_id": "2.14-05",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "the missile operator and his partner carrying a suitcase launcher to a position on the flank overlooking the road",
+          "motion": "They set the case down on the flank and look toward the road."
+        }
+      ]
+    },
+    {
+      "beat": "2.15",
+      "title": "The enemy who could not move",
+      "target_s": 20,
+      "location": "LOC-0002",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": {
+        "ref": "screenplay 2.15 VO",
+        "placement": "over 2.15-01",
+        "est_s": 9
+      },
+      "sfx": "Silence; wind",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "2.15-01",
+          "duration_s": 20,
+          "size": "WS",
+          "lens": "LENS_135_LONG",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "a long static view down an empty straight road at night under starlight, in the out-of-focus foreground a commando's hand resting on an RPG tube",
+          "motion": "Nothing comes down the road. The hand in the foreground does not move.",
+          "notes": "One long held shot — the emptiness is the point."
+        }
+      ]
+    },
+    {
+      "beat": "2.16",
+      "title": "Barrel pits",
+      "target_s": 50,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_NIGHT_MOON"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Shovels biting sand, sand pouring, hard breathing, metal on metal as rockets are laid out",
+      "music": null,
+      "dialogue_refs": [
+        {
+          "line": 1,
+          "speaker": "C-02",
+          "shot_id": "2.16-02a",
+          "intensity": 4,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "practical instruction",
+          "delivery": "Whispering to the men digging around him; showing, not ordering."
+        },
+        {
+          "line": 2,
+          "speaker": "C-05",
+          "shot_id": "2.16-04a",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "methodical urgency",
+          "delivery": "Move his attention from the loose sand to the paling horizon. He is correcting the men quietly because concealment must be finished before the reconnaissance aircraft arrives."
+        },
+        {
+          "line": 3,
+          "speaker": "C-06",
+          "shot_id": "2.16-05a",
+          "intensity": 6,
+          "volume": "whisper",
+          "pace": "normal",
+          "emotion": "fear masked by black humour",
+          "delivery": "Say it while studying the walls of the pit, not as a joke offered to an audience. Let the humour escape because the depth has suddenly made the danger tangible."
+        },
+        {
+          "line": 4,
+          "speaker": "C-02",
+          "shot_id": "2.16-05b",
+          "intensity": 7,
+          "volume": "whisper",
+          "pace": "measured",
+          "emotion": "deadpan concern",
+          "delivery": "Do not look at Adel or stop shovelling. Land «الْقَبْرْ أَعْمَقْ» dryly, then make «اِحْفَرْ» a quiet order that ends the exchange and keeps the frightened private moving."
+        }
+      ],
+      "shots": [
+        {
+          "shot_id": "2.16-01",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "prompt": "a short entrenching shovel slicing the top layer of sand away in one flat piece",
+          "motion": "The shovel slides under the surface and lifts the top layer in one piece."
+        },
+        {
+          "shot_id": "2.16-02",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "hands setting the slab of top sand carefully aside like a rolled-back carpet",
+          "motion": "The slab is laid gently aside.",
+          "notes": "Sayed's whispered line over the hands."
+        },
+        {
+          "shot_id": "2.16-02a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed digging beside the men and setting the top layer of sand aside, moonlight on sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He keeps working as he gives the instruction.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "practical instruction",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.16-03",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "the young private digging, chest-deep in a round pit, sweat cutting lines through the salt on his face",
+          "motion": "He digs steadily, throwing sand up and out."
+        },
+        {
+          "shot_id": "2.16-04",
+          "duration_s": 5,
+          "size": "MS",
+          "lens": "LENS_35",
+          "move": "tracking",
+          "characters": [
+            "C-05"
+          ],
+          "extras": "men spreading spoil",
+          "prompt": "the engineer sergeant moving from pit to pit pointing; men spreading excavated sand thin and low and laying the saved top layer back over it",
+          "motion": "He points; men spread the sand thin and lay the top layer back."
+        },
+        {
+          "shot_id": "2.16-04a",
+          "duration_s": 6,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-05"
+          ],
+          "prompt": "Hassan moving pit to pit, correcting men as they spread the excavated sand, moonlight and the first cold grey keep the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He points from the loose sand to the paling horizon.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "methodical urgency",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.16-05",
+          "duration_s": 4,
+          "size": "INSERT",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "an RPG-7 leaning ready against the lip of a pit, rockets laid in a row on a cloth",
+          "motion": "Grains of sand trickle down past the rockets."
+        },
+        {
+          "shot_id": "2.16-05a",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "prompt": "Adel chest-deep in his own pit, staring at the walls around him, moonlight on sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He lets the dark joke escape while studying the pit.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "fear masked by black humour",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.16-05b",
+          "duration_s": 4,
+          "size": "MCU",
+          "lens": "LENS_85_PORTRAIT",
+          "move": "static",
+          "characters": [
+            "C-02"
+          ],
+          "prompt": "Sayed digging without looking up from his shovel beside Adel’s pit, moonlight on sand keeps the face readable but dark, face in three-quarter view, mouth visible, not looking at the camera",
+          "motion": "He lands the dry correction and turns it into an order.",
+          "notes": "v2 drama rewrite (2026-10-15): speaker on camera, lip-synced.",
+          "face": "deadpan concern",
+          "lip_sync": "required"
+        },
+        {
+          "shot_id": "2.16-06",
+          "duration_s": 4,
+          "size": "MS",
+          "lens": "LENS_50",
+          "move": "static",
+          "characters": [
+            "C-06"
+          ],
+          "assets": [
+            "PRP-0003"
+          ],
+          "prompt": "the missile operator laying out the control box and checking the guidance wires at his flank position",
+          "motion": "He checks the wires and settles the control box."
+        },
+        {
+          "shot_id": "2.16-07",
+          "duration_s": 6,
+          "size": "WS",
+          "lens": "LENS_WIDE_24",
+          "move": "static",
+          "look": [
+            "LOOK_BASE",
+            "LOOK_DAWN_HAZE"
+          ],
+          "characters": [],
+          "extras": "men finishing pits",
+          "prompt": "the first cold grey light in the east over men finishing their pits across the flat desert",
+          "motion": "The sky greys; the last shovelfuls are laid flat."
+        }
+      ]
+    },
+    {
+      "beat": "2.17",
+      "title": "Nothing there",
+      "target_s": 20,
+      "location": "LOC-0004",
+      "look": [
+        "LOOK_BASE",
+        "LOOK_DAWN_HAZE"
+      ],
+      "wear": "WEAR_SAND",
+      "vo": null,
+      "sfx": "Dawn wind",
+      "music": null,
+      "shots": [
+        {
+          "shot_id": "2.17-01",
+          "duration_s": 12,
+          "size": "EWS",
+          "lens": "LENS_WIDE_24",
+          "move": "slow pan",
+          "characters": [],
+          "prompt": "a wide slow view across an empty, untouched flat desert at dawn, pale gold haze, long shadows from tiny ripples in the sand",
+          "motion": "Slow pan across the empty desert; nothing there."
+        },
+        {
+          "shot_id": "2.17-02",
+          "duration_s": 4,
+          "size": "ECU",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [
+            "C-03"
+          ],
+          "prompt": "a pair of eyes opening in the sand at ground level, the rest of the face hidden under sand-colored cloth; farther back, another pair of eyes opens under the camouflage",
+          "motion": "The first eyes open; a second hidden pair opens farther back.",
+          "model": "premium",
+          "notes": "v2 restage: the dawn reveal includes another hidden commando before the RPG tube."
+        },
+        {
+          "shot_id": "2.17-03",
+          "duration_s": 4,
+          "size": "ECU",
+          "lens": "LENS_MACRO_DETAIL",
+          "move": "static",
+          "characters": [],
+          "assets": [
+            "PRP-0002"
+          ],
+          "prompt": "the dark tube of a half-buried RPG catching the first light of dawn",
+          "motion": "The light slides along the tube.",
+          "notes": "Act-out: END OF ACT TWO."
+        }
+      ]
+    }
+  ]
+}

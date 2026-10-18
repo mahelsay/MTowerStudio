@@ -1,0 +1,156 @@
+{
+  "$schema_note": "MTower Studio — recipe for an actor's LoRA training set. Each variation is one reference edit of the approved anchor (same person, new angle, light, expression, pose, or outfit). 'caption' is written next to the image for training and describes only what changes (pose, light, clothing, setting), never the face, so the face binds to the trigger word. 'outfit'/'outfit_female' put the person in new clothes (named in the edit and the caption); variations without an outfit keep the anchor clothes, and their caption names the actor's anchor.outfit. Rule (v1.2): at least 3 out of 4 variations change the outfit and at least 4 are action poses, so neither the anchor clothes nor the portrait framing become part of the face. Optional 'edit_female'/'caption_female' replace the text for female actors. Used by: mtower generate training-set <ACT-ID>.",
+  "version": "1.3",
+  "identity_lock": "Keep exactly the same person: the same face, facial features, face shape, nose, eyes, eyebrows, skin tone, age, build, hair and facial hair. If the person wears a headscarf, keep the hair covered. Photorealistic 35mm film photograph, natural unretouched skin texture, 1970s Egypt, no text or lettering anywhere.",
+  "gate": {
+    "$note": "Checked before every paid LoRA training run (mtower generate lora). Prevents training on a set that would bake the anchor clothes or portrait framing into the face.",
+    "min_kept": 15,
+    "min_outfit_changed_share": 0.6,
+    "min_action_poses": 3,
+    "action_keys": [
+      "walking",
+      "kneeling",
+      "carrying",
+      "soaking-wet",
+      "shouting"
+    ]
+  },
+  "variations": [
+    {
+      "key": "front-closeup",
+      "edit": "Close-up of the face looking straight at the camera with a neutral expression, soft overcast daylight",
+      "caption": "close-up, facing the camera, neutral expression, soft overcast daylight"
+    },
+    {
+      "key": "profile-left",
+      "edit": "Strict side profile facing left, plain light background, soft daylight",
+      "caption": "side profile facing left, plain light background"
+    },
+    {
+      "key": "rim-light",
+      "edit": "Close-up rim-lit from behind by the setting sun, face partly in shadow",
+      "caption": "close-up, backlit by the setting sun, face partly in shadow"
+    },
+    {
+      "key": "three-quarter-left-sun",
+      "edit": "Three-quarter view facing left, harsh midday sun casting hard shadows, outdoors against a sunlit mud-brick wall",
+      "caption": "three-quarter view facing left, harsh midday sun, mud-brick wall",
+      "outfit": "a plain grey cotton shirt",
+      "outfit_female": "a plain grey cotton dress"
+    },
+    {
+      "key": "three-quarter-right-golden",
+      "edit": "Three-quarter view facing right, warm late-afternoon golden light, desert background out of focus",
+      "caption": "three-quarter view facing right, golden late-afternoon light, desert background",
+      "outfit": "a blue-striped cotton shirt",
+      "outfit_female": "a blue patterned cotton dress"
+    },
+    {
+      "key": "profile-right",
+      "edit": "Strict side profile facing right, outdoors under an overcast sky",
+      "caption": "side profile facing right, outdoors, overcast sky",
+      "outfit": "a white cotton undershirt",
+      "outfit_female": "a plain white cotton blouse"
+    },
+    {
+      "key": "looking-up",
+      "edit": "Head tilted up, looking up at the sky, low camera angle, bright daylight",
+      "caption": "looking up at the sky, low angle, bright daylight",
+      "outfit": "a khaki work shirt",
+      "outfit_female": "a khaki-coloured cotton dress"
+    },
+    {
+      "key": "smile",
+      "edit": "Smiling warmly with teeth showing, front view, soft daylight",
+      "caption": "smiling warmly, front view, soft daylight",
+      "outfit": "a dark knitted wool sweater",
+      "outfit_female": "a dark knitted cardigan over a dress"
+    },
+    {
+      "key": "intense",
+      "edit": "Intense determined expression with the jaw set, looking slightly off camera, hard side light",
+      "caption": "intense determined expression, looking off camera, hard side light",
+      "outfit": "an olive-green work shirt",
+      "outfit_female": "an olive-green cotton dress"
+    },
+    {
+      "key": "shouting",
+      "edit": "Shouting urgently with the mouth open, three-quarter view, dust in the air",
+      "caption": "shouting, mouth open, three-quarter view, dusty air",
+      "outfit": "a sweat-stained khaki shirt",
+      "outfit_female": "a dusty brown cotton dress"
+    },
+    {
+      "key": "exhausted",
+      "edit": "Exhausted, eyes half-closed, sweat and dust on the skin, dim light",
+      "caption": "exhausted, sweat and dust on the skin, dim light",
+      "outfit": "a dirty white undershirt",
+      "outfit_female": "a dusty faded dress"
+    },
+    {
+      "key": "night-moonlight",
+      "edit": "At night, lit only by cold blue moonlight from one side, dark background",
+      "caption": "night, cold blue moonlight from one side, dark background",
+      "outfit": "a dark wool jacket",
+      "outfit_female": "a dark wool shawl"
+    },
+    {
+      "key": "soaking-wet",
+      "edit": "Face and hair soaking wet, water streaming down the face, eyes squinting, at night",
+      "caption": "soaking wet, water streaming down the face, squinting, night",
+      "outfit": "a soaked dark cotton shirt clinging to the body",
+      "outfit_female": "a soaked dark cotton dress"
+    },
+    {
+      "key": "village-street",
+      "edit": "Half-body shot standing outdoors in a village street",
+      "caption": "half-body, village street",
+      "outfit": "a plain white cotton shirt",
+      "outfit_female": "a plain light-coloured cotton dress"
+    },
+    {
+      "key": "window-interior",
+      "edit": "Half-body shot standing indoors by a window, soft side light",
+      "caption": "half-body, indoors by a window, soft side light",
+      "outfit": "a brown wool jacket over a collared shirt",
+      "outfit_female": "a brown wool shawl over a dress"
+    },
+    {
+      "key": "full-body-galabeya",
+      "edit": "Full-body shot standing, front view, plain background",
+      "caption": "full-body, standing, front view, plain background",
+      "outfit": "a traditional long grey galabeya",
+      "outfit_female": "a traditional long black galabeya"
+    },
+    {
+      "key": "headwear",
+      "edit": "Wearing a simple cloth cap, three-quarter view, outdoors",
+      "caption": "wearing a cloth cap, three-quarter view, outdoors",
+      "edit_female": "Wearing a headscarf in a different colour, three-quarter view, outdoors",
+      "caption_female": "wearing a different-coloured headscarf, three-quarter view, outdoors",
+      "outfit": "a plain white collared cotton shirt",
+      "outfit_female": "a plain faded cotton dress"
+    },
+    {
+      "key": "walking",
+      "edit": "Full-body shot walking briskly toward the camera on a dirt road, mid-stride, arms swinging",
+      "caption": "full-body, walking toward the camera on a dirt road, mid-stride",
+      "outfit": "a khaki shirt and dark trousers",
+      "outfit_female": "a long dark dress"
+    },
+    {
+      "key": "kneeling",
+      "edit": "Kneeling on one knee on sandy ground, looking to the side, three-quarter view",
+      "caption": "kneeling on one knee on sandy ground, looking to the side",
+      "outfit": "a faded blue work shirt",
+      "outfit_female": "a faded blue cotton dress"
+    },
+    {
+      "key": "carrying",
+      "edit": "Carrying a heavy sack on one shoulder, straining, three-quarter view, outdoors",
+      "caption": "carrying a heavy sack on one shoulder, straining, outdoors",
+      "outfit": "a grey work shirt with rolled sleeves",
+      "outfit_female": "a grey cotton dress with rolled sleeves"
+    }
+  ]
+}

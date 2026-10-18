@@ -1,0 +1,71 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A strong, restrained farewell built around gesture and subtext. Both lines are brief, natural, actor-friendly, and clearly distinguish Mostafa’s young fear from Sayed’s protective finality. The only weakness is the VO narrating an action the audience immediately sees.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [
+    "The VO clause «فَخَرَجَ الرِّجَالُ مِنْ حُفَرِهِمْ» redundantly narrates the visible action; keep only the technical context about the grenade’s short range."
+  ],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "low",
+        "pace": "quick",
+        "emotion": "suppressed dread and pleading loyalty",
+        "delivery": "Catch Sayed at arm’s length just before he climbs out. Keep a full young man’s chest voice; the plea escapes despite Mostafa’s effort to sound ready for the same danger."
+      },
+      "text": "عَمّْ سَيِّدْ… خُدْنِي مَعَاكْ."
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "protective resolve concealed as an order",
+        "delivery": "Answer while tapping the letter in Mostafa’s pocket, using the task to keep him behind. Do not play a farewell or ask for sympathy; make the finality plain and practical."
+      },
+      "text": "لَأْ. إِنْتَ مَعَاكْ حَاجَةْ لَازِمْ تِوَصَّلْهَا."
+    }
+  ],
+  "beat": "4.5",
+  "file": "04_act_four_v2.md",
+  "hash": "83688a3929deb628",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:53:05+00:00",
+  "seconds": 36.9,
+  "usage": {
+    "prompt_tokens": 2474,
+    "completion_tokens": 2977
+  },
+  "cost_usd": 0.06944
+}

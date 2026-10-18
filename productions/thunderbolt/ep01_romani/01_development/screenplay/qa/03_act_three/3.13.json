@@ -1,0 +1,45 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A strong act-break beat: the threat arrives visually, Hassan identifies the reversal, and his restrained fire-control order establishes competence under life-or-death pressure.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "HASSAN",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "controlled alarm",
+        "delivery": "Keep his body still and his eyes on the approaching infantry. He quietly confirms the feared move to his men, then makes the final sentence a firm fire-control order."
+      },
+      "text": "جُمْ مِنْ وَرَا… زَيّْ مَا قُلْنَا. مَحَدِّشْ يِضْرَبْ قَبْلِي."
+    }
+  ],
+  "beat": "3.13",
+  "file": "03_act_three_v2.md",
+  "hash": "7c8479f801aac6f0",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:44:25+00:00",
+  "seconds": 76.5,
+  "usage": {
+    "prompt_tokens": 2316,
+    "completion_tokens": 1222
+  },
+  "cost_usd": 0.0337
+}

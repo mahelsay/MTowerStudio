@@ -1,0 +1,119 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A tense, economical beat with a clear turn: Shalabi imposes discipline, Mostafa nearly breaks it, and Sayed physically and verbally brings him back. The exchange is natural, character-specific and tactically credible.",
+  "scene_issues": [
+    "The whispered exchange will only read over the tank noise if Sayed and Mostafa are blocked nearly mouth-to-ear; keep the physical contact prominent."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "controlled tactical pressure",
+        "delivery": "Speak directly into the handset, clipped and firm despite the low volume. The second order must close off any room for individual initiative."
+      },
+      "text": "مَحَدِّشْ يِشْتِبِكْ. سِيبُوهُمْ يِعَدُّوا."
+    },
+    {
+      "n": 2,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "iron restraint",
+        "delivery": "Keep hold of Mostafa’s hand and deliver the words close to him through the track noise. Let the pause carry the warning; do not sound excited."
+      },
+      "text": "مِشْ دُولْ… اِسْتَنَّى."
+    },
+    {
+      "n": 3,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "fear compressed into protest",
+        "delivery": "Keep the RPG sight fixed and force the line through clenched teeth. Use a weighted adult chest voice under strain, not a frightened boy’s tremble."
+      },
+      "text": "دِي فِي وِشِّي يَا عَمّْ سَيِّدْ!"
+    },
+    {
+      "n": 4,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 9,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "protective, immovable calm",
+        "delivery": "Answer Mostafa’s panic without looking away from the tank. Land the first sentence as a hard correction, then make the second a quiet order."
+      },
+      "text": "وِإِنْتَ مِشْ فِي وِشَّهَا. سِيبْهَا تِعَدِّي."
+    }
+  ],
+  "beat": "3.4",
+  "file": "03_act_three_v2.md",
+  "hash": "212d52c09e4cfb89",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:46:27+00:00",
+  "seconds": 70.8,
+  "usage": {
+    "prompt_tokens": 2696,
+    "completion_tokens": 5639
+  },
+  "cost_usd": 0.12356
+}

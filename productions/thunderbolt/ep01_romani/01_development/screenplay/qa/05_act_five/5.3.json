@@ -1,0 +1,121 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, actor-led domestic beat with a clean emotional turn: reassurance becomes dread, and the mother's two-word response provides the release. The letter sounds personal rather than expository, and the family knows only what it plausibly could know.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "ZEINAB",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 10,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 5,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "careful hope",
+        "delivery": "She sounds out her brother's words for her mother, proud to be reading but alert to the tension beside her. Keep the pauses natural, not tearful."
+      },
+      "text": "«أُمِّي الْغَالْيَةْ… أَنَا بِخِيرْ وَالْحَمْدُ لِلَّهْ…»"
+    },
+    {
+      "n": 2,
+      "speaker": "MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 8,
+        "lipsync": 10
+      },
+      "issues": [
+        "The second «ادْعِيلِي» lacks the initial kasra of «اِدْعِيلِي», a minor vocalization omission."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "normal",
+        "pace": "measured",
+        "emotion": "brave reassurance giving way to need",
+        "delivery": "He is composing the letter to calm his mother, keeping a young man's steady warmth through the family details. On «ادْعِيلِي كِتِيرْ», let the courage thin slightly without breaking into fear."
+      },
+      "text": "«…مَا تِقْلَقِيشْ عَلَيَّا. عَمّْ سَيِّدْ وِالرِّجَّالَةْ وَاخْدِينْ بَالْهُمْ مِنِّي. سَلِّمِيلِي عَلَى زِينَبْ، وِقُولِيلْهَا تْذَاكِرْ. وِادْعِيلِي يَا أُمِّي… ادْعِيلِي كِتِيرْ.»"
+    },
+    {
+      "n": 3,
+      "speaker": "ZEINAB",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 7,
+        "lipsync": 10
+      },
+      "issues": [
+        "Both instances of «يُومْ» should be vocalized «يَوْمْ»."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "sudden dread",
+        "delivery": "She reads the date, makes the connection, then tells her mother without looking away from the page. Leave a small stunned gap before the final phrase; do not sob."
+      },
+      "text": "يَامَّا… دَهْ مَكْتُوبْ يُومْ سِتَّةْ… يُومْ مَا الْحَرْبْ قَامِتْ."
+    },
+    {
+      "n": 4,
+      "speaker": "UMM MOSTAFA",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 10,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "low",
+        "pace": "measured",
+        "emotion": "fear held under iron control",
+        "delivery": "She gives the letter back as if hearing his words again can keep him present. It is a mother's insistence, not a barked command, with no visible collapse."
+      },
+      "text": "اِقْرِيهْ تَانِي."
+    }
+  ],
+  "beat": "5.3",
+  "file": "05_act_five_v2.md",
+  "hash": "7414a3caaa1206d3",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T12:04:05+00:00",
+  "seconds": 54.2,
+  "usage": {
+    "prompt_tokens": 2885,
+    "completion_tokens": 4252
+  },
+  "cost_usd": 0.09658
+}

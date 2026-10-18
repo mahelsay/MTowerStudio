@@ -1,0 +1,69 @@
+{
+  "beat_score": 9,
+  "verdict": "pass",
+  "summary": "A compact, visual dramatic beat with a clean turn: Sayed names the tactical impossibility, and Shalabi converts the same image into the solution. Both lines are natural, playable and restrained under real operational pressure.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 9,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "whisper",
+        "pace": "quick",
+        "emotion": "grim disbelief masking concern",
+        "delivery": "Still prone beside Shalabi, Sayed scans the exposed ground as he speaks. Keep it gravelly and practical; the complaint is really a warning about the men."
+      },
+      "text": "نِسْتَخَبَّى فِينْ هِنَا يَا فَنْدِمْ؟ دِي مَفْرُودَةْ زَيّْ السِّجَّادَةْ."
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 9,
+        "intensity": 9,
+        "character": 10,
+        "drama": 10,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "whisper",
+        "pace": "measured",
+        "emotion": "controlled resolve as the solution crystallizes",
+        "delivery": "Shalabi watches the sand run through his fingers, then answers Sayed without looking up. Let a tiny pause carry the instant in which the metaphor becomes a tactical decision."
+      },
+      "text": "يِبْقَى نِسْتَخَبَّى تَحْتْ السِّجَّادَةْ."
+    }
+  ],
+  "beat": "2.12",
+  "file": "02_act_two_v2.md",
+  "hash": "a59b427520163906",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:21:48+00:00",
+  "seconds": 16.4,
+  "usage": {
+    "prompt_tokens": 2443,
+    "completion_tokens": 1360
+  },
+  "cost_usd": 0.03697
+}

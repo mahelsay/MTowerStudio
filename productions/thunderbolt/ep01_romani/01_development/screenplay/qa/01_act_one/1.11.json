@@ -1,0 +1,171 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A compact, playable launch beat with a clear progression: meager iftar, admitted fear, mutual protection, then the boarding order. The rotor-volume choices are credible, Sayed carries the emotional turn, and the single factual VO remains restrained. Mahmoud and Adel are slightly less individualized, but every line is broadcast-ready.",
+  "scene_issues": [],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 9,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "rough cheer masking danger",
+        "delivery": "Pass the dates briskly without turning the line into a speech. Throw the Sinai joke down the line to keep the young men moving and eating."
+      },
+      "text": "بَلَحَةْ وِبُقّْ مَيَّةْ! الْعَشَا بُكْرَةْ فِي سِينَا!"
+    },
+    {
+      "n": 2,
+      "speaker": "ADEL",
+      "score": 8,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 8,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "«يِكُونْ فِيهْ عِيشْ» is natural and playable, but it identifies Adel only broadly as a young joker."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "playful nerves",
+        "delivery": "Take the date and answer Sayed at once, grinning because joking is easier than looking at the aircraft. Do not wait for a laugh."
+      },
+      "text": "إِنْ شَاءْ اللَّهْ يِكُونْ فِيهْ عِيشْ هِنَاكْ."
+    },
+    {
+      "n": 3,
+      "speaker": "SAYED",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "raised",
+        "pace": "measured",
+        "emotion": "gruff protectiveness",
+        "delivery": "Close Mostafa's fist around the date and speak directly into his ear. Make «كُلْ» an instruction; let the kindness appear only in the second sentence."
+      },
+      "text": "كُلْ. الْخُوفْ مَا بِيْشَبَّعْشْ."
+    },
+    {
+      "n": 4,
+      "speaker": "MAHMOUD",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 8,
+        "character": 7,
+        "drama": 8,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "The «حِتِّةْ صَاجْ» joke is credible period soldier talk, though it only lightly distinguishes Mahmoud's careful, precise personality."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 6,
+        "volume": "raised",
+        "pace": "normal",
+        "emotion": "uneasy humor",
+        "delivery": "Check the web gear while looking along the unarmored line. Aim the question at Sayed as a joke whose answer Mahmoud already knows."
+      },
+      "text": "هُوَّ مَافِيشْ وَلَا حِتِّةْ صَاجْ عَ الصَّدْرْ؟"
+    },
+    {
+      "n": 5,
+      "speaker": "SAYED",
+      "score": 8,
+      "scores": {
+        "dialect": 8,
+        "military": 9,
+        "intensity": 9,
+        "character": 9,
+        "drama": 7,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [
+        "«غَطِّي ضَهْرُهْ» is natural but familiar action-dialogue phrasing; the shoulder business gives it more life than the wording alone."
+      ],
+      "rewrite": "",
+      "performance": {
+        "intensity": 7,
+        "volume": "raised",
+        "pace": "measured",
+        "emotion": "stern reassurance",
+        "delivery": "Reject the idea of armor with a clipped «لَأْ». Mark «إِنْتَ» and «هُوَّ» with the two shoulder slaps, making mutual responsibility physical rather than sentimental."
+      },
+      "text": "لَأْ. إِنْتَ غَطِّي ضَهْرُهْ… وِهُوَّ يِغَطِّي ضَهْرَكْ."
+    },
+    {
+      "n": 6,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 10,
+        "military": 10,
+        "intensity": 9,
+        "character": 10,
+        "drama": 8,
+        "diacritics": 10,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "controlled operational urgency",
+        "delivery": "Sweep the men toward the aircraft and project over the rotor roar. The repetition is for movement and audibility, never panic."
+      },
+      "text": "يَلَّا! اِطْلَعُوا! اِطْلَعُوا!"
+    }
+  ],
+  "beat": "1.11",
+  "file": "01_act_one_v2.md",
+  "hash": "b90fd60705e23958",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T11:01:23+00:00",
+  "seconds": 68.0,
+  "usage": {
+    "prompt_tokens": 2985,
+    "completion_tokens": 5713
+  },
+  "cost_usd": 0.1262
+}

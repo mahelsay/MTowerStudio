@@ -1,0 +1,71 @@
+{
+  "beat_score": 8,
+  "verdict": "pass",
+  "summary": "A spare, effective recognition beat. The sentry’s challenge creates immediate danger, Shalabi’s one-word answer fits his exhausted control, and the silent head count supplies the emotional turn.",
+  "scene_issues": [
+    "The VO restates actions already shown—meeting the infantry and crossing by boat—so it slightly weakens the visual storytelling."
+  ],
+  "history_issues": [],
+  "rule_issues": [],
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "INFANTRY SENTRY",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 8,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "shout",
+        "pace": "quick",
+        "emotion": "nervous vigilance",
+        "delivery": "Challenge the distant figures while keeping the rifle trained on them. The fear is controlled by sentry discipline, not played as panic."
+      },
+      "text": "مِينْ هِنَاكْ؟!"
+    },
+    {
+      "n": 2,
+      "speaker": "SHALABI",
+      "score": 9,
+      "scores": {
+        "dialect": 9,
+        "military": 9,
+        "intensity": 9,
+        "character": 10,
+        "drama": 9,
+        "diacritics": 9,
+        "lipsync": 10
+      },
+      "issues": [],
+      "rewrite": "",
+      "performance": {
+        "intensity": 8,
+        "volume": "raised",
+        "pace": "quick",
+        "emotion": "exhausted control with buried relief",
+        "delivery": "Force the single word across the flat through a dry, damaged throat. Keep it clipped and authoritative; Shalabi is identifying his men and stopping a fatal mistake."
+      },
+      "text": "صَاعْقَةْ!"
+    }
+  ],
+  "beat": "5.4",
+  "file": "05_act_five_v2.md",
+  "hash": "9a4db4fda45ab274",
+  "model": "me-eus2-gpt-5-6-sol",
+  "reviewed_at": "2026-10-15T12:01:02+00:00",
+  "seconds": 16.9,
+  "usage": {
+    "prompt_tokens": 2510,
+    "completion_tokens": 1369
+  },
+  "cost_usd": 0.03742
+}

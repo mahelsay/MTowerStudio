@@ -1,0 +1,80 @@
+{
+  "$schema_note": "MTower Studio — shared look blocks: film looks, lighting, lenses, framing defaults, review lists, and reference-sheet variations. Productions select from these in their production_config.json. Changing a block here changes every production that uses it.",
+  "catalog": "looks",
+  "version": "1.1",
+
+  "format_defaults": {
+    "generate_aspect_ratio": "16:9",
+    "deliver_aspect_ratio": "2.39:1",
+    "framing_rule": "Generate at 16:9 and crop to 2.39:1 in the edit. Keep faces, eyes, hands, and key action inside the central horizontal band (the middle ~75% of the frame height).",
+    "keyframe_resolution": "1920x1080 for drafts and animatics; upscale finals only",
+    "frame_rate": 24
+  },
+
+  "look": {
+    "LOOK_BASE_FILM_70S": "cinematic historical drama still, photorealistic, shot on 35mm motion picture film with anamorphic lenses, natural film grain, restrained period color grading, realistic skin texture, documentary realism",
+    "LOOK_DAY_DESERT": "harsh desert daylight, bleached sand tones, deep hard shadows, heat haze, Kodak Vision3 250D film look",
+    "LOOK_DAWN_HAZE": "low pale-gold dawn light, soft haze over flat land, long thin shadows, cool blue fading to warm gold",
+    "LOOK_DUSK_RED": "low red sun at dusk, violet sky, long shadows, thin smoke or dust catching the light",
+    "LOOK_NIGHT_MOON": "night exterior lit only by moonlight and starlight, deep blue-black palette, low-key lighting, no artificial fill, Kodak Vision3 500T film look, fine grain",
+    "LOOK_NIGHT_FIRE": "night lit by distant fires, flickering orange firelight against black, smoke drifting",
+    "LOOK_RED_CABIN": "dark military aircraft cabin lit by a single dim red lamp, faces half in shadow, hard red rim light, black surroundings",
+    "LOOK_COCKPIT_GREEN": "dim cockpit lit by green instrument glow, black windscreen at night",
+    "LOOK_BATTLE_SMOKE": "sunlight filtered through drifting black and grey smoke, amber haze, dust in the air",
+    "LOOK_VILLAGE_DELTA": "soft warm Nile Delta daylight, lush green fields and golden light, mud-brick textures, gentle contrast",
+    "LOOK_CAIRO_BLUE_GLASS": "small room lit by daylight filtered through window glass painted dark blue for a wartime blackout, muted blue cast, a bare warm bulb",
+    "LOOK_KEROSENE": "room lit only by a single kerosene lamp flame, warm amber pool of light in darkness",
+    "LOOK_LAMP_TENT": "canvas tent at night lit by a paraffin lamp, warm amber light, deep shadows",
+    "LOOK_BARE_BULB": "interior at night lit by a single bare incandescent bulb, warm hard light, deep shadows",
+    "LOOK_CITY_ALLEY_DAY": "hard afternoon sunlight in a narrow old city alley, shadows of laundry lines on worn walls, warm dusty tones"
+  },
+
+  "camera": {
+    "LENS_WIDE_24": "24mm wide lens, deep focus, low camera height",
+    "LENS_35": "35mm lens, natural perspective, eye-level",
+    "LENS_50": "50mm lens, medium shot",
+    "LENS_85_PORTRAIT": "85mm portrait lens, shallow depth of field, soft background",
+    "LENS_135_LONG": "135mm telephoto lens, compressed perspective, heat shimmer",
+    "LENS_MACRO_DETAIL": "100mm macro lens, extreme close-up detail, very shallow focus",
+    "ANGLE_GROUND": "camera at ground level",
+    "ANGLE_AERIAL_HIGH": "high aerial view looking down, slow drift"
+  },
+
+  "review_lists": {
+    "AVOID_GENERAL": "no text, no captions, no watermarks, no logos, no blood, no gore, no visible wounds, no corpses",
+    "AVOID_MODERN_MILITARY": "no modern equipment, no kevlar helmets, no plate carriers or body armor, no digital or multicam camouflage, no M4 or modern rifles, no sunglasses, no digital watches, no smartphones, no plastic bottles, no modern vehicles, no modern Egyptian flag with the golden eagle (in 1973 the flag was red-white-black with the golden Hawk of Quraish; prefer no flag patches at all)",
+    "AVOID_ANATOMY": "no oversized or undersized heads, no face misplaced on the neck, no pasted-on or differently lit face, no extra or missing fingers or limbs, no merged, floating or duplicated bodies, no distorted faces, no morphing",
+    "USAGE": "Flux does not use negative prompts; these are human review checklists for every keyframe. Pass them as the negative prompt only to models that support one (e.g., Kling)."
+  },
+
+  "realism": {
+    "USAGE": "Natural-look controls. The prompt composer adds them by itself: NATURAL_HUMAN to every shot with people, NATURAL_CHILD when a lead is a child, NATURAL_GROUP when there are several people, NATURAL_ANIMAL / NATURAL_BIRD when the shot's text names one (realism_triggers), NATURAL_HANDS to inserts of hands, SCALE_RULES to every non-insert shot, MOTION_NATURAL to every motion prompt, FACE_SWAP to the face pass. Edit them here; every production follows.",
+    "NATURAL_HUMAN": "natural human anatomy: every head is life-size for its body (an adult is about seven and a half heads tall, shoulders about three heads wide), sits centred on its own neck between the shoulders and turns with the body; faces keep normal proportions and are lit by the scene's own light, with the same shadow direction and colour as everything around them; nobody looks into the camera unless the shot says so; two arms, two hands with five fingers each, gripping things naturally",
+    "NATURAL_CHILD": "children keep true child proportions for their age: a slightly larger head for the body (about six heads tall), small hands and feet, a child's face, not a small adult",
+    "NATURAL_GROUP": "people further from the camera are smaller in true perspective; everyone stands on the ground or in the water on their own feet; no merged, floating or duplicated bodies and no repeated faces",
+    "NATURAL_ANIMAL": "animals are anatomically correct for their species, with the right number of legs, natural joints and a natural coat, and true life size beside people (a camel's hump above a man's head, a donkey's back at a man's chest, a goat or sheep at knee height, a dog at knee to hip height)",
+    "NATURAL_BIRD": "birds are anatomically correct for their species, with two legs, two wings, natural feathers and a true wingspan, life-size and small beside people",
+    "NATURAL_HANDS": "anatomically correct hands: five fingers, natural knuckles and nails, a natural grip",
+    "SCALE_RULES": "everything at true real-world scale: weapons, kit, vehicles and buildings sized correctly against the people holding or standing beside them; one consistent perspective and horizon; all shadows fall the same way from the scene's light",
+    "MOTION_NATURAL": "natural body mechanics and weight; heads and faces keep their size, shape and features throughout; no morphing or warping",
+    "FACE_SWAP": "image 2 gives ONLY the identity (bone structure, eyes, eyebrows, nose, mouth shape, skin tone); its frontal pose, straight-to-camera gaze, neutral expression, hair, clothing and light must NOT be copied. keep image 1 exactly as it is everywhere else: the same head size relative to the shoulders, the head sitting naturally on the neck, the same head angle and gaze direction (if image 1 looks away from the camera, the new face looks away too — never turn the eyes to the camera), the same expression and mouth position (if the person is speaking or shouting, the mouth stays open mid-word), the top of the head, the hair and the hairline exactly as they are in image 1 (nothing new is added on, over or around the head, ears or neck), and the scene's own light on the face with the same shadow direction and colour; do not copy the portrait's lighting, background, pose, clothing or camera angle; photorealistic, natural skin texture, natural human proportions"
+  },
+
+  "realism_triggers": {
+    "USAGE": "Whole words in a shot's prompt or extras that add the block (lower case; plurals are matched too). 'kite' is left out on purpose: in this series it is a toy.",
+    "NATURAL_ANIMAL": ["camel", "dog", "donkey", "goat", "sheep", "horse", "mule", "cow", "buffalo", "ox", "cat", "jackal", "fox", "gazelle", "lamb", "calf", "puppy"],
+    "NATURAL_BIRD": ["bird", "hawk", "falcon", "eagle", "crow", "raven", "vulture", "pigeon", "dove", "gull", "seagull", "egret", "ibis", "sparrow", "heron", "hen", "chicken", "rooster", "duck", "goose", "flamingo", "owl"],
+    "NATURAL_HANDS": ["hand", "hands", "finger", "fingers", "fist", "palm", "thumb"],
+    "GROUP": ["men", "soldiers", "commandos", "officers", "people", "crew", "crews", "file of", "troops", "villagers", "row of", "column of", "children", "women"],
+    "PEOPLE": ["man", "men", "woman", "women", "soldier", "soldiers", "commando", "commandos", "officer", "officers", "people", "person", "crew", "crews", "pilot", "pilots", "boy", "girl", "child", "children", "file of", "troops", "mother", "father", "villagers", "captain", "sergeant", "private"]
+  },
+
+  "reference_variations": {
+    "REF_ANCHOR": "head-and-shoulders portrait, facing camera, neutral expression, soft even daylight, plain neutral background, {LENS_85_PORTRAIT}",
+    "REF_THREE_QUARTER_DAY": "three-quarter view portrait in harsh daylight, {LENS_85_PORTRAIT}",
+    "REF_PROFILE": "strict side profile, background out of focus, {LENS_85_PORTRAIT}",
+    "REF_FULL_BODY": "full-body standing pose, front view, plain background, {LENS_50}",
+    "REF_NIGHT": "close-up at night, {LOOK_NIGHT_MOON}",
+    "REF_EXPRESSION": "close-up, intense focused expression, looking off camera, {LENS_85_PORTRAIT}"
+  }
+}
