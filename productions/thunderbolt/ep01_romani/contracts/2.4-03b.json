@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "needs_review",
+  "status": "ready_to_compose",
   "wave_ready": 2,
   "intent": {
     "subject": "Shalabi (C-01) beside Mahmoud’s silenced radio",
@@ -121,25 +121,24 @@
       "wear_state": "WEAR_MUD",
       "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
       "visible_details": [
-        "Bare-headed short black hair, damp and flattened at the hairline",
-        "Sand-khaki cotton jacket with two buttoned chest pockets; sleeves rolled to the forearms",
-        "Plain khaki collar with no tabs, badges, or chest eagle",
-        "Exactly three small gold five-pointed captain's stars in a row on the near shoulder strap; opposite strap matching if revealed as he shifts",
-        "1970s Soviet-pattern khaki canvas chest rig: three closed-flap AK magazine pouches, cotton straps, simple metal buckles",
-        "Compass PRP-0008 on its lanyard, tucked against or just below the jacket/chest rig rather than prominently dangling",
-        "Jacket visibly wet and mud-splashed, with dark dampness along lower front, rolled cuffs, and webbing; no salt-crust or battle damage",
-        "No modern tactical equipment, helmet, eyewear, rank boards, or flag patches"
+        "Bare-headed short black hair, damp and flattened by marsh humidity.",
+        "Sand-khaki cotton field jacket with both buttoned chest-pocket flaps; sleeves rolled to the forearms.",
+        "One near plain-khaki shoulder strap clearly shows exactly three small gold five-pointed captain's stars in a row.",
+        "Plain khaki collar with no red tabs, collar badges, chest eagle badge, or other insignia.",
+        "Period Soviet-pattern khaki canvas chest-rig strap and a closed-flap AK-magazine pouch at the lower frame edge; plain cotton webbing and simple metal buckle only.",
+        "PRP-0008 compass hangs on its lanyard at the chest, catching only a restrained dull red glint.",
+        "Jacket fabric is damp, darkened in irregular patches, with fine mud splashes and thin brine streaks; no blood or damage."
       ],
-      "notes": "MCU prioritizes Shalabi's bare head, hard face, plain collar, near captain stars, and period canvas rig; WEAR_MUD must match the active brine-marsh passage, while soaked trousers and boots remain mostly below frame. No prior C-01 shot is supplied for direct costume matching."
+      "notes": "Continue the night-marsh wet state: red practical grazes the captain stars, compass edge, and wet jacket texture while cool starlight rims the shoulder. Mud-soaked trousers and boots remain below this MCU framing, but the jacket wear must match WEAR_MUD."
     }
   ],
   "makeup": [
     {
       "target": "C-01",
-      "skin_state": "Medium-olive skin damp with exertion and brine, with a restrained wet sheen on the high forehead, nose bridge, cheekbones and upper lip; fine dark marsh-mud flecks along the lower cheeks, jawline, hairline and neck. Subtle fatigue shadows beneath the narrow dark-brown eyes; thin lips moist, intact and unsplit.",
-      "hair_state": "Bare-headed short black hair remains recognizably neat and side-parted, but damp and slightly flattened at the temples and hairline; a few wet strands adhere naturally near the forehead. Thin upturned handlebar mustache is damp, intact and sharply recognizable.",
+      "skin_state": "Medium-olive skin is cold-damp with a restrained sweat-and-brine sheen across the high forehead, nose bridge, hollow cheeks, upper lip and pointed chin. Fine dark marsh-mud specks and narrow brine tracks mark the lower cheeks, jawline and exposed neck; a few pale salt grains cling to his strong black eyebrows and mustache. His narrow dark-brown eyes are tired but sharply focused, with faint fatigue shadows beneath them; no blood or visible wounds.",
+      "hair_state": "Bare-headed short black hair retains its neat side part but is humidity-damp and lightly flattened at the temples, with a few separated wet strands near the high forehead. The thin handlebar mustache remains intact with its upturned ends, damp and slightly salt-flecked.",
       "injuries": [],
-      "notes": "Keep his long narrow face, hollow cheeks, pointed chin, strong straight brows and intense expression unobscured. The dim red practical may catch moisture on his lower face and mustache, while cool moonlight defines the three-quarter facial planes; mud and moisture match the wet, splashed WEAR_MUD uniform."
+      "notes": "Keep his long narrow face, hollow cheeks, thin straight nose, pointed chin and intense narrow-eyed expression fully recognizable in the dim localized red practical; cool moon/starlight gives only a faint blue-black edge, never a clean fill."
     }
   ],
   "set": {
@@ -147,17 +146,18 @@
     "vehicle_interior": "",
     "vehicles": [],
     "props": [],
-    "hand_props": [
-      "PRP-0007"
+    "hand_props": [],
+    "hand_items": [
+      "small red-filtered flashlight held low by Shalabi, its covered beam directed downward"
     ],
     "dressing": [
-      "Thin broken white salt crust over black mud",
-      "Mid-shin shallow brine sheets with faint moon reflections",
-      "Sparse low salt-marsh scrub and scattered clumps of dead reed",
-      "Small boot-disturbed mud ridges and dark pooled footprints, all below knee depth"
+      "thin broken white salt crust",
+      "black wet mud ridges and shallow boot-disturbed brine",
+      "small mirrorlike brine sheets reflecting faint blue-black starlight",
+      "sparse low salt-marsh scrub kept as near-black silhouettes at the frame edge"
     ],
-    "set_state": "Mahmoud remains crouched immediately beside Shalabi, just outside the tight frame, actively bracing PRP-0007 above the brine with its handset, whip antenna, and dim red-filtered lamp kept clean and clear of mud and water.",
-    "notes": "Keep C-01 crouched at Mahmoud's shoulder; his locked PRP-0008 remains a worn costume-carried item and is not handled. Frame only near-black marsh texture behind Shalabi, with no horizon features or additional equipment visible; the radio's red practical may edge-light the lower frame without spilling across the marsh."
+    "set_state": "Shalabi crouches on a firmer salt-crust patch amid mid-shin marsh brine, with localized red practical light catching the mud and salt beneath him while the empty marsh recedes into darkness.",
+    "notes": "Keep PRP-0008 secured as Shalabi’s locked costume-carried compass-and-map prop, not handled in this close framing; no additional people or equipment enter frame."
   },
   "camera": {
     "shot_size": "MCU",
@@ -168,23 +168,23 @@
       "LOOK_NIGHT_MOON"
     ],
     "format": "generate 16:9, deliver 2.39:1",
-    "light": "Motivate a very tight, flagged red-filtered practical pool from the clipped flashlight on PRP-0007 at the lower frame edge: let it graze Shalabi’s mouth, jaw and nearest cheek without lighting the marsh. Weak cool moon-and-starlight provides a blue-black three-quarter edge on his hair, shoulder and damp khaki, with the far marsh falling to soft darkness.",
-    "exposure_note": "Hold the night 1.5–2 stops under a normal face exposure: retain readable eyes, mouth and the red-lit jaw plane while preserving deep blue-black shadows and no broad artificial fill.",
-    "framing_note": "Static 85mm MCU, Shalabi in three-quarter view with his eyes and lip-sync mouth inside the central crop-safe band; retain only the dead radio edge and its contained red practical pool at the lower edge, with no Mahmoud or hand visible. Keep the radio silhouette, red switch glow, Shalabi’s face and his outward marsh eyeline readable after the 2.39:1 crop."
+    "light": "A tightly flagged red-filtered flashlight held low by Shalabi throws a dim upward graze across his near cheek, jaw, mouth and compass, with its covered beam dying into the mud below frame; faint cool moonlight and starlight provide a blue-black rim on hair and shoulder and leave the marsh nearly black.",
+    "exposure_note": "Expose for Shalabi’s speaking mouth and one hard eye to remain legible in the localized red practical while preserving deep blue-black shadows; no broad fill, lifted blacks, or bright background reflections.",
+    "framing_note": "Generate 16:9 for a 2.39:1 crop: keep Shalabi’s three-quarter face, eyes, speaking mouth, low flashlight hand, and chest compass within the central middle 75% height band. Static MCU isolates C-01 against soft, featureless dark marsh; no radio, Mahmoud, or other person may enter frame."
   },
   "action": {
     "applies": true,
-    "choreography": "C-01 holds a low, stable crouch beside the dead manpack radio, which is securely braced clear of the mid-shin brine and mud. He makes a small controlled lean toward it for the whispered answer, then stills without splashing and fixes his gaze out into the marsh.",
+    "choreography": "Shalabi stays crouched on the firmer salt-crust patch, holding the covered red-filtered flashlight low and angled into the mud beside the off-screen radio. He makes only a slight lean toward Mahmoud’s shoulder/radio, then stills, fixes his gaze into the marsh, and delivers the brief lip-synced answer under his breath.",
     "weapon_handling": "",
-    "movement": "Restrained crouched shift only; boots remain planted in shallow mud, chest rig and compass lanyard settle naturally with no broad movement.",
+    "movement": "Minimal crouched upper-body action only; no rise, wading, weapon draw, or combat gesture.",
     "beats": [
-      "Low crouch beside the braced radio",
-      "Tiny lean toward the radio",
-      "Whispered line, jaw set",
-      "Ease back to stillness",
-      "Eyes track outward into darkness"
+      "Hold a stable crouch beside Mahmoud, weight kept on the firmer crust.",
+      "Keep the flashlight low; its covered red beam remains directed downward.",
+      "Lean subtly toward the implied dead manpack radio.",
+      "Set the jaw and turn the eyes out into the dark marsh.",
+      "Speak the tiny answer almost inaudibly, then remain still."
     ],
-    "safety_note": "Keep the radio elevated and stable above brine; no abrupt foot movement or water splash."
+    "safety_note": "Maintain secure footing on the slick salt crust and shallow mid-shin brine; keep the flashlight beam down to avoid spoiling the low-light concealment."
   },
   "generation_policy": {
     "lip_sync": "required",
@@ -338,16 +338,79 @@
       "verdict": "pass",
       "reasons": [],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The framing note permits Mahmoud as a soft edge/background presence, but C-01 is the only locked cast member in frame. Mahmoud must remain wholly off-screen."
+      ],
+      "revise_instructions": [
+        "Remove Mahmoud from the frame entirely. Retain the off-screen radio/light motivation without showing or implying a visible second person; frame only Shalabi against the dark marsh while keeping his speaking mouth readable."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "Action is marked as not applying despite the locked clip requiring an on-camera, lip-synced spoken answer and the set assigning Shalabi a held flashlight."
+      ],
+      "revise_instructions": [
+        "Set applies to true and specify restrained concrete beats: Shalabi remains crouched, holds the covered red-filtered flashlight low with its beam directed down, leans/stills toward the off-screen dead radio, then delivers the tiny answer almost under his breath with jaw set and eyes fixed out into the marsh. Keep all movement minimal and do not invent combat action."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [
+        "Matches the locked MCU, 85mm portrait lens, static movement, night-moon look, 16:9 generation and 2.39:1 delivery requirements.",
+        "The exposure plan preserves a dark night image while keeping the speaking mouth and eye readable for lip-sync, without introducing broad fill or a bright marsh background.",
+        "Framing keeps Shalabi’s face, mouth, flashlight hand and locked compass within the crop-safe middle band, and correctly excludes unlisted on-screen cast and optional off-screen equipment.",
+        "The localized low red flashlight and faint cool rim are consistent with the approved set state and makeup/wardrobe lighting notes."
+      ],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "Provides concrete, restrained physical beats appropriate to the scripted near-whispered acceptance of the lost signal.",
+        "Keeps Shalabi crouched with only minimal upper-body movement and does not invent combat, weapon use, wading, or an unmotivated gesture.",
+        "Flashlight handling is consistent with Set: it is held low, covered, and directed into the mud, motivating the localized red practical while maintaining concealment.",
+        "The sequence supports visible lip-sync: slight lean toward the implied off-screen radio, settle, gaze into the marsh, deliver the line, then hold still."
+      ],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.167524,
-  "escalations": [
-    "design set: critic still requests revision — set: PRP-0007 is neither a locked shot prop nor carried by a character"
-  ],
+  "cost_usd_total": 0.262058,
+  "escalations": [],
   "department_notes": [
-    "action: The locked frame description places Shalabi close to Mahmoud, but the locked cast lists only C-01; Mahmoud should remain out of frame unless casting is formally updated.",
-    "camera: PRP-0007 and its clipped red-filtered flashlight are required as the visible radio-edge practical but are absent from the locked set/prop placement; Set must formally place them in frame while keeping Mahmoud off-camera.",
-    "set: The Director's requested brief wider two-shot conflicts with the locked MCU, static 3-second shot design; retain the locked MCU and imply Mahmoud just outside frame."
+    "makeup: The locked cast permits only C-01 in frame, conflicting with the direction to show Mahmoud at Shalabi's shoulder and in a wider two-shot; Mahmoud and the radio must remain off-screen or at most an unrecognizable partial edge.",
+    "library: no prop library entry yet for: small red-filtered flashlight held low by Shalabi, its covered beam directed downward",
+    "set: The locked cast permits only Shalabi in frame, which conflicts with the script and Director’s request to show Mahmoud and his PRP-0007 radio beside him; the radio is therefore not placed or shown.",
+    "wardrobe: The Director's requested wider two-shot and Mahmoud at Shalabi's shoulder conflict with the locked cast, which permits only C-01 in frame; Mahmoud must remain off-screen.",
+    "action: The locked MCU static framing cannot include the Director-requested brief wider two-shot; Mahmoud and the radio remain only soft, non-identifying edge or off-screen presences.",
+    "camera: The Director’s requested wider two-shot and visible radio conflict with the locked cast and Studio Critic instruction that Mahmoud remain wholly off-screen; frame C-01 alone.",
+    "camera: The locked red-filtered flashlight practical conflicts with LOOK_NIGHT_MOON’s moonlight-and-starlight-only wording; retain it because it is explicitly locked shot lighting, without using it as broad artificial fill.",
+    "critic: Director coverage requests a brief wider two-shot anchoring Mahmoud beside Shalabi, but the locked Wave-2 cast permits only C-01 in frame and the approved set notes prohibit additional people or equipment entering this close framing. The camera correctly follows the lock; human direction clarification is needed if a separate Mahmoud two-shot is desired."
   ],
   "history": [
     {
@@ -489,6 +552,76 @@
       "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass",
       "cost_usd": 0.012086,
       "tokens": 4195
+    },
+    {
+      "ts": "2026-10-18T07:43:24.907227+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:43:27.559067+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.004236,
+      "tokens": 1890
+    },
+    {
+      "ts": "2026-10-18T07:43:28.795258+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.007938,
+      "tokens": 2933
+    },
+    {
+      "ts": "2026-10-18T07:43:29.413943+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.009032,
+      "tokens": 3024
+    },
+    {
+      "ts": "2026-10-18T07:43:31.089088+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011052,
+      "tokens": 3482
+    },
+    {
+      "ts": "2026-10-18T07:43:31.802906+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.01086,
+      "tokens": 3410
+    },
+    {
+      "ts": "2026-10-18T07:43:40.344250+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera revise, action revise; cross: 1",
+      "cost_usd": 0.01618,
+      "tokens": 4682
+    },
+    {
+      "ts": "2026-10-18T07:43:45.051061+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.007914,
+      "tokens": 2921
+    },
+    {
+      "ts": "2026-10-18T07:43:46.871701+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.012232,
+      "tokens": 3872
+    },
+    {
+      "ts": "2026-10-18T07:43:54.418309+00:00",
+      "agent": "critic",
+      "action": "production meeting: camera pass, action pass; cross: 1",
+      "cost_usd": 0.01509,
+      "tokens": 4541
     }
   ]
 }

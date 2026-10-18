@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "needs_review",
+  "status": "ready_to_compose",
   "wave_ready": 2,
   "intent": {
     "subject": "Captain Shalabi (C-01) in three-quarter close-up, his moonlit face turned toward Mahmoud off to the side.",
@@ -114,30 +114,23 @@
       "wear_state": "WEAR_MUD",
       "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
       "visible_details": [
-        "Bare-headed short black military hair, damp at the hairline",
-        "Sand-khaki cotton jacket with rolled forearm sleeve; wet dark mud/brine splashes across shoulder and chest",
-        "One plain khaki shoulder strap in frame carrying exactly three small gold five-pointed captain’s stars in a row",
-        "Plain khaki collar, with no collar tabs or badges",
-        "Edge of the Soviet-pattern khaki canvas chest rig: closed-flap pouch, cotton strap and dull metal buckle only",
-        "PRP-0008 compass lanyard partly visible at the open jacket front"
+        "Bare-headed short black hair, damp and flattened by night marsh humidity.",
+        "Sand-khaki cotton field jacket in three-quarter close-up, with the plain khaki collar visible; no collar tabs, chest eagle badge, or modern insignia.",
+        "Exactly three small gold five-pointed captain’s stars in a row on the shoulder strap nearest camera; the far strap may remain out of view at this framing.",
+        "Soviet-pattern khaki canvas chest-rig strap and simple plain metal buckle may enter the lower frame; no modern tactical vest.",
+        "Compass on its lanyard may sit at the lower chest edge if framed, dull and wet rather than prominent.",
+        "WEAR_MUD reads as wet dark splashes and brine sheen across the jacket front, shoulder, and rolled forearm; soaked mud-darkened trousers are off-frame in this close-up."
       ],
-      "notes": "CU priority is Shalabi’s face, captain stars, plain collar and wet khaki texture; WEAR_MUD reads as a damp, darkened jacket with restrained mud flecks, while the soaked trousers remain out of frame."
+      "notes": "Continuity: retains the cold night-marsh wetness from the preceding radio close-up, but Shalabi is keyed by moonlight rather than Mahmoud’s red-filtered torch; keep gold rank stars subdued, not shiny."
     }
   ],
   "makeup": [
     {
       "target": "C-01",
-      "skin_state": "Medium-olive skin damp with exertion under cool moonlight; restrained brine sheen on forehead, nose, upper lip and hollow cheeks, with fine dark mud flecks at the lower cheek, jaw and along the hairline. Tired shadow beneath the eyes; thin lips moist but uninjured.",
-      "hair_state": "Bare-headed short black hair remains neatly side-parted but damp and slightly flattened at the temples and hairline; thin handlebar mustache is wet but intact, with its upturned ends preserved.",
+      "skin_state": "Medium-olive face damp with cold exertion, a restrained moonlit sheen across the forehead, nose bridge, cheekbones and upper lip; fine dark mud specks and brine streaking at the lower cheeks, jaw and neck, with a few tiny pale salt traces caught in the eyebrows. No blood or visible wounds.",
+      "hair_state": "Bare-headed short black hair remains neatly side-parted but damp and slightly flattened at the temples; straight black eyebrows damp and lightly salt-flecked. Thin handlebar mustache is wet but intact, with its upturned ends preserved.",
       "injuries": [],
-      "notes": "Preserve his long narrow face, high forehead, thin straight nose, narrow intense eyes and signature mustache. Keep the skin effects controlled and wet rather than salt-crusted; no blood, wounds or graphic distress."
-    },
-    {
-      "target": "C-04",
-      "skin_state": "Only the limited soft off-axis visible area shows light-wheat skin damp with exertion, a restrained brine sheen and fine dark mud flecks along the lower cheek and jaw; subtle fatigue shadow beneath the visible eye. No wounds.",
-      "hair_state": "Bare-headed short black military-cut hair, damp and flattened at the temple and hairline; curled mustache and light stubble remain wet, intact and recognizable beneath the soft focus.",
-      "injuries": [],
-      "notes": "Maintain continuity with shot 2.4-02, including his taped wire-rimmed glasses if any part of his face enters the frame; keep Mahmoud soft and peripheral, without introducing red flashlight spill onto Shalabi."
+      "notes": "Keep his long narrow face, hollow cheeks, pointed chin, thin lips and intense narrow dark-brown eyes fully readable in three-quarter moonlight. Fatigue is controlled: slight under-eye shadow and tightened jaw, not exhaustion or panic."
     }
   ],
   "set": {
@@ -145,14 +138,18 @@
     "vehicle_interior": "",
     "vehicles": [],
     "props": [],
-    "hand_props": [],
-    "dressing": [
-      "Near-black black mud and thin broken white salt crust at the lower frame edge",
-      "Small shallow brine sheen catching faint cold moonlight",
-      "Sparse low salt-marsh scrub reduced to soft, dark background texture"
+    "hand_props": [
+      "PRP-0008"
     ],
-    "set_state": "A still night marsh column pauses in mid-shin brine and mud; Shalabi is framed tight, with Mahmoud only a soft off-axis human presence and no radio visible.",
-    "notes": "Keep PRP-0008 as Shalabi's locked carried costume prop, not handled or featured in this close-up; use cool moonlight consistently across his face, collar, and damp marsh texture."
+    "hand_items": [],
+    "dressing": [
+      "thin white salt crust over black mud",
+      "small shallow brine sheets with dim moon reflections",
+      "low sparse salt-marsh vegetation at the frame edge",
+      "subtle wet mud flecks and brine sheen on the captain's lower uniform"
+    ],
+    "set_state": "Cold, featureless Tina Plain marsh at night; shallow mid-shin brine and broken salt crust remain undisturbed in the tight frame.",
+    "notes": "Keep PRP-0008 held low at the captain's chest or just below frame, with no readable map markings visible; maintain a clean moonlit facial plane and only a minimal dark marsh background."
   },
   "camera": {
     "shot_size": "CU",
@@ -163,20 +160,21 @@
       "LOOK_NIGHT_MOON"
     ],
     "format": "generate 16:9, deliver 2.39:1",
-    "light": "Natural moonlight and starlight only: a soft, cool blue-black side key from Mahmoud’s off-axis direction shapes Shalabi’s three-quarter face, with a faint cold rim along hair and wet shoulder; let the marsh fall rapidly into soft near-black behind him. No artificial fill, red spill, or visible lamp source reaches Shalabi.",
-    "exposure_note": "Expose the moonlit face about 1 stop under normal portrait level: eyes, mouth and lips remain clearly readable for lip-sync while the unlit cheek rolls into controlled shadow; retain fine 500T grain and avoid lifting the background blacks.",
-    "framing_note": "Generate 16:9 for a 2.39:1 crop; keep Shalabi’s eyes, full mouth, jawline and the slight off-axis eyeline within the middle 75% frame-height band. Hold the 85mm shallow-focus CU static, with Mahmoud only an indistinct soft off-axis edge or shadow presence."
+    "light": "Moonlight and starlight only: a soft, cool blue-black key rakes across Shalabi’s turned face from the off-axis Mahmoud side, leaving the far cheek in controlled shadow and a faint cold rim on hair and shoulder; no red radio glow or artificial fill reaches him. Keep the marsh behind him as soft, near-black salt-and-brine texture.",
+    "exposure_note": "Expose low for a true moonlit night while holding readable catchlight-free eyes, mouth, lips, and khaki facial detail; retain deep shadows without crushing his speaking mouth or three gold captain’s shoulder stars if the strap edges into frame.",
+    "framing_note": "Generate 16:9 for a 2.39:1 center-band crop: retain Shalabi’s eyes, full lip-sync mouth, and three-quarter facial silhouette within the middle 75% height, with his eyeline held off-axis toward the unseen Mahmoud; keep all off-axis presence fully out of frame."
   },
   "action": {
     "applies": true,
-    "choreography": "Shalabi holds his position in the marsh column, listening toward Mahmoud off-axis; after a brief still beat, he gives the radio-shutdown order low, clipped, and absolute with readable lips in three-quarter view.",
+    "choreography": "Shalabi holds still in the shallow marsh column, listens toward the off-axis Mahmoud, then delivers a low, clipped, absolute order to shut down the radio. Keep the performance contained to eye focus, facial tightening, and clearly lip-synced speech.",
     "weapon_handling": "",
-    "movement": "No travel or weapon action. Keep shoulders and torso still; only the gaze tightens and the mouth delivers the command.",
+    "movement": "No body movement or combat action; only a minute off-axis gaze set and controlled mouth movement in three-quarter close-up.",
     "beats": [
-      "0–2s: Still, eyes fixed toward Mahmoud off-axis, listening.",
-      "2–3s: A contained pause; jaw sets without a head turn.",
-      "3–4s: Eyes harden, urgency controlled rather than panicked.",
-      "4–6s: He speaks the short shutdown order quietly and unmistakably; lips remain fully readable."
+      "Still listening beat toward off-axis Mahmoud.",
+      "Eyes fix and harden without turning toward camera.",
+      "Jaw sets briefly.",
+      "He speaks the shutdown order low and unmistakably.",
+      "He holds the command stare after speaking."
     ],
     "safety_note": ""
   },
@@ -315,14 +313,58 @@
       "verdict": "pass",
       "reasons": [],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The action department sets applies to false, but the locked shot requires real, visible performance action: Shalabi listens to Mahmoud off-axis, his eyes harden, and he speaks a decisive shutdown command with lip-sync."
+      ],
+      "revise_instructions": [
+        "Set applies to true. Specify a brief listening beat while Shalabi remains still, his gaze hardening toward Mahmoud off-axis, followed by a low, clipped, unmistakable spoken order to shut down the radio. Do not add combat action, weapon handling, or movement beyond the locked beat."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [
+        "The action is appropriately minimal and concrete for the locked static three-quarter close-up: listening off-axis, hardening eyes, setting the jaw, and delivering the radio-shutdown order.",
+        "It preserves the required controlled, urgent command performance without adding unsupported combat events, weapon business, or movement.",
+        "It explicitly keeps Shalabi’s attention off-camera toward Mahmoud and supports clear on-camera lip-synced speech."
+      ],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.146388,
-  "escalations": [
-    "design wardrobe: critic still requests revision — Mahmoud (C-04) is explicitly present as a soft off-axis figure, but wardrobe supplies no C-04 entry. The definition of done requires an entry for every character in frame, even when detail is limited by soft focus and peripheral framing.; Add a C-04 wardrobe entry limited to what can plausibly regis"
-  ],
+  "cost_usd_total": 0.2226,
+  "escalations": [],
   "department_notes": [
-    "critic: C-04 is identified by makeup and set as an off-axis in-frame presence, but has no corresponding wardrobe entry."
+    "makeup: The director requests Mahmoud as a soft off-axis presence, but the locked cast permits only C-01 in frame; Mahmoud must remain entirely off-screen.",
+    "wardrobe: The director’s requested soft off-axis Mahmoud presence conflicts with the locked cast restriction for this frame; keep Mahmoud entirely off-screen, with Shalabi’s eyeline directed toward him.",
+    "set: The direction's request for Mahmoud as a soft off-axis presence conflicts with the locked cast restriction; keep the radio operator entirely off-screen."
   ],
   "history": [
     {
@@ -457,6 +499,69 @@
       "action": "production meeting: wardrobe revise, makeup pass, set pass, camera pass, action pass; cross: 1",
       "cost_usd": 0.016596,
       "tokens": 4638
+    },
+    {
+      "ts": "2026-10-18T07:42:30.061962+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-18T07:42:32.773920+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.004404,
+      "tokens": 1834
+    },
+    {
+      "ts": "2026-10-18T07:42:33.832532+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.00739,
+      "tokens": 2787
+    },
+    {
+      "ts": "2026-10-18T07:42:34.477360+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.008458,
+      "tokens": 3097
+    },
+    {
+      "ts": "2026-10-18T07:42:34.586279+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.007256,
+      "tokens": 2792
+    },
+    {
+      "ts": "2026-10-18T07:42:35.659485+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.01001,
+      "tokens": 3305
+    },
+    {
+      "ts": "2026-10-18T07:42:44.247578+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action revise",
+      "cost_usd": 0.022658,
+      "tokens": 8257
+    },
+    {
+      "ts": "2026-10-18T07:42:46.687935+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.006504,
+      "tokens": 2648
+    },
+    {
+      "ts": "2026-10-18T07:42:50.177692+00:00",
+      "agent": "critic",
+      "action": "production meeting: action pass",
+      "cost_usd": 0.009532,
+      "tokens": 3746
     }
   ]
 }

@@ -56,6 +56,7 @@ Data-plane roles must be granted (done 2026-10-14). Models: `me-eus2-gpt-5-6-ter
 | `beat --beat-ref 2.4 --refresh-research` | re-run only the beat fact check and apply it to the saved contracts (after a policy or ledger change) | `--confirm-cost` |
 | `qa --image …` | Image QA on one frame | — |
 | `batch-qa [--sample N \| --all \| --shots …]` | Image QA over approved keyframes; compares human / MTower QA / studio; report in `reports/` | `--confirm-cost` |
+| `design --beat-ref 2.4 [--shots …] [--redo]` | Wave 2: the crew designs prepped shots (casting → wardrobe/makeup/set/camera/action in parallel → production meeting); `--redo` also re-designs designed shots and shots escalated only by design | `--confirm-cost` |
 
 ## How it behaves (2026-10-16)
 
@@ -64,3 +65,11 @@ Data-plane roles must be granted (done 2026-10-14). Models: `me-eus2-gpt-5-6-ter
 - **Escalations block.** If the Critic still wants a revision after 2 rounds, the shot is `needs_review` (a human gate), never `prepped`.
 - **Image QA uses references** (casting portraits, prop photos, rank-insignia drawings), the full shot brief, and the production QA rules. Faces too small or hidden are `not_visible`, not an identity fail.
 - **Costs** use real Azure meters (sol $4/$20 per 1M tokens in/out; terra ≈ half). Requests time out after 3 min and retry.
+
+## Wave 2 — the creative crew (2026-10-18)
+
+- **Lock first, craft second.** Cast, costumes, wear states, location (+ rules), lens and looks come deterministically from the MTower library; departments only add craft (crowd groups, visible details, makeup, dressing, light/exposure, choreography). Departments with no work (no people, no extras, inserts) are filled without a model call.
+- **Precedence:** the lock outranks the Director and the scene intent. A department that follows the lock is correct; conflicts become **concerns for the human** (`department_notes`), never failures. Lock-vs-lock conflicts are reported, not punished.
+- **Production meeting.** The Critic reviews all departments together (incl. cross-department fit). A pass sticks; later rounds re-judge only revised departments, and a revising department sees the rest of the crew's prep. 2 rounds, then escalate.
+- **Props:** a shot's own props are required; other props of the beat are optional; a prop carried by an off-screen character never appears unattended; items with no library id go to `hand_items` (logged as a library gap).
+- **Beat 2.4 result:** 9/9 `ready_to_compose`; Wave 2 spend ≈ $1.85 incl. the fix iterations (final passes ≈ $0.07–0.10 per shot).

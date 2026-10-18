@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "needs_review",
+  "status": "ready_to_compose",
   "wave_ready": 2,
   "intent": {
     "subject": "Shalabi leads the silent marsh file after the radio blackout.",
@@ -109,10 +109,10 @@
   "crowd": [
     {
       "archetype": "egyptian_commandos",
-      "count": 18,
+      "count": null,
       "wardrobe_id": "WRD-0001",
       "wear_state": "WEAR_MUD",
-      "note": "Visible section of the commando column in mud-wet sand-khaki field uniforms; spaced single-file through mid-shin brine and mud, passing the no-radio hand sign back down the line before silently arcing behind Shalabi onto the new bearing."
+      "note": "A disciplined marsh column in mud-worn khaki, standing and moving through mid-shin brine; the silence hand sign passes back along the file before they quietly arc behind Shalabi onto the new bearing."
     }
   ],
   "wardrobe": [
@@ -122,14 +122,15 @@
       "wear_state": "WEAR_MUD",
       "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
       "visible_details": [
-        "Bare head with short black hair, face readable in cold moonlight",
-        "Raised PRP-0008 compass on its lanyard as the route-change focal prop",
-        "Sand-khaki cotton field jacket with rolled forearms and Soviet-pattern khaki canvas chest rig; closed-flap pouches and plain straps read as period kit",
-        "Trousers soaked dark with brine and mud above the knees, black leather boots submerged only to mid-shin; wet splashes on jacket",
-        "Exactly three small gold five-pointed stars on each plain khaki shoulder strap as costume continuity, visible only if his shoulder resolves clearly in the wide frame",
-        "Plain khaki collar, with no collar tabs, chest eagle badge, helmet, or modern tactical equipment"
+        "Bare-headed short black hair, damp and flattened under cold moonlight.",
+        "Sand-khaki cotton field jacket with two buttoned chest-pocket flaps; sleeves rolled to the forearms.",
+        "Plain khaki collar with no tabs or badges; exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, catching only a restrained glint.",
+        "1970s Soviet-pattern khaki canvas chest rig with three closed-flap AK-magazine pouches, cotton straps and simple metal buckles; aluminium canteen in canvas cover on web belt.",
+        "Compass PRP-0008 on its lanyard, raised clearly in his hand as he indicates the new bearing.",
+        "Trousers are soaked dark with mud and brine above the knees; black leather combat boots disappear into mid-shin marsh water and mud.",
+        "Jacket hem, sleeves and chest rig show wet mud splashes, brine-darkened fabric and occasional water drips."
       ],
-      "notes": "Continue WEAR_MUD: wet, darkened lower trousers and dripping brine, with fresh mud spatters on jacket and webbing; compass remains a locked carried costume prop."
+      "notes": "WS priority: bare head, captain shoulder-star silhouette, raised compass and period canvas webbing must read. Continue WEAR_MUD: wet, darkened lower half rather than dried salt crust; no radio is assigned to Shalabi."
     },
     {
       "target": "egyptian_commandos",
@@ -137,50 +138,50 @@
       "wear_state": "WEAR_MUD",
       "additions": "",
       "visible_details": [
-        "Bare-headed Egyptian commando silhouettes with short dark hair; no helmets or headgear",
-        "1970s sand-khaki field uniforms, rolled sleeves, khaki Soviet-pattern canvas webbing with closed-flap pouches",
-        "Lower trousers darkened by brine and mud to above the knees; boots and legs in shallow mid-shin marsh water, with occasional knee-deep pockets only",
-        "AKM rifles with fixed wooden stocks, RPG-7s, and other carried loads held at chest height, on shoulders, or above the water",
-        "The no-radio hand sign visibly passes down the turning file; period kit and muddy khaki silhouettes remain the wide-shot read"
+        "Bare-headed Egyptian commando file, short dark hair visible; no helmets or modern headgear.",
+        "1970s sand-khaki cotton field uniforms with plain khaki collars, rolled sleeves, Soviet-pattern khaki canvas webbing and closed-flap pouches.",
+        "Dark mud-and-brine soaking rises from boots to above the knees, with wet splashes on trouser fronts and jacket hems; water level remains mostly mid-shin.",
+        "AKM rifles with fixed wooden stocks and other period anti-tank loads are held at chest height, on shoulders or above the water; nothing rests in the marsh.",
+        "The passed-back no-radio hand sign is readable among the nearest turning men; distant file reads as wet khaki silhouettes quietly pivoting behind C-01."
       ],
-      "notes": "Match the halted-and-turning marsh continuity: no clean uniforms, no equipment lying in water, and no modern gear; individual rank details need not resolve at this shot size."
+      "notes": "At wide-shot scale, prioritize the disciplined bare-headed wet-khaki file, raised/secured period weapons, and the silent hand-sign relay. Do not make individual rank markings legible except C-01's captain stars."
     }
   ],
   "makeup": [
     {
       "target": "C-01",
-      "skin_state": "Medium-olive face cold-damp with sweat and brine sheen on brow, nose, cheeks and exposed ears; sparse marsh-mud flecks on jaw, neck and lower cheeks, with tired under-eye shadow. Mud-splashed skin on hands and forearms; standing-water wetness reaches mid-shin, with higher mud staining from the march.",
-      "hair_state": "Bare-headed short black hair remains neatly side-parted but wet and lightly flattened at the crown; a few damp strands adhere at the high forehead. Thin upturned handlebar mustache is damp but retains its exact shape.",
+      "skin_state": "Medium-olive skin is cold-damp under moonlight, with a restrained sweat-and-brine sheen across his high forehead, hollow cheeks, thin nose, upper lip and exposed neck. Fine black marsh-mud flecks and narrow brine trails mark his jaw and cheeks; fatigue subtly darkens beneath his narrow eyes. No blood or visible wounds.",
+      "hair_state": "Bare-headed short black hair retains its neat side part but is humidity-damp and flattened, with a few wet strands separated at the forehead. Thin handlebar mustache remains intact, damp, and lightly salt-flecked.",
       "injuries": [],
-      "notes": "Keep narrow intense eyes readable in moonlight; no blood, wounds, or exaggerated grime."
+      "notes": "Keep the face readable in cool moonlight; wet skin and hair match the mud-and-brine-soaked uniform state."
     },
     {
       "target": "egyptian_commandos",
-      "skin_state": "Sun-darkened Egyptian faces damp with cold sweat and brine, subdued fatigue shadows, and irregular mud flecks on lower faces, ears, necks, hands and rolled forearms. Brine wetness physically reaches mid-shin on most standing men; only isolated deeper-pocket men are wet to knee level. Older mud splashes may stain trousers, knees and jackets higher from prior marching.",
-      "hair_state": "All bare-headed with short black hair, damp, flattened and lightly mud-specked at the hairline; no helmets or modern grooming.",
+      "skin_state": "Egyptian male faces and exposed hands are cold-damp with restrained sweat and brine sheen, scattered fine black mud flecks on cheeks, brows, jaws and necks, and subtle tired under-eye shadows. Lower trouser legs are mud-darkened above the knees; no blood, wounds, or gore.",
+      "hair_state": "All are bare-headed with short black hair, humidity-damp and flattened; a few wet strands cling at hairlines. Keep any moustaches natural, intact, and lightly damp.",
       "injuries": [],
-      "notes": "Restrained, exhausted stealth appearance: wet skin catches only a faint moonlit sheen, with no gore or visible wounds."
+      "notes": "The file reads as exhausted but disciplined, with wet marsh texture kept subdued in the blue-black moonlight."
     }
   ],
   "set": {
     "location_id": "LOC-0003",
     "vehicle_interior": "",
     "vehicles": [],
-    "props": [
-      "PRP-0007"
-    ],
+    "props": [],
     "hand_props": [
+      "PRP-0007",
       "PRP-0008"
     ],
+    "hand_items": [],
     "dressing": [
-      "Thin broken white salt crust over black, churned mud",
-      "Mid-shin shallow brine sheets reflecting cold moonlight",
-      "Fresh halted boot impressions clustered at Shalabi’s halt point",
-      "A newly curved sequence of boot tracks showing the file’s silent change of bearing",
-      "Sparse low salt-marsh scrub silhouettes, with featureless flat marsh fading into darkness"
+      "Vast unbroken black mud flats with thin irregular white salt crust",
+      "Shallow mid-shin brine sheets and narrow reflective puddles between crust islands",
+      "Sparse low salt-marsh scrub, flattened and dark at the waterline",
+      "Small boot-disturbed mud ripples and broken salt plates marking the file's halted path",
+      "No horizon structures, roads, vehicles, flags, or additional personnel"
     ],
-    "set_state": "PRP-0007 rests inert and fully dark on a firmer salt-crust patch at Shalabi’s halt point, close enough for his tap, while the surrounding mid-shin brine and mud hold halted prints and the column’s fresh arcing turn track.",
-    "notes": "Shalabi actively raises PRP-0008 for the new bearing; PRP-0007 remains environmental continuity dressing, unlit and without visible display detail. Keep all weapons and loads carried clear of brine and mud."
+    "set_state": "Shalabi stands at the head of the halted column in mid-shin brine on a firmer salt-crust patch, tapping PRP-0007 held clear of the water before using PRP-0008 to indicate the new route as the men silently arc behind him.",
+    "notes": "Keep the radio, compass, rifles, and all carried loads above the brine; cold moonlight catches wet salt crust and shallow reflections while the surrounding marsh falls into blue-black darkness."
   },
   "camera": {
     "shot_size": "WS",
@@ -191,23 +192,23 @@
       "LOOK_NIGHT_MOON"
     ],
     "format": "generate 16:9, deliver 2.39:1",
-    "light": "Natural moonlight and starlight only: a cold blue-black high rear-side moon key from camera-left gives Shalabi, the raised compass, and the turning file a thin wet rim while leaving the salt crust and brine as broken dim reflections; no artificial fill or visible practical source.",
-    "exposure_note": "Expose low for true night, holding readable detail in Shalabi’s face, lips, compass hand, dead radio and the nearest men’s silent hand-sign chain; preserve deep black negative space and avoid lifting the marsh into daylight.",
-    "framing_note": "Low static 24mm wide frame in 16:9, composed for the 2.39:1 centre band: keep Shalabi’s face, tapping hand at the dark radio, finger-to-lips gesture, raised compass and the first arc of men passing the no-radio sign all within the middle 75% height; retain shallow mid-shin brine, salt crust, and the featureless dark horizon as readable depth cues."
+    "light": "Cold moonlight and starlight from high camera-left/back skim the salt crust, shallow mid-shin brine, wet uniforms and raised weapons, leaving the far marsh blue-black; Shalabi’s face, radio tap, lips, compass and pointing hand receive only the same faint natural moon edge and soft sky return, with no artificial fill or visible practical.",
+    "exposure_note": "Hold the negative about 1.5 stops under a normal night exterior: preserve readable detail on Shalabi’s eyes and gesture sequence in the central band while retaining deep black-blue shadows, restrained water reflections and a nearly featureless horizon.",
+    "framing_note": "Generate 16:9 for a 2.39:1 crop; keep Shalabi, his radio, lips, raised compass and new-bearing hand within the middle 75% frame height, with the silent file’s turning hand-sign chain legible behind him in deep focus. Low 24mm camera stays near the brine surface without placing faces or key hands near crop edges."
   },
   "action": {
     "applies": true,
-    "choreography": "Shalabi halts at the file’s point in mid-shin brine, taps the low, mud-braced dead radio without lifting it, signs silence across his lips, then raises his lanyarded compass and pivots into the new bearing. The column receives the hand sign rearward and turns in a quiet, staggered arc, placing boots carefully through shallow mud and water.",
-    "weapon_handling": "Commandos keep fixed-stock AKMs and any anti-tank loads slung at chest or shoulder, or held clear of mud and brine throughout the halt and turn; no weapon manipulation or firing.",
-    "movement": "Controlled halt, hand-signal relay, then a deliberate file turn through mostly mid-shin marsh water; avoid splashing and keep all standing men below knee depth.",
+    "choreography": "Shalabi halts in mid-shin brine, makes the radio-silence signal clearly and economically, then leads the file into a quiet pivot onto the new bearing. The column’s turn travels rearward as a controlled ripple, with men keeping spacing and their steps low to avoid splashing.",
+    "weapon_handling": "",
+    "movement": "Slow, load-bearing turn through mud and shallow brine; boots lift minimally and settle deliberately, with water never above the knees.",
     "beats": [
-      "Lead man stops; file compresses without collision.",
-      "Shalabi taps PRP-0007 low in the mud, leaving its face dark.",
-      "He draws one finger across his lips; nearest men pass the silence sign back.",
-      "He lifts PRP-0008, fixes the bearing, and points the new direction.",
-      "The column pivots and reforms behind him in a silent arc."
+      "Shalabi stops at the head of the file and braces on firmer mud.",
+      "He taps the dead radio once without fumbling.",
+      "He draws one finger across his lips; the nearest men repeat the no-radio sign down the file.",
+      "He raises the lanyarded compass, checks it, and points the new bearing.",
+      "He pivots and advances; the column silently swings behind him."
     ],
-    "safety_note": "Maintain firm, deliberate footing in slick brine mud; keep muzzles and carried loads elevated clear of water and adjacent men during the turn."
+    "safety_note": "Use stable, tested mud footing and a slow pivot path; keep performers in mid-shin water and avoid forceful steps that create conspicuous splashes."
   },
   "generation_policy": {
     "lip_sync": "avoid",
@@ -387,19 +388,55 @@
       "verdict": "pass",
       "reasons": [],
       "revise_instructions": []
+    },
+    {
+      "target_field": "casting",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.197212,
-  "escalations": [
-    "design set: critic still requests revision — set: PRP-0007 is neither a locked shot prop nor carried by a character; PRP-0007 is actively tapped by Shalabi in this shot, but it is listed only as environmental dressing/prop rather than a hand prop. The definition of done requires any prop an actor uses in the shot to be identified as a hand pro"
-  ],
+  "cost_usd_total": 0.282854,
+  "escalations": [],
   "department_notes": [
-    "camera: The requested coverage progression of opening wide, tightening, then holding medium-wide conflicts with the locked single static WS 24mm shot; retain the locked wide framing throughout.",
-    "action: The locked static wide shot cannot execute the Director’s requested opening, tightening, and medium-wide coverage changes within this single shot.",
-    "makeup: The Director’s requested open, tighten, and medium-wide coverage conflicts with the locked single static wide-shot design.",
-    "set: The Director’s requested tightening and medium-wide hold conflict with the locked wide static camera design; retain the locked WS/static framing.",
-    "critic: Set/action mismatch: the action has Shalabi physically tap PRP-0007, while Set does not classify PRP-0007 as a hand prop.",
-    "critic: Director coverage calls for opening wide, tightening, and then holding medium-wide, which conflicts with the locked single static WS/LENS_WIDE_24 design. The camera department correctly follows the lock."
+    "camera: The director’s requested opening-to-tightening-to-medium-wide coverage cannot occur within this locked static wide shot; retain the complete radio-silence and route-change action in one wide composition.",
+    "wardrobe: The director's requested tightening and medium-wide hold conflict with the locked static WS/LENS_WIDE_24 shot; retain the locked wide framing, with Shalabi's compass and nearest hand-sign relay staged clearly enough to read.",
+    "makeup: The Director’s requested progression from wide to tight to medium-wide coverage conflicts with the locked static wide-shot camera design.",
+    "set: The Director's requested tightening coverage conflicts with the locked static wide-shot camera design; retain the locked WS/LENS_WIDE_24 framing.",
+    "action: The locked static wide shot conflicts with the Director’s requested opening, tightening, and medium-wide coverage progression; retain the static WS.",
+    "action: The specified radio interaction requires the otherwise optional, non-locked PRP-0007 to be present in Shalabi’s immediate reach.",
+    "critic: The Director's coverage instruction to open on the file, tighten to the radio/hush signal, then hold medium-wide conflicts with the locked static WS/LENS_WIDE_24 camera design. Camera correctly follows the lock.",
+    "critic: The locked Wave-2 manifest calls PRP-0007 an optional, non-locked beat prop that is mostly carried by off-screen characters, while the locked shot description and action require Shalabi to tap a dead radio. This prep elects to include PRP-0007 as Shalabi's hand prop; human clarification is needed on whether the radio is required for this shot despite its optional manifest status."
   ],
   "history": [
     {
@@ -555,6 +592,55 @@
       "action": "production meeting: casting pass, wardrobe pass, makeup pass, set revise, camera pass, action pass; cross: 2",
       "cost_usd": 0.020924,
       "tokens": 5562
+    },
+    {
+      "ts": "2026-10-18T07:44:21.428609+00:00",
+      "agent": "casting",
+      "action": "wrote casting design",
+      "cost_usd": 0.005828,
+      "tokens": 2106
+    },
+    {
+      "ts": "2026-10-18T07:44:26.067273+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.007854,
+      "tokens": 2895
+    },
+    {
+      "ts": "2026-10-18T07:44:27.093238+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.010992,
+      "tokens": 3400
+    },
+    {
+      "ts": "2026-10-18T07:44:28.066717+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.010534,
+      "tokens": 3151
+    },
+    {
+      "ts": "2026-10-18T07:44:28.179601+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011114,
+      "tokens": 3461
+    },
+    {
+      "ts": "2026-10-18T07:44:29.664265+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.009878,
+      "tokens": 2427
+    },
+    {
+      "ts": "2026-10-18T07:44:47.396753+00:00",
+      "agent": "critic",
+      "action": "production meeting: casting pass, wardrobe pass, makeup pass, set pass, camera pass, action pass; cross: 2",
+      "cost_usd": 0.029442,
+      "tokens": 6613
     }
   ]
 }
