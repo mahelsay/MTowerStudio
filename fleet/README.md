@@ -66,8 +66,15 @@ Data-plane roles must be granted (done 2026-10-14). Models: `me-eus2-gpt-5-6-ter
 ## Render bridge (2026-10-19)
 
 - First run: shot 2.4-04a (Sergeant Sayed, night marsh): 5 → 6 → 6 → 6 → **8/10 pass** after a Kontext edit fixed the sleeve chevrons; $0.85 for 5 renders. Keeper captured the failure and its fix; lessons whose failure recurred were debited.
+- Beat 2.4 (9 shots): **5 composed** (2.4-02 8, 2.4-03 9, 2.4-04 8, 2.4-04a 8, 2.4-05a 9), 4 in `render_review` (2.4-01 4, 2.4-03a 6, 2.4-03b 6, 2.4-05 6) — ≈$3.40. Continue them with `render --continue`.
+- If a re-render does not beat the best score so far, the loop switches to a targeted edit of the best image (counts such as rank stars and pouches are fixed by edits, not by re-rolling).
 - Images go to `me-swc-gpt-image-2` (Sweden Central media Foundry), child shots to FLUX Kontext with the casting photo, QA to `gpt-5.6-sol`.
 - Nothing is approved automatically: approve keepers in the engine gallery (`mtower review`).
+
+## Video QA (agent 3c, 2026-10-19)
+
+- `video-qa [--shots …] [--approved] [--frames 8]`: samples frames with ffmpeg and reviews identity drift, morphing, motion (vs the motion prompt), continuity, lip-sync (talking shots) and technical defects against the start keyframe + casting portraits; verdict + fix route (`keep / regenerate / regenerate_other_model / new_keyframe / trim`) saved as `<clip>.vqa.json`; fails become Keeper incidents.
+- First run on the 8 human-approved clips: 5 pass (8.4–9.1); 3 flagged for missing the scripted action (2.5-03 7.4, 2.5-05 7.4, 2.5-06 5.5) — for the director's review. ≈$0.53.
 
 ## Learning Keeper (agent 15) — studio memory (2026-10-18)
 

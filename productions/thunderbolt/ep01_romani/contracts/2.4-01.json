@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "render_review",
   "wave_ready": 2,
   "intent": {
     "subject": "Corporal Mahmoud and Captain Shalabi wading together through the marsh, with Mahmoud carrying the manpack radio high on his back.",
@@ -779,7 +779,7 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.88842,
+  "cost_usd_total": 1.61932,
   "escalations": [],
   "department_notes": [
     "action: The locked shallow-marsh rule specifies water no higher than knee depth, while the supplied wardrobe prep calls for trousers soaked above the knees; depict this as upward splash and drips from steps, not standing water depth.",
@@ -800,7 +800,89 @@
     "L-0049",
     "L-0053"
   ],
-  "renders": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-01/20261019-090950/2-4-01_01.png",
+      "score": 4.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[location_rules/major] [L-0015] Both standing soldiers are immersed above the knee: C-01 is in water near the crotch and C-04 near mid-thigh, while this marsh must remain ankle-to-knee deep.",
+        "[period_accuracy/major] [L-0003] C-04 appears to carry gold star-shaped rank devices on his shoulder straps, incorrectly duplicating officer insignia on the radio operator.",
+        "[props_weapons/major] The visible canteens are uncovered and unusually round instead of flattened aluminium canteens enclosed in khaki canvas covers.",
+        "[technical/major] [L-0016] Salt and mud in the foreground form repeated stringy, folded and cloth-like masses, especially along the lower-right edge, rather than irregular salt crust and cohesive black mud."
+      ],
+      "cost_usd": 0.2525,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:13:09+00:00"
+    },
+    {
+      "round": 1,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-01/20261019-091309/2-4-01_01.png",
+      "score": 4.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[location_rules/major] [L-0015] The waterline reaches both men's upper thighs, although standing men in this marsh must remain between ankle and knee depth.",
+        "[period_accuracy/major] [L-0003] C-01 has four gold stars on each shoulder strap rather than exactly three.",
+        "[period_accuracy/major] [L-0003] Both men wear multi-pouch tactical-style rigs with more than the specified three AK pouches.",
+        "[technical/major] [L-0016] The salt crust and mud contain repeated cords, loops and graphic streaks that look generated rather than naturally deposited."
+      ],
+      "cost_usd": 0.2432,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:16:28+00:00"
+    },
+    {
+      "round": 2,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-01/20261019-091628/2-4-01_01.png",
+      "score": 3.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[design_match/major] [L-0053] C-04 has no wire-rimmed glasses, so neither the two lenses nor the taped hinge required for his silhouette and continuity are visible.",
+        "[identity/major] C-04 does not clearly match ACT-0004; his face is broader, heavier-jawed and older-looking than the oval, prominent-cheekboned casting face.",
+        "[period_accuracy/major] [L-0003] C-01 has four gold stars on each shoulder strap, while a 1973 Egyptian captain must have exactly three small gold five-pointed stars in a row on each strap.",
+        "[period_accuracy/major] [L-0003] Both soldiers wear bulky rigs with too many assorted pouches rather than the specified Soviet-pattern canvas rig with three closed-flap AK magazine pouches.",
+        "[location_rules/major] [L-0015] The standing captain is submerged to the upper thighs/crotch, violating the Tina Plain rule that brine stays between ankle and knee except in isolated pockets.",
+        "[technical/major] [L-0016] Pale marsh material forms repeated tangled cords, roots or seaweed-like strands across the foreground and right background.",
+        "[design_match/major] [L-0001] C-04 trails well behind the captain rather than wading beside him as designed."
+      ],
+      "cost_usd": 0.2352,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:19:32+00:00"
+    }
+  ],
   "history": [
     {
       "ts": "2026-10-16T13:59:09.170514+00:00",
@@ -1361,6 +1443,27 @@
       "action": "production meeting: wardrobe pass, makeup pass, set pass, action pass",
       "cost_usd": 0.016064,
       "tokens": 5608
+    },
+    {
+      "ts": "2026-10-19T08:13:09.260901+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 4/10 (20261019-090950)",
+      "cost_usd": 0.2525,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:16:28.078962+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 4/10 (20261019-091309)",
+      "cost_usd": 0.2432,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:19:32.865386+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 3/10 (20261019-091628)",
+      "cost_usd": 0.2352,
+      "tokens": 0
     }
   ]
 }

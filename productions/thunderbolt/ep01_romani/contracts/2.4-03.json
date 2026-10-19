@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "composed",
   "wave_ready": 2,
   "intent": {
     "subject": "Captain Shalabi (C-01) in three-quarter close-up, his moonlit face turned toward Mahmoud off to the side.",
@@ -359,12 +359,36 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.2226,
+  "cost_usd_total": 0.3873,
   "escalations": [],
   "department_notes": [
     "makeup: The director requests Mahmoud as a soft off-axis presence, but the locked cast permits only C-01 in frame; Mahmoud must remain entirely off-screen.",
     "wardrobe: The director’s requested soft off-axis Mahmoud presence conflicts with the locked cast restriction for this frame; keep Mahmoud entirely off-screen, with Shalabi’s eyeline directed toward him.",
     "set: The direction's request for Mahmoud as a soft off-axis presence conflicts with the locked cast restriction; keep the radio operator entirely off-screen."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03/20261019-092220/2-4-03_01.png",
+      "score": 9.0,
+      "verdict": "pass",
+      "fix_route": "keep",
+      "issues": [],
+      "cost_usd": 0.1647,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T08:24:09+00:00"
+    }
   ],
   "history": [
     {
@@ -562,6 +586,13 @@
       "action": "production meeting: action pass",
       "cost_usd": 0.009532,
       "tokens": 3746
+    },
+    {
+      "ts": "2026-10-19T08:24:09.477443+00:00",
+      "agent": "render",
+      "action": "compose → QA pass 9/10 (20261019-092220)",
+      "cost_usd": 0.1647,
+      "tokens": 0
     }
   ]
 }

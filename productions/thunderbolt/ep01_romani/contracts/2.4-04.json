@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "composed",
   "wave_ready": 2,
   "intent": {
     "subject": "A finger on the power switch of a 1970s field radio.",
@@ -110,6 +110,7 @@
     "hand_props": [
       "PRP-0007"
     ],
+    "hand_items": [],
     "dressing": [
       "Thin white salt crust broken by black mud",
       "shallow mirror-like brine sheets at ground level",
@@ -190,11 +191,58 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.040952,
+  "cost_usd_total": 0.237752,
   "escalations": [],
   "department_notes": [
     "set: The locked design lists no cast while the action requires an unseen soldier’s finger; show only the hand entering frame, with no identifiable performer.",
     "camera: The Director’s requested clipped red-filtered flashlight conflicts with LOOK_NIGHT_MOON’s requirement for night exteriors lit only by moonlight and starlight; retain only the radio dial’s motivated self-illumination."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04/20261019-093716/2-4-04_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[technical/major] Readable Cyrillic control labels and dial numerals are prominently visible across the radio face, breaking the production rule that no text may appear in frame."
+      ],
+      "cost_usd": 0.0953,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0033",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:38:21+00:00"
+    },
+    {
+      "round": 1,
+      "route": "edit",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04/20261019-093821/2-4-04_01.png",
+      "score": 8.0,
+      "verdict": "minor",
+      "fix_route": "edit",
+      "issues": [],
+      "cost_usd": 0.1015,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0033",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:39:10+00:00"
+    }
   ],
   "history": [
     {
@@ -287,6 +335,20 @@
       "action": "production meeting: set pass, camera pass",
       "cost_usd": 0.011868,
       "tokens": 3278
+    },
+    {
+      "ts": "2026-10-19T08:38:21.061572+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 6/10 (20261019-093716)",
+      "cost_usd": 0.0953,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:39:10.729287+00:00",
+      "agent": "render",
+      "action": "edit → QA minor 8/10 (20261019-093821)",
+      "cost_usd": 0.1015,
+      "tokens": 0
     }
   ]
 }

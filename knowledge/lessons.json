@@ -1,6 +1,6 @@
 {
   "$note": "Studio memory, kept by the Learning Keeper. status: candidate (advisory) | rule (must follow) | retired. Edit freely: set status 'rule' to approve (approved_by: human) or 'retired' to drop.",
-  "updated_at": "2026-10-19T08:09:27+00:00",
+  "updated_at": "2026-10-19T08:45:25+00:00",
   "lessons": [
     {
       "id": "L-0001",
@@ -372,18 +372,18 @@
       ],
       "proven_fixes": 19,
       "applied": {
-        "passes": 2,
-        "fails": 0
+        "passes": 4,
+        "fails": 1
       },
       "created_at": "2026-10-18T09:14:35+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T08:09:27+00:00",
+      "updated_at": "2026-10-19T08:34:52+00:00",
       "promoted_at": "2026-10-18T09:14:35+00:00",
       "promoted_by": "auto"
     },
     {
       "id": "L-0002",
-      "status": "rule",
+      "status": "retired",
       "title": "Make the opening keyframe visibly contain the scripted action",
       "problem": "Keyframes omit the physical cue that establishes the next action, such as rescue contact, a spray of water, a passed canteen, or a plate under a character's gaze.",
       "cause": "Prompts name the dramatic beat but do not specify the visible body-object relationship or transitional pose needed for animation.",
@@ -809,18 +809,19 @@
       ],
       "proven_fixes": 13,
       "applied": {
-        "passes": 0,
-        "fails": 1
+        "passes": 2,
+        "fails": 3
       },
       "created_at": "2026-10-18T09:14:35+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T07:37:37+00:00",
+      "updated_at": "2026-10-19T08:34:52+00:00",
       "promoted_at": "2026-10-18T09:14:35+00:00",
-      "promoted_by": "auto"
+      "promoted_by": "auto",
+      "retired_reason": "applied 3× and still failed (passed 2×)"
     },
     {
       "id": "L-0003",
-      "status": "rule",
+      "status": "retired",
       "title": "Constrain 1973 Egyptian military identifiers",
       "problem": "Generated commandos acquire modern tactical rigs, headgear, malformed AKMs, or incorrect rank insignia instead of the production's approved period military appearance.",
       "cause": "Models default to generic contemporary military equipment and decorative insignia unless each constrained identifier is explicitly visualized.",
@@ -1318,14 +1319,15 @@
       ],
       "proven_fixes": 31,
       "applied": {
-        "passes": 0,
-        "fails": 1
+        "passes": 2,
+        "fails": 3
       },
       "created_at": "2026-10-18T09:14:35+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T07:37:37+00:00",
+      "updated_at": "2026-10-19T08:26:12+00:00",
       "promoted_at": "2026-10-18T09:14:35+00:00",
-      "promoted_by": "auto"
+      "promoted_by": "auto",
+      "retired_reason": "applied 3× and still failed (passed 2×)"
     },
     {
       "id": "L-0004",
@@ -2104,12 +2106,12 @@
       ],
       "proven_fixes": 10,
       "applied": {
-        "passes": 0,
+        "passes": 2,
         "fails": 0
       },
       "created_at": "2026-10-18T09:15:08+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:39+00:00",
+      "updated_at": "2026-10-19T08:24:09+00:00",
       "promoted_at": "2026-10-18T09:15:08+00:00",
       "promoted_by": "auto"
     },
@@ -2285,12 +2287,12 @@
       ],
       "proven_fixes": 5,
       "applied": {
-        "passes": 2,
+        "passes": 4,
         "fails": 0
       },
       "created_at": "2026-10-18T09:15:29+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T08:09:27+00:00",
+      "updated_at": "2026-10-19T08:24:09+00:00",
       "promoted_at": "2026-10-18T09:15:29+00:00",
       "promoted_by": "auto"
     },
@@ -2352,11 +2354,11 @@
       "proven_fixes": 2,
       "applied": {
         "passes": 1,
-        "fails": 0
+        "fails": 2
       },
       "created_at": "2026-10-18T09:15:29+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T08:05:42+00:00",
+      "updated_at": "2026-10-19T08:45:25+00:00",
       "promoted_at": "2026-10-18T09:17:23+00:00",
       "promoted_by": "auto"
     },
@@ -2420,18 +2422,18 @@
       ],
       "proven_fixes": 2,
       "applied": {
-        "passes": 0,
-        "fails": 1
+        "passes": 2,
+        "fails": 2
       },
       "created_at": "2026-10-18T09:15:55+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T07:37:37+00:00",
+      "updated_at": "2026-10-19T08:24:09+00:00",
       "promoted_at": "2026-10-18T09:16:30+00:00",
       "promoted_by": "auto"
     },
     {
       "id": "L-0016",
-      "status": "candidate",
+      "status": "rule",
       "title": "Render marsh mud as cohesive broken clumps",
       "problem": "Macro wet-mud details can form repeated long cords or tentacles beneath boots, creating obvious generated-detail artifacts.",
       "cause": "Mud separation was unspecified at macro scale, allowing uniform stretched tendrils instead of heavy cohesive material.",
@@ -2465,12 +2467,14 @@
       ],
       "proven_fixes": 1,
       "applied": {
-        "passes": 0,
-        "fails": 1
+        "passes": 2,
+        "fails": 2
       },
       "created_at": "2026-10-18T09:15:55+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T07:37:37+00:00"
+      "updated_at": "2026-10-19T08:24:09+00:00",
+      "promoted_at": "2026-10-19T08:24:09+00:00",
+      "promoted_by": "auto"
     },
     {
       "id": "L-0017",
@@ -2591,12 +2595,12 @@
       ],
       "proven_fixes": 3,
       "applied": {
-        "passes": 2,
+        "passes": 3,
         "fails": 0
       },
       "created_at": "2026-10-18T09:15:55+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-19T08:09:27+00:00",
+      "updated_at": "2026-10-19T08:24:09+00:00",
       "promoted_at": "2026-10-18T09:15:55+00:00",
       "promoted_by": "auto"
     },
@@ -3308,11 +3312,11 @@
       "proven_fixes": 0,
       "applied": {
         "passes": 0,
-        "fails": 0
+        "fails": 1
       },
       "created_at": "2026-10-18T09:17:23+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:18:02+00:00"
+      "updated_at": "2026-10-19T08:40:45+00:00"
     },
     {
       "id": "L-0029",
@@ -3647,11 +3651,11 @@
       "proven_fixes": 0,
       "applied": {
         "passes": 0,
-        "fails": 0
+        "fails": 1
       },
       "created_at": "2026-10-18T09:17:41+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:21+00:00"
+      "updated_at": "2026-10-19T08:40:45+00:00"
     },
     {
       "id": "L-0034",
@@ -4701,12 +4705,12 @@
       ],
       "proven_fixes": 0,
       "applied": {
-        "passes": 0,
-        "fails": 0
+        "passes": 1,
+        "fails": 1
       },
       "created_at": "2026-10-18T09:19:21+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:21+00:00"
+      "updated_at": "2026-10-19T08:22:20+00:00"
     },
     {
       "id": "L-0054",

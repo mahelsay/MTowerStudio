@@ -118,6 +118,15 @@ def main() -> int:
     rd.add_argument("--confirm-cost", type=float, default=None,
                     help="spend gate: must be >= the printed estimate (USD) or nothing runs")
 
+    vq = sub.add_parser("video-qa", help="Video QA: review generated clips frame-by-frame (identity drift, morphing, motion)")
+    vq.add_argument("--production", default="thunderbolt")
+    vq.add_argument("--episode", default="ep01_romani")
+    vq.add_argument("--shots", help="comma-separated shot ids (default: every clip)")
+    vq.add_argument("--approved", action="store_true", help="only clips approved in the gallery")
+    vq.add_argument("--frames", type=int, default=8)
+    vq.add_argument("--confirm-cost", type=float, default=None,
+                    help="spend gate: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -297,6 +306,30 @@ def main() -> int:
         return _lessons_cmd(args)
     elif args.cmd == "render":
         return _render_cmd(args)
+    elif args.cmd == "video-qa":
+        from . import video_qa
+        clips = video_qa.find_clips(args.production, args.episode,
+                                    [x.strip() for x in args.shots.split(",")] if args.shots else None, args.approved)
+        est = round(len(clips) * video_qa.EST_PER_CLIP_USD, 2)
+        print(f"Video QA: {len(clips)} clip(s), {args.frames} frames each — estimate ${est:.2f} (gpt-5.6-sol)")
+        if not clips:
+            return 0
+        if args.confirm_cost is None or args.confirm_cost < est:
+            print(f"Not run. Re-run with --confirm-cost {est} to approve this spend.")
+            return 0
+        spent = 0.0
+        for c in clips:
+            try:
+                v = video_qa.review_clip(c, args.production, args.episode, args.frames)
+            except Exception as e:  # noqa: BLE001
+                print(f"  {c.parent.parent.name:8} ERROR {str(e)[:120]}")
+                continue
+            spent += v["_cost_usd"]
+            ch = v.get("checks") or {}
+            print(f"  {v['shot']:8} {v.get('verdict', '?'):4} {v.get('score')}/10 · drift {ch.get('identity_drift', {}).get('status')}"
+                  f" · morph {ch.get('morphing', {}).get('status')} · motion {ch.get('motion', {}).get('status')} · "
+                  f"{v.get('fix_route')} · {c.parent.name} · {(v.get('summary') or '')[:90]}", flush=True)
+        print(f"spend ≈ ${spent:.2f} · verdicts saved next to each clip (*.vqa.json)")
     elif args.cmd == "cast-audit":
         from . import audit_cast
         from datetime import datetime

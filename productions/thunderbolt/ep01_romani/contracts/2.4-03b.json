@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "render_review",
   "wave_ready": 2,
   "intent": {
     "subject": "Shalabi (C-01) beside Mahmoud’s silenced radio",
@@ -400,7 +400,7 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.262058,
+  "cost_usd_total": 0.611758,
   "escalations": [],
   "department_notes": [
     "makeup: The locked cast permits only C-01 in frame, conflicting with the direction to show Mahmoud at Shalabi's shoulder and in a wider two-shot; Mahmoud and the radio must remain off-screen or at most an unrecognizable partial edge.",
@@ -411,6 +411,82 @@
     "camera: The Director’s requested wider two-shot and visible radio conflict with the locked cast and Studio Critic instruction that Mahmoud remain wholly off-screen; frame C-01 alone.",
     "camera: The locked red-filtered flashlight practical conflicts with LOOK_NIGHT_MOON’s moonlight-and-starlight-only wording; retain it because it is explicitly locked shot lighting, without using it as broad artificial fill.",
     "critic: Director coverage requests a brief wider two-shot anchoring Mahmoud beside Shalabi, but the locked Wave-2 cast permits only C-01 in frame and the approved set notes prohibit additional people or equipment entering this close framing. The camera correctly follows the lock; human direction clarification is needed if a separate Mahmoud two-shot is desired."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03b/20261019-093330/2-4-03b_01.png",
+      "score": 4.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[design_match/major] [L-0001] Mahmoud is missing, leaving Shalabi alone instead of close to him as designed.",
+        "[props_weapons/major] [L-0002] The dead radio central to the intercepted-signal beat is not visible.",
+        "[lighting/major] [L-0014] There is no localized red spill from the named red-filtered flashlight.",
+        "[period_accuracy/major] A modern-looking screw-capped plastic bottle is visible at the lower right."
+      ],
+      "cost_usd": 0.103,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0011",
+        "L-0013",
+        "L-0014",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T08:34:52+00:00"
+    },
+    {
+      "round": 1,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03b/20261019-093452/2-4-03b_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[design_match/major] [L-0002] The radio at lower right is supposed to be dead, but its rectangular panel and several dials glow brightly, making it read as powered and operational.",
+        "[lighting/major] [L-0014] The red illumination is concentrated on the radio and Mahmoud instead of subtly shaping Shalabi's face and visible mouth; this weakens the designed speaking focus."
+      ],
+      "cost_usd": 0.1302,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0011",
+        "L-0013",
+        "L-0014",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T08:36:23+00:00"
+    },
+    {
+      "round": 2,
+      "route": "edit",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03b/20261019-093623/2-4-03b_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[lighting/major] [L-0014] The red-filtered flashlight illuminates Mahmoud as the dominant subject while leaving Shalabi almost entirely outside the red spill, contrary to the designed emphasis on Shalabi's face for the coming line."
+      ],
+      "cost_usd": 0.1165,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0011",
+        "L-0013",
+        "L-0014",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T08:37:16+00:00"
+    }
   ],
   "history": [
     {
@@ -622,6 +698,27 @@
       "action": "production meeting: camera pass, action pass; cross: 1",
       "cost_usd": 0.01509,
       "tokens": 4541
+    },
+    {
+      "ts": "2026-10-19T08:34:52.246168+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 4/10 (20261019-093330)",
+      "cost_usd": 0.103,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:36:23.328213+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 6/10 (20261019-093452)",
+      "cost_usd": 0.1302,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:37:16.351629+00:00",
+      "agent": "render",
+      "action": "edit → QA fail 6/10 (20261019-093623)",
+      "cost_usd": 0.1165,
+      "tokens": 0
     }
   ]
 }

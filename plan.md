@@ -28,7 +28,9 @@ MTower is a single-pipeline production engine. It works, but every job (QA, ward
 | 3.5 | **Independence** (2026-10-18): MTower engine, library, production data and media imported once; every runtime path cut (audited: 0 MTower files touched); studio's own Foundry gets the generation models (East US 2 + Sweden Central media Foundry) | DONE — gpt-image-2.5-flare waits for MTower cutover (subscription limit 2) |
 | 3.6 | **Learning Keeper** (agent 15): capture → distill → advise → promote; seeded with 60 lessons (14 rules) from MTower history | DONE |
 | 3.7 | **Phase D — cast audit & redesign**: vision audit of 13 actors; 7 portraits re-designed (identity kept, QA 8.7–9.2), cards reconciled; new training sets + face models | DONE (~$33): 10/13 actors ready; open: young actors' face models (ACT-0003/0008/0010) — portrait fallback meanwhile |
-| 3.8 | **Render bridge**: contract → crew brief + lessons → engine keyframe → Image QA → Keeper → fix loop | DONE (2026-10-19): `render` command; 2.4-04a composed 8/10. Next: Video QA, then render beat 2.4 |
+| 3.8 | **Render bridge**: contract → crew brief + lessons → engine keyframe → Image QA → Keeper → fix loop | DONE (2026-10-19): beat 2.4 5/9 composed, 4 in render_review (continue when fal is topped up) |
+| 3.9 | **Video QA** (agent 3c): frame-sampled clip review (identity drift, morphing, motion, continuity, lip-sync) | DONE (2026-10-19): 8 approved clips reviewed, 3 flagged for the director |
+| 3.10 | **Young-actor face models** (ACT-0003/0008/0010): Nano Banana Pro training sets + age class word, retrained | trained; identity check pending (fal balance) |
 | 4 | **Wave 3**: VFX, Continuity, Sound, Dialect/Language, Editor/Post (+ Marketing when needed) | pending |
 | 5 | **Migrate** live production from MTower engine → Studio fleet, episode by episode | pending |
 

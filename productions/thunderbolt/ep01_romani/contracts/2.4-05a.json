@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "composed",
   "wave_ready": 2,
   "intent": {
     "subject": "Shalabi (C-01), face in three-quarter view, readable but held in darkness by red-filtered light and starlight.",
@@ -147,6 +147,7 @@
     "hand_props": [
       "PRP-0008"
     ],
+    "hand_items": [],
     "dressing": [
       "Thin broken white salt crust over black mud at the firmer marsh edge",
       "Shallow mid-shin brine sheets with faint cold sky reflections and halted boot prints",
@@ -281,7 +282,7 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.114406,
+  "cost_usd_total": 0.351106,
   "escalations": [],
   "department_notes": [
     "wardrobe: The Director’s requested over-the-shoulder bearing view conflicts with the locked static MCU framing; retain the locked MCU and show the gesture entering the darkness without changing coverage.",
@@ -290,6 +291,53 @@
     "makeup: The Director's requested shift into an over-the-shoulder bearing view conflicts with the locked static MCU framing; retain the locked MCU.",
     "set: The Director’s requested shift into an over-the-shoulder bearing view conflicts with the locked static MCU framing; retain the MCU and let Shalabi’s extended arm lead into the darkness within frame.",
     "camera: The locked LOOK_NIGHT_MOON and previous-shot continuity specify moonlight and starlight only, which conflicts with the locked shot description’s red-filtered flashlight; retain the practical only as a very localized motivated source."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-05a/20261019-094400/2-4-05a_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[period_accuracy/major] The near shoulder strap shows four gold stars, incorrectly identifying Shalabi’s rank; the required 1973 captain insignia is exactly three stars."
+      ],
+      "cost_usd": 0.1163,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0014",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0033"
+      ],
+      "at": "2026-10-19T08:45:25+00:00"
+    },
+    {
+      "round": 1,
+      "route": "edit",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-05a/20261019-094526/2-4-05a_01.png",
+      "score": 9.0,
+      "verdict": "pass",
+      "fix_route": "keep",
+      "issues": [],
+      "cost_usd": 0.1204,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0014",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0033"
+      ],
+      "at": "2026-10-19T08:46:18+00:00"
+    }
   ],
   "history": [
     {
@@ -403,6 +451,20 @@
       "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass",
       "cost_usd": 0.015538,
       "tokens": 4753
+    },
+    {
+      "ts": "2026-10-19T08:45:25.956534+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 6/10 (20261019-094400)",
+      "cost_usd": 0.1163,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:46:18.812762+00:00",
+      "agent": "render",
+      "action": "edit → QA pass 9/10 (20261019-094526)",
+      "cost_usd": 0.1204,
+      "tokens": 0
     }
   ]
 }

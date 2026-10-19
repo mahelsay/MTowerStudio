@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "render_review",
   "wave_ready": 2,
   "intent": {
     "subject": "Shalabi leads the silent marsh file after the radio blackout.",
@@ -426,7 +426,7 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.282854,
+  "cost_usd_total": 0.691654,
   "escalations": [],
   "department_notes": [
     "camera: The director’s requested opening-to-tightening-to-medium-wide coverage cannot occur within this locked static wide shot; retain the complete radio-silence and route-change action in one wide composition.",
@@ -437,6 +437,79 @@
     "action: The specified radio interaction requires the otherwise optional, non-locked PRP-0007 to be present in Shalabi’s immediate reach.",
     "critic: The Director's coverage instruction to open on the file, tighten to the radio/hush signal, then hold medium-wide conflicts with the locked static WS/LENS_WIDE_24 camera design. Camera correctly follows the lock.",
     "critic: The locked Wave-2 manifest calls PRP-0007 an optional, non-locked beat prop that is mostly carried by off-screen characters, while the locked shot description and action require Shalabi to tap a dead radio. This prep elects to include PRP-0007 as Shalabi's hand prop; human clarification is needed on whether the radio is required for this shot despite its optional manifest status."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-05/20261019-093911/2-4-05_01.png",
+      "score": 5.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[design_match/major] [L-0033] The required tableau is incomplete: the dead radio is absent, Shalabi is already pointing along the new bearing, and nobody in the visible file is passing the no-radio hand sign backward.",
+        "[props_weapons/major] [L-0028] The shot contains no visible, coherent 1973 backpack radio system with antenna connection or handset/control state, so the intercepted/dead-signal story point cannot be read."
+      ],
+      "cost_usd": 0.1299,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0028",
+        "L-0033"
+      ],
+      "at": "2026-10-19T08:40:45+00:00"
+    },
+    {
+      "round": 1,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-05/20261019-094045/2-4-05_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[props_weapons/major] [L-0015] The foreground radio set is resting directly in the shallow brine, with its lower case and attached pack/pouches visibly surrounded by water. The production rules require all equipment to remain clear of the water and mud."
+      ],
+      "cost_usd": 0.1292,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0028",
+        "L-0033"
+      ],
+      "at": "2026-10-19T08:42:24+00:00"
+    },
+    {
+      "round": 2,
+      "route": "edit",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-05/20261019-094224/2-4-05_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[props_weapons/major] [L-0015] In the foreground left, the radio pack's lower casing and attached gear are resting directly in the brine instead of being carried clear of the water. This central prop violation is especially visible because both C-01 and the operator interact with it."
+      ],
+      "cost_usd": 0.1497,
+      "lessons": [
+        "L-0001",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018",
+        "L-0028",
+        "L-0033"
+      ],
+      "at": "2026-10-19T08:43:57+00:00"
+    }
   ],
   "history": [
     {
@@ -641,6 +714,27 @@
       "action": "production meeting: casting pass, wardrobe pass, makeup pass, set pass, camera pass, action pass; cross: 2",
       "cost_usd": 0.029442,
       "tokens": 6613
+    },
+    {
+      "ts": "2026-10-19T08:40:45.164389+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 5/10 (20261019-093911)",
+      "cost_usd": 0.1299,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:42:24.542220+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 6/10 (20261019-094045)",
+      "cost_usd": 0.1292,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:43:57.330421+00:00",
+      "agent": "render",
+      "action": "edit → QA fail 6/10 (20261019-094224)",
+      "cost_usd": 0.1497,
+      "tokens": 0
     }
   ]
 }

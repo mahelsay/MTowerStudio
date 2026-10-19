@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "composed",
   "wave_ready": 2,
   "intent": {
     "subject": "Corporal Mahmoud (C-04), the radio operator, in profile with taped wire-rimmed glasses.",
@@ -370,7 +370,7 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.197408,
+  "cost_usd_total": 0.305808,
   "escalations": [],
   "department_notes": [
     "wardrobe: The Director’s requested shift from a tight profile insert to a medium close-up conflicts with the locked CU size; retain the locked close-up framing.",
@@ -381,6 +381,30 @@
     "library: no prop library entry yet for: small red-filtered flashlight angled beneath an unmarked decoding scrap, small weather-softened paper scrap with no legible writing",
     "set: The Director’s requested move from a tight insert into a medium close-up conflicts with the locked static CU, so the shot should remain a static close profile framing.",
     "critic: Director coverage requests a progression from a tight profile insert to a restrained medium close-up, which conflicts with the locked static CU shot size. The submitted departments correctly retain the locked CU; production should resolve the Director coverage language rather than alter this shot’s locked camera design."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-02/20261019-091932/2-4-02_01.png",
+      "score": 8.0,
+      "verdict": "minor",
+      "fix_route": "edit",
+      "issues": [],
+      "cost_usd": 0.1084,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:22:20+00:00"
+    }
   ],
   "history": [
     {
@@ -550,6 +574,13 @@
       "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass; cross: 1",
       "cost_usd": 0.020938,
       "tokens": 5357
+    },
+    {
+      "ts": "2026-10-19T08:22:20.160714+00:00",
+      "agent": "render",
+      "action": "compose → QA minor 8/10 (20261019-091932)",
+      "cost_usd": 0.1084,
+      "tokens": 0
     }
   ]
 }

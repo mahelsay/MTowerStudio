@@ -3,20 +3,27 @@
   "catalog": "wardrobe",
   "version": "1.0",
   "id_format": "WRD-0000",
-
   "wardrobe": [
     {
       "id": "WRD-0001",
       "slug": "eg-commando-1973",
-      "legacy_ids": ["CMD-02", "CMD-03", "CMD-04"],
+      "legacy_ids": [
+        "CMD-02",
+        "CMD-03",
+        "CMD-04"
+      ],
       "name": "Egyptian Army commando (Sa'iqa) field uniform, 1973",
       "period": "1967–1973",
       "prompt": "a 1973 Egyptian army commando sand-khaki cotton field uniform (jacket with two buttoned chest pockets, trousers bloused into black leather combat boots) with sleeves rolled to the forearm, {HEADGEAR}",
       "field_kit": "a 1970s Soviet-pattern khaki canvas chest rig with three closed-flap pouches for AK magazines, plain cotton straps and simple metal buckles (no plastic, no elastic loops, no open-top pouches, not a modern tactical vest), an aluminium canteen in a canvas cover on a web belt",
-      "tokens": { "HEADGEAR": "Set per production; default placeholder 'bare-headed with short black hair' pending verification" },
+      "tokens": {
+        "HEADGEAR": "Set per production; default placeholder 'bare-headed with short black hair' pending verification"
+      },
       "verify": "Headgear, insignia, and exact fabric color against 1973 reference photos",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0002",
@@ -26,7 +33,9 @@
       "period": "1970s",
       "prompt": "Egyptian Air Force helicopter pilot in a plain olive flight suit with no flag or badge patches, a dull olive-green flight helmet with a boom microphone, flight gloves",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0003",
@@ -37,7 +46,9 @@
       "prompt": "Egyptian army major general's khaki service uniform: on each shoulder strap a gold eagle above two crossed curved sabres (the Egyptian major general's insignia, no stars, no baton), red collar tabs with gold embroidery",
       "verify": "Collar tabs and insignia. Egyptian liwa (major general): gold Eagle of Saladin over two crossed curved sabres — not the British crossed sword and baton; red gorget patches are correct for Egyptian general officers (British-inherited). Checked 2026-10-16 against the Egyptian MoD rank chart (via Wikipedia, Military ranks of Egypt).",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0004",
@@ -47,7 +58,9 @@
       "period": "1973",
       "prompt": "1973 Israeli tank crewman in olive-drab coveralls and a padded tanker helmet with headset",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0005",
@@ -58,7 +71,9 @@
       "prompt": "1973 Israeli infantry soldier in an olive-green uniform and a helmet with netting, carrying an FN FAL rifle",
       "verify": "Webbing and helmet cover",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0006",
@@ -68,7 +83,9 @@
       "period": "1960s–1980s",
       "prompt": "black cotton galabeya and a long black headscarf (tarha)",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0007",
@@ -78,7 +95,9 @@
       "period": "1970s",
       "prompt": "modest 1970s knee-length dress with long sleeves and a simple patterned headscarf",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0008",
@@ -88,7 +107,9 @@
       "period": "1970s",
       "prompt": "faded blue cotton dress, barefoot",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     },
     {
       "id": "WRD-0009",
@@ -98,20 +119,31 @@
       "period": "1970s",
       "prompt": "striped cotton shirt and shorts, worn sandals",
       "status": "concept",
-      "used_in": ["thunderbolt/ep01_romani"]
+      "used_in": [
+        "thunderbolt/ep01_romani"
+      ]
     }
   ],
-
   "wear_states": {
     "WEAR_CLEAN": "clothing clean and pressed",
-    "WEAR_MUD": "trousers soaked dark with mud and brine to above the knees, jacket splashed and wet, water dripping",
+    "WEAR_MUD": "trousers soaked dark with mud and brine from wading mid-shin deep (the water itself never above the knee; the wet darkening wicks a little higher), boots caked in black mud, jacket splashed and wet, water dripping",
     "WEAR_SALT": "clothing stiff and grey with dried white salt crust, salt crystals on skin and eyebrows",
     "WEAR_SAND": "clothing caked with wet sand over salt and mud, grit in every crease",
     "WEAR_BATTLE": "clothing torn and blackened with smoke and dust, sweat-soaked, face streaked with dust (no blood or wounds)",
     "WEAR_GAUNT": "clothing faded and filthy after days in the desert, gaunt sunburned face, cracked lips",
     "WEAR_POSTWAR": "clean pressed uniform, thinner face, older eyes"
   },
-
   "$off_duty_note": "In these wear states the character is off duty: a wardrobe's field_kit (webbing, magazines, canteen) is left out of the prompt.",
-  "off_duty_wear_states": ["WEAR_POSTWAR"]
+  "off_duty_wear_states": [
+    "WEAR_POSTWAR"
+  ],
+  "change_log": [
+    {
+      "date": "2026-10-19",
+      "id": "WEAR_MUD",
+      "by": "studio render bridge",
+      "why": "old wording ('soaked to above the knees') contradicted LOC-0003's rule (brine ankle-to-knee) and made every render wade thigh-deep (2.4-01: 3 fails)",
+      "old": "trousers soaked dark with mud and brine to above the knees, jacket splashed and wet, water dripping"
+    }
+  ]
 }

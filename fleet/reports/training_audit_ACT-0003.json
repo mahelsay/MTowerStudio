@@ -1,35 +1,43 @@
 {
-  "verdict": "keep",
+  "verdict": "redesign",
   "fit": {
-    "ok": true,
-    "conflicts": []
+    "ok": false,
+    "conflicts": [
+      "The anchor reads as an angular, broad-jawed man in his early-to-mid 20s rather than a boyish 19-year-old with an oval face and narrow pointed chin; this contradicts the character's signature facial shape and apparent age.",
+      "The short black regulation haircut, clean-shaven presentation, warm olive-brown skin and Egyptian appearance otherwise fit Private Mostafa and the 1973 commando grooming rules."
+    ]
   },
   "anchor": {
-    "score": 9,
+    "score": 8,
     "issues": [
-      "The portrait has slightly polished editorial lighting, but skin texture, anatomy, age, Egyptian appearance and short regulation haircut remain credible."
+      "Facial structure is too mature and angular for the approved written look, with a relatively broad jaw and blunt chin.",
+      "The portrait is unusually polished and conventionally handsome, though it remains photorealistic with credible skin texture, anatomy and period-plausible grooming."
     ]
   },
   "training": {
-    "score": 9,
-    "drift_keys": [],
+    "score": 8,
+    "drift_keys": [
+      "looking-up@090117"
+    ],
     "defect_keys": [],
     "issues": [
-      "Identity remains consistent across expressions, profiles, wet hair, fatigue and varied lighting.",
-      "The set provides strong variety in framing, pose, clothing, setting and illumination without obvious duplicates or clothing bake-in.",
-      "Captions describe variable conditions rather than fixed facial traits."
+      "looking-up@090117 has visible jaw and chin stubble that is not present in the clean-shaven anchor.",
+      "Identity is otherwise consistent across the set, with useful variation in angle, framing, lighting, expression, clothing and action.",
+      "front-closeup@090117, profile-left@090117 and rim-light@090117 repeat the same beige shirt and scarf combination, but the wider set has sufficient outfit variety.",
+      "No clear anatomical defects, text, modern objects or duplicate images are visible."
     ]
   },
-  "summary": "The youthful, clean-shaven Egyptian look fits Private Mostafa and the 1973 commando grooming rules. The anchor is photorealistic and the varied training set is consistent and free of material defects.",
+  "redesign_change": "Keep the Egyptian ethnicity, warm olive-brown skin, large dark almond eyes, strong straight eyebrows, straight medium nose, full lips and short black regulation haircut, but give him a distinctly boyish 19-year-old oval face with softer cheeks, a less angular narrower jaw and a narrow pointed chin.",
+  "summary": "The actor is regionally and militarily plausible, and the training set is largely clean, but the anchor misses the character-defining boyish oval face and pointed chin, requiring a facial redesign rather than training-only rerolls.",
   "actor": "ACT-0003",
   "name": "Karim Nour",
   "roles": [
     "C-03"
   ],
   "training_images": 20,
-  "training_batch": "20261018-133352,20261018-154415",
+  "training_batch": "20261019-090117",
   "identity_history": {
     "C-03": null
   },
-  "_cost_usd": 0.082992
+  "_cost_usd": 0.062204
 }

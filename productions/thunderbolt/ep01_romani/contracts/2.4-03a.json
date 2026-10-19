@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "render_review",
   "wave_ready": 2,
   "intent": {
     "subject": "Corporal Mahmoud (C-04), radio operator.",
@@ -377,12 +377,88 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.236032,
+  "cost_usd_total": 0.752932,
   "escalations": [],
   "department_notes": [
     "set: The Director's requested cutaway and return conflict with the locked static 5-second shot; retain one static composition that contains both Mahmoud's face and the radio switch.",
     "action: The Director’s requested cutaway to Mahmoud’s thumb and return glance conflicts with the locked static MCU shot, so the thumb, switch, and wary eye-line must be held within the single locked composition.",
     "critic: Director coverage calls for a tight close-up followed by a cut to the thumb/radio switch and a return glance, which conflicts with the locked single MCU/static shot design. The departments correctly follow the lock; production should resolve the coverage request at the shot-design level rather than require these departments to add cuts."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03a/20261019-092409/2-4-03a_01.png",
+      "score": 4.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[design_match/major] [L-0002] Mahmoud is gripping a handheld radio with both hands rather than holding his thumb visibly hovering over the field-radio switch, so the opening action cue is not readable.",
+        "[period_accuracy/major] [L-0003] The compact handheld black radio and conspicuous glowing red control do not convincingly match the specified 1973 Egyptian backpack field radio.",
+        "[lighting/major] The named red-filtered flashlight does not light Mahmoud's face; almost all red illumination is isolated to the radio control and fingers."
+      ],
+      "cost_usd": 0.1683,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:26:12+00:00"
+    },
+    {
+      "round": 1,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03a/20261019-092612/2-4-03a_01.png",
+      "score": 4.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[anatomy_proportions/major] [L-0013] Mahmoud's shoulders are approximately 2.1 head widths across, so his head appears too large for his slight but adult frame.",
+        "[props_weapons/major] [L-0003] The visible black radio/control box has modern-looking modular connectors and detailing inconsistent with an identifiable 1973 Soviet-pattern Egyptian backpack field radio.",
+        "[design_match/major] [L-0002] The scripted action cue is wrong or ambiguous: the index finger appears extended against the controls rather than Mahmoud's thumb visibly hovering over the switch."
+      ],
+      "cost_usd": 0.174,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:28:13+00:00"
+    },
+    {
+      "round": 2,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-03a/20261019-092813/2-4-03a_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[lighting/major] The designed red-filtered, starlit night look is absent: strong neutral frontal illumination makes Mahmoud and the marsh substantially too bright, and almost no red light reaches his face or hand."
+      ],
+      "cost_usd": 0.1746,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0053"
+      ],
+      "at": "2026-10-19T08:33:23+00:00"
+    }
   ],
   "history": [
     {
@@ -573,6 +649,27 @@
       "action": "production meeting: camera pass; cross: 1",
       "cost_usd": 0.019122,
       "tokens": 4949
+    },
+    {
+      "ts": "2026-10-19T08:26:12.110441+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 4/10 (20261019-092409)",
+      "cost_usd": 0.1683,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:28:13.499739+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 4/10 (20261019-092612)",
+      "cost_usd": 0.174,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:33:23.666789+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 6/10 (20261019-092813)",
+      "cost_usd": 0.1746,
+      "tokens": 0
     }
   ]
 }

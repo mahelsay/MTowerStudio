@@ -168,6 +168,16 @@ def render_shot(s: Shot, *, rounds: int = 2, budget: float = 1.0, log=print, res
             first_fail = verdict
             lessons.record_outcome(cited, False)  # the lesson was applied and the failure recurred anyway
         route = verdict.get("fix_route") or "recompose"
+        # A re-render that did not improve on the best so far won't converge: fix the best image's details instead
+        prior = [r for r in s.renders[:-1] if r.route in ("compose", "recompose", "new_prompt")]
+        if route in ("recompose", "new_prompt") and prior and (verdict.get("score") or 0) <= max(r.score or 0 for r in prior):
+            best_r = max(s.renders, key=lambda r: (r.score or 0, r.round))
+            image = media_root() / best_r.image
+            best_v = qa.load_json(image.with_suffix(".qa.json"))
+            verdict = {**best_v, "edit_instruction": "Fix only these details and keep everything else exactly the same: "
+                       + autofix.fix_notes(best_v)}
+            route = "edit"
+            log(f"  ↪ re-render did not improve — editing the best render ({best_r.score}/10) instead")
         if route == "keep":
             break
     best = max(s.renders, key=lambda r: r.score or 0) if s.renders else None
