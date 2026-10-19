@@ -97,7 +97,7 @@
         "training_images": 20,
         "trained": "2026-10-18"
       },
-      "status": "lora_trained",
+      "status": "locked",
       "reuse": "open",
       "roles": [
         {
@@ -133,18 +133,17 @@
         "previous": "library/actors/ACT-0002_hazem-abdallah/anchor/20261011-155514/act-0002_04.png",
         "approved_at": "2026-10-18T09:54:24+00:00"
       },
-      "locked_on": "2026-10-12",
-      "redesign": {
-        "opened": "2026-10-18",
-        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
-        "face_model": "retrained 20261018-161238 on the audited training set; studio LoRA check pending"
-      },
+      "locked_on": "2026-10-19",
       "audit_notes": [
         {
           "date": "2026-10-18",
           "by": "studio cast audit",
           "note": "Original anchor had generated text along the bottom edge (cropped off). Greying, slightly long hair kept as a casting decision (written signature; 'looks older'); hair edits drifted identity or were refused by the provider filter."
+        },
+        {
+          "date": "2026-10-19",
+          "by": "studio LoRA check",
+          "note": "face model 20261018-161238 passed 4/4 same-person (fleet/reports/lora_check.json); re-locked"
         }
       ]
     },
@@ -161,17 +160,18 @@
       "lora": {
         "trigger": "act0003karim",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
-        "version": "20261011-184605",
-        "url": "https://v3b.fal.media/files/b/0aadf6b6/akdX47xpqR_w5FmG3X8LF_pytorch_lora_weights.safetensors",
-        "media_path": "library/actors/ACT-0003_karim-nour/lora/20261011-184605/act0003karim.safetensors",
+        "version": "20261019-063452",
+        "url": "https://v3b.fal.media/files/b/0aaef7c0/P9sm2ucemRfOoAjwLjIJv_pytorch_lora_weights.safetensors",
+        "media_path": "library/actors/ACT-0003_karim-nour/lora/20261019-063452/act0003karim.safetensors",
         "steps": 1000,
-        "training_images": 18,
-        "trained": "2026-10-11",
+        "training_images": 21,
+        "trained": "2026-10-19",
         "test_approved": "library/actors/ACT-0003_karim-nour/lora_tests/20261011-180559/act-0003-ref-expression_01.png",
         "test_approved_on": "2026-10-11",
         "test_approved_by": "mahelsay",
         "notes": "v1 face model (recipe v1.1). First keyframes (2.5-05, 2.6-02, 2.6-05) keep the face well but carry the anchor scarf into every shot and pull toward posed portraits, because 15 of 18 training images kept the anchor outfit and framing. Retrain with recipe v1.2 (~$2.80) when fal is topped up. Reads slightly older than 19; add 'boyish, 19 years old' when needed.",
-        "stale": "trained on the pre-2026-10-18 look (long hair); retrain pending (fal balance)"
+        "stale": "trained on the pre-2026-10-18 look (long hair); retrain pending (fal balance)",
+        "failed_check": "20261019-063452 failed the studio LoRA check (ages/thins the face); shots use the approved portrait (face swap) until fixed"
       },
       "status": "anchor_approved",
       "reuse": "open",
@@ -236,7 +236,7 @@
         "training_images": 21,
         "trained": "2026-10-18"
       },
-      "status": "lora_trained",
+      "status": "locked",
       "reuse": "open",
       "roles": [
         {
@@ -270,13 +270,14 @@
         "approved_at": "2026-10-18T09:54:24+00:00",
         "previous": "library/actors/ACT-0004_sherif-mansour/anchor/20261011-155832/act-0004_01.png"
       },
-      "locked_on": "2026-10-12",
-      "redesign": {
-        "opened": "2026-10-18",
-        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
-        "face_model": "retrained 20261018-161238 on the audited training set; studio LoRA check pending"
-      }
+      "locked_on": "2026-10-19",
+      "audit_notes": [
+        {
+          "date": "2026-10-19",
+          "by": "studio LoRA check",
+          "note": "face model 20261018-161238 passed 4/4 same-person (fleet/reports/lora_check.json); re-locked"
+        }
+      ]
     },
     {
       "id": "ACT-0005",
@@ -414,7 +415,7 @@
         "training_images": 21,
         "trained": "2026-10-18"
       },
-      "status": "lora_trained",
+      "status": "locked",
       "reuse": "open",
       "roles": [
         {
@@ -449,13 +450,14 @@
         "approved_at": "2026-10-18T09:54:24+00:00",
         "previous": "library/actors/ACT-0007_souad-roshdy/anchor/20261011-155832/act-0007_02.png"
       },
-      "locked_on": "2026-10-12",
-      "redesign": {
-        "opened": "2026-10-18",
-        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
-        "face_model": "retrained 20261018-161238 on the audited training set; studio LoRA check pending"
-      }
+      "locked_on": "2026-10-19",
+      "audit_notes": [
+        {
+          "date": "2026-10-19",
+          "by": "studio LoRA check",
+          "note": "face model 20261018-161238 passed 4/4 same-person (fleet/reports/lora_check.json); re-locked"
+        }
+      ]
     },
     {
       "id": "ACT-0008",
@@ -475,9 +477,10 @@
         "media_path": "library/actors/ACT-0008_malak-samy/lora/20261018-161239/act0008malak.safetensors",
         "steps": 1000,
         "training_images": 17,
-        "trained": "2026-10-18"
+        "trained": "2026-10-18",
+        "failed_check": "20261018-161239 failed the studio LoRA check (ages/thins the face); shots use the approved portrait (face swap) until fixed"
       },
-      "status": "lora_trained",
+      "status": "anchor_approved",
       "reuse": "open",
       "roles": [
         {
@@ -596,13 +599,13 @@
         "trigger": "act0010youssef",
         "base_model": "FLUX.1 [dev] (fal-ai/flux-lora)",
         "version": "20261011-203704",
-        "url": "https://v3b.fal.media/files/b/0aadf936/wR9TygjYWJ0BMPbVknmCO_pytorch_lora_weights.safetensors",
+        "url": "https://local.invalid/re-upload-from-media_path",
         "media_path": "library/actors/ACT-0010_youssef-mamdouh/lora/20261011-203704/act0010youssef.safetensors",
         "steps": 1000,
-        "training_images": 18,
-        "trained": "2026-10-11"
+        "training_images": 17,
+        "trained": "2026-10-19"
       },
-      "status": "lora_trained",
+      "status": "locked",
       "reuse": "open",
       "roles": [
         {
@@ -641,7 +644,14 @@
         "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
         "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
         "face_model": "training set fixed (QA 9); retrain pending (fal balance) — current model still valid (look unchanged)"
-      }
+      },
+      "audit_notes": [
+        {
+          "date": "2026-10-19",
+          "by": "studio LoRA check",
+          "note": "retrained model 20261019-063452 failed (1/4 same: ages the face); reverted to 20261011-203704 (look unchanged; 29% identity fails in production). Fix pending."
+        }
+      ]
     },
     {
       "id": "ACT-0011",
@@ -802,7 +812,7 @@
         "training_images": 21,
         "trained": "2026-10-18"
       },
-      "status": "lora_trained",
+      "status": "locked",
       "reuse": "open",
       "roles": [
         {
@@ -836,13 +846,14 @@
         "approved_at": "2026-10-18T09:54:24+00:00",
         "previous": "library/actors/ACT-0013_mahmoud-abdel-rahim/anchor/20261012-163903/act-0013_03.png"
       },
-      "locked_on": "2026-10-12",
-      "redesign": {
-        "opened": "2026-10-18",
-        "by": "studio cast audit (fleet/reports/cast_audit_20261018-*.json)",
-        "reason": "Phase D audit: look conflicts with the role / production rules or the face model drifts; approved by the owner ('audit + fixes, cap $40'). Re-lock after the new face model passes.",
-        "face_model": "retrained 20261018-161239 on the audited training set; studio LoRA check pending"
-      }
+      "locked_on": "2026-10-19",
+      "audit_notes": [
+        {
+          "date": "2026-10-19",
+          "by": "studio LoRA check",
+          "note": "face model 20261018-161239 passed 4/4 same-person (fleet/reports/lora_check.json); re-locked"
+        }
+      ]
     }
   ],
   "distinctness_rule": "Every actor must be clearly a different person. Each actor card carries structured 'traits' using the trait_vocabulary below; the engine ('mtower cast-check') compares every pair of actors of the same gender and age group and blocks new anchor generation when two cards share too many traits. Only actors whose family_resemblance names each other may look related. New anchors are reviewed side by side with the approved roster before approval.",

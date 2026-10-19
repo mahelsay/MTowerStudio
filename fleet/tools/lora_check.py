@@ -33,16 +33,17 @@ SYSTEM = (
 )
 
 
-def main(ids: list[str], confirm: float | None) -> int:
+def main(ids: list[str], confirm: float | None, review_only: bool = False) -> int:
     lib, prod = Library.load(), Production.load("thunderbolt/ep01_romani")
     ej.actor_solo_shots = lambda *_a, **_k: []  # studio test portraits only — never spend on production shots here
-    plan = ej.plan_lora_tests(lib, prod, ids)
-    est = sum(e.total for e in ej.estimates(plan)) + 0.03 * len(ids)
-    print(f"{len(plan)} test portrait(s) for {', '.join(ids)} + {len(ids)} QA review(s): estimate ${est:.2f}")
-    if confirm is None or confirm < est:
-        print(f"Not run. Re-run with --confirm-cost {round(est + 0.005, 2)}")
-        return 0
-    ej.run(plan, sum(e.total for e in ej.estimates(plan)), prod.key)
+    if not review_only:
+        plan = ej.plan_lora_tests(lib, prod, ids)
+        est = sum(e.total for e in ej.estimates(plan)) + 0.03 * len(ids)
+        print(f"{len(plan)} test portrait(s) for {', '.join(ids)} + {len(ids)} QA review(s): estimate ${est:.2f}")
+        if confirm is None or confirm < est:
+            print(f"Not run. Re-run with --confirm-cost {round(est + 0.005, 2)}")
+            return 0
+        ej.run(plan, sum(e.total for e in ej.estimates(plan)), prod.key)
     results = {}
     for aid in ids:
         actor = lib.actors[aid]
@@ -73,4 +74,4 @@ def main(ids: list[str], confirm: float | None) -> int:
 if __name__ == "__main__":
     args = sys.argv[1:]
     confirm = float(args[args.index("--confirm-cost") + 1]) if "--confirm-cost" in args else None
-    raise SystemExit(main([a for a in args if a.startswith("ACT-")], confirm))
+    raise SystemExit(main([a for a in args if a.startswith("ACT-")], confirm, "--review-only" in args))

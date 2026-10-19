@@ -1,0 +1,226 @@
+{
+  "ACT-0002": {
+    "tests": [
+      {
+        "file": "act-0002-ref-three-quarter-day_01.png",
+        "identity": "same",
+        "score": 8.3,
+        "issue": "Core eye, brow, nose, mustache, age lines, complexion, and jaw cues match; face appears slightly longer and hair fuller than approved."
+      },
+      {
+        "file": "act-0002-ref-profile_01.png",
+        "identity": "same",
+        "score": 8.0,
+        "issue": "Recognizable identity across the angle, though the jaw is leaner and more angular and the swept-back hairline looks less receded."
+      },
+      {
+        "file": "act-0002-ref-night_01.png",
+        "identity": "same",
+        "score": 8.7,
+        "issue": "Strong match in frontal bone structure, deep-set eyes, brows, broad nose, mustache, forehead lines, and weathered skin; low light hides some hairline detail."
+      },
+      {
+        "file": "act-0002-ref-expression_01.png",
+        "identity": "same",
+        "score": 8.2,
+        "issue": "Consistent nose, eyes, brows, mustache, cheek lines, and skin character; lower face is somewhat narrower and hair denser than approved."
+      }
+    ],
+    "same_count": 4,
+    "verdict": "pass",
+    "note": "Identity is retained across all tests. Minor systematic drift makes the face leaner and more elongated, with a fuller, less receded hairstyle.",
+    "_cost_usd": 0.0304
+  },
+  "ACT-0004": {
+    "tests": [
+      {
+        "file": "act-0004-ref-three-quarter-day_01.png",
+        "identity": "same",
+        "score": 8.4,
+        "issue": "Strong match in eye spacing, brow shape, nose, cheekbones, hairline, mustache, and chin; face appears slightly longer and freckles are more pronounced."
+      },
+      {
+        "file": "act-0004-ref-profile_01.png",
+        "identity": "same",
+        "score": 8.2,
+        "issue": "Profile preserves the distinctive eyes, brows, straight nose, cheekbone structure, hairline, and facial hair; jaw looks marginally sharper and skin marks vary."
+      },
+      {
+        "file": "act-0004-ref-night_01.png",
+        "identity": "same",
+        "score": 8.3,
+        "issue": "Identity remains clear under difficult lighting; nose and lower face look slightly narrower, with altered freckle placement and heavier under-eye texture."
+      },
+      {
+        "file": "act-0004-ref-expression_01.png",
+        "identity": "same",
+        "score": 8.5,
+        "issue": "Close match across frontal proportions, eyes, brows, nose, mustache, hairline, and cheekbones; chin is somewhat longer and freckles appear more regular and darker."
+      }
+    ],
+    "same_count": 4,
+    "verdict": "pass",
+    "note": "All four tests are unmistakably consistent with the approved actor despite minor drift in face length, jaw sharpness, and skin-mark placement.",
+    "_cost_usd": 0.030592
+  },
+  "ACT-0007": {
+    "tests": [
+      {
+        "file": "act-0007-ref-three-quarter-day_01.png",
+        "identity": "same",
+        "score": 9.1,
+        "issue": "Strong match in facial proportions, hazel eyes, nose, chin, wrinkle pattern, and tattoo placement; minor inconsistency from visible gray hair and a slightly fuller lower face."
+      },
+      {
+        "file": "act-0007-ref-profile_01.png",
+        "identity": "same",
+        "score": 8.8,
+        "issue": "Identity features and tattoos remain consistent; face appears slightly narrower and smoother around the mouth, and the image is frontal rather than profile."
+      },
+      {
+        "file": "act-0007-ref-night_01.png",
+        "identity": "same",
+        "score": 8.4,
+        "issue": "Lighting and low angle alter the apparent jaw, nose, and eye shape, but core bone structure, age, wrinkles, eye color, and tattoos remain recognizable."
+      },
+      {
+        "file": "act-0007-ref-expression_01.png",
+        "identity": "same",
+        "score": 8.7,
+        "issue": "Strong overall identity match; nose appears marginally longer and the cheeks fuller/smoother, with limited expression change despite the test label."
+      }
+    ],
+    "same_count": 4,
+    "verdict": "pass",
+    "note": "All four tests preserve the approved actor's distinctive age, facial structure, hazel eyes, deep wrinkles, and blue forehead/chin tattoos. Minor geometry and hair-coverage inconsistencies do not cause identity drift.",
+    "_cost_usd": 0.02886
+  },
+  "ACT-0008": {
+    "tests": [
+      {
+        "file": "act-0008-ref-three-quarter-day_01.png",
+        "identity": "drifted",
+        "score": 7.2,
+        "issue": "Face is substantially longer and narrower, with a more elongated chin, narrower nose, and less childlike cheek fullness than the approved portrait."
+      },
+      {
+        "file": "act-0008-ref-profile_01.png",
+        "identity": "same",
+        "score": 8.1,
+        "issue": "Eyes, brows, nose, hairline, skin tone, and cheek structure align well; the jaw and chin remain slightly narrower and more mature-looking."
+      },
+      {
+        "file": "act-0008-ref-night_01.png",
+        "identity": "drifted",
+        "score": 7.0,
+        "issue": "Lighting aside, the lower face is longer and leaner, the chin less soft, and the nose more prominent; overall age reads slightly older."
+      },
+      {
+        "file": "act-0008-ref-expression_01.png",
+        "identity": "same",
+        "score": 8.0,
+        "issue": "Strong correspondence in eyes, brows, nose, hairline, and smile structure, though the face is narrower and the approved front-tooth gap is not visible."
+      }
+    ],
+    "same_count": 2,
+    "verdict": "fail",
+    "note": "The model preserves the actor's general eye, brow, hair, and complexion traits but inconsistently reproduces her distinctive round childlike face, soft small chin, button nose, and front-tooth gap.",
+    "_cost_usd": 0.032552
+  },
+  "ACT-0013": {
+    "tests": [
+      {
+        "file": "act-0013-ref-three-quarter-day_01.png",
+        "identity": "same",
+        "score": 8.4,
+        "issue": "Core brow, deep-set eyes, high-bridge nose, jaw, hairline, and beard pattern match; cheek texture is more deeply scarred and the face appears slightly longer."
+      },
+      {
+        "file": "act-0013-ref-profile_01.png",
+        "identity": "same",
+        "score": 8.7,
+        "issue": "Strong match in eye spacing, heavy straight brows, nasal structure, angular jaw, ears, and facial-hair geometry; minor variation in cheek marks and nose width."
+      },
+      {
+        "file": "act-0013-ref-night_01.png",
+        "identity": "same",
+        "score": 8.8,
+        "issue": "Frontal proportions, gaze, brow ridge, nose, lips, jaw, hairline, and beard remain highly consistent; harsh lighting exaggerates facial length and skin texture."
+      },
+      {
+        "file": "act-0013-ref-expression_01.png",
+        "identity": "same",
+        "score": 8.2,
+        "issue": "Identity remains recognizable from the aquiline nose, eyes, brows, jaw, hairline, and beard, though the cheek scarring is substantially stronger and the nose appears slightly narrower."
+      }
+    ],
+    "same_count": 4,
+    "verdict": "pass",
+    "note": "All four tests preserve the approved actor's primary identity structure across angle and lighting. The main continuity concern is inconsistent, over-pronounced cheek scarring and minor nose-width variation.",
+    "_cost_usd": 0.029876
+  },
+  "ACT-0003": {
+    "tests": [
+      {
+        "file": "act-0003-ref-three-quarter-day_01.png",
+        "identity": "drifted",
+        "score": 6.0,
+        "issue": "Face is longer and narrower, eyes are rounder and closer-set, nose is slimmer, chin is sharper, hair is longer, and visible stubble/cheek texture makes him look older than the approved portrait."
+      },
+      {
+        "file": "act-0003-ref-profile_01.png",
+        "identity": "drifted",
+        "score": 5.5,
+        "issue": "Profile shows a more projecting nose, heavier jaw, longer lower face, different hairline and ear structure, plus facial stubble absent from the approved identity."
+      },
+      {
+        "file": "act-0003-ref-night_01.png",
+        "identity": "drifted",
+        "score": 6.5,
+        "issue": "Broad identity traits remain similar, but the narrower facial structure, sharper chin, rounder eyes, slimmer nose, older appearance, and stubble prevent an unmistakable match."
+      },
+      {
+        "file": "act-0003-ref-expression_01.png",
+        "identity": "drifted",
+        "score": 6.5,
+        "issue": "Closest test, but the face remains longer and more angular, with rounder eyes, a narrower nose, altered cheek texture, longer hair, and visible facial hair."
+      }
+    ],
+    "same_count": 0,
+    "verdict": "fail",
+    "note": "The tests are mutually consistent but appear to depict a different, slightly older man. Recurrent drift affects facial proportions, eye and nose shape, jaw/chin structure, hair, skin marks, and clean-shaven age presentation.",
+    "_cost_usd": 0.030968
+  },
+  "ACT-0010": {
+    "tests": [
+      {
+        "file": "act-0010-ref-three-quarter-day_01.png",
+        "identity": "drifted",
+        "score": 6,
+        "issue": "Face is longer and more angular, with a larger elongated nose, less round eyes, and a more mature appearance than the approved portrait."
+      },
+      {
+        "file": "act-0010-ref-profile_01.png",
+        "identity": "drifted",
+        "score": 5,
+        "issue": "Substantial profile drift: longer projecting nose, sharper jaw and chin, narrower eyes, and older-looking facial proportions."
+      },
+      {
+        "file": "act-0010-ref-night_01.png",
+        "identity": "same",
+        "score": 8,
+        "issue": "Core eye, brow, nose, mouth, hairline, and age cues remain recognizable; slight drift toward a narrower face and oversized eyes."
+      },
+      {
+        "file": "act-0010-ref-expression_01.png",
+        "identity": "drifted",
+        "score": 7,
+        "issue": "Strong resemblance, but the nose is broader and longer, the face more elongated, and the chin and ears differ enough to prevent an unmistakable match."
+      }
+    ],
+    "same_count": 1,
+    "verdict": "fail",
+    "note": "Only the night test preserves the approved identity at the required confidence. The other outputs consistently age and elongate the face while enlarging the nose and sharpening the lower-face structure.",
+    "_cost_usd": 0.030152
+  }
+}

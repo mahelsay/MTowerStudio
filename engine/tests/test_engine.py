@@ -148,10 +148,16 @@ class PromptTests(unittest.TestCase):
         self.assertFalse(any("insignia" in p for p in insert.payload["_references"]))
 
     def test_child_shots_compose_on_flux_without_references(self):
+        import copy
         from unittest import mock
         from mtower import jobs
+        lib = copy.deepcopy(self.lib)  # the children have face models (independent of live actor status)
+        for c in self.prod.casting["cast"].values():
+            a = lib.actors.get(c.get("actor"))
+            if a and a.get("lora", {}).get("trigger"):
+                a.update({"status": "lora_trained", "lora": {**a["lora"], "url": "https://example.invalid/face.safetensors"}})
         with mock.patch.object(jobs, "anchor_path", side_effect=FileNotFoundError("no anchor")):
-            plan = jobs.plan_compositions(self.lib, self.prod, ["5.5-02"])
+            plan = jobs.plan_compositions(lib, self.prod, ["5.5-02"])
         self.assertEqual(plan[0].model_key, "image_compose_flux")
         self.assertEqual(plan[0].payload["_references"], [])
         self.assertNotIn("_input_image", plan[0].payload)
