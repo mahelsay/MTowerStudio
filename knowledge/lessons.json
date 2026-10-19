@@ -1,6 +1,6 @@
 {
   "$note": "Studio memory, kept by the Learning Keeper. status: candidate (advisory) | rule (must follow) | retired. Edit freely: set status 'rule' to approve (approved_by: human) or 'retired' to drop.",
-  "updated_at": "2026-10-18T09:19:47+00:00",
+  "updated_at": "2026-10-19T07:37:37+00:00",
   "lessons": [
     {
       "id": "L-0001",
@@ -810,11 +810,11 @@
       "proven_fixes": 13,
       "applied": {
         "passes": 0,
-        "fails": 0
+        "fails": 1
       },
       "created_at": "2026-10-18T09:14:35+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:39+00:00",
+      "updated_at": "2026-10-19T07:37:37+00:00",
       "promoted_at": "2026-10-18T09:14:35+00:00",
       "promoted_by": "auto"
     },
@@ -1319,11 +1319,11 @@
       "proven_fixes": 31,
       "applied": {
         "passes": 0,
-        "fails": 0
+        "fails": 1
       },
       "created_at": "2026-10-18T09:14:35+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:21+00:00",
+      "updated_at": "2026-10-19T07:37:37+00:00",
       "promoted_at": "2026-10-18T09:14:35+00:00",
       "promoted_by": "auto"
     },
@@ -2397,11 +2397,11 @@
       "proven_fixes": 2,
       "applied": {
         "passes": 0,
-        "fails": 0
+        "fails": 1
       },
       "created_at": "2026-10-18T09:15:55+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:39+00:00",
+      "updated_at": "2026-10-19T07:37:37+00:00",
       "promoted_at": "2026-10-18T09:16:30+00:00",
       "promoted_by": "auto"
     },
@@ -2442,11 +2442,11 @@
       "proven_fixes": 1,
       "applied": {
         "passes": 0,
-        "fails": 0
+        "fails": 1
       },
       "created_at": "2026-10-18T09:15:55+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:15:55+00:00"
+      "updated_at": "2026-10-19T07:37:37+00:00"
     },
     {
       "id": "L-0017",

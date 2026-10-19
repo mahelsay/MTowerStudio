@@ -61,6 +61,13 @@ Data-plane roles must be granted (done 2026-10-14). Models: `me-eus2-gpt-5-6-ter
 | `design --beat-ref 2.4 [--shots …] [--redo]` | Wave 2: the crew designs prepped shots (casting → wardrobe/makeup/set/camera/action in parallel → production meeting); `--redo` also re-designs designed shots and shots escalated only by design | `--confirm-cost` |
 | `lessons status\|harvest\|distill\|show\|approve\|retire\|advise` | Learning Keeper: studio memory. `harvest` (free) turns engine history into incidents; `distill` turns incidents into lessons; `advise <shot>` shows what the crew will be told | `--confirm-cost` (distill) |
 | `cast-audit [ACT-…]` | Phase D: vision audit of every library actor — fit to role + production rules, anchor quality, training-set drift/defects, face-model failure rate on real shots | `--confirm-cost` |
+| `render --beat-ref 2.4 [--shots …] [--rounds N] [--continue] [--brief]` | **Render bridge**: designed shot → crew brief + Keeper lessons into the prompt → engine composition + face pass → engine Image QA (+ lesson checks) → follow the fix route (edit / face swap / recompose) → re-review. Pass ≥ 8 → `composed` (you approve in the gallery); else `render_review`. `--brief` is free (shows the brief, lessons and checks) | `--confirm-cost` |
+
+## Render bridge (2026-10-19)
+
+- First run: shot 2.4-04a (Sergeant Sayed, night marsh): 5 → 6 → 6 → 6 → **8/10 pass** after a Kontext edit fixed the sleeve chevrons; $0.85 for 5 renders. Keeper captured the failure and its fix; lessons whose failure recurred were debited.
+- Images go to `me-swc-gpt-image-2` (Sweden Central media Foundry), child shots to FLUX Kontext with the casting photo, QA to `gpt-5.6-sol`.
+- Nothing is approved automatically: approve keepers in the engine gallery (`mtower review`).
 
 ## Learning Keeper (agent 15) — studio memory (2026-10-18)
 

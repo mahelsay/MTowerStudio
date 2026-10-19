@@ -4,7 +4,7 @@
   "production": "thunderbolt",
   "episode": "ep01_romani",
   "beat_ref": "2.4",
-  "status": "ready_to_compose",
+  "status": "composed",
   "wave_ready": 2,
   "intent": {
     "subject": "Sayed (C-02), crouched beside the silenced radio set, face held in dark three-quarter view.",
@@ -443,7 +443,7 @@
       "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.349964,
+  "cost_usd_total": 1.196464,
   "escalations": [],
   "department_notes": [
     "library: no prop library entry yet for: small hooded red-filtered flashlight, held low beside the radio",
@@ -454,6 +454,127 @@
     "camera: Director direction requests Shalabi at the frame edge, but the locked cast permits only Sayed in frame; Shalabi must remain off-screen.",
     "action: The director's requested frame-edge two-shot cannot be staged because the locked cast permits only Sayed in frame; Shalabi must remain off-screen.",
     "critic: Director coverage calls for Shalabi to be visible at the frame edge in a restrained two-shot, while the locked cast permits only C-02 Sayed in frame. The locked cast restriction outranks the Director note; Shalabi must remain off-screen for this shot."
+  ],
+  "lessons_applied": [],
+  "renders": [
+    {
+      "round": 0,
+      "route": "compose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04a/20261019-083520/2-4-04a_01.png",
+      "score": 5.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[period_accuracy/major] [L-0003] The visible rank patch on Sayed's upper sleeve reads as four parallel diagonal bars, not three khaki sergeant chevrons.",
+        "[props_weapons/major] [L-0015] The radio set appears to sit directly in the wet mud or brine at the lower-left edge.",
+        "[design_match/major] [L-0002] The red flashlight's bright lens faces the camera rather than producing the designed tightly controlled beam grazing the mud.",
+        "[location_rules/major] [L-0016] White salt deposits throughout the marsh resemble repeated raised roots, coral or long cords rather than thin broken salt crust."
+      ],
+      "cost_usd": 0.1788,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T07:37:37+00:00"
+    },
+    {
+      "round": 1,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04a/20261019-083737/2-4-04a_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "recompose",
+      "issues": [
+        "[lighting/major] [L-0018] Sayed is illuminated by an obvious broad neutral frontal key even though the designed sources are weak starlight and a low red-filtered flashlight whose beam remains on the mud.",
+        "[period_accuracy/major] [L-0003] The ribbed cylindrical flashlight reads as a modern tactical flashlight rather than 1973 equipment.",
+        "[props_weapons/major] [L-0003] The chest rig shows more than the specified three principal closed-flap AK magazine pouches and reads as the wrong webbing configuration."
+      ],
+      "cost_usd": 0.1769,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T07:40:01+00:00"
+    },
+    {
+      "round": 2,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04a/20261019-084001/2-4-04a_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[period_accuracy/major] [L-0003] Sayed's visible upper-sleeve patch appears to carry four stacked chevrons instead of the specified three-chevron Egyptian sergeant rank."
+      ],
+      "cost_usd": 0.1952,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T07:42:18+00:00"
+    },
+    {
+      "round": 3,
+      "route": "recompose",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04a/20261019-084328/2-4-04a_01.png",
+      "score": 6.0,
+      "verdict": "fail",
+      "fix_route": "edit",
+      "issues": [
+        "[lighting/major] [L-0002] The small red-filtered flashlight required beside the radio, including its controlled beam grazing the mud, is completely absent. This removes both a named prop and the designed visual cue for the intercepted-signal beat."
+      ],
+      "cost_usd": 0.1774,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T07:45:33+00:00"
+    },
+    {
+      "round": 4,
+      "route": "edit",
+      "image": "productions/thunderbolt/ep01_romani/keyframes/02_act_two/2.4-04a/20261019-084533/2-4-04a_01.png",
+      "score": 8.0,
+      "verdict": "minor",
+      "fix_route": "edit",
+      "issues": [],
+      "cost_usd": 0.1182,
+      "lessons": [
+        "L-0001",
+        "L-0002",
+        "L-0003",
+        "L-0011",
+        "L-0013",
+        "L-0015",
+        "L-0016",
+        "L-0018"
+      ],
+      "at": "2026-10-19T07:46:22+00:00"
+    }
   ],
   "history": [
     {
@@ -742,6 +863,41 @@
       "action": "production meeting: action pass; cross: 1",
       "cost_usd": 0.012238,
       "tokens": 4123
+    },
+    {
+      "ts": "2026-10-19T07:37:37.779037+00:00",
+      "agent": "render",
+      "action": "compose → QA fail 5/10 (20261019-083520)",
+      "cost_usd": 0.1788,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T07:40:01.653344+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 6/10 (20261019-083737)",
+      "cost_usd": 0.1769,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T07:42:18.505033+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 6/10 (20261019-084001)",
+      "cost_usd": 0.1952,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T07:45:33.790331+00:00",
+      "agent": "render",
+      "action": "recompose → QA fail 6/10 (20261019-084328)",
+      "cost_usd": 0.1774,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T07:46:22.486072+00:00",
+      "agent": "render",
+      "action": "edit → QA minor 8/10 (20261019-084533)",
+      "cost_usd": 0.1182,
+      "tokens": 0
     }
   ]
 }

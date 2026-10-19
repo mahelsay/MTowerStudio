@@ -27,8 +27,8 @@ MTower is a single-pipeline production engine. It works, but every job (QA, ward
 | 3 | **Wave 2**: casting (extras), wardrobe, makeup & hair, set decoration, camera/DoP, stunt/action + production meeting | DONE for beat 2.4 (2026-10-18) — 9/9 shots `ready_to_compose`; open: library conflicts for the human (C-04 hair, WEAR_MUD vs LOC-0003, 2.4-03b prompt, missing flashlight/paper-scrap props, red flashlight vs LOOK_NIGHT_MOON) |
 | 3.5 | **Independence** (2026-10-18): MTower engine, library, production data and media imported once; every runtime path cut (audited: 0 MTower files touched); studio's own Foundry gets the generation models (East US 2 + Sweden Central media Foundry) | DONE — gpt-image-2.5-flare waits for MTower cutover (subscription limit 2) |
 | 3.6 | **Learning Keeper** (agent 15): capture → distill → advise → promote; seeded with 60 lessons (14 rules) from MTower history | DONE |
-| 3.7 | **Phase D — cast audit & redesign**: vision audit of 13 actors; 7 portraits re-designed (identity kept, QA 8.7–9.2), cards reconciled; new training sets + face models | IN PROGRESS |
-| 3.8 | **Render bridge + Video QA**: contract → engine keyframe → Image QA → Keeper → retry; clip QA | next |
+| 3.7 | **Phase D — cast audit & redesign**: vision audit of 13 actors; 7 portraits re-designed (identity kept, QA 8.7–9.2), cards reconciled; new training sets + face models | DONE (~$33): 10/13 actors ready; open: young actors' face models (ACT-0003/0008/0010) — portrait fallback meanwhile |
+| 3.8 | **Render bridge**: contract → crew brief + lessons → engine keyframe → Image QA → Keeper → fix loop | DONE (2026-10-19): `render` command; 2.4-04a composed 8/10. Next: Video QA, then render beat 2.4 |
 | 4 | **Wave 3**: VFX, Continuity, Sound, Dialect/Language, Editor/Post (+ Marketing when needed) | pending |
 | 5 | **Migrate** live production from MTower engine → Studio fleet, episode by episode | pending |
 

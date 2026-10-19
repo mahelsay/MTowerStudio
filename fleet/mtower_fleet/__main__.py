@@ -105,6 +105,19 @@ def main() -> int:
     ca.add_argument("--confirm-cost", type=float, default=None,
                     help="spend gate: must be >= the printed estimate (USD) or nothing runs")
 
+    rd = sub.add_parser("render", help="Render bridge: designed shots → keyframe → Image QA (+ lessons) → fix loop")
+    rd.add_argument("--beat-ref", required=True)
+    rd.add_argument("--production", default="thunderbolt")
+    rd.add_argument("--episode", default="ep01_romani")
+    rd.add_argument("--shots", help="comma-separated subset of the beat's shot ids")
+    rd.add_argument("--rounds", type=int, default=2, help="fix rounds after the first render (default 2)")
+    rd.add_argument("--redo", action="store_true", help="also re-render shots already composed")
+    rd.add_argument("--continue", dest="resume", action="store_true",
+                    help="continue the fix loop of render_review shots from their best render and its verdict")
+    rd.add_argument("--brief", action="store_true", help="free: print each shot's crew brief + lessons, render nothing")
+    rd.add_argument("--confirm-cost", type=float, default=None,
+                    help="spend gate: must be >= the printed estimate (USD) or nothing runs")
+
     args = ap.parse_args()
 
     if args.cmd == "run":
@@ -282,6 +295,8 @@ def main() -> int:
 
     elif args.cmd == "lessons":
         return _lessons_cmd(args)
+    elif args.cmd == "render":
+        return _render_cmd(args)
     elif args.cmd == "cast-audit":
         from . import audit_cast
         from datetime import datetime
@@ -298,6 +313,49 @@ def main() -> int:
         out = Path(__file__).resolve().parents[1] / "reports" / f"cast_audit_{datetime.now():%Y%m%d-%H%M%S}.json"
         out.write_text(json.dumps(res, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
         print(f"spend ≈ ${sum(r.get('_cost_usd', 0) for r in res):.3f} · report {out}")
+    return 0
+
+
+def _render_cmd(args) -> int:
+    from . import grounding, render, store
+
+    order = grounding.beat_shot_ids(args.production, args.episode, args.beat_ref)
+    by_id = {s.shot_id: s for s in store.list_contracts(args.production, args.episode) if s.beat_ref == args.beat_ref}
+    wanted = [x.strip() for x in args.shots.split(",")] if args.shots else order
+    todo = []
+    for sid in [i for i in order if i in wanted]:
+        s = by_id.get(sid)
+        if s is None or s.status not in ("ready_to_compose", "composed", "render_review"):
+            print(f"  skip {sid} ({'no contract' if s is None else s.status} — design it first)")
+        elif s.status in ("composed", "render_review") and not (args.redo or (args.resume and s.status == "render_review")):
+            print(f"  skip {sid} (already {s.status} — use --redo, or --continue for render_review)")
+        else:
+            todo.append(s)
+    if args.brief:
+        for s in todo:
+            design = grounding.find_shot(s.production, s.episode, s.shot_id) or {}
+            w, c = render._memory(design)
+            print(f"\n── {s.shot_id} ──\nCREW: {render.crew_brief(s)}\nPREVENTION ({', '.join(w.ids)}): "
+                  f"{render._prevention(w)}\nQA CHECKS ({', '.join(c.ids)}):\n{c.checks()}")
+        return 0
+    if not todo:
+        print("Nothing to render.")
+        return 0
+    est = render.estimate(len(todo), args.rounds)
+    print(f"Render beat {args.beat_ref}: {len(todo)} shot(s): {', '.join(s.shot_id for s in todo)}")
+    print(f"Estimate (ceiling): ${est:.2f} (≈${render.EST_ROUND} per round × {args.rounds + 1} rounds per shot; "
+          f"most shots stop after a pass)")
+    if args.confirm_cost is None or args.confirm_cost < est:
+        print(f"Not run. Re-run with --confirm-cost {est} to approve this spend.")
+        return 0
+    start = {s.shot_id: s.cost_usd_total for s in todo}
+    render.render_many(todo, rounds=args.rounds, budget=args.confirm_cost, resume=args.resume)
+    print("\n===== RENDER SUMMARY =====")
+    for s in todo:
+        best = max(s.renders, key=lambda r: r.score or 0) if s.renders else None
+        print(f"  {s.shot_id:8} {s.status:14} best {best.score if best else '-'}/10 · {len(s.renders)} render(s) · "
+              f"${s.cost_usd_total - start[s.shot_id]:.2f} · {best.image if best else ''}")
+    print("Approve the keepers in the review gallery (engine: mtower review).")
     return 0
 
 

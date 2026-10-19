@@ -630,12 +630,13 @@ def _child_anchor(lib: Library, prod: Production, composer: PromptComposer, beat
 
 def plan_compositions(lib: Library, prod: Production, shot_ids: list[str], variants: int = 1, quality: str | None = None,
                       strategy: str | None = None, face_pass: bool = True, actor_refs: bool = False,
-                      notes: dict[str, str] | None = None) -> list[Job]:
+                      notes: dict[str, str] | None = None, crew: dict[str, str] | None = None) -> list[Job]:
     """Hard compositions on Azure (gpt-image): the same body-only prompt as the ChatGPT route plus the props' reference
     photos, saved as a new 1280x720 keyframe batch; then (by default) the face pass puts the cast's faces on the leads.
 
     actor_refs: also attach the lead's approved anchor portrait so gpt-image draws his face directly (no face pass).
     notes: per shot, corrections to add to the prompt (e.g. the QA reviewer's fixes for the last render).
+    crew: per shot, the studio crew's production design (wardrobe, makeup, set, camera, action, lessons) for the prompt.
     Child shots go to FLUX.1 Kontext instead (gpt-image refuses children): short prompt, the child's casting photo as input."""
     m = costs.model("image_compose")
     quality = quality or m["payload"].get("quality", "medium")
@@ -670,6 +671,8 @@ def plan_compositions(lib: Library, prod: Production, shot_ids: list[str], varia
             refs = refs + [p for _, p in ranks]
             prompt += " " + COMPOSE_RANK_NOTE.format(who="; ".join(
                 f"{r} wears the insignia in the {_ordinal(len(refs) - len(ranks) + i)} attached image" for i, (r, _) in enumerate(ranks, 1)))
+        if crew and crew.get(shot_id):
+            prompt += " Production design from the crew (follow it): " + crew[shot_id].strip()
         if notes and notes.get(shot_id):
             prompt += " Corrections from the last review (make sure of these): " + notes[shot_id].strip()
         out = media_root() / "productions" / prod.key / "keyframes" / sl["part"] / shot_id / stamp

@@ -142,6 +142,19 @@ class GenerationPolicy(BaseModel):       # Engine / Orchestrator — not a craft
     face_pass: bool = True
 
 
+class RenderAttempt(BaseModel):          # Render bridge — one engine render + its Image QA verdict
+    round: int = 0
+    route: str = ""                      # compose | recompose | edit | face_swap
+    image: str = ""                      # path relative to media/
+    score: float | None = None
+    verdict: str = ""
+    fix_route: str = ""
+    issues: list[str] = Field(default_factory=list)
+    cost_usd: float = 0.0
+    lessons: list[str] = Field(default_factory=list)
+    at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat(timespec="seconds"))
+
+
 _LOG_LOCK = threading.Lock()  # Wave 2 departments run in parallel and share one shot
 
 
@@ -174,6 +187,7 @@ class Shot(BaseModel):
     escalations: list[str] = Field(default_factory=list)  # gate failures awaiting a human decision
     department_notes: list[str] = Field(default_factory=list)  # concerns about the LOCKED design; non-blocking
     lessons_applied: list[str] = Field(default_factory=list)   # Learning Keeper lesson ids given to the crew
+    renders: list[RenderAttempt] = Field(default_factory=list)  # render bridge: keyframe attempts + QA
     history: list[HistoryEntry] = Field(default_factory=list)
 
     def log(self, agent: str, action: str, cost_usd: float = 0.0, tokens: int = 0) -> None:
