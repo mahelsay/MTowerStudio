@@ -403,7 +403,7 @@ def _lessons_cmd(args) -> int:
     elif args.action == "advise":
         for sid in args.ids:
             design = grounding.find_shot(args.production, args.episode, sid)
-            adv = lessons.advise(lessons.tags_for_design(design, kind="keyframe"), limit=12)
+            adv = lessons.advise(lessons.tags_for_design(design, kind="keyframe"), limit=12, text=lessons.design_text(design))
             print(f"── {sid} ──\n{adv.text() or '(no lessons)'}\n")
     return 0
 

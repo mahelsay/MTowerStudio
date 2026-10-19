@@ -42,11 +42,14 @@ def common_context(shot, cat, resolved, prev_design: str, include_rules: bool = 
     st = s.set
     carried = sorted({m for w in s.wardrobe for m in re.findall(r"\bPRP-\d{4}\b", w.additions)})
     others = sorted(set(s.beat_props) - set(st.props) - set(carried))
+    named = sorted(set(st.props) | set(carried) | set(others))
+    prop_names = "; ".join(f"{p} = {(cat.props.get(p) or {}).get('name', '?').rstrip(':')}" for p in named)
     sett = (f"location {st.location_id or '—'}" + (f", inside {st.vehicle_interior}" if st.vehicle_interior else "")
             + f", vehicles {st.vehicles or '—'}, props {st.props or '—'}"
             + (f", carried by characters (costume props, locked): {carried}" if carried else "")
             + (f", other props of this beat (OPTIONAL, not locked for this shot — mostly carried by characters who "
-               f"are off-screen here; never required): {others}" if others else ""))
+               f"are off-screen here; never required): {others}" if others else "")
+            + (f"\n- prop library names (what each id IS): {prop_names}" if prop_names else ""))
     loc_rules = (cat.locations.get(st.location_id, {}) or {}).get("qa_rules") or []
     cam = (f"{s.camera.shot_size} / {s.camera.lens} / {s.camera.movement} / looks {s.camera.look_key} / "
            f"{s.camera.format}; lip-sync {s.policy.lip_sync}; face visible {s.policy.face_pass}")

@@ -63,8 +63,9 @@ def crew_brief(s: Shot) -> str:
 
 def _memory(design: dict) -> tuple[lessons.Advice, lessons.Advice]:
     tags = lessons.tags_for_design(design, kind="keyframe")
-    return (lessons.advise(tags, department="prompting", kind="keyframe", limit=6),
-            lessons.advise(tags, department="image_qa", kind="keyframe", limit=8))
+    txt = lessons.design_text(design)
+    return (lessons.advise(tags, department="prompting", kind="keyframe", limit=6, text=txt),
+            lessons.advise(tags, department="image_qa", kind="keyframe", limit=8, text=txt))
 
 
 def _prevention(adv: lessons.Advice) -> str:

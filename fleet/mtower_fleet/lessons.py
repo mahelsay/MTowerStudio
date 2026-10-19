@@ -45,6 +45,12 @@ def _now() -> str:
 
 # --------------------------------------------------------------------------------------------- tags
 
+def design_text(design: dict | None) -> str:
+    """The words of a shot design that situational lessons match against (prompt, motion, notes, assets, extras)."""
+    d = design or {}
+    return " ".join(str(d.get(k, "")) for k in ("prompt", "motion", "notes", "extras", "assets", "beat_title", "face"))
+
+
 def tags_for_design(design: dict | None, kind: str = "", model: str = "") -> list[str]:
     """Tags of a shot design (shot-list entry): location, look, wear, lens, size, cast, props, kind, model."""
     d = design or {}
@@ -204,9 +210,11 @@ class Advice:
         return "\n".join(f"- [{l['id']}] {l['check']}" for l in self.lessons if l.get("check"))
 
 
-def advise(tags: list[str], *, kind: str = "", department: str = "", limit: int = 8) -> Advice:
-    """Lessons relevant to a step: entity-tag overlap first, then general lessons for the same kind/department."""
+def advise(tags: list[str], *, kind: str = "", department: str = "", limit: int = 8, text: str = "") -> Advice:
+    """Lessons relevant to a step: entity-tag overlap first, then general lessons for the same kind/department.
+    A lesson with `keywords` applies only when the shot's design text mentions one of them (situational lessons)."""
     tagset = set(tags)
+    low = (text or "").lower()
     scored = []
     for l in load_lessons():
         if l.get("status") == "retired":
@@ -216,6 +224,9 @@ def advise(tags: list[str], *, kind: str = "", department: str = "", limit: int 
         if kind and kinds and kind not in kinds and "any" not in kinds:
             continue
         if department and depts and department not in depts and "any" not in depts:
+            continue
+        kws = ap.get("keywords") or []
+        if kws and not any(k.lower() in low for k in kws):
             continue
         entity_hits = len({t for t in ltags & tagset if not t.startswith(("KIND:", "MODEL:"))})
         general = not {t for t in ltags if not t.startswith(("KIND:", "MODEL:", "SIZE:"))}

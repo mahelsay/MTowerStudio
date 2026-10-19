@@ -40,6 +40,9 @@ class LearningKeeper(Agent):
         "- kinds: from " + ", ".join(KINDS) + ".\n"
         "- tags: ONLY copy tags that appear on the cited incidents and that the lesson truly depends on (a location, "
         "prop, look, character, lens, size, model). Leave tags EMPTY for a general lesson that applies everywhere.\n"
+        "- keywords: for a SITUATIONAL lesson (it only matters when the shot shows a particular thing — an aircraft, "
+        "a flashlight, a child, a missile, a shop), 2-6 lowercase words that would appear in such a shot's design text. "
+        "Leave EMPTY only for lessons that truly apply to every shot.\n"
         "- Merge aggressively: never create a lesson that duplicates an existing one; attach instead.\n"
         "- Never invent historical facts; lessons are about craft and process."
     )
@@ -56,7 +59,7 @@ class LearningKeeper(Agent):
             f" | tags {l.get('applies_to', {}).get('tags', [])}" for l in existing) or "none yet"
         user = (f"EXISTING LESSONS:\n{lessons_txt}\n\nINCIDENTS:\n" + "\n".join(brief(i) for i in incidents)
                 + "\n\nReturn JSON: { updates: [ { lesson_id, incident_ids: [..] } ], new: [ { title, problem, cause, "
-                  "prevention, check, kinds: [..], departments: [..], tags: [..], incident_ids: [..] } ], "
+                  "prevention, check, kinds: [..], departments: [..], tags: [..], keywords: [..], incident_ids: [..] } ], "
                   "skip: [ { incident_id, reason } ] }. Every incident id must appear exactly once.")
         return self.run_json(user)
 
@@ -97,7 +100,8 @@ def _apply(data: dict, batch: list[dict], lessons: list[dict]) -> tuple[int, int
              "prevention": str(n["prevention"])[:400], "check": str(n.get("check", ""))[:250],
              "applies_to": {"kinds": [k for k in n.get("kinds") or [] if k in KINDS] or ["any"],
                             "departments": [d for d in n.get("departments") or [] if d in DEPARTMENTS],
-                            "tags": tags},
+                            "tags": tags,
+                            "keywords": [str(k).lower() for k in n.get("keywords") or []][:6]},
              "evidence": [], "targets": [], "proven_fixes": 0, "applied": {"passes": 0, "fails": 0},
              "created_at": store._now(), "source": "keeper"}
         attach(l, ids)

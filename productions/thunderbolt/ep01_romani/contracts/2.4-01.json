@@ -126,13 +126,14 @@
       "wear_state": "WEAR_MUD",
       "additions": "short military haircut, backpack field radio with a whip antenna (PRP-0007); wire-rimmed glasses taped at the hinge",
       "visible_details": [
-        "Bare head with short black military haircut; wire-rimmed glasses with tape at one hinge, catching a faint moon edge.",
-        "Sand-khaki cotton jacket with two buttoned chest pockets, sleeves rolled to the forearms; Soviet-pattern khaki canvas chest rig with three closed-flap magazine pouches, cotton straps and plain metal buckles.",
-        "PRP-0007 period manpack radio strapped high on his back, above the waterline; whip antenna visible; handset held firmly to his ear.",
-        "Aluminium canteen in canvas cover on web belt; no modern tactical equipment.",
-        "Black leather boots and lower trouser legs saturated only to mid-shin; dark mud-and-brine smears, wet splash marks rising irregularly to the knees and slightly above from movement."
+        "Bare head with short black regulation hair; wire-rimmed glasses with visibly taped hinge.",
+        "Sand-khaki 1973 cotton field jacket with two buttoned chest pockets, sleeves rolled to forearms; plain khaki collar.",
+        "1970s khaki canvas chest rig with three closed-flap AK pouches, cotton straps and metal buckles; canvas-covered aluminium canteen on web belt.",
+        "Soviet-pattern backpack radio strapped high above the brine, upright whip antenna and wired handset pressed to his right ear.",
+        "Period AKM with fixed wooden stock, wood handguard and curved magazine secured high across his chest on a simple period sling; no optics or modern accessories.",
+        "Trousers soaked dark with mud and brine to above the knees, black leather boots emerging from mid-shin water; wet jacket splashes and falling droplets. [L-0003]"
       ],
-      "notes": "WEAR_MUD reads as damp, dark lower legs and restrained wet splatter on jacket hem and trousers; shallow-water movement only, with no above-knee soaking or generalized dripping. First shot of beat: establish this wear state."
+      "notes": "First shot of beat: establish the radio harness and chest-slung AKM as stable, functional load carriage; handset hand remains free of the rifle while he listens."
     },
     {
       "target": "C-01",
@@ -140,48 +141,56 @@
       "wear_state": "WEAR_MUD",
       "additions": "Egyptian captain's rank: exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, plain khaki collar with no collar tabs or badges, compass on a lanyard (PRP-0008)",
       "visible_details": [
-        "Bare head with short black hair; plain khaki collar with no tabs, badges or chest eagle.",
-        "Exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap, legible in the medium side-tracking view.",
-        "Sand-khaki cotton jacket with two buttoned chest pockets and rolled forearm sleeves; khaki canvas chest rig with three closed-flap pouches, cotton straps and metal buckles.",
-        "PRP-0008 compass on its lanyard, kept visible at the upper chest without a modern-looking device.",
-        "Canvas-covered aluminium canteen at web belt; black leather boots and lower trouser legs wet and dark to mid-shin, with mud/brine smears and modest splashes reaching knee height or slightly above."
+        "Bare head with short side-parted black hair; full handlebar mustache remains visible in moonlit profile.",
+        "Sand-khaki 1973 cotton field jacket with two buttoned chest pockets, sleeves rolled to forearms; plain khaki collar with no tabs or badges.",
+        "Exactly three small gold five-pointed stars in a row on each plain khaki shoulder strap; no chest eagle badge.",
+        "1970s khaki canvas chest rig with three closed-flap AK pouches, cotton straps and simple metal buckles; canvas-covered aluminium canteen on web belt.",
+        "Lensatic compass hanging on its lanyard at the chest; topographic map retained with the compass kit, not displayed as readable text.",
+        "Period AKM with fixed wooden stock, wood handguard and curved magazine carried high at the chest on a plain period sling, clear of the brine and not blocking his forward scan.",
+        "Trousers soaked dark with mud and brine above the knees, wet-splashed jacket, dripping black leather boots in mid-shin water. [L-0003]"
       ],
-      "notes": "WEAR_MUD remains consistent with shallow mid-shin marsh: wet lower legs, muddy boot tops, restrained moving splashes, and a damply spotted jacket hem; no thigh-deep immersion reading. First shot of beat: establish this wear state."
+      "notes": "First shot of beat: captain rank stars and compass lanyard must read in the medium lateral two-shot; prior soaked-above-knee mud remains credible despite the current mid-shin brine."
     }
   ],
   "makeup": [
     {
       "target": "C-04",
-      "skin_state": "Light wheat skin damp with exertion; freckles remain visible across nose and cheeks beneath a restrained brine sheen, with fine mud flecks at jaw and lower cheeks.",
-      "hair_state": "Short black military hair, bare-headed, damp and flattened at the temples from brine and exertion; curled mustache and light stubble wet but intact.",
+      "skin_state": "Light wheat skin is damp and cold-sheened under the moon, with black mud flecks on the lower cheeks, jaw and rolled forearms; fine brine residue catches faintly in his freckles, eyebrows and mustache. No blood or visible wounds.",
+      "hair_state": "Short black regulation hair is damp, flattened at the temples and lightly mud-specked near the hairline; short neat service mustache wet at the edges. Preserve oval face, prominent cheekbones, freckles and light green-grey eyes behind the wire-rimmed glasses.",
       "injuries": [],
-      "notes": "Moonlight catches moisture on brow and cheekbones; no salt crust yet, only fresh marsh dampness and mud."
+      "notes": "Opening expression: focused narrowed eyelids behind the glasses, brows drawn slightly inward, gaze angled down and forward toward his route rather than at camera; lips closed and lightly pressed, jaw tense with contained concentration. At the incoming reply, his face tightens subtly without opening his mouth. No camera acknowledgement."
     },
     {
       "target": "C-01",
-      "skin_state": "Medium olive skin lightly sweat-sheened in cold moonlight, with sparse muddy brine specks along cheek and jaw; face remains clean enough to read his intense eyes.",
-      "hair_state": "Short neatly side-parted black hair, dampened and slightly flattened at the hairline while retaining its disciplined part; thin handlebar mustache intact.",
+      "skin_state": "Medium olive skin has a damp moonlit sheen, with restrained black-mud speckling along the cheekbones, chin, neck and rolled forearms; brine dampens the eyebrows and mustache, with no blood or visible wounds.",
+      "hair_state": "Short neatly side-parted black hair remains recognizable but is damp and slightly flattened by marsh humidity; full dark handlebar mustache and small lower-lip tuft are wet with faint mud flecks. Preserve long narrow face, hollow cheeks, pointed chin and mustache shape.",
       "injuries": [],
-      "notes": "Subtle fatigue in the hollow cheeks and under-eyes; fresh wet mud only, no dried salt crust."
+      "notes": "Opening expression: alert open-but-shadowed dark eyes fixed ahead, restrained furrow between the brows, closed neutral mouth beneath the mustache, and controlled jaw tension. He maintains forward vigilance as Mahmoud pauses; no camera acknowledgement."
     }
   ],
   "set": {
     "location_id": "LOC-0003",
     "vehicle_interior": "",
     "vehicles": [],
-    "props": [],
+    "props": [
+      "PRP-0008"
+    ],
     "hand_props": [
       "PRP-0007"
     ],
-    "dressing": [
-      "thin broken white salt crust over black mud",
-      "mid-shin sheets of still brine reflecting moonlight",
-      "low scattered salt ridges and irregular mud fissures",
-      "sparse flattened marsh scrub, dark and widely spaced",
-      "faint disturbed wading trails closing into brine behind them"
+    "hand_items": [
+      "Mahmoud’s period-correct fixed-wood-stock AKM, chest-slung high and dry while his right hand holds the radio handset",
+      "Shalabi’s period-correct fixed-wood-stock AKM, held or slung high at chest level, clear of the brine"
     ],
-    "set_state": "An empty, featureless night marsh remains mostly firm salt-crusted mud with shallow mid-shin brine in the low pockets; no debris, structures, vehicles, or other troops break the horizon.",
-    "notes": "PRP-0007 is strapped high on Mahmoud’s back; he actively holds its handset tight to his ear, with the whip antenna clear of the brine. Keep Shalabi’s locked PRP-0008 carried but not handled or foregrounded."
+    "dressing": [
+      "thin broken white salt crust plates over black suctioning mud",
+      "mid-shin sheets and narrow pools of still brine reflecting faint moonlight",
+      "low irregular salt ridges and wet black mud seams",
+      "sparse, low salt-marsh scrub silhouettes, widely scattered and nearly black against the horizon",
+      "fresh boot depressions with fractured crust at each contact point; lifted boots leave heavy irregular black mud clumps, a few short strands, and falling droplets [L-0016]"
+    ],
+    "set_state": "An empty, featureless Tina Plain salt marsh at night, with shallow mid-shin brine and black mud beneath fractured salt crust; no vehicles, structures, additional people, or readable markings are visible.",
+    "notes": "PRP-0007 is actively used by Mahmoud: olive-drab Soviet-pattern pack high above the waterline, upright whip antenna, analog wired handset at his ear [L-0028]. PRP-0008 remains secured high and dry on Shalabi’s chest kit, not handled during the shot. Mahmoud has no visible rank device or sleeve chevrons; do not imply sergeant rank [L-0003]."
   },
   "camera": {
     "shot_size": "MS",
@@ -192,23 +201,23 @@
       "LOOK_NIGHT_MOON"
     ],
     "format": "generate 16:9, deliver 2.39:1",
-    "light": "Natural moonlight and starlight only: a cool blue-black, high-side back/three-quarter moon key from frame rear, catching wet shoulders, the radio silhouette, brine ripples and salt crust; let faces fall into soft, readable shadow with no artificial fill.",
-    "exposure_note": "Hold a low-key night exposure: retain detail in Mahmoud’s face, handset at his ear, Captain Shalabi’s scanning eyes, and the high-strapped radio while preserving deep black-blue negative space; moonlit reflections must not clip or read as daylight.",
-    "framing_note": "50mm lateral medium two-shot tracking alongside them, both men side by side in mid-shin brine; keep both faces/eyes, Mahmoud’s handset and elevated manpack radio within the central crop-safe middle band. Preserve empty marsh and a low, featureless horizon around them; no lip-sync emphasis."
+    "light": "Moonlight and starlight only: a cool blue-silver, high side/back key from screen left rakes across wet uniforms, brine, and salt crust; faces receive only the same weak moon source, with no artificial or warm frontal fill [L-0018].",
+    "exposure_note": "Hold the blue-black night low-key but readable: expose Mahmoud’s handset-side face, Captain Shalabi’s scanning profile, and the high radio pack about 1 stop under a normal night key; let the horizon and marsh fall toward near-black while retaining fine wet speculars and 500T grain.",
+    "framing_note": "50mm medium lateral tracking two-shot from roughly 3 m away, moving parallel as both men travel screen right; Mahmoud with handset to ear is the dominant visual subject, with Shalabi beside him in the same plane. Keep both faces, Mahmoud’s raised handset, the high manpack radio, and Shalabi’s forward-scanning hands inside the central crop-safe middle 75% height for the 16:9-to-2.39:1 delivery; maintain natural adult proportions, shoulders 2.5–3 head widths [L-0001] [L-0013]."
   },
   "action": {
     "applies": true,
-    "choreography": "Mahmoud and Shalabi advance abreast in measured, quiet steps through mid-shin brine; Mahmoud keeps the radio load upright and the handset sealed to his ear while Shalabi scans forward. On the incoming reply, Mahmoud briefly checks his step without stopping the formation, and Shalabi registers the change while maintaining forward vigilance.",
-    "weapon_handling": "",
-    "movement": "Lateral tracking pace matches their slow wade; each man places boots carefully through mud, making restrained low splashes. Radio remains strapped high above the waterline; the whip antenna flexes lightly with each step.",
+    "choreography": "Open with both men already standing mid-shin in brine over fractured salt and black mud: Mahmoud’s radio is strapped high and dry, his right hand seals the wired handset to his ear, while Shalabi maintains a close side-by-side interval. Mahmoud’s brief listening halt makes Shalabi check his change in pace without turning from the route; neither acknowledges camera. [L-0002] [L-0011] [L-0015]",
+    "weapon_handling": "Mahmoud’s period fixed-wood-stock AKM stays securely high on its chest sling, muzzle elevated and clear of the brine while his right hand holds the handset; no trigger contact. Shalabi carries his fixed-wood-stock AKM high at chest level on its sling, muzzle up and dry as he scans ahead, with no modern accessories or firing action.",
+    "movement": "Slow, deliberate parallel steps screen right; each boot lifts free with suction, breaks the salt rim, and settles back into mid-shin brine, leaving black-mud clumps and small low splashes. Mahmoud pauses for less than a beat without lowering the radio or weapon, then both resume at the same measured pace.",
     "beats": [
-      "Both men enter frame already moving side by side.",
-      "Mahmoud takes deliberate mid-shin steps, one hand holding the handset to his ear.",
-      "Shalabi keeps his shoulders forward and eyes searching the empty marsh ahead.",
-      "Mahmoud tightens and momentarily slows at the coded transmission.",
-      "They resume the same controlled pace, maintaining abreast spacing."
+      "Opening: both are mid-shin in brine, advancing screen right; radio and both elevated AKM muzzles remain dry.",
+      "Mahmoud plants a careful step, keeps narrowed listening eyelids and a down-forward off-camera gaze on the handset side; brows lightly pinch, lips stay sealed, jaw tightens.",
+      "Shalabi takes the matching step with eyes fixed ahead, slight brow furrow, closed neutral mouth, and controlled facial tension; his high-slung AKM remains clear of water.",
+      "The incoming reply arrests Mahmoud for a brief tightening pause; handset remains pressed to his ear and whip antenna stays upright.",
+      "Shalabi registers Mahmoud’s check through the shared pause without looking toward camera, then both continue their slow crossing."
     ],
-    "safety_note": "Use stable, prepared shallow footing with concealed uneven pockets marked for performers; keep brine below the radio pack and protect the handset/cable from snagging on mud or reeds."
+    "safety_note": "Maintain stable, shallow-footed steps on concealed uneven mud; keep the radio, handsets, and both AKM muzzles above brine throughout, with only small controlled splash displacement."
   },
   "generation_policy": {
     "lip_sync": "avoid",
@@ -477,13 +486,321 @@
         "The radio remains elevated above the waterline throughout, consistent with the production water-and-load rule."
       ],
       "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "C-04 is identified as Corporal Mahmoud, but his rank device is not specified. This fails the binding requirement to state the exact rank device for every visible commando [L-0003], while Set separately assigns him three sleeve chevrons, which the production rules define as a sergeant's insignia."
+      ],
+      "revise_instructions": [
+        "Specify C-04's correct 1973 corporal rank treatment from the approved character/costume reference, including device count, shape, and placement if visible at MS. Explicitly prohibit the three sergeant chevrons unless C-04's locked rank is formally changed; preserve his plain khaki collar. [L-0003]"
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "The makeup entries preserve the actors' features and match the fresh wet-mud wear state, but they do not provide the required exact opening facial performance: eyelids, brows, precise gaze, mouth shape, facial tension, and an explicit instruction against camera acknowledgement [L-0011]."
+      ],
+      "revise_instructions": [
+        "For both C-04 and C-01, add exact opening facial-direction details: eyelid position, brow tension, gaze direction, closed-mouth shape, and restrained emotional state. Mahmoud must listen intently without looking to camera; Shalabi must maintain forward vigilance without camera acknowledgement. [L-0011]"
+      ]
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "Set incorrectly assigns C-04 exactly three sleeve chevrons. The production rules identify three chevrons as a sergeant's rank, conflicting with locked cast identification of C-04 as Corporal Mahmoud.",
+        "C-01 is described as actively making a compass/map check, but no map is placed and this invents a hand action that conflicts with the action plan and wardrobe, both of which keep the compass low/on its lanyard while he scans ahead.",
+        "The shot needs the commandos' period AKMs carried clear of brine and mud, but neither AKM is placed as a hand item or otherwise accounted for. The blank hand_items list therefore does not support the required commando load or action.",
+        "The binding red-filtered flashlight lesson is not supported by a placed practical/source, despite the camera lighting plan needing its localized red spill [L-0014]."
+      ],
+      "revise_instructions": [
+        "Remove the three-sergeant-chevron instruction for C-04 and align his rank treatment with the corrected wardrobe specification. [L-0003]",
+        "Keep PRP-0008 as C-01's low, secured lanyard compass; remove the invented map check and do not introduce an unlisted map.",
+        "Add each used non-library period AKM as a hand_item and specify both rifles are securely slung/held high at chest level, entirely clear of the mid-shin brine and mud. Do not add unsupported heavier weapons.",
+        "Place or define the subtle red-filtered flashlight practical just off-frame, with only localized spill on the near face, mouth, neck, and adjacent uniform; it must not read as a warm frontal fill. [L-0014]"
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "revise",
+      "reasons": [
+        "The moonlit lateral MS, crop-safe framing, and underexposure note match the locked design, but the lighting explicitly excludes all artificial fill and omits the required subtle red-filtered practical spill across the near face, mouth, neck, and adjacent uniform [L-0014]."
+      ],
+      "revise_instructions": [
+        "Retain the cold blue moon key and dark readable exposure, but add the subtle, localized red-filtered flashlight spill mandated by [L-0014], motivated by the off-frame practical placed by Set. Keep it narrow and subordinate to moonlight; do not turn it into broad warm frontal fill."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The wading choreography correctly keeps the water mid-shin and the radio elevated, but it omits the precise eyelid, brow, gaze, mouth, facial-tension, and no-camera-acknowledgement instructions required for the opening frame [L-0011].",
+        "Weapon handling is blank even though the commandos require period AKMs and all weapons/loads must remain clear of marsh water and mud. The action therefore does not establish how the rifles are carried while Mahmoud uses both hands for handset and radio strap."
+      ],
+      "revise_instructions": [
+        "Add opening performance direction: Mahmoud's eyelids narrow slightly, brow draws in, gaze stays forward/downrange rather than at camera, lips close in a tight listening line, and his face tightens with contained concern; Shalabi's eyes remain forward-scanning, brow alert but controlled, jaw set, mouth closed, with neither man acknowledging camera. [L-0011]",
+        "Specify period AKMs carried high and clear of water: Mahmoud's rifle remains securely slung across his chest/shoulder while his left hand holds the handset and right braces the radio strap; Shalabi's AKM is slung high at chest level while his hands remain free to scan. Keep handling restrained and do not invent combat."
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The set notes state that Mahmoud has no sleeve chevrons, directly contradicting Wardrobe's specified visible corporal insignia of exactly two point-down cloth chevrons. This creates an unresolved in-frame rank-insignia conflict."
+      ],
+      "revise_instructions": [
+        "Replace the statement that Mahmoud has no sleeve chevrons with a requirement for exactly two small point-down corporal chevrons on his visible upper sleeve. Retain the clarification that he is not a sergeant and therefore does not wear the three-chevron sergeant insignia. [L-0003]"
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The set notes describe PRP-0008 as a “lanyarded compass and map,” but the locked/approved character addition identifies PRP-0008 only as Shalabi’s compass. If a separate map is intended as an actively carried item, it has no library ID and must be declared in hand_items; otherwise it is an unsupported addition that conflicts with the approved prop description.",
+        "All other set dressing and hand-prop placement support the locked shallow, mid-shin marsh crossing and keep the radio and compass above the brine."
+      ],
+      "revise_instructions": [
+        "Resolve PRP-0008’s description: either describe it only as Shalabi’s lanyarded compass, consistent with the locked/approved material, or explicitly add an un-ID’d map to hand_items and clarify that it is carried with the compass at chest height. Do not leave an undesignated map implied within PRP-0008."
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "C-04's required corporal insignia is not included in his wardrobe entry: he must visibly wear three chevrons on the sleeve under the 1973 Egyptian rank rules and [L-0003].",
+        "Both wardrobe entries say boots/trousers are soaked with mud and brine above the knees. This conflicts with the locked shallow-marsh rule: standing men are mostly mid-shin in brine and never above the knee."
+      ],
+      "revise_instructions": [
+        "Add C-04's exact rank device: three sleeve chevrons, with a plain khaki collar and no chest eagle badge.",
+        "Change the wetness description to mid-shin brine immersion, with irregular mud splashes/smears above that level only where plausible; do not describe brine soaking clothing above the knees."
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "The opening expressions are only described generally. Binding lesson [L-0011] requires exact eyelid, brow, gaze, mouth shape, facial tension, emotional state, and an explicit prohibition on camera acknowledgement for each visible man."
+      ],
+      "revise_instructions": [
+        "For Mahmoud and Shalabi, specify the opening eyelid set, brow position, gaze direction, mouth shape, and facial tension; state Mahmoud listens with no camera acknowledgement and Shalabi scans ahead with no camera acknowledgement. Retain the existing signature features and non-graphic wet/mud state. [L-0011]"
+      ]
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "PRP-0008 is described as being carried/held by C-01 and the action has him holding its map and compass, but Set classifies it as a general prop rather than a hand prop. Under the set definition-of-done, a library prop used by an actor in the shot must be listed in hand_props.",
+        "The locked shot prop list contains PRP-0007, while the Set props field instead lists PRP-0008. Although PRP-0007 is described correctly in hand_props and notes, the inventory should clearly distinguish the shot prop from C-01's carried costume prop."
+      ],
+      "revise_instructions": [
+        "List PRP-0008 in hand_props as C-01's carried compass-and-map set, since he holds it clear of the brine in this action. Keep PRP-0007 in hand_props for C-04's actively used radio.",
+        "Align the prop inventory with the lock: explicitly account for PRP-0007 as the locked shot prop and PRP-0008 as C-01's locked carried costume prop; do not leave either unattended in the marsh."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The action has C-01 actively holding the folded map and lensatic compass, but the Set department does not classify PRP-0008 as a hand prop, creating a handled-prop cross-department mismatch.",
+        "The opening physical pose is concrete, but the action does not supply the exact opening facial/eye behavior required by [L-0011]."
+      ],
+      "revise_instructions": [
+        "Coordinate with Set so PRP-0008 is listed as C-01's hand prop while held clear of the water.",
+        "Add exact opening eye, brow, eyelid, mouth, and no-camera-acknowledgement performance direction for both men, preserving Mahmoud's concentrated listening and Shalabi's forward vigilance. [L-0011]"
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "C-04 is locked as a corporal, but the wardrobe specifies exactly three chevrons and calls them corporal chevrons. The production rank rule assigns three sleeve chevrons to a sergeant, so this creates a rank-insignia error.",
+        "Neither commando is assigned the required period Egyptian AKM with fixed wooden stock, despite the production rules specifying AKMs for Egyptian commandos."
+      ],
+      "revise_instructions": [
+        "Replace C-04's three-chevron insignia with a verified 1973 Egyptian corporal insignia; do not use the sergeant's three-chevron device.",
+        "Add a period-correct fixed-wood-stock AKM for each commando, carried securely high on a sling/shoulder or otherwise clear of the mid-shin brine without obstructing the locked radio, handset, map, or compass actions."
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The required individual AKMs for the two Egyptian commandos are not placed or tracked as carried items. Set currently tracks the radio and compass/map but provides no period weapon allocation for either man."
+      ],
+      "revise_instructions": [
+        "Add one period-correct AKM with fixed wooden stock for C-04 and one for C-01 as carried hand/costume items, with each assigned to its actor and kept above the brine. Preserve PRP-0007 as C-04's actively used radio and PRP-0008 as C-01's carried compass/map."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The action does not establish the required AKMs or how they remain above water while both men's hands are occupied by the radio, handset, map, and compass.",
+        "The movement sentence says Mahmoud keeps the map and compass elevated, but the choreography and locked character additions assign those items to Captain Shalabi."
+      ],
+      "revise_instructions": [
+        "Specify that each man's period-correct fixed-wood-stock AKM is secured high on a sling/shoulder and remains clear of the brine throughout the wade, without inventing combat activity.",
+        "Correct the equipment assignment so Shalabi, not Mahmoud, keeps the map and compass elevated; Mahmoud's relevant equipment is the high-strapped radio and handset."
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "The set plan omits the subtle red-filtered flashlight required just off-frame by binding lesson [L-0014]."
+      ],
+      "revise_instructions": [
+        "Add a period-plausible subtle red-filtered flashlight positioned just off-frame, with tightly localized red spill on the near face, mouth, neck, and adjacent uniform while blue moonlight remains dominant in the marsh shadows, per [L-0014]."
+      ]
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "revise",
+      "reasons": [
+        "The visible kit does not specify an AKM rifle for either Egyptian commando, despite the production requirement that Egyptian commandos carry period-correct fixed-wood-stock AKMs and that weapons remain clear of marsh water. C-04 can retain the handset at his ear while an AKM is secured high on its sling; C-01 needs an equally clear, period-correct carry state."
+      ],
+      "revise_instructions": [
+        "Add a period-correct AKM with fixed wooden stock for each man, with each rifle carried high and clear of the mid-shin brine: Mahmoud's securely chest-slung while he holds the handset, and Shalabi's retained high at the chest/on a sling without obstructing his forward scan. Do not introduce modern rifle furniture, optics, slings, or accessories."
+      ]
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "revise",
+      "reasons": [
+        "The opening performance specification lacks the exact eyelid, brow, gaze, mouth shape, and explicit no-camera-acknowledgement instruction required by [L-0011]. Existing general descriptions of fatigue and forward focus do not make the incoming-signal reaction reproducible."
+      ],
+      "revise_instructions": [
+        "For C-04, specify at opening: focused narrowed eyelids behind the glasses, brows drawn slightly inward, gaze angled down/forward rather than at camera, lips closed and lightly pressed, jaw held tense in contained concentration; explicitly forbid camera acknowledgement. For C-01, specify alert open-but-shadowed eyes fixed ahead, a restrained furrow between the brows, closed neutral mouth beneath the mustache, controlled jaw tension, and no camera acknowledgement. Preserve the stated damp brine-and-mud skin state. [L-0011]"
+      ]
+    },
+    {
+      "target_field": "set",
+      "verdict": "revise",
+      "reasons": [
+        "Set assigns three sleeve chevrons to C-04 Corporal Mahmoud. The production rank rule identifies three chevrons as a sergeant's insignia, so this wrongly changes the corporal's rank and conflicts with wardrobe's statement that no rank device is visible.",
+        "No AKMs are placed despite the production requirement for Egyptian commandos to carry period-correct AKMs and keep weapons clear of water. Because no rifle library IDs are supplied, carried rifles must be declared in hand_items under the set definition."
+      ],
+      "revise_instructions": [
+        "Remove the three-chevron sleeve instruction for Corporal Mahmoud. Keep his corporal rank device out of view in this lateral medium framing, consistent with wardrobe; do not substitute sergeant chevrons. [L-0003]",
+        "Add the two period-correct fixed-wood-stock AKMs as no-library-ID carried hand_items: Mahmoud's rifle chest-slung high and dry while he uses the radio handset, and Shalabi's rifle held or slung high at chest level, also clear of brine. Keep both weapons out of the water and do not add modern accessories."
+      ]
+    },
+    {
+      "target_field": "camera",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "revise",
+      "reasons": [
+        "The action leaves weapon_handling blank and never establishes the required period-correct AKM carry state for either commando. This fails to demonstrate that their weapons remain clear of marsh water during the crossing.",
+        "The action does not specify the exact opening eyelid, brow, gaze, mouth, facial-tension, and no-camera-acknowledgement performance required by [L-0011]."
+      ],
+      "revise_instructions": [
+        "Add concrete AKM handling: Mahmoud's fixed-wood-stock AKM remains securely chest-slung, muzzle elevated and dry while his right hand holds the wired handset to his ear; Shalabi keeps his fixed-wood-stock AKM high at chest level/on a high sling, muzzle clear of the brine, while scanning ahead. No modern accessories or combat behavior beyond the tense crossing.",
+        "Add opening facial performance: Mahmoud has narrowed listening eyelids, lightly pinched brows, a down-forward/off-camera gaze, sealed pressed lips, and restrained jaw tension; Shalabi has eyes fixed ahead, a slight brow furrow, closed neutral mouth, and controlled facial tension. Explicitly state neither acknowledges the camera. [L-0011]"
+      ]
+    },
+    {
+      "target_field": "wardrobe",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "makeup",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "set",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
+    },
+    {
+      "target_field": "action",
+      "verdict": "pass",
+      "reasons": [],
+      "revise_instructions": []
     }
   ],
-  "cost_usd_total": 0.279378,
+  "cost_usd_total": 0.88842,
   "escalations": [],
   "department_notes": [
-    "makeup: C-04’s corrected short black commando haircut conflicts with the cast library’s light-brown wavy-hair signature, but the locked Egyptian commando hair rule takes precedence."
+    "action: The locked shallow-marsh rule specifies water no higher than knee depth, while the supplied wardrobe prep calls for trousers soaked above the knees; depict this as upward splash and drips from steps, not standing water depth.",
+    "library: no prop library entry yet for: Mahmoud’s period-correct fixed-wood-stock AKM, chest-slung high and dry while his right hand holds the radio handset, Shalabi’s period-correct fixed-wood-stock AKM, held or slung high at chest level, clear of the brine",
+    "set: The locked wardrobe specifies trousers wet above the knees while the location limits standing water to mid-shin; retain mid-shin water and read the higher wetness as earlier splash, brine streaking, and mud transfer rather than deeper wading."
   ],
+  "lessons_applied": [
+    "L-0001",
+    "L-0002",
+    "L-0003",
+    "L-0011",
+    "L-0013",
+    "L-0015",
+    "L-0016",
+    "L-0018",
+    "L-0028",
+    "L-0033",
+    "L-0049",
+    "L-0053"
+  ],
+  "renders": [],
   "history": [
     {
       "ts": "2026-10-16T13:59:09.170514+00:00",
@@ -743,6 +1060,307 @@
       "action": "production meeting: wardrobe pass, makeup pass, set pass, camera pass, action pass; cross: 3",
       "cost_usd": 0.017394,
       "tokens": 4625
+    },
+    {
+      "ts": "2026-10-19T08:02:00.997195+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:02:06.202323+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.007238,
+      "tokens": 2555
+    },
+    {
+      "ts": "2026-10-19T08:02:06.448282+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.010386,
+      "tokens": 3269
+    },
+    {
+      "ts": "2026-10-19T08:02:07.786800+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.009686,
+      "tokens": 3027
+    },
+    {
+      "ts": "2026-10-19T08:02:07.888886+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.008582,
+      "tokens": 2371
+    },
+    {
+      "ts": "2026-10-19T08:02:09.076885+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011958,
+      "tokens": 3551
+    },
+    {
+      "ts": "2026-10-19T08:02:40.436171+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup revise, set revise, camera revise, action revise; cross: 4",
+      "cost_usd": 0.040038,
+      "tokens": 7783
+    },
+    {
+      "ts": "2026-10-19T08:02:47.761286+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.011822,
+      "tokens": 4027
+    },
+    {
+      "ts": "2026-10-19T08:02:49.510031+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.013974,
+      "tokens": 3967
+    },
+    {
+      "ts": "2026-10-19T08:02:50.330097+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.015576,
+      "tokens": 4556
+    },
+    {
+      "ts": "2026-10-19T08:02:50.918201+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.017528,
+      "tokens": 4828
+    },
+    {
+      "ts": "2026-10-19T08:02:51.010529+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.017662,
+      "tokens": 5331
+    },
+    {
+      "ts": "2026-10-19T08:03:01.436201+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set revise, camera pass, action pass; cross: 1",
+      "cost_usd": 0.02034,
+      "tokens": 6074
+    },
+    {
+      "ts": "2026-10-19T08:03:08.795715+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.015204,
+      "tokens": 5086
+    },
+    {
+      "ts": "2026-10-19T08:03:17.713807+00:00",
+      "agent": "critic",
+      "action": "production meeting: set revise; cross: 1",
+      "cost_usd": 0.017362,
+      "tokens": 5601
+    },
+    {
+      "ts": "2026-10-19T08:04:12.597555+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:04:17.284379+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.00747,
+      "tokens": 2607
+    },
+    {
+      "ts": "2026-10-19T08:04:17.647248+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.010358,
+      "tokens": 3295
+    },
+    {
+      "ts": "2026-10-19T08:04:19.295375+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.010278,
+      "tokens": 3115
+    },
+    {
+      "ts": "2026-10-19T08:04:21.497579+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.010684,
+      "tokens": 2610
+    },
+    {
+      "ts": "2026-10-19T08:04:22.380151+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.01435,
+      "tokens": 3819
+    },
+    {
+      "ts": "2026-10-19T08:04:40.881872+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup revise, set revise, camera pass, action revise; cross: 2",
+      "cost_usd": 0.028158,
+      "tokens": 6699
+    },
+    {
+      "ts": "2026-10-19T08:04:47.360995+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.013376,
+      "tokens": 4908
+    },
+    {
+      "ts": "2026-10-19T08:04:48.150366+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.012232,
+      "tokens": 4152
+    },
+    {
+      "ts": "2026-10-19T08:04:48.493350+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.014334,
+      "tokens": 4667
+    },
+    {
+      "ts": "2026-10-19T08:04:51.874617+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.014286,
+      "tokens": 3947
+    },
+    {
+      "ts": "2026-10-19T08:05:15.204809+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup pass, set revise, action revise; cross: 3",
+      "cost_usd": 0.031202,
+      "tokens": 7061
+    },
+    {
+      "ts": "2026-10-19T08:05:23.488919+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.012934,
+      "tokens": 3803
+    },
+    {
+      "ts": "2026-10-19T08:05:23.752292+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.015518,
+      "tokens": 5087
+    },
+    {
+      "ts": "2026-10-19T08:05:26.221364+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.019298,
+      "tokens": 5249
+    },
+    {
+      "ts": "2026-10-19T08:05:42.205411+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, set revise, action pass; cross: 1",
+      "cost_usd": 0.026186,
+      "tokens": 6729
+    },
+    {
+      "ts": "2026-10-19T08:08:28.378460+00:00",
+      "agent": "casting",
+      "action": "no casting work in this shot (resolved without a model)",
+      "cost_usd": 0.0,
+      "tokens": 0
+    },
+    {
+      "ts": "2026-10-19T08:08:32.677250+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.00723,
+      "tokens": 2583
+    },
+    {
+      "ts": "2026-10-19T08:08:34.125427+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.010444,
+      "tokens": 3230
+    },
+    {
+      "ts": "2026-10-19T08:08:35.359152+00:00",
+      "agent": "camera",
+      "action": "wrote camera design",
+      "cost_usd": 0.009404,
+      "tokens": 2862
+    },
+    {
+      "ts": "2026-10-19T08:08:35.716899+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.008922,
+      "tokens": 2369
+    },
+    {
+      "ts": "2026-10-19T08:08:36.508879+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.011546,
+      "tokens": 3373
+    },
+    {
+      "ts": "2026-10-19T08:09:01.652658+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe revise, makeup revise, set revise, camera pass, action revise; cross: 2",
+      "cost_usd": 0.03367,
+      "tokens": 7175
+    },
+    {
+      "ts": "2026-10-19T08:09:08.715448+00:00",
+      "agent": "action",
+      "action": "wrote action design",
+      "cost_usd": 0.011186,
+      "tokens": 3589
+    },
+    {
+      "ts": "2026-10-19T08:09:09.032238+00:00",
+      "agent": "makeup",
+      "action": "wrote makeup design",
+      "cost_usd": 0.01198,
+      "tokens": 4106
+    },
+    {
+      "ts": "2026-10-19T08:09:10.170334+00:00",
+      "agent": "set",
+      "action": "wrote set design",
+      "cost_usd": 0.014502,
+      "tokens": 4803
+    },
+    {
+      "ts": "2026-10-19T08:09:13.254291+00:00",
+      "agent": "wardrobe",
+      "action": "wrote wardrobe design",
+      "cost_usd": 0.016074,
+      "tokens": 4665
+    },
+    {
+      "ts": "2026-10-19T08:09:27.547505+00:00",
+      "agent": "critic",
+      "action": "production meeting: wardrobe pass, makeup pass, set pass, action pass",
+      "cost_usd": 0.016064,
+      "tokens": 5608
     }
   ]
 }

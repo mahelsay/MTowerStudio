@@ -1,6 +1,6 @@
 {
   "$note": "Studio memory, kept by the Learning Keeper. status: candidate (advisory) | rule (must follow) | retired. Edit freely: set status 'rule' to approve (approved_by: human) or 'retired' to drop.",
-  "updated_at": "2026-10-19T07:37:37+00:00",
+  "updated_at": "2026-10-19T08:09:27+00:00",
   "lessons": [
     {
       "id": "L-0001",
@@ -372,12 +372,12 @@
       ],
       "proven_fixes": 19,
       "applied": {
-        "passes": 0,
+        "passes": 2,
         "fails": 0
       },
       "created_at": "2026-10-18T09:14:35+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:39+00:00",
+      "updated_at": "2026-10-19T08:09:27+00:00",
       "promoted_at": "2026-10-18T09:14:35+00:00",
       "promoted_by": "auto"
     },
@@ -1421,7 +1421,16 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "shop",
+          "store",
+          "market",
+          "kiosk",
+          "retail",
+          "shelf",
+          "grocer"
+        ]
       },
       "evidence": [
         {
@@ -2123,7 +2132,15 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "commandos",
+          "soldiers",
+          "company",
+          "platoon",
+          "squad",
+          "file of"
+        ]
       },
       "evidence": [
         {
@@ -2268,12 +2285,12 @@
       ],
       "proven_fixes": 5,
       "applied": {
-        "passes": 0,
+        "passes": 2,
         "fails": 0
       },
       "created_at": "2026-10-18T09:15:29+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:39+00:00",
+      "updated_at": "2026-10-19T08:09:27+00:00",
       "promoted_at": "2026-10-18T09:15:29+00:00",
       "promoted_by": "auto"
     },
@@ -2295,7 +2312,14 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "red-filtered",
+          "red filtered",
+          "flashlight",
+          "red light",
+          "red torch"
+        ]
       },
       "evidence": [
         {
@@ -2327,12 +2351,12 @@
       ],
       "proven_fixes": 2,
       "applied": {
-        "passes": 0,
+        "passes": 1,
         "fails": 0
       },
       "created_at": "2026-10-18T09:15:29+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:17:23+00:00",
+      "updated_at": "2026-10-19T08:05:42+00:00",
       "promoted_at": "2026-10-18T09:17:23+00:00",
       "promoted_by": "auto"
     },
@@ -2567,12 +2591,12 @@
       ],
       "proven_fixes": 3,
       "applied": {
-        "passes": 0,
+        "passes": 2,
         "fails": 0
       },
       "created_at": "2026-10-18T09:15:55+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:17:02+00:00",
+      "updated_at": "2026-10-19T08:09:27+00:00",
       "promoted_at": "2026-10-18T09:15:55+00:00",
       "promoted_by": "auto"
     },
@@ -2593,7 +2617,20 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "carry",
+          "carrying",
+          "drag",
+          "climb",
+          "firing",
+          "fires",
+          "throw",
+          "crawl",
+          "lift",
+          "haul",
+          "dig"
+        ]
       },
       "evidence": [
         {
@@ -2705,7 +2742,13 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "cockpit",
+          "pilot",
+          "flight deck",
+          "controls"
+        ]
       },
       "evidence": [
         {
@@ -2747,7 +2790,11 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "casting portrait",
+          "anchor"
+        ]
       },
       "evidence": [
         {
@@ -2851,7 +2898,15 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "extras",
+          "soldiers",
+          "men ",
+          "group",
+          "crowd",
+          "company"
+        ]
       },
       "evidence": [
         {
@@ -2996,7 +3051,12 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "mi-8",
+          "helicopter",
+          "veh-0001"
+        ]
       },
       "evidence": [
         {
@@ -3202,7 +3262,12 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "radio",
+          "prp-0007",
+          "handset"
+        ]
       },
       "evidence": [
         {
@@ -3267,7 +3332,15 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "shadow",
+          "aircraft",
+          "plane",
+          "jet",
+          "helicopter",
+          "overhead"
+        ]
       },
       "evidence": [
         {
@@ -3291,12 +3364,12 @@
       ],
       "proven_fixes": 0,
       "applied": {
-        "passes": 0,
+        "passes": 1,
         "fails": 0
       },
       "created_at": "2026-10-18T09:17:41+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:17:41+00:00"
+      "updated_at": "2026-10-19T08:05:42+00:00"
     },
     {
       "id": "L-0030",
@@ -3316,7 +3389,13 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "missile",
+          "malyutka",
+          "sagger",
+          "at-3"
+        ]
       },
       "evidence": [
         {
@@ -3365,7 +3444,12 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "half-track",
+          "halftrack",
+          "m3"
+        ]
       },
       "evidence": [
         {
@@ -3587,7 +3671,14 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "reacts",
+          "reaction",
+          "threat",
+          "sees the",
+          "watches the"
+        ]
       },
       "evidence": [
         {
@@ -3611,12 +3702,12 @@
       ],
       "proven_fixes": 0,
       "applied": {
-        "passes": 0,
+        "passes": 1,
         "fails": 0
       },
       "created_at": "2026-10-18T09:18:02+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:18:02+00:00"
+      "updated_at": "2026-10-19T08:05:42+00:00"
     },
     {
       "id": "L-0035",
@@ -3953,7 +4044,14 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "fal",
+          "israeli soldier",
+          "israeli infantry",
+          "israeli troops",
+          "paratrooper"
+        ]
       },
       "evidence": [
         {
@@ -4257,7 +4355,13 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "empty",
+          "featureless",
+          "open ground",
+          "bare ground"
+        ]
       },
       "evidence": [
         {
@@ -4289,12 +4393,12 @@
       ],
       "proven_fixes": 0,
       "applied": {
-        "passes": 0,
+        "passes": 1,
         "fails": 0
       },
       "created_at": "2026-10-18T09:19:05+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:39+00:00"
+      "updated_at": "2026-10-19T08:05:42+00:00"
     },
     {
       "id": "L-0048",
@@ -4314,7 +4418,12 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "rpg",
+          "prp-0002",
+          "rocket"
+        ]
       },
       "evidence": [
         {
@@ -4479,7 +4588,10 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "toy"
+        ]
       },
       "evidence": [
         {
@@ -4520,7 +4632,16 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "fallen",
+          "martyr",
+          "dead",
+          "killed",
+          "body",
+          "bodies",
+          "corpse"
+        ]
       },
       "evidence": [
         {
@@ -4605,7 +4726,15 @@
           "image_qa",
           "face_pass"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "boy",
+          "girl",
+          "child",
+          "children",
+          "c-12",
+          "c-14"
+        ]
       },
       "evidence": [
         {
@@ -4778,7 +4907,11 @@
           "prompting",
           "image_qa"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "card",
+          "title"
+        ]
       },
       "evidence": [
         {
@@ -4859,7 +4992,10 @@
           "image_qa",
           "editor"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "poster"
+        ]
       },
       "evidence": [
         {
@@ -4901,7 +5037,10 @@
           "image_qa",
           "editor"
         ],
-        "tags": []
+        "tags": [],
+        "keywords": [
+          "poster"
+        ]
       },
       "evidence": [
         {
@@ -4917,12 +5056,12 @@
       ],
       "proven_fixes": 0,
       "applied": {
-        "passes": 0,
+        "passes": 1,
         "fails": 0
       },
       "created_at": "2026-10-18T09:19:47+00:00",
       "source": "keeper",
-      "updated_at": "2026-10-18T09:19:47+00:00"
+      "updated_at": "2026-10-19T08:05:42+00:00"
     }
   ]
 }

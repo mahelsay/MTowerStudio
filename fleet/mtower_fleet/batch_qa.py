@@ -170,7 +170,7 @@ def run(production: str, episode: str, frames: list[dict], *, verbose: bool = Tr
         shot.intent.action = design.get("motion", "")
         refs = references_for(production, episode, design)
         tags = lessons.tags_for_design(design, kind="keyframe")
-        advice = lessons.advise(tags, department="image_qa", limit=10)
+        advice = lessons.advise(tags, department="image_qa", limit=10, text=lessons.design_text(design))
         if verbose:
             print(f"[{n}/{len(frames)}] {f['shot_id']} — {len(refs)} reference image(s), "
                   f"{len(advice.lessons)} lesson check(s) …", flush=True)

@@ -605,7 +605,7 @@
         "training_images": 17,
         "trained": "2026-10-19"
       },
-      "status": "locked",
+      "status": "lora_trained",
       "reuse": "open",
       "roles": [
         {

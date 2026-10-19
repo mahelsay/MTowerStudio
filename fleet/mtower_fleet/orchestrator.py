@@ -194,8 +194,9 @@ class Orchestrator:
         prev_text = design_summary(prev) if prev is not None else ""
         # Learning Keeper: consult studio memory before the crew works (deterministic tag match; free)
         mem_tags = lessons.tags_for_design(design, kind="keyframe")
-        advice = {n: lessons.advise(mem_tags, department=n) for n in ("casting",) + PARALLEL_DEPARTMENTS}
-        critic_advice = lessons.advise(mem_tags, limit=12)
+        mem_text = lessons.design_text(design)
+        advice = {n: lessons.advise(mem_tags, department=n, text=mem_text) for n in ("casting",) + PARALLEL_DEPARTMENTS}
+        critic_advice = lessons.advise(mem_tags, limit=12, text=mem_text)
         shot.lessons_applied = sorted({i for a in advice.values() for i in a.ids} | set(critic_advice.ids))
         if shot.lessons_applied:
             self._log(f"● Learning Keeper → {len(shot.lessons_applied)} lesson(s) for this shot: "

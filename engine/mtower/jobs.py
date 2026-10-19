@@ -136,6 +136,10 @@ def training_text(actor: dict, variation: dict) -> tuple[str, str]:
     """(edit instruction, caption) for one recipe variation, adapted to the actor."""
     trigger = lora_trigger(actor)
     female = actor.get("gender") == "female"
+    age = actor.get("apparent_age") or 99
+    if age < 25:  # young faces drift older in face models: anchor the trigger to an age class word
+        noun = ("girl" if female else "boy") if age < 16 else ("young woman" if female else "young man")
+        trigger = f"{trigger}, {'an' if str(age)[0] == '8' or age in (11, 18) else 'a'} {age}-year-old {noun}"
     covered = str((actor.get("traits") or {}).get("hair", "")).startswith("covered")
     edit = variation.get("edit_female") if female and variation.get("edit_female") else variation["edit"]
     caption = variation.get("caption_female") if female and variation.get("caption_female") else variation["caption"]
